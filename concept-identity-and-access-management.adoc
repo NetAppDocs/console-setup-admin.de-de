@@ -1,0 +1,243 @@
+---
+sidebar: sidebar 
+permalink: concept-identity-and-access-management.html 
+keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, bluexp IAM 
+summary: 'Mit Identity and Access Management (IAM) in der NetApp Konsole können Sie den Zugriff auf die Ressourcen Ihres Unternehmens steuern.' 
+---
+= Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Mit Identity and Access Management (IAM) in der NetApp Konsole können Sie den Zugriff auf Ihre NetApp -Ressourcen organisieren und steuern.  Sie können Ihre Ressourcen entsprechend der Hierarchie Ihrer Organisation organisieren.  Sie können Ressourcen beispielsweise nach geografischem Standort, Standort oder Geschäftseinheit organisieren.  Anschließend können Sie Mitgliedern in bestimmten Teilen der Hierarchie IAM-Rollen zuweisen, wodurch der Zugriff auf Ressourcen in anderen Teilen der Hierarchie verhindert wird.
+
+* link:concept-modes.html["Informationen zu den Bereitstellungsmodi der Konsole"]
+
+
+
+
+== So funktioniert IAM
+
+Mit IAM können Sie Ressourcenzugriff gewähren, indem Sie Benutzern Zugriffsrollen für bestimmte Teile der Hierarchie zuweisen.  Beispielsweise kann einem Mitglied die Rolle des Ordner- oder Projektadministrators für ein Projekt mit fünf Ressourcen zugewiesen werden.
+
+Bei der Verwendung von IAM verwalten Sie die folgenden Komponenten:
+
+* Die Organisation
+* Ordner
+* Projekte
+* Ressourcen
+* Mitglieder
+* Rollen und Berechtigungen
+* Konsolenagenten
+
+
+Ressourcen sind hierarchisch organisiert:
+
+* Die Organisation steht an der Spitze der Hierarchie.
+* Ordner sind untergeordnete Elemente der Organisation oder eines anderen Ordners.
+* Projekte sind untergeordnete Elemente der Organisation oder eines Ordners.
+* Ressourcen sind mit einem oder mehreren Ordnern oder Projekten verknüpft.
+
+
+Das folgende Bild veranschaulicht diese Hierarchie auf einer grundlegenden Ebene.
+
+image:diagram-iam-resource-hierarchy.png["Ein konzeptionelles Diagramm, das die Ressourcenhierarchie für die Zugriffsverwaltung zeigt: eine Organisation, Ordner, Projekte und Ressourcen."]
+
+
+
+=== Organisation
+
+Eine _Organisation_ ist die oberste Ebene des Console IAM-Systems und repräsentiert normalerweise Ihr Unternehmen.  Ihre Organisation besteht aus Ordnern, Projekten, Mitgliedern, Rollen und Ressourcen.  Agenten sind bestimmten Projekten in der Organisation zugeordnet.
+
+
+
+=== Ordner
+
+Ein _Ordner_ ermöglicht es Ihnen, verwandte Projekte zu gruppieren und sie von anderen Projekten in Ihrer Organisation zu trennen.  Ein Ordner kann beispielsweise einen geografischen Standort (EU oder US-Ost), einen Standort (London oder Toronto) oder eine Geschäftseinheit (Technik oder Marketing) darstellen.
+
+Sie können Ordner so organisieren, dass sie Projekte, andere Ordner oder beides enthalten.  Sie sind optional.
+
+
+
+=== Projekte
+
+Ein _Projekt_ stellt einen Arbeitsbereich in der Konsole dar, auf den Mitglieder der Organisation von der Seite *Systeme* aus zugreifen, um Ressourcen zu verwalten.  Ein Projekt kann beispielsweise ein Cloud Volumes ONTAP -System, einen lokalen ONTAP Cluster oder ein FSx für ONTAP Dateisystem umfassen.
+
+Eine Organisation kann ein oder mehrere Projekte haben.  Ein Projekt kann sich direkt unter der Organisation oder in einem Ordner befinden.
+
+
+
+=== Ressourcen
+
+Eine _Ressource_ ist ein System, das Sie in der Konsole erstellt oder entdeckt haben.
+
+Wenn Sie eine Ressource erstellen oder entdecken, wird die Ressource mit dem aktuell ausgewählten Projekt verknüpft.  Dies ist möglicherweise das einzige Projekt, mit dem Sie diese Ressource verknüpfen möchten.  Sie können die Ressource jedoch auch mit weiteren Projekten in Ihrer Organisation verknüpfen.
+
+Sie können beispielsweise ein Cloud Volumes ONTAP -System mit einem zusätzlichen Projekt oder mit allen Projekten in Ihrer Organisation verknüpfen.  Wie Sie eine Ressource zuordnen, hängt von den Anforderungen Ihrer Organisation ab.
+
+
+TIP: Agenten können auch mehr als einem Projekt zugeordnet werden. <<associate-agents,Erfahren Sie mehr über die Verwendung von Agenten mit IAM>> .
+
+
+
+==== Wann sollte eine Ressource einem Ordner zugeordnet werden?
+
+Sie haben auch die Möglichkeit, eine Ressource mit einem Ordner zu verknüpfen. Dies ist jedoch optional und dient den Anforderungen eines bestimmten Anwendungsfalls.
+
+Ein _Organisationsadministrator_ kann eine Ressource mit einem Ordner verknüpfen, sodass ein _Ordner- oder Projektadministrator_ sie mit den entsprechenden Projekten im Ordner verknüpfen kann.
+
+Nehmen wir beispielsweise an, Sie haben einen Ordner, der zwei Projekte enthält:
+
+image:diagram-iam-resource-association-folder-1.png["Ein Diagramm, das einen Ordner und zwei Projekte zeigt, die sich in dem Ordner befinden: Projekt A und Projekt B."]
+
+Der _Organisationsadministrator_ kann eine Ressource mit dem Ordner verknüpfen:
+
+image:diagram-iam-resource-association-folder-2.png["Ein Diagramm, das einen Ordner, eine mit dem Ordner verknüpfte Ressource und zwei im Ordner befindliche Projekte zeigt: Projekt A und Projekt B."]
+
+Durch die Verknüpfung einer Ressource mit einem Ordner wird diese nicht für alle Projekte zugänglich; nur der Ordner- oder Projektadministrator kann sie sehen.  Der _Ordner- oder Projektadministrator_ entscheidet, welche Projekte darauf zugreifen können und ordnet die Ressource den entsprechenden Projekten zu.
+
+In diesem Beispiel verknüpft der Administrator die Ressource mit Projekt A:
+
+image:diagram-iam-resource-association-folder-3.png["Ein Diagramm, das einen Ordner, zwei Projekte, die sich in dem Ordner befinden (Projekt A und Projekt B) und eine Ressource zeigt, die mit Projekt A verknüpft ist."]
+
+Mitglieder, die über Berechtigungen für Projekt A verfügen, können jetzt auf die Ressource zugreifen.
+
+
+
+=== Mitglieder
+
+Mitglieder Ihrer Organisation sind Benutzerkonten oder Dienstkonten.  Ein Dienstkonto wird normalerweise von einer Anwendung verwendet, um bestimmte Aufgaben ohne menschliches Eingreifen abzuschließen.
+
+Jede Organisation umfasst mindestens einen Benutzer mit der Rolle „Organisationsadministrator“ (die Konsole weist diese Rolle automatisch dem Benutzer zu, der die Organisation erstellt).  Sie können der Organisation weitere Mitglieder hinzufügen und auf verschiedenen Ebenen der Ressourcenhierarchie unterschiedliche Berechtigungen zuweisen.
+
+
+
+=== Rollen und Berechtigungen
+
+Sie erteilen den Mitgliedern der Organisation keine Berechtigungen direkt.  Stattdessen weisen Sie jedem Mitglied eine Rolle zu.  Eine Rolle enthält eine Reihe von Berechtigungen, die es einem Mitglied ermöglichen, bestimmte Aktionen auf einer bestimmten Ebene der Ressourcenhierarchie auszuführen.
+
+Durch die Zuweisung von Rollen auf Hierarchieebene wird der Zugriff auf die Ressourcen und Dienste eingeschränkt, die ein Mitglied benötigt.
+
+
+
+==== Wo Sie in der Hierarchie Rollen zuweisen können
+
+Wenn Sie einem Mitglied eine Rolle zuordnen, müssen Sie die gesamte Organisation, einen bestimmten Ordner oder ein bestimmtes Projekt auswählen.  Die von Ihnen ausgewählte Rolle erteilt einem Mitglied Berechtigungen für die Ressourcen im ausgewählten Teil der Hierarchie.
+
+
+
+==== Rollenvererbung
+
+Wenn Sie eine Rolle zuweisen, wird diese Rolle in der Organisationshierarchie nach unten vererbt:
+
+Organisation:: Wenn Sie einem Mitglied eine Zugriffsrolle auf Organisationsebene erteilen, erhält es Berechtigungen für alle Ordner, Projekte und Ressourcen.
+Ordner:: Wenn Sie eine Zugriffsrolle auf Ordnerebene erben, erben alle Ordner, Projekte und Ressourcen im Ordner diese Rolle.
++
+--
+Wenn Sie beispielsweise eine Rolle auf Ordnerebene zuweisen und dieser Ordner drei Projekte enthält, verfügt das Mitglied über Berechtigungen für diese drei Projekte und alle zugehörigen Ressourcen.
+
+--
+Projekte:: Wenn Sie eine Zugriffsrolle auf Projektebene erteilen, erben alle mit diesem Projekt verknüpften Ressourcen diese Rolle.
+
+
+
+
+==== Mehrere Rollen
+
+Sie können jedem Organisationsmitglied eine Rolle auf verschiedenen Ebenen der Organisationshierarchie zuweisen.  Es kann sich um dieselbe oder eine andere Rolle handeln.  Sie können beispielsweise für Projekt 1 und Projekt 2 eine Mitgliedsrolle A zuweisen.  Oder Sie können einem Mitglied die Rolle A für Projekt 1 und die Rolle B für Projekt 2 zuweisen.
+
+
+
+==== Zugriffsrollen
+
+Die Konsole bietet Zugriffsrollen, die Sie den Mitgliedern Ihrer Organisation zuweisen können.
+
+link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
+
+
+
+=== Konsolenagenten
+
+Wenn ein _Organisationsadministrator_ einen Konsolenagenten erstellt, verknüpft die Konsole diesen Agenten automatisch mit der Organisation und dem aktuell ausgewählten Projekt.  Der _Organisationsadministrator_ hat automatisch von überall in der Organisation Zugriff auf diesen Agenten.  Wenn es in Ihrer Organisation jedoch andere Mitglieder mit anderen Rollen gibt, können diese Mitglieder nur über das Projekt, in dem der Agent erstellt wurde, auf diesen Agenten zugreifen, es sei denn, Sie verknüpfen diesen Agenten mit anderen Projekten.
+
+In den folgenden Fällen stellen Sie einen Konsolenagenten für ein anderes Projekt zur Verfügung:
+
+* Sie möchten Mitgliedern Ihrer Organisation erlauben, einen vorhandenen Agenten zu verwenden, um zusätzliche Systeme in einem anderen Projekt zu erstellen oder zu entdecken
+* Sie haben eine vorhandene Ressource mit einem anderen Projekt verknüpft und diese Ressource wird von einem Konsolenagenten verwaltet
++
+Wenn eine Ressource, die Sie mit einem zusätzlichen Projekt verknüpfen, mithilfe eines Konsolenagenten erkannt wird, müssen Sie den Agenten auch mit dem Projekt verknüpfen, mit dem die Ressource jetzt verknüpft ist. Andernfalls sind der Agent und die zugehörige Ressource von der Seite *Systeme* aus für Mitglieder, die nicht über die Rolle _Organisationsadministrator_ verfügen, nicht zugänglich.
+
+
+
+Sie können eine Zuordnung von der Seite *Agenten* innerhalb der IAM-Konsole aus erstellen:
+
+* Verknüpfen Sie einen Konsolenagenten mit einem Projekt
++
+Wenn Sie einem Projekt einen Konsolenagenten zuordnen, ist dieser Agent beim Anzeigen des Projekts von der Seite *Systeme* aus zugänglich.
+
+* Verknüpfen Sie einen Konsolenagenten mit einem Ordner
++
+Durch die Verknüpfung eines Konsolenagenten mit einem Ordner wird dieser Agent nicht automatisch von allen Projekten im Ordner aus zugänglich.  Mitglieder der Organisation können nicht von einem Projekt aus auf einen Konsolenagenten zugreifen, bis Sie den Agenten mit diesem bestimmten Projekt verknüpfen.
+
++
+Ein _Organisationsadministrator_ kann einen Konsolenagenten mit einem Ordner verknüpfen, sodass der _Ordner- oder Projektadministrator_ die Entscheidung treffen kann, diesen Agenten mit den entsprechenden Projekten zu verknüpfen, die sich im Ordner befinden.
+
+
+
+
+
+== IAM-Beispiele
+
+Diese Beispiele zeigen, wie Sie Ihre Organisation aufbauen könnten.
+
+
+
+=== Einfache Organisation
+
+Das folgende Diagramm zeigt ein einfaches Beispiel einer Organisation, die das Standardprojekt und keine Ordner verwendet.  Ein einzelnes Mitglied verwaltet die gesamte Organisation.
+
+image:diagram-iam-example-hierarchy-simple.png["Ein konzeptionelles Diagramm, das eine Organisation mit einem Projekt, zugehörigen Ressourcen und einem Organisationsadministrator zeigt."]
+
+
+
+=== Erweiterte Organisation
+
+Das folgende Diagramm zeigt eine Organisation, die Ordner verwendet, um die Projekte für jeden geografischen Standort im Unternehmen zu organisieren.  Jedes Projekt verfügt über einen eigenen Satz zugehöriger Ressourcen.  Zu den Mitgliedern gehören ein Organisationsadministrator und ein Administrator für jeden Ordner in der Organisation.
+
+image:diagram-iam-example-hierarchy-advanced.png["Ein konzeptionelles Diagramm, das eine Organisation mit drei Ordnern mit jeweils drei Projekten und den zugehörigen Ressourcen zeigt.  Es gibt vier Mitglieder: einen Organisationsadministrator und drei Ordneradministratoren."]
+
+
+
+== Was Sie mit IAM tun können
+
+Die folgenden Beispiele beschreiben, wie Sie IAM zum Verwalten Ihrer Konsolenorganisation verwenden können:
+
+* Weisen Sie bestimmten Mitgliedern bestimmte Rollen zu, sodass sie nur die erforderlichen Aufgaben erledigen können.
+* Ändern Sie die Berechtigungen von Mitgliedern, weil sie die Abteilung gewechselt haben oder zusätzliche Verantwortlichkeiten haben.
+* Entfernen Sie einen Benutzer, der das Unternehmen verlassen hat.
+* Fügen Sie Ihrer Hierarchie Ordner oder Projekte hinzu, weil eine neue Geschäftseinheit NetApp -Speicher hinzugefügt hat.
+* Ordnen Sie eine Ressource einem anderen Projekt zu, da diese Ressource über Kapazitäten verfügt, die ein anderes Team nutzen kann.
+* Zeigen Sie die Ressourcen an, auf die ein Mitglied zugreifen kann.
+* Zeigen Sie die Mitglieder und Ressourcen an, die mit einem bestimmten Projekt verknüpft sind.
+
+
+
+
+== Wohin als nächstes?
+
+* link:task-iam-get-started.html["Erste Schritte mit IAM in der NetApp Konsole"]
+* link:task-iam-manage-folders-projects.html["Organisieren Sie Ihre Ressourcen in der NetApp -Konsole mit Ordnern und Projekten"]
+* link:task-iam-manage-members-permissions.html["Verwalten Sie NetApp Console-Mitglieder und ihre Berechtigungen"]
+* link:task-iam-manage-resources.html["Verwalten Sie die Ressourcenhierarchie in Ihrer NetApp Console-Organisation"]
+* link:task-iam-associate-connectors.html["Agenten Ordnern und Projekten zuordnen"]
+* link:task-iam-switch-organizations-projects.html["Wechseln Sie zwischen NetApp Console-Projekten und -Organisationen"]
+* link:task-iam-rename-organization.html["Benennen Sie Ihre NetApp Konsolenorganisation um"]
+* link:task-iam-audit-actions-timeline.html["Überwachen oder prüfen Sie die IAM-Aktivität"]
+* link:reference-iam-predefined-roles.html["NetApp -Konsolenzugriffsrollen"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für NetApp Console IAM"^]
+

@@ -1,0 +1,67 @@
+= Connector 3.9.54
+:allow-uri-read: 
+
+
+
+
+=== Connector 3.9.54
+
+Diese Version des BlueXP Connectors enthält Sicherheitsverbesserungen, Fehlerbehebungen und die folgenden neuen Funktionen:
+
+* Unterstützung für transparente Proxys für Connectors, die speziell für die Unterstützung von Cloud Volumes ONTAP Diensten vorgesehen sind.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["Erfahren Sie mehr über die Konfiguration eines transparenten Proxys."]
+* Möglichkeit zur Verwendung von Netzwerk-Tags zur Weiterleitung des Connector-Datenverkehrs, wenn der Connector in einer Google Cloud-Umgebung bereitgestellt wird.
+* Zusätzliche produktinterne Benachrichtigungen zur Überwachung des Connector-Zustands, einschließlich CPU- und RAM-Auslastung.
+
+
+Derzeit ist die Version 3.9.54 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== BlueXP Identitäts- und Zugriffsmanagement (IAM)
+
+Identitäts- und Zugriffsmanagement in BlueXP bietet jetzt die folgenden Funktionen:
+
+* Unterstützung für IAM im privaten Modus, sodass Sie den Benutzerzugriff und die Berechtigungen für BlueXP -Dienste und -Anwendungen verwalten können.
+* Optimierte Verwaltung von Identitätsföderationen, einschließlich einfacherer Navigation, klarerer Optionen zum Konfigurieren föderierter Verbindungen und verbesserter Transparenz in vorhandenen Föderationen.
+* Zugriffsrollen für BlueXP backup and recovery, BlueXP disaster recovery und Föderationsverwaltung.
+
+
+
+
+==== Unterstützung für IAM im privaten Modus
+
+BlueXP unterstützt jetzt IAM im privaten Modus, sodass Sie den Benutzerzugriff und die Berechtigungen für BlueXP -Dienste und -Anwendungen verwalten können.  Diese Verbesserung ermöglicht es Kunden im privaten Modus, die rollenbasierte Zugriffskontrolle (RBAC) für mehr Sicherheit und Compliance zu nutzen.
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#iam["Erfahren Sie mehr über IAM in BlueXP."]
+
+
+
+==== Optimierte Verwaltung von Identitätsföderationen
+
+BlueXP bietet jetzt eine intuitivere Schnittstelle zur Verwaltung der Identitätsföderation. Dazu gehören eine einfachere Navigation, klarere Optionen zum Konfigurieren föderierter Verbindungen und eine verbesserte Transparenz in vorhandenen Föderationen.
+
+Durch die Aktivierung von Single Sign-On (SSO) über die Identitätsföderation können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei BlueXP anmelden.  Dies verbessert die Sicherheit, reduziert die Verwendung von Passwörtern und vereinfacht das Onboarding.
+
+Sie werden aufgefordert, alle vorhandenen Verbundverbindungen in die neue Schnittstelle zu importieren, um Zugriff auf die neuen Verwaltungsfunktionen zu erhalten.  Auf diese Weise können Sie die neuesten Verbesserungen nutzen, ohne Ihre Verbundverbindungen neu erstellen zu müssen.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-federation-import.html["Erfahren Sie mehr über den Import Ihrer vorhandenen Verbundverbindung zu BlueXP."]
+
+Durch die verbesserte Föderationsverwaltung können Sie:
+
+* Fügen Sie einer Verbundverbindung mehr als eine verifizierte Domäne hinzu, sodass Sie mehrere Domänen mit demselben Identitätsanbieter (IdP) verwenden können.
+* Deaktivieren oder löschen Sie Verbundverbindungen bei Bedarf und behalten Sie so die Kontrolle über Benutzerzugriff und Sicherheit.
+* Steuern Sie den Zugriff auf die Föderationsverwaltung mit IAM-Rollen.
+
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-federation.html["Erfahren Sie mehr über die Identitätsföderation in BlueXP."]
+
+
+
+==== Neue Zugriffsrollen für BlueXP backup and recovery, BlueXP disaster recovery und Federation Management
+
+BlueXP unterstützt jetzt die Verwendung von IAM-Rollen für die folgenden Funktionen und Datendienste:
+
+* BlueXP backup and recovery
+* BlueXP disaster recovery
+* Föderation
+
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Verwendung von Zugriffsrollen."]

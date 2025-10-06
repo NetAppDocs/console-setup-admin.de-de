@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: task-iam-get-started.html 
+keywords: iam, quick start, get started, get started with iam, identity and access management 
+summary: Um mit der Identitäts- und Zugriffsverwaltung in der NetApp Konsole zu beginnen, passen Sie die Hierarchie der Organisation an, fügen Sie zusätzliche Mitglieder hinzu, fügen Sie Ressourcen hinzu oder ermitteln Sie sie und verknüpfen Sie diese Ressourcen mit Projekten. 
+---
+= Erste Schritte mit Identität und Zugriff in der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie sich für die NetApp Konsole anmelden, werden Sie aufgefordert, eine neue Organisation zu erstellen.  Die Organisation umfasst ein Mitglied (einen Organisationsadministrator) und ein Standardprojekt.  Um die Identitäts- und Zugriffsverwaltung (IAM) so einzurichten, dass sie Ihren Geschäftsanforderungen entspricht, müssen Sie die Hierarchie Ihrer Organisation anpassen, zusätzliche Mitglieder hinzufügen, Ressourcen hinzufügen oder ermitteln und diese Ressourcen in Ihrer Hierarchie verknüpfen.
+
+Sie müssen über die Berechtigung *Organisationsadministrator* verfügen, um die Identität und den Zugriff für Ihre gesamte Organisation zu verwalten.  Wenn Sie über die Berechtigung *Ordner- oder Projektadministrator* verfügen, können Sie nur die Ordner und Projekte verwalten, für die Sie über die Berechtigung verfügen.
+
+Befolgen Sie diese Schritte, um eine neue Organisation einzurichten.  Die Reihenfolge kann je nach den Anforderungen Ihrer Organisation variieren.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]Bearbeiten Sie das Standardprojekt oder fügen Sie es der Hierarchie Ihrer Organisation hinzu
+[role="quick-margin-para"]
+Verwenden Sie das Standardprojekt oder erstellen Sie zusätzliche Projekte und Ordner, die Ihrer Unternehmenshierarchie entsprechen.
+
+[role="quick-margin-para"]
+link:task-iam-manage-folders-projects.html["Erfahren Sie, wie Sie Ihre Ressourcen mit Ordnern und Projekten organisieren"] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Ordnen Sie Mitglieder Ihrer Organisation zu
+[role="quick-margin-para"]
+Verknüpfen Sie Benutzerkonten mit Ihrer Organisation und weisen Sie Berechtigungen zu.  Sie haben auch die Möglichkeit, Ihrer Organisation Dienstkonten hinzuzufügen.
+
+[role="quick-margin-para"]
+link:task-iam-manage-members-permissions.html["Erfahren Sie, wie Sie Mitglieder und ihre Berechtigungen verwalten"] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Ressourcen hinzufügen oder entdecken
+[role="quick-margin-para"]
+Fügen Sie der Konsole Ressourcen (Systeme) hinzu oder ermitteln Sie sie.  Mitglieder der Organisation verwalten Systeme innerhalb eines Projekts.
+
+[role="quick-margin-para"]
+Erfahren Sie, wie Sie Ressourcen erstellen oder entdecken:
+
+[role="quick-margin-list"]
+* https://docs.netapp.com/us-en/bluexp-fsx-ontap/index.html["Amazon FSx for NetApp ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/index.html["Azure NetApp Files"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/bluexp-e-series/index.html["Systeme der E-Serie"^]
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/index.html["On-Premises- ONTAP -Cluster"^]
+* https://docs.netapp.com/us-en/bluexp-storagegrid/index.html["StorageGRID"^]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]Ressourcen zusätzlichen Projekten zuordnen
+[role="quick-margin-para"]
+Durch das Hinzufügen oder Erkennen eines Systems in der Konsole wird die Ressource automatisch dem aktuell ausgewählten Projekt zugeordnet.  Um diese Ressource einem anderen Projekt in Ihrer Organisation zur Verfügung zu stellen, verknüpfen Sie sie mit dem jeweiligen Projekt.  Wenn zur Verwaltung der Ressource ein Konsolenagent verwendet wird, ordnen Sie den Konsolenagenten dem jeweiligen Projekt zu.
+
+[role="quick-margin-list"]
+* link:task-iam-manage-resources.html["Erfahren Sie, wie Sie die Ressourcenhierarchie Ihres Unternehmens verwalten"] .
+* link:task-iam-associate-connectors.html["Erfahren Sie, wie Sie einen Konsolenagenten mit einem Ordner oder Projekt verknüpfen"] .
+
+
+.Ähnliche Informationen
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identitäts- und Zugriffsmanagement in der NetApp -Konsole"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identität und Zugriff"^]
+

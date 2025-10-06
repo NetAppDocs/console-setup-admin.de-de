@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-work.html 
+keywords: partner organizations, create partnership, MSPs, service provider access 
+summary: Sobald Ihnen eine Rolle in einer Partnerorganisation zugewiesen wurde, können Sie zu dieser Organisation wechseln und Aktionen ausführen, für die Sie die Berechtigung haben. 
+---
+= Arbeit in einer Partnerorganisation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sobald Ihnen eine Rolle in einer Partnerorganisation zugewiesen wurde, können Sie zu dieser Organisation wechseln und Aktionen ausführen, für die Sie die Berechtigung haben.
+
+Verwenden Sie das Menü „Organisation“, um zwischen Ihren Organisationen und allen Partnerorganisationen zu wechseln, auf die Sie Zugriff haben.link:task-iam-switch-organizations-projects.html["Erfahren Sie mehr über den Wechsel von Organisationen und Projekten."]
+
+Sie können die Ressourcen sehen, die in der Partnerorganisation mit Ihnen geteilt wurden, und Aktionen basierend auf der Ihnen zugewiesenen Rolle ausführen.  Arbeiten Sie mit Ihrem Partnerschaftsadministrator zusammen, um sicherzustellen, dass Sie über die entsprechende Rolle für die Ressourcen verfügen, auf die Sie zugreifen müssen.

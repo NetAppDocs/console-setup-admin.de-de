@@ -1,0 +1,85 @@
+= BlueXP Identitäts- und Zugriffsverwaltung
+:allow-uri-read: 
+
+
+
+
+=== BlueXP Identitäts- und Zugriffsverwaltung
+
+BlueXP Identity and Access Management (IAM) ist ein neues Ressourcen- und Zugriffsverwaltungsmodell, das die bisherige Funktionalität der BlueXP -Konten bei Verwendung von BlueXP im Standardmodus ersetzt und erweitert.
+
+BlueXP IAM bietet eine detailliertere Verwaltung von Ressourcen und Berechtigungen:
+
+* Eine _Organisation_ auf oberster Ebene ermöglicht Ihnen die Verwaltung des Zugriffs über Ihre verschiedenen _Projekte_ hinweg.
+* _Ordner_ ermöglichen Ihnen, verwandte Projekte zu gruppieren.
+* Dank der erweiterten Ressourcenverwaltung können Sie eine Ressource einem oder mehreren Ordnern oder Projekten zuordnen.
++
+Sie können beispielsweise ein Cloud Volumes ONTAP -System mit mehreren Projekten verknüpfen.
+
+* Dank der erweiterten Zugriffsverwaltung können Sie Mitgliedern auf verschiedenen Ebenen der Organisationshierarchie eine Rolle zuweisen.
+
+
+Diese Verbesserungen bieten eine bessere Kontrolle über die Aktionen, die Benutzer ausführen können, und die Ressourcen, auf die sie zugreifen können.
+
+.Wie sich BlueXP IAM auf Ihr bestehendes Konto auswirkt
+Wenn Sie sich bei BlueXP anmelden, werden Sie diese Änderungen bemerken:
+
+* Ihr _Konto_ heißt jetzt _Organisation_
+* Ihre _Arbeitsbereiche_ heißen jetzt _Projekte_
+* Die Namen der Benutzerrollen haben sich geändert:
++
+** _Kontoadministrator_ ist jetzt _Organisationsadministrator_
+** _Arbeitsbereichsadministrator_ ist jetzt _Ordner- oder Projektadministrator_
+** _Compliance Viewer_ heißt jetzt _Classification Viewer_
+
+
+* Unter Einstellungen können Sie auf die BlueXP -Identitäts- und Zugriffsverwaltung zugreifen, um diese Verbesserungen zu nutzen
+
+
+Beachten Sie Folgendes:
+
+* An Ihren bestehenden Benutzern oder Arbeitsumgebungen ergeben sich keine Änderungen.
+* Während sich die Namen der Rollen geändert haben, gibt es aus Sicht der Berechtigungen keine Unterschiede.  Den Benutzern stehen weiterhin dieselben Arbeitsumgebungen wie bisher zur Verfügung.
+* Es gibt keine Änderungen an der Anmeldung bei BlueXP.  BlueXP IAM funktioniert mit NetApp Cloud-Anmeldungen, Anmeldeinformationen für die NetApp Support-Site und Verbundverbindungen, genau wie BlueXP Konten.
+* Wenn Sie mehrere BlueXP -Konten hatten, verfügen Sie jetzt über mehrere BlueXP -Organisationen.
+
+
+.API für BlueXP IAM
+Diese Änderung führt eine neue API für BlueXP IAM ein, ist jedoch abwärtskompatibel mit der vorherigen Tenancy-API. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für BlueXP IAM"^]
+
+.Unterstützte Bereitstellungsmodi
+BlueXP IAM wird unterstützt, wenn BlueXP im Standardmodus verwendet wird.  Wenn Sie BlueXP im eingeschränkten oder privaten Modus verwenden, verwenden Sie weiterhin ein BlueXP -_Konto_, um Arbeitsbereiche, Benutzer und Ressourcen zu verwalten.
+
+.Wohin als nächstes?
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-identity-and-access-management.html["Erfahren Sie mehr über BlueXP IAM"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-get-started.html["Erste Schritte mit BlueXP IAM"]
+
+
+
+
+=== Connector 3.9.45
+
+Diese Version enthält erweiterte Betriebssystemunterstützung und Fehlerbehebungen.
+
+Die Version 3.9.45 ist für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+.Unterstützung für Ubuntu 24.04 LTS
+Ab der Version 3.9.45 unterstützt BlueXP jetzt Neuinstallationen des Connectors auf Ubuntu 24.04 LTS-Hosts, wenn BlueXP im Standardmodus oder eingeschränkten Modus verwendet wird.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements["Hostanforderungen für View Connector"] .
+
+
+
+=== Unterstützung für SELinux mit RHEL-Hosts
+
+BlueXP unterstützt jetzt den Connector mit Red Hat Enterprise Linux-Hosts, auf denen SELinux entweder im Enforcing- oder im Permissive-Modus aktiviert ist.
+
+Die Unterstützung für SELinux beginnt mit der Version 3.9.40 für den Standardmodus und den eingeschränkten Modus und mit der Version 3.9.42 für den privaten Modus.
+
+Beachten Sie die folgenden Einschränkungen:
+
+* BlueXP unterstützt SELinux mit Ubuntu-Hosts nicht.
+* Die Verwaltung von Cloud Volumes ONTAP -Systemen wird von Connectors nicht unterstützt, auf deren Betriebssystem SELinux aktiviert ist.
+
+
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_selinux/getting-started-with-selinux_using-selinux["Erfahren Sie mehr über SELinux"^]

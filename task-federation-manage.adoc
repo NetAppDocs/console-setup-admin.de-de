@@ -1,0 +1,118 @@
+---
+sidebar: sidebar 
+permalink: task-federation-manage.html 
+keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
+summary: Nachdem Sie eine Verbundverbindung hinzugefügt haben, können Sie sie in der NetApp Konsole verwalten.  Sie können den Status der Verbindung anzeigen und sie nach Bedarf aktivieren oder deaktivieren. 
+---
+= Föderationen in der NetApp Konsole verwalten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Ihre Föderation in der NetApp Konsole verwalten.  Sie können es deaktivieren, abgelaufene Anmeldeinformationen aktualisieren und es deaktivieren, wenn Sie es nicht mehr benötigen.
+
+
+NOTE: Wenn Sie die Föderation mit NetApp Cloud Central konfiguriert haben, importieren Sie sie über die Seite *Föderation*, um sie in der Konsole zu verwalten.link:task-federation-import.html["Erfahren Sie, wie Sie Ihre Föderation importieren"]
+
+Sie können einer vorhandenen Föderation auch eine verifizierte Domäne hinzufügen, wodurch Sie mehrere Domänen für Ihre föderierte Verbindung verwenden können.
+
+
+NOTE: Ereignisse der Föderationsverwaltung wie das Aktivieren, Deaktivieren und Aktualisieren von Föderationen werden in der Zeitleiste angezeigt.link:task-monitor-cm-operations.html["Erfahren Sie mehr über die Überwachung von Vorgängen in der NetApp Konsole."]
+
+.Erforderliche Rollen
+Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+
+
+== Aktivieren einer Föderation
+
+Wenn Sie eine Föderation erstellt haben, diese aber nicht aktiviert ist, können Sie sie über die Seite *Föderation* aktivieren.  Durch die Aktivierung einer Föderation können sich die mit der Föderation verknüpften Benutzer mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.  Erstellen und testen Sie die Föderation erfolgreich, bevor Sie sie aktivieren.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie die Registerkarte *Föderation* aus.
+. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben der Föderation, die Sie aktivieren möchten, und wählen Sie *Aktivieren* aus.
+
+
+
+
+== Hinzufügen einer verifizierten Domäne zu einer vorhandenen Föderation
+
+Sie können einer vorhandenen Föderation in der Konsole eine verifizierte Domäne hinzufügen, um mehrere Domänen mit demselben Identitätsanbieter (IdP) zu verwenden.
+
+Sie müssen die Domäne bereits in der Konsole verifiziert haben, bevor Sie sie zu einer Föderation hinzufügen können.  Wenn Sie die Domäne noch nicht verifiziert haben, können Sie dies tun, indem Sie die Schritte inlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der Konsole"] .
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie die Registerkarte *Föderation* aus.
+. Wählen Sie das Aktionsmenüimage:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] neben dem Verbund, dem Sie eine verifizierte Domäne hinzufügen möchten, und wählen Sie *Domänen aktualisieren* aus.  Im Dialogfeld *Domänen aktualisieren* wird die Domäne angezeigt, die bereits mit dieser Föderation verknüpft ist.
+. Wählen Sie eine verifizierte Domäne aus der Liste der verfügbaren Domänen aus.
+. Wählen Sie *Aktualisieren*. Neue Domänenbenutzer können innerhalb von 30 Sekunden föderierten Konsolenzugriff erhalten.
+
+
+
+
+== Aktualisieren einer ablaufende Verbundverbindung
+
+Sie können die Details einer Föderation in der Konsole aktualisieren.  Sie müssen beispielsweise die Föderation aktualisieren, wenn Anmeldeinformationen wie ein Zertifikat oder ein Client-Geheimnis ablaufen.  Aktualisieren Sie bei Bedarf das Benachrichtigungsdatum, um Sie daran zu erinnern, die Verbindung zu aktualisieren, bevor sie abläuft.
+
+
+IMPORTANT: Aktualisieren Sie zuerst die Konsole, bevor Sie Ihren IdP aktualisieren, um Anmeldeprobleme zu vermeiden.  Bleiben Sie während des Vorgangs bei der Konsole angemeldet.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie die Registerkarte *Föderation* aus.
+. Wählen Sie das Aktionsmenü (drei vertikale Punkte) neben der Föderation, die Sie aktualisieren möchten, und wählen Sie *Föderation aktualisieren*.
+. Aktualisieren Sie die Details der Föderation nach Bedarf.
+. Wählen Sie *Aktualisieren*.
+
+
+
+
+== Testen einer vorhandenen Föderation
+
+Testen Sie die Verbindung einer vorhandenen Föderation, um sicherzustellen, dass sie funktioniert.  Auf diese Weise können Sie etwaige Probleme mit der Föderation erkennen und beheben.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie die Registerkarte *Föderation* aus.
+. Wählen Sie das Aktionsmenüimage:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] neben dem Verbund, dem Sie eine verifizierte Domäne hinzufügen möchten, und wählen Sie *Verbindung testen* aus.
+. Wählen Sie *Test*.  Das System fordert Sie auf, sich mit Ihren Unternehmensanmeldeinformationen anzumelden.  Wenn die Verbindung erfolgreich ist, werden Sie zur NetApp Konsole weitergeleitet.  Wenn die Verbindung fehlschlägt, wird eine Fehlermeldung angezeigt, die auf das Problem mit der Föderation hinweist.
+. Wählen Sie *Fertig*, um zur Registerkarte *Föderation* zurückzukehren.
+
+
+
+
+== Deaktivieren einer Föderation
+
+Wenn Sie eine Föderation nicht mehr benötigen, können Sie sie deaktivieren.  Dadurch wird verhindert, dass sich mit der Föderation verknüpfte Benutzer mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.  Sie können die Föderation bei Bedarf später wieder aktivieren.
+
+Deaktivieren Sie eine Föderation, bevor Sie sie löschen, beispielsweise wenn Sie den IdP außer Betrieb nehmen oder die Föderation beenden.  Auf diese Weise können Sie es bei Bedarf später wieder aktivieren.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie die Registerkarte *Föderation* aus.
+. Wählen Sie das Aktionsmenüimage:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] neben dem Verbund, dem Sie eine verifizierte Domäne hinzufügen möchten, und wählen Sie *Deaktivieren* aus.
+
+
+
+
+== Löschen einer Föderation
+
+Wenn Sie eine Föderation nicht mehr benötigen, können Sie sie löschen.  Dadurch wird die Föderation entfernt und alle mit der Föderation verknüpften Benutzer können sich nicht mehr mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.  Beispielsweise, wenn der IdP außer Betrieb genommen wird oder die Föderation nicht mehr benötigt wird.
+
+Sie können eine Föderation nicht wiederherstellen, nachdem Sie sie gelöscht haben.  Sie müssen eine neue Föderation erstellen.
+
+
+IMPORTANT: Sie müssen eine Föderation deaktivieren, bevor Sie sie löschen können.  Sie können eine Föderation nach dem Löschen nicht wiederherstellen.
+
+.Schritte
+. Wählen Sie *Administration > Identität und Zugriff*.
+. Wählen Sie *Föderationen* aus, um die Seite *Föderationen* anzuzeigen.
+. Wählen Sie das Aktionsmenüimage:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] neben dem Verbund, dem Sie eine verifizierte Domäne hinzufügen möchten, und wählen Sie *Löschen* aus.
+

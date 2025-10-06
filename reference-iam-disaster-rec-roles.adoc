@@ -1,0 +1,262 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-disaster-rec-roles.html 
+keywords: disaster recovery, role-based access control, failover admin, replication plans, job- monitoring, business continuity, compliance- management, operational governance, access delegation, rbac, IAM roles 
+summary: Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf NetApp Disaster Recovery innerhalb der Konsole zu gewähren.  Mithilfe von Disaster Recovery-Rollen können Sie Benutzern flexibel Rollen zuweisen, die speziell auf die Aufgaben zugeschnitten sind, die sie in Ihrer Organisation erledigen müssen. Wie Sie Rollen zuweisen, hängt von Ihren eigenen Geschäfts- und Speicherverwaltungspraktiken ab. 
+---
+= NetApp Disaster Recovery-Rollen in der NetApp -Konsole
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf NetApp Disaster Recovery innerhalb der Konsole zu gewähren.  Mithilfe von Disaster Recovery-Rollen können Sie Benutzern flexibel Rollen zuweisen, die speziell auf die Aufgaben zugeschnitten sind, die sie in Ihrer Organisation erledigen müssen. Wie Sie Rollen zuweisen, hängt von Ihren eigenen Geschäfts- und Speicherverwaltungspraktiken ab.
+
+Disaster Recovery verwendet die folgenden Rollen:
+
+* *Notfallwiederherstellungsadministrator*: Führen Sie alle Aktionen aus.
+* *Disaster Recovery Failover-Administrator*: Führen Sie Failover und Migrationen durch.
+* *Administrator der Notfallwiederherstellungsanwendung*: Erstellen Sie Replikationspläne.  Replikationspläne ändern.  Starten Sie Test-Failover.
+* *Disaster Recovery Viewer*: Nur Informationen anzeigen.
+
+
+Die folgende Tabelle zeigt die Aktionen, die jede Rolle ausführen kann.
+
+[cols="30,20a,20a,20a,20a"]
+|===
+| Funktion und Aktion | Notfallwiederherstellungsadministrator | Administrator für Notfallwiederherstellungs-Failover | Administrator der Notfallwiederherstellungsanwendung | Disaster Recovery-Viewer 
+
+
+| Dashboard und alle Registerkarten anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Kostenlose Testversion starten  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Ermittlung von Workloads initiieren  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Lizenzinformationen anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Lizenz aktivieren  a| 
+Ja
+ a| 
+Nein
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+5+| *Auf der Registerkarte „Sites“*: 
+
+
+| Websites anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Hinzufügen, Ändern oder Löschen von Sites  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+5+| *Auf der Registerkarte Replikationspläne*: 
+
+
+| Replikationspläne anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Anzeigen von Replikationsplandetails  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Erstellen oder Ändern von Replikationsplänen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+| Erstellen von Berichten  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Snapshots anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Durchführen von Failover-Tests  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+| Durchführen von Failovers  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Failbacks durchführen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Migrationen durchführen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+5+| *Auf der Registerkarte „Ressourcengruppen“*: 
+
+
+| Anzeigen von Ressourcengruppen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Erstellen, Ändern oder Löschen von Ressourcengruppen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+5+| *Auf der Registerkarte „Jobüberwachung“*: 
+
+
+| Jobs anzeigen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Aufträge abbrechen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+|===

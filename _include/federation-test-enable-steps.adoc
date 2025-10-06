@@ -1,0 +1,12 @@
+= 
+:allow-uri-read: 
+
+
+. Wählen Sie *Weiter*.
+. Wählen Sie *Verbindung testen*, um Ihre Verbindung zu testen.  Sie werden zu einer Anmeldeseite für Ihren IdP-Server weitergeleitet.  Melden Sie sich mit Ihren IdP-Anmeldeinformationen an, um den Test abzuschließen, und kehren Sie zur Konsole zurück, um die Verbindung zu aktivieren.
+. Wählen Sie *Weiter*.
+. Überprüfen Sie auf der Seite *Föderation aktivieren* die Föderationsdetails und wählen Sie dann *Föderation aktivieren* aus.
+. Wählen Sie *Fertig*, um den Vorgang abzuschließen.
+
+
+Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Konsole anmelden.

@@ -1,0 +1,285 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-backup-rec-roles.html 
+keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac, role-based access 
+summary: Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf NetApp Backup and Recovery innerhalb der Konsole zu gewähren.  Mithilfe von Sicherungs- und Wiederherstellungsrollen können Sie Benutzern flexibel eine Rolle zuweisen, die speziell auf die Aufgaben zugeschnitten ist, die sie in Ihrem Unternehmen erledigen müssen. Wie Sie Rollen zuweisen, hängt von Ihren eigenen Geschäfts- und Speicherverwaltungspraktiken ab. 
+---
+= NetApp Backup- und Recovery-Rollen in der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf NetApp Backup and Recovery innerhalb der Konsole zu gewähren.  Mithilfe von Sicherungs- und Wiederherstellungsrollen können Sie Benutzern flexibel eine Rolle zuweisen, die speziell auf die Aufgaben zugeschnitten ist, die sie in Ihrem Unternehmen erledigen müssen. Wie Sie Rollen zuweisen, hängt von Ihren eigenen Geschäfts- und Speicherverwaltungspraktiken ab.
+
+Für Backup und Recovery werden die folgenden Rollen verwendet:
+
+* *Superadministrator für Sicherung und Wiederherstellung*: Führen Sie beliebige Aktionen aus.
+* *Backup- und Wiederherstellungsadministrator*: Führen Sie Backups auf lokalen Snapshots durch, replizieren Sie auf sekundären Speicher und sichern Sie auf Objektspeicher.
+* *Administrator für Backup- und Wiederherstellungswiederherstellung*: Workloads wiederherstellen.
+* *Backup- und Wiederherstellungsklon-Administrator*: Klonen Sie Anwendungen und Daten.
+* *Backup- und Wiederherstellungsanzeige*: Zeigen Sie Backup- und Wiederherstellungsinformationen an.
+
+
+Die folgende Tabelle zeigt die Aktionen, die jede Rolle ausführen kann.
+
+[cols="20,20,15,15a,15a,15a"]
+|===
+| Funktion und Aktion | Superadministrator für Sicherung und Wiederherstellung | Backup-Administrator | Administrator wiederherstellen | Klonadministrator | Zuschauer 
+
+
+| Hosts hinzufügen, bearbeiten oder löschen | Ja | Nein  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Plugins installieren | Ja | Nein  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Anmeldeinformationen hinzufügen (Host, Instanz, vCenter) | Ja | Nein  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Dashboard und alle Registerkarten anzeigen | Ja | Ja  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Kostenlose Testversion starten | Ja | Nein  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Ermittlung von Workloads initiieren | Nein | Ja  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+| Lizenzinformationen anzeigen | Ja | Ja  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Lizenz aktivieren | Ja | Nein  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Hosts anzeigen | Ja | Ja  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+6+| *Zeitpläne*: 
+
+
+| Zeitpläne aktivieren | Ja | Ja  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+| Zeitpläne aussetzen | Ja | Ja  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+6+| *Richtlinien und Schutz*: 
+
+
+| Schutzpläne anzeigen | Ja | Ja  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Erstellen, Ändern oder Löschen von Schutzplänen | Ja | Ja  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Wiederherstellen von Workloads | Ja | Nein  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Erstellen, Teilen oder Löschen von Klonen | Ja | Nein  a| 
+Nein
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+| Richtlinie erstellen, ändern oder löschen | Ja | Ja  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+6+| *Berichte*: 
+
+
+| Berichte anzeigen | Ja | Ja  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Erstellen von Berichten | Ja | Ja  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+| Berichte löschen | Ja | Nein  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+6+| *Von SnapCenter importieren und Host verwalten*: 
+
+
+| Importierte SnapCenter -Daten anzeigen | Ja | Ja  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Daten aus SnapCenter importieren | Ja | Ja  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Host verwalten (migrieren) | Ja | Ja  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+6+| *Einstellungen konfigurieren*: 
+
+
+| Konfigurieren des Protokollverzeichnisses | Ja | Ja  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Instanzanmeldeinformationen zuordnen oder entfernen | Ja | Ja  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+6+| *Eimer*: 
+
+
+| Speicherbehälter anzeigen | Ja | Ja  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Erstellen, Bearbeiten oder Löschen von Speicher-Buckets | Ja | Ja  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+|===

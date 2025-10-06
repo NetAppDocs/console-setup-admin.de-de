@@ -1,0 +1,82 @@
+= 
+:allow-uri-read: 
+
+
+Vom Konsolenagenten kontaktierte Endpunkte:: Der Konsolenagent benötigt ausgehenden Internetzugang, um die folgenden Endpunkte zu kontaktieren und Ressourcen und Prozesse innerhalb Ihrer öffentlichen Cloud-Umgebung für den täglichen Betrieb zu verwalten.
++
+--
+Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
+
+--
+
+
+| AWS-Dienste (amazonaws.com):
+
+* CloudFormation
+* Elastische Compute Cloud (EC2)
+* Identitäts- und Zugriffsverwaltung (IAM)
+* Schlüsselverwaltungsdienst (KMS)
+* Sicherheitstokendienst (STS)
+* Einfacher Speicherdienst (S3)
+
+
+| Zur Verwaltung von AWS-Ressourcen.  Der Endpunkt hängt von Ihrer AWS-Region ab. https://docs.aws.amazon.com/general/latest/gr/rande.html["Weitere Einzelheiten finden Sie in der AWS-Dokumentation."^]
+
+| \https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
+
+| Zum Verwalten von Ressourcen in öffentlichen Azure-Regionen.
+
+| \https://management.azure.microsoft.scloud \https://login.microsoftonline.microsoft.scloud \https://blob.core.microsoft.scloud \https://core.microsoft.scloud
+
+| Zum Verwalten von Ressourcen in der Azure IL6-Region.
+
+| \https://management.usgovcloudapi.net \https://login.microsoftonline.us \https://blob.core.usgovcloudapi.net \https://core.usgovcloudapi.net
+
+| Zum Verwalten von Ressourcen in Azure Government-Regionen.
+
+| \https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
+
+| Zum Verwalten von Ressourcen in Azure China-Regionen.
+
+| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+
+| Zum Verwalten von Ressourcen in Google Cloud.
+
+| \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport Nachrichten an den NetApp Support zu senden.  | \https://signin.b2c.netapp.com | So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Konsole neue NSS-Anmeldeinformationen hinzu.
+
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole.
+
+a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| Um Bilder für Upgrades des Konsolenagenten zu erhalten.
+
+* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten.  Wenn Sielink:link:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl.  Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
++
+Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
+
+* Wenn Sie auf die aktuellen Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
+
+
+^1^ NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen.  Beachten Sie Folgendes zu diesen Endpunkten:
+
++ * Ab der Version 3.9.47 des Konsolenagenten unterstützt das System die in Option 1 aufgeführten Endpunkte.  Frühere Versionen des Konsolenagenten unterstützen keine Abwärtskompatibilität.  * Der Konsolenagent kontaktiert in Option 2 zuerst die Endpunkte.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.  * Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
+
+| Wenn sich der Konsolenagent in einer AWS-Regierungsregion befindet: \https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+
+| Um Bilder für Upgrades des Konsolenagenten zu erhalten, wenn der Konsolenagent in einer AWS Government-Region installiert ist.
+
+| Wenn sich der Konsolenagent in einer Azure Government-Region befindet: \https://*.blob.core.windows.net \https://occmclientinfragov.azurecr.us
+
+| Zum Abrufen von Images für Upgrades des Konsolen-Agenten, wenn der Konsolen-Agent in einer Azure Government-Region installiert ist.
+
+a| Wenn sich der Konsolenagent in einer kommerziellen oder souveränen Region befindet, können Sie zwischen zwei Endpunktsätzen wählen:
+
+* Option 1 (empfohlen) ^1^
++
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+
+* Option 2
++
+\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+
+
+
+| Um Bilder für Upgrades des Konsolen-Agenten zu erhalten, wenn der Konsolen-Agent in einer kommerziellen oder souveränen Region installiert ist.

@@ -1,0 +1,122 @@
+= Navigationsmenüs und -seiten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+BlueXP heißt jetzt NetApp Console.
+
+Die NetApp Console basiert auf der verbesserten und neu strukturierten BlueXP -Grundlage und ermöglicht die zentrale Verwaltung von NetApp Storage und NetApp Data Services in On-Premises- und Cloud-Umgebungen auf Unternehmensniveau. Sie liefert Einblicke in Echtzeit, schnellere Workflows und eine vereinfachte Administration mit hoher Sicherheit und Konformität.
+
+Im Folgenden sind die Navigations- und Terminologieänderungen in der NetApp Konsole aufgeführt.  Eine vollständige Liste der Funktionen dieser Version vom 6. Oktober 2025 finden Sie unterlink:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#10-06-2025["Was ist neu in der NetApp Konsole?"] .
+
+
+
+=== Navigationsmenüs und -seiten
+
+NetApp hat die meisten Menüoptionen in den linken Navigationsbereich verschoben und die Menüs neu organisiert, um die Navigation in der NetApp Konsole zu vereinfachen.
+
+
+
+==== Canvas wird durch die Seite „Systeme“ ersetzt
+
+NetApp hat den Canvas in die Seite *Systeme* umbenannt.  Navigieren Sie über das Menü *Speicher > Verwaltung* zur Seite *System*.
+
+image:screenshot-storage-mgmt.png["Ein Screenshot der Systemseite."]
+
+
+
+==== Erweitertes Speichermenü
+
+Das Menü *Speicher* enthält außerdem *Warnungen* zum Anzeigen von ONTAP -Systemwarnungen und *Lebenszyklusplanung* (früher *Wirtschaftlichkeit*) zum Identifizieren ungenutzter oder nicht ausreichend genutzter Ressourcen.
+
+NetApp hat Keystone außerdem in das Menü *Speicher* verschoben, wo Sie Ihre NetApp Keystone -Abonnements verwalten und Ihre Nutzung anzeigen können.
+
+image:screenshot-storage-menu.png["Ein Screenshot des Speichermenüs."]
+
+
+
+==== Menü „Verwaltung“
+
+Verwenden Sie das zentralisierte Menü *Administration*, um die NetApp Konsole, Supportfälle, Lizenzen und Abonnements (früher als digitale Geldbörse bezeichnet) zu verwalten.
+
+image:screenshot-admin-menu.png["Ein Screenshot des Administrationsmenüs."]
+
+
+
+==== Gesundheitsmenü
+
+Ein neu gestaltetes *Health*-Menü umfasst *Software-Updates*, wo Sie ONTAP -Software-Updates verwalten können, *Sustainability*, wo Sie Ihre Umweltauswirkungen überwachen können, und * Digital Advisor*, wo Sie proaktive Empfehlungen zur Optimierung Ihrer Speicherumgebung erhalten.
+
+
+
+==== Governance-Menü
+
+Das Menü *Governance* umfasst die *Datenklassifizierung*, wo Sie die Datenklassifizierung und -konformität verwalten können, und den *Automatisierungs-Hub*, wo Sie Automatisierungs-Workflows erstellen und verwalten können.
+
+
+
+=== Intuitivere Benennung von Elementen, Datendiensten und Funktionen
+
+NetApp hat mehrere Elemente, Datendienste und Funktionen umbenannt, um ihren Zweck zu verdeutlichen.  Zu den wichtigsten Änderungen gehören:
+
+[cols="10,24"]
+|===
+| *Vorheriger Name* | * NetApp -Konsolenname* 
+
+
+| Anschlüsse  a| 
+Konsolenagenten.
+
+Sie können Ihre Agenten über das Menü *Administration > Agenten* anzeigen, hinzufügen und verwalten.
+
+
+
+| Zeitleistenseite  a| 
+Audit-Seite
+
+Zeigen Sie die Aktivität der Audit-Konsole über das Menü *Administration > Audit* an.
+
+
+
+| Arbeitsumgebungen  a| 
+Systeme
+
+Zeigen Sie Ihre Systeme über das Menü *Speicher > Verwaltung* an, fügen Sie sie hinzu und verwalten Sie sie.
+
+
+
+| BlueXP Ransomware-Schutz  a| 
+NetApp Ransomware-Resilienz.
+
+Ransomware Resilience hilft Ihnen, Ihre Daten zu schützen und sich schnell von einem Ransomware-Angriff zu erholen.
+
+
+
+| BlueXP Wirtschaftlichkeit  a| 
+Lebenszyklusplanung.
+
+Mithilfe der Lebenszyklusplanung können Sie Ihre Speicherkosten optimieren, indem Sie ungenutzte und nicht ausreichend genutzte Ressourcen identifizieren.
+
+Greifen Sie über das Menü *Speicher > Lebenszyklusplanung* auf die Lebenszyklusplanung zu.
+
+
+
+| BlueXP digital wallet  a| 
+Lizenzen und Abonnements
+
+Greifen Sie über das Menü *Administration > Lizenzen und Abonnements* auf Ihre Lizenzen und Abonnements zu.
+
+|===
+
+
+==== Auswählen und Verwalten von Konsolenagenten
+
+Greifen Sie über das Menü *Administration > Agenten* auf Ihre Konsolenagenten zu und verwalten Sie sie.  NetApp hat die Art und Weise geändert, wie ein Konsolenagent für die Seite *Systeme* (früher Canvas) ausgewählt wird.  NetApp hat den Connector-Menünamen durch ein Symbol ersetztimage:icon-agent.png["Agentensymbol"] , sodass Sie den Konsolenagenten auswählen können, für den Sie Systeme anzeigen möchten.
+
+image:screenshot-agent-icon-menu.png["Ein Screenshot, der das Symbol zum Auswählen eines Konsolenagenten zeigt."]
+
+Sie können Ihre Agenten auch über das Menü *Administration > Agenten* verwalten.

@@ -1,0 +1,23 @@
+= Connector 3.9.50
+:allow-uri-read: 
+
+
+
+
+=== Connector 3.9.50
+
+Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen.
+
+* Die Verwaltung von Cloud Volumes ONTAP -Systemen wird jetzt von Connectors unterstützt, auf deren Betriebssystem SELinux aktiviert ist.
++
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_selinux/getting-started-with-selinux_using-selinux["Erfahren Sie mehr über SELinux"^]
+
+
+
+Derzeit ist die Version 3.9.50 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== NetApp Keystone Beta in BlueXP verfügbar
+
+NetApp Keystone wird in Kürze bei BlueXP erhältlich sein und befindet sich derzeit in der Betaphase.  Sie können über die linke Navigationsleiste von BlueXP auf die Anmeldeseite für die Betaversion von NetApp Keystone zugreifen.

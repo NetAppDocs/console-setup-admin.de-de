@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+. Geben Sie Ihre Domänendetails ein:
++
+.. Wählen Sie, ob Sie eine verifizierte Domäne oder Ihre E-Mail-Domäne verwenden möchten.  Die E-Mail-Domäne ist die Domäne, die mit dem Konto verknüpft ist, mit dem Sie angemeldet sind.
+.. Geben Sie den Namen der Föderation ein, die Sie konfigurieren.
+.. Wenn Sie eine verifizierte Domäne auswählen, wählen Sie die Domäne aus der Liste aus.
+
+
+. Wählen Sie *Weiter*.
+

@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: concept-federation.html 
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+summary: Die Identitätsföderation ermöglicht Single Sign-On mit der NetApp Konsole, sodass sich Benutzer mit den Anmeldeinformationen Ihrer Unternehmensidentität anmelden können.  Sehen Sie sich zunächst den Einrichtungsprozess an. 
+---
+= Aktivieren Sie Single Sign-On durch die Verwendung der Identitätsföderation mit der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Single-Sign-On (Föderation) vereinfacht den Anmeldevorgang und erhöht die Sicherheit, indem Benutzer sich mit ihren Unternehmensanmeldeinformationen bei der NetApp Konsole anmelden können.  Sie können Single Sign-On (SSO) bei Ihrem Identitätsanbieter (IdP) oder über die NetApp Support-Site aktivieren.
+
+.Erforderliche Rolle
+Organisationsadministrator, Föderationsadministrator, Föderationsbetrachter.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+
+
+== Identitätsföderation mit der NetApp -Support-Site
+
+Durch die Verbindung mit der NetApp -Support-Site können sich Benutzer mit denselben Anmeldeinformationen bei der Konsole, Active IQ Digital Advisor und anderen zugehörigen Apps anmelden.
+
+
+NOTE: Wenn Sie eine Verbindung mit der NetApp -Support-Site herstellen, können Sie nicht gleichzeitig eine Verbindung mit Ihrem Corporate Identity Management-Anbieter herstellen.  Wählen Sie die Option aus, die für Ihr Unternehmen am besten geeignet ist.
+
+.Schritte
+. Laden Sie die https://kb.netapp.com/@api/deki/files/98382/NetApp-B2C-Federation-Request-Form-April-2022.docx?revision=1["NetApp Federation-Antragsformular"^] .
+. Senden Sie das Formular an die im Formular angegebene E-Mail-Adresse.
++
+Das NetApp Supportteam prüft und bearbeitet Ihre Anfrage.
+
+
+
+
+
+== Richten Sie eine Verbundverbindung mit Ihrem Identitätsanbieter ein
+
+Sie können eine Verbundverbindung mit Ihrem Identitätsanbieter einrichten, um Single Sign-On (SSO) für die Konsole zu aktivieren.  Der Vorgang umfasst die Konfiguration Ihres Identitätsanbieters, sodass dieser NetApp als Dienstanbieter vertraut, und die anschließende Herstellung der Verbindung in der Konsole.
+
+
+NOTE: Wenn Sie die Föderation zuvor mit NetApp Cloud Central (einer externen Anwendung der Konsole) konfiguriert haben, müssen Sie Ihre Föderation über die Föderationsseite importieren, um sie in der Konsole zu verwalten.link:task-federation-import.html["Erfahren Sie, wie Sie Ihre Föderation importieren."]
+
+
+
+=== Unterstützte Identitätsanbieter
+
+NetApp unterstützt die folgenden Protokolle und Identitätsanbieter für die Föderation:
+
+.Protokolle
+* Security Assertion Markup Language (SAML)-Identitätsanbieter
+* Active Directory-Verbunddienste (AD FS)
+
+
+.Identitätsanbieter
+* Microsoft Entra ID
+* PingFederate
+
+
+
+
+=== Föderation mit NetApp -Konsolen-Workflow
+
+NetApp unterstützt nur vom Dienstanbieter initiiertes (SP-initiiertes) SSO.  Sie müssen zunächst den Identitätsanbieter so konfigurieren, dass er NetApp als Dienstanbieter vertraut.  Anschließend können Sie in der Konsole eine Verbindung erstellen, die die Konfiguration des Identitätsanbieters verwendet.
+
+Sie können eine Föderation mit Ihrer E-Mail-Domäne oder mit einer anderen Domäne, die Ihnen gehört, herstellen.  Um eine Föderation mit einer anderen Domäne als Ihrer E-Mail-Domäne herzustellen, bestätigen Sie zunächst, dass Sie der Eigentümer der Domäne sind.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]Bestätigen Sie Ihre Domäne (wenn Sie nicht Ihre E-Mail-Domäne verwenden)
+[role="quick-margin-para"]
+Um eine Föderation mit einer anderen Domäne als Ihrer E-Mail-Domäne herzustellen, bestätigen Sie, dass Sie deren Eigentümer sind. Sie können Ihre E-Mail-Domäne ohne zusätzliche Schritte föderieren.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Konfigurieren Sie Ihren IdP so, dass er NetApp als Serviceprovider vertraut
+[role="quick-margin-para"]
+Konfigurieren Sie Ihren Identitätsanbieter so, dass er NetApp vertraut, indem Sie eine neue Anwendung erstellen und Details wie die ACS-URL, die Entitäts-ID oder andere Anmeldeinformationen angeben. Die Informationen zum Dienstanbieter variieren je nach Identitätsanbieter. Weitere Informationen finden Sie in der Dokumentation Ihres spezifischen Identitätsanbieters. Sie müssen mit Ihrem IdP-Administrator zusammenarbeiten, um diesen Schritt abzuschließen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Erstellen Sie die Verbundverbindung in der Konsole
+[role="quick-margin-para"]
+Geben Sie die SAML-Metadaten-URL oder -Datei von Ihrem Identitätsanbieter an, um die Verbindung herzustellen.  Diese Informationen werden verwendet, um die Vertrauensbeziehung zwischen der Konsole und Ihrem Identitätsanbieter herzustellen. Die von Ihnen bereitgestellten Informationen hängen von dem von Ihnen verwendeten IdP ab. Wenn Sie beispielsweise die Microsoft Entra ID verwenden, müssen Sie die Client-ID, das Geheimnis und die Domäne angeben.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Drei"]Testen Sie Ihre Föderation in der Konsole
+[role="quick-margin-para"]
+Testen Sie Ihre Verbundverbindung, bevor Sie sie aktivieren. Verwenden Sie die Testoption auf der Seite „Föderation“ in der Konsole, um zu überprüfen, ob sich Ihr Testbenutzer erfolgreich authentifizieren kann. Wenn der Test erfolgreich ist, können Sie die Verbindung aktivieren.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Drei"]Aktivieren Sie Ihre Verbindung in der Konsole
+[role="quick-margin-para"]
+Nachdem Sie die Verbindung aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.
+
+Lesen Sie zunächst das Thema für Ihr jeweiliges Protokoll oder Ihren IdP:
+
+* link:task-federation-adfs.html["Einrichten einer Verbundverbindung mit AD FS"]
+* link:task-federation-entra-id.html["Einrichten einer Verbundverbindung mit der Microsoft Entra ID"]
+* link:task-federation-ping.html["Einrichten einer Verbundverbindung mit PingFederate"]
+* link:task-federation-saml.html["Einrichten einer Verbundverbindung mit einem SAML-Identitätsanbieter"]
+

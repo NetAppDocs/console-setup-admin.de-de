@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: task-sign-up-saas.html 
+keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
+summary: Auf die NetApp -Konsole kann über eine webbasierte Konsole zugegriffen werden.  Um mit der Konsole zu beginnen, müssen Sie sich zunächst mit Ihren Anmeldeinformationen für die NetApp Support-Site registrieren oder anmelden oder ein Login für die NetApp -Konsole erstellen. 
+---
+= Registrieren oder bei der NetApp Konsole anmelden
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf die NetApp -Konsole kann über eine webbasierte Konsole zugegriffen werden.  Um mit der Konsole zu beginnen, müssen Sie sich zunächst mit Ihren Anmeldeinformationen für die NetApp Support-Site registrieren oder anmelden oder ein Login für die NetApp -Konsole erstellen.
+
+.Informationen zu diesem Vorgang
+Wenn Sie zum ersten Mal auf die Konsole zugreifen, können Sie sich mit einer der folgenden Optionen registrieren oder anmelden:
+
+NetApp Konsolen-Anmeldung:: Sie können sich anmelden, indem Sie ein Login erstellen.  Bei dieser Authentifizierungsmethode müssen Sie Ihre E-Mail-Adresse und ein Passwort angeben.  Nachdem Sie Ihre E-Mail-Adresse bestätigt haben, können Sie sich anmelden und dann eine Organisation erstellen, falls Sie noch keiner angehören.
+Anmeldeinformationen für die NetApp Support Site (NSS):: Wenn Sie bereits über Anmeldeinformationen für die NetApp -Support-Site verfügen, müssen Sie sich nicht für die Konsole anmelden.  Sie melden sich mit Ihren NSS-Anmeldeinformationen an und werden dann von der Konsole aufgefordert, eine Organisation zu erstellen, falls Sie noch keiner angehören.
++
+--
+Sie erhalten einen Einmalpasscode (OTP) an die registrierte E-Mail-Adresse.  Bei jedem Anmeldeversuch wird ein neues OTP generiert.
+
+--
+Verbundverbindung:: Wenn Ihr Unternehmen bereits über eine NetApp Konsoleninstanz verfügt, hat Ihr Konsolenadministrator möglicherweise Single Sign-On eingerichtet, um sich mit Anmeldeinformationen aus Ihrem Unternehmensverzeichnis anzumelden (föderierte Identität).
++
+--
+link:concept-federation.html["Erfahren Sie, wie Sie die Identitätsföderation mit der NetApp -Konsole nutzen"] .
+
+--
+
+
+.Schritte
+. Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Konsole"^]
+. Wenn Sie über ein NetApp Support Site-Konto verfügen oder bereits eine Identitätsföderation eingerichtet haben, geben Sie die mit Ihrem Konto verknüpfte E-Mail-Adresse direkt auf der Seite *Anmelden* ein.
++
+In beiden Fällen werden Sie im Rahmen dieser ersten Anmeldung für die Konsole angemeldet.
+
+. Wenn Sie sich durch Erstellen eines Konsolen-Logins anmelden möchten, wählen Sie *Anmelden*.
++
+.. Geben Sie auf der Seite *Anmelden* die erforderlichen Informationen ein und wählen Sie *Weiter*.
++
+Beachten Sie, dass im Anmeldeformular nur englische Zeichen zulässig sind.
+
+.. Suchen Sie in Ihrem Posteingang nach einer E-Mail von NetApp mit Anweisungen zur Bestätigung Ihrer E-Mail-Adresse.
++
+Dieser Schritt ist erforderlich, bevor Sie sich bei der Konsole anmelden können.
+
+
+
+. Lesen Sie nach der Anmeldung die Endbenutzer-Lizenzvereinbarung und akzeptieren Sie die Bedingungen.
++
+Wenn Ihr Benutzerkonto noch nicht zu einer Konsolenorganisation gehört, werden Sie aufgefordert, eines zu erstellen.
+
+. Geben Sie auf der *Willkommensseite* einen Namen für Ihre Konsolenorganisation ein.
++
+Die Konsole definiert eine Organisation als oberstes Element im Identitäts- und Zugriffsmanagement (IAM) der Konsole. link:concept-identity-and-access-management.html["Erfahren Sie mehr über IAM"] .
+
++
+Wenn Ihr Unternehmen bereits über eine Organisation verfügt und Sie dieser beitreten möchten, schließen Sie die Konsole und bitten Sie den Organisationsadministrator, Sie mit der Organisation zu verknüpfen.  Nachdem Sie hinzugefügt wurden, können Sie sich anmelden und haben Zugriff auf die Konsolenorganisation. link:task-iam-manage-members-permissions#add-members["Erfahren Sie, wie Sie einer bestehenden Organisation Mitglieder hinzufügen"] .
+
+. Wählen Sie *Los geht's*.
+

@@ -1,0 +1,96 @@
+---
+indexpage:
+  title: Dokumentation zur Einrichtung und Verwaltung der NetApp Konsole
+  summary: Beginnen Sie mit der NetApp Console, damit Sie mit dem Erstellen, Schützen
+    und Verwalten von Daten in Ihren lokalen und Cloud-Umgebungen beginnen können.  Nach
+    Abschluss der Einrichtung können Sie den Zugriff auf Ihre Ressourcen mithilfe
+    der Identitäts- und Zugriffsverwaltung (IAM) steuern, Konsolenagenten, Cloud-Provider-Konten
+    und mehr verwalten.
+  keywords: bluexp, netapp console, Console agents, accounts, get started, setup,
+    administration, sign up, log in, login, permissions
+  lead: Beginnen Sie mit der NetApp Console, damit Sie mit dem Erstellen, Schützen
+    und Verwalten von Daten in Ihren lokalen und Cloud-Umgebungen beginnen können.  Nach
+    Abschluss der Einrichtung können Sie den Zugriff auf Ihre Ressourcen mithilfe
+    der Identitäts- und Zugriffsverwaltung (IAM) steuern, Konsolenagenten, Cloud-Provider-Konten
+    und mehr verwalten.
+  tiles:
+  - title: Erste Schritte
+    links:
+    - title: Erfahren Sie mehr über die NetApp Konsole
+      url: concept-overview.html
+    - title: Informationen zu Bereitstellungsmodi
+      url: concept-modes.html
+    - title: Erste Schritte mit dem Standardmodus
+      url: task-quick-start-standard-mode.html
+    - title: Erste Schritte mit dem eingeschränkten Modus
+      url: "/task-quick-start-restricted-mode.html"
+  - title: Einrichten von Identität und Zugriff
+    links:
+    - title: Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung (IAM) der
+        Konsole
+      url: concept-identity-and-access-management.html
+    - title: Erste Schritte mit Identität und Zugriff
+      url: task-iam-get-started.html
+    - title: Organisieren Sie Ihre Ressourcen mit Ordnern und Projekten
+      url: task-iam-manage-folders-projects.html
+    - title: Mitglieder und Dienstkonten hinzufügen
+      url: task-iam-manage-members-permissions.html
+    - title: Verwenden Sie Rollen, um den Zugriff der Mitglieder auf Ressourcen zu
+        steuern
+      url: task-iam-manage-roles.html
+  - title: Konsolenagenten
+    links:
+    - title: Erfahren Sie mehr über Konsolenagenten
+      url: concept-connectors.html
+    - title: AWS-Berechtigungen anzeigen
+      url: reference-permissions-aws.html
+    - title: Anzeigen von Azure-Berechtigungen
+      url: reference-permissions-azure.html
+    - title: Google Cloud-Berechtigungen anzeigen
+      url: reference-permissions-gcp.html
+  - title: AWS
+    links:
+    - title: Erste Schritte in einer AWS-Standardregion
+      url: task-quick-start-standard-mode.html
+    - title: Erste Schritte in einer AWS GovCloud-Region
+      url: task-quick-start-restricted-mode.html
+    - title: Erste Schritte in AWS Secret oder Top Secret Cloud
+      url: https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html
+    - title: Anzeigen von IAM-Richtlinien für den Konsolenagenten
+      url: reference-permissions-aws.html
+    - title: Verwalten von Anmeldeinformationen und Abonnements
+      url: task-adding-aws-accounts.html
+  - title: Azurblau
+    links:
+    - title: Erste Schritte in einer Azure-Standardregion
+      url: task-quick-start-standard-mode.html
+    - title: Erste Schritte in einer Azure Government-Region
+      url: task-quick-start-restricted-mode.html
+    - title: Erste Schritte in Azure IL6
+      url: task-quick-start-private-mode.html
+    - title: Anzeigen der benutzerdefinierten Rolle für den Konsolenagenten
+      url: reference-permissions-azure.html
+    - title: Verwalten von Anmeldeinformationen und Abonnements
+      url: task-adding-azure-accounts.html
+  - title: Google Cloud
+    links:
+    - title: Erste Schritte in einer Standard-Google Cloud-Region
+      url: task-quick-start-standard-mode.html
+    - title: Anzeigen des Dienstkontos für den Konsolenagenten
+      url: reference-permissions-gcp.html
+    - title: Verwalten von Anmeldeinformationen und Abonnements
+      url: task-adding-gcp-accounts.html
+  - title: Vor Ort
+    links:
+    - title: Manuelle Installation und Einrichtung eines Konsolenagenten im Standardmodus
+      url: task-install-connector-on-prem.html
+    - title: Installieren und Einrichten eines Konsolenagenten in VCenter
+      url: task-install-agent-on-prem-ova.html
+  - title: Blogs und Community
+    links:
+    - title: NetApp Konsole
+      url: https://www.netapp.com/console
+    - title: NetApp Datenservices
+      url: https://www.netapp.com/data-services/
+    - title: NetApp Community
+      url: https://community.netapp.com/

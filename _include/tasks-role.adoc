@@ -1,0 +1,32 @@
+= 
+:allow-uri-read: 
+
+
+. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben dem Mitglied, dem Sie eine Rolle zuweisen möchten, und wählen Sie *Rolle hinzufügen* aus.
+. Um eine Rolle hinzuzufügen, führen Sie die Schritte im Dialogfeld aus:
++
+** *Wählen Sie eine Organisation, einen Ordner oder ein Projekt aus*: Wählen Sie die Ebene Ihrer Ressourcenhierarchie aus, für die das Mitglied Berechtigungen haben soll.
++
+Wenn Sie die Organisation oder einen Ordner auswählen, verfügt das Mitglied über Berechtigungen für alles, was sich innerhalb der Organisation oder des Ordners befindet.
+
+** *Kategorie auswählen*: Wählen Sie eine Rollenkategorie. link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"^] .
+** Wählen Sie eine *Rolle*: Wählen Sie eine Rolle, die dem Mitglied Berechtigungen für die Ressourcen erteilt, die mit der von Ihnen ausgewählten Organisation, dem Ordner oder dem Projekt verknüpft sind.
+** *Rolle hinzufügen*: Wenn Sie Zugriff auf zusätzliche Ordner oder Projekte innerhalb Ihrer Organisation gewähren möchten, wählen Sie *Rolle hinzufügen*, geben Sie einen weiteren Ordner oder ein weiteres Projekt oder eine weitere Rollenkategorie an und wählen Sie dann eine Rollenkategorie und eine entsprechende Rolle aus.
+
+
+. Wählen Sie *Neue Rollen hinzufügen*.
+
+
+. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
+. Erweitern Sie in der Tabelle die jeweilige Zeile für die Organisation, den Ordner oder das Projekt, in dem Sie die zugewiesene Rolle des Mitglieds ändern möchten, und wählen Sie in der Spalte *Rolle* *Anzeigen* aus, um die diesem Mitglied zugewiesenen Rollen anzuzeigen.
+. Sie können eine vorhandene Rolle für ein Mitglied ändern oder eine Rolle entfernen.
++
+.. Um die Rolle eines Mitglieds zu ändern, wählen Sie *Ändern* neben der Rolle, die Sie ändern möchten.  Sie können eine Rolle nur in eine Rolle innerhalb derselben Rollenkategorie ändern.  Sie können beispielsweise von einer Datendienstrolle zu einer anderen wechseln.  Bestätigen Sie die Änderung.
+.. Um die Zuweisung einer Rolle eines Mitglieds aufzuheben, wählen Sieimage:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um dem Mitglied die jeweilige Rolle aufzuheben.  Sie werden aufgefordert, die Entfernung zu bestätigen.
+
+
+
+
+. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
+. Erweitern Sie in der Tabelle die jeweilige Zeile für die Organisation, den Ordner oder das Projekt, in dem Sie die zugewiesene Rolle des Mitglieds anzeigen möchten, und wählen Sie in der Spalte *Rolle* die Option *Anzeigen* aus.
+

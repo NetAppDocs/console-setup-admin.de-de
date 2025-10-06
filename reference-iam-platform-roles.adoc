@@ -1,0 +1,173 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-platform-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, bluexp 
+summary: Weisen Sie Benutzern Plattformrollen zu, um ihnen Berechtigungen zum Verwalten der NetApp Konsole, zum Zuweisen von Rollen, zum Hinzufügen von Benutzern, zum Erstellen von Konsolenagenten und zum Verwalten von Föderationen zu erteilen. 
+---
+= Plattformzugriffsrollen für die NetApp -Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Weisen Sie Benutzern Plattformrollen zu, um ihnen Berechtigungen zum Verwalten der NetApp Konsole, zum Zuweisen von Rollen, zum Hinzufügen von Benutzern, zum Erstellen von Konsolenagenten und zum Verwalten von Föderationen zu erteilen.
+
+.Beispiel für Organisationsrollen für eine große multinationale Organisation
+Die XYZ Corporation organisiert den Datenspeicherzugriff nach Regionen – Nordamerika, Europa und Asien-Pazifik – und bietet regionale Kontrolle mit zentraler Aufsicht.
+
+Der *Organisationsadministrator* in der Konsole der XYZ Corporation erstellt eine anfängliche Organisation und separate Ordner für jede Region. Der *Ordner- oder Projektadministrator* für jede Region organisiert Projekte (mit zugehörigen Ressourcen) innerhalb des Ordners der Region.
+
+Regionale Administratoren mit der Rolle *Ordner- oder Projektadministrator* verwalten ihre Ordner aktiv, indem sie Ressourcen und Benutzer hinzufügen. Diese regionalen Administratoren können auch von ihnen verwaltete Ordner und Projekte hinzufügen, entfernen oder umbenennen. Der *Organisationsadministrator* erbt Berechtigungen für alle neuen Ressourcen und behält so die Übersicht über die Speichernutzung in der gesamten Organisation.
+
+Innerhalb derselben Organisation wird einem Benutzer die Rolle *Föderationsadministrator* zugewiesen, um die Föderation der Organisation mit ihrem Unternehmens-IdP zu verwalten. Dieser Benutzer kann föderierte Organisationen hinzufügen oder entfernen, kann jedoch keine Benutzer oder Ressourcen innerhalb der Organisation verwalten. Der *Organisationsadministrator* weist einem Benutzer die Rolle *Föderationsbetrachter* zu, um den Föderationsstatus zu überprüfen und föderierte Organisationen anzuzeigen.
+
+Die folgenden Tabellen zeigen die Aktionen, die jede Konsolenplattformrolle ausführen kann.
+
+
+
+== Rollen in der Organisationsverwaltung
+
+[cols="2,1,1"]
+|===
+| Aufgabe | Organisationsadministrator | Ordner- oder Projektadministrator 
+
+
+| Agenten erstellen | Ja | Nein 
+
+
+| Erstellen, Ändern oder Löschen von Systemen über die Konsole (Hinzufügen oder Erkennen von Systemen) | Ja | Ja 
+
+
+| Erstellen von Ordnern und Projekten, einschließlich Löschen | Ja | Nein 
+
+
+| Vorhandene Ordner und Projekte umbenennen | Ja | Ja 
+
+
+| Rollen zuweisen und Benutzer hinzufügen | Ja | Ja 
+
+
+| Ressourcen mit Ordnern und Projekten verknüpfen | Ja | Ja 
+
+
+| Agenten Ordnern und Projekten zuordnen | Ja | Nein 
+
+
+| Agenten aus Ordnern und Projekten entfernen | Ja | Nein 
+
+
+| Agenten verwalten (Zertifikate, Einstellungen usw. bearbeiten) | Ja | Nein 
+
+
+| Verwalten Sie Anmeldeinformationen unter „Verwaltung > Anmeldeinformationen“. | Ja | Ja 
+
+
+| Erstellen, Verwalten und Anzeigen von Föderationen | Ja | Nein 
+
+
+| Registrieren Sie sich für den Support und reichen Sie Fälle über die Konsole ein | Ja | Ja 
+
+
+| Verwenden Sie Datendienste, die keiner expliziten Zugriffsrolle zugeordnet sind | Ja | Ja 
+
+
+| Anzeigen der Audit-Seite und Benachrichtigungen | Ja | Ja 
+|===
+
+
+== Föderationsrollen
+
+[cols="2,1,1"]
+|===
+| Aufgabe | Föderationsadministrator | Föderationsbetrachter 
+
+
+| Erstellen einer Föderation | Ja | Nein 
+
+
+| Verifizieren einer Domäne | Ja | Nein 
+
+
+| Hinzufügen einer Domäne zu einem Verbund | Ja | Nein 
+
+
+| Deaktivieren und Löschen von Föderationen | Ja | Nein 
+
+
+| Testverbände | Ja | Nein 
+
+
+| Verbände und deren Details anzeigen | Ja | Ja 
+|===
+
+
+== Partnerschaftsrollen
+
+[cols="2,1,1"]
+|===
+| Aufgabe | Partnerschaftsadministrator | Partnerschafts-Viewer 
+
+
+| Kann eine Partnerschaft schaffen | Ja | Nein 
+
+
+| Zuweisen von Rollen zu Partnermitgliedern | Ja | Nein 
+
+
+| Kann Mitglieder zu einer Partnerschaft hinzufügen | Ja | Nein 
+
+
+| Kann Details zur Organisationspartnerschaft anzeigen | Ja | Ja 
+|===
+
+
+== Superadministrator- und Viewer-Rollen
+
+Die Rolle *Superadministrator* bietet vollständigen Zugriff auf die Verwaltung von Konsolenfunktionen, Speicher und Datendiensten.  Diese Rolle eignet sich für Personen, die für die Verwaltung und Governance zuständig sind.  Im Gegensatz dazu bietet die Rolle „Super Viewer“ schreibgeschützten Zugriff, ideal für Prüfer oder Stakeholder, die Einblick benötigen, ohne Änderungen vornehmen zu müssen.
+
+Organisationen sollten den *Superadministrator*-Zugriff sparsam verwenden, um Sicherheitsrisiken zu minimieren und das Prinzip der geringsten Privilegien einzuhalten.  Die meisten Organisationen sollten fein abgestufte Rollen mit nur den erforderlichen Berechtigungen zuweisen, um das Risiko zu verringern und die Überprüfbarkeit zu verbessern.
+
+.Beispiel für Superrollen
+ABC Corporation verfügt über ein kleines fünfköpfiges Team, das die NetApp Konsole für Datendienste und Speicherverwaltung nutzt.  Anstatt mehrere Rollen zu verteilen, weisen sie die Rolle des *Superadministrators* zwei leitenden Teammitgliedern zu, die alle Verwaltungsaufgaben übernehmen, einschließlich Benutzerverwaltung und Ressourcenkonfiguration.  Den übrigen drei Teammitgliedern wird die Rolle „Super Viewer“ zugewiesen, die es ihnen ermöglicht, die Speicherintegrität und den Status des Datendienstes zu überwachen, ohne die Möglichkeit zu haben, Einstellungen zu ändern.
+
+[cols="2,1"]
+|===
+| Rolle | Geerbte Rollen 
+
+
+ a| 
+Super-Admin
+ a| 
+* Organisationsadministrator
+* Ordner- oder Projektadministrator
+* Föderationsadministrator
+* Partnerschaftsadministrator
+* Ransomware-Resilienz-Administrator
+* Notfallwiederherstellungsadministrator
+* Backup-Superadministrator
+* Speicheradministrator
+* Keystone -Administrator
+* Google Cloud NetApp Volumes Administrator
+
+
+
+
+ a| 
+Super Viewer
+ a| 
+* Organisationsanzeige
+* Föderationsbetrachter
+* Partnerschafts-Viewer
+* Ransomware Resilience-Viewer
+* Disaster Recovery-Viewer
+* Backup-Viewer
+* Speicheranzeige
+* Keystone -Viewer
+* Google Cloud NetApp Volumes Viewer
+
+
+|===

@@ -1,0 +1,124 @@
+= 
+:allow-uri-read: 
+
+
+Während der manuellen Installation kontaktierte Endpunkte:: Wenn Sie den Konsolen-Agenten manuell auf Ihrem eigenen Linux-Host installieren, benötigt das Installationsprogramm für den Konsolen-Agenten während des Installationsvorgangs Zugriff auf die folgenden URLs:
+
+
+[cols="2*"]
+|===
+| Endpunkte | Zweck 
+
+
+| \https://mysupport.netapp.com |  
+
+
+| \https://signin.b2c.netapp.com | (dieser Endpunkt ist die CNAME-URL für \https://mysupport.netapp.com) 
+
+
+| \https://cloudmanager.cloud.netapp.com/tenancy |  
+
+
+| \https://stream.cloudmanager.cloud.netapp.com |  
+
+
+| \https://production-artifacts.cloudmanager.cloud.netapp.com |  
+
+
+ a| 
+* Option 1 (empfohlen):
++
+** \https://bluexpinfraprod.eastus2.data.azurecr.io
+** \https://bluexpinfraprod.azurecr.io
+
+
+* Option 2:
++
+** \https://*.blob.core.windows.net
+** \https://cloudmanagerinfraprod.azurecr.io
+
+
+
+ a| 
+Um Bilder zu erhalten, benötigt das Installationsprogramm Zugriff auf einen dieser beiden Endpunktsätze.  ^1^ Die in Option 1 aufgeführten Endpunkte werden empfohlen, da sie sicherer sind.  Wir empfehlen, dass Sie Ihre Firewall so einrichten, dass die in Option 1 aufgeführten Endpunkte zugelassen und die in Option 2 aufgeführten Endpunkte nicht zugelassen werden.  Beachten Sie Folgendes zu diesen Endpunkten:
+
+* Die in Option 1 aufgeführten Endpunkte werden ab der Version 3.9.47 des Konsolenagenten unterstützt.  Es besteht keine Abwärtskompatibilität mit früheren Versionen des Konsolenagenten.
+* Der Konsolenagent kontaktiert zuerst die in Option 2 aufgeführten Endpunkte.  Wenn auf diese Endpunkte nicht zugegriffen werden kann, kontaktiert der Konsolenagent automatisch die in Option 1 aufgeführten Endpunkte.
+* Die Endpunkte in Option 1 werden nicht unterstützt, wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder NetApp Ransomware Resilience verwenden.  In diesem Fall können Sie die in Option 1 aufgeführten Endpunkte verbieten und die in Option 2 aufgeführten Endpunkte zulassen.
+
+
+|===
+Während der manuellen Installation kontaktierte Endpunkte:: Wenn Sie den Konsolen-Agenten manuell auf Ihrem eigenen Linux-Host installieren, benötigt das Installationsprogramm für den Konsolen-Agenten während des Installationsvorgangs Zugriff auf mehrere URLs.
+
+
+[cols="2*"]
+|===
+| Endpunkte | Zweck 
+
+
+| \https://mysupport.netapp.com |  
+
+
+| \https://signin.b2c.netapp.com | Dieser Endpunkt ist die CNAME-URL für \https://mysupport.netapp.com 
+
+
+| \https://cloudmanager.cloud.netapp.com/tenancy |  
+
+
+| \https://stream.cloudmanager.cloud.netapp.com |  
+
+
+| \https://production-artifacts.cloudmanager.cloud.netapp.com |  
+
+
+2+| *AWS-Regierungsregion* Wenn Sie den Konsolenagenten in einer AWS-Regierungsregion installieren, benötigt das Installationsprogramm auch Zugriff auf diese Endpunkte: 
+
+
+ a| 
+\https://*.blob.core.windows.net
+ a| 
+
+
+
+ a| 
+\https://cloudmanagerinfraprod.azurecr.io
+ a| 
+
+
+
+2+| *Azure Government-Region* Wenn Sie den Konsolen-Agenten in einer Azure Government-Region installieren, benötigt das Installationsprogramm auch Zugriff auf diese Endpunkte: 
+
+
+ a| 
+\https://*.blob.core.windows.net
+ a| 
+
+
+
+ a| 
+\https://occmclientinfragov.azurecr.us
+ a| 
+
+
+
+2+| *Kommerzielle oder souveräne Regionen* Wenn Sie den Konsolenagenten in einer kommerziellen oder souveränen Region installieren, können Sie zwischen zwei Endpunktsätzen wählen: 
+
+
+ a| 
+**Option 1 (empfohlen):** * \https://bluexpinfraprod.eastus2.data.azurecr.io * \https://bluexpinfraprod.azurecr.io
+
+**Option 2:** * \https://*.blob.core.windows.net * \https://cloudmanagerinfraprod.azurecr.io
+ a| 
+Die in Option 1 aufgeführten Endpunkte werden empfohlen, da sie sicherer sind.  Wir empfehlen, dass Sie Ihre Firewall so einrichten, dass die in Option 1 aufgeführten Endpunkte zugelassen und die in Option 2 aufgeführten Endpunkte nicht zugelassen werden.  Beachten Sie Folgendes zu diesen Endpunkten:
+
+* Die in Option 1 aufgeführten Endpunkte werden ab der Version 3.9.47 des Konsolenagenten unterstützt.  Es besteht keine Abwärtskompatibilität mit früheren Versionen des Konsolenagenten.
+* Der Konsolenagent kontaktiert zuerst die in Option 2 aufgeführten Endpunkte.  Wenn auf diese Endpunkte nicht zugegriffen werden kann, kontaktiert der Konsolenagent automatisch die in Option 1 aufgeführten Endpunkte.
+* Die Endpunkte in Option 1 werden nicht unterstützt, wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder NetApp Ransomware Resilience verwenden.  In diesem Fall können Sie die in Option 1 aufgeführten Endpunkte verbieten und die in Option 2 aufgeführten Endpunkte zulassen.
+
+
+|===
++
+
+Die in Option 1 aufgeführten Endpunkte werden empfohlen, da sie sicherer sind.  Wir empfehlen, dass Sie Ihre Firewall so einrichten, dass die in Option 1 aufgeführten Endpunkte zugelassen und die in Option 2 aufgeführten Endpunkte nicht zugelassen werden.  Beachten Sie Folgendes zu diesen Endpunkten: ** Die in Option 1 aufgeführten Endpunkte werden ab der Version 3.9.47 des Konsolenagenten unterstützt.  Es besteht keine Abwärtskompatibilität mit früheren Versionen des Konsolenagenten.  ** Der Konsolenagent kontaktiert zuerst die in Option 2 aufgeführten Endpunkte.  Wenn auf diese Endpunkte nicht zugegriffen werden kann, kontaktiert der Konsolenagent automatisch die in Option 1 aufgeführten Endpunkte.  ** Die Endpunkte in Option 1 werden nicht unterstützt, wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder NetpApp Ransomware Resilience verwenden.  In diesem Fall können Sie die in Option 1 aufgeführten Endpunkte verbieten und die in Option 2 aufgeführten Endpunkte zulassen.
+
+Der Host versucht möglicherweise, während der Installation Betriebssystempakete zu aktualisieren.  Der Host kann für diese Betriebssystempakete verschiedene Spiegelungssites kontaktieren.

@@ -1,0 +1,326 @@
+---
+sidebar: sidebar 
+permalink: concept-modes.html 
+keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
+summary: 'Die NetApp Konsole bietet mehrere Bereitstellungsmodi, mit denen Sie Ihre Geschäfts- und Sicherheitsanforderungen erfüllen können. Der _Standardmodus_ nutzt eine Software-as-a-Service-Schicht (SaaS), um die volle Funktionalität bereitzustellen, während der _eingeschränkte Modus_ und der _private Modus_ für Organisationen mit Konnektivitätsbeschränkungen verfügbar sind.' 
+---
+= Erfahren Sie mehr über die Bereitstellungsmodi der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die NetApp Konsole bietet mehrere Bereitstellungsmodi, mit denen Sie Ihre Geschäfts- und Sicherheitsanforderungen erfüllen können.
+
+* Der _Standardmodus_ nutzt eine Software-as-a-Service-Schicht (SaaS), um die volle Funktionalität bereitzustellen.  Benutzer greifen über eine webbasierte gehostete Schnittstelle auf die Konsole zu
+* Der _Eingeschränkte Modus_ ist für Organisationen mit Konnektivitätsbeschränkungen verfügbar, die die NetApp Konsole in ihrer eigenen öffentlichen Cloud installieren möchten.  Benutzer greifen über eine webbasierte Schnittstelle auf die Konsole zu, die auf einem Konsolenagenten in ihrer Cloud-Umgebung gehostet wird.
++
+Die NetApp Konsole schränkt den Datenverkehr, die Kommunikation und die Daten im eingeschränkten Modus ein und Sie müssen sicherstellen, dass Ihre Umgebung (vor Ort und in der Cloud) den erforderlichen Vorschriften entspricht.
+
+
+
+
+
+== Überblick
+
+Jeder Bereitstellungsmodus unterscheidet sich hinsichtlich ausgehender Konnektivität, Standort, Installation, Authentifizierung, Datendiensten und Abrechnungsmethoden.
+
+Standardmodus:: Sie nutzen einen SaaS-Dienst über die webbasierte Konsole.  Abhängig von den Datendiensten und Funktionen, die Sie verwenden möchten, erstellt ein Konsolenorganisationsadministrator einen oder mehrere Konsolenagenten, um die Daten in Ihrer Hybrid-Cloud-Umgebung zu verwalten.
++
+--
+Dieser Modus verwendet eine verschlüsselte Datenübertragung über das öffentliche Internet.
+
+--
+Eingeschränkter Modus:: Sie installieren einen Konsolenagenten in der Cloud (in einer Regierungs-, souveränen oder kommerziellen Region) und dieser verfügt über eine eingeschränkte ausgehende Konnektivität zur NetApp Console SaaS-Schicht.
++
+--
+Dieser Modus wird normalerweise von staatlichen und lokalen Behörden sowie regulierten Unternehmen verwendet.
+
+<<Eingeschränkter Modus,Erfahren Sie mehr über die ausgehende Konnektivität zur SaaS-Schicht>> .
+
+--
+BlueXP -Privatmodus (nur ältere BlueXP Schnittstelle):: Der private BlueXP Modus (alte BlueXP -Schnittstelle) wird normalerweise in lokalen Umgebungen ohne Internetverbindung und mit sicheren Cloud-Regionen verwendet, darunter AWS Secret Cloud, AWS Top Secret Cloud und Azure IL6.  NetApp unterstützt diese Umgebungen weiterhin mit der alten BlueXP Schnittstelle.link:media/BlueXP-Private-Mode-legacy-interface.pdf["PDF-Dokumentation für den privaten Modus von BlueXP"^]
+
+
+Die folgende Tabelle bietet einen Vergleich der NetApp Konsole.
+
+[cols="16h,28,28"]
+|===
+|  | Standardmodus | Eingeschränkter Modus 
+
+
+| Verbindung zur NetApp Console SaaS-Schicht erforderlich? | Ja | Nur ausgehend 
+
+
+| Verbindung zu Ihrem Cloud-Anbieter erforderlich? | Ja | Ja, innerhalb der Region 
+
+
+| Installation des Konsolenagenten | Über die Konsole, den Cloud-Marktplatz oder die manuelle Installation | Cloud-Marktplatz oder manuelle Installation 
+
+
+| Upgrades des Konsolenagenten | Automatische Upgrades | Automatische Upgrades 
+
+
+| UI-Zugriff | Von der Konsolen-SaaS-Ebene | Lokal von einer Agent-VM 
+
+
+| API-Endpunkt | Die Konsolen-SaaS-Schicht | Ein Konsolenagent 
+
+
+| Authentifizierung | Über SaaS mit Auth0, NSS-Login oder Identitätsföderation | Durch SaaS mit Auth0 oder Identitätsföderation 
+
+
+| Multi-Faktor-Authentifizierung | Verfügbar für lokale Benutzer | Nicht verfügbar 
+
+
+| Speicher- und Datendienste | Alle werden unterstützt | Viele werden unterstützt 
+
+
+| Lizenzierungsoptionen für Datendienste | Marktplatzabonnements und BYOL | Marktplatzabonnements und BYOL 
+|===
+Lesen Sie die folgenden Abschnitte, um mehr über diese Modi zu erfahren, einschließlich der Informationen darüber, welche Funktionen und Dienste der NetApp Konsole unterstützt werden.
+
+
+
+== Standardmodus
+
+Das folgende Bild ist ein Beispiel für eine Bereitstellung im Standardmodus.
+
+image:diagram-standard-mode.png["Ein konzeptionelles Bild, das das öffentliche Internet zeigt, in dem die webbasierte Konsole, die SaaS-Schicht und die Auth0-Authentifizierung verfügbar sind, ein virtuelles Netzwerk in der Cloud, in dem ein Konsolenagent Cloud Volumes ONTAP ausführt und verwaltet, und einen AFF -Cluster in einem lokalen Rechenzentrum."]
+
+Die Konsole funktioniert im Standardmodus wie folgt:
+
+Ausgehende Kommunikation:: Für den täglichen Betrieb ist eine Konnektivität von einem Konsolenagenten zur SaaS-Ebene der Konsole, zu den öffentlich verfügbaren Ressourcen Ihres Cloud-Anbieters und zu anderen wichtigen Komponenten erforderlich.
++
+--
+* link:task-install-connector-aws-bluexp.html#networking-aws-agent["Endpunkte, die ein Agent in AWS kontaktiert"]
+* link:task-install-connector-azure-bluexp.html#networking-azure-agent["Endpunkte, die ein Agent in Azure kontaktiert"]
+* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["Endpunkte, die ein Agent in Google Cloud kontaktiert"]
+
+
+--
+Unterstützter Standort für einen Agenten:: Im Standardmodus wird ein Agent in der Cloud oder bei Ihnen vor Ort unterstützt.
+Installation des Konsolenagenten:: Sie können einen Agenten mit einer der folgenden Methoden installieren:
++
+--
+* Von der Konsole aus
+* Vom AWS- oder Azure Marketplace
+* Aus dem Google Cloud SDK
+* Manuelle Verwendung eines Installationsprogramms auf einem Linux-Host in Ihrem Rechenzentrum oder Ihrer Cloud
+* Verwenden Sie die bereitgestellte OVA in Ihrer VCenter-Umgebung.
+
+
+--
+Upgrades des Konsolenagenten:: NetApp führt für Ihren Agenten automatisch monatliche Upgrades durch.p.
+Zugriff auf die Benutzeroberfläche:: Auf die Benutzeroberfläche kann über die webbasierte Konsole zugegriffen werden, die über die SaaS-Schicht bereitgestellt wird.
+API-Endpunkt:: API-Aufrufe werden an den folgenden Endpunkt gesendet: \https://api.bluexp.netapp.com
+Authentifizierung:: Authentifizierung mit Auth0- oder NetApp Support Site (NSS)-Anmeldungen.  Identitätsföderation ist verfügbar.
+Unterstützte Datendienste:: Alle NetApp -Datendienste werden unterstützt. link:https://docs.netapp.com/us-en/data-services-family/index.html["Erfahren Sie mehr über NetApp Datenservices"^] .
+Unterstützte Lizenzierungsoptionen:: Marketplace-Abonnements und BYOL werden im Standardmodus unterstützt. Die unterstützten Lizenzierungsoptionen hängen jedoch davon ab, welchen NetApp Datendienst Sie verwenden.  Lesen Sie die Dokumentation zu jedem Dienst, um mehr über die verfügbaren Lizenzierungsoptionen zu erfahren.
+Erste Schritte mit dem Standardmodus:: Gehen Sie zum https://console.netapp.com["NetApp Konsole"^] und melden Sie sich an.
++
+--
+link:task-quick-start-standard-mode.html["Erfahren Sie, wie Sie mit dem Standardmodus beginnen"] .
+
+--
+
+
+
+
+== Eingeschränkter Modus
+
+Das folgende Bild ist ein Beispiel für eine Bereitstellung im eingeschränkten Modus.
+
+image:diagram-restricted-mode.png["Ein konzeptionelles Bild, das das öffentliche Internet zeigt, in dem die SaaS-Schicht und die Auth0-Authentifizierung verfügbar sind, ein virtuelles Netzwerk in der Cloud, in dem ein Konsolenagent ausgeführt wird und Zugriff auf die webbasierte Konsole bietet, und das Cloud Volumes ONTAP und einen AFF -Cluster in einem lokalen Rechenzentrum verwaltet."]
+
+Im eingeschränkten Modus funktioniert die Konsole wie folgt:
+
+Ausgehende Kommunikation:: Ein Agent benötigt eine ausgehende Verbindung zur SaaS-Ebene der Konsole für Datendienste, Software-Upgrades, Authentifizierung und Metadatenübertragung.
++
+--
+Die SaaS-Ebene der Konsole initiiert keine Kommunikation mit einem Agenten.  Agenten initiieren die gesamte Kommunikation mit der SaaS-Ebene der Konsole und ziehen oder übertragen Daten nach Bedarf.
+
+Außerdem ist eine Verbindung zu Cloud-Provider-Ressourcen innerhalb der Region erforderlich.
+
+--
+Unterstützter Standort für einen Agenten:: Im eingeschränkten Modus wird ein Agent in der Cloud unterstützt: in einer Regierungsregion, einer souveränen Region oder einer kommerziellen Region.
+Installation des Konsolenagenten:: Sie können die Installation vom AWS- oder Azure Marketplace oder manuell auf Ihrem eigenen Linux-Host durchführen oder eine herunterladbare OVA in Ihrer VCenter-Umgebung verwenden.
+Upgrades des Konsolenagenten:: NetApp aktualisiert Ihre Agentensoftware automatisch mit monatlichen Updates.
+Zugriff auf die Benutzeroberfläche:: Auf die Benutzeroberfläche kann von einer Agent-VM aus zugegriffen werden, die in Ihrer Cloud-Region bereitgestellt wird.
+API-Endpunkt:: Es werden API-Aufrufe an die virtuelle Agentenmaschine gesendet.
+Authentifizierung:: Die Authentifizierung erfolgt über auth0.  Identitätsföderation ist ebenfalls verfügbar.
+Unterstützte Speicherverwaltung und Datendienste:: Die folgenden Speicher- und Datendienste mit eingeschränktem Modus:
++
+--
+[cols="2*"]
+|===
+| Unterstützte Dienste | Hinweise 
+
+
+| Azure NetApp Files | Volle Unterstützung 
+
+
+| Sicherung und Wiederherstellung | Wird in Regierungsregionen und kommerziellen Regionen mit eingeschränktem Modus unterstützt. Wird in souveränen Regionen mit eingeschränktem Modus nicht unterstützt. Im eingeschränkten Modus unterstützt NetApp Backup and Recovery nur die Sicherung und Wiederherstellung von ONTAP Volume-Daten. https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP -Daten anzeigen"^] Das Sichern und Wiederherstellen von Anwendungsdaten und Daten virtueller Maschinen wird nicht unterstützt. 
+
+
+| NetApp Datenklassifizierung  a| 
+Wird in Regierungsregionen mit eingeschränktem Modus unterstützt.  Wird in kommerziellen Regionen oder in souveränen Regionen mit eingeschränktem Modus nicht unterstützt.
+
+
+
+| Cloud Volumes ONTAP | Volle Unterstützung 
+
+
+| Lizenzen und Abonnements | Sie können mit den unten aufgeführten unterstützten Lizenzierungsoptionen für den eingeschränkten Modus auf Lizenz- und Abonnementinformationen zugreifen. 
+
+
+| On-Premises- ONTAP -Cluster | Sowohl die Erkennung mit einem Konsolenagenten als auch die Erkennung ohne Konsolenagenten (direkte Erkennung) werden unterstützt.  Wenn Sie einen lokalen Cluster ohne Konsolenagenten entdecken, wird die erweiterte Ansicht (System Manager) nicht unterstützt. 
+
+
+| Replikation | Wird in Regierungsregionen mit eingeschränktem Modus unterstützt.  Wird in kommerziellen Regionen oder in souveränen Regionen mit eingeschränktem Modus nicht unterstützt. 
+|===
+--
+Unterstützte Lizenzierungsoptionen:: Die folgenden Lizenzierungsoptionen werden im eingeschränkten Modus unterstützt:
++
+--
+* Marktplatz-Abonnements (Stunden- und Jahresverträge)
++
+Beachten Sie Folgendes:
+
++
+** Für Cloud Volumes ONTAP wird nur die kapazitätsbasierte Lizenzierung unterstützt.
+** In Azure werden Jahresverträge mit Regierungsregionen nicht unterstützt.
+
+
+* BYOL
++
+Für Cloud Volumes ONTAP werden mit BYOL sowohl kapazitätsbasierte als auch knotenbasierte Lizenzierungen unterstützt.
+
+
+
+--
+Erste Schritte mit dem eingeschränkten Modus:: Sie müssen den eingeschränkten Modus aktivieren, wenn Sie Ihre NetApp Konsolenorganisation erstellen.
+
+
+Wenn Sie noch keine Organisation haben, werden Sie aufgefordert, Ihre Organisation zu erstellen und den eingeschränkten Modus zu aktivieren, wenn Sie sich zum ersten Mal von einem Konsolenagenten aus bei der Konsole anmelden, den Sie manuell installiert oder im Marktplatz Ihres Cloud-Anbieters erstellt haben.
+
+
+NOTE: Sie können die Einstellung für den eingeschränkten Modus nach dem Erstellen der Organisation nicht mehr ändern.
+
+link:task-quick-start-restricted-mode.html["Erfahren Sie, wie Sie mit dem eingeschränkten Modus beginnen"] .
+
+
+
+== Service- und Funktionsvergleich
+
+Mithilfe der folgenden Tabelle können Sie schnell feststellen, welche Dienste und Funktionen im eingeschränkten Modus unterstützt werden.
+
+Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstützt werden.  Weitere Einzelheiten zur Unterstützung dieser Dienste im eingeschränkten Modus finden Sie in den obigen Abschnitten.
+
+[cols="19,27,27"]
+|===
+| Produktbereich | NetApp -Datendienst oder -Funktion | Eingeschränkter Modus 
+
+
+.10+| *Speicher* Dieser Teil der Tabelle listet die Unterstützung für die Verwaltung von Speichersystemen über die Konsole auf.  Es werden nicht die unterstützten Sicherungsziele für NetApp Backup and Recovery angezeigt. | Amazon FSx für ONTAP | Nein 
+
+
+| Amazon S3 | Nein 
+
+
+| Azure-Blob | Nein 
+
+
+| Azure NetApp Files | Ja 
+
+
+| Cloud Volumes ONTAP | Ja 
+
+
+| Google Cloud NetApp Volumes | Nein 
+
+
+| Google Cloud-Speicher | Nein 
+
+
+| On-Premises- ONTAP -Cluster | Ja 
+
+
+| E-Series | Nein 
+
+
+| StorageGRID | Nein 
+
+
+.9+| *Datendienste* | NetApp Backup und Recovery | Jahttps://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] 
+
+
+| NetApp Datenklassifizierung | Ja 
+
+
+| NetApp Copy and Sync | Nein 
+
+
+| NetApp Disaster Recovery | Nein 
+
+
+| NetApp Ransomware-Resilienz | Nein 
+
+
+| NetApp Replikation | Ja 
+
+
+| NetApp Cloud Tiering | Nein 
+
+
+| NetApp Volume-Caching | Nein 
+
+
+| NetApp Workload Factory | Nein 
+
+
+.14+| *Merkmale* | Warnungen | Nein 
+
+
+| Digital Advisor | Nein 
+
+
+| Lizenz- und Abonnementverwaltung | Ja 
+
+
+| Identitäts- und Zugriffsverwaltung | Ja 
+
+
+| Anmeldeinformationen | Ja 
+
+
+| Föderation | Ja 
+
+
+| Lebenszyklusplanung | Nein 
+
+
+| Multi-Faktor-Authentifizierung | Ja 
+
+
+| NSS-Konten | Ja 
+
+
+| Benachrichtigungen | Ja 
+
+
+| Suche | Ja 
+
+
+| Software-Updates | Nein 
+
+
+| Nachhaltigkeit | Nein 
+
+
+| Prüfung | Ja 
+|===

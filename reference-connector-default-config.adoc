@@ -1,0 +1,144 @@
+---
+sidebar: sidebar 
+permalink: reference-connector-default-config.html 
+keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
+summary: Informieren Sie sich vor der Bereitstellung über den Konsolenagenten. 
+---
+= Standardkonfiguration für den Konsolenagenten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Informieren Sie sich vor der Bereitstellung des Konsolenagenten über dessen Konfiguration.
+
+
+
+== Standardkonfiguration mit Internetzugang
+
+Die folgenden Konfigurationsdetails gelten, wenn Sie einen Konsolenagenten von der NetApp -Konsole oder vom Marktplatz Ihres Cloud-Anbieters bereitgestellt haben oder wenn Sie einen Konsolenagenten manuell auf einem lokalen Linux-Host mit Internetzugang installiert haben.
+
+
+
+=== AWS-Details
+
+Wenn Sie einen Konsolenagenten über die Konsole oder den Marktplatz des Cloud-Anbieters bereitgestellt haben, beachten Sie Folgendes:
+
+* Der EC2-Instanztyp ist t3.2xlarge.
+* Das Betriebssystem für das Image ist Ubuntu 22.04 LTS.
++
+Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um auf das System zuzugreifen.
+
+* Die Installation umfasst Docker Engine, das erforderliche Container-Orchestrierungstool.
+* Der Benutzername für die EC2-Linux-Instanz ist ubuntu (für Agenten, die vor Mai 2023 erstellt wurden, war der Benutzername ec2-user).
+* Die Standardsystemfestplatte ist eine 100-GiB-gp2-Festplatte.
+
+
+
+
+=== Azure-Details
+
+Wenn Sie einen Konsolenagenten über die Konsole oder den Marktplatz des Cloud-Anbieters bereitgestellt haben, beachten Sie Folgendes:
+
+* Der VM-Typ ist Standard_D8s_v3.
+* Das Betriebssystem für das Image ist Ubuntu 22.04 LTS.
++
+Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um auf das System zuzugreifen.
+
+* Die Installation umfasst Docker Engine, das erforderliche Container-Orchestrierungstool.
+* Die Standardsystemfestplatte ist eine 100-GiB-Premium-SSD-Festplatte.
+
+
+
+
+=== Google Cloud-Details
+
+Wenn Sie einen Konsolenagenten über die Konsole bereitgestellt haben, beachten Sie Folgendes:
+
+* Die VM-Instanz ist n2-standard-8.
+* Das Betriebssystem für das Image ist Ubuntu 22.04 LTS.
++
+Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um auf das System zuzugreifen.
+
+* Die Installation umfasst Docker Engine, das erforderliche Container-Orchestrierungstool.
+* Die Standardsystemfestplatte ist eine persistente SSD-Festplatte mit 100 GiB.
+
+
+
+
+=== Installationsordner
+
+Der Installationsordner des Agenten befindet sich am folgenden Speicherort:
+
+/opt/application/netapp/cloudmanager
+
+
+
+=== Protokolldateien
+
+Protokolldateien sind in den folgenden Ordnern enthalten:
+
+* /opt/application/netapp/cloudmanager/log oder
+* /opt/application/netapp/service-manager-2/logs (beginnend mit neuen 3.9.23-Installationen)
++
+Die Protokolle in diesen Ordnern enthalten Details zum Konsolenagenten.
+
+* /opt/application/netapp/cloudmanager/docker_occm/data/log
++
+Die Protokolle in diesem Ordner enthalten Details zu Cloud-Diensten und dem Konsolendienst, der auf dem Konsolenagenten ausgeführt wird.
+
+
+
+
+
+=== Konsolenagentdienst
+
+* Der Konsolenagentdienst heißt occm.
+* Der OCCM-Dienst ist vom MySQL-Dienst abhängig.
++
+Wenn der MySQL-Dienst ausfällt, fällt auch der OCCM-Dienst aus.
+
+
+
+
+
+=== Häfen
+
+Der Agent verwendet die folgenden Ports auf dem Linux-Host:
+
+* 80 für HTTP-Zugriff
+* 443 für HTTPS-Zugriff
+
+
+
+
+== Standardkonfiguration ohne Internetzugang
+
+Die folgende Konfiguration gilt, wenn Sie den Konsolen-Agent manuell auf einem lokalen Linux-Host installiert haben, der keinen Internetzugang hat. link:task-quick-start-private-mode.html["Erfahren Sie mehr über diese Installationsoption"] .
+
+* Der Installationsordner des Agenten befindet sich am folgenden Speicherort:
++
+/opt/application/netapp/ds
+
+* Protokolldateien sind in den folgenden Ordnern enthalten:
++
+/var/lib/docker/volumes/ds_occmdata/_data/log
+
++
+Die Protokolle in diesem Ordner enthalten Details zum Konsolenagenten und zu Docker-Images.
+
+* Alle Dienste werden in Docker-Containern ausgeführt
++
+Die Dienste sind abhängig vom laufenden Docker-Runtime-Dienst
+
+* Der Agent verwendet die folgenden Ports auf dem Linux-Host:
++
+** 80 für HTTP-Zugriff
+** 443 für HTTPS-Zugriff
+
+
+

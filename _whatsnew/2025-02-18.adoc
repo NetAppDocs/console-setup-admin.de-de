@@ -1,0 +1,25 @@
+= Freigabe des Privatmodus (3.9.48)
+:allow-uri-read: 
+
+
+
+
+=== Freigabe des Privatmodus (3.9.48)
+
+Eine neue Version des privaten Modus steht jetzt zum Download bereit von der https://mysupport.netapp.com/site/downloads["NetApp Support Site"^]
+
+Die Version 3.9.48 enthält Updates für die folgenden BlueXP Komponenten und -Dienste.
+
+[cols="3*"]
+|===
+| Komponente oder Dienst | In dieser Version enthaltene Version | Änderungen seit der letzten Version des privaten Modus 
+
+
+| Anschluss | 3.9.48 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-48["Was ist neu auf der BlueXP Connector-Seite?"] und beziehen Sie sich auf die in den Versionen 3.9.48 enthaltenen Änderungen. 
+
+
+| Sicherung und Wiederherstellung | 21. Februar 2025 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Was ist neu auf der BlueXP backup and recovery?"^] und beziehen Sie sich auf die Änderungen, die in der Version vom Februar 2025 enthalten sind. 
+
+
+| Einstufung | 22. Januar 2025 (Version 1.39) | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Was ist neu auf der BlueXP classification ?"^] und beziehen Sie sich auf die in der Version 1.39 enthaltenen Änderungen. 
+|===

@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: task-iam-associate-connectors.html 
+keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
+summary: Wenn Mitglieder Ihrer Organisation einen Konsolenagenten in einem anderen Projekt verwenden müssen, müssen Sie diesen Konsolenagenten mit dem jeweiligen Projekt verknüpfen. 
+---
+= Verknüpfen Sie einen Konsolenagenten mit anderen Ordnern und Projekten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn ein _Organisationsadministrator_ einen Konsolenagenten erstellt, wird der Konsolenagent automatisch mit dem aktuell ausgewählten Projekt innerhalb der Organisation verknüpft.  Allerdings kann jemand mit der Rolle „Organisationsadministrator“ von überall in der Organisation auf diesen Konsolenagenten zugreifen.  Andere Mitglieder Ihrer Organisation können auf diesen Konsolenagenten nur über das Projekt zugreifen, in dem er erstellt wurde, es sei denn, Sie verknüpfen diesen Konsolenagenten mit anderen Projekten.
+
+.Bevor Sie beginnen
+Überprüfen Sie, wie die Zuordnung von Konsolenagenten funktioniert. link:concept-identity-and-access-management.html#associate-agents["Erfahren Sie mehr über die Verwendung des Konsolenagenten mit Identität und Zugriff"] .
+
+.Informationen zu diesem Vorgang
+Ein _Ordner- oder Projektadministrator_ kann alle Konsolenagenten auf der *Agenten*-Seite anzeigen, kann Konsolenagenten jedoch nur mit Ordnern und Projekten verknüpfen, für die er über Berechtigungen verfügt. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Aktionen, die ein Ordner- oder Projektadministrator ausführen kann."] .
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff* > *Agenten*.
+. Suchen Sie in der Tabelle den Konsolenagenten, den Sie zuordnen möchten.
++
+Verwenden Sie die Suche über der Tabelle, um einen bestimmten Konsolenagenten zu finden, oder filtern Sie die Tabelle nach Ressourcenhierarchie.
+
+. Um die mit dem Konsolenagenten verknüpften Ordner und Projekte anzuzeigen, wählen Sieimage:icon-action.png["Drei-Punkte-Symbol"] und wählen Sie dann *Details anzeigen*.
++
+Auf der Seite werden Details zu den Ordnern und Projekten angezeigt, die mit dem Konsolenagenten verknüpft sind.
+
+. Wählen Sie *Mit Ordner oder Projekt verknüpfen*.
+. Wählen Sie einen Ordner oder ein Projekt aus und wählen Sie dann *Akzeptieren*.
+. Um den Konsolenagenten mit einem zusätzlichen Ordner oder Projekt zu verknüpfen, wählen Sie *Ordner oder Projekt hinzufügen* und wählen Sie dann den Ordner oder das Projekt aus.
+. Wählen Sie *Associate Agent* aus.
+
+
+.Nach Abschluss
+Ordnen Sie die Ressourcen des Konsolenagenten denselben Ordnern und Projekten von der Seite *Ressourcen* zu.
+
+link:task-iam-manage-resources.html#associate-resource["Erfahren Sie, wie Sie eine Ressource mit Ordnern und Projekten verknüpfen"] .
+
+.Ähnliche Informationen
+* link:concept-connectors.html["Erfahren Sie mehr über NetApp Console-Agenten"]
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der NetApp Console"]
+* link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identitäts- und Zugriffsverwaltung"^]
+

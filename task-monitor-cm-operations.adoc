@@ -1,0 +1,180 @@
+---
+sidebar: sidebar 
+permalink: task-monitor-cm-operations.html 
+keywords: administer, monitor, timeline, notifications, alerts, events, notification center, email, audit page, audit action 
+summary: Sie können den Status der von der Konsole ausgeführten Vorgänge überwachen, um festzustellen, ob Probleme vorliegen, die Sie beheben müssen.  Sie können den Status auf der Audit-Seite oder im Benachrichtigungscenter anzeigen oder sich Benachrichtigungen per E-Mail senden lassen. 
+---
+= Überwachen Sie NetApp -Konsolenvorgänge
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können den Status der von der Konsole ausgeführten Vorgänge überwachen, um festzustellen, ob Probleme vorliegen, die Sie beheben müssen.  Sie können den Status auf der Audit-Seite oder im Benachrichtigungscenter anzeigen oder sich Benachrichtigungen per E-Mail senden lassen.
+
+Die Tabelle hebt die Funktionen der Audit-Seite und des Benachrichtigungscenters durch einen Vergleich hervor.
+
+[cols="47,47"]
+|===
+| Benachrichtigungscenter | Audit-Seite 
+
+
+| Zeigt den Status auf hoher Ebene für Ereignisse und Aktionen an | Bietet Details zu jedem Ereignis oder jeder Aktion zur weiteren Untersuchung 
+
+
+| Zeigt den Status der aktuellen Anmeldesitzung an (die Informationen werden nach der Abmeldung nicht im Benachrichtigungscenter angezeigt) | Behält den Status des letzten Monats bei 
+
+
+| Zeigt nur Aktionen an, die in der Benutzeroberfläche initiiert wurden | Zeigt alle Aktionen der Benutzeroberfläche oder APIs an 
+
+
+| Zeigt vom Benutzer initiierte Aktionen an | Zeigt alle Aktionen an, egal ob vom Benutzer oder vom System initiiert 
+
+
+| Ergebnisse nach Wichtigkeit filtern | Filtern Sie nach Dienst, Aktion, Benutzer, Status und mehr 
+
+
+| Bietet die Möglichkeit, Benachrichtigungen per E-Mail an Benutzer und andere zu senden | Keine E-Mail-Funktion 
+|===
+
+
+== Überwachen Sie die Benutzeraktivität auf der Seite „Überwachen“.
+
+Auf der Seite „Audit“ werden die Aktionen angezeigt, die Benutzer zur Verwaltung Ihrer Organisation oder Ihres Kontos ausgeführt haben.  Dazu gehören Verwaltungsaktionen wie das Zuordnen von Benutzern, das Erstellen von Systemen, das Erstellen von Agenten und mehr.
+
+Verwenden Sie die Audit-Seite, um zu ermitteln, wer eine Aktion ausgeführt hat oder welchen Status sie hat.
+
+.Schritte
+. Wählen Sie *Administration > Audit*.
+. Verwenden Sie die Filter über der Tabelle, um zu ändern, welche Aktionen in der Tabelle angezeigt werden.
++
+Sie können beispielsweise den Filter *Dienst* verwenden, um Aktionen anzuzeigen, die sich auf einen bestimmten Dienst beziehen, oder Sie können den Filter *Benutzer* verwenden, um Aktionen anzuzeigen, die sich auf ein bestimmtes Benutzerkonto beziehen.
+
+
+
+
+
+=== Laden Sie Überwachungsprotokolle von der Überwachungsseite herunter
+
+Sie können die Audit-Protokolle von der Audit-Seite in eine CSV-Datei herunterladen.  Auf diese Weise können Sie die Aktionen protokollieren, die Benutzer in Ihrer Organisation ausführen.  Die CSV-Datei enthält alle Spalten in der heruntergeladenen CSV-Datei, unabhängig von Filtern oder angezeigten Spalten auf der Audit-Seite.
+
+.Schritte
+. Wählen Sie auf der Seite *Audit* das Download-Symbol in der oberen rechten Ecke der Tabelle aus.
+
+
+
+
+== Überwachen Sie Aktivitäten mithilfe des Benachrichtigungscenters
+
+Benachrichtigungen verfolgen Konsolenvorgänge, um den Erfolg zu bestätigen.  Sie ermöglichen Ihnen, den Status vieler Konsolenaktionen anzuzeigen, die Sie während Ihrer aktuellen Anmeldesitzung initiiert haben.  Nicht alle Konsolendienste melden Informationen an das Benachrichtigungscenter.
+
+Sie können die Benachrichtigungen anzeigen, indem Sie die Benachrichtigungsglocke (image:icon_bell.png["Benachrichtigungsglocke"] ) in der Menüleiste.  Die Farbe der kleinen Blase in der Glocke zeigt die aktive Benachrichtigung mit dem höchsten Schweregrad an.  Wenn Sie also eine rote Blase sehen, bedeutet dies, dass es eine wichtige Benachrichtigung gibt, die Sie beachten sollten.
+
+Sie können die Konsole auch so konfigurieren, dass bestimmte Arten von Benachrichtigungen per E-Mail gesendet werden, sodass Sie über wichtige Systemaktivitäten informiert werden, auch wenn Sie nicht beim System angemeldet sind.  E-Mails können an alle Benutzer Ihrer Organisation oder an andere Empfänger gesendet werden, die über bestimmte Arten von Systemaktivitäten informiert werden müssen.  Erfahren Sie, wie Sie<<E-Mail-Benachrichtigungseinstellungen festlegen,E-Mail-Benachrichtigungseinstellungen festlegen>> .
+
+
+
+=== Vergleich des Benachrichtigungscenters mit Warnungen
+
+Über das Benachrichtigungscenter können Sie den Status der von Ihnen eingeleiteten Vorgänge anzeigen und Warnbenachrichtigungen für bestimmte Arten von Systemaktivitäten einrichten.  Mithilfe von Warnmeldungen können Sie Probleme oder potenzielle Risiken in Ihrer ONTAP Speicherumgebung im Zusammenhang mit Kapazität, Verfügbarkeit, Leistung, Schutz und Sicherheit erkennen.
+
+https://docs.netapp.com/us-en/bluexp-alerts/index.html["Erfahren Sie mehr über NetApp Console-Warnmeldungen"^]
+
+
+
+=== Benachrichtigungstypen
+
+Die Konsole klassifiziert Benachrichtigungen in die folgenden Kategorien:
+
+[cols="20,60"]
+|===
+| Benachrichtigungstyp | Beschreibung 
+
+
+| Kritisch | Es ist ein Problem aufgetreten, das zu einer Dienstunterbrechung führen kann, wenn nicht sofort Abhilfemaßnahmen ergriffen werden. 
+
+
+| Fehler | Eine Aktion oder ein Prozess endete mit einem Fehler oder könnte zu einem Fehler führen, wenn keine Korrekturmaßnahmen ergriffen werden. 
+
+
+| Warnung | Ein Problem, dessen Sie sich bewusst sein sollten, um sicherzustellen, dass es nicht den kritischen Schweregrad erreicht.  Benachrichtigungen dieses Schweregrads verursachen keine Dienstunterbrechung und es sind möglicherweise keine sofortigen Korrekturmaßnahmen erforderlich. 
+
+
+| Empfehlung | Eine Systemempfehlung für Sie, Maßnahmen zur Verbesserung des Systems oder eines bestimmten Dienstes zu ergreifen; zum Beispiel: Kosteneinsparungen, Vorschläge für neue Dienste, empfohlene Sicherheitskonfiguration usw. 
+
+
+| Information | Eine Nachricht, die zusätzliche Informationen zu einer Aktion oder einem Prozess bereitstellt. 
+
+
+| Erfolg | Eine Aktion oder ein Prozess wurde erfolgreich abgeschlossen. 
+|===
+
+
+=== Benachrichtigungen filtern
+
+Standardmäßig werden alle aktiven Benachrichtigungen im Benachrichtigungscenter angezeigt.  Sie können die angezeigten Benachrichtigungen filtern, um nur die Benachrichtigungen anzuzeigen, die für Sie wichtig sind.  Sie können nach „Dienst“ und nach „Typ“ der Benachrichtigung filtern.
+
+image:screenshot_notification_filters.png["Ein Screenshot, der die beiden im Benachrichtigungscenter verfügbaren Filtertypen zeigt."]
+
+Wenn Sie beispielsweise für Konsolenvorgänge nur Benachrichtigungen vom Typ „Fehler“ und „Warnung“ sehen möchten, wählen Sie diese Einträge aus, und Sie sehen nur diese Benachrichtigungstypen.
+
+
+
+=== Benachrichtigungen verwerfen
+
+Sie können Benachrichtigungen von der Seite entfernen, wenn Sie sie nicht mehr sehen müssen.  Sie können Benachrichtigungen einzeln oder alle auf einmal ablehnen.
+
+Um alle Benachrichtigungen zu schließen, wählen Sie im Benachrichtigungscenterimage:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] und wählen Sie *Alle verwerfen*.
+
+Um einzelne Benachrichtigungen abzulehnen, bewegen Sie den Cursor über die Benachrichtigung und wählen Sie *Ablehnen*.
+
+
+
+=== E-Mail-Benachrichtigungseinstellungen festlegen
+
+Sie können bestimmte Arten von Benachrichtigungen per E-Mail senden, sodass Sie über wichtige Systemaktivitäten informiert werden, auch wenn Sie nicht angemeldet sind. E-Mails können an alle Benutzer gesendet werden, die Teil Ihrer Organisation oder Ihres Kontos sind, oder an alle anderen Empfänger, die über bestimmte Arten von Systemaktivitäten informiert werden müssen.
+
+[NOTE]
+====
+* Die Konsole sendet E-Mail-Benachrichtigungen für den Agenten, Lizenzen und Abonnements, NetApp Copy and Sync sowie NetApp Backup and Recovery.
+* Das Senden von E-Mail-Benachrichtigungen wird nicht unterstützt, wenn der Konsolenagent auf einer Site ohne Internetzugang installiert ist.
+
+
+====
+Die Filter, die Sie im Benachrichtigungscenter festlegen, bestimmen nicht die Art der Benachrichtigungen, die Sie per E-Mail erhalten.  Standardmäßig erhält jeder Organisationsadministrator E-Mails für alle „Kritischen“ und „Empfehlungs“-Benachrichtigungen.  Diese Benachrichtigungen gelten für alle Dienste. Sie können nicht auswählen, nur für bestimmte Dienste, beispielsweise Agenten oder NetApp Backup and Recovery, Benachrichtigungen zu erhalten.
+
+Alle anderen Benutzer und Empfänger sind so konfiguriert, dass sie keine Benachrichtigungs-E-Mails erhalten. Daher müssen Sie für alle weiteren Benutzer die Benachrichtigungseinstellungen konfigurieren.
+
+Sie müssen über die Rolle des Organisationsadministrators verfügen, um die Benachrichtigungseinstellungen anzupassen.
+
+.Schritte
+. Wählen Sie *Verwaltung > Benachrichtigungseinstellungen*.
+. Wählen Sie *Benutzer der Organisation* oder *Zusätzliche Empfänger*.
++
+Auf der Seite *Zusätzliche Empfänger* können Sie die Konsole so konfigurieren, dass Personen benachrichtigt werden, die Mitglieder Ihrer Konsolenorganisation sind.
+
+. Wählen Sie einen oder mehrere Benutzer entweder auf der Seite „Benutzer der Organisation“ oder auf der Seite „Zusätzliche Empfänger“ aus und wählen Sie die Art der zu sendenden Benachrichtigungen:
++
+** Um Änderungen für einen einzelnen Benutzer vorzunehmen, wählen Sie das Menü in der Spalte „Benachrichtigungen“ für diesen Benutzer aus, überprüfen Sie die zu sendenden Benachrichtigungstypen und wählen Sie „Übernehmen“ aus.
+** Um Änderungen für mehrere Benutzer vorzunehmen, aktivieren Sie das Kontrollkästchen für jeden Benutzer, wählen Sie *E-Mail-Benachrichtigungen verwalten*, aktivieren Sie die zu sendenden Benachrichtigungstypen und wählen Sie *Übernehmen*.
+
+
+
+
+
+
+=== Zusätzliche E-Mail-Empfänger hinzufügen
+
+Die Benutzer, die auf der Seite „Organisationsbenutzer“ angezeigt werden, werden automatisch aus den Benutzern Ihrer Organisation oder Ihres Kontos gefüllt.  Sie können auf der Seite „Zusätzliche Empfänger“ E-Mail-Adressen für andere Personen oder Gruppen hinzufügen, die keinen Zugriff auf die Konsole haben, aber über bestimmte Arten von Warnungen und Benachrichtigungen benachrichtigt werden müssen.
+
+.Schritte
+. Wählen Sie auf der Seite *Benachrichtigungseinstellungen* die Option *Neue Empfänger hinzufügen* aus.
++
+image:screenshot-add-email-recipient.png["Ein Screenshot, der zeigt, wie neue E-Mail-Empfänger für Warnungen und Benachrichtigungen hinzugefügt werden."]
+
+. Geben Sie den Namen und die E-Mail-Adresse ein, wählen Sie die Benachrichtigungstypen aus, die der Empfänger erhalten soll, und wählen Sie *Neuen Empfänger hinzufügen*.
+

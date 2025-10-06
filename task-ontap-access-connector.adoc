@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: task-ontap-access-connector.html 
+keywords: administer, credentials, ONTAP, connector, Cloud Volumes ONTAP, on-premises, roles, permissions, console agent, agent 
+summary: Administratoren können die NetApp Konsole so konfigurieren, dass ein Benutzer zur Eingabe seiner ONTAP Anmeldeinformationen aufgefordert wird. 
+---
+= Erzwingen Sie ONTAP -Berechtigungen für ONTAP Advanced View (ONTAP System Manager).
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Standardmäßig ermöglichen die Anmeldeinformationen des Konsolenagenten den Benutzern den Zugriff auf die erweiterte Ansicht (ONTAP System Manager).  Sie können Benutzer stattdessen zur Eingabe ihrer ONTAP Anmeldeinformationen auffordern.  Dadurch wird sichergestellt, dass die ONTAP Berechtigungen eines Benutzers angewendet werden, wenn er mit ONTAP Clustern sowohl in Cloud Volumes ONTAP als auch in lokalen ONTAP -Clustern arbeitet.
+
+
+NOTE: Sie müssen über die Rolle des Organisationsadministrators verfügen, um die Einstellungen des Konsolenagenten bearbeiten zu können.
+
+.Schritte
+. Wählen Sie *Administration > Agenten*.
+. Wählen Sie auf der Seite *Übersicht* das Aktionsmenü für einen Konsolenagenten und wählen Sie *Agent bearbeiten*.
++
+Zum Bearbeiten muss der Konsolenagent aktiv sein.
+
+. Erweitern Sie die Option *Anmeldeinformationen erzwingen*.
+. Aktivieren Sie das Kontrollkästchen, um die Option *Anmeldeinformationen erzwingen* zu aktivieren, und wählen Sie dann *Speichern*.
+. Stellen Sie sicher, dass die Option *Anmeldeinformationen erzwingen* aktiviert ist.
++
+image:screenshot-force-credentials-on.png["Screenshot, der zeigt, dass die Option „Anmeldeinformationen erzwingen“ aktiviert ist"]
+
+

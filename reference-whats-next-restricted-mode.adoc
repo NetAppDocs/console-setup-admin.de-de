@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: reference-whats-next-restricted-mode.html 
+keywords: restricted mode, what you can do 
+summary: Nachdem Sie die NetApp Konsole im eingeschränkten Modus eingerichtet und ausgeführt haben, können Sie mit der Verwendung der Dienste beginnen, die im eingeschränkten Modus unterstützt werden. 
+---
+= Was Sie als Nächstes tun können (eingeschränkter Modus)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie die NetApp Konsole im eingeschränkten Modus eingerichtet und ausgeführt haben, können Sie mit der Verwendung der Dienste beginnen, die im eingeschränkten Modus unterstützt werden.
+
+Hilfe finden Sie in der Dokumentation zu diesen Diensten:
+
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/index.html["Azure NetApp Files Dokumentation"^]
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["Sicherungs- und Wiederherstellungsdokumente"^]
+* https://docs.netapp.com/us-en/bluexp-classification/index.html["Klassifizierungsdokumente"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP Dokumente"^]
+* https://docs.netapp.com/us-en/bluexp-digital-wallet/index.html["Dokumente zur digitalen Geldbörse"^]
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/index.html["On-Premises- ONTAP -Cluster-Dokumente"^]
+* https://docs.netapp.com/us-en/bluexp-replication/index.html["Replikationsdokumente"^]
+
+
+.Ähnliche Informationen
+link:concept-modes.html["Bereitstellungsmodi der NetApp Konsole"]

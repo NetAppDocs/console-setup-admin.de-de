@@ -1,0 +1,170 @@
+---
+sidebar: sidebar 
+permalink: task-agent-vm-config.html 
+keywords: agent VM, vcenter, esxi, increase cpu, increase ram, vm maintenance, agent maintenance, agent operating system, agent host 
+summary: Sie können nach der Bereitstellung des Konsolenagenten Änderungen an Ihrem vorhandenen VCenter- oder ESXi-Host vornehmen.  Sie können beispielsweise die CPU oder den RAM der VM-Instanz erhöhen, die den Konsolenagenten hostet. 
+---
+= Verwalten Sie einen VCenter- oder ESXi-Host für den Konsolenagenten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können nach der Bereitstellung des Konsolenagenten Änderungen an Ihrem vorhandenen VCenter- oder ESXi-Host vornehmen.  Sie können beispielsweise die CPU oder den RAM der VM-Instanz erhöhen, die den Konsolenagenten hostet.
+
+Führen Sie diese Wartungsaufgaben mithilfe der VM-Webkonsole durch:
+
+* Erhöhen Sie die Festplattengröße
+* Starten Sie den Agenten neu
+* Aktualisieren statischer Routen
+* Suchdomänen aktualisieren
+
+
+.Einschränkungen
+Das Upgrade des Agenten über die Konsole wird noch nicht unterstützt.  Darüber hinaus können Sie nur Informationen zur IP-Adresse, zum DNS und zu Gateways anzeigen.
+
+
+
+== Zugriff auf die VM-Wartungskonsole
+
+Sie können vom VSphere-Client aus auf die Wartungskonsole zugreifen.
+
+.Schritte
+. Öffnen Sie den VSphere-Client und melden Sie sich bei Ihrem VCenter an.
+. Wählen Sie die VM-Instanz aus, die den Konsolenagenten hostet.
+. Wählen Sie *Webkonsole starten*.
+. Melden Sie sich bei der VM-Instanz mit dem Benutzernamen und dem Kennwort an, die Sie beim Erstellen der VM-Instanz angegeben haben.  Der Benutzername ist `maint` und das Kennwort ist das, das Sie beim Erstellen der VM-Instanz angegeben haben.
+
+
+
+
+=== Ändern Sie das Kennwort des Wartungsbenutzers
+
+Sie können das Passwort für die `maint` Benutzer.
+
+.Schritte
+. Öffnen Sie den VSphere-Client und melden Sie sich bei Ihrem VCenter an.
+. Wählen Sie die VM-Instanz aus, die den Konsolenagenten hostet.
+. Wählen Sie *Webkonsole starten*.
+. Melden Sie sich bei der VM-Instanz mit dem Benutzernamen und dem Kennwort an, die Sie beim Erstellen der VM-Instanz angegeben haben.  Der Benutzername ist `maint` und das Kennwort ist das, das Sie beim Erstellen der VM-Instanz angegeben haben.
+. Eingeben `1` , um die `System Configuration` Speisekarte.
+. Eingeben `1` um das Wartungsbenutzerkennwort zu ändern und den Anweisungen auf dem Bildschirm zu folgen.
+
+
+
+
+=== Erhöhen Sie die CPU oder den RAM der VM-Instanz
+
+Sie können die CPU oder den RAM der VM-Instanz erhöhen, die den Konsolenagenten hostet.
+
+Bearbeiten Sie die VM-Instanzeinstellungen in Ihrem VCenter- oder ESXi-Host und wenden Sie die Änderungen dann mit der Wartungskonsole an.
+
+.Schritte im VSphere-Client
+. Öffnen Sie den VSphere-Client und melden Sie sich bei Ihrem VCenter an.
+. Wählen Sie die VM-Instanz aus, die den Konsolenagenten hostet.
+. Klicken Sie mit der rechten Maustaste auf die VM-Instanz und wählen Sie *Einstellungen bearbeiten*.
+. Erhöhen Sie den für die Partition /opt oder /var verwendeten Festplattenspeicher.
++
+.. Wählen Sie *Festplatte 2*, um den für /opt verwendeten Festplattenspeicher zu erhöhen.
+.. Wählen Sie *Festplatte 3*, um den für /var verwendeten Festplattenspeicher zu erhöhen.
+
+
+. Speichern Sie Ihre Änderungen.
+
+
+.Schritte in der Wartungskonsole
+. Öffnen Sie den VSphere-Client und melden Sie sich bei Ihrem VCenter an.
+. Wählen Sie die VM-Instanz aus, die den Konsolenagenten hostet.
+. Wählen Sie *Webkonsole starten*.
+. Melden Sie sich bei der VM-Instanz mit dem Benutzernamen und dem Kennwort an, die Sie beim Erstellen der VM-Instanz angegeben haben.  Der Benutzername ist `maint` und das Kennwort ist das, das Sie beim Erstellen der VM-Instanz angegeben haben.
+. Eingeben `1 to view the `System Configuration` Speisekarte.
+. Eingeben `2` und folgen Sie den Anweisungen auf dem Bildschirm.  Die Konsole sucht nach neuen Einstellungen und vergrößert die Partitionen.
+
+
+
+
+=== Netzwerkeinstellungen für die Agent-VM anzeigen
+
+Zeigen Sie die Netzwerkeinstellungen für die Agent-VM im VSphere-Client an, um Netzwerkprobleme zu bestätigen oder zu beheben.  Sie können die folgenden Netzwerkeinstellungen nur anzeigen (nicht aktualisieren): IP-Adresse und DNS-Details.
+
+.Schritte
+. Öffnen Sie den VSphere-Client und melden Sie sich bei Ihrem VCenter an.
+. Wählen Sie die VM-Instanz aus, die den Konsolenagenten hostet.
+. Wählen Sie *Webkonsole starten*.
+. Melden Sie sich bei der VM-Instanz mit dem Benutzernamen und dem Kennwort an, die Sie beim Erstellen der VM-Instanz angegeben haben.  Der Benutzername ist `maint` und das Kennwort ist das, das Sie beim Erstellen der VM-Instanz angegeben haben.
+. Eingeben `2` , um die `Network Configuration` Speisekarte.
+. Geben Sie eine Zahl zwischen 1 und 6 ein, um die entsprechenden Netzwerkeinstellungen anzuzeigen.
+
+
+
+
+=== Aktualisieren Sie die statischen Routen für die Agent-VM
+
+Fügen Sie nach Bedarf statische Routen für die Agent-VM hinzu, aktualisieren oder entfernen Sie sie.
+
+.Schritte
+. Öffnen Sie den VSphere-Client und melden Sie sich bei Ihrem VCenter an.
+. Wählen Sie die VM-Instanz aus, die den Konsolenagenten hostet.
+. Wählen Sie *Webkonsole starten*.
+. Melden Sie sich bei der VM-Instanz mit dem Benutzernamen und dem Kennwort an, die Sie beim Erstellen der VM-Instanz angegeben haben.  Der Benutzername ist `maint` und das Kennwort ist das, das Sie beim Erstellen der VM-Instanz angegeben haben.
+. Eingeben `2` , um die `Network Configuration` Speisekarte.
+. Eingeben `7` um statische Routen zu aktualisieren und den Anweisungen auf dem Bildschirm zu folgen.
+. Drücken Sie die Eingabetaste.
+. Nehmen Sie optional weitere Änderungen vor.
+. Eingeben `9` um Ihre Änderungen zu übernehmen.
+
+
+
+
+=== Aktualisieren der Domänensucheinstellungen für die Agent-VM
+
+Sie können die Suchdomäneneinstellungen für die Agent-VM aktualisieren.
+
+.Schritte
+. Öffnen Sie den VSphere-Client und melden Sie sich bei Ihrem VCenter an.
+. Wählen Sie die VM-Instanz aus, die den Konsolenagenten hostet.
+. Wählen Sie *Webkonsole starten*.
+. Melden Sie sich bei der VM-Instanz mit dem Benutzernamen und dem Kennwort an, die Sie beim Erstellen der VM-Instanz angegeben haben.  Der Benutzername ist `maint` und das Kennwort ist das, das Sie beim Erstellen der VM-Instanz angegeben haben.
+. Eingeben `2`` , um die `Network Configuration` Speisekarte.
+. Eingeben `8` um die Domänensucheinstellungen zu aktualisieren und den Anweisungen auf dem Bildschirm zu folgen.
+. Drücken Sie die Eingabetaste.
+. Nehmen Sie optional weitere Änderungen vor.
+. Eingeben `9` um Ihre Änderungen zu übernehmen.
+
+
+
+
+=== Zugriff auf die Diagnosetools des Agenten
+
+Greifen Sie auf Diagnosetools zu, um Probleme mit dem Konsolenagenten zu beheben.  Der NetApp Support fordert Sie möglicherweise dazu auf, dies bei der Fehlerbehebung zu tun.
+
+.Schritte
+. Öffnen Sie den VSphere-Client und melden Sie sich bei Ihrem VCenter an.
+. Wählen Sie die VM-Instanz aus, die den Konsolenagenten hostet.
+. Wählen Sie *Webkonsole starten*.
+. Melden Sie sich bei der VM-Instanz mit dem Benutzernamen und dem Kennwort an, die Sie beim Erstellen der VM-Instanz angegeben haben.  Der Benutzername ist `maint` und das Kennwort ist das, das Sie beim Erstellen der VM-Instanz angegeben haben.
+. Eingeben `3` um das Menü „Support und Diagnose“ anzuzeigen.
+. Eingeben `1` um auf die Diagnosetools zuzugreifen und den Anweisungen auf dem Bildschirm zu folgen.  + Sie können beispielsweise überprüfen, ob alle Agentendienste ausgeführt werden. link:task-troubleshoot-connector.html#check-agent-status["Überprüfen Sie den Status des Konsolenagenten"^] .
+
+
+
+
+=== Fernzugriff auf die Diagnosetools des Agenten
+
+Mit einem Tool wie Putty können Sie remote auf Diagnosetools zugreifen.  Aktivieren Sie den SSH-Zugriff auf die Agent-VM, indem Sie ein Einmalkennwort zuweisen.
+
+Der SSH-Zugriff ermöglicht erweiterte Terminalfunktionen wie Kopieren und Einfügen.
+
+.Schritte
+. Öffnen Sie den VSphere-Client und melden Sie sich bei Ihrem VCenter an.
+. Wählen Sie die VM-Instanz aus, die den Konsolenagenten hostet.
+. Wählen Sie *Webkonsole starten*.
+. Melden Sie sich bei der VM-Instanz mit dem Benutzernamen und dem Kennwort an, die Sie beim Erstellen der VM-Instanz angegeben haben.  Der Benutzername ist `maint` und das Kennwort ist das, das Sie beim Erstellen der VM-Instanz angegeben haben.
+. Eingeben `3` , um die `Support and Diagnostics` Speisekarte.
+. Eingeben `2` um auf die Diagnosetools zuzugreifen und den Anweisungen auf dem Bildschirm zu folgen, um ein Einmalkennwort zu konfigurieren, das nach 24 Stunden abläuft.
+. Verwenden Sie ein SSH-Tool wie Putty, um mit dem Benutzernamen eine Verbindung zur Agent-VM herzustellen `diag` und das von Ihnen konfigurierte Einmalkennwort.
+

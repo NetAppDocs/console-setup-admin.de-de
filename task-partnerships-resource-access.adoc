@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-resource-access.html 
+keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization 
+summary: Sie können Partnerschaftsbenutzern Zugriff gewähren, indem Sie ihnen bestimmte Rollen für Ordner und Projekte innerhalb Ihrer Organisation zuweisen. 
+---
+= Gewähren Sie Partnerschaftsbenutzern Zugriff auf Ressourcen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Partnerschaftsbenutzern Zugriff gewähren, indem Sie ihnen bestimmte Rollen für Ordner und Projekte innerhalb Ihrer Organisation zuweisen.
+
+.Erforderliche Rollen
+Partnerschaftsverwaltung.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+Eine Partnerorganisation muss zunächst Mitglieder zur Partnerschaft hinzufügen, bevor Sie ihnen Rollen für Ressourcen in Ihrer Organisation zuweisen können.link:task-partnerships-assign-users.html["Erfahren Sie, wie Sie einer Partnerschaft Mitglieder hinzufügen."]
+
+
+
+== Verstehen Sie die Rollen für Partnerschaftsbenutzer
+
+Sie können Rollen für Mitglieder von Partnerorganisationen auf dieselbe Weise verwalten wie für Ihre eigenen.  Allerdings stehen Partnerschaftsbenutzern nicht alle Rollen zur Verfügung.  Insbesondere können Sie Partnerbenutzern keine Rolle zuweisen, die Softwareupdates zulässt.  Zum Aktualisieren der ONTAP -Software ist im Allgemeinen ein direkter Netzwerkzugriff erforderlich.
+
+Sie können Partnerbenutzern folgende Rollen zuweisen:
+
+* link:reference-iam-platform-roles.html#organization-admin-roles["Organisationsadministrator"]
+* link:reference-iam-platform-roles.html#organization-admin-roles["Ordner- oder Projektadministrator"]
+* link:reference-iam-platform-roles.html#federation-roles["Föderationsadministrator"]
+* link:reference-iam-platform-roles.html#federation-roles["Föderationsbetrachter"]
+* link:reference-iam-backup-rec-roles.html["Backup- und Wiederherstellungsadministrator"]
+* link:reference-iam-backup-rec-roles.html["Backup-Viewer"]
+* link:reference-iam-backup-rec-roles.html["Administrator wiederherstellen"]
+* link:reference-iam-backup-rec-roles.html["Klonadministrator"]
+* link:reference-iam-disaster-rec-roles.html["Notfallwiederherstellungsadministrator"]
+* link:reference-iam-disaster-rec-roles.html["Administrator für Notfallwiederherstellungs-Failover"]
+* link:reference-iam-disaster-rec-roles.html["Administrator der Notfallwiederherstellungsanwendung"]
+* link:reference-iam-disaster-rec-roles.html["Disaster Recovery-Viewer"]
+* link:reference-iam-storage-roles.html["Betriebsunterstützungsanalyst"]
+* link:reference-iam-predefined-roles.html["Klassifizierungsanzeige"]
+
+
+link:reference-iam-predefined-roles.html["Erfahren Sie mehr über vordefinierte Rollen"]
+
+
+
+== Einem Partnerbenutzer eine Rolle hinzufügen
+
+Sie gewähren Zugriff auf die Ressourcen Ihrer Organisation, indem Sie einem Mitglied eine Rolle zuweisen.  Wenn Sie eine Rolle zuweisen, geben Sie eine Ressource und eine Rolle an.  Sie können einem Benutzer mehr als eine Rolle zuweisen.
+
+Wenn Sie beispielsweise zwei Projekte hätten und möchten, dass derselbe Benutzer für beide die Rolle des Backup- und Wiederherstellungsadministrators hat, müssten Sie dem Benutzer für jedes Projekt die Rolle zuweisen.  Wenn Sie einem Benutzer für dasselbe Projekt zwei verschiedene Rollen zuweisen möchten, müssen Sie ihm jede Rolle separat zuweisen.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Partnerschaften* aus.
+. Wählen Sie die Registerkarte *Partnerschaft initiiert*.
+. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben der bestehenden Partnerschaft, die Sie anzeigen möchten, und wählen Sie *Details anzeigen* aus.
++
+In der Liste *Mitglieder* werden die Mitglieder angezeigt, die die Partnerorganisation zur Partnerschaft hinzugefügt hat.
+
+. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben dem Mitglied, dem Sie eine Rolle zuweisen möchten, und wählen Sie *Rolle hinzufügen* aus.
+. Um eine Rolle hinzuzufügen, führen Sie die Schritte im Dialogfeld aus:
++
+** *Wählen Sie eine Organisation, einen Ordner oder ein Projekt aus*: Wählen Sie die Ebene Ihrer Ressourcenhierarchie aus, für die das Mitglied Berechtigungen haben soll.
++
+Wenn Sie die Organisation oder einen Ordner auswählen, verfügt das Mitglied über Berechtigungen für alles, was sich innerhalb der Organisation oder des Ordners befindet.
+
+** *Kategorie auswählen*: Wählen Sie eine Rollenkategorie. link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"^] .
+** Wählen Sie eine *Rolle*: Wählen Sie eine Rolle, die dem Mitglied Berechtigungen für die Ressourcen erteilt, die mit der von Ihnen ausgewählten Organisation, dem Ordner oder dem Projekt verknüpft sind.
+** *Rolle hinzufügen*: Wenn Sie Zugriff auf zusätzliche Ordner oder Projekte innerhalb Ihrer Organisation gewähren möchten, wählen Sie *Rolle hinzufügen*, geben Sie einen weiteren Ordner oder ein weiteres Projekt oder eine weitere Rollenkategorie an und wählen Sie dann eine Rollenkategorie und eine entsprechende Rolle aus.
+
+
+. Wählen Sie *Neue Rollen hinzufügen*.
+
+
+
+
+== Ändern oder Entfernen einer Rolle eines Partnerbenutzers
+
+Sie können eine Rolle ändern oder entfernen, die Sie einem Mitglied einer Partnerorganisation zugewiesen haben.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Partnerschaften* aus.
+. Wählen Sie die Registerkarte *Partnerschaft initiiert*.
+. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben der bestehenden Partnerschaft, die Sie anzeigen möchten, und wählen Sie *Details anzeigen* aus.
++
+In der Liste *Mitglieder* werden die Mitglieder angezeigt, die die Partnerorganisation zur Partnerschaft hinzugefügt hat.
+
+. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
+. Erweitern Sie in der Tabelle die jeweilige Zeile für die Organisation, den Ordner oder das Projekt, in dem Sie die zugewiesene Rolle des Mitglieds ändern möchten, und wählen Sie in der Spalte *Rolle* *Anzeigen* aus, um die diesem Mitglied zugewiesenen Rollen anzuzeigen.
+. Sie können eine vorhandene Rolle für ein Mitglied ändern oder eine Rolle entfernen.
++
+.. Um die Rolle eines Mitglieds zu ändern, wählen Sie *Ändern* neben der Rolle, die Sie ändern möchten.  Sie können eine Rolle nur in eine Rolle innerhalb derselben Rollenkategorie ändern.  Sie können beispielsweise von einer Datendienstrolle zu einer anderen wechseln.  Bestätigen Sie die Änderung.
+.. Um die Zuweisung einer Rolle eines Mitglieds aufzuheben, wählen Sieimage:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um dem Mitglied die jeweilige Rolle aufzuheben.  Sie werden aufgefordert, die Entfernung zu bestätigen.
+
+
+

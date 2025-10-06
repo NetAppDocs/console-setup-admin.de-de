@@ -1,0 +1,65 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Wählen Sie *Administration > *Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen der Organisation* aus.
+. Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.  +neuer Screenshot erforderlich (TS)image:screenshot_gcp_add_subscription.png["Ein Screenshot des Aktionsmenüs für einen Satz vorhandener Anmeldeinformationen."]
+. Um ein vorhandenes Abonnement mit den ausgewählten Anmeldeinformationen zu konfigurieren, wählen Sie ein Google Cloud-Projekt und ein Abonnement aus der Dropdown-Liste aus und wählen Sie dann *Konfigurieren*.
++
+image:screenshot_gcp_associate.gif["Ein Screenshot eines Google Cloud-Projekts und eines für Google Cloud-Anmeldeinformationen ausgewählten Abonnements."]
+
+. Wenn Sie noch kein Abonnement haben, wählen Sie *Abonnement hinzufügen > Fortfahren* und folgen Sie den Schritten im Google Cloud Marketplace.
++
+
+NOTE: Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie sowohl über Abrechnungsadministratorberechtigungen in Ihrem Google Cloud-Konto als auch über eine NetApp -Konsolenanmeldung verfügen.
+
++
+.. Nachdem Sie weitergeleitet wurden auf die https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["NetApp Intelligent Services-Seite im Google Cloud Marketplace"^] , stellen Sie sicher, dass im oberen Navigationsmenü das richtige Projekt ausgewählt ist.
++
+image:screenshot_gcp_cvo_marketplace.png["Ein Screenshot der Cloud Volumes ONTAP Marktplatzseite in Google Cloud."]
+
+.. Wählen Sie *Abonnieren*.
+.. Wählen Sie das entsprechende Abrechnungskonto aus und stimmen Sie den Allgemeinen Geschäftsbedingungen zu.
+.. Wählen Sie *Abonnieren*.
++
+Dieser Schritt sendet Ihre Übertragungsanforderung an NetApp.
+
+.. Wählen Sie im Popup-Dialogfeld *Bei NetApp, Inc. registrieren* aus.
++
+Dieser Schritt muss abgeschlossen werden, um das Google Cloud-Abonnement mit Ihrer Konsolenorganisation oder Ihrem Konsolenkonto zu verknüpfen.  Der Vorgang zum Verknüpfen eines Abonnements ist erst abgeschlossen, wenn Sie von dieser Seite umgeleitet werden und sich dann bei der Konsole anmelden.
+
++
+image:screenshot_gcp_marketplace_register.png["Ein Screenshot eines Registrierungs-Popups."]
+
+.. Führen Sie die Schritte auf der Seite *Abonnementzuweisung* aus:
++
+
+NOTE: Wenn jemand aus Ihrer Organisation bereits ein Marktplatz-Abonnement von Ihrem Abrechnungskonto hat, werden Sie weitergeleitet zu https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["die Cloud Volumes ONTAP -Seite in der NetApp Konsole"^] stattdessen.  Wenn dies unerwartet vorkommt, wenden Sie sich an Ihr NetApp -Vertriebsteam.  Google ermöglicht nur ein Abonnement pro Google-Abrechnungskonto.
+
++
+*** Wählen Sie die Konsolenorganisationen oder -konten aus, mit denen Sie dieses Abonnement verknüpfen möchten.
+*** Wählen Sie im Feld *Vorhandenes Abonnement ersetzen* aus, ob Sie das vorhandene Abonnement für eine Organisation oder ein Konto automatisch durch dieses neue Abonnement ersetzen möchten.
++
+Die Konsole ersetzt das vorhandene Abonnement für alle Anmeldeinformationen in der Organisation oder im Konto durch dieses neue Abonnement.  Wenn ein Satz von Anmeldeinformationen nie mit einem Abonnement verknüpft war, wird dieses neue Abonnement nicht mit diesen Anmeldeinformationen verknüpft.
+
++
+Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell zuordnen, indem Sie diese Schritte wiederholen.
+
+*** Wählen Sie *Speichern*.
++
+Das folgende Video zeigt die Schritte zum Abonnieren vom Google Cloud Marketplace:
+
++
+.Abonnieren Sie über den Google Cloud Marketplace
+video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
+
+
+.. Navigieren Sie nach Abschluss dieses Vorgangs zurück zur Seite „Anmeldeinformationen“ in der Konsole und wählen Sie dieses neue Abonnement aus.
++
+image:screenshot_gcp_associate.gif["Ein Screenshot der Abonnementzuweisungsseite."]
+
+
+
+

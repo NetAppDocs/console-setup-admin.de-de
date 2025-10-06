@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: concept-install-options-google.html 
+keywords: install connector google cloud, google cloud install connector, connector google cloud, google cloud connector, install connector gcp, gcp install connector, connector gcp, gcp connector, installation options, manual install 
+summary: Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Konsole. 
+---
+= Installationsoptionen für den Konsolenagenten in Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Konsole.  ---
+
+Folgende Installationsoptionen stehen zur Verfügung:
+
+* link:task-install-connector-google-bluexp-gcloud.html["Erstellen Sie den Konsolenagenten direkt aus der Konsole"](Dies ist die Standardoption)
++
+Diese Aktion startet eine VM-Instanz, auf der Linux und die Konsolenagent-Software in einer VPC Ihrer Wahl ausgeführt werden.
+
+* link:task-install-connector-google-bluexp-gcloud.html["Erstellen Sie den Konsolenagenten mithilfe der Google Platform"]
++
+Diese Aktion startet auch eine VM-Instanz, auf der Linux und die Konsolen-Agent-Software ausgeführt werden, die Bereitstellung wird jedoch direkt von Google Cloud und nicht von der Konsole aus initiiert.
+
+* link:task-install-connector-google-manual.html["Laden Sie die Software herunter und installieren Sie sie manuell auf Ihrem eigenen Linux-Host"]
+
+
+Die von Ihnen gewählte Installationsoption wirkt sich darauf aus, wie Sie sich auf die Installation vorbereiten.  Dazu gehört, wie Sie der Konsole die erforderlichen Berechtigungen erteilen, die sie zum Authentifizieren und Verwalten von Ressourcen in Google Cloud benötigt.

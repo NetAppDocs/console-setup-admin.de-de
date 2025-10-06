@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+Sie können auch direkt vom Konsolen-Agent-Host in den folgenden Verzeichnissen auf den Validierungsbericht im JSON-Format und die Konfigurationsprotokolle zugreifen:
+
+[source, cli]
+----
+/tmp/netapp-console-agents/logs
+
+/tmp/netapp-console-agents/results.json
+
+----

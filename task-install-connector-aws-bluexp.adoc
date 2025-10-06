@@ -1,0 +1,342 @@
+---
+sidebar: sidebar 
+permalink: task-install-connector-aws-bluexp.html 
+keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
+summary: Sie können einen Konsolenagenten in AWS direkt von der NetApp Konsole aus erstellen.  Bevor Sie über die Konsole einen Konsolenagenten in AWS erstellen, müssen Sie Ihr Netzwerk einrichten und AWS-Berechtigungen vorbereiten. 
+---
+= Erstellen Sie einen Konsolenagenten in AWS über die NetApp -Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können einen Konsolenagenten in AWS direkt von der NetApp Konsole aus erstellen.  Bevor Sie über die Konsole einen Konsolenagenten in AWS erstellen, müssen Sie Ihr Netzwerk einrichten und AWS-Berechtigungen vorbereiten.
+
+.Bevor Sie beginnen
+* Sie sollten über einelink:concept-connectors.html["Verständnis von Konsolenagenten"] .
+* Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
+
+
+
+
+== Schritt 1: Einrichten des Netzwerks für die Bereitstellung eines Konsolenagenten in AWS
+
+Stellen Sie sicher, dass der Netzwerkspeicherort, an dem Sie den Konsolenagenten installieren möchten, die folgenden Anforderungen unterstützt.  Diese Anforderungen ermöglichen es dem Konsolenagenten, Ressourcen und Prozesse in Ihrer Hybrid Cloud zu verwalten.
+
+VPC und Subnetz:: Wenn Sie den Konsolenagenten erstellen, müssen Sie die VPC und das Subnetz angeben, in dem er sich befinden soll.
+
+
+Verbindungen zu Zielnetzwerken:: Der Konsolenagent erfordert eine Netzwerkverbindung zu dem Standort, an dem Sie Systeme erstellen und verwalten möchten.  Beispielsweise das Netzwerk, in dem Sie Cloud Volumes ONTAP -Systeme oder ein Speichersystem in Ihrer lokalen Umgebung erstellen möchten.
+
+
+Ausgehender Internetzugang:: Der Netzwerkstandort, an dem Sie den Konsolenagenten bereitstellen, muss über eine ausgehende Internetverbindung verfügen, um bestimmte Endpunkte zu kontaktieren.
+
+
+Vom Konsolenagenten kontaktierte Endpunkte:: Der Konsolenagent benötigt ausgehenden Internetzugang, um die folgenden Endpunkte zu kontaktieren und Ressourcen und Prozesse innerhalb Ihrer öffentlichen Cloud-Umgebung für den täglichen Betrieb zu verwalten.
++
+--
+Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+AWS-Dienste (amazonaws.com):
+
+* CloudFormation
+* Elastische Compute Cloud (EC2)
+* Identitäts- und Zugriffsverwaltung (IAM)
+* Schlüsselverwaltungsdienst (KMS)
+* Sicherheitstokendienst (STS)
+* Einfacher Speicherdienst (S3)
+
+ a| 
+Zur Verwaltung von AWS-Ressourcen.  Der Endpunkt hängt von Ihrer AWS-Region ab. https://docs.aws.amazon.com/general/latest/gr/rande.html["Weitere Einzelheiten finden Sie in der AWS-Dokumentation."^]
+
+
+
+ a| 
+\https://mysupport.netapp.com
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
+
+
+
+ a| 
+\https://signin.b2c.netapp.com
+ a| 
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Konsole neue NSS-Anmeldeinformationen hinzu.
+
+
+
+ a| 
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+ a| 
+Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole.
+
+
+
+ a| 
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+ a| 
+Um Bilder für Upgrades des Konsolenagenten zu erhalten.
+
+* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten.  Wenn Sielink:link:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl.  Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
++
+Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
+
+* Wenn Sie auf die aktuellen Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
+
+
+|===
+--
+
+
+Von der NetApp Konsole kontaktierte Endpunkte:: Wenn Sie die webbasierte NetApp Konsole verwenden, die über die SaaS-Schicht bereitgestellt wird, kontaktiert diese mehrere Endpunkte, um Datenverwaltungsaufgaben abzuschließen.  Dazu gehören Endpunkte, die kontaktiert werden, um den Konsolenagenten von der Konsole aus bereitzustellen.
++
+--
+link:reference-networking-saas-console.html["Zeigen Sie die Liste der von der NetApp Konsole kontaktierten Endpunkte an"] .
+
+--
+
+
+Proxyserver:: NetApp unterstützt sowohl explizite als auch transparente Proxy-Konfigurationen.  Wenn Sie einen transparenten Proxy verwenden, müssen Sie nur das Zertifikat für den Proxyserver angeben.  Wenn Sie einen expliziten Proxy verwenden, benötigen Sie auch die IP-Adresse und die Anmeldeinformationen.
++
+--
+* IP-Adresse
+* Anmeldeinformationen
+* HTTPS-Zertifikat
+
+
+--
+
+
+Häfen:: Es gibt keinen eingehenden Datenverkehr zum Konsolenagenten, es sei denn, Sie initiieren ihn oder er wird als Proxy zum Senden von AutoSupport Nachrichten von Cloud Volumes ONTAP an den NetApp Support verwendet.
++
+--
+* HTTP (80) und HTTPS (443) ermöglichen den Zugriff auf die lokale Benutzeroberfläche, die Sie in seltenen Fällen verwenden werden.
+* SSH (22) wird nur benötigt, wenn Sie zur Fehlerbehebung eine Verbindung zum Host herstellen müssen.
+* Eingehende Verbindungen über Port 3128 sind erforderlich, wenn Sie Cloud Volumes ONTAP -Systeme in einem Subnetz bereitstellen, in dem keine ausgehende Internetverbindung verfügbar ist.
++
+Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden von AutoSupport Nachrichten haben, konfiguriert die Konsole diese Systeme automatisch für die Verwendung eines Proxyservers, der im Konsolenagenten enthalten ist.  Die einzige Voraussetzung besteht darin, sicherzustellen, dass die Sicherheitsgruppe des Konsolenagenten eingehende Verbindungen über Port 3128 zulässt.  Sie müssen diesen Port öffnen, nachdem Sie den Konsolenagenten bereitgestellt haben.
+
+
+
+--
+
+
+Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification-System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
++
+--
+Sie müssen diese Netzwerkanforderung implementieren, nachdem Sie den Konsolenagenten erstellt haben.
+
+--
+
+
+
+
+== Schritt 2: AWS-Berechtigungen für den Konsolenagenten einrichten
+
+Die Konsole muss sich bei AWS authentifizieren, bevor sie die Konsolen-Agent-Instanz in Ihrem VPC bereitstellen kann.  Sie können eine dieser Authentifizierungsmethoden auswählen:
+
+* Lassen Sie die Konsole eine IAM-Rolle übernehmen, die über die erforderlichen Berechtigungen verfügt
+* Geben Sie einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel für einen IAM-Benutzer an, der über die erforderlichen Berechtigungen verfügt.
+
+
+Bei beiden Optionen besteht der erste Schritt darin, eine IAM-Richtlinie zu erstellen.  Diese Richtlinie enthält nur die Berechtigungen, die zum Starten der Konsolen-Agent-Instanz in AWS von der Konsole aus erforderlich sind.
+
+Bei Bedarf können Sie die IAM-Richtlinie einschränken, indem Sie die IAM `Condition` Element. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["AWS-Dokumentation: Bedingungselement"^]
+
+.Schritte
+. Gehen Sie zur AWS IAM-Konsole.
+. Wählen Sie *Richtlinien > Richtlinie erstellen*.
+. Wählen Sie *JSON*.
+. Kopieren Sie die folgende Richtlinie und fügen Sie sie ein:
++
+Diese Richtlinie enthält nur die Berechtigungen, die zum Starten der Konsolen-Agent-Instanz in AWS von der Konsole aus erforderlich sind.  Wenn die Konsole den Konsolenagenten erstellt, wendet sie einen neuen Satz von Berechtigungen auf die Konsolenagenteninstanz an, der es dem Konsolenagenten ermöglicht, AWS-Ressourcen zu verwalten. link:reference-permissions-aws.html["Anzeigen der für die Konsolen-Agenteninstanz selbst erforderlichen Berechtigungen"] .
+
++
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:PutRolePolicy",
+        "iam:CreateInstanceProfile",
+        "iam:DeleteRolePolicy",
+        "iam:AddRoleToInstanceProfile",
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:DeleteInstanceProfile",
+        "iam:PassRole",
+        "iam:ListRoles",
+        "ec2:DescribeInstanceStatus",
+        "ec2:RunInstances",
+        "ec2:ModifyInstanceAttribute",
+        "ec2:CreateSecurityGroup",
+        "ec2:DeleteSecurityGroup",
+        "ec2:DescribeSecurityGroups",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:CreateNetworkInterface",
+        "ec2:DescribeNetworkInterfaces",
+        "ec2:DeleteNetworkInterface",
+        "ec2:ModifyNetworkInterfaceAttribute",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeDhcpOptions",
+        "ec2:DescribeKeyPairs",
+        "ec2:DescribeRegions",
+        "ec2:DescribeInstances",
+        "ec2:CreateTags",
+        "ec2:DescribeImages",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeLaunchTemplates",
+        "ec2:CreateLaunchTemplate",
+        "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:ValidateTemplate",
+        "ec2:AssociateIamInstanceProfile",
+        "ec2:DescribeIamInstanceProfileAssociations",
+        "ec2:DisassociateIamInstanceProfile",
+        "iam:GetRole",
+        "iam:TagRole",
+        "kms:ListAliases",
+        "cloudformation:ListStacks"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:TerminateInstances"
+      ],
+      "Condition": {
+        "StringLike": {
+          "ec2:ResourceTag/OCCMInstance": "*"
+        }
+      },
+      "Resource": [
+        "arn:aws:ec2:*:*:instance/*"
+      ]
+    }
+  ]
+}
+----
+. Wählen Sie *Weiter* und fügen Sie bei Bedarf Tags hinzu.
+. Wählen Sie *Weiter* und geben Sie einen Namen und eine Beschreibung ein.
+. Wählen Sie *Richtlinie erstellen*.
+. Hängen Sie die Richtlinie entweder an eine IAM-Rolle an, die die Konsole übernehmen kann, oder an einen IAM-Benutzer, damit Sie der Konsole Zugriffsschlüssel bereitstellen können:
++
+** (Option 1) Richten Sie eine IAM-Rolle ein, die die Konsole übernehmen kann:
++
+... Gehen Sie zur AWS IAM-Konsole im Zielkonto.
+... Wählen Sie unter „Zugriffsverwaltung“ *Rollen > Rolle erstellen* und befolgen Sie die Schritte zum Erstellen der Rolle.
+... Wählen Sie unter *Vertrauenswürdiger Entitätstyp* *AWS-Konto* aus.
+... Wählen Sie *Ein anderes AWS-Konto* und geben Sie die ID des Console SaaS-Kontos ein: 952013314444
+... Wählen Sie die Richtlinie aus, die Sie im vorherigen Abschnitt erstellt haben.
+... Nachdem Sie die Rolle erstellt haben, kopieren Sie die Rollen-ARN, damit Sie sie beim Erstellen des Konsolen-Agenten in die Konsole einfügen können.
+
+
+** (Option 2) Richten Sie Berechtigungen für einen IAM-Benutzer ein, damit Sie der Konsole Zugriffsschlüssel bereitstellen können:
++
+... Wählen Sie in der AWS IAM-Konsole *Benutzer* und dann den Benutzernamen aus.
+... Wählen Sie *Berechtigungen hinzufügen > Vorhandene Richtlinien direkt anhängen*.
+... Wählen Sie die von Ihnen erstellte Richtlinie aus.
+... Wählen Sie *Weiter* und dann *Berechtigungen hinzufügen*.
+... Stellen Sie sicher, dass Sie den Zugriffsschlüssel und den geheimen Schlüssel für den IAM-Benutzer haben.
+
+
+
+
+
+
+.Ergebnis
+Sie sollten jetzt über eine IAM-Rolle mit den erforderlichen Berechtigungen oder einen IAM-Benutzer mit den erforderlichen Berechtigungen verfügen.  Wenn Sie den Konsolenagenten aus der Konsole erstellen, können Sie Informationen zur Rolle oder zu Zugriffsschlüsseln angeben.
+
+
+
+== Schritt 3: Erstellen des Konsolenagenten
+
+Erstellen Sie den Konsolenagenten direkt von der webbasierten Konsole aus.
+
+.Informationen zu diesem Vorgang
+* Durch Erstellen des Konsolenagenten aus der Konsole wird eine EC2-Instanz in AWS mithilfe einer Standardkonfiguration bereitgestellt.  Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren EC2-Instance mit weniger CPUs oder weniger RAM. link:reference-connector-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
+* Wenn die Konsole den Konsolenagenten erstellt, erstellt sie eine IAM-Rolle und ein Instanzprofil für die Instanz.  Diese Rolle umfasst Berechtigungen, die es dem Konsolenagenten ermöglichen, AWS-Ressourcen zu verwalten.  Stellen Sie sicher, dass die Rolle aktualisiert wird, wenn in zukünftigen Versionen neue Berechtigungen hinzugefügt werden. link:reference-permissions-aws.html["Erfahren Sie mehr über die IAM-Richtlinie für den Konsolenagenten"] .
+
+
+.Bevor Sie beginnen
+Folgendes sollten Sie haben:
+
+* Eine AWS-Authentifizierungsmethode: entweder eine IAM-Rolle oder Zugriffsschlüssel für einen IAM-Benutzer mit den erforderlichen Berechtigungen.
+* Eine VPC und ein Subnetz, das die Netzwerkanforderungen erfüllt.
+* Ein Schlüsselpaar für die EC2-Instanz.
+* Details zu einem Proxyserver, falls für den Internetzugriff vom Konsolenagenten ein Proxy erforderlich ist.
+* Aufstellenlink:#networking-aws-agent["Netzwerkanforderungen"] .
+* Aufstellenlink:#aws-permissions-agent["AWS-Berechtigungen"] .
+
+
+.Schritte
+. Wählen Sie *Administration > Agenten*.
+. Wählen Sie auf der Seite *Übersicht* *Agent bereitstellen > AWS*
+. Befolgen Sie die Schritte im Assistenten, um den Konsolenagenten zu erstellen:
+. Auf der Seite *Einführung* erhalten Sie einen Überblick über den Prozess
+. Geben Sie auf der Seite *AWS-Anmeldeinformationen* Ihre AWS-Region an und wählen Sie dann eine Authentifizierungsmethode aus. Dabei kann es sich entweder um eine IAM-Rolle handeln, die die Konsole übernehmen kann, oder um einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel.
++
+
+TIP: Wenn Sie „Rolle übernehmen“ wählen, können Sie den ersten Satz Anmeldeinformationen über den Bereitstellungsassistenten des Konsolenagenten erstellen.  Alle zusätzlichen Anmeldeinformationen müssen auf der Seite „Anmeldeinformationen“ erstellt werden.  Sie stehen dann im Assistenten in einer Dropdown-Liste zur Verfügung. link:task-adding-aws-accounts.html["Erfahren Sie, wie Sie zusätzliche Anmeldeinformationen hinzufügen"] .
+
+. Geben Sie auf der Seite *Details* Details zum Konsolenagenten an.
++
+** Geben Sie einen Namen für die Instanz ein.
+** Fügen Sie der Instanz benutzerdefinierte Tags (Metadaten) hinzu.
+** Wählen Sie, ob die Konsole eine neue Rolle mit den erforderlichen Berechtigungen erstellen soll oder ob Sie eine vorhandene Rolle auswählen möchten, die Sie mitlink:reference-permissions-aws.html["die erforderlichen Berechtigungen"] .
+** Wählen Sie, ob Sie die EBS-Festplatten des Konsolen-Agenten verschlüsseln möchten.  Sie haben die Möglichkeit, den Standardverschlüsselungsschlüssel oder einen benutzerdefinierten Schlüssel zu verwenden.
+
+
+. Geben Sie auf der Seite *Netzwerk* eine VPC, ein Subnetz und ein Schlüsselpaar für die Instanz an, wählen Sie, ob eine öffentliche IP-Adresse aktiviert werden soll, und geben Sie optional eine Proxy-Konfiguration an.
++
+Stellen Sie sicher, dass Sie über das richtige Schlüsselpaar für den Zugriff auf die virtuelle Maschine des Konsolenagenten verfügen.  Ohne Schlüsselpaar ist ein Zugriff nicht möglich.
+
+. Wählen Sie auf der Seite *Sicherheitsgruppe* aus, ob Sie eine neue Sicherheitsgruppe erstellen oder eine vorhandene Sicherheitsgruppe auswählen möchten, die die erforderlichen eingehenden und ausgehenden Regeln zulässt.
++
+link:reference-ports-aws.html["Sicherheitsgruppenregeln für AWS anzeigen"] .
+
+. Überprüfen Sie Ihre Auswahl, um sicherzustellen, dass Ihre Einrichtung korrekt ist.
++
+.. Das Kontrollkästchen *Agentenkonfiguration validieren* ist standardmäßig aktiviert, damit die Konsole bei der Bereitstellung die Anforderungen an die Netzwerkkonnektivität validiert.  Wenn die Bereitstellung des Agenten durch die Konsole fehlschlägt, wird ein Bericht bereitgestellt, der Sie bei der Fehlerbehebung unterstützt.  Wenn die Bereitstellung erfolgreich ist, wird kein Bericht bereitgestellt.
+
+
++
+[]
+====
+Wenn Sie immer noch dielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] für Agent-Upgrades verwendet wird, schlägt die Validierung mit einem Fehler fehl.  Um dies zu vermeiden, deaktivieren Sie das Kontrollkästchen, um die Validierungsprüfung zu überspringen.
+
+====
+. Wählen Sie *Hinzufügen*.
++
+Die Konsole bereitet die Instanz in etwa 10 Minuten vor.  Bleiben Sie auf der Seite, bis der Vorgang abgeschlossen ist.
+
+
+
+.Ergebnis
+Nachdem der Vorgang abgeschlossen ist, steht der Konsolenagent für die Verwendung über die Konsole zur Verfügung.
+
+
+NOTE: Wenn die Bereitstellung fehlschlägt, können Sie einen Bericht und Protokolle von der Konsole herunterladen, die Ihnen bei der Behebung der Probleme helfen.link:task-troubleshoot-connector.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]
+
+Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenagenten erstellt haben, wird auf der Seite *Systeme* automatisch eine Amazon S3-Arbeitsumgebung angezeigt. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp Konsole verwalten"^]

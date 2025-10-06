@@ -1,0 +1,16 @@
+= 
+:allow-uri-read: 
+
+
+. Überprüfen Sie Ihre Auswahl, um sicherzustellen, dass Ihre Einrichtung korrekt ist.
++
+.. Das Kontrollkästchen *Agentenkonfiguration validieren* ist standardmäßig aktiviert, damit die Konsole bei der Bereitstellung die Anforderungen an die Netzwerkkonnektivität validiert.  Wenn die Bereitstellung des Agenten durch die Konsole fehlschlägt, wird ein Bericht bereitgestellt, der Sie bei der Fehlerbehebung unterstützt.  Wenn die Bereitstellung erfolgreich ist, wird kein Bericht bereitgestellt.
+
+
++
+[]
+====
+Wenn Sie immer noch dielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] für Agent-Upgrades verwendet wird, schlägt die Validierung mit einem Fehler fehl.  Um dies zu vermeiden, deaktivieren Sie das Kontrollkästchen, um die Validierungsprüfung zu überspringen.
+
+====
+

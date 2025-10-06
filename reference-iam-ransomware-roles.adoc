@@ -1,0 +1,468 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-ransomware-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
+summary: In der NetApp Konsole können Sie Rollen zuweisen, um Benutzern Zugriff auf NetApp Ransomware Resilience zu gewähren. 
+---
+= Ransomware Resilience-Zugriffsrollen für die NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ransomware Resilience-Rollen bieten Benutzern Zugriff auf NetApp Ransomware Resilience.  Die beiden Rollen sind Ransomware-Schutzadministrator und Ransomware-Schutzbetrachter.  Der Hauptunterschied zwischen den beiden Rollen besteht in den Aktionen, die sie im Rahmen der Ransomware-Resilienz durchführen können.
+
+Die folgende Tabelle zeigt die Aktionen, die jede Rolle ausführen kann.
+
+[cols="40,20a,20a,20a,20a"]
+|===
+| Funktion und Aktion | Ransomware-Resilienz-Administrator | Ransomware Resilience-Viewer | Ransomware Resilience-Benutzerverhaltensadministrator | Ransomware Resilience-Benutzerverhaltensanzeige 
+
+
+| Dashboard und alle Registerkarten anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Aktualisieren Sie den Empfehlungsstatus auf dem Dashboard  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Kostenlose Testversion starten  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Ermittlung von Workloads initiieren  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Neuermittlung von Workloads einleiten  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+5+| *Auf der Registerkarte „Schützen“*: 
+
+
+| Schutzpläne hinzufügen, ändern oder löschen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Workloads schützen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Identifizieren Sie die Gefährdung sensibler Daten  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Listen Sie Schutzpläne und Details auf  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Auflisten von Schutzgruppen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Anzeigen von Schutzgruppendetails  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Schutzgruppe erstellen, bearbeiten oder löschen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Daten herunterladen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+5+| *Auf der Registerkarte „Warnungen“*: 
+
+
+| Anzeigen von Warnungen und Warnungsdetails  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Vorfallstatus bearbeiten  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Alarm zur Wiederherstellung markieren  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Vorfalldetails anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Vorfälle verwerfen oder lösen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Benutzer blockieren  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Vollständige Liste der betroffenen Dateien abrufen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Warndaten herunterladen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Anzeigen verdächtiger Benutzeraktivitäten  a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+5+| *Auf der Registerkarte „Wiederherstellen“*: 
+
+
+| Betroffene Dateien herunterladen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Workload wiederherstellen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Wiederherstellungsdaten herunterladen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Berichte herunterladen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+5+| *Auf der Registerkarte „Einstellungen“*: 
+
+
+| Hinzufügen oder Ändern von Sicherungszielen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Auflisten der Sicherungsziele  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Verbundene SIEM-Ziele anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| SIEM-Ziele hinzufügen oder ändern  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Bereitschaftsübung konfigurieren  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Starten Sie die Bereitschaftsübung  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Übung zur Reset-Bereitschaft  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Bereitschaftsübung bearbeiten  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Status der Bereitschaftsübung überprüfen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Aktualisieren der Erkennungskonfiguration  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Anzeigen der Erkennungskonfiguration  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Konfigurieren Sie Einstellungen für verdächtiges Benutzerverhalten  a| 
+Nein
+ a| 
+Nein
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+5+| *Auf der Registerkarte „Berichte“*: 
+
+
+| Berichte herunterladen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+|===

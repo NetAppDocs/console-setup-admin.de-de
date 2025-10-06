@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: concept-accounts-azure.html 
+keywords: cloud provider accounts, azure, azure accounts, service principal, multiple accounts, permissions, policy, policies, subscriptions, credentials, marketplace subscription, replace subscription, subscription, bluexp 
+summary: Erfahren Sie, wie die NetApp Konsole Azure-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere Azure-Abonnements verwalten.  Sie möchten beispielsweise wissen, wann Sie der Konsole zusätzliche Azure-Anmeldeinformationen hinzufügen müssen. 
+---
+= Erfahren Sie mehr über Azure-Anmeldeinformationen und Berechtigungen in der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erfahren Sie, wie die NetApp Konsole Azure-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere Azure-Abonnements verwalten.  Sie möchten beispielsweise wissen, wann Sie der Konsole zusätzliche Azure-Anmeldeinformationen hinzufügen müssen.
+
+
+
+== Anfängliche Azure-Anmeldeinformationen
+
+Wenn Sie einen Konsolen-Agenten über die Konsole bereitstellen, müssen Sie ein Azure-Konto oder einen Dienstprinzipal verwenden, der über die Berechtigung zum Bereitstellen der virtuellen Maschine des Konsolen-Agenten verfügt.  Die erforderlichen Berechtigungen sind in derlink:task-install-connector-azure-bluexp.html#connector-custom-role["Agent-Bereitstellungsrichtlinie für Azure"] .
+
+Wenn die Konsole die virtuelle Maschine des Konsolen-Agenten in Azure bereitstellt, ermöglicht sie eine https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["systemseitig zugewiesene verwaltete Identität"^] auf der virtuellen Maschine, erstellt eine benutzerdefinierte Rolle und weist sie der virtuellen Maschine zu.  Die Rolle stellt der Konsole die erforderlichen Berechtigungen zum Verwalten von Ressourcen und Prozessen innerhalb dieses Azure-Abonnements zur Verfügung. link:reference-permissions-azure.html["Überprüfen Sie, wie die Konsole die Berechtigungen verwendet"] .
+
+image:diagram_permissions_initial_azure.png["Ein konzeptionelles Bild, das die Konsole zeigt, die einen Konsolen-Agenten in einem Azure-Konto und -Abonnement bereitstellt.  Eine vom System zugewiesene verwaltete Identität wird aktiviert und der virtuellen Maschine des Konsolen-Agenten wird eine benutzerdefinierte Rolle zugewiesen."]
+
+Wenn Sie ein neues System für Cloud Volumes ONTAP erstellen, wählt die Konsole standardmäßig diese Azure-Anmeldeinformationen aus:
+
+image:screenshot_accounts_select_azure.gif["Ein Screenshot, der die Option „Konto wechseln“ auf der Seite „Details und Anmeldeinformationen“ zeigt."]
+
+Sie können alle Ihre Cloud Volumes ONTAP -Systeme mit den anfänglichen Azure-Anmeldeinformationen bereitstellen oder zusätzliche Anmeldeinformationen hinzufügen.
+
+
+
+== Zusätzliche Azure-Abonnements für eine verwaltete Identität
+
+Die der Konsolen-Agent-VM zugewiesene, systemseitig verwaltete Identität ist dem Abonnement zugeordnet, in dem Sie den Konsolen-Agent gestartet haben.  Wenn Sie ein anderes Azure-Abonnement auswählen möchten, müssen Sielink:task-adding-azure-accounts.html#associate-additional-azure-subscriptions-with-a-managed-identity["Verknüpfen Sie die verwaltete Identität mit diesen Abonnements"] .
+
+
+
+== Zusätzliche Azure-Anmeldeinformationen
+
+Wenn Sie andere Azure-Anmeldeinformationen mit der Konsole verwenden möchten, müssen Sie die erforderlichen Berechtigungen erteilen, indem Sielink:task-adding-azure-accounts.html["Erstellen und Einrichten eines Dienstprinzipals in Microsoft Entra ID"] für jedes Azure-Konto.  Das folgende Bild zeigt zwei weitere Konten, die jeweils mit einem Dienstprinzipal und einer benutzerdefinierten Rolle eingerichtet sind, die Berechtigungen bereitstellt:
+
+image:diagram_permissions_multiple_azure.png["Ein konzeptionelles Bild, das das erste Azure-Konto zeigt, das Berechtigungen über eine benutzerdefinierte Rolle und eine verwaltete Identität erhält, sowie zwei zusätzliche Konten, die Berechtigungen über eine benutzerdefinierte Rolle und einen Dienstprinzipal erhalten."]
+
+Sie würden dannlink:task-adding-azure-accounts.html#add-credentials-azure["Fügen Sie die Kontoanmeldeinformationen zur Konsole hinzu"] indem Sie Details zum AD-Dienstprinzipal angeben.
+
+Sie können beispielsweise beim Erstellen eines neuen Cloud Volumes ONTAP Systems zwischen Anmeldeinformationen wechseln:
+
+image:screenshot_accounts_switch_azure.gif["Ein Screenshot, der die Auswahl zwischen Cloud-Anbieterkonten zeigt, nachdem Sie auf der Seite „Details und Anmeldeinformationen“ die Option „Konto wechseln“ ausgewählt haben."]
+
+
+
+== Anmeldeinformationen und Marktplatzabonnements
+
+Die Anmeldeinformationen, die Sie einem Konsolenagenten hinzufügen, müssen mit einem Azure Marketplace-Abonnement verknüpft sein, damit Sie für Cloud Volumes ONTAP zu einem Stundensatz (PAYGO), für NetApp -Datendienste oder über einen Jahresvertrag bezahlen können.
+
+link:task-adding-azure-accounts.html#subscribe["Erfahren Sie, wie Sie ein Azure-Abonnement zuordnen"] .
+
+Beachten Sie Folgendes zu Azure-Anmeldeinformationen und Marketplace-Abonnements:
+
+* Sie können einem Satz Azure-Anmeldeinformationen nur ein Azure Marketplace-Abonnement zuordnen.
+* Sie können ein bestehendes Marktplatz-Abonnement durch ein neues Abonnement ersetzen
+
+
+
+
+== FAQ
+
+Die folgende Frage bezieht sich auf Anmeldeinformationen und Abonnements.
+
+
+
+=== Kann ich das Azure Marketplace-Abonnement für Cloud Volumes ONTAP Systeme ändern?
+
+Ja, das können Sie.  Wenn Sie das Azure Marketplace-Abonnement ändern, das mit einem Satz Azure-Anmeldeinformationen verknüpft ist, werden alle vorhandenen und neuen Cloud Volumes ONTAP Systeme über das neue Abonnement abgerechnet.
+
+link:task-adding-azure-accounts.html#subscribe["Erfahren Sie, wie Sie ein Azure-Abonnement zuordnen"] .
+
+
+
+=== Kann ich mehrere Azure-Anmeldeinformationen mit jeweils unterschiedlichen Marktplatzabonnements hinzufügen?
+
+Alle Azure-Anmeldeinformationen, die zum selben Azure-Abonnement gehören, werden mit demselben Azure Marketplace-Abonnement verknüpft.
+
+Wenn Sie über mehrere Azure-Anmeldeinformationen verfügen, die zu verschiedenen Azure-Abonnements gehören, können diese Anmeldeinformationen demselben Azure Marketplace-Abonnement oder verschiedenen Marketplace-Abonnements zugeordnet werden.
+
+
+
+=== Kann ich vorhandene Cloud Volumes ONTAP Systeme in ein anderes Azure-Abonnement verschieben?
+
+Nein, es ist nicht möglich, die mit Ihrem Cloud Volumes ONTAP -System verknüpften Azure-Ressourcen in ein anderes Azure-Abonnement zu verschieben.
+
+
+
+=== Wie funktionieren Anmeldeinformationen für Marktplatzbereitstellungen und lokale Bereitstellungen?
+
+In den obigen Abschnitten wird die empfohlene Bereitstellungsmethode für den Konsolenagenten beschrieben, die über die Konsole erfolgt.  Sie können auch einen Konsolen-Agenten in Azure vom Azure Marketplace bereitstellen und die Konsolen-Agenten-Software auf Ihrem eigenen Linux-Host installieren.
+
+Wenn Sie den Marketplace verwenden, können Sie Berechtigungen erteilen, indem Sie der Konsolen-Agent-VM und einer systemseitig zugewiesenen verwalteten Identität eine benutzerdefinierte Rolle zuweisen, oder Sie können einen Microsoft Entra-Dienstprinzipal verwenden.
+
+Bei lokalen Bereitstellungen können Sie keine verwaltete Identität für den Konsolen-Agent einrichten, Sie können jedoch mithilfe eines Dienstprinzipals Berechtigungen erteilen.
+
+Informationen zum Einrichten von Berechtigungen finden Sie auf den folgenden Seiten:
+
+* Standardmodus
++
+** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["Einrichten von Berechtigungen für eine Azure Marketplace-Bereitstellung"]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Einrichten von Berechtigungen für lokale Bereitstellungen"]
+
+
+* Eingeschränkter Modus
++
+** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den eingeschränkten Modus einrichten"]
+
+
+

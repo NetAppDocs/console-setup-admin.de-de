@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+Von Computern kontaktierte Endpunkte bei Verwendung der webbasierten NetApp Konsole::
++
+--
+Computer, die über einen Webbrowser auf die Konsole zugreifen, müssen in der Lage sein, mehrere Endpunkte zu kontaktieren.  Sie müssen die Konsole verwenden, um den Konsolenagenten einzurichten und für die tägliche Verwendung der Konsole.
+
+link:reference-networking-saas-console.html["Vorbereiten des Netzwerks für die NetApp Konsole"] .
+
+--
+

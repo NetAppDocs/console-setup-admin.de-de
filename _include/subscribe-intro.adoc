@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
+Abonnieren Sie NetApp Intelligent Services über den Marktplatz Ihres Cloud-Anbieters, um Datendienste zu einem Stundensatz (PAYGO) oder über einen Jahresvertrag zu bezahlen.  Wenn Sie eine Lizenz von NetApp (BYOL) erworben haben, müssen Sie auch das Marktplatzangebot abonnieren.  Ihre Lizenz wird immer zuerst in Rechnung gestellt. Wenn Sie jedoch Ihre Lizenzkapazität überschreiten oder die Laufzeit der Lizenz abläuft, wird Ihnen der Stundensatz in Rechnung gestellt.

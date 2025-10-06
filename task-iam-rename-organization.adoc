@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: task-iam-rename-organization.html 
+keywords: rename organization, change organization name, name change, rename, change name, iam, ID, integration, project, organization, API, identity and access management 
+summary: Bei Bedarf können Sie den Namen Ihrer NetApp -Konsolenorganisation ändern. 
+---
+= Organisations- und Projekt-IDs
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ihre NetApp -Konsolenorganisation hat einen Namen und eine ID.  Sie können einen Namen für Ihre Organisation auswählen, um sie leichter zu identifizieren.  Möglicherweise müssen Sie für bestimmte Integrationen auch die Organisations-ID abrufen.
+
+
+
+== Benennen Sie Ihre Organisation um
+
+Sie können Ihre Organisation umbenennen.  Dies ist hilfreich, wenn Sie mehr als nur die Organisation unterstützen.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Organisation* aus.
+. Navigieren Sie auf der Seite *Organisation* zur ersten Zeile in der Tabelle und wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Organisation bearbeiten*.
++
+image:screenshot-iam-edit-organization.png["Ein Screenshot der Übersichtsseite, der das Aktionssymbol und die Option „Organisation bearbeiten“ zeigt."]
+
+. Geben Sie einen neuen Organisationsnamen ein und wählen Sie *Übernehmen*.
+
+
+
+
+== Abrufen der Organisations-ID
+
+Die Organisations-ID wird für bestimmte Integrationen mit der Konsole verwendet.
+
+Sie können die Organisations-ID auf der Seite „Organisationen“ anzeigen und sie für Ihren Bedarf in die Zwischenablage kopieren.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff* > *Organisation*.
+. Suchen Sie auf der Seite *Organisation* in der Übersichtsleiste nach Ihrer Organisations-ID und kopieren Sie sie in die Zwischenablage.  Sie können dies zur späteren Verwendung speichern oder direkt dorthin kopieren, wo Sie es benötigen.
+
+
+
+
+== Abrufen der ID für ein Projekt
+
+Sie müssen die ID für ein Projekt abrufen, wenn Sie die API verwenden.  Beispielsweise beim Erstellen eines Cloud Volumes ONTAP -Systems.
+
+.Schritte
+. Navigieren Sie auf der Seite *Organisation* zu einem Projekt in der Tabelle und wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"]
++
+Die Projekt-ID wird angezeigt.
+
+. Um die ID zu kopieren, wählen Sie die Schaltfläche „Kopieren“.
++
+image:screenshot-iam-project-id.png["Ein Screenshot der Ordner- und Projekttabelle, der die Projekt-ID anzeigt, nachdem das Aktionsmenü für ein Projekt ausgewählt wurde."]
+
+
+
+.Ähnliche Informationen
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identitäts- und Zugriffsverwaltung"]
+* link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identität und Zugriff"^]
+

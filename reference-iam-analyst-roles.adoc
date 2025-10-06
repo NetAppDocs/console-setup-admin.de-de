@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-analyst-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: Das Identitäts- und Zugriffsmanagement der NetApp Konsole bietet die Rolle eines Supportanalysten zur Unterstützung bei Überwachungs- und Supportfällen. 
+---
+= Zugriffsrolle „Operational Support Analyst“ für die NetApp -Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Benutzern die folgende Rolle zuweisen, um ihnen Zugriff auf Warnungen und Überwachung zu gewähren. Benutzer mit dieser Rolle können auch Supportfälle eröffnen.
+
+
+
+== Analyst für operative Unterstützung
+
+[cols="1,2"]
+|===
+| Aufgabe | Kann durchführen 
+
+
+| Verwalten Sie Ihre eigenen Benutzeranmeldeinformationen unter „Einstellungen > Anmeldeinformationen“. | Ja 
+
+
+| Erkannte Ressourcen anzeigen | Ja 
+
+
+| Registrieren Sie sich für den Support und reichen Sie Fälle über die Konsole ein | Ja 
+
+
+| Ja | Anzeigen der Audit-Seite und Benachrichtigungen 
+
+
+| Ja | Anzeigen, Herunterladen und Konfigurieren von Warnungen 
+|===

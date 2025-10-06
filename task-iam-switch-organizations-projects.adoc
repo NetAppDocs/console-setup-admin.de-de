@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task-iam-switch-organizations-projects.html 
+keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors 
+summary: Möglicherweise gehören Sie mehreren Konsolenorganisationen an oder verfügen über Berechtigungen zum Zugriff auf mehrere Projekte oder Agenten innerhalb einer Organisation.  Bei Bedarf können Sie problemlos zwischen Organisationen, Projekten und Konsolenagenten wechseln, um auf die mit dieser Organisation, diesem Projekt oder diesem Agenten verknüpften Ressourcen zuzugreifen. 
+---
+= Wechseln Sie zwischen Konsolenorganisationen, Projekten und Agenten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Möglicherweise gehören Sie mehreren Konsolenorganisationen an oder verfügen über Berechtigungen zum Zugriff auf mehrere Projekte oder Agenten innerhalb einer Organisation.  Bei Bedarf können Sie problemlos zwischen Organisationen, Projekten und Konsolenagenten wechseln, um auf die mit dieser Organisation, diesem Projekt oder diesem Agenten verknüpften Ressourcen zuzugreifen.
+
+
+TIP: Sie können mehreren Organisationen angehören, wenn Sie von einer anderen Organisation zum Beitritt eingeladen werden oder wenn Sie selbst eine Organisation gründen.  Sie können mithilfe der API eine zusätzliche Organisation erstellen. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/post-organizations.html["Erfahren Sie, wie Sie eine neue Organisation erstellen"^]
+
+
+
+== Wechseln zwischen Organisationen
+
+Wenn Sie Mitglied in mehreren Organisationen sind, können Sie jederzeit zwischen diesen wechseln.
+
+.Schritte
+. Wählen Sie in der oberen Kopfzeile der Konsole *Organisation* aus.
++
+image:screenshot-iam-switch-organizations.png["Ein Screenshot des oberen Banners, in dem Sie das Dropdown-Menü „Organisation“ auswählen und dann eine andere Organisation auswählen können."]
+
+. Wenn Sie Partnerorganisationen haben, wählen Sie die Registerkarte *Partnerschaft* aus, um die verfügbaren Partnerorganisationen anzuzeigen.
+
+
++ Die Registerkarte *Partnerschaft* wird nicht angezeigt, wenn Sie keine Partnerorganisationen haben.
+
+. Wählen Sie eine andere Organisation aus und wählen Sie dann *Wechseln*.
+
+
++ Wenn Sie Partnerorganisationen haben, wählen Sie die Registerkarte *Partnerschaft* aus, um die verfügbaren Partnerorganisationen anzuzeigen.
+
+
+
+== Zwischen Projekten wechseln
+
+Wenn Ihre Organisation mehrere Projekte umfasst und Sie Zugriff auf diese Projekte haben, können Sie jederzeit zwischen ihnen wechseln.
+
+
+NOTE: Sie können nicht zu einem anderen Projekt wechseln, während Sie eine der Seiten „Identität und Zugriff“ anzeigen.
+
+.Schritte
+. Wählen Sie in der oberen Kopfzeile der Konsole *Projekt* aus.
+. Durchsuchen Sie die Ordner und Projekte in Ihrer Organisation, wählen Sie das gewünschte Projekt aus und wählen Sie dann *Wechseln*.
++
+image:screenshot-iam-switch-projects-select.png["Ein Screenshot des Scope-Menüs, in dem Sie ein neues Projekt auswählen können."]
+
+
+
+
+
+== Wechseln zwischen Konsolenagenten
+
+Wenn Sie über mehrere Konsolenagenten verfügen, können Sie zwischen ihnen wechseln, um die Systeme anzuzeigen, die einem bestimmten Agenten zugeordnet sind.
+
+.Schritte
+. Wählen Sie in der oberen Kopfzeile der Konsole das Agentensymbol aus.
+. Wählen Sie einen anderen Agenten und dann *Wechseln*.
+
+
+.Ähnliche Informationen
+link:task-iam-associate-connectors.html["Agenten Ordnern und Projekten zuordnen"] .
+
+
+
+== Ähnliche Informationen
+
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identität und Zugriff in der NetApp Konsole"]
+* link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identität und Zugriff"^]
+

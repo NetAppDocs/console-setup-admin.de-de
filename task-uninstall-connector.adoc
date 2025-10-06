@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: task-uninstall-connector.html 
+keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
+summary: Deinstallieren Sie einen Konsolenagenten, um Probleme zu beheben oder ihn dauerhaft vom Host zu entfernen.  Die erforderlichen Schritte hängen vom verwendeten Bereitstellungsmodus ab.  Nachdem Sie einen Konsolenagenten aus Ihrer Umgebung entfernt haben, können Sie ihn aus der Konsole entfernen. 
+---
+= Deinstallieren und Entfernen eines Konsolenagenten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Deinstallieren Sie einen Konsolenagenten, um Probleme zu beheben oder ihn dauerhaft vom Host zu entfernen.  Die erforderlichen Schritte hängen vom verwendeten Bereitstellungsmodus ab.  Nachdem Sie einen Konsolenagenten aus Ihrer Umgebung entfernt haben, können Sie ihn aus der Konsole entfernen.
+
+link:concept-modes.html["Erfahren Sie mehr über die Bereitstellungsmodi der NetApp Konsole"] .
+
+
+
+== Deinstallieren Sie den Agenten, wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden
+
+Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden (mit anderen Worten, der Agent-Host verfügt über eine ausgehende Konnektivität), sollten Sie die folgenden Schritte ausführen, um den Agenten zu deinstallieren.
+
+.Schritte
+. Stellen Sie eine Verbindung zur Linux-VM für den Agenten her.
+. Führen Sie vom Linux-Host aus das Deinstallationsskript aus:
++
+`/opt/application/netapp/service-manager-2/uninstall.sh [silent]`
+
++
+_silent_ führt das Skript aus, ohne Sie zur Bestätigung aufzufordern.
+
+
+
+
+
+== Entfernen von Konsolenagenten aus der Konsole
+
+Wenn ein Konsolenagent inaktiv ist, können Sie ihn aus der Agentenliste entfernen.  Dies ist möglicherweise der Fall, wenn Sie die virtuelle Agentenmaschine löschen oder die Agentensoftware deinstallieren.
+
+Beachten Sie beim Entfernen eines Konsolenagenten Folgendes:
+
+* Durch diese Aktion wird die virtuelle Maschine nicht gelöscht.
+* Diese Aktion kann nicht rückgängig gemacht werden. Wenn Sie einen Konsolenagenten einmal entfernt haben, können Sie ihn nicht wieder hinzufügen.
+
+
+.Schritte
+. Wählen Sie *Administration > Agenten*.
+. Wählen Sie auf der Seite *Übersicht* das Aktionsmenü für einen inaktiven Agenten und wählen Sie *Agent entfernen*.
+. Geben Sie zur Bestätigung den Namen des Agenten ein und wählen Sie dann *Entfernen*.
+

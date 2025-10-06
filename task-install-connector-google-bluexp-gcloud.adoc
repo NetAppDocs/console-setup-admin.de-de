@@ -1,0 +1,426 @@
+---
+sidebar: sidebar 
+permalink: task-install-connector-google-bluexp-gcloud.html 
+keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
+summary: Um einen Konsolenagenten in Google Cloud über die NetApp -Konsole oder mithilfe von Google Cloud zu erstellen, müssen Sie Ihr Netzwerk einrichten, Google Cloud-Berechtigungen vorbereiten, Google Cloud-APIs aktivieren und dann den Konsolenagenten erstellen. 
+---
+= Erstellen Sie einen Konsolenagenten in Google Cloud über die NetApp -Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können über die Konsole einen Konsolenagenten in Google Cloud erstellen.  Sie müssen Ihr Netzwerk einrichten, Google Cloud-Berechtigungen vorbereiten, Google Cloud-APIs aktivieren und dann den Konsolenagenten erstellen.
+
+.Bevor Sie beginnen
+* Sie sollten über einelink:concept-connectors.html["Verständnis von Konsolenagenten"] .
+* Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
+
+
+
+
+== Schritt 1: Einrichten des Netzwerks
+
+Richten Sie das Netzwerk ein, um sicherzustellen, dass der Konsolenagent Ressourcen verwalten kann, mit Verbindungen zu Zielnetzwerken und ausgehendem Internetzugang.
+
+VPC und Subnetz:: Wenn Sie den Konsolenagenten erstellen, müssen Sie die VPC und das Subnetz angeben, in dem er sich befinden soll.
+
+
+Verbindungen zu Zielnetzwerken:: Der Konsolenagent erfordert eine Netzwerkverbindung zu dem Standort, an dem Sie Systeme erstellen und verwalten möchten.  Beispielsweise das Netzwerk, in dem Sie Cloud Volumes ONTAP -Systeme oder ein Speichersystem in Ihrer lokalen Umgebung erstellen möchten.
+
+
+Ausgehender Internetzugang:: Der Netzwerkstandort, an dem Sie den Konsolenagenten bereitstellen, muss über eine ausgehende Internetverbindung verfügen, um bestimmte Endpunkte zu kontaktieren.
+
+
+Vom Konsolenagenten kontaktierte Endpunkte:: Der Konsolenagent benötigt ausgehenden Internetzugang, um die folgenden Endpunkte zu kontaktieren und Ressourcen und Prozesse innerhalb Ihrer öffentlichen Cloud-Umgebung für den täglichen Betrieb zu verwalten.
++
+--
+Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+ a| 
+Zum Verwalten von Ressourcen in Google Cloud.
+
+
+
+ a| 
+\https://mysupport.netapp.com
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
+
+
+
+ a| 
+\https://signin.b2c.netapp.com
+ a| 
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Konsole neue NSS-Anmeldeinformationen hinzu.
+
+
+
+ a| 
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+ a| 
+Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole.
+
+
+
+ a| 
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+ a| 
+Um Bilder für Upgrades des Konsolenagenten zu erhalten.
+
+* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten.  Wenn Sielink:link:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl.  Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
++
+Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
+
+* Wenn Sie auf die aktuellen Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
+
+
+|===
+--
+
+
+Von der NetApp Konsole kontaktierte Endpunkte:: Wenn Sie die webbasierte NetApp Konsole verwenden, die über die SaaS-Schicht bereitgestellt wird, kontaktiert diese mehrere Endpunkte, um Datenverwaltungsaufgaben abzuschließen.  Dazu gehören Endpunkte, die kontaktiert werden, um den Konsolenagenten von der Konsole aus bereitzustellen.
++
+--
+link:reference-networking-saas-console.html["Zeigen Sie die Liste der von der NetApp Konsole kontaktierten Endpunkte an"] .
+
+--
+
+
+Proxyserver:: NetApp unterstützt sowohl explizite als auch transparente Proxy-Konfigurationen.  Wenn Sie einen transparenten Proxy verwenden, müssen Sie nur das Zertifikat für den Proxyserver angeben.  Wenn Sie einen expliziten Proxy verwenden, benötigen Sie auch die IP-Adresse und die Anmeldeinformationen.
++
+--
+* IP-Adresse
+* Anmeldeinformationen
+* HTTPS-Zertifikat
+
+
+--
+
+
+Häfen:: Es gibt keinen eingehenden Datenverkehr zum Konsolenagenten, es sei denn, Sie initiieren ihn oder er wird als Proxy zum Senden von AutoSupport Nachrichten von Cloud Volumes ONTAP an den NetApp Support verwendet.
++
+--
+* HTTP (80) und HTTPS (443) ermöglichen den Zugriff auf die lokale Benutzeroberfläche, die Sie in seltenen Fällen verwenden werden.
+* SSH (22) wird nur benötigt, wenn Sie zur Fehlerbehebung eine Verbindung zum Host herstellen müssen.
+* Eingehende Verbindungen über Port 3128 sind erforderlich, wenn Sie Cloud Volumes ONTAP -Systeme in einem Subnetz bereitstellen, in dem keine ausgehende Internetverbindung verfügbar ist.
++
+Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden von AutoSupport Nachrichten haben, konfiguriert die Konsole diese Systeme automatisch für die Verwendung eines Proxyservers, der im Konsolenagenten enthalten ist.  Die einzige Voraussetzung besteht darin, sicherzustellen, dass die Sicherheitsgruppe des Konsolenagenten eingehende Verbindungen über Port 3128 zulässt.  Sie müssen diesen Port öffnen, nachdem Sie den Konsolenagenten bereitgestellt haben.
+
+
+
+--
+
+
+Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification-System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
++
+--
+Implementieren Sie diese Netzwerkanforderung, nachdem Sie den Konsolenagenten erstellt haben.
+
+--
+
+
+
+
+== Schritt 2: Richten Sie Berechtigungen zum Erstellen des Konsolenagenten ein
+
+Bevor Sie einen Konsolenagenten über die Konsole bereitstellen können, müssen Sie Berechtigungen für den Google Platform-Benutzer einrichten, der die Konsolenagent-VM bereitstellt.
+
+.Schritte
+. Erstellen Sie eine benutzerdefinierte Rolle in der Google Platform:
++
+.. Erstellen Sie eine YAML-Datei, die die folgenden Berechtigungen enthält:
++
+[source, yaml]
+----
+title: Console agent deployment policy
+description: Permissions for the user who deploys the Console agent
+stage: GA
+includedPermissions:
+- compute.disks.create
+- compute.disks.get
+- compute.disks.list
+- compute.disks.setLabels
+- compute.disks.use
+- compute.firewalls.create
+- compute.firewalls.delete
+- compute.firewalls.get
+- compute.firewalls.list
+- compute.globalOperations.get
+- compute.images.get
+- compute.images.getFromFamily
+- compute.images.list
+- compute.images.useReadOnly
+- compute.instances.attachDisk
+- compute.instances.create
+- compute.instances.get
+- compute.instances.list
+- compute.instances.setDeletionProtection
+- compute.instances.setLabels
+- compute.instances.setMachineType
+- compute.instances.setMetadata
+- compute.instances.setTags
+- compute.instances.start
+- compute.instances.updateDisplayDevice
+- compute.machineTypes.get
+- compute.networks.get
+- compute.networks.list
+- compute.networks.updatePolicy
+- compute.projects.get
+- compute.regions.get
+- compute.regions.list
+- compute.subnetworks.get
+- compute.subnetworks.list
+- compute.zoneOperations.get
+- compute.zones.get
+- compute.zones.list
+- deploymentmanager.compositeTypes.get
+- deploymentmanager.compositeTypes.list
+- deploymentmanager.deployments.create
+- deploymentmanager.deployments.delete
+- deploymentmanager.deployments.get
+- deploymentmanager.deployments.list
+- deploymentmanager.manifests.get
+- deploymentmanager.manifests.list
+- deploymentmanager.operations.get
+- deploymentmanager.operations.list
+- deploymentmanager.resources.get
+- deploymentmanager.resources.list
+- deploymentmanager.typeProviders.get
+- deploymentmanager.typeProviders.list
+- deploymentmanager.types.get
+- deploymentmanager.types.list
+- resourcemanager.projects.get
+- compute.instances.setServiceAccount
+- iam.serviceAccounts.list
+----
+.. Aktivieren Sie Cloud Shell in Google Cloud.
+.. Laden Sie die YAML-Datei hoch, die die erforderlichen Berechtigungen enthält.
+.. Erstellen Sie eine benutzerdefinierte Rolle mithilfe der `gcloud iam roles create` Befehl.
++
+Das folgende Beispiel erstellt auf Projektebene eine Rolle mit dem Namen „connectorDeployment“:
+
++
+gcloud iam roles create connectorDeployment --project=myproject --file=connector-deployment.yaml
+
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud-Dokumente: Erstellen und Verwalten benutzerdefinierter Rollen"^]
+
+
+
+. Weisen Sie diese benutzerdefinierte Rolle dem Benutzer zu, der den Konsolenagenten über die Konsole oder mithilfe von gcloud bereitstellt.
++
+https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Google Cloud-Dokumente: Gewähren einer einzelnen Rolle"^]
+
+
+
+
+
+== Schritt 3: Berechtigungen für die Konsolen-Agent-Operationen einrichten
+
+Ein Google Cloud-Dienstkonto ist erforderlich, um dem Konsolenagenten die Berechtigungen zu erteilen, die die Konsole zum Verwalten von Ressourcen in Google Cloud benötigt.  Wenn Sie den Konsolen-Agenten erstellen, müssen Sie dieses Dienstkonto mit der Konsolen-Agent-VM verknüpfen.
+
+Es liegt in Ihrer Verantwortung, die benutzerdefinierte Rolle zu aktualisieren, wenn in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden.  Wenn neue Berechtigungen erforderlich sind, werden diese in den Versionshinweisen aufgeführt.
+
+.Schritte
+. Erstellen Sie eine benutzerdefinierte Rolle in Google Cloud:
++
+.. Erstellen Sie eine YAML-Datei, die den Inhalt derlink:reference-permissions-gcp.html["Dienstkontoberechtigungen für den Konsolenagenten"] .
+.. Aktivieren Sie Cloud Shell in Google Cloud.
+.. Laden Sie die YAML-Datei hoch, die die erforderlichen Berechtigungen enthält.
+.. Erstellen Sie eine benutzerdefinierte Rolle mithilfe der `gcloud iam roles create` Befehl.
++
+Das folgende Beispiel erstellt auf Projektebene eine Rolle mit dem Namen „Connector“:
+
++
+`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+
++
+https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud-Dokumente: Erstellen und Verwalten benutzerdefinierter Rollen"^]
+
+
+
+. Erstellen Sie ein Dienstkonto in Google Cloud und weisen Sie dem Dienstkonto die Rolle zu:
++
+.. Wählen Sie im IAM- und Admin-Dienst *Dienstkonten > Dienstkonto erstellen*.
+.. Geben Sie die Details des Dienstkontos ein und wählen Sie *Erstellen und fortfahren*.
+.. Wählen Sie die Rolle aus, die Sie gerade erstellt haben.
+.. Führen Sie die restlichen Schritte aus, um die Rolle zu erstellen.
++
+https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud-Dokumente: Erstellen eines Dienstkontos"^]
+
+
+
+. Wenn Sie Cloud Volumes ONTAP -Systeme in anderen Projekten als dem Projekt bereitstellen möchten, in dem sich der Konsolenagent befindet, müssen Sie dem Dienstkonto des Konsolenagenten Zugriff auf diese Projekte gewähren.
++
+Nehmen wir beispielsweise an, der Konsolenagent befindet sich in Projekt 1 und Sie möchten Cloud Volumes ONTAP -Systeme in Projekt 2 erstellen.  Sie müssen dem Dienstkonto in Projekt 2 Zugriff gewähren.
+
++
+.. Wählen Sie im IAM- und Admin-Dienst das Google Cloud-Projekt aus, in dem Sie Cloud Volumes ONTAP -Systeme erstellen möchten.
+.. Wählen Sie auf der *IAM*-Seite *Zugriff gewähren* aus und geben Sie die erforderlichen Details ein.
++
+*** Geben Sie die E-Mail-Adresse des Dienstkontos des Konsolenagenten ein.
+*** Wählen Sie die benutzerdefinierte Rolle des Konsolenagenten aus.
+*** Wählen Sie *Speichern*.
+
+
+
+
++
+Weitere Einzelheiten finden Sie unter https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Google Cloud-Dokumentation"^]
+
+
+
+
+
+== Schritt 4: Einrichten freigegebener VPC-Berechtigungen
+
+Wenn Sie eine gemeinsam genutzte VPC verwenden, um Ressourcen in einem Serviceprojekt bereitzustellen, müssen Sie Ihre Berechtigungen vorbereiten.
+
+Diese Tabelle dient als Referenz und Ihre Umgebung sollte die Berechtigungstabelle widerspiegeln, wenn die IAM-Konfiguration abgeschlossen ist.
+
+.Berechtigungen für freigegebene VPCs anzeigen
+[%collapsible]
+====
+[cols="10,10,10,18,18,34"]
+|===
+| Identität | Schöpfer | Gehostet in | Serviceprojektberechtigungen | Host-Projektberechtigungen | Zweck 
+
+
+| Google-Konto zum Bereitstellen des Agenten | Brauch | Serviceprojekt  a| 
+link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Richtlinie zur Agentenbereitstellung"]
+ a| 
+compute.networkUser
+| Bereitstellen des Agenten im Serviceprojekt 
+
+
+| Agent-Dienstkonto | Brauch | Serviceprojekt  a| 
+link:reference-permissions-gcp.html["Agent-Dienstkontorichtlinie"]
+| compute.networkUser deploymentmanager.editor | Bereitstellung und Wartung von Cloud Volumes ONTAP und Diensten im Serviceprojekt 
+
+
+| Cloud Volumes ONTAP Dienstkonto | Brauch | Serviceprojekt | storage.admin-Mitglied: NetApp -Konsolendienstkonto als serviceAccount.user | k. A. | (Optional) Für NetApp Cloud Tiering und NetApp Backup und Recovery 
+
+
+| Google APIs-Dienstagent | Google Cloud | Serviceprojekt  a| 
+(Standard-)Editor
+ a| 
+compute.networkUser
+| Interagiert im Rahmen der Bereitstellung mit Google Cloud-APIs.  Ermöglicht der Konsole die Verwendung des freigegebenen Netzwerks. 
+
+
+| Standarddienstkonto von Google Compute Engine | Google Cloud | Serviceprojekt  a| 
+(Standard-)Editor
+ a| 
+compute.networkUser
+| Stellt Google Cloud-Instanzen und Recheninfrastruktur im Auftrag der Bereitstellung bereit.  Ermöglicht der Konsole die Verwendung des freigegebenen Netzwerks. 
+|===
+Hinweise:
+
+. deploymentmanager.editor wird im Hostprojekt nur benötigt, wenn Sie keine Firewall-Regeln an die Bereitstellung übergeben und diese von der Konsole für Sie erstellen lassen.  Die NetApp Konsole erstellt eine Bereitstellung im Hostprojekt, die die VPC0-Firewallregel enthält, wenn keine Regel angegeben ist.
+. firewall.create und firewall.delete sind nur erforderlich, wenn Sie keine Firewall-Regeln an die Bereitstellung übergeben und diese von der Konsole für Sie erstellen lassen möchten.  Diese Berechtigungen befinden sich in der YAML-Datei des Konsolenkontos.  Wenn Sie ein HA-Paar mithilfe einer gemeinsam genutzten VPC bereitstellen, werden diese Berechtigungen zum Erstellen der Firewall-Regeln für VPC1, 2 und 3 verwendet.  Bei allen anderen Bereitstellungen werden diese Berechtigungen auch zum Erstellen von Regeln für VPC0 verwendet.
+. Für Cloud Tiering muss das Tiering-Dienstkonto über die Rolle serviceAccount.user für das Dienstkonto verfügen, nicht nur auf Projektebene.  Wenn Sie derzeit serviceAccount.user auf Projektebene zuweisen, werden die Berechtigungen nicht angezeigt, wenn Sie das Dienstkonto mit getIAMPolicy abfragen.
+
+
+====
+
+
+== Schritt 5: Google Cloud APIs aktivieren
+
+Sie müssen mehrere Google Cloud-APIs aktivieren, bevor Sie den Konsolenagenten und Cloud Volumes ONTAP bereitstellen.
+
+.Schritt
+. Aktivieren Sie die folgenden Google Cloud-APIs in Ihrem Projekt:
++
+** Cloud Deployment Manager V2 API
+** Cloud Logging API
+** Cloud Resource Manager-API
+** Compute Engine-API
+** API für Identitäts- und Zugriffsverwaltung (IAM)
+** Cloud Key Management Service (KMS)-API
++
+(Nur erforderlich, wenn Sie NetApp Backup and Recovery mit vom Kunden verwalteten Verschlüsselungsschlüsseln (CMEK) verwenden möchten)
+
+
+
+
+
+https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud-Dokumentation: APIs aktivieren"^]
+
+
+
+== Schritt 6: Erstellen des Konsolenagenten
+
+Erstellen Sie einen Konsolenagenten direkt aus der Konsole.
+
+.Informationen zu diesem Vorgang
+Durch Erstellen des Konsolenagenten wird eine VM-Instanz in Google Cloud mithilfe einer Standardkonfiguration bereitgestellt.  Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren VM-Instanz mit weniger CPUs oder weniger RAM. link:reference-connector-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
+
+.Bevor Sie beginnen
+Folgendes sollten Sie haben:
+
+* Die erforderlichen Google Cloud-Berechtigungen zum Erstellen des Konsolen-Agenten und eines Dienstkontos für die Konsolen-Agent-VM.
+* Eine VPC und ein Subnetz, das die Netzwerkanforderungen erfüllt.
+* Details zu einem Proxyserver, falls für den Internetzugriff vom Konsolenagenten ein Proxy erforderlich ist.
+
+
+.Schritte
+. Wählen Sie *Administration > Agenten*.
+. Wählen Sie auf der Seite *Übersicht* die Option *Agent bereitstellen > Google Cloud*
+. Überprüfen Sie auf der Seite *Bereitstellen eines Agenten* die Details zu Ihren Anforderungen.  Sie haben zwei Möglichkeiten:
++
+.. Wählen Sie *Weiter* aus, um die Bereitstellung mithilfe des Produkthandbuchs vorzubereiten.  Jeder Schritt in der Produktanleitung enthält die Informationen, die auf dieser Seite der Dokumentation enthalten sind.
+.. Wählen Sie *Zur Bereitstellung übergehen*, wenn Sie sich bereits durch Befolgen der Schritte auf dieser Seite vorbereitet haben.
+
+
+. Befolgen Sie die Schritte im Assistenten, um den Konsolenagenten zu erstellen:
++
+** Wenn Sie dazu aufgefordert werden, melden Sie sich bei Ihrem Google-Konto an, das über die erforderlichen Berechtigungen zum Erstellen der Instanz der virtuellen Maschine verfügen sollte.
++
+Das Formular ist Eigentum von Google und wird von Google gehostet.  Ihre Anmeldeinformationen werden NetApp nicht zur Verfügung gestellt.
+
+** *Details*: Geben Sie einen Namen für die VM-Instanz ein, geben Sie Tags an, wählen Sie ein Projekt aus und wählen Sie dann das Dienstkonto mit den erforderlichen Berechtigungen aus (weitere Informationen finden Sie im obigen Abschnitt).
+** *Standort*: Geben Sie eine Region, Zone, VPC und ein Subnetz für die Instanz an.
+** *Netzwerk*: Wählen Sie, ob eine öffentliche IP-Adresse aktiviert werden soll, und geben Sie optional eine Proxy-Konfiguration an.
+** *Netzwerk-Tags*: Fügen Sie der Konsolen-Agent-Instanz ein Netzwerk-Tag hinzu, wenn Sie einen transparenten Proxy verwenden.  Netzwerk-Tags müssen mit einem Kleinbuchstaben beginnen und können Kleinbuchstaben, Zahlen und Bindestriche enthalten.  Tags müssen mit einem Kleinbuchstaben oder einer Zahl enden.  Sie können beispielsweise das Tag „console-agent-proxy“ verwenden.
+** *Firewall-Richtlinie*: Wählen Sie, ob Sie eine neue Firewall-Richtlinie erstellen oder eine vorhandene Firewall-Richtlinie auswählen möchten, die die erforderlichen eingehenden und ausgehenden Regeln zulässt.
++
+link:reference-ports-gcp.html["Firewall-Regeln in Google Cloud"]
+
+
+
+. Überprüfen Sie Ihre Auswahl, um sicherzustellen, dass Ihre Einrichtung korrekt ist.
++
+.. Das Kontrollkästchen *Agentenkonfiguration validieren* ist standardmäßig aktiviert, damit die Konsole bei der Bereitstellung die Anforderungen an die Netzwerkkonnektivität validiert.  Wenn die Bereitstellung des Agenten durch die Konsole fehlschlägt, wird ein Bericht bereitgestellt, der Sie bei der Fehlerbehebung unterstützt.  Wenn die Bereitstellung erfolgreich ist, wird kein Bericht bereitgestellt.
+
+
++
+[]
+====
+Wenn Sie immer noch dielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] für Agent-Upgrades verwendet wird, schlägt die Validierung mit einem Fehler fehl.  Um dies zu vermeiden, deaktivieren Sie das Kontrollkästchen, um die Validierungsprüfung zu überspringen.
+
+====
+. Wählen Sie *Hinzufügen*.
++
+Die Instanz ist in etwa 10 Minuten bereit. Bleiben Sie auf der Seite, bis der Vorgang abgeschlossen ist.
+
+
+
+.Ergebnis
+Nach Abschluss des Vorgangs steht der Konsolenagent zur Verwendung bereit.
+
+
+NOTE: Wenn die Bereitstellung fehlschlägt, können Sie einen Bericht und Protokolle von der Konsole herunterladen, die Ihnen bei der Behebung der Probleme helfen.link:task-troubleshoot-connector.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]
+
+Wenn Sie Google Cloud Storage-Buckets im selben Google Cloud-Konto haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Google Cloud Storage-System angezeigt. https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["Erfahren Sie, wie Sie Google Cloud Storage über die Konsole verwalten"]

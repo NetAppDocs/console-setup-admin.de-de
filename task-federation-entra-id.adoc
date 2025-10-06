@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: task-federation-entra-id.html 
+keywords: Microsoft Entra ID, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, domain verification, client secret, redirect URL, organization admin, 
+summary: 'Verbinden Sie sich mit Ihrem Microsoft Entra ID IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.' 
+---
+= Verbinden Sie die NetApp Konsole mit der Microsoft Entra-ID
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verbinden Sie sich mit Ihrem Microsoft Entra ID IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.
+
+.Erforderliche Rollen
+Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+
+NOTE: Sie können eine Föderation mit Ihrem Unternehmens-IdP oder mit der NetApp -Support-Site herstellen.  NetApp empfiehlt, sich für das eine oder das andere zu entscheiden, aber nicht für beides.
+
+NetApp unterstützt nur vom Dienstanbieter initiiertes (SP-initiiertes) SSO.  Sie müssen zunächst den Identitätsanbieter so konfigurieren, dass er NetApp als Dienstanbieter vertraut.  Anschließend können Sie in der Konsole eine Verbindung erstellen, die die Konfiguration des Identitätsanbieters verwendet.
+
+Sie können eine Verbundverbindung mit der Microsoft Entra ID einrichten, um Single Sign-On (SSO) für die Konsole zu aktivieren.  Der Vorgang umfasst die Konfiguration Ihrer Microsoft Entra-ID, um der Konsole als Dienstanbieter zu vertrauen, und das anschließende Erstellen der Verbindung in der Konsole.
+
+.Bevor Sie beginnen
+* Es ist ein IdP-Konto mit Administratorrechten erforderlich.  Koordinieren Sie die Durchführung der Schritte mit Ihrem IdP-Administrator.
+* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Konsole"] Thema.
+
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Föderation* aus, um die Seite *Föderationen* anzuzeigen.
+. Wählen Sie *Neue Föderation konfigurieren*.
+
+
+[discrete]
+====== Domänendetails
+
+. Geben Sie Ihre Domänendetails ein:
++
+.. Wählen Sie, ob Sie eine verifizierte Domäne oder Ihre E-Mail-Domäne verwenden möchten.  Die E-Mail-Domäne ist die Domäne, die mit dem Konto verknüpft ist, mit dem Sie angemeldet sind.
+.. Geben Sie den Namen der Föderation ein, die Sie konfigurieren.
+.. Wenn Sie eine verifizierte Domäne auswählen, wählen Sie die Domäne aus der Liste aus.
+
+
+. Wählen Sie *Weiter*.
+
+
+[discrete]
+====== Verbindungsmethode
+
+. Wählen Sie als Verbindungsmethode *Anbieter* und dann *Microsoft Entra ID*.
+. Wählen Sie *Weiter*.
+
+
+[discrete]
+====== Konfigurationshinweise
+
+. Konfigurieren Sie Ihre Microsoft Entra-ID, um NetApp als Dienstanbieter zu vertrauen.  Sie müssen diesen Schritt auf Ihrem Microsoft Entra ID-Server ausführen.
++
+.. Verwenden Sie beim Registrieren Ihrer Microsoft Entra ID-App die folgenden Werte, um der Konsole zu vertrauen:
++
+*** Verwenden Sie für die *Umleitungs-URL* `https://services.cloud.netapp.com`
+*** Verwenden Sie für die *Antwort-URL* `https://netapp-cloud-account.auth0.com/login/callback`
+
+
+.. Erstellen Sie ein Clientgeheimnis für Ihre Microsoft Entra ID-App.  Sie müssen die Client-ID, das Client-Geheimnis und den Entra-ID-Domänennamen angeben, um die Föderation abzuschließen.
+
+
+. Kehren Sie zur Konsole zurück und wählen Sie *Weiter*, um die Verbindung herzustellen.
+
+
+[discrete]
+====== Verbindung erstellen
+
+. Erstellen Sie die Verbindung mit der Microsoft Entra ID
++
+.. Geben Sie die Client-ID und das Client-Geheimnis ein, die Sie im vorherigen Schritt erstellt haben.
+.. Geben Sie den Domänennamen der Microsoft Entra ID ein.
+
+
+. Wählen Sie *Verbindung erstellen*.  Das System stellt die Verbindung in wenigen Sekunden her.
+
+
+[discrete]
+====== Testen und aktivieren Sie die Verbindung
+
+. Wählen Sie *Weiter*.
+. Wählen Sie *Verbindung testen*, um Ihre Verbindung zu testen.  Sie werden zu einer Anmeldeseite für Ihren IdP-Server weitergeleitet.  Melden Sie sich mit Ihren IdP-Anmeldeinformationen an, um den Test abzuschließen, und kehren Sie zur Konsole zurück, um die Verbindung zu aktivieren.
+. Wählen Sie *Weiter*.
+. Überprüfen Sie auf der Seite *Föderation aktivieren* die Föderationsdetails und wählen Sie dann *Föderation aktivieren* aus.
+. Wählen Sie *Fertig*, um den Vorgang abzuschließen.
+
+
+Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Konsole anmelden.

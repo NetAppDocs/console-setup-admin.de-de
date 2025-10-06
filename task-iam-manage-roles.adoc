@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-roles.html 
+keywords: projects, access, resources, user roles, iam, identity and access management, folder, organization, permissions, roles, members, access roles 
+summary: Innerhalb der NetApp Konsole können Sie Benutzern Rollen zuweisen, je nachdem, was sie tun müssen und wo. 
+---
+= Verwenden Sie Rollen, um den Benutzerzugriff auf NetApp Console-Ressourcen zu verwalten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Innerhalb der Konsole können Sie Benutzern Rollen zuweisen, je nachdem, was sie tun müssen und wo.
+
+Benutzer mit der Rolle *Organisationsadministrator* oder *Ordner- oder Projektadministrator* sind dafür verantwortlich, anderen Benutzern Rollen zuzuweisen.  Sie können Zugriffsrollen auf Projekt- oder Ordnerbasis zuweisen.  Sie können einem Benutzer beispielsweise für ein Projekt die Administratorrolle für den Ransomware-Schutz und für ein anderes Projekt die Administratorrolle für SnapCenter zuweisen.  Wenn ein Benutzer alternativ die Klassifizierungsadministratorrolle für alle Projekte in einem bestimmten Ordner benötigt, können Sie ihm diese Rolle auf Ordnerebene zuweisen.
+
+Verwenden Sie Zugriffsrollen, um den Zugriff auf Speicherressourcen basierend auf den spezifischen Aufgaben zuzuweisen, die Benutzer ausführen müssen.  Wenn ein Benutzer beispielsweise mit Ransomware-Schutzdiensten interagieren muss, muss ihm eine Zugriffsrolle zugewiesen werden, die entweder Anzeige- oder Administratorberechtigungen für den Ransomware-Schutzdienst für das Projekt umfasst, für das die Zugriffsrolle gewährt wird.
+
+Weisen Sie Benutzern basierend auf Ihrer IAM-Strategie Rollen zu, um die Sicherheit zu erhöhen.  IAM-Rollen stellen sicher, dass Benutzer nur den Zugriff haben, den sie benötigen.
+
+
+NOTE: Denken Sie daran, dass Sie keinen direkten Zugriff auf Ressourcen gewähren können.  Weisen Sie den Projekten zunächst Ressourcen zu.  Erwägen Sie die Einrichtung Ihrer Ressourcenhierarchie, bevor Sie Benutzern Zugriff zuweisen.link:task-iam-manage-folders-projects.html["Erfahren Sie, wie Sie Ihre Ressourcen mit Ordnern und Projekten organisieren."]
+
+
+
+== Einem Mitglied zugewiesene Rollen anzeigen
+
+Wenn Sie Ihrer Organisation ein Mitglied hinzufügen, werden Sie aufgefordert, ihm eine Rolle zuzuweisen.  Sie können bei Mitgliedern überprüfen, welche Rollen ihnen derzeit zugewiesen sind.
+
+Wenn Sie die Rolle „Ordner- oder Projektadministrator“ haben, werden auf der Seite alle Mitglieder der Organisation angezeigt.  Sie können jedoch nur die Mitgliedsberechtigungen für die Ordner und Projekte anzeigen und verwalten, für die Sie über Berechtigungen verfügen. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Aktionen, die ein Ordner- oder Projektadministrator ausführen kann."] .
+
+. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
+. Erweitern Sie in der Tabelle die jeweilige Zeile für die Organisation, den Ordner oder das Projekt, in dem Sie die zugewiesene Rolle des Mitglieds anzeigen möchten, und wählen Sie in der Spalte *Rolle* die Option *Anzeigen* aus.
+
+
+
+
+== Einem Mitglied eine Zugriffsrolle hinzufügen
+
+Normalerweise weisen Sie eine Rolle zu, wenn Sie ein Mitglied zu Ihrer Organisation hinzufügen, Sie können sie jedoch jederzeit aktualisieren, indem Sie Rollen entfernen oder hinzufügen.
+
+Sie können einem Benutzer eine Zugriffsrolle für Ihre Organisation, Ihren Ordner oder Ihr Projekt zuweisen.
+
+Mitglieder können innerhalb desselben Projekts und in verschiedenen Projekten mehrere Rollen haben.  Beispielsweise können kleinere Organisationen alle verfügbaren Zugriffsrollen demselben Benutzer zuweisen, während größere Organisationen Benutzer mit spezialisierteren Aufgaben betrauen.  Alternativ können Sie einem Benutzer auch die Administratorrolle für den Ransomware-Schutz einer Organisation zuweisen.  In diesem Beispiel könnte der Benutzer Ransomware-Schutzaufgaben für alle Projekte innerhalb Ihrer Organisation durchführen.
+
+Ihre Zugriffsrollenstrategie sollte mit der Art und Weise übereinstimmen, wie Sie Ihre NetApp -Ressourcen organisiert haben.
+
+
+TIP: Einem Mitglied, dem die Rolle „Organisationsadministrator“ zugewiesen ist, können keine weiteren Rollen zugewiesen werden.  Sie verfügen bereits über Berechtigungen für die gesamte Organisation.  Einem Mitglied mit der Ordner- oder Projektrolle können innerhalb des Ordners oder Projekts, in dem es diese Rolle bereits hat, keine anderen Rollen zugewiesen werden.  Beide Rollen bieten Zugriff auf alle Dienste im ihnen zugewiesenen Umfang.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben dem Mitglied, dem Sie eine Rolle zuweisen möchten, und wählen Sie *Rolle hinzufügen* aus.
+. Um eine Rolle hinzuzufügen, führen Sie die Schritte im Dialogfeld aus:
++
+** *Wählen Sie eine Organisation, einen Ordner oder ein Projekt aus*: Wählen Sie die Ebene Ihrer Ressourcenhierarchie aus, für die das Mitglied Berechtigungen haben soll.
++
+Wenn Sie die Organisation oder einen Ordner auswählen, verfügt das Mitglied über Berechtigungen für alles, was sich innerhalb der Organisation oder des Ordners befindet.
+
+** *Kategorie auswählen*: Wählen Sie eine Rollenkategorie. link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"^] .
+** Wählen Sie eine *Rolle*: Wählen Sie eine Rolle, die dem Mitglied Berechtigungen für die Ressourcen erteilt, die mit der von Ihnen ausgewählten Organisation, dem Ordner oder dem Projekt verknüpft sind.
+** *Rolle hinzufügen*: Wenn Sie Zugriff auf zusätzliche Ordner oder Projekte innerhalb Ihrer Organisation gewähren möchten, wählen Sie *Rolle hinzufügen*, geben Sie einen weiteren Ordner oder ein weiteres Projekt oder eine weitere Rollenkategorie an und wählen Sie dann eine Rollenkategorie und eine entsprechende Rolle aus.
+
+
+. Wählen Sie *Neue Rollen hinzufügen*.
+
+
+
+
+== Ändern der einem Mitglied zugewiesenen Rolle
+
+Sie können die zugewiesenen Rollen für ein Mitglied ändern, falls Sie den Zugriff für einen Benutzer anpassen müssen.
+
+
+NOTE: Benutzern muss mindestens eine Rolle zugewiesen sein.  Sie können einem Benutzer nicht alle Rollen entziehen.  Wenn Sie alle Rollen entfernen müssen, müssen Sie den Benutzer aus Ihrer Organisation löschen.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
+. Erweitern Sie in der Tabelle die jeweilige Zeile für die Organisation, den Ordner oder das Projekt, in dem Sie die zugewiesene Rolle des Mitglieds ändern möchten, und wählen Sie in der Spalte *Rolle* *Anzeigen* aus, um die diesem Mitglied zugewiesenen Rollen anzuzeigen.
+. Sie können eine vorhandene Rolle für ein Mitglied ändern oder eine Rolle entfernen.
++
+.. Um die Rolle eines Mitglieds zu ändern, wählen Sie *Ändern* neben der Rolle, die Sie ändern möchten.  Sie können eine Rolle nur in eine Rolle innerhalb derselben Rollenkategorie ändern.  Sie können beispielsweise von einer Datendienstrolle zu einer anderen wechseln.  Bestätigen Sie die Änderung.
+.. Um die Zuweisung einer Rolle eines Mitglieds aufzuheben, wählen Sieimage:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um dem Mitglied die jeweilige Rolle aufzuheben.  Sie werden aufgefordert, die Entfernung zu bestätigen.
+
+
+

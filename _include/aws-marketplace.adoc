@@ -1,0 +1,42 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Gehen Sie zum https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Auflistung des NetApp Console-Agenten im AWS Marketplace"^]
+. Wählen Sie auf der Marketplace-Seite *Weiter zum Abonnieren* aus.
+. Um die Software zu abonnieren, wählen Sie *Bedingungen akzeptieren*.
++
+Der Abonnementvorgang kann einige Minuten dauern.
+
+. Wählen Sie nach Abschluss des Abonnementvorgangs *Weiter zur Konfiguration*.
+. Stellen Sie auf der Seite *Diese Software konfigurieren* sicher, dass Sie die richtige Region ausgewählt haben, und wählen Sie dann *Weiter zum Starten*.
+. Wählen Sie auf der Seite *Diese Software starten* unter *Aktion auswählen* die Option *Über EC2 starten* und dann *Starten*.
++
+Verwenden Sie die EC2-Konsole, um die Instanz zu starten und eine IAM-Rolle anzuhängen.  Dies ist mit der Aktion *Von Website starten* nicht möglich.
+
+. Folgen Sie den Anweisungen zum Konfigurieren und Bereitstellen der Instanz:
++
+** *Name und Tags*: Geben Sie einen Namen und Tags für die Instanz ein.
+** *Anwendungs- und Betriebssystem-Images*: Überspringen Sie diesen Abschnitt.  Der Konsolenagent AMI ist bereits ausgewählt.
+** *Instanztyp*: Wählen Sie je nach regionaler Verfügbarkeit einen Instanztyp, der die RAM- und CPU-Anforderungen erfüllt (t3.2xlarge ist vorausgewählt und empfohlen).
+** *Schlüsselpaar (Anmeldung)*: Wählen Sie das Schlüsselpaar aus, das Sie für eine sichere Verbindung mit der Instanz verwenden möchten.
+** *Netzwerkeinstellungen*: Bearbeiten Sie die Netzwerkeinstellungen nach Bedarf:
++
+*** Wählen Sie die gewünschte VPC und das gewünschte Subnetz.
+*** Geben Sie an, ob die Instanz eine öffentliche IP-Adresse haben soll.
+*** Geben Sie Sicherheitsgruppeneinstellungen an, die die erforderlichen Verbindungsmethoden für die Konsolen-Agenteninstanz aktivieren: SSH, HTTP und HTTPS.
++
+link:reference-ports-aws.html["Sicherheitsgruppenregeln für AWS anzeigen"] .
+
+
+
+** *Speicher konfigurieren*: Behalten Sie die Standardgröße und den Standarddatenträgertyp für das Stammvolume bei.
++
+Wenn Sie die Amazon EBS-Verschlüsselung auf dem Stammvolume aktivieren möchten, wählen Sie *Erweitert*, erweitern Sie *Volume 1*, wählen Sie *Verschlüsselt* und wählen Sie dann einen KMS-Schlüssel.
+
+** *Erweiterte Details*: Wählen Sie unter *IAM-Instanzprofil* die IAM-Rolle aus, die die erforderlichen Berechtigungen für den Konsolenagenten enthält.
+** *Zusammenfassung*: Überprüfen Sie die Zusammenfassung und wählen Sie *Instanz starten*.
+
+
+

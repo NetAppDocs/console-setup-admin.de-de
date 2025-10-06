@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: concept-org-partnerships.html 
+keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
+summary: Durch die Einrichtung von Partnerschaften zwischen Organisationen in der NetApp -Konsole können Organisationspartner NetApp -Ressourcen über Organisationsgrenzen hinweg sicher verwalten, die Zusammenarbeit optimieren und die Sicherheit verbessern. 
+---
+= Partnerschaften in der NetApp -Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Durch die Schaffung von Partnerschaften zwischen Organisationen ermöglicht die NetApp Konsole Partnern die sichere Verwaltung von NetApp Ressourcen über Organisationsgrenzen hinweg, wodurch die Zusammenarbeit optimiert und die Sicherheit verbessert wird.
+
+.Erforderliche Rollen
+Partnerschaftsadministratorlink:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+Partnerschaften ermöglichen die sichere Verwaltung von NetApp -Ressourcen in verschiedenen Organisationen mithilfe rollenbasierter Beziehungen in der Konsole.  Die initiierende Organisation gewährt Zugriff auf ihre Ressourcen, während die akzeptierende Organisation die Benutzer oder Dienstkonten bereitstellt, denen Zugriff gewährt werden soll.  Partnerschaften werden über einen Self-Service-Workflow eingerichtet, der der initiierenden Organisation die volle Kontrolle darüber gibt, welche Ressourcen gemeinsam genutzt und welche Rollen zugewiesen werden. Außerdem hat sie die Möglichkeit, den Partnerzugriff nach Bedarf zu integrieren, zu verwalten oder zu widerrufen.
+
+Kunden können MSPs oder Wiederverkäufer zur Verwaltung von NetApp -Umgebungen autorisieren, ohne dass komplizierte Setups erforderlich sind.  Kunden können steuern, auf welche Cluster Partner zugreifen können und welche Rollen sie haben. Außerdem können sie den Zugriff jederzeit widerrufen, um die Sicherheit und Compliance aufrechtzuerhalten.
+
+Als Partner erhalten Sie zentrale Transparenz und Kontrolle über alle Kundenumgebungen.  Sie können problemlos zur Organisation eines Kunden wechseln, um Ressourcen zu verwalten, Datendienste auszuführen und den Zustand innerhalb definierter Grenzen zu überwachen. Dadurch wird der Bedarf an benutzerdefinierten Tools reduziert und die Übereinstimmung mit den Richtlinien jedes Kunden sichergestellt.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]Weisen Sie einem oder mehreren Benutzern die Rolle „Partnerschaftsadministrator“ zu.
+Weisen Sie einem oder mehreren Benutzern in der initiierenden und der empfangenden Organisation die Rolle „Partnerschaftsadministrator“ zu, um Partnerschaften zu erstellen und zu verwalten. Sie können die Rolle „Partnerschaftsbetrachter“ Benutzern zuweisen, die Partnerschaften nur anzeigen, aber nicht verwalten müssen.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Teilen Sie Ihre Organisations-ID mit der initiierenden Organisation
+[role="quick-margin-para"]
+Um eine Partnerschaft zu initiieren, muss der Initiator die Organisations-ID der Zielorganisation kennen.  Auf diese Organisations-ID kann nur die jeweilige Organisation zugreifen.  Geben Sie es direkt per E-Mail oder auf andere Weise außerhalb der NetApp Konsole an die initiierende Organisation weiter.
+
+Die initiierende Organisation ist die Organisation, die Zugriff auf ihre Ressourcen gewährt.
+
+image:diagram-partnership-org-id.png["Diagramm, das die ursprünglichen Organisationen zeigt"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Initiieren Sie die Partnerschaft innerhalb der NetApp Console
+[role="quick-margin-para"]
+Die Organisation, die die Partnerschaft initiiert, tut dies innerhalb der NetApp Konsole, indem sie eine Partnerschaftsanfrage sendet.
+
+image:diagram-partnership-accept.png["Diagramm, das die Akzeptanz der Partnerschaft zeigt"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]Genehmigen Sie die Partnerschaft
+[role="quick-margin-para"]
+Die empfangende Organisation muss die Anfrage annehmen.
+
+Die empfangende Organisation ist die Organisation, der Zugriff auf Ressourcen gewährt wird.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Fünf"]Zuweisen von Benutzern zur Partnerschaft
+[role="quick-margin-para"]
+Die empfangende Organisation weist der Partnerschaft bestimmte Benutzer oder Dienstkonten aus Ihrer Organisation zu.  Die initiierende Organisation weist diesen Benutzern Rollen zu.
+
+image:diagram-partnership-add-user.png["Diagramm, das Benutzerzuweisungen zeigt"]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["Sechs"]Gewähren Sie zugewiesenen Benutzern Zugriff auf Ressourcen
+[role="quick-margin-para"]
+Wenn Sie die initiierende Organisation sind, können Sie den Benutzern, die der Partnerschaft zugewiesen wurden, Zugriff auf bestimmte Ressourcen gewähren.  Sie können den Zugriff jederzeit widerrufen.
+
+Dies erreichen Sie, indem Sie Rollen für bestimmte Projekte oder Ordner innerhalb Ihrer Organisation zuweisen.
+
+image:diagram-partnership-resources.png["Diagramm, das die gemeinsame Nutzung von Ressourcen zeigt"]

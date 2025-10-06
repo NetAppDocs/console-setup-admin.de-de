@@ -1,0 +1,1437 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases' 
+summary: 'Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetApp Konsole: IAM, Konsolenagenten, Anmeldeinformationen für Cloud-Anbieter und mehr.' 
+---
+= Was ist neu
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetApp Konsole: Identitäts- und Zugriffsverwaltung (IAM), Konsolenagenten, Anmeldeinformationen von Cloud-Anbietern und mehr.
+
+
+
+== 6. Oktober 2025
+
+
+
+== BlueXP heißt jetzt NetApp Console
+
+Die NetApp Console basiert auf der verbesserten und neu strukturierten BlueXP -Grundlage und ermöglicht die zentrale Verwaltung von NetApp Storage und NetApp Data Services in On-Premises- und Cloud-Umgebungen auf Unternehmensniveau. Sie liefert Einblicke in Echtzeit, schnellere Workflows und eine vereinfachte Administration mit hoher Sicherheit und Konformität.
+
+
+
+=== Navigationsmenüs und -seiten
+
+NetApp hat die meisten Menüoptionen in den linken Navigationsbereich verschoben und die Menüs neu organisiert, um die Navigation in der NetApp Konsole zu vereinfachen.
+
+
+
+==== Canvas wird durch die Seite „Systeme“ ersetzt
+
+NetApp hat den Canvas in die Seite *Systeme* umbenannt.  Navigieren Sie über das Menü *Speicher > Verwaltung* zur Seite *System*.
+
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png["Ein Screenshot der Systemseite."]
+
+
+
+==== Erweitertes Speichermenü
+
+Das Menü *Speicher* enthält außerdem *Warnungen* zum Anzeigen von ONTAP -Systemwarnungen und *Lebenszyklusplanung* (früher *Wirtschaftlichkeit*) zum Identifizieren ungenutzter oder nicht ausreichend genutzter Ressourcen.
+
+NetApp hat Keystone außerdem in das Menü *Speicher* verschoben, wo Sie Ihre NetApp Keystone -Abonnements verwalten und Ihre Nutzung anzeigen können.
+
+image:https://docs.netapp.com/us-en/console-setup-admin/screenshot-storage-menu.png["Ein Screenshot des Speichermenüs."]
+
+
+
+==== Menü „Verwaltung“
+
+Verwenden Sie das zentralisierte Menü *Administration*, um die NetApp Konsole, Supportfälle, Lizenzen und Abonnements (früher als digitale Geldbörse bezeichnet) zu verwalten.
+
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-admin-menu.png["Ein Screenshot des Administrationsmenüs."]
+
+
+
+==== Gesundheitsmenü
+
+Ein effizientes *Health*-Menü umfasst *Software-Updates*, wo Sie ONTAP -Software-Updates verwalten können, *Sustainability*, wo Sie Ihre Umweltauswirkungen überwachen können, und * Digital Advisor*, wo Sie proaktive Empfehlungen zur Optimierung Ihrer Speicherumgebung erhalten.
+
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-health-menu.png["Ein Screenshot des Gesundheitsmenüs."]
+
+
+
+==== Governance-Menü
+
+Das Menü *Governance* umfasst die *Datenklassifizierung*, wo Sie die Datenklassifizierung und -konformität verwalten können, und den *Automatisierungs-Hub*, wo Sie Automatisierungs-Workflows erstellen und verwalten können.
+
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-governance-menu.png["Ein Screenshot des Governance-Menüs."]
+
+
+
+=== Intuitivere Benennung von Elementen, Datendiensten und Funktionen
+
+NetApp hat mehrere Elemente, Datendienste und Funktionen umbenannt, um ihren Zweck zu verdeutlichen.  Zu den wichtigsten Änderungen gehören:
+
+[cols="10,24"]
+|===
+| *Vorheriger Name* | * NetApp -Konsolenname* 
+
+
+| Anschlüsse  a| 
+Konsolenagenten.
+
+Sie können Ihre Agenten über das Menü *Administration > Agenten* anzeigen, hinzufügen und verwalten.
+
+
+
+| Zeitleistenseite  a| 
+Audit-Seite
+
+Zeigen Sie die Aktivität der Audit-Konsole über das Menü *Administration > Audit* an.
+
+
+
+| Arbeitsumgebungen  a| 
+Systeme
+
+Zeigen Sie Ihre Systeme über das Menü *Speicher > Verwaltung* an, fügen Sie sie hinzu und verwalten Sie sie.
+
+
+
+| BlueXP Ransomware-Schutz  a| 
+NetApp Ransomware-Resilienz.
+
+Ransomware Resilience hilft Ihnen, Ihre Daten zu schützen und sich schnell von einem Ransomware-Angriff zu erholen.
+
+
+
+| BlueXP Wirtschaftlichkeit  a| 
+Lebenszyklusplanung.
+
+Mithilfe der Lebenszyklusplanung können Sie Ihre Speicherkosten optimieren, indem Sie ungenutzte und nicht ausreichend genutzte Ressourcen identifizieren.
+
+Greifen Sie über das Menü *Speicher > Lebenszyklusplanung* auf die Lebenszyklusplanung zu.
+
+
+
+| BlueXP digital wallet  a| 
+Lizenzen und Abonnements
+
+Greifen Sie über das Menü *Administration > Lizenzen und Abonnements* auf Ihre Lizenzen und Abonnements zu.
+
+|===
+
+
+=== Konsolenagenten
+
+Greifen Sie über das Menü *Administration > Agenten* auf Ihre Konsolenagenten zu und verwalten Sie sie.  NetApp hat die Art und Weise geändert, wie ein Konsolenagent für die Seite *Systeme* (früher Canvas) ausgewählt wird.  NetApp hat den Connector-Menünamen durch ein Symbol ersetztimage:icon-agent.png["Agentensymbol"] , sodass Sie den Konsolenagenten auswählen können, für den Sie Systeme anzeigen möchten.
+
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-agent-icon-menu.png["Ein Screenshot, der das Symbol zum Auswählen eines Konsolenagenten zeigt."]
+
+Sie können Ihre Agenten auch über das Menü *Administration > Agenten* verwalten.
+
+
+
+== Konsolenagent 4.0.0
+
+Diese Version des Konsolenagenten enthält Sicherheitsverbesserungen, Fehlerbehebungen und die folgenden neuen Funktionen.
+
+Die Version 4.0.0 ist für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== Konsolidierung und Reduzierung der benötigten Netzwerkendpunkte
+
+NetApp hat die erforderlichen Netzwerkendpunkte für die Konsole und Konsolenagenten reduziert, wodurch die Sicherheit verbessert und die Bereitstellung vereinfacht wird.  Wichtig ist, dass alle Bereitstellungen vor Version 4.0.0 weiterhin vollständig unterstützt werden.  Während vorherige Endpunkte für vorhandene Agenten weiterhin verfügbar bleiben, empfiehlt NetApp dringend, die Firewall-Regeln auf die aktuellen Endpunkte zu aktualisieren, nachdem die erfolgreichen Agent-Upgrades bestätigt wurden.
+
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
+* link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console.html["Erfahren Sie mehr über erforderliche Endpunkte."]
+
+
+
+
+=== Unterstützung für die VCenter-Bereitstellung von Konsolenagenten
+
+Sie können Konsolenagenten in VMware-Umgebungen mithilfe einer OVA-Datei bereitstellen.  Die OVA-Datei enthält ein vorkonfiguriertes VM-Image mit Konsolen-Agent-Software und Einstellungen für die Verbindung mit der NetApp Konsole.  Ein Dateidownload oder eine URL-Bereitstellung ist direkt über die NetApp Konsole möglich.link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["Erfahren Sie, wie Sie einen Konsolenagenten in VMware-Umgebungen bereitstellen."]
+
+Der Console Agent OVA für VMware bietet ein vorkonfiguriertes VM-Image für eine schnelle Bereitstellung.
+
+
+
+=== Validierungsberichte für fehlgeschlagene Agentenbereitstellungen
+
+Wenn Sie einen Konsolenagenten von der NetApp Konsole aus bereitstellen, haben Sie jetzt die Möglichkeit, die Agentenkonfiguration zu validieren.  Wenn die Bereitstellung des Agenten durch die Konsole fehlschlägt, wird ein herunterladbarer Bericht bereitgestellt, der Sie bei der Fehlerbehebung unterstützt.
+
+
+
+=== Verbesserte Fehlerbehebung für Konsolenagenten
+
+Der Konsolenagent verfügt über verbesserte Fehlermeldungen, die Ihnen helfen, Probleme besser zu verstehen.link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-connector.html["Erfahren Sie, wie Sie Probleme mit Konsolenagenten beheben."]
+
+
+
+== NetApp Konsole
+
+Die NetApp Konsolenverwaltung umfasst die folgenden neuen Funktionen:
+
+
+
+=== Startseiten-Dashboard
+
+Das Dashboard auf der Startseite der NetApp Konsole bietet Echtzeit-Einblicke in die Speicherinfrastruktur mit Kennzahlen zu Zustand, Kapazität, Lizenzstatus und Datendiensten.link:https://docs.netapp.com/us-en/console-setup-admin/task-dashboard.html["Erfahren Sie mehr über die Startseite."]
+
+
+
+=== NetApp Assistent
+
+Neue Benutzer mit der Rolle „Organisationsadministrator“ können den NetApp Assistenten zum Konfigurieren der Konsole verwenden, einschließlich des Hinzufügens eines Agenten, des Verknüpfens eines NetApp -Supportkontos und des Hinzufügens eines Speichersystems.link:https://docs.netapp.com/us-en/console-setup-admin/task-console-assistant.html["Erfahren Sie mehr über den NetApp Assistenten."]
+
+
+
+=== Dienstkontoauthentifizierung
+
+Die NetApp Konsole unterstützt die Authentifizierung von Servicekonten entweder mithilfe einer systemgenerierten Client-ID und geheimer oder kundenverwalteter JWTs. So können Unternehmen den Ansatz auswählen, der ihren Sicherheitsanforderungen und Integrations-Workflows am besten entspricht.  Die JWT-Client-Authentifizierung mit privatem Schlüssel verwendet asymmetrische Kryptografie und bietet eine höhere Sicherheit als herkömmliche Client-ID- und Geheimmethoden.  Die Private Key JWT-Client-Authentifizierung verwendet asymmetrische Kryptografie, wodurch der private Schlüssel in der Umgebung des Kunden sicher bleibt, das Risiko des Diebstahls von Anmeldeinformationen verringert und die Sicherheit Ihres Automatisierungsstapels und Ihrer Client-Anwendungen verbessert wird.link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account["Erfahren Sie, wie Sie ein Dienstkonto hinzufügen."]
+
+
+
+=== Sitzungs-Timeouts
+
+Das System meldet Benutzer nach 24 Stunden oder beim Schließen ihres Webbrowsers ab.
+
+
+
+=== Unterstützung von Partnerschaften zwischen Organisationen
+
+Sie können in der NetApp Konsole Partnerschaften erstellen, die es Partnern ermöglichen, NetApp -Ressourcen über Unternehmensgrenzen hinweg sicher zu verwalten, wodurch die Zusammenarbeit vereinfacht und die Sicherheit verbessert wird. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["Erfahren Sie, wie Sie Partnerschaften verwalten"] .
+
+
+
+=== Super-Admin- und Super-Viewer-Rollen
+
+Die Rollen *Super-Admin* und *Super-Viewer* wurden hinzugefügt.  *Superadministrator* gewährt vollständigen Verwaltungszugriff auf Konsolenfunktionen, Speicher und Datendienste.  *Super Viewer* bietet Prüfern und Stakeholdern schreibgeschützte Sichtbarkeit.  Diese Rollen sind für kleinere Teams mit erfahrenen Mitgliedern nützlich, bei denen ein breiter Zugriff üblich ist.  Zur Verbesserung der Sicherheit und Überprüfbarkeit wird Organisationen empfohlen, den *Superadministrator*-Zugriff sparsam zu verwenden und nach Möglichkeit fein abgestufte Rollen zuzuweisen.link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+
+
+=== Zusätzliche Rolle für Ransomware-Resilienz
+
+Die Rollen *Ransomware Resilience-Benutzerverhaltensadministrator* und *Ransomware Resilience-Benutzerverhaltensbetrachter* wurden hinzugefügt.  Mit diesen Rollen können Benutzer das Benutzerverhalten und Analysedaten konfigurieren und anzeigen.link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+
+
+=== Support-Chat entfernt
+
+NetApp hat die Support-Chat-Funktion aus der NetApp Konsole entfernt.  Verwenden Sie die Seite *Administration > Support*, um Supportfälle zu erstellen und zu verwalten.
+
+
+
+== 11. August 2025
+
+
+
+=== Connector 3.9.55
+
+Diese Version des BlueXP Connector enthält Sicherheitsverbesserungen und Fehlerbehebungen.
+
+Die Version 3.9.55 ist für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== Unterstützung der japanischen Sprache
+
+Die BlueXP -Benutzeroberfläche ist jetzt in japanischer Sprache verfügbar. Wenn Ihre Browsersprache Japanisch ist, wird BlueXP auf Japanisch angezeigt. Um auf die Dokumentation auf Japanisch zuzugreifen, verwenden Sie das Sprachmenü auf der Dokumentationswebsite.
+
+
+
+=== Funktion zur betrieblichen Ausfallsicherheit
+
+Die Funktion „Betriebsstabilität“ wurde aus BlueXP entfernt. Wenden Sie sich bei Problemen an den NetApp -Support.
+
+
+
+=== BlueXP Identitäts- und Zugriffsmanagement (IAM)
+
+Das Identitäts- und Zugriffsmanagement in BlueXP bietet jetzt die folgende Funktion.
+
+
+
+=== Neue Zugriffsrolle für den operativen Support
+
+BlueXP unterstützt jetzt die Rolle eines Betriebssupportanalysten. Diese Rolle erteilt einem Benutzer die Berechtigung, Speicherwarnungen zu überwachen, die BlueXP Audit-Zeitleiste anzuzeigen und NetApp Supportfälle einzugeben und zu verfolgen.
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Verwendung von Zugriffsrollen."]
+
+
+
+== 31. Juli 2025
+
+
+
+=== Freigabe des Privatmodus (3.9.54)
+
+Eine neue Version des privaten Modus steht jetzt zum Download bereit von der https://mysupport.netapp.com/site/downloads["NetApp Support Site"^]
+
+Die Version 3.9.54 enthält Updates für die folgenden BlueXP Komponenten und -Dienste.
+
+[cols="3*"]
+|===
+| Komponente oder Dienst | In dieser Version enthaltene Version | Änderungen seit der letzten Version des privaten Modus 
+
+
+| Anschluss | 3.9.54, 3.9.53 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["Was gibt es Neues auf der BlueXP -Seite?"^] und beziehen Sie sich auf die Änderungen, die in den Versionen 3.9.54 und 3.9.53 enthalten sind. 
+
+
+| Sicherung und Wiederherstellung | 28. Juli 2025 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Was ist neu auf der BlueXP backup and recovery?"^] und beziehen Sie sich auf die Änderungen, die in der Version vom Juli 2025 enthalten sind. 
+
+
+| Einstufung | 14. Juli 2025 (Version 1.45) | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Was ist neu auf der BlueXP classification ?"^] . 
+|===
+Weitere Einzelheiten zum privaten Modus, einschließlich der Aktualisierungsinformationen, finden Sie hier:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Erfahren Sie mehr über den privaten Modus"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Erfahren Sie, wie Sie mit BlueXP im privaten Modus beginnen"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Erfahren Sie, wie Sie den Connector im privaten Modus aktualisieren."]
+
+
+
+
+== 21. Juli 2025
+
+
+
+=== Unterstützung für Google Cloud NetApp Volumes
+
+Sie können jetzt Google Cloud NetApp Volumes in BlueXP anzeigen.link:https://docs.netapp.com/us-en//bluexp-google-cloud-netapp-volumes/index.html["Erfahren Sie mehr über Google Cloud NetApp Volumes."]
+
+
+
+=== BlueXP Identitäts- und Zugriffsmanagement (IAM)
+
+
+
+==== Neue Zugriffsrolle für Google Cloud NetApp Volumes
+
+BlueXP unterstützt jetzt die Verwendung einer Zugriffsrolle für das folgende Speichersystem:
+
+* Google Cloud NetApp Volumes
+
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Verwendung von Zugriffsrollen."]
+
+
+
+== 14. Juli 2025
+
+
+
+=== Connector 3.9.54
+
+Diese Version des BlueXP Connectors enthält Sicherheitsverbesserungen, Fehlerbehebungen und die folgenden neuen Funktionen:
+
+* Unterstützung für transparente Proxys für Connectors, die speziell für die Unterstützung von Cloud Volumes ONTAP Diensten vorgesehen sind.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-configuring-proxy.html["Erfahren Sie mehr über die Konfiguration eines transparenten Proxys."]
+* Möglichkeit zur Verwendung von Netzwerk-Tags zur Weiterleitung des Connector-Datenverkehrs, wenn der Connector in einer Google Cloud-Umgebung bereitgestellt wird.
+* Zusätzliche produktinterne Benachrichtigungen zur Überwachung des Connector-Zustands, einschließlich CPU- und RAM-Auslastung.
+
+
+Derzeit ist die Version 3.9.54 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== BlueXP Identitäts- und Zugriffsmanagement (IAM)
+
+Identitäts- und Zugriffsmanagement in BlueXP bietet jetzt die folgenden Funktionen:
+
+* Unterstützung für IAM im privaten Modus, sodass Sie den Benutzerzugriff und die Berechtigungen für BlueXP -Dienste und -Anwendungen verwalten können.
+* Optimierte Verwaltung von Identitätsföderationen, einschließlich einfacherer Navigation, klarerer Optionen zum Konfigurieren föderierter Verbindungen und verbesserter Transparenz in vorhandenen Föderationen.
+* Zugriffsrollen für BlueXP backup and recovery, BlueXP disaster recovery und Föderationsverwaltung.
+
+
+
+
+==== Unterstützung für IAM im privaten Modus
+
+BlueXP unterstützt jetzt IAM im privaten Modus, sodass Sie den Benutzerzugriff und die Berechtigungen für BlueXP -Dienste und -Anwendungen verwalten können.  Diese Verbesserung ermöglicht es Kunden im privaten Modus, die rollenbasierte Zugriffskontrolle (RBAC) für mehr Sicherheit und Compliance zu nutzen.
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#iam["Erfahren Sie mehr über IAM in BlueXP."]
+
+
+
+==== Optimierte Verwaltung von Identitätsföderationen
+
+BlueXP bietet jetzt eine intuitivere Schnittstelle zur Verwaltung der Identitätsföderation. Dazu gehören eine einfachere Navigation, klarere Optionen zum Konfigurieren föderierter Verbindungen und eine verbesserte Transparenz in vorhandenen Föderationen.
+
+Durch die Aktivierung von Single Sign-On (SSO) über die Identitätsföderation können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei BlueXP anmelden.  Dies verbessert die Sicherheit, reduziert die Verwendung von Passwörtern und vereinfacht das Onboarding.
+
+Sie werden aufgefordert, alle vorhandenen Verbundverbindungen in die neue Schnittstelle zu importieren, um Zugriff auf die neuen Verwaltungsfunktionen zu erhalten.  Auf diese Weise können Sie die neuesten Verbesserungen nutzen, ohne Ihre Verbundverbindungen neu erstellen zu müssen.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-federation-import.html["Erfahren Sie mehr über den Import Ihrer vorhandenen Verbundverbindung zu BlueXP."]
+
+Durch die verbesserte Föderationsverwaltung können Sie:
+
+* Fügen Sie einer Verbundverbindung mehr als eine verifizierte Domäne hinzu, sodass Sie mehrere Domänen mit demselben Identitätsanbieter (IdP) verwenden können.
+* Deaktivieren oder löschen Sie Verbundverbindungen bei Bedarf und behalten Sie so die Kontrolle über Benutzerzugriff und Sicherheit.
+* Steuern Sie den Zugriff auf die Föderationsverwaltung mit IAM-Rollen.
+
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-federation.html["Erfahren Sie mehr über die Identitätsföderation in BlueXP."]
+
+
+
+==== Neue Zugriffsrollen für BlueXP backup and recovery, BlueXP disaster recovery und Federation Management
+
+BlueXP unterstützt jetzt die Verwendung von IAM-Rollen für die folgenden Funktionen und Datendienste:
+
+* BlueXP backup and recovery
+* BlueXP disaster recovery
+* Föderation
+
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Verwendung von Zugriffsrollen."]
+
+
+
+== 9. Juni 2025
+
+
+
+=== Connector 3.9.53
+
+Diese Version des BlueXP Connector enthält Sicherheitsverbesserungen und Fehlerbehebungen.
+
+Die Version 3.9.53 ist für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== Warnungen zur Speicherplatznutzung
+
+Das Benachrichtigungscenter enthält jetzt Warnungen zur Speicherplatznutzung auf dem Connector.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#monitor-disk-space["Erfahren Sie mehr."^]
+
+
+
+=== Audit-Verbesserungen
+
+Die Zeitleiste enthält jetzt Anmelde- und Abmeldeereignisse für Benutzer.  Sie können die Anmeldeaktivität sehen, was bei der Prüfung und Sicherheitsüberwachung hilfreich sein kann.  API-Benutzer mit der Rolle „Organisationsadministrator“ können die E-Mail-Adresse des angemeldeten Benutzers anzeigen, indem sie Folgendes angeben: `includeUserData=true`` Parameter wie im Folgenden: `/audit/<account_id>?includeUserData=true` .
+
+
+
+=== Keystone -Abonnementverwaltung in BlueXP verfügbar
+
+Sie können Ihr NetApp Keystone Abonnement von BlueXP aus verwalten.
+
+link:https://docs.netapp.com/us-en/keystone-staas/index.html["Erfahren Sie mehr über die Keystone -Abonnementverwaltung in BlueXP."^]
+
+
+
+=== BlueXP Identitäts- und Zugriffsmanagement (IAM)
+
+
+
+==== Multi-Faktor-Authentifizierung (MFA)
+
+Nicht föderierte Benutzer können MFA für ihre BlueXP -Konten aktivieren, um die Sicherheit zu verbessern.  Administratoren können MFA-Einstellungen verwalten und MFA für Benutzer nach Bedarf zurücksetzen oder deaktivieren.  Dies wird nur im Standardmodus unterstützt.
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-user-settings.html#task-user-mfa["Erfahren Sie, wie Sie die Multi-Faktor-Authentifizierung selbst einrichten."^] link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#manage-mfa["Erfahren Sie mehr über die Verwaltung der Multi-Faktor-Authentifizierung für Benutzer."^]
+
+
+
+=== Arbeitslasten
+
+Sie können jetzt Anmeldeinformationen für Amazon FSx for NetApp ONTAP auf der Anmeldeinformationsseite in BlueXP anzeigen und löschen.
+
+
+
+== 29. Mai 2025
+
+
+
+=== Freigabe des Privatmodus (3.9.52)
+
+Eine neue Version des privaten Modus steht jetzt zum Download bereit von der https://mysupport.netapp.com/site/downloads["NetApp Support Site"^]
+
+Die Version 3.9.52 enthält Updates für die folgenden BlueXP Komponenten und -Dienste.
+
+[cols="3*"]
+|===
+| Komponente oder Dienst | In dieser Version enthaltene Version | Änderungen seit der letzten Version des privaten Modus 
+
+
+| Anschluss | 3.9.52, 3.9.51 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["Was ist neu auf der BlueXP Connector-Seite?"] und beziehen Sie sich auf die Änderungen, die in den Versionen 3.9.52 und 3.9.50 enthalten sind. 
+
+
+| Sicherung und Wiederherstellung | 12. Mai 2025 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Was ist neu auf der BlueXP backup and recovery?"^] und beziehen Sie sich auf die Änderungen, die in der Version vom Mai 2025 enthalten sind. 
+
+
+| Einstufung | 12. Mai 2025 (Version 1.43) | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Was ist neu auf der BlueXP classification ?"^] und beziehen Sie sich auf die in den Versionen 1.38 bis 1.371.41 enthaltenen Änderungen. 
+|===
+Weitere Einzelheiten zum privaten Modus, einschließlich der Aktualisierungsinformationen, finden Sie hier:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Erfahren Sie mehr über den privaten Modus"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Erfahren Sie, wie Sie mit BlueXP im privaten Modus beginnen"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Erfahren Sie, wie Sie den Connector im privaten Modus aktualisieren."]
+
+
+
+
+== 12. Mai 2025
+
+
+
+=== Connector 3.9.52
+
+Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen sowie einige zusätzliche Updates.
+
+Derzeit ist die Version 3.9.52 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+==== Unterstützung für Docker 27 und Docker 28
+
+Docker 27 und Docker 28 werden jetzt mit dem Connector unterstützt.
+
+
+
+==== Cloud Volumes ONTAP
+
+Cloud Volumes ONTAP -Knoten werden nicht mehr heruntergefahren, wenn der Connector nicht konform ist oder länger als 14 Tage ausfällt.  Cloud Volumes ONTAP sendet weiterhin Event Management-Nachrichten, wenn der Zugriff auf den Connector verloren geht.  Diese Änderung soll sicherstellen, dass Cloud Volumes ONTAP auch dann weiterbetrieben werden kann, wenn der Connector für einen längeren Zeitraum ausfällt.  Die Compliance-Anforderungen für den Connector werden dadurch nicht geändert.
+
+
+
+=== Keystone -Verwaltung in BlueXP verfügbar
+
+Die Beta für NetApp Keystone in BlueXP hat Zugriff auf die Keystone -Verwaltung hinzugefügt.  Sie können über die linke Navigationsleiste von BlueXP auf die Anmeldeseite für die Betaversion von NetApp Keystone zugreifen.
+
+
+
+=== BlueXP Identitäts- und Zugriffsmanagement (IAM)
+
+
+
+==== Neue Speicherverwaltungsrollen
+
+Die Rollen „Speicheradministrator“, „Systemintegritätsspezialist“ und „Speicherbetrachter“ sind verfügbar und können Benutzern zugewiesen werden.
+
+Mithilfe dieser Rollen können Sie verwalten, wer in Ihrem Unternehmen Speicherressourcen ermitteln und verwalten sowie Informationen zum Speicherzustand anzeigen und Softwareupdates durchführen kann.
+
+Diese Rollen werden zur Steuerung des Zugriffs auf die folgenden Speicherressourcen unterstützt:
+
+* Systeme der E-Serie
+* StorageGRID -Systeme
+* On-Premises- ONTAP -Systeme
+
+
+Sie können diese Rollen auch verwenden, um den Zugriff auf die folgenden BlueXP -Dienste zu steuern:
+
+* Software-Updates
+* Digitaler Berater
+* Betriebsstabilität
+* Wirtschaftlichkeit
+* Nachhaltigkeit
+
+
+Die folgenden Rollen wurden hinzugefügt:
+
+* *Speicheradministrator*
++
+Verwalten Sie die Speicherintegrität, Governance und Erkennung für die Speicherressourcen in der Organisation.  Diese Rolle kann auch Software-Updates für Speicherressourcen durchführen.
+
+* *Systemintegritätsspezialist*
++
+Verwalten Sie die Speicherintegrität und -verwaltung für die Speicherressourcen in der Organisation.  Diese Rolle kann auch Software-Updates für Speicherressourcen durchführen.  Diese Rolle kann keine Arbeitsumgebungen ändern oder löschen.
+
+* *Speicheranzeige*
++
+Zeigen Sie Informationen zum Speicherzustand und Governance-Daten an.
+
++
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."^]
+
+
+
+
+
+== 14. April 2025
+
+
+
+=== Connector 3.9.51
+
+Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen.
+
+Derzeit ist die Version 3.9.51 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+==== Sichere Endpunkte für Connector-Downloads werden jetzt für Backup und Wiederherstellung sowie Ransomware-Schutz unterstützt
+
+Wenn Sie Backup und Wiederherstellung oder Ransomware-Schutz verwenden, können Sie jetzt sichere Endpunkte für Connector-Downloads verwenden.link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#new-secure-endpoints-to-obtain-connector-images["Informieren Sie sich über sichere Endpunkte für Connector-Downloads."^]
+
+
+
+=== BlueXP Identitäts- und Zugriffsmanagement (IAM)
+
+* Benutzern ohne Organisationsadministrator oder Ordner- oder Projektadministrator muss eine Ransomware-Schutzrolle zugewiesen werden, um Zugriff auf den Ransomware-Schutz zu haben.  Sie können einem Benutzer eine von zwei Rollen zuweisen: Ransomware-Schutz-Administrator oder Ransomware-Schutz-Betrachter.
+* Benutzern ohne Org-Admin oder Ordner- oder Projekt-Admin muss eine Keystone -Rolle zugewiesen werden, um Zugriff auf Keystone zu haben.  Sie können einem Benutzer eine von zwei Rollen zuweisen: Keystone -Administrator oder Keystone Viewer.
++
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."^]
+
+* Wenn Sie über die Rolle „Organisationsadministrator“, „Ordner-“ oder „Projektadministrator“ verfügen, können Sie jetzt ein Keystone -Abonnement mit einem IAM-Projekt verknüpfen.  Durch die Verknüpfung eines Keystone -Abonnements mit einem IAM-Projekt können Sie den Zugriff auf Keystone innerhalb von BlueXP steuern.
+
+
+
+
+== 28. März 2025
+
+
+
+=== Freigabe des Privatmodus (3.9.50)
+
+Eine neue Version des privaten Modus steht jetzt zum Download bereit von der https://mysupport.netapp.com/site/downloads["NetApp Support Site"^]
+
+Die Version 3.9.50 enthält Updates für die folgenden BlueXP Komponenten und -Dienste.
+
+[cols="3*"]
+|===
+| Komponente oder Dienst | In dieser Version enthaltene Version | Änderungen seit der letzten Version des privaten Modus 
+
+
+| Anschluss | 3.9.50, 3.9.49 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-50["Was ist neu auf der BlueXP Connector-Seite?"] und beziehen Sie sich auf die Änderungen, die in den Versionen 3.9.50 und 3.9.49 enthalten sind. 
+
+
+| Sicherung und Wiederherstellung | 17. März 2025 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Was ist neu auf der BlueXP backup and recovery?"^] und beziehen Sie sich auf die Änderungen, die in der Version vom März 2024 enthalten sind. 
+
+
+| Einstufung | 10. März 2025 (Version 1.41) | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Was ist neu auf der BlueXP classification ?"^] und beziehen Sie sich auf die in den Versionen 1.38 bis 1.371.41 enthaltenen Änderungen. 
+|===
+Weitere Einzelheiten zum privaten Modus, einschließlich der Aktualisierungsinformationen, finden Sie hier:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Erfahren Sie mehr über den privaten Modus"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Erfahren Sie, wie Sie mit BlueXP im privaten Modus beginnen"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Erfahren Sie, wie Sie den Connector im privaten Modus aktualisieren."]
+
+
+
+
+== 10. März 2025
+
+
+
+=== Connector 3.9.50
+
+Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen.
+
+* Die Verwaltung von Cloud Volumes ONTAP -Systemen wird jetzt von Connectors unterstützt, auf deren Betriebssystem SELinux aktiviert ist.
++
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_selinux/getting-started-with-selinux_using-selinux["Erfahren Sie mehr über SELinux"^]
+
+
+
+Derzeit ist die Version 3.9.50 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== NetApp Keystone Beta in BlueXP verfügbar
+
+NetApp Keystone wird in Kürze bei BlueXP erhältlich sein und befindet sich derzeit in der Betaphase.  Sie können über die linke Navigationsleiste von BlueXP auf die Anmeldeseite für die Betaversion von NetApp Keystone zugreifen.
+
+
+
+== 6. März 2025
+
+
+
+=== Connector 3.9.49-Update
+
+
+
+==== ONTAP System Manager-Zugriff, wenn BlueXP einen Connector verwendet
+
+Ein BlueXP Administrator (Benutzer mit der Rolle „Organisationsadministrator“) kann BlueXP so konfigurieren, dass Benutzer aufgefordert werden, ihre ONTAP Anmeldeinformationen einzugeben, um auf den ONTAP -Systemmanager zuzugreifen.  Wenn diese Einstellung aktiviert ist, müssen Benutzer jedes Mal ihre ONTAP Anmeldeinformationen eingeben, da diese nicht in BlueXP gespeichert sind.
+
+Diese Funktion ist in Connector-Version 3.9.49 und höher verfügbar. link:https://docs.netapp.com/us-en/bluexp-setup-admin//task-ontap-access-connector.html["Erfahren Sie, wie Sie die Anmeldeinformationseinstellungen konfigurieren."^] .
+
+
+
+=== Connector 3.9.48-Update
+
+
+
+==== Möglichkeit, die automatische Upgrade-Einstellung für den Connector zu deaktivieren
+
+Sie können die automatische Upgrade-Funktion des Connectors deaktivieren.
+
+Wenn Sie BlueXP im Standardmodus oder eingeschränkten Modus verwenden, aktualisiert BlueXP Ihren Connector automatisch auf die neueste Version, sofern der Connector über ausgehenden Internetzugang verfügt, um das Softwareupdate zu erhalten.  Wenn Sie manuell verwalten müssen, wann der Connector aktualisiert wird, können Sie jetzt automatische Upgrades für den Standardmodus oder den eingeschränkten Modus deaktivieren.
+
+
+NOTE: Diese Änderung hat keine Auswirkungen auf den privaten Modus von BlueXP , in dem Sie den Connector immer selbst aktualisieren müssen.
+
+Diese Funktion ist in Connector-Version 3.9.48 und höher verfügbar.
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Erfahren Sie, wie Sie das automatische Upgrade für den Connector deaktivieren."^]
+
+
+
+== 18. Februar 2025
+
+
+
+=== Freigabe des Privatmodus (3.9.48)
+
+Eine neue Version des privaten Modus steht jetzt zum Download bereit von der https://mysupport.netapp.com/site/downloads["NetApp Support Site"^]
+
+Die Version 3.9.48 enthält Updates für die folgenden BlueXP Komponenten und -Dienste.
+
+[cols="3*"]
+|===
+| Komponente oder Dienst | In dieser Version enthaltene Version | Änderungen seit der letzten Version des privaten Modus 
+
+
+| Anschluss | 3.9.48 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-48["Was ist neu auf der BlueXP Connector-Seite?"] und beziehen Sie sich auf die in den Versionen 3.9.48 enthaltenen Änderungen. 
+
+
+| Sicherung und Wiederherstellung | 21. Februar 2025 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Was ist neu auf der BlueXP backup and recovery?"^] und beziehen Sie sich auf die Änderungen, die in der Version vom Februar 2025 enthalten sind. 
+
+
+| Einstufung | 22. Januar 2025 (Version 1.39) | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Was ist neu auf der BlueXP classification ?"^] und beziehen Sie sich auf die in der Version 1.39 enthaltenen Änderungen. 
+|===
+
+
+== 10. Februar 2025
+
+
+
+=== Connector 3.9.49
+
+Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen.
+
+Derzeit ist die Version 3.9.49 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== BlueXP Identitäts- und Zugriffsmanagement (IAM)
+
+* Unterstützung für die Zuweisung mehrerer Rollen zu einem BlueXP Benutzer.
+* Unterstützung für die Zuweisung einer Rolle für mehrere Ressourcen der BlueXP -Organisation (Org/Ordner/Projekt)
+* Rollen sind jetzt einer von zwei Kategorien zugeordnet: Plattform und Datendienst.
+
+
+
+
+==== Der eingeschränkte Modus verwendet jetzt BlueXP IAM
+
+Das Identitäts- und Zugriffsmanagement (IAM) von BlueXP wird jetzt im eingeschränkten Modus verwendet.
+
+BlueXP Identity and Access Management (IAM) ist ein Ressourcen- und Zugriffsverwaltungsmodell, das die bisherige Funktionalität von BlueXP -Konten bei der Verwendung von BlueXP im Standard- und eingeschränkten Modus ersetzt und erweitert.
+
+.Ähnliche Informationen
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-identity-and-access-management.html["Erfahren Sie mehr über BlueXP IAM"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-get-started.html["Erste Schritte mit BlueXP IAM"]
+
+
+BlueXP IAM bietet eine detailliertere Verwaltung von Ressourcen und Berechtigungen:
+
+* Eine _Organisation_ auf oberster Ebene ermöglicht Ihnen die Verwaltung des Zugriffs über Ihre verschiedenen _Projekte_ hinweg.
+* _Ordner_ ermöglichen Ihnen, verwandte Projekte zu gruppieren.
+* Dank der erweiterten Ressourcenverwaltung können Sie eine Ressource einem oder mehreren Ordnern oder Projekten zuordnen.
++
+Sie können beispielsweise ein Cloud Volumes ONTAP -System mit mehreren Projekten verknüpfen.
+
+* Dank der erweiterten Zugriffsverwaltung können Sie Mitgliedern auf verschiedenen Ebenen der Organisationshierarchie eine Rolle zuweisen.
+
+
+Diese Verbesserungen bieten eine bessere Kontrolle über die Aktionen, die Benutzer ausführen können, und die Ressourcen, auf die sie zugreifen können.
+
+.Wie sich BlueXP IAM im eingeschränkten Modus auf Ihr bestehendes Konto auswirkt
+Wenn Sie sich bei BlueXP anmelden, werden Sie diese Änderungen bemerken:
+
+* Ihr _Konto_ heißt jetzt _Organisation_
+* Ihre _Arbeitsbereiche_ heißen jetzt _Projekte_
+* Die Namen der Benutzerrollen haben sich geändert:
++
+** _Kontoadministrator_ ist jetzt _Organisationsadministrator_
+** _Arbeitsbereichsadministrator_ ist jetzt _Ordner- oder Projektadministrator_
+** _Compliance Viewer_ heißt jetzt _Classification Viewer_
+
+
+* Unter Einstellungen können Sie auf die BlueXP -Identitäts- und Zugriffsverwaltung zugreifen, um diese Verbesserungen zu nutzen
+
+
+Beachten Sie Folgendes:
+
+* An Ihren bestehenden Benutzern oder Arbeitsumgebungen ergeben sich keine Änderungen.
+* Während sich die Namen der Rollen geändert haben, gibt es aus Sicht der Berechtigungen keine Unterschiede.  Den Benutzern stehen weiterhin dieselben Arbeitsumgebungen wie bisher zur Verfügung.
+* Es gibt keine Änderungen an der Anmeldung bei BlueXP.  BlueXP IAM funktioniert mit NetApp Cloud-Anmeldungen, Anmeldeinformationen für die NetApp Support-Site und Verbundverbindungen, genau wie BlueXP Konten.
+* Wenn Sie mehrere BlueXP -Konten hatten, verfügen Sie jetzt über mehrere BlueXP -Organisationen.
+
+
+.API für BlueXP IAM
+Diese Änderung führt eine neue API für BlueXP IAM ein, ist jedoch abwärtskompatibel mit der vorherigen Tenancy-API. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für BlueXP IAM"^]
+
+.Unterstützte Bereitstellungsmodi
+BlueXP IAM wird unterstützt, wenn BlueXP im Standard- und eingeschränkten Modus verwendet wird.  Wenn Sie BlueXP im privaten Modus verwenden, verwenden Sie weiterhin ein BlueXP -Konto, um Arbeitsbereiche, Benutzer und Ressourcen zu verwalten.
+
+
+
+=== Freigabe des Privatmodus (3.9.48)
+
+Eine neue Version des privaten Modus steht jetzt zum Download bereit von der https://mysupport.netapp.com/site/downloads["NetApp Support Site"^]
+
+Die Version 3.9.48 enthält Updates für die folgenden BlueXP Komponenten und -Dienste.
+
+[cols="3*"]
+|===
+| Komponente oder Dienst | In dieser Version enthaltene Version | Änderungen seit der letzten Version des privaten Modus 
+
+
+| Anschluss | 3.9.48 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#connector-3-9-48["Was ist neu auf der BlueXP Connector-Seite?"] und beziehen Sie sich auf die in den Versionen 3.9.48 enthaltenen Änderungen. 
+
+
+| Sicherung und Wiederherstellung | 21. Februar 2025 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Was ist neu auf der BlueXP backup and recovery?"^] und beziehen Sie sich auf die Änderungen, die in der Version vom Februar 2025 enthalten sind. 
+
+
+| Einstufung | 22. Januar 2025 (Version 1.39) | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Was ist neu auf der BlueXP classification ?"^] und beziehen Sie sich auf die in der Version 1.39 enthaltenen Änderungen. 
+|===
+
+
+== 13. Januar 2025
+
+
+
+=== Connector 3.9.48
+
+Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen.
+
+Derzeit ist die Version 3.9.48 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== BlueXP Identitäts- und Zugriffsverwaltung
+
+* Auf der Ressourcenseite werden jetzt unentdeckte Ressourcen angezeigt.  Unentdeckte Ressourcen sind Speicherressourcen, die BlueXP kennt, für die Sie aber keine Arbeitsumgebungen erstellt haben.  Beispielsweise werden Ressourcen, die im Digital Advisor angezeigt werden und noch keine Arbeitsumgebungen haben, auf der Seite „Ressourcen“ als unentdeckte Ressourcen angezeigt.
+* Amazon FSx for NetApp ONTAP -Ressourcen werden auf der IAM-Ressourcenseite nicht angezeigt, da Sie sie keiner IAM-Rolle zuordnen können.  Sie können diese Ressourcen auf ihrer jeweiligen Leinwand oder aus Arbeitslasten anzeigen.
+
+
+
+
+=== Erstellen Sie einen Supportfall für zusätzliche BlueXP -Dienste
+
+Nachdem Sie BlueXP für den Support registriert haben, können Sie direkt über die webbasierte BlueXP -Konsole einen Supportfall erstellen.  Wenn Sie den Fall erstellen, müssen Sie den Dienst auswählen, mit dem das Problem verknüpft ist.
+
+Ab dieser Version können Sie jetzt einen Supportfall erstellen und ihn mit zusätzlichen BlueXP Diensten verknüpfen:
+
+* BlueXP disaster recovery
+* BlueXP ransomware protection
+
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-get-help.html["Erfahren Sie mehr über das Erstellen eines Supportfalls"] .
+
+
+
+== 16. Dezember 2024
+
+
+
+=== Neue sichere Endpunkte zum Abrufen von Connector-Bildern
+
+Wenn Sie den Connector installieren oder wenn ein automatisches Upgrade erfolgt, kontaktiert der Connector Repositorys, um Images für die Installation oder das Upgrade herunterzuladen.  Standardmäßig hat der Connector immer die folgenden Endpunkte kontaktiert:
+
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
+
+
+Der erste Endpunkt enthält ein Platzhalterzeichen, da wir keinen definitiven Standort angeben können.  Der Lastenausgleich des Repository wird vom Dienstanbieter verwaltet, was bedeutet, dass die Downloads von verschiedenen Endpunkten aus erfolgen können.
+
+Zur Erhöhung der Sicherheit kann der Connector jetzt Installations- und Upgrade-Images von dedizierten Endpunkten herunterladen:
+
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+
+Wir empfehlen Ihnen, mit der Verwendung dieser neuen Endpunkte zu beginnen, indem Sie die vorhandenen Endpunkte aus Ihren Firewall-Regeln entfernen und die neuen Endpunkte zulassen.
+
+Diese neuen Endpunkte werden ab der Version 3.9.47 des Connectors unterstützt.  Es besteht keine Abwärtskompatibilität mit früheren Versionen des Connectors.
+
+Beachten Sie Folgendes:
+
+* Die vorhandenen Endpunkte werden weiterhin unterstützt.  Wenn Sie die neuen Endpunkte nicht verwenden möchten, sind keine Änderungen erforderlich.
+* Der Connector kontaktiert zuerst die vorhandenen Endpunkte.  Wenn diese Endpunkte nicht erreichbar sind, kontaktiert der Connector automatisch die neuen Endpunkte.
+* Die neuen Endpunkte werden in den folgenden Szenarien nicht unterstützt:
++
+** Wenn der Connector in einer Regierungsregion installiert ist.
+** Wenn Sie den Connector mit BlueXP backup and recovery oder BlueXP ransomware protection verwenden.
+
+
++
+Für beide Szenarien können Sie die vorhandenen Endpunkte weiterhin verwenden.
+
+
+
+
+
+== 9. Dezember 2024
+
+
+
+=== Connector 3.9.47
+
+Diese Version des BlueXP Connectors enthält Fehlerbehebungen und eine Änderung der Endpunkte, die während der Connector-Installation kontaktiert werden.
+
+Derzeit ist die Version 3.9.47 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+.Endpunkt zur Kontaktaufnahme mit dem NetApp -Support während der Installation
+Wenn Sie den Connector manuell installieren, kontaktiert das Installationsprogramm nicht mehr \https://support.netapp.com.
+
+Der Installateur kontaktiert weiterhin \https://mysupport.netapp.com.
+
+
+
+=== BlueXP Identitäts- und Zugriffsverwaltung
+
+Auf der Seite „Konnektoren“ werden nur die derzeit verfügbaren Konnektoren aufgelistet.  Von Ihnen entfernte Konnektoren werden nicht mehr angezeigt.
+
+
+
+== 26. November 2024
+
+
+
+=== Freigabe des Privatmodus (3.9.46)
+
+Eine neue Version des privaten Modus steht jetzt zum Download bereit von der https://mysupport.netapp.com/site/downloads["NetApp Support Site"^]
+
+Die Version 3.9.46 enthält Updates für die folgenden BlueXP Komponenten und -Dienste.
+
+[cols="3*"]
+|===
+| Komponente oder Dienst | In dieser Version enthaltene Version | Änderungen seit der letzten Version des privaten Modus 
+
+
+| Anschluss | 3.9.46 | Kleinere Sicherheitsverbesserungen und Fehlerbehebungen 
+
+
+| Sicherung und Wiederherstellung | 22. November 2024 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Was ist neu auf der BlueXP backup and recovery?"^] und beziehen Sie sich auf die Änderungen, die in der Version vom November 2024 enthalten sind 
+
+
+| Einstufung | 4. November 2024 (Version 1.37) | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Was ist neu auf der BlueXP classification ?"^] und beziehen Sie sich auf die Änderungen in den Versionen 1.32 bis 1.37 
+
+
+| Cloud Volumes ONTAP Verwaltung | 11. November 2024 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Neuigkeiten zur Cloud Volumes ONTAP -Verwaltungsseite"^] und beziehen Sie sich auf die Änderungen, die in den Versionen vom Oktober 2024 und November 2024 enthalten sind 
+
+
+| On-Premises ONTAP Clusterverwaltung | 26. November 2024 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-ontap-onprem/whats-new.html["Neuigkeiten zur On-Premises ONTAP -Clusterverwaltungsseite"^] und beziehen Sie sich auf die Änderungen, die in der Version vom November 2024 enthalten sind 
+|===
+Obwohl die BlueXP digital wallet und die BlueXP replication auch im privaten Modus enthalten sind, gibt es gegenüber der vorherigen Version des privaten Modus keine Änderungen.
+
+Weitere Einzelheiten zum privaten Modus, einschließlich der Aktualisierungsinformationen, finden Sie hier:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Erfahren Sie mehr über den privaten Modus"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Erfahren Sie, wie Sie mit BlueXP im privaten Modus beginnen"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Erfahren Sie, wie Sie den Connector im privaten Modus aktualisieren."]
+
+
+
+
+== 11. November 2024
+
+
+
+=== Connector 3.9.46
+
+Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen.
+
+Derzeit ist die Version 3.9.46 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== ID für IAM-Projekte
+
+Sie können jetzt die ID für ein Projekt aus der BlueXP Identitäts- und Zugriffsverwaltung anzeigen.  Möglicherweise müssen Sie die ID verwenden, wenn Sie einen API-Aufruf tätigen.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-rename-organization.html#project-id["Erfahren Sie, wie Sie die ID für ein Projekt erhalten"] .
+
+
+
+== 10. Oktober 2024
+
+
+
+=== Connector 3.9.45-Patch
+
+Dieser Patch enthält Fehlerbehebungen.
+
+
+
+== 7. Oktober 2024
+
+
+
+=== BlueXP Identitäts- und Zugriffsverwaltung
+
+BlueXP Identity and Access Management (IAM) ist ein neues Ressourcen- und Zugriffsverwaltungsmodell, das die bisherige Funktionalität der BlueXP -Konten bei Verwendung von BlueXP im Standardmodus ersetzt und erweitert.
+
+BlueXP IAM bietet eine detailliertere Verwaltung von Ressourcen und Berechtigungen:
+
+* Eine _Organisation_ auf oberster Ebene ermöglicht Ihnen die Verwaltung des Zugriffs über Ihre verschiedenen _Projekte_ hinweg.
+* _Ordner_ ermöglichen Ihnen, verwandte Projekte zu gruppieren.
+* Dank der erweiterten Ressourcenverwaltung können Sie eine Ressource einem oder mehreren Ordnern oder Projekten zuordnen.
++
+Sie können beispielsweise ein Cloud Volumes ONTAP -System mit mehreren Projekten verknüpfen.
+
+* Dank der erweiterten Zugriffsverwaltung können Sie Mitgliedern auf verschiedenen Ebenen der Organisationshierarchie eine Rolle zuweisen.
+
+
+Diese Verbesserungen bieten eine bessere Kontrolle über die Aktionen, die Benutzer ausführen können, und die Ressourcen, auf die sie zugreifen können.
+
+.Wie sich BlueXP IAM auf Ihr bestehendes Konto auswirkt
+Wenn Sie sich bei BlueXP anmelden, werden Sie diese Änderungen bemerken:
+
+* Ihr _Konto_ heißt jetzt _Organisation_
+* Ihre _Arbeitsbereiche_ heißen jetzt _Projekte_
+* Die Namen der Benutzerrollen haben sich geändert:
++
+** _Kontoadministrator_ ist jetzt _Organisationsadministrator_
+** _Arbeitsbereichsadministrator_ ist jetzt _Ordner- oder Projektadministrator_
+** _Compliance Viewer_ heißt jetzt _Classification Viewer_
+
+
+* Unter Einstellungen können Sie auf die BlueXP -Identitäts- und Zugriffsverwaltung zugreifen, um diese Verbesserungen zu nutzen
+
+
+Beachten Sie Folgendes:
+
+* An Ihren bestehenden Benutzern oder Arbeitsumgebungen ergeben sich keine Änderungen.
+* Während sich die Namen der Rollen geändert haben, gibt es aus Sicht der Berechtigungen keine Unterschiede.  Den Benutzern stehen weiterhin dieselben Arbeitsumgebungen wie bisher zur Verfügung.
+* Es gibt keine Änderungen an der Anmeldung bei BlueXP.  BlueXP IAM funktioniert mit NetApp Cloud-Anmeldungen, Anmeldeinformationen für die NetApp Support-Site und Verbundverbindungen, genau wie BlueXP Konten.
+* Wenn Sie mehrere BlueXP -Konten hatten, verfügen Sie jetzt über mehrere BlueXP -Organisationen.
+
+
+.API für BlueXP IAM
+Diese Änderung führt eine neue API für BlueXP IAM ein, ist jedoch abwärtskompatibel mit der vorherigen Tenancy-API. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für BlueXP IAM"^]
+
+.Unterstützte Bereitstellungsmodi
+BlueXP IAM wird unterstützt, wenn BlueXP im Standardmodus verwendet wird.  Wenn Sie BlueXP im eingeschränkten oder privaten Modus verwenden, verwenden Sie weiterhin ein BlueXP -_Konto_, um Arbeitsbereiche, Benutzer und Ressourcen zu verwalten.
+
+.Wohin als nächstes?
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-identity-and-access-management.html["Erfahren Sie mehr über BlueXP IAM"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-get-started.html["Erste Schritte mit BlueXP IAM"]
+
+
+
+
+=== Connector 3.9.45
+
+Diese Version enthält erweiterte Betriebssystemunterstützung und Fehlerbehebungen.
+
+Die Version 3.9.45 ist für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+.Unterstützung für Ubuntu 24.04 LTS
+Ab der Version 3.9.45 unterstützt BlueXP jetzt Neuinstallationen des Connectors auf Ubuntu 24.04 LTS-Hosts, wenn BlueXP im Standardmodus oder eingeschränkten Modus verwendet wird.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements["Hostanforderungen für View Connector"] .
+
+
+
+=== Unterstützung für SELinux mit RHEL-Hosts
+
+BlueXP unterstützt jetzt den Connector mit Red Hat Enterprise Linux-Hosts, auf denen SELinux entweder im Enforcing- oder im Permissive-Modus aktiviert ist.
+
+Die Unterstützung für SELinux beginnt mit der Version 3.9.40 für den Standardmodus und den eingeschränkten Modus und mit der Version 3.9.42 für den privaten Modus.
+
+Beachten Sie die folgenden Einschränkungen:
+
+* BlueXP unterstützt SELinux mit Ubuntu-Hosts nicht.
+* Die Verwaltung von Cloud Volumes ONTAP -Systemen wird von Connectors nicht unterstützt, auf deren Betriebssystem SELinux aktiviert ist.
+
+
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/using_selinux/getting-started-with-selinux_using-selinux["Erfahren Sie mehr über SELinux"^]
+
+
+
+== 30. September 2024
+
+
+
+=== Freigabe des Privatmodus (3.9.44)
+
+Eine neue Version des privaten Modus steht jetzt zum Download von der NetApp Support-Site bereit.
+
+Diese Version enthält die folgenden Versionen der BlueXP Komponenten und -Dienste, die im privaten Modus unterstützt werden.
+
+[cols="2*"]
+|===
+| Service | Version enthalten 
+
+
+| Anschluss | 3.9.44 
+
+
+| Sicherung und Wiederherstellung | 27. September 2024 
+
+
+| Einstufung | 15. Mai 2024 (Version 1.31) 
+
+
+| Cloud Volumes ONTAP Verwaltung | 9. September 2024 
+
+
+| Digitale Geldbörse | 30. Juli 2023 
+
+
+| On-Premises ONTAP Clusterverwaltung | 22. April 2024 
+
+
+| Replikation | 18. September 2022 
+|===
+Für den Connector enthält die Version 3.9.44 für den privaten Modus die in den Versionen vom August 2024 und September 2024 eingeführten Updates.  Vor allem die Unterstützung für Red Hat Enterprise Linux 9.4.
+
+Weitere Informationen zum Inhalt der Versionen dieser BlueXP Komponenten und -Dienste finden Sie in den Versionshinweisen zu den einzelnen BlueXP Diensten:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#9-september-2024["Was ist neu in der Connector-Version vom September 2024?"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#8-august-2024["Was ist neu in der Connector-Version vom August 2024?"]
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Was ist neu bei BlueXP backup and recovery"^]
+* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Was ist neu bei der BlueXP classification?"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Was ist neu beim Cloud Volumes ONTAP -Management in BlueXP"^]
+
+
+Weitere Einzelheiten zum privaten Modus, einschließlich der Aktualisierungsinformationen, finden Sie hier:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Erfahren Sie mehr über den privaten Modus"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Erfahren Sie, wie Sie mit BlueXP im privaten Modus beginnen"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Erfahren Sie, wie Sie den Connector im privaten Modus aktualisieren."]
+
+
+
+
+== 9. September 2024
+
+
+
+=== Konnektor 3.9.44
+
+Diese Version enthält Unterstützung für Docker Engine 26, eine Verbesserung der SSL-Zertifikate und Fehlerbehebungen.
+
+Die Version 3.9.44 ist für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+.Unterstützung für Docker Engine 26 bei Neuinstallationen
+Ab der Version 3.9.44 des Connectors wird Docker Engine 26 jetzt mit _neuen_ Connector-Installationen auf Ubuntu-Hosts unterstützt.
+
+Wenn Sie über einen vorhandenen Connector verfügen, der vor der Version 3.9.44 erstellt wurde, ist Docker Engine 25.0.5 immer noch die maximal unterstützte Version auf Ubuntu-Hosts.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements["Erfahren Sie mehr über die Anforderungen der Docker Engine"] .
+
+.Aktualisiertes SSL-Zertifikat für den lokalen UI-Zugriff
+Wenn Sie BlueXP im eingeschränkten oder privaten Modus verwenden, ist die Benutzeroberfläche über die Connector-VM zugänglich, die in Ihrer Cloud-Region oder vor Ort bereitgestellt wird.  Standardmäßig verwendet BlueXP ein selbstsigniertes SSL-Zertifikat, um sicheren HTTPS-Zugriff auf die webbasierte Konsole bereitzustellen, die auf dem Connector ausgeführt wird.
+
+In dieser Version haben wir Änderungen am SSL-Zertifikat für neue und vorhandene Connectors vorgenommen:
+
+* Der allgemeine Name für das Zertifikat entspricht jetzt dem kurzen Hostnamen
+* Der alternative Name des Zertifikatsinhabers ist der vollqualifizierte Domänenname (FQDN) des Hostcomputers
+
+
+
+
+=== Unterstützung für RHEL 9.4
+
+BlueXP unterstützt jetzt die Installation des Connectors auf einem Red Hat Enterprise Linux 9.4-Host, wenn BlueXP im Standardmodus oder eingeschränkten Modus verwendet wird.
+
+Die Unterstützung für RHEL 9.4 beginnt mit der Version 3.9.40 des Connectors.
+
+Die aktualisierte Liste der unterstützten RHEL-Versionen für den Standardmodus und den eingeschränkten Modus enthält jetzt Folgendes:
+
+* 8,6 bis 8,10
+* 9,1 bis 9,4
+
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html["Erfahren Sie mehr über die Unterstützung für RHEL 8 und 9 mit dem Connector"] .
+
+
+
+=== Unterstützung für Podman 4.9.4 mit allen RHEL-Versionen
+
+Podman 4.9.4 wird jetzt mit allen unterstützten Versionen von Red Hat Enterprise Linux unterstützt.  Version 4.9.4 wurde zuvor nur mit RHEL 8.10 unterstützt.
+
+Die aktualisierte Liste der unterstützten Podman-Versionen umfasst 4.6.1 und 4.9.4 mit Red Hat Enterprise Linux-Hosts.
+
+Podman ist für RHEL-Hosts ab der Version 3.9.40 des Connectors erforderlich.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html["Erfahren Sie mehr über die Unterstützung für RHEL 8 und 9 mit dem Connector"] .
+
+
+
+=== Aktualisierte AWS- und Azure-Berechtigungen
+
+Wir haben die AWS- und Azure-Richtlinien für den Connector aktualisiert, um nicht mehr benötigte Berechtigungen zu entfernen.  Die Berechtigungen bezogen sich auf das BlueXP -Edge-Caching sowie die Erkennung und Verwaltung von Kubernetes-Clustern, die ab August 2024 nicht mehr unterstützt werden.
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions.html#change-log["Erfahren Sie, was sich in der AWS-Richtlinie geändert hat"] .
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html#change-log["Erfahren Sie, was sich in der Azure-Richtlinie geändert hat"] .
+
+
+
+
+== 22. August 2024
+
+
+
+=== Connector 3.9.43-Patch
+
+Wir haben den Connector aktualisiert, um die Version 9.15.1 von Cloud Volumes ONTAP zu unterstützen.
+
+Der Support für diese Version umfasst ein Update der Connector-Richtlinie für Azure.  Die Richtlinie umfasst jetzt die folgenden Berechtigungen:
+
+[source, json]
+----
+"Microsoft.Compute/virtualMachineScaleSets/write",
+"Microsoft.Compute/virtualMachineScaleSets/read",
+"Microsoft.Compute/virtualMachineScaleSets/delete"
+----
+Diese Berechtigungen sind für die Cloud Volumes ONTAP Unterstützung von Virtual Machine Scale Sets erforderlich.  Wenn Sie über vorhandene Connectors verfügen und diese neue Funktion verwenden möchten, müssen Sie diese Berechtigungen den benutzerdefinierten Rollen hinzufügen, die Ihren Azure-Anmeldeinformationen zugeordnet sind.
+
+* https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes["Erfahren Sie mehr über die Version Cloud Volumes ONTAP 9.15.1"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html["Anzeigen von Azure-Berechtigungen für den Connector"] .
+
+
+
+
+== 8. August 2024
+
+
+
+=== Konnektor 3.9.43
+
+Diese Version enthält kleinere Verbesserungen und Fehlerbehebungen.
+
+Die Version 3.9.43 ist für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== Aktualisierte CPU- und RAM-Anforderungen
+
+Um eine höhere Zuverlässigkeit zu gewährleisten und die Leistung von BlueXP und Connector zu verbessern, benötigen wir jetzt zusätzliche CPU und RAM für die virtuelle Connector-Maschine:
+
+* CPU: 8 Kerne oder 8 vCPUs (die vorherige Anforderung war 4)
+* RAM: 32 GB (bisher waren 14 GB erforderlich)
+
+
+Als Ergebnis dieser Änderung lautet der Standard-VM-Instanztyp beim Bereitstellen des Connectors von BlueXP oder vom Marktplatz des Cloud-Anbieters wie folgt:
+
+* AWS: t3.2xlarge
+* Azure: Standard_D8s_v3
+* Google Cloud: n2-standard-8
+
+
+Die aktualisierten CPU- und RAM-Anforderungen gelten für alle neuen Connectors.  Für vorhandene Connectors wird eine Erhöhung der CPU und des RAM empfohlen, um eine verbesserte Leistung und Zuverlässigkeit zu erzielen.
+
+
+
+=== Unterstützung für Podman 4.9.4 mit RHEL 8.10
+
+Podman Version 4.9.4 wird jetzt unterstützt, wenn der Connector auf einem Red Hat Enterprise Linux 8.10-Host installiert wird.
+
+
+
+=== Benutzervalidierung für die Identitätsföderation
+
+Wenn Sie die Identitätsföderation mit BlueXP verwenden, muss jeder Benutzer, der sich zum ersten Mal bei BlueXP anmeldet, ein kurzes Formular ausfüllen, um seine Identität zu bestätigen.
+
+
+
+== 31. Juli 2024
+
+
+
+=== Freigabe des Privatmodus (3.9.42)
+
+Eine neue Version des privaten Modus steht jetzt zum Download von der NetApp Support-Site bereit.
+
+.Unterstützung für RHEL 8 und 9
+Diese Version umfasst Unterstützung für die Installation des Connectors auf einem Red Hat Enterprise Linux 8- oder 9-Host, wenn BlueXP im privaten Modus verwendet wird. Die folgenden Versionen von RHEL werden unterstützt:
+
+* 8,6 bis 8,10
+* 9,1 bis 9,3
+
+
+Für diese Betriebssysteme wird Podman als Container-Orchestrierungstool benötigt.
+
+Sie sollten sich über die Podman-Anforderungen und bekannten Einschränkungen im Klaren sein, eine Zusammenfassung der Betriebssystemunterstützung erhalten, wissen, was zu tun ist, wenn Sie einen RHEL 7-Host haben, wie Sie beginnen und mehr.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html["Erfahren Sie mehr über die Unterstützung für RHEL 8 und 9 mit dem Connector"] .
+
+.In dieser Version enthaltene Versionen
+Diese Version enthält die folgenden Versionen der BlueXP -Dienste, die im privaten Modus unterstützt werden.
+
+[cols="2*"]
+|===
+| Service | Version enthalten 
+
+
+| Anschluss | 3.9.42 
+
+
+| Sicherung und Wiederherstellung | 18. Juli 2024 
+
+
+| Einstufung | 1. Juli 2024 (Version 1.33) 
+
+
+| Cloud Volumes ONTAP Verwaltung | 10. Juni 2024 
+
+
+| Digitale Geldbörse | 30. Juli 2023 
+
+
+| On-Premises ONTAP Clusterverwaltung | 30. Juli 2023 
+
+
+| Replikation | 18. September 2022 
+|===
+Weitere Informationen zum Inhalt der Versionen dieser BlueXP -Dienste finden Sie in den Versionshinweisen zu den einzelnen BlueXP Diensten.
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Erfahren Sie mehr über den privaten Modus"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Erfahren Sie, wie Sie mit BlueXP im privaten Modus beginnen"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Erfahren Sie, wie Sie den Connector im privaten Modus aktualisieren."]
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Erfahren Sie, was es Neues bei BlueXP backup and recovery gibt"^]
+* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Erfahren Sie, was es Neues bei der BlueXP classification gibt"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Erfahren Sie, was es Neues beim Cloud Volumes ONTAP Management in BlueXP gibt"^]
+
+
+
+
+== 15. Juli 2024
+
+
+
+=== Unterstützung für RHEL 8.10
+
+BlueXP unterstützt jetzt die Installation des Connectors auf einem Red Hat Enterprise Linux 8.10-Host im Standardmodus oder eingeschränkten Modus.
+
+Die Unterstützung für RHEL 8.10 beginnt mit der Version 3.9.40 des Connectors.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html["Erfahren Sie mehr über die Unterstützung für RHEL 8 und 9 mit dem Connector"] .
+
+
+
+== 8. Juli 2024
+
+
+
+=== Konnektor 3.9.42
+
+Diese Version enthält kleinere Verbesserungen, Fehlerbehebungen und Unterstützung für den Connector in der AWS-Region Kanada West (Calgary).
+
+Die Version 3.9.42 ist für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== Aktualisierte Docker Engine-Anforderungen
+
+Wenn der Connector auf einem Ubuntu-Host installiert ist, ist die minimal unterstützte Version der Docker Engine jetzt 23.0.6. Zuvor war es 19.3.1.
+
+Die maximal unterstützte Version ist weiterhin 25.0.5.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html#step-1-review-host-requirements["Hostanforderungen für View Connector"] .
+
+
+
+=== E-Mail-Verifizierung jetzt erforderlich
+
+Neue Benutzer, die sich bei BlueXP anmelden, müssen jetzt ihre E-Mail-Adresse bestätigen, bevor sie sich anmelden können.
+
+
+
+== 12. Juni 2024
+
+
+
+=== Konnektor 3.9.41
+
+Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen.
+
+Die Version 3.9.41 ist für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+== 4. Juni 2024
+
+
+
+=== Freigabe des Privatmodus (3.9.40)
+
+Eine neue Version des privaten Modus steht jetzt zum Download von der NetApp Support-Site bereit. Diese Version enthält die folgenden Versionen der BlueXP -Dienste, die im privaten Modus unterstützt werden.
+
+Beachten Sie, dass diese Version im privaten Modus _keine_ Unterstützung für den Connector mit Red Hat Enterprise Linux 8 und 9 enthält.
+
+[cols="2*"]
+|===
+| Service | Version enthalten 
+
+
+| Anschluss | 3.9.40 
+
+
+| Sicherung und Wiederherstellung | 17. Mai 2024 
+
+
+| Einstufung | 15. Mai 2024 (Version 1.31) 
+
+
+| Cloud Volumes ONTAP Verwaltung | 17. Mai 2024 
+
+
+| Digitale Geldbörse | 30. Juli 2023 
+
+
+| On-Premises ONTAP Clusterverwaltung | 30. Juli 2023 
+
+
+| Replikation | 18. September 2022 
+|===
+Weitere Informationen zum Inhalt der Versionen dieser BlueXP -Dienste finden Sie in den Versionshinweisen zu den einzelnen BlueXP Diensten.
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html["Erfahren Sie mehr über den privaten Modus"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-private-mode.html["Erfahren Sie, wie Sie mit BlueXP im privaten Modus beginnen"]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-upgrade-connector.html["Erfahren Sie, wie Sie den Connector im privaten Modus aktualisieren."]
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Erfahren Sie, was es Neues bei BlueXP backup and recovery gibt"^]
+* https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Erfahren Sie, was es Neues bei der BlueXP classification gibt"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Erfahren Sie, was es Neues beim Cloud Volumes ONTAP Management in BlueXP gibt"^]
+
+
+
+
+== 17. Mai 2024
+
+
+
+=== Konnektor 3.9.40
+
+Diese Version des BlueXP Connector umfasst Unterstützung für zusätzliche Betriebssysteme, kleinere Sicherheitsverbesserungen und Fehlerbehebungen.
+
+Derzeit ist die Version 3.9.40 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+.Unterstützung für RHEL 8 und 9
+Der Connector wird jetzt auf Hosts unterstützt, auf denen die folgenden Versionen von Red Hat Enterprise Linux mit _neuen_ Connector-Installationen ausgeführt werden, wenn BlueXP im Standardmodus oder eingeschränkten Modus verwendet wird:
+
+* 8,6 bis 8,9
+* 9,1 bis 9,3
+
+
+Für diese Betriebssysteme wird Podman als Container-Orchestrierungstool benötigt.
+
+Sie sollten sich über die Podman-Anforderungen und bekannten Einschränkungen im Klaren sein, eine Zusammenfassung der Betriebssystemunterstützung erhalten, wissen, was zu tun ist, wenn Sie einen RHEL 7-Host haben, wie Sie beginnen und mehr.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html["Erfahren Sie mehr über die Unterstützung für RHEL 8 und 9 mit dem Connector"] .
+
+.Ende des Supports für RHEL 7 und CentOS 7
+Am 30. Juni 2024 erreicht RHEL 7 das Ende der Wartung (EOM), während CentOS 7 das Ende seiner Lebensdauer (EOL) erreicht. NetApp wird den Connector auf diesen Linux-Distributionen bis zum 30. Juni 2024 weiterhin unterstützen.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-connector-operating-system-changes.html["Erfahren Sie, was zu tun ist, wenn Sie einen vorhandenen Connector auf RHEL 7 oder CentOS 7 ausführen."] .
+
+.AWS-Berechtigungsaktualisierung
+In der Version 3.9.38 haben wir die Connector-Richtlinie für AWS aktualisiert, um die Berechtigung „ec2:DescribeAvailabilityZones“ einzuschließen. Diese Berechtigung ist jetzt erforderlich, um AWS Local Zones mit Cloud Volumes ONTAP zu unterstützen.
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html["AWS-Berechtigungen für den Connector anzeigen"] .
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Erfahren Sie mehr über die Unterstützung für AWS Local Zones"^]
+

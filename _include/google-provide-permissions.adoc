@@ -1,0 +1,13 @@
+= 
+:allow-uri-read: 
+
+
+Verknüpfen Sie das Dienstkonto mit der Konsolen-Agent-VM.
+
+.Schritte
+. Gehen Sie zum Google Cloud-Portal und weisen Sie das Dienstkonto der VM-Instanz des Konsolenagenten zu.
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud-Dokumentation: Ändern des Dienstkontos und der Zugriffsbereiche für eine Instanz"^]
+
+. Wenn Sie Ressourcen in anderen Projekten verwalten möchten, gewähren Sie Zugriff, indem Sie das Dienstkonto mit der Rolle „Konsolenagent“ zu diesem Projekt hinzufügen.  Sie müssen diesen Schritt für jedes Projekt wiederholen.
+

@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, BlueXP, Cloud Volumes ONTAP, days, running, Connectors should remain running, imdsv2, https tokens, agents should remain running, Console agent 
+summary: Bekannte Einschränkungen kennzeichnen Plattformen, Geräte oder Funktionen, die von dieser Produktversion nicht unterstützt werden oder nicht ordnungsgemäß mit ihr zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch. 
+---
+= Bekannte Einschränkungen der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bekannte Einschränkungen kennzeichnen Plattformen, Geräte oder Funktionen, die von dieser Produktversion nicht unterstützt werden oder nicht ordnungsgemäß mit ihr zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch.
+
+Diese Einschränkungen gelten speziell für die Einrichtung der NEtApp-Konsole und -Verwaltung: den Agenten, die Software-as-a-Service-Plattform (SaaS) und mehr.
+
+
+
+== Einschränkungen des Konsolenagenten
+
+
+
+=== Möglicher Konflikt mit IP-Adressen im Bereich 172
+
+Die NetApp Konsole stellt einen Agenten mit zwei Schnittstellen bereit, die IP-Adressen in den Bereichen 172.17.0.0/16 und 172.18.0.0/16 haben.
+
+Wenn in Ihrem Netzwerk ein Subnetz mit einem dieser Bereiche konfiguriert ist, kann es bei der Konsole zu Verbindungsfehlern kommen.  Beispielsweise kann die Erkennung lokaler ONTAP Cluster in der Konsole fehlschlagen.
+
+Siehe Knowledge Base-Artikellink:https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Manager/Cloud_Manager_shows_inactive_as_Connector_IP_range_in_172.x.x.x_conflict_with_docker_network["Agent-IP-Konflikt mit vorhandenem Netzwerk"] Anweisungen zum Ändern der IP-Adresse der Schnittstellen des Agenten.
+
+
+
+=== SSL-Entschlüsselung wird nicht unterstützt
+
+Die Konsole unterstützt keine Firewall-Konfigurationen mit aktivierter SSL-Entschlüsselung.  Wenn die SSL-Entschlüsselung aktiviert ist, werden in der Konsole Fehlermeldungen angezeigt und die Agenteninstanz wird als inaktiv angezeigt.
+
+Für mehr Sicherheit haben Sie die Möglichkeit,link:task-installing-https-cert.html["Installieren Sie ein von einer Zertifizierungsstelle (CA) signiertes HTTPS-Zertifikat."] .
+
+
+
+=== Leere Seite beim Laden der lokalen Benutzeroberfläche
+
+Wenn Sie die webbasierte Konsole laden, die auf einem Agenten ausgeführt wird, kann es vorkommen, dass die Schnittstelle manchmal nicht angezeigt wird und Sie nur eine leere Seite erhalten.
+
+Dieses Problem hängt mit einem Caching-Problem zusammen.  Die Problemumgehung besteht darin, eine Inkognito- oder private Webbrowser-Sitzung zu verwenden.
+
+
+
+=== Gemeinsam genutzte Linux-Hosts werden nicht unterstützt
+
+Der Agent wird auf einer VM, die mit anderen Anwendungen gemeinsam genutzt wird, nicht unterstützt.  Die VM muss der Agentensoftware gewidmet sein.
+
+
+
+=== Agenten und Erweiterungen von Drittanbietern
+
+Agenten oder VM-Erweiterungen von Drittanbietern werden auf der Agent-VM nicht unterstützt.

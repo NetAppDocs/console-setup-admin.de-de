@@ -1,0 +1,29 @@
+= Connector 3.9.51
+:allow-uri-read: 
+
+
+
+
+=== Connector 3.9.51
+
+Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen.
+
+Derzeit ist die Version 3.9.51 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+==== Sichere Endpunkte für Connector-Downloads werden jetzt für Backup und Wiederherstellung sowie Ransomware-Schutz unterstützt
+
+Wenn Sie Backup und Wiederherstellung oder Ransomware-Schutz verwenden, können Sie jetzt sichere Endpunkte für Connector-Downloads verwenden.link:https://docs.netapp.com/us-en/bluexp-setup-admin/whats-new.html#new-secure-endpoints-to-obtain-connector-images["Informieren Sie sich über sichere Endpunkte für Connector-Downloads."^]
+
+
+
+=== BlueXP Identitäts- und Zugriffsmanagement (IAM)
+
+* Benutzern ohne Organisationsadministrator oder Ordner- oder Projektadministrator muss eine Ransomware-Schutzrolle zugewiesen werden, um Zugriff auf den Ransomware-Schutz zu haben.  Sie können einem Benutzer eine von zwei Rollen zuweisen: Ransomware-Schutz-Administrator oder Ransomware-Schutz-Betrachter.
+* Benutzern ohne Org-Admin oder Ordner- oder Projekt-Admin muss eine Keystone -Rolle zugewiesen werden, um Zugriff auf Keystone zu haben.  Sie können einem Benutzer eine von zwei Rollen zuweisen: Keystone -Administrator oder Keystone Viewer.
++
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."^]
+
+* Wenn Sie über die Rolle „Organisationsadministrator“, „Ordner-“ oder „Projektadministrator“ verfügen, können Sie jetzt ein Keystone -Abonnement mit einem IAM-Projekt verknüpfen.  Durch die Verknüpfung eines Keystone -Abonnements mit einem IAM-Projekt können Sie den Zugriff auf Keystone innerhalb von BlueXP steuern.
+

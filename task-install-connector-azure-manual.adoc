@@ -1,0 +1,844 @@
+---
+sidebar: sidebar 
+permalink: task-install-connector-azure-manual.html 
+keywords: install connector, azure connector installation, azure connector, install connector in azure, manual install 
+summary: Um den Konsolen-Agent manuell auf Ihrem eigenen Linux-Host zu installieren, müssen Sie die Hostanforderungen überprüfen, Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten, den Konsolen-Agent installieren und dann die vorbereiteten Berechtigungen bereitstellen. 
+---
+= Manuelles Installieren des Konsolen-Agents in Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um den Konsolen-Agent manuell auf Ihrem eigenen Linux-Host zu installieren, müssen Sie die Hostanforderungen überprüfen, Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten, den Konsolen-Agent installieren und dann die vorbereiteten Berechtigungen bereitstellen.
+
+.Bevor Sie beginnen
+* Sie sollten über einelink:concept-connectors.html["Verständnis von Konsolenagenten"] .
+* Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
+
+
+
+
+== Schritt 1: Hostanforderungen prüfen
+
+Die Konsolenagent-Software muss auf einem Host ausgeführt werden, der bestimmte Betriebssystemanforderungen, RAM-Anforderungen, Portanforderungen usw. erfüllt.
+
+
+NOTE: Der Konsolenagent reserviert den UID- und GID-Bereich von 19000 bis 19200.  Dieser Bereich ist fest und kann nicht geändert werden.  Wenn Drittanbietersoftware auf Ihrem Host UIDs oder GIDs innerhalb dieses Bereichs verwendet, schlägt die Agenteninstallation fehl.  NetApp empfiehlt die Verwendung eines Hosts, der frei von Software von Drittanbietern ist, um Konflikte zu vermeiden.
+
+Dedizierter Host:: Der Konsolenagent wird auf einem Host, der mit anderen Anwendungen gemeinsam genutzt wird, nicht unterstützt. Der Host muss ein dedizierter Host sein.  Der Host kann jede Architektur aufweisen, die die folgenden Größenanforderungen erfüllt:
++
+--
+* CPU: 8 Kerne oder 8 vCPUs
+* Arbeitsspeicher: 32 GB
+* Festplattenspeicher: Für den Host werden 165 GB empfohlen, mit den folgenden Partitionsanforderungen:
++
+** `/opt`: 120 GiB Speicherplatz müssen verfügbar sein
++
+Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzeichnis und dessen Inhalt.
+
+** `/var`: 40 GiB Speicherplatz müssen verfügbar sein
++
+Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podman so konzipiert sind, dass sie die Container in diesem Verzeichnis erstellen.  Konkret werden sie Container in der `/var/lib/containers/storage` Verzeichnis.  Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+
+
+
+
+
+--
+Hypervisor:: Es ist ein Bare-Metal- oder gehosteter Hypervisor erforderlich, der für die Ausführung eines unterstützten Betriebssystems zertifiziert ist.
+[[podman-versions]]Betriebssystem- und Containeranforderungen:: Der Konsolenagent wird von den folgenden Betriebssystemen unterstützt, wenn die Konsole im Standardmodus oder eingeschränkten Modus verwendet wird.  Vor der Installation des Agenten ist ein Container-Orchestrierungstool erforderlich.
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| Betriebssystem | Unterstützte Betriebssystemversionen | Unterstützte Agent-Versionen | Erforderliches Container-Tool | SELinux a 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+9,1 bis 9,4
+
+8,6 bis 8,10
+
+* Nur englischsprachige Versionen.
+* Der Host muss bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann der Host während der Agenteninstallation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
+
+ a| 
+3.9.50 oder höher mit der Konsole im Standardmodus oder eingeschränkten Modus
+ a| 
+Podman Version 4.6.1 oder 4.9.4
+
+<<podman-configuration,Podman-Konfigurationsanforderungen anzeigen>> .
+ a| 
+Unterstützt im Durchsetzungsmodus oder im Permissivmodus
+
+* Die Verwaltung von Cloud Volumes ONTAP -Systemen wird NICHT von Agenten unterstützt, auf deren Betriebssystem SELinux aktiviert ist.
+
+
+
+
+ a| 
+Ubuntu
+ a| 
+24,04 LTS
+ a| 
+3.9.45 oder höher mit der NetApp Konsole im Standardmodus oder eingeschränkten Modus
+ a| 
+Docker Engine 23.06 bis 28.0.0.
+ a| 
+Nicht unterstützt
+
+
+
+ a| 
+22,04 LTS
+ a| 
+3.9.50 oder höher
+ a| 
+Docker Engine 23.0.6 bis 28.0.0.
+ a| 
+Nicht unterstützt
+
+|===
+--
+Azure-VM-Größe:: Ein Instanztyp, der die oben genannten CPU- und RAM-Anforderungen erfüllt.  Wir empfehlen Standard_D8s_v3.
+Speicherplatz in /opt:: 100 GiB Speicherplatz müssen verfügbar sein
++
+--
+Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzeichnis und dessen Inhalt.
+
+--
+Speicherplatz in /var:: 20 GiB Speicherplatz müssen verfügbar sein
++
+--
+Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podman so konzipiert sind, dass sie die Container in diesem Verzeichnis erstellen.  Konkret werden sie Container in der `/var/lib/containers/storage` Verzeichnis.  Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+
+--
+
+
+
+
+== Schritt 2: Installieren Sie Podman oder Docker Engine
+
+Abhängig von Ihrem Betriebssystem ist vor der Installation des Agenten entweder Podman oder Docker Engine erforderlich.
+
+* Podman wird für Red Hat Enterprise Linux 8 und 9 benötigt.
++
+<<podman-versions,Sehen Sie sich die unterstützten Podman-Versionen an>> .
+
+* Für Ubuntu ist Docker Engine erforderlich.
++
+<<podman-versions,Anzeigen der unterstützten Docker Engine-Versionen>> .
+
+
+
+.Schritte
+[role="tabbed-block"]
+====
+.Podman
+--
+Befolgen Sie diese Schritte, um Podman zu installieren und zu konfigurieren:
+
+* Aktivieren und starten Sie den Dienst podman.socket
+* Installieren Sie Python3
+* Installieren Sie das Podman-Compose-Paket Version 1.0.6
+* Fügen Sie podman-compose zur Umgebungsvariablen PATH hinzu
+* Wenn Sie Red Hat Enterprise Linux 8 verwenden, überprüfen Sie, ob Ihre Podman-Version Aardvark DNS anstelle von CNI verwendet
+
+
+
+NOTE: Passen Sie den Aardvark-DNS-Port (Standard: 53) nach der Installation des Agenten an, um DNS-Portkonflikte zu vermeiden.  Befolgen Sie die Anweisungen zum Konfigurieren des Ports.
+
+.Schritte
+. Entfernen Sie das Podman-Docker-Paket, falls es auf dem Host installiert ist.
++
+[source, cli]
+----
+dnf remove podman-docker
+rm /var/run/docker.sock
+----
+. Installieren Sie Podman.
++
+Sie können Podman aus den offiziellen Red Hat Enterprise Linux-Repositories beziehen.
+
++
+Für Red Hat Enterprise Linux 9:
+
++
+[source, cli]
+----
+sudo dnf install podman-2:<version>
+----
++
+Dabei ist <Version> die unterstützte Version von Podman, die Sie installieren. <<podman-versions,Sehen Sie sich die unterstützten Podman-Versionen an>> .
+
++
+Für Red Hat Enterprise Linux 8:
+
++
+[source, cli]
+----
+sudo dnf install podman-3:<version>
+----
++
+Dabei ist <Version> die unterstützte Version von Podman, die Sie installieren. <<podman-versions,Sehen Sie sich die unterstützten Podman-Versionen an>> .
+
+. Aktivieren und starten Sie den Dienst podman.socket.
++
+[source, cli]
+----
+sudo systemctl enable --now podman.socket
+----
+. Installieren Sie python3.
++
+[source, cli]
+----
+sudo dnf install python3
+----
+. Installieren Sie das EPEL-Repository-Paket, falls es auf Ihrem System noch nicht verfügbar ist.
+. Bei Verwendung von Red Hat Enterprise:
++
+Dieser Schritt ist erforderlich, da podman-compose im Repository „Extra Packages for Enterprise Linux“ (EPEL) verfügbar ist.
+
++
+Für Red Hat Enterprise Linux 9:
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+----
++
+Für Red Hat Enterprise Linux 8:
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+----
+. Installieren Sie das Podman-Compose-Paket 1.0.6.
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.0.6
+----
++
+
+NOTE: Verwenden des `dnf install` Der Befehl erfüllt die Anforderung zum Hinzufügen von „podman-compose“ zur Umgebungsvariablen PATH.  Der Installationsbefehl fügt podman-compose zu /usr/bin hinzu, das bereits im `secure_path` Option auf dem Host.
+
+. Wenn Sie Red Hat Enterprise Linux 8 verwenden, überprüfen Sie, ob Ihre Podman-Version NetAvark mit Aardvark DNS anstelle von CNI verwendet.
++
+.. Überprüfen Sie, ob Ihr Netzwerk-Backend auf CNI eingestellt ist, indem Sie den folgenden Befehl ausführen:
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+.. Wenn das Netzwerk-Backend auf `CNI` , müssen Sie es ändern in `netavark` .
+.. Installieren `netavark` Und `aardvark-dns` mit dem folgenden Befehl:
++
+[source, cli]
+----
+dnf install aardvark-dns netavark
+----
+.. Öffnen Sie die `/etc/containers/containers.conf` Datei und ändern Sie die Option network_backend, um „netavark“ anstelle von „cni“ zu verwenden.
+
+
++
+Wenn `/etc/containers/containers.conf` nicht vorhanden ist, nehmen Sie die Konfigurationsänderungen vor, um `/usr/share/containers/containers.conf` .
+
+. Starten Sie Podman neu.
++
+[source, cli]
+----
+systemctl restart podman
+----
+. Bestätigen Sie mit dem folgenden Befehl, dass networkBackend jetzt in „netavark“ geändert wurde:
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+
+
+--
+.Docker-Engine
+--
+Befolgen Sie die Dokumentation von Docker, um Docker Engine zu installieren.
+
+.Schritte
+. https://docs.docker.com/engine/install/["Installationsanweisungen von Docker anzeigen"^]
++
+Befolgen Sie die Schritte, um eine unterstützte Docker Engine-Version zu installieren.  Installieren Sie nicht die neueste Version, da diese von der Konsole nicht unterstützt wird.
+
+. Stellen Sie sicher, dass Docker aktiviert und ausgeführt wird.
++
+[source, cli]
+----
+sudo systemctl enable docker && sudo systemctl start docker
+----
+
+
+--
+====
+
+
+== Schritt 3: Einrichten des Netzwerks
+
+Stellen Sie sicher, dass der Netzwerkspeicherort, an dem Sie den Konsolenagenten installieren möchten, die folgenden Anforderungen unterstützt.  Wenn diese Anforderungen erfüllt sind, kann der Konsolenagent Ressourcen und Prozesse in Ihrer Hybrid-Cloud-Umgebung verwalten.
+
+Azure-Region:: Wenn Sie Cloud Volumes ONTAP verwenden, sollte der Konsolenagent in derselben Azure-Region wie die von ihm verwalteten Cloud Volumes ONTAP -Systeme oder in der https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure-Regionenpaar"^] für die Cloud Volumes ONTAP -Systeme.  Diese Anforderung stellt sicher, dass zwischen Cloud Volumes ONTAP und den zugehörigen Speicherkonten eine Azure Private Link-Verbindung verwendet wird.
++
+--
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["Erfahren Sie, wie Cloud Volumes ONTAP einen Azure Private Link verwendet"^]
+
+--
+
+
+Verbindungen zu Zielnetzwerken:: Der Konsolenagent erfordert eine Netzwerkverbindung zu dem Standort, an dem Sie Systeme erstellen und verwalten möchten.  Beispielsweise das Netzwerk, in dem Sie Cloud Volumes ONTAP -Systeme oder ein Speichersystem in Ihrer lokalen Umgebung erstellen möchten.
+
+
+Ausgehender Internetzugang:: Der Netzwerkstandort, an dem Sie den Konsolenagenten bereitstellen, muss über eine ausgehende Internetverbindung verfügen, um bestimmte Endpunkte zu kontaktieren.
+
+
+Von Computern kontaktierte Endpunkte bei Verwendung der webbasierten NetApp Konsole::
++
+--
+Computer, die über einen Webbrowser auf die Konsole zugreifen, müssen in der Lage sein, mehrere Endpunkte zu kontaktieren.  Sie müssen die Konsole verwenden, um den Konsolenagenten einzurichten und für die tägliche Verwendung der Konsole.
+
+link:reference-networking-saas-console.html["Vorbereiten des Netzwerks für die NetApp Konsole"] .
+
+--
+
+
+Vom Konsolenagenten kontaktierte Endpunkte:: Der Konsolenagent benötigt ausgehenden Internetzugang, um die folgenden Endpunkte zu kontaktieren und Ressourcen und Prozesse innerhalb Ihrer öffentlichen Cloud-Umgebung für den täglichen Betrieb zu verwalten.
++
+--
+Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+\https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
+ a| 
+Zum Verwalten von Ressourcen in öffentlichen Azure-Regionen.
+
+
+
+ a| 
+\https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
+ a| 
+Zum Verwalten von Ressourcen in Azure China-Regionen.
+
+
+
+ a| 
+\https://mysupport.netapp.com
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
+
+
+
+ a| 
+\https://signin.b2c.netapp.com
+ a| 
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Konsole neue NSS-Anmeldeinformationen hinzu.
+
+
+
+ a| 
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+ a| 
+Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole.
+
+
+
+ a| 
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+ a| 
+Um Bilder für Upgrades des Konsolenagenten zu erhalten.
+
+* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten.  Wenn Sielink:link:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl.  Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
++
+Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
+
+* Wenn Sie auf die aktuellen Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
+
+
+|===
+--
+
+
+Proxyserver:: NetApp unterstützt sowohl explizite als auch transparente Proxy-Konfigurationen.  Wenn Sie einen transparenten Proxy verwenden, müssen Sie nur das Zertifikat für den Proxyserver angeben.  Wenn Sie einen expliziten Proxy verwenden, benötigen Sie auch die IP-Adresse und die Anmeldeinformationen.
++
+--
+* IP-Adresse
+* Anmeldeinformationen
+* HTTPS-Zertifikat
+
+
+--
+
+
+Häfen:: Es gibt keinen eingehenden Datenverkehr zum Konsolenagenten, es sei denn, Sie initiieren ihn oder er wird als Proxy zum Senden von AutoSupport Nachrichten von Cloud Volumes ONTAP an den NetApp Support verwendet.
++
+--
+* HTTP (80) und HTTPS (443) ermöglichen den Zugriff auf die lokale Benutzeroberfläche, die Sie in seltenen Fällen verwenden werden.
+* SSH (22) wird nur benötigt, wenn Sie zur Fehlerbehebung eine Verbindung zum Host herstellen müssen.
+* Eingehende Verbindungen über Port 3128 sind erforderlich, wenn Sie Cloud Volumes ONTAP -Systeme in einem Subnetz bereitstellen, in dem keine ausgehende Internetverbindung verfügbar ist.
++
+Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden von AutoSupport Nachrichten haben, konfiguriert die Konsole diese Systeme automatisch für die Verwendung eines Proxyservers, der im Konsolenagenten enthalten ist.  Die einzige Voraussetzung besteht darin, sicherzustellen, dass die Sicherheitsgruppe des Konsolenagenten eingehende Verbindungen über Port 3128 zulässt.  Sie müssen diesen Port öffnen, nachdem Sie den Konsolenagenten bereitgestellt haben.
+
+
+
+--
+
+
+Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification-System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+
+
+
+
+== Schritt 4: Einrichten der Bereitstellungsberechtigungen für den Konsolen-Agenten
+
+Sie müssen dem Konsolen-Agenten Azure-Berechtigungen erteilen, indem Sie eine der folgenden Optionen verwenden:
+
+* Option 1: Weisen Sie der Azure-VM mithilfe einer systemseitig zugewiesenen verwalteten Identität eine benutzerdefinierte Rolle zu.
+* Option 2: Geben Sie dem Konsolen-Agenten die Anmeldeinformationen für einen Azure-Dienstprinzipal mit den erforderlichen Berechtigungen.
+
+
+Befolgen Sie die Schritte, um Berechtigungen für den Konsolenagenten vorzubereiten.
+
+[role="tabbed-block"]
+====
+.Erstellen einer benutzerdefinierten Rolle für die Bereitstellung des Konsolenagenten
+--
+Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle mithilfe des Azure-Portals, Azure PowerShell, Azure CLI oder REST-API erstellen können.  Die folgenden Schritte zeigen, wie Sie die Rolle mithilfe der Azure CLI erstellen.  Wenn Sie eine andere Methode bevorzugen, lesen Sie bitte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure-Dokumentation"^]
+
+.Schritte
+. Wenn Sie die Software manuell auf Ihrem eigenen Host installieren möchten, aktivieren Sie eine systemseitig zugewiesene verwaltete Identität auf der VM, damit Sie die erforderlichen Azure-Berechtigungen über eine benutzerdefinierte Rolle bereitstellen können.
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure-Dokumentation: Konfigurieren verwalteter Identitäten für Azure-Ressourcen auf einer VM mithilfe des Azure-Portals"^]
+
+. Kopieren Sie den Inhalt derlink:reference-permissions-azure.html["benutzerdefinierte Rollenberechtigungen für den Connector"] und speichern Sie sie in einer JSON-Datei.
+. Ändern Sie die JSON-Datei, indem Sie dem zuweisbaren Bereich Azure-Abonnement-IDs hinzufügen.
++
+Sie sollten die ID für jedes Azure-Abonnement hinzufügen, das Sie mit der NetApp Konsole verwenden möchten.
+
++
+*Beispiel*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+. Verwenden Sie die JSON-Datei, um eine benutzerdefinierte Rolle in Azure zu erstellen.
++
+Die folgenden Schritte beschreiben, wie Sie die Rolle mithilfe von Bash in Azure Cloud Shell erstellen.
+
++
+.. Start https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure Cloud Shell"^] und wählen Sie die Bash-Umgebung.
+.. Laden Sie die JSON-Datei hoch.
++
+image:screenshot_azure_shell_upload.png["Ein Screenshot der Azure Cloud Shell, in dem Sie die Option zum Hochladen einer Datei auswählen können."]
+
+.. Verwenden Sie die Azure CLI, um die benutzerdefinierte Rolle zu erstellen:
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
+
+
+
+
+--
+.Dienstprinzipal
+--
+Erstellen und richten Sie einen Dienstprinzipal in Microsoft Entra ID ein und rufen Sie die Azure-Anmeldeinformationen ab, die der Konsolenagent benötigt.
+
+.Erstellen Sie eine Microsoft Entra-Anwendung für die rollenbasierte Zugriffskontrolle
+. Stellen Sie sicher, dass Sie in Azure über die Berechtigung verfügen, eine Active Directory-Anwendung zu erstellen und die Anwendung einer Rolle zuzuweisen.
++
+Weitere Einzelheiten finden Sie unter https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure-Dokumentation: Erforderliche Berechtigungen"^]
+
+. Öffnen Sie im Azure-Portal den Dienst *Microsoft Entra ID*.
++
+image:screenshot_azure_ad.png["Zeigt den Active Directory-Dienst in Microsoft Azure."]
+
+. Wählen Sie im Menü *App-Registrierungen* aus.
+. Wählen Sie *Neuregistrierung*.
+. Geben Sie Details zur Anwendung an:
++
+** *Name*: Geben Sie einen Namen für die Anwendung ein.
+** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der NetApp Konsole).
+** *Umleitungs-URI*: Sie können dieses Feld leer lassen.
+
+
+. Wählen Sie *Registrieren*.
++
+Sie haben die AD-Anwendung und den Dienstprinzipal erstellt.
+
+
+
+.Zuweisen der Anwendung zu einer Rolle
+. Erstellen Sie eine benutzerdefinierte Rolle:
++
+Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle mithilfe des Azure-Portals, Azure PowerShell, Azure CLI oder REST-API erstellen können.  Die folgenden Schritte zeigen, wie Sie die Rolle mithilfe der Azure CLI erstellen.  Wenn Sie eine andere Methode bevorzugen, lesen Sie bitte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure-Dokumentation"^]
+
++
+.. Kopieren Sie den Inhalt derlink:reference-permissions-azure.html["benutzerdefinierte Rollenberechtigungen für den Konsolenagenten"] und speichern Sie sie in einer JSON-Datei.
+.. Ändern Sie die JSON-Datei, indem Sie dem zuweisbaren Bereich Azure-Abonnement-IDs hinzufügen.
++
+Sie sollten die ID für jedes Azure-Abonnement hinzufügen, aus dem Benutzer Cloud Volumes ONTAP -Systeme erstellen.
+
++
+*Beispiel*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+.. Verwenden Sie die JSON-Datei, um eine benutzerdefinierte Rolle in Azure zu erstellen.
++
+Die folgenden Schritte beschreiben, wie Sie die Rolle mithilfe von Bash in Azure Cloud Shell erstellen.
+
++
+*** Start https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure Cloud Shell"^] und wählen Sie die Bash-Umgebung.
+*** Laden Sie die JSON-Datei hoch.
++
+image:screenshot_azure_shell_upload.png["Ein Screenshot der Azure Cloud Shell, in dem Sie die Option zum Hochladen einer Datei auswählen können."]
+
+*** Verwenden Sie die Azure CLI, um die benutzerdefinierte Rolle zu erstellen:
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
++
+Sie sollten jetzt über eine benutzerdefinierte Rolle namens „Konsolenoperator“ verfügen, die Sie der virtuellen Maschine des Konsolenagenten zuweisen können.
+
+
+
+
+
+. Weisen Sie die Anwendung der Rolle zu:
++
+.. Öffnen Sie im Azure-Portal den Dienst *Abonnements*.
+.. Wählen Sie das Abonnement aus.
+.. Wählen Sie *Zugriffskontrolle (IAM) > Hinzufügen > Rollenzuweisung hinzufügen*.
+.. Wählen Sie auf der Registerkarte *Rolle* die Rolle *Konsolenbediener* aus und klicken Sie auf *Weiter*.
+.. Führen Sie auf der Registerkarte *Mitglieder* die folgenden Schritte aus:
++
+*** Behalten Sie die Auswahl von *Benutzer, Gruppe oder Dienstprinzipal* bei.
+*** Wählen Sie *Mitglieder auswählen*.
++
+image:screenshot-azure-service-principal-role.png["Ein Screenshot des Azure-Portals, der die Seite „Mitglieder“ beim Hinzufügen einer Rolle zu einer Anwendung zeigt."]
+
+*** Suchen Sie nach dem Namen der Anwendung.
++
+Hier ist ein Beispiel:
+
++
+image:screenshot_azure_service_principal_role.png["Ein Screenshot des Azure-Portals, der das Formular „Rollenzuweisung hinzufügen“ im Azure-Portal zeigt."]
+
+*** Wählen Sie die Anwendung aus und wählen Sie *Auswählen*.
+*** Wählen Sie *Weiter*.
+
+
+.. Wählen Sie *Überprüfen + zuweisen*.
++
+Der Dienstprinzipal verfügt jetzt über die erforderlichen Azure-Berechtigungen zum Bereitstellen des Konsolen-Agenten.
+
++
+Wenn Sie Cloud Volumes ONTAP aus mehreren Azure-Abonnements bereitstellen möchten, müssen Sie den Dienstprinzipal an jedes dieser Abonnements binden.  In der NetApp Konsole können Sie das Abonnement auswählen, das Sie beim Bereitstellen von Cloud Volumes ONTAP verwenden möchten.
+
+
+
+
+
+.Fügen Sie Berechtigungen für die Windows Azure Service Management-API hinzu
+. Wählen Sie im Dienst *Microsoft Entra ID* *App-Registrierungen* und wählen Sie die Anwendung aus.
+. Wählen Sie *API-Berechtigungen > Berechtigung hinzufügen*.
+. Wählen Sie unter *Microsoft-APIs* *Azure Service Management* aus.
++
+image:screenshot_azure_service_mgmt_apis.gif["Ein Screenshot des Azure-Portals, der die Berechtigungen der Azure Service Management-API zeigt."]
+
+. Wählen Sie *Auf Azure Service Management als Organisationsbenutzer zugreifen* und dann *Berechtigungen hinzufügen*.
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Ein Screenshot des Azure-Portals, der das Hinzufügen der Azure Service Management-APIs zeigt."]
+
+
+
+.Abrufen der Anwendungs-ID und Verzeichnis-ID für die Anwendung
+. Wählen Sie im Dienst *Microsoft Entra ID* *App-Registrierungen* und wählen Sie die Anwendung aus.
+. Kopieren Sie die *Anwendungs-ID (Client-ID)* und die *Verzeichnis-ID (Mandant-ID)*.
++
+image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für eine Anwendung in Microsoft Entra IDy zeigt."]
+
++
+Wenn Sie das Azure-Konto zur Konsole hinzufügen, müssen Sie die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für die Anwendung angeben.  Die Konsole verwendet die IDs zur programmgesteuerten Anmeldung.
+
+
+
+.Erstellen eines Client-Geheimnisses
+. Öffnen Sie den Dienst *Microsoft Entra ID*.
+. Wählen Sie *App-Registrierungen* und wählen Sie Ihre Anwendung aus.
+. Wählen Sie *Zertifikate und Geheimnisse > Neues Clientgeheimnis*.
+. Geben Sie eine Beschreibung des Geheimnisses und eine Dauer an.
+. Wählen Sie *Hinzufügen*.
+. Kopieren Sie den Wert des Client-Geheimnisses.
++
+image:screenshot_azure_client_secret.gif["Ein Screenshot des Azure-Portals, der ein Clientgeheimnis für den Microsoft Entra-Dienstprinzipal zeigt."]
+
+
+
+.Ergebnis
+Ihr Dienstprinzipal ist jetzt eingerichtet und Sie sollten die Anwendungs-ID (Client-ID), die Verzeichnis-ID (Mandant-ID) und den Wert des Client-Geheimnisses kopiert haben.  Sie müssen diese Informationen in der Konsole eingeben, wenn Sie ein Azure-Konto hinzufügen.
+
+--
+====
+
+
+== Schritt 5: Installieren des Konsolenagenten
+
+Nachdem die Voraussetzungen erfüllt sind, können Sie die Software manuell auf Ihrem eigenen Linux-Host installieren.
+
+.Bevor Sie beginnen
+Folgendes sollten Sie haben:
+
+* Root-Berechtigungen zum Installieren des Konsolenagenten.
+* Details zu einem Proxyserver, falls für den Internetzugriff vom Konsolenagenten ein Proxy erforderlich ist.
++
+Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfigurieren, hierzu ist jedoch ein Neustart des Konsolenagenten erforderlich.
+
+* Ein von einer Zertifizierungsstelle signiertes Zertifikat, wenn der Proxyserver HTTPS verwendet oder wenn es sich bei dem Proxy um einen abfangenden Proxy handelt.
+
+
+
+NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen.  Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-connector-maint-console.html["Agenten-Wartungskonsole"] .
+
+* Eine auf der VM in Azure aktivierte verwaltete Identität, sodass Sie die erforderlichen Azure-Berechtigungen über eine benutzerdefinierte Rolle bereitstellen können.
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure-Dokumentation: Konfigurieren verwalteter Identitäten für Azure-Ressourcen auf einer VM mithilfe des Azure-Portals"^]
+
+
+
+.Informationen zu diesem Vorgang
+Das auf der NetApp Support-Site verfügbare Installationsprogramm ist möglicherweise eine frühere Version.  Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.
+
+.Schritte
+. Wenn die Systemvariablen _http_proxy_ oder _https_proxy_ auf dem Host festgelegt sind, entfernen Sie sie:
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+Wenn Sie diese Systemvariablen nicht entfernen, schlägt die Installation fehl.
+
+. Laden Sie die Console-Agent-Software von der https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp Support Site"^] , und kopieren Sie es dann auf den Linux-Host.
++
+Sie sollten das „Online“-Agent-Installationsprogramm herunterladen, das für die Verwendung in Ihrem Netzwerk oder in der Cloud vorgesehen ist.
+
+. Weisen Sie Berechtigungen zum Ausführen des Skripts zu.
++
+[source, cli]
+----
+chmod +x NetApp_Console_Agent_Cloud_<version>
+----
++
+Dabei ist <Version> die Version des Konsolenagenten, die Sie heruntergeladen haben.
+
+. Deaktivieren Sie bei der Installation in einer Government Cloud-Umgebung die Konfigurationsprüfungen.link:task-troubleshoot-connector.html#disable-config-check["Erfahren Sie, wie Sie Konfigurationsprüfungen für manuelle Installationen deaktivieren."]
+. Führen Sie das Installationsskript aus.
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+Sie müssen Proxy-Informationen hinzufügen, wenn Ihr Netzwerk einen Proxy für den Internetzugang benötigt.  Sie können entweder einen transparenten oder einen expliziten Proxy hinzufügen.  Die Parameter --proxy und --cacert sind optional und Sie werden nicht aufgefordert, sie hinzuzufügen.  Wenn Sie einen Proxyserver haben, müssen Sie die Parameter wie gezeigt eingeben.
+
++
+Hier ist ein Beispiel für die Konfiguration eines expliziten Proxyservers mit einem von einer Zertifizierungsstelle signierten Zertifikat:
+
++
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy`konfiguriert den Konsolenagenten für die Verwendung eines HTTP- oder HTTPS-Proxyservers in einem der folgenden Formate:
+
++
+** \http://Adresse:Port
+** \http://Benutzername:Passwort@Adresse:Port
+** \http://Domänenname%92Benutzername:Passwort@Adresse:Port
+** \https://Adresse:Port
+** \https://Benutzername:Passwort@Adresse:Port
+** \https://Domänenname%92Benutzername:Passwort@Adresse:Port
++
+Beachten Sie Folgendes:
+
++
+*** Der Benutzer kann ein lokaler Benutzer oder ein Domänenbenutzer sein.
+*** Für einen Domänenbenutzer müssen Sie den ASCII-Code für ein \ verwenden, wie oben gezeigt.
+*** Der Konsolenagent unterstützt keine Benutzernamen oder Passwörter, die das @-Zeichen enthalten.
+*** Wenn das Kennwort eines der folgenden Sonderzeichen enthält, müssen Sie dieses Sonderzeichen durch Voranstellen eines Backslashs maskieren: & oder !
++
+Beispiel:
+
++
+\http://bxpproxyuser:netapp1\!@Adresse:3128
+
+
+
+
+
+
+
+`--cacert`Gibt ein von einer Zertifizierungsstelle signiertes Zertifikat an, das für den HTTPS-Zugriff zwischen dem Konsolenagenten und dem Proxyserver verwendet werden soll.  Dieser Parameter ist für HTTPS-Proxyserver, abfangende Proxyserver und transparente Proxyserver erforderlich.
+
++ Hier ist ein Beispiel für die Konfiguration eines transparenten Proxyservers.  Wenn Sie einen transparenten Proxy konfigurieren, müssen Sie den Proxyserver nicht definieren.  Sie fügen Ihrem Konsolen-Agent-Host lediglich ein von einer Zertifizierungsstelle signiertes Zertifikat hinzu:
+
++
+
+[source, cli]
+----
+ ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
+----
+. Wenn Sie Podman verwendet haben, müssen Sie den Aardvark-DNS-Port anpassen.
++
+.. Stellen Sie eine SSH-Verbindung zur virtuellen Maschine des Konsolenagenten her.
+.. Öffnen Sie die Datei podman_/usr/share/containers/containers.conf_ und ändern Sie den gewählten Port für den Aardvark-DNS-Dienst.  Ändern Sie ihn beispielsweise in 54.
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+...
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+...
+Esc:wq
+----
+.. Starten Sie die virtuelle Maschine des Konsolenagenten neu.
+
+
+. Warten Sie, bis die Installation abgeschlossen ist.
++
+Am Ende der Installation wird der Konsolenagentdienst (occm) zweimal neu gestartet, wenn Sie einen Proxyserver angegeben haben.
+
+
+
+
+NOTE: Wenn die Installation fehlschlägt, können Sie den Installationsbericht und die Protokolle anzeigen, die Ihnen bei der Behebung der Probleme helfen.link:task-troubleshoot-connector.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]
+
+. Öffnen Sie einen Webbrowser auf einem Host, der über eine Verbindung zur virtuellen Maschine des Konsolenagenten verfügt, und geben Sie die folgende URL ein:
++
+https://_ipaddress_[]
+
+. Richten Sie nach der Anmeldung den Konsolenagenten ein:
++
+.. Geben Sie die Organisation an, die mit dem Konsolenagenten verknüpft werden soll.
+.. Geben Sie einen Namen für das System ein.
+.. Lassen Sie unter *Arbeiten Sie in einer sicheren Umgebung?* den eingeschränkten Modus deaktiviert.
++
+Sie sollten den eingeschränkten Modus deaktiviert lassen, da diese Schritte die Verwendung der Konsole im Standardmodus beschreiben.  Sie sollten den eingeschränkten Modus nur aktivieren, wenn Sie über eine sichere Umgebung verfügen und dieses Konto von den Backend-Diensten trennen möchten.  Wenn das der Fall ist,link:task-quick-start-restricted-mode.html["Befolgen Sie die Schritte, um mit der NetApp Konsole im eingeschränkten Modus zu beginnen"] .
+
+.. Wählen Sie *Los geht's*.
+
+
+
+
+Wenn Sie Azure Blob Storage im selben Azure-Abonnement haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Azure Blob Storage-System angezeigt. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Erfahren Sie, wie Sie Azure Blob Storage über die NetApp -Konsole verwalten"^]
+
+
+
+== Schritt 6: Berechtigungen für die NetApp Konsole erteilen
+
+Nachdem Sie den Konsolen-Agent installiert haben, müssen Sie dem Konsolen-Agenten die Azure-Berechtigungen erteilen, die Sie zuvor eingerichtet haben.  Durch die Bereitstellung der Berechtigungen kann die Konsole Ihre Daten- und Speicherinfrastruktur in Azure verwalten.
+
+[role="tabbed-block"]
+====
+.Benutzerdefinierte Rolle
+--
+Gehen Sie zum Azure-Portal und weisen Sie der virtuellen Maschine des Konsolen-Agents für ein oder mehrere Abonnements die benutzerdefinierte Azure-Rolle zu.
+
+.Schritte
+. Öffnen Sie im Azure-Portal den Dienst *Abonnements* und wählen Sie Ihr Abonnement aus.
++
+Es ist wichtig, die Rolle vom Dienst *Abonnements* zuzuweisen, da dies den Umfang der Rollenzuweisung auf Abonnementebene angibt.  Der _Bereich_ definiert die Menge der Ressourcen, auf die der Zugriff angewendet wird.  Wenn Sie einen Bereich auf einer anderen Ebene angeben (z. B. auf der Ebene der virtuellen Maschine), wird Ihre Fähigkeit, Aktionen innerhalb der NetApp Konsole auszuführen, beeinträchtigt.
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure-Dokumentation: Umfang von Azure RBAC verstehen"^]
+
+. Wählen Sie *Zugriffskontrolle (IAM)* > *Hinzufügen* > *Rollenzuweisung hinzufügen*.
+. Wählen Sie auf der Registerkarte *Rolle* die Rolle *Konsolenbediener* aus und klicken Sie auf *Weiter*.
++
+
+NOTE: „Konsolenoperator“ ist der in der Richtlinie angegebene Standardname.  Wenn Sie einen anderen Namen für die Rolle gewählt haben, wählen Sie stattdessen diesen Namen aus.
+
+. Führen Sie auf der Registerkarte *Mitglieder* die folgenden Schritte aus:
++
+.. Weisen Sie einer *verwalteten Identität* Zugriff zu.
+.. Wählen Sie *Mitglieder auswählen*, wählen Sie das Abonnement aus, in dem die virtuelle Maschine des Konsolen-Agents erstellt wurde, wählen Sie unter *Verwaltete Identität* *Virtuelle Maschine* und wählen Sie dann die virtuelle Maschine des Konsolen-Agents aus.
+.. Wählen Sie *Auswählen*.
+.. Wählen Sie *Weiter*.
+.. Wählen Sie *Überprüfen + zuweisen*.
+.. Wenn Sie Ressourcen in zusätzlichen Azure-Abonnements verwalten möchten, wechseln Sie zu diesem Abonnement und wiederholen Sie diese Schritte.
+
+
+
+
+.Wie geht es weiter?
+Gehen Sie zum https://console.netapp.com["NetApp Konsole"^] um mit der Verwendung des Konsolenagenten zu beginnen.
+
+--
+.Dienstprinzipal
+--
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
++
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Microsoft Azure > Agent*.
+.. *Anmeldeinformationen definieren*: Geben Sie Informationen zum Microsoft Entra-Dienstprinzipal ein, der die erforderlichen Berechtigungen erteilt:
++
+*** Anwendungs-ID (Client-ID)
+*** Verzeichnis-ID (Mandant)
+*** Client-Geheimnis
+
+
+.. *Marketplace-Abonnement*: Verknüpfen Sie ein Marketplace-Abonnement mit diesen Anmeldeinformationen, indem Sie sich jetzt anmelden oder ein vorhandenes Abonnement auswählen.
+.. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
+
+
+
+
+.Ergebnis
+Der Konsolenagent verfügt jetzt über die erforderlichen Berechtigungen, um in Ihrem Namen Aktionen in Azure auszuführen.
+
+--
+====

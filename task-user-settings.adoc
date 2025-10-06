@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: task-user-settings.html 
+keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode 
+summary: Innerhalb der Konsole verfügt jeder Benutzer über ein Profil, das Informationen über den Benutzer und seine Einstellungen enthält. Sie können Ihre Profileinstellungen anzeigen und bearbeiten. 
+---
+= Verwalten Sie Ihre NetApp -Konsolenbenutzereinstellungen
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Ihr Konsolenprofil ändern, einschließlich der Änderung Ihres Kennworts, die Aktivierung der Multi-Faktor-Authentifizierung (MFA) und sehen, wer Ihr Konsolenadministrator ist.
+
+Innerhalb der Konsole verfügt jeder Benutzer über ein Profil, das Informationen über den Benutzer und seine Einstellungen enthält. Sie können Ihre Profileinstellungen anzeigen und bearbeiten.
+
+
+
+== Ändern Sie Ihren Anzeigenamen
+
+Sie können den Anzeigenamen Ihrer Konsole ändern, der zu Ihrer Identifizierung dient und für andere Benutzer sichtbar ist. Ihr Anzeigename ist nicht identisch mit Ihrem Benutzernamen oder Ihrer E-Mail-Adresse und kann nicht geändert werden.
+
+.Schritte
+. Wählen Sie das Profilsymbol in der oberen rechten Ecke der Konsole aus, um das Bedienfeld „Benutzereinstellungen“ anzuzeigen.
+. Wählen Sie das Symbol *Bearbeiten* neben Ihrem Namen.
+. Geben Sie Ihren neuen Anzeigenamen in das Feld *Name* ein.
+
+
+
+
+== Konfigurieren der mehrstufigen Authentifizierung
+
+Konfigurieren Sie die Multi-Faktor-Authentifizierung (MFA), um die Sicherheit durch die Anforderung einer zweiten Überprüfungsmethode zu verbessern.
+
+Benutzer, die Single Sign-On mit einem externen Identitätsanbieter oder der NetApp -Support-Site verwenden, können MFA nicht aktivieren.  Wenn einer dieser Punkte auf Sie zutrifft, wird die Option zum Aktivieren von MFA in Ihren Profileinstellungen nicht angezeigt.
+
+Aktivieren Sie MFA nicht, wenn Ihr Benutzerkonto für den API-Zugriff verwendet wird.  Die Multi-Faktor-Authentifizierung stoppt den API-Zugriff, wenn sie für ein Benutzerkonto aktiviert ist.  Verwenden Sie Dienstkonten für den gesamten API-Zugriff.
+
+.Bevor Sie beginnen
+* Sie müssen bereits eine Authentifizierungs-App wie Google Authenticator oder Microsoft Authenticator auf Ihr Gerät heruntergeladen haben.
+* Sie benötigen Ihr Passwort, um MFA einzurichten.
+
+
+
+NOTE: Wenn Sie keinen Zugriff auf Ihre Authentifizierungs-App haben oder Ihren Wiederherstellungscode verlieren, wenden Sie sich an Ihren Konsolenadministrator, um Hilfe zu erhalten.
+
+.Schritte
+. Wählen Sie das Profilsymbol in der oberen rechten Ecke der Konsole aus, um das Bedienfeld „Benutzereinstellungen“ anzuzeigen.
+. Wählen Sie neben der Überschrift *Multi-Faktor-Authentifizierung* *Konfigurieren* aus.
+. Folgen Sie den Anweisungen, um MFA für Ihr Konto einzurichten.
+. Wenn Sie fertig sind, werden Sie aufgefordert, Ihren Wiederherstellungscode zu speichern.  Wählen Sie, ob Sie den Code kopieren oder eine Textdatei mit dem Code herunterladen möchten.  Bewahren Sie diesen Code an einem sicheren Ort auf.  Sie benötigen den Wiederherstellungscode, wenn Sie den Zugriff auf Ihre Authentifizierungs-App verlieren.
++
+Nachdem Sie MFA eingerichtet haben, werden Sie von der Konsole bei jeder Anmeldung aufgefordert, einen Einmalcode aus Ihrer Authentifizierungs-App einzugeben.
+
+
+
+
+
+== MFA-Wiederherstellungscode neu generieren
+
+Sie können Wiederherstellungscodes nur einmal verwenden.  Wenn Sie Ihr Konto verwenden oder verlieren, erstellen Sie ein neues.
+
+.Schritte
+. Wählen Sie das Profilsymbol in der oberen rechten Ecke der Konsole aus, um das Bedienfeld „Benutzereinstellungen“ anzuzeigen.
+. Wählenimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] neben der Überschrift *Multi-Faktor-Authentifizierung*.
+. Wählen Sie *Wiederherstellungscode neu generieren*.
+. Kopieren Sie den generierten Wiederherstellungscode und speichern Sie ihn an einem sicheren Ort.
+
+
+
+
+== Löschen Sie Ihre MFA-Konfiguration
+
+Um die Verwendung der Multi-Faktor-Authentifizierung (MFA) für Ihre Anmeldung zu beenden, löschen Sie Ihre MFA-Konfiguration.  Dadurch entfällt die Notwendigkeit, beim Anmelden einen Einmalcode aus Ihrer Authentifizierungs-App einzugeben.
+
+
+NOTE: Wenn Sie nicht auf Ihre Authentifizierungs-App oder Ihren Wiederherstellungscode zugreifen können, müssen Sie sich an Ihren Organisationsadministrator wenden, um Ihre MFA-Konfiguration zurückzusetzen.
+
+.Schritte
+. Wählen Sie das Profilsymbol in der oberen rechten Ecke der Konsole aus, um das Bedienfeld „Benutzereinstellungen“ anzuzeigen.
+. Wählenimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] neben der Überschrift *Multi-Faktor-Authentifizierung*.
+. Wählen Sie *Löschen*.
+
+
+
+
+== Wenden Sie sich an den Administrator Ihrer Organisation
+
+Wenn Sie den Administrator Ihrer Organisation kontaktieren müssen, können Sie ihm direkt von der Konsole aus eine E-Mail senden.  Der Administrator verwaltet Benutzerkonten und Berechtigungen innerhalb Ihrer Organisation.
+
+
+NOTE: Um die Funktion *Administratoren kontaktieren* verwenden zu können, muss für Ihren Browser eine Standard-E-Mail-Anwendung konfiguriert sein.
+
+.Schritte
+. Wählen Sie das Profilsymbol in der oberen rechten Ecke der Konsole aus, um das Bedienfeld „Benutzereinstellungen“ anzuzeigen.
+. Wählen Sie *Administratoren kontaktieren* aus, um eine E-Mail an den Administrator Ihrer Organisation zu senden.
+. Wählen Sie die zu verwendende E-Mail-Anwendung aus.
+. Beenden Sie die E-Mail und wählen Sie *Senden*.
+
+
+
+
+== Dunkelmodus konfigurieren (dunkles Design)
+
+Sie können die Konsole so einstellen, dass sie im Dunkelmodus angezeigt wird.
+
+.Schritte
+. Wählen Sie das Profilsymbol in der oberen rechten Ecke der Konsole aus, um das Bedienfeld „Benutzereinstellungen“ anzuzeigen.
+. Bewegen Sie den Schieberegler *Dunkles Design*, um es zu aktivieren.
+

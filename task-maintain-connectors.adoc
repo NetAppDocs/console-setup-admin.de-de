@@ -1,0 +1,152 @@
+---
+sidebar: sidebar 
+permalink: task-maintain-connectors.html 
+keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health 
+summary: Die Wartung des Betriebssystems auf dem Agent-Host liegt in Ihrer Verantwortung.  Sie sollten beispielsweise Sicherheitsupdates auf das Betriebssystem auf dem Konsolenagent-Host anwenden, indem Sie die Standardverfahren Ihres Unternehmens zur Betriebssystemverteilung befolgen. 
+---
+= Warten der Konsolen-Agent-VM und des Betriebssystems
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Wartung des Betriebssystems auf dem Konsolenagent-Host liegt in Ihrer (der Verantwortung des Kunden).  Beispielsweise sollten Sie (der Kunde) Sicherheitsupdates auf das Betriebssystem auf dem Agent-Host anwenden, indem Sie die Standardverfahren Ihres Unternehmens zur Betriebssystemverteilung befolgen.
+
+
+TIP: Wenn Sie bereits einen Agenten haben, sollten Sie Folgendes beachten:link:reference-connector-operating-system-changes.html["Änderungen an unterstützten Linux-Betriebssystemen"] .
+
+
+
+== Betriebssystem-Patches und der Agent
+
+Wenden Sie Betriebssystem-Sicherheitspatches an, ohne die Agent-Hostdienste zu stoppen.
+
+
+
+== VM- oder Instanztyp
+
+Wenn Sie einen Konsolenagenten aus der Konsole erstellen, stellt dieser eine VM-Instanz mit einer Standardkonfiguration bei Ihrem Cloud-Anbieter bereit.  Wechseln Sie nach dem Erstellen des Agenten nicht zu einer kleineren VM-Instanz mit weniger CPU oder RAM.
+
+In der folgenden Tabelle sind die CPU- und RAM-Anforderungen aufgeführt:
+
+CPU:: 8 Kerne oder 8 vCPUs
+RAM:: 32 GB
+
+
+link:reference-connector-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Agenten"] .
+
+
+
+== Überwachen des Agenten
+
+Die Konsole benachrichtigt Sie, wenn die Agent-VM fehlerhaft ist, beispielsweise bei Problemen mit Speicherplatz, RAM und CPU.  Überwachen Sie diese Benachrichtigungen im Benachrichtigungscenter in der Konsole oder konfigurieren Sie E-Mail-Benachrichtigungen.  Gelegentliche Erhöhungen des Speicherplatzes, des Arbeitsspeichers oder der CPU-Auslastung sind normal. Wenn dies jedoch häufig vorkommt, sollten Sie Maßnahmen zur Behebung des Problems ergreifen.
+
+Beispielsweise benachrichtigt Sie die Konsole, wenn eine Agentenressource (CPU, RAM oder Festplattenspeicher) 30 Minuten lang hintereinander 90 % ihrer Gesamtkapazität überschreitet.  Wenn die Ressourcennutzung anschließend unter diesen Schwellenwert fällt, wird die Benachrichtigung im Benachrichtigungscenter als behoben (grün) angezeigt.
+
+
+NOTE: Wenden Sie sich an den NetApp -Support, wenn Sie Fragen zum Ändern Ihrer Agent-VM haben.
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#notification-center["Erfahren Sie mehr."^]
+
+[cols="47,47"]
+|===
+| Benachrichtigung | Handlungsbedarf 
+
+
+| Der Speicherplatz ist zu groß | link:https://kb.netapp.com/Cloud/BlueXP/Cloud_Manager/How_to_resolve_disk_space_issues_on_BlueXP_connector_VM["Lesen Sie den NetApp Knowledge Base-Artikel"^] . 
+
+
+| Die CPU-Auslastung ist zu hoch | Erhöhen Sie die CPU-Größe der Agent-VM bei Ihrem Cloud-Anbieter oder vor Ort, je nachdem, wo Sie sie installiert haben.  Alternativ können Sie zusätzliche Agenten erstellen und die Arbeitslast auf mehrere Agenten verteilen.  Die RAM-Auslastung kann je nach Umgebung, ONTAP Workloads, Anzahl der Cloud Volumes ONTAP Systeme und den von Ihnen verwendeten Datendiensten variieren. 
+
+
+| Die RAM-Auslastung ist zu hoch | Erhöhen Sie den RAM der Agent-VM bei Ihrem Cloud-Anbieter oder vor Ort, je nachdem, wo Sie sie installiert haben.  Alternativ können Sie zusätzliche Agenten erstellen und die Arbeitslast auf mehrere Agenten verteilen.  Die RAM-Auslastung kann je nach Umgebung, ONTAP Workloads, Anzahl der Cloud Volumes ONTAP Systeme und den von Ihnen verwendeten Datendiensten variieren. 
+|===
+
+
+== Stoppen und Starten der Agent-VM
+
+Stoppen und starten Sie die Agent-VM bei Bedarf über die Konsole Ihres Cloud-Anbieters oder über standardmäßige Verfahren vor Ort.
+
+link:concept-connectors.html#connectors-must-be-operational-at-all-times["Beachten Sie, dass der Konsolenagent jederzeit betriebsbereit sein muss"] .
+
+
+
+== Herstellen einer Verbindung mit der Linux-VM
+
+Wenn Sie eine Verbindung mit der Linux-VM herstellen müssen, auf der der Agent ausgeführt wird, verwenden Sie die Konnektivitätsoptionen Ihres Cloud-Anbieters.
+
+AWS:: Wenn Sie die Agenteninstanz in AWS erstellen, geben Sie einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel an.  Sie können dieses Schlüsselpaar verwenden, um per SSH auf die Instanz zuzugreifen.  Verwenden Sie den Benutzernamen „ubuntu“ für die EC2-Linux-Instanz.  Verwenden Sie für Agenten, die vor Mai 2023 erstellt wurden, den Benutzernamen „ec2-user“.
++
+--
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html["AWS Docs: Verbinden Sie sich mit Ihrer Linux-Instance"^]
+
+--
+Azurblau:: Wenn Sie die Agent-VM in Azure erstellen, geben Sie einen Benutzernamen an und wählen die Authentifizierung mit einem Kennwort oder einem öffentlichen SSH-Schlüssel.  Verwenden Sie die von Ihnen gewählte Authentifizierungsmethode, um eine Verbindung mit der VM herzustellen.
++
+--
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys#ssh-into-your-vm["Azure-Dokumente: SSH in Ihre VM"^]
+
+--
+Google Cloud:: Sie können keine Authentifizierungsmethode angeben, wenn Sie einen Agenten in Google Cloud erstellen.  Sie können jedoch über die Google Cloud Console oder die Google Cloud CLI (gcloud) eine Verbindung zur Linux-VM-Instanz herstellen.
++
+--
+https://cloud.google.com/compute/docs/instances/connecting-to-instance["Google Cloud Docs: Verbindung zu Linux-VMs herstellen"^]
+
+--
+
+
+
+
+== Ändern der IP-Adresse für einen Agenten
+
+Sie können die internen und öffentlichen IP-Adressen der von Ihrem Cloud-Anbieter zugewiesenen Agenteninstanz bei Bedarf ändern.
+
+.Schritte
+. Befolgen Sie die Anweisungen Ihres Cloud-Anbieters, um die lokale IP-Adresse oder die öffentliche IP-Adresse (oder beide) für die Agenteninstanz zu ändern.
+. Starten Sie die Agenteninstanz neu, um eine neue öffentliche IP-Adresse bei der Konsole zu registrieren.
+. Wenn Sie die private IP-Adresse geändert haben, aktualisieren Sie den Sicherungsspeicherort für die Konfigurationsdateien von Cloud Volumes ONTAP, sodass die Sicherungen an die neue private IP-Adresse auf dem Agenten gesendet werden.
++
+Aktualisieren Sie den Sicherungsspeicherort für jedes Cloud Volumes ONTAP -System.
+
++
+.. Legen Sie in der Cloud Volumes ONTAP CLI die Berechtigungsstufe auf „Erweitert“ fest:
++
+[source, cli]
+----
+set -privilege advanced
+----
+.. Führen Sie den folgenden Befehl aus, um das aktuelle Sicherungsziel anzuzeigen:
++
+[source, cli]
+----
+system configuration backup settings show
+----
+.. Führen Sie den folgenden Befehl aus, um die IP-Adresse für das Sicherungsziel zu aktualisieren:
++
+[source, cli]
+----
+system configuration backup settings modify -destination <target-location>
+----
+
+
+
+
+
+
+== Bearbeiten der URIs eines Agenten
+
+Sie können den Uniform Resource Identifier (URI) für einen Agenten hinzufügen und entfernen.
+
+.Schritte
+. Wählen Sie *Administration > Agenten*.
+. Wählen Sie auf der Seite *Übersicht* das Aktionsmenü für einen Konsolenagenten und wählen Sie *Agent bearbeiten*.
++
+Zum Bearbeiten muss der Konsolenagent aktiv sein.
+
+. Erweitern Sie die Leiste *Agent-URIs*, um Agent-URIs anzuzeigen.
+. Fügen Sie URIs hinzu und entfernen Sie sie, und wählen Sie dann *Übernehmen* aus.
+

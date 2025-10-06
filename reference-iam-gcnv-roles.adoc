@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-gcnv-roles.html 
+keywords: gcp, google cloud, Google Cloud NetApp Volumes, gcnv, permissions, access control, role-based access control, rbac, role-based access 
+summary: Die Identitäts- und Zugriffsverwaltung der NetApp Konsole bietet Administratorrollen, die Sie den Mitgliedern Ihrer Organisation zuweisen können, die Zugriff auf Google Cloud NetApp Volumes benötigen. 
+---
+= Google Cloud NetApp Volumes -Rollen in der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Benutzern die folgende Rolle zuweisen, um ihnen Zugriff auf die Google Cloud NetApp Volumes in der NetApp -Konsole zu gewähren.
+
+Google Cloud NetApp Volumes verwendet die folgende Rolle:
+
+* * Google Cloud NetApp Volumes Administrator*: Entdecken und verwalten Sie Google Cloud NetApp Volumes in der Konsole.
+

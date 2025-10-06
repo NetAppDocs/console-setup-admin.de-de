@@ -1,0 +1,389 @@
+---
+sidebar: sidebar 
+permalink: task-adding-azure-accounts.html 
+keywords: permissions, microsoft, azure, permissions, custom role, role, json, active directory, ad, service principal, key, tenant id, application key, application id, operator role, managed identity, iam, operator, role, virtual machine, create custom role, create azure custom role, azure custom role 
+summary: Fügen Sie Azure-Anmeldeinformationen hinzu und verwalten Sie diese, damit die NetApp Konsole über die erforderlichen Berechtigungen zum Bereitstellen und Verwalten von Cloud-Ressourcen in Ihren Azure-Abonnements verfügt.  Wenn Sie mehrere Azure Marketplace-Abonnements verwalten, können Sie jedem Abonnement auf der Seite „Anmeldeinformationen“ unterschiedliche Azure-Anmeldeinformationen zuweisen. 
+---
+= Verwalten Sie Azure-Anmeldeinformationen und Marketplace-Abonnements für die NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Fügen Sie Azure-Anmeldeinformationen hinzu und verwalten Sie diese, damit die NetApp Konsole über die erforderlichen Berechtigungen zum Bereitstellen und Verwalten von Cloud-Ressourcen in Ihren Azure-Abonnements verfügt.  Wenn Sie mehrere Azure Marketplace-Abonnements verwalten, können Sie jedem Abonnement auf der Seite „Anmeldeinformationen“ unterschiedliche Azure-Anmeldeinformationen zuweisen.
+
+
+
+== Überblick
+
+Es gibt zwei Möglichkeiten, zusätzliche Azure-Abonnements und Anmeldeinformationen in der Konsole hinzuzufügen.
+
+. Ordnen Sie der von Azure verwalteten Identität zusätzliche Azure-Abonnements zu.
+. Um Cloud Volumes ONTAP mit unterschiedlichen Azure-Anmeldeinformationen bereitzustellen, erteilen Sie Azure Berechtigungen mithilfe eines Dienstprinzipals und fügen Sie dessen Anmeldeinformationen der Konsole hinzu.
+
+
+
+
+== Zuordnen zusätzlicher Azure-Abonnements zu einer verwalteten Identität
+
+Über die Konsole können Sie die Azure-Anmeldeinformationen und das Azure-Abonnement auswählen, in dem Sie Cloud Volumes ONTAP bereitstellen möchten.  Sie können kein anderes Azure-Abonnement für das verwaltete Identitätsprofil auswählen, es sei denn, Sie verknüpfen das https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Verwaltete Identität"^] mit diesen Abonnements.
+
+.Informationen zu diesem Vorgang
+Eine verwaltete Identität istlink:concept-accounts-azure.html["das anfängliche Azure-Konto"] wenn Sie einen Konsolenagenten von der Konsole aus bereitstellen.  Wenn Sie den Konsolenagenten bereitstellen, weist die Konsole der virtuellen Maschine des Konsolenagenten die Rolle des Konsolenoperators zu.
+
+.Schritte
+. Melden Sie sich beim Azure-Portal an.
+. Öffnen Sie den Dienst *Abonnements* und wählen Sie dann das Abonnement aus, in dem Sie Cloud Volumes ONTAP bereitstellen möchten.
+. Wählen Sie *Zugriffskontrolle (IAM)*.
++
+.. Wählen Sie *Hinzufügen* > *Rollenzuweisung hinzufügen* und fügen Sie dann die Berechtigungen hinzu:
++
+*** Wählen Sie die Rolle *Konsolenoperator* aus.
++
+
+NOTE: „Konsolenoperator“ ist der Standardname, der in einer Konsolenagentrichtlinie angegeben wird.  Wenn Sie einen anderen Namen für die Rolle gewählt haben, wählen Sie stattdessen diesen Namen aus.
+
+*** Weisen Sie einer *virtuellen Maschine* Zugriff zu.
+*** Wählen Sie das Abonnement aus, in dem eine virtuelle Maschine des Konsolen-Agenten erstellt wurde.
+*** Wählen Sie eine virtuelle Maschine des Konsolenagenten aus.
+*** Wählen Sie *Speichern*.
+
+
+
+
+. Wiederholen Sie diese Schritte für weitere Abonnements.
+
+
+.Ergebnis
+Beim Erstellen eines neuen Systems können Sie jetzt aus mehreren Azure-Abonnements für das verwaltete Identitätsprofil auswählen.
+
+image:screenshot_accounts_switch_azure_subscription.gif["Ein Screenshot, der die Möglichkeit zeigt, bei der Auswahl eines Microsoft Azure-Anbieterkontos mehrere Azure-Abonnements auszuwählen."]
+
+
+
+== Fügen Sie der NetApp Konsole zusätzliche Azure-Anmeldeinformationen hinzu
+
+Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, aktiviert die Konsole eine vom System zugewiesene verwaltete Identität auf der virtuellen Maschine, die über die erforderlichen Berechtigungen verfügt.  Die Konsole wählt diese Azure-Anmeldeinformationen standardmäßig aus, wenn Sie ein neues System für Cloud Volumes ONTAP erstellen.
+
+
+TIP: Wenn Sie eine Konsolenagentensoftware manuell auf einem vorhandenen System installiert haben, wird kein anfänglicher Satz Anmeldeinformationen hinzugefügt. link:concept-accounts-azure.html["Erfahren Sie mehr über Azure-Anmeldeinformationen und -Berechtigungen"] .
+
+Wenn Sie Cloud Volumes ONTAP mit _verschiedenen_ Azure-Anmeldeinformationen bereitstellen möchten, müssen Sie die erforderlichen Berechtigungen erteilen, indem Sie für jedes Azure-Konto einen Dienstprinzipal in der Microsoft Entra-ID erstellen und einrichten.  Anschließend können Sie die neuen Anmeldeinformationen zur Konsole hinzufügen.
+
+
+
+=== Gewähren von Azure-Berechtigungen mithilfe eines Dienstprinzipals
+
+Die Konsole benötigt Berechtigungen, um Aktionen in Azure auszuführen.  Sie können einem Azure-Konto die erforderlichen Berechtigungen erteilen, indem Sie einen Dienstprinzipal in Microsoft Entra ID erstellen und einrichten und die Azure-Anmeldeinformationen abrufen, die die Konsole benötigt.
+
+.Informationen zu diesem Vorgang
+Das folgende Bild zeigt, wie die Konsole Berechtigungen zum Ausführen von Vorgängen in Azure erhält.  Ein Dienstprinzipalobjekt, das an ein oder mehrere Azure-Abonnements gebunden ist, stellt die Konsole in der Microsoft Entra ID dar und ist einer benutzerdefinierten Rolle zugewiesen, die die erforderlichen Berechtigungen gewährt.
+
+image:diagram_azure_authentication.png["Konzeptbild, das zeigt, wie die Konsole eine Authentifizierung und Autorisierung von der Microsoft Entra ID erhält, bevor sie einen API-Aufruf tätigen kann.  In Active Directory definiert die Konsolenrolle die Berechtigungen.  Es ist an ein oder mehrere Azure-Abonnements und ein Dienstprinzipalobjekt gebunden, das die Cloud Manager-Anwendung darstellt."]
+
+.Schritte
+. <<Erstellen einer Microsoft Entra-Anwendung>> .
+. <<Zuweisen der Anwendung zu einer Rolle>> .
+. <<Fügen Sie Berechtigungen für die Windows Azure Service Management-API hinzu>> .
+. <<Abrufen der Anwendungs-ID und der Verzeichnis-ID>> .
+. <<Erstellen eines Client-Geheimnisses>> .
+
+
+
+
+==== Erstellen einer Microsoft Entra-Anwendung
+
+Erstellen Sie eine Microsoft Entra-Anwendung und einen Dienstprinzipal, den die Konsole für die rollenbasierte Zugriffskontrolle verwenden kann.
+
+.Schritte
+. Stellen Sie sicher, dass Sie in Azure über die Berechtigung verfügen, eine Active Directory-Anwendung zu erstellen und die Anwendung einer Rolle zuzuweisen.
++
+Weitere Einzelheiten finden Sie unter https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure-Dokumentation: Erforderliche Berechtigungen"^]
+
+. Öffnen Sie im Azure-Portal den Dienst *Microsoft Entra ID*.
++
+image:screenshot_azure_ad.png["Zeigt den Active Directory-Dienst in Microsoft Azure."]
+
+. Wählen Sie im Menü *App-Registrierungen* aus.
+. Wählen Sie *Neuregistrierung*.
+. Geben Sie Details zur Anwendung an:
++
+** *Name*: Geben Sie einen Namen für die Anwendung ein.
+** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der NetApp Konsole).
+** *Umleitungs-URI*: Sie können dieses Feld leer lassen.
+
+
+. Wählen Sie *Registrieren*.
++
+Sie haben die AD-Anwendung und den Dienstprinzipal erstellt.
+
+
+
+
+
+==== Zuweisen der Anwendung zu einer Rolle
+
+Sie müssen den Dienstprinzipal an ein oder mehrere Azure-Abonnements binden und ihm die benutzerdefinierte Rolle „Konsolenoperator“ zuweisen, damit die Konsole über Berechtigungen in Azure verfügt.
+
+.Schritte
+. Erstellen Sie eine benutzerdefinierte Rolle:
++
+Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle mithilfe des Azure-Portals, Azure PowerShell, Azure CLI oder REST-API erstellen können.  Die folgenden Schritte zeigen, wie Sie die Rolle mithilfe der Azure CLI erstellen.  Wenn Sie eine andere Methode bevorzugen, lesen Sie bitte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure-Dokumentation"^]
+
++
+.. Kopieren Sie den Inhalt derlink:reference-permissions-azure.html["benutzerdefinierte Rollenberechtigungen für den Konsolenagenten"] und speichern Sie sie in einer JSON-Datei.
+.. Ändern Sie die JSON-Datei, indem Sie dem zuweisbaren Bereich Azure-Abonnement-IDs hinzufügen.
++
+Sie sollten die ID für jedes Azure-Abonnement hinzufügen, aus dem Benutzer Cloud Volumes ONTAP -Systeme erstellen.
+
++
+*Beispiel*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+.. Verwenden Sie die JSON-Datei, um eine benutzerdefinierte Rolle in Azure zu erstellen.
++
+Die folgenden Schritte beschreiben, wie Sie die Rolle mithilfe von Bash in Azure Cloud Shell erstellen.
+
++
+*** Start https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure Cloud Shell"^] und wählen Sie die Bash-Umgebung.
+*** Laden Sie die JSON-Datei hoch.
++
+image:screenshot_azure_shell_upload.png["Ein Screenshot der Azure Cloud Shell, in dem Sie die Option zum Hochladen einer Datei auswählen können."]
+
+*** Verwenden Sie die Azure CLI, um die benutzerdefinierte Rolle zu erstellen:
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
++
+Sie sollten jetzt über eine benutzerdefinierte Rolle namens „Konsolenoperator“ verfügen, die Sie der virtuellen Maschine des Konsolenagenten zuweisen können.
+
+
+
+
+
+. Weisen Sie die Anwendung der Rolle zu:
++
+.. Öffnen Sie im Azure-Portal den Dienst *Abonnements*.
+.. Wählen Sie das Abonnement aus.
+.. Wählen Sie *Zugriffskontrolle (IAM) > Hinzufügen > Rollenzuweisung hinzufügen*.
+.. Wählen Sie auf der Registerkarte *Rolle* die Rolle *Konsolenbediener* aus und klicken Sie auf *Weiter*.
+.. Führen Sie auf der Registerkarte *Mitglieder* die folgenden Schritte aus:
++
+*** Behalten Sie die Auswahl von *Benutzer, Gruppe oder Dienstprinzipal* bei.
+*** Wählen Sie *Mitglieder auswählen*.
++
+image:screenshot-azure-service-principal-role.png["Ein Screenshot des Azure-Portals, der die Seite „Mitglieder“ beim Hinzufügen einer Rolle zu einer Anwendung zeigt."]
+
+*** Suchen Sie nach dem Namen der Anwendung.
++
+Hier ist ein Beispiel:
+
++
+image:screenshot_azure_service_principal_role.png["Ein Screenshot des Azure-Portals, der das Formular „Rollenzuweisung hinzufügen“ im Azure-Portal zeigt."]
+
+*** Wählen Sie die Anwendung aus und wählen Sie *Auswählen*.
+*** Wählen Sie *Weiter*.
+
+
+.. Wählen Sie *Überprüfen + zuweisen*.
++
+Der Dienstprinzipal verfügt jetzt über die erforderlichen Azure-Berechtigungen zum Bereitstellen des Konsolen-Agenten.
+
++
+Wenn Sie Cloud Volumes ONTAP aus mehreren Azure-Abonnements bereitstellen möchten, müssen Sie den Dienstprinzipal an jedes dieser Abonnements binden.  In der NetApp Konsole können Sie das Abonnement auswählen, das Sie beim Bereitstellen von Cloud Volumes ONTAP verwenden möchten.
+
+
+
+
+
+
+
+==== Fügen Sie Berechtigungen für die Windows Azure Service Management-API hinzu
+
+Sie müssen dem Dienstprinzipal die Berechtigung „Windows Azure Service Management API“ zuweisen.
+
+.Schritte
+. Wählen Sie im Dienst *Microsoft Entra ID* *App-Registrierungen* und wählen Sie die Anwendung aus.
+. Wählen Sie *API-Berechtigungen > Berechtigung hinzufügen*.
+. Wählen Sie unter *Microsoft-APIs* *Azure Service Management* aus.
++
+image:screenshot_azure_service_mgmt_apis.gif["Ein Screenshot des Azure-Portals, der die Berechtigungen der Azure Service Management-API zeigt."]
+
+. Wählen Sie *Auf Azure Service Management als Organisationsbenutzer zugreifen* und dann *Berechtigungen hinzufügen*.
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Ein Screenshot des Azure-Portals, der das Hinzufügen der Azure Service Management-APIs zeigt."]
+
+
+
+
+
+==== Abrufen der Anwendungs-ID und der Verzeichnis-ID
+
+Wenn Sie das Azure-Konto zur Konsole hinzufügen, müssen Sie die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für die Anwendung angeben.  Die Konsole verwendet die IDs zur programmgesteuerten Anmeldung.
+
+.Schritte
+. Wählen Sie im Dienst *Microsoft Entra ID* *App-Registrierungen* und wählen Sie die Anwendung aus.
+. Kopieren Sie die *Anwendungs-ID (Client-ID)* und die *Verzeichnis-ID (Mandant-ID)*.
++
+image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für eine Anwendung in Microsoft Entra IDy zeigt."]
+
++
+Wenn Sie das Azure-Konto zur Konsole hinzufügen, müssen Sie die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für die Anwendung angeben.  Die Konsole verwendet die IDs zur programmgesteuerten Anmeldung.
+
+
+
+
+
+==== Erstellen eines Client-Geheimnisses
+
+Erstellen Sie ein Client-Geheimnis und geben Sie dessen Wert an die Konsole zur Authentifizierung mit der Microsoft Entra-ID weiter.
+
+.Schritte
+. Öffnen Sie den Dienst *Microsoft Entra ID*.
+. Wählen Sie *App-Registrierungen* und wählen Sie Ihre Anwendung aus.
+. Wählen Sie *Zertifikate und Geheimnisse > Neues Clientgeheimnis*.
+. Geben Sie eine Beschreibung des Geheimnisses und eine Dauer an.
+. Wählen Sie *Hinzufügen*.
+. Kopieren Sie den Wert des Client-Geheimnisses.
++
+image:screenshot_azure_client_secret.gif["Ein Screenshot des Azure-Portals, der ein Clientgeheimnis für den Microsoft Entra-Dienstprinzipal zeigt."]
+
+
+
+.Ergebnis
+Ihr Dienstprinzipal ist jetzt eingerichtet und Sie sollten die Anwendungs-ID (Client-ID), die Verzeichnis-ID (Mandant-ID) und den Wert des Client-Geheimnisses kopiert haben.  Sie müssen diese Informationen in der Konsole eingeben, wenn Sie ein Azure-Konto hinzufügen.
+
+
+
+=== Fügen Sie die Anmeldeinformationen zur Konsole hinzu
+
+Nachdem Sie ein Azure-Konto mit den erforderlichen Berechtigungen bereitgestellt haben, können Sie die Anmeldeinformationen für dieses Konto zur Konsole hinzufügen.  Wenn Sie diesen Schritt abschließen, können Sie Cloud Volumes ONTAP mit anderen Azure-Anmeldeinformationen starten.
+
+.Bevor Sie beginnen
+Wenn Sie diese Anmeldeinformationen gerade bei Ihrem Cloud-Anbieter erstellt haben, kann es einige Minuten dauern, bis sie zur Verwendung verfügbar sind.  Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen zur Konsole hinzufügen.
+
+.Bevor Sie beginnen
+Sie müssen einen Konsolenagenten erstellen, bevor Sie die Konsoleneinstellungen ändern können. link:concept-connectors.html#connector-installation["Erfahren Sie, wie Sie einen Konsolenagenten erstellen"] .
+
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
++
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Microsoft Azure > Agent*.
+.. *Anmeldeinformationen definieren*: Geben Sie Informationen zum Microsoft Entra-Dienstprinzipal ein, der die erforderlichen Berechtigungen erteilt:
++
+*** Anwendungs-ID (Client-ID)
+*** Verzeichnis-ID (Mandant)
+*** Client-Geheimnis
+
+
+.. *Marketplace-Abonnement*: Verknüpfen Sie ein Marketplace-Abonnement mit diesen Anmeldeinformationen, indem Sie sich jetzt anmelden oder ein vorhandenes Abonnement auswählen.
+.. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
+
+
+
+
+.Ergebnis
+Sie können auf der Seite „Details und Anmeldeinformationen“ zu einem anderen Satz von Anmeldeinformationen wechseln. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["beim Hinzufügen eines Systems zur Konsole"^]
+
+image:screenshot_accounts_switch_azure.gif["Ein Screenshot, der die Auswahl zwischen Anmeldeinformationen zeigt, nachdem Sie auf der Seite „Details und Anmeldeinformationen“ die Option „Anmeldeinformationen bearbeiten“ ausgewählt haben."]
+
+
+
+== Vorhandene Anmeldeinformationen verwalten
+
+Verwalten Sie die Azure-Anmeldeinformationen, die Sie der Konsole bereits hinzugefügt haben, indem Sie ein Marketplace-Abonnement zuordnen, Anmeldeinformationen bearbeiten und löschen.
+
+
+
+=== Zuordnen eines Azure Marketplace-Abonnements zu Anmeldeinformationen
+
+Nachdem Sie Ihre Azure-Anmeldeinformationen zur Konsole hinzugefügt haben, können Sie diesen Anmeldeinformationen ein Azure Marketplace-Abonnement zuordnen.  Mit dem Abonnement können Sie ein nutzungsbasiertes Cloud Volumes ONTAP System erstellen und auf NetApp -Datendienste zugreifen.
+
+Es gibt zwei Szenarien, in denen Sie ein Azure Marketplace-Abonnement zuordnen können, nachdem Sie die Anmeldeinformationen bereits zur Konsole hinzugefügt haben:
+
+* Sie haben beim ersten Hinzufügen der Anmeldeinformationen zur Konsole kein Abonnement zugeordnet.
+* Sie möchten das Azure Marketplace-Abonnement ändern, das mit Azure-Anmeldeinformationen verknüpft ist.
++
+Durch das Ersetzen des aktuellen Marktplatzabonnements wird es für vorhandene und neue Cloud Volumes ONTAP Systeme aktualisiert.
+
+
+
+.Schritte
+. Wählen Sie *Administration > *Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen der Organisation* aus.
+. Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
++
+Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Konsole verknüpft sind.
+
+. Um die Anmeldeinformationen mit einem vorhandenen Abonnement zu verknüpfen, wählen Sie das Abonnement aus der Dropdown-Liste aus und wählen Sie *Konfigurieren*.
+. Um die Anmeldeinformationen einem neuen Abonnement zuzuordnen, wählen Sie *Abonnement hinzufügen > Fortfahren* und befolgen Sie die Schritte im Azure Marketplace:
++
+.. Melden Sie sich bei entsprechender Aufforderung bei Ihrem Azure-Konto an.
+.. Wählen Sie *Abonnieren*.
+.. Füllen Sie das Formular aus und wählen Sie *Abonnieren*.
+.. Nachdem der Abonnementvorgang abgeschlossen ist, wählen Sie *Konto jetzt konfigurieren*.
++
+Sie werden zur NetApp Konsole weitergeleitet.
+
+.. Auf der Seite *Abonnementzuweisung*:
++
+*** Wählen Sie die Konsolenorganisationen oder -konten aus, mit denen Sie dieses Abonnement verknüpfen möchten.
+*** Wählen Sie im Feld *Vorhandenes Abonnement ersetzen* aus, ob Sie das vorhandene Abonnement für eine Organisation oder ein Konto automatisch durch dieses neue Abonnement ersetzen möchten.
++
+Die Konsole ersetzt das vorhandene Abonnement für alle Anmeldeinformationen in der Organisation oder im Konto durch dieses neue Abonnement.  Wenn ein Satz von Anmeldeinformationen nie mit einem Abonnement verknüpft war, wird dieses neue Abonnement nicht mit diesen Anmeldeinformationen verknüpft.
+
++
+Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell zuordnen, indem Sie diese Schritte wiederholen.
+
+*** Wählen Sie *Speichern*.
++
+Das folgende Video zeigt die Schritte zum Abonnieren über den Azure Marketplace:
+
++
+.Abonnieren Sie NetApp Intelligent Services vom Azure Marketplace
+video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
+
+
+
+
+
+
+
+
+=== Anmeldeinformationen bearbeiten
+
+Bearbeiten Sie Ihre Azure-Anmeldeinformationen in der Konsole.  Sie können beispielsweise das Clientgeheimnis aktualisieren, wenn ein neues Geheimnis für die Dienstprinzipalanwendung erstellt wurde.
+
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen der Organisation* aus.
+. Wählen Sie das Aktionsmenü für einen Satz Anmeldeinformationen und wählen Sie dann *Anmeldeinformationen bearbeiten*.
+. Nehmen Sie die erforderlichen Änderungen vor und wählen Sie dann *Übernehmen*.
+
+
+
+
+=== Anmeldeinformationen löschen
+
+Wenn Sie einen Satz Anmeldeinformationen nicht mehr benötigen, können Sie ihn löschen.  Sie können nur Anmeldeinformationen löschen, die keinem System zugeordnet sind.
+
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen der Organisation* aus.
+. Wählen Sie auf der Seite *Anmeldeinformationen der Organisation* das Aktionsmenü für einen Satz von Anmeldeinformationen aus und wählen Sie dann *Anmeldeinformationen löschen*.
+. Wählen Sie zur Bestätigung *Löschen*.
+

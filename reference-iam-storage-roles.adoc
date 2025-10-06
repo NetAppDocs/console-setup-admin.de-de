@@ -1,0 +1,282 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-storage-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf die Speicherverwaltungsfunktionen in der NetApp Konsole zu gewähren.  Sie können Benutzern eine Administratorrolle zum Verwalten des Speichers oder eine Viewer-Rolle zum Überwachen zuweisen. 
+---
+= Speicherzugriffsrollen für die NetApp -Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf die Speicherverwaltungsfunktionen in der NetApp Konsole zu gewähren.  Sie können Benutzern eine Administratorrolle zum Verwalten des Speichers oder eine Viewer-Rolle zum Überwachen zuweisen.
+
+
+NOTE: Diese Rollen sind über die NetApp Console-Partnerschafts-API nicht verfügbar.
+
+Administratoren können Benutzern Speicherrollen für die folgenden Speicherressourcen und -funktionen zuweisen:
+
+Speicherressourcen:
+
+* On-Premises- ONTAP -Cluster
+* StorageGRID
+* E-Series
+
+
+Konsolendienste und -funktionen:
+
+* Digitaler Berater
+* Software-Updates
+* Lebenszyklusplanung
+* Nachhaltigkeit
+
+
+.Beispiel für Speicherrollen in der NetApp -Konsole
+XYZ Corporation, ein multinationales Unternehmen, verfügt über ein großes Team von Speicheringenieuren und Speicheradministratoren.  Sie ermöglichen diesem Team die Verwaltung von Speicherressourcen für ihre Regionen und beschränken gleichzeitig den Zugriff auf zentrale Konsolenaufgaben wie Benutzerverwaltung, Agentenerstellung und Lizenzverwaltung.
+
+Innerhalb eines 12-köpfigen Teams erhalten zwei Benutzer die Rolle „Speicherbetrachter“, die es ihnen ermöglicht, die Speicherressourcen zu überwachen, die mit den ihnen zugewiesenen Konsolenprojekten verknüpft sind.  Den restlichen neun wird die Rolle „Storage-Admin“ zugewiesen, die die Möglichkeit umfasst, Software-Updates zu verwalten, über die Konsole auf ONTAP System Manager zuzugreifen und Speicherressourcen zu ermitteln (Systeme hinzuzufügen).  Einer Person im Team wird die Rolle „Systemintegritätsspezialist“ zugewiesen, damit sie die Integrität der Speicherressourcen in ihrer Region verwalten, aber keine Systeme ändern oder löschen kann.  Diese Person kann auch Software-Updates auf den Speicherressourcen für die ihr zugewiesenen Projekte durchführen.
+
+Die Organisation verfügt über zwei weitere Benutzer mit der Rolle *Organisationsadministrator*, die alle Aspekte der Konsole verwalten können, einschließlich Benutzerverwaltung, Agentenerstellung und Lizenzverwaltung, sowie mehrere Benutzer mit der Rolle *Ordner- oder Projektadministrator*, die Konsolenverwaltungsaufgaben für die ihnen zugewiesenen Ordner und Projekte ausführen können.
+
+Die folgende Tabelle zeigt die Aktionen, die jede Speicherrolle ausführt.
+
+[cols="40,20a,20a,20a"]
+|===
+| Funktion und Aktion | Speicheradministrator | Systemintegritätsspezialist | Speicheranzeige 
+
+
+4+| *Speicherverwaltung*: 
+
+
+| Neue Ressourcen entdecken (Systeme erstellen)  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+| Erkannte Systeme anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+| Systeme aus der Konsole löschen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Systeme ändern  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| *Agenten erstellen*  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+4+| *Digitaler Berater* 
+
+
+| Alle Seiten und Funktionen anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+4+| *Lizenzen und Abonnements* 
+
+
+| Alle Seiten und Funktionen anzeigen  a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+4+| *Software-Updates* 
+
+
+| Zielseite und Empfehlungen anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Überprüfen Sie mögliche Versionsempfehlungen und Hauptvorteile  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Anzeigen von Updatedetails für einen Cluster  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Führen Sie vor dem Update Prüfungen durch und laden Sie den Upgrade-Plan herunter  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Installieren Sie Softwareupdates  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+4+| *Lebenszyklusplanung* 
+
+
+| Überprüfen des Kapazitätsplanungsstatus  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Nächste Aktion auswählen (Best Practice, Stufe)  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Verteilen Sie kalte Daten in den Cloud-Speicher und geben Sie Speicherplatz frei  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+| Erinnerungen einrichten  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+4+| *Nachhaltigkeit* 
+
+
+| Dashboard und Empfehlungen anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Berichtsdaten herunterladen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
+| Prozentsatz der CO2-Minderung bearbeiten  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+| Empfehlungen zur Fehlerbehebung  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+| Empfehlungen aufschieben  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+4+| *Systemmanager-Zugriff* 
+
+
+| Darf Anmeldeinformationen eingeben  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+
+
+4+| *Referenzen* 
+
+
+| Benutzeranmeldeinformationen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+
+|===

@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: task-console-assistant.html 
+keywords: bluexp,netapp console,console assistant,assistant,setup assistant,get started,quick start,first time user,first time setup,setup wizard 
+summary: 'Wenn Sie die NetApp Konsole zum ersten Mal verwenden, führt Sie der Konsolenassistent durch den ersten Einrichtungsprozess.  Der Assistent unterstützt Sie beim Hinzufügen eines NetApp Support Site (NSS)-Kontos, eines Konsolenagenten, eines Clusters und einer Lizenz oder eines Abonnements und erleichtert Ihnen so den Einstieg in die Verwaltung Ihrer Daten.' 
+---
+= Erste Schritte mit dem NetApp Console Assistant
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie die NetApp -Konsole zum ersten Mal mit der Rolle „Organisationsadministrator“ verwenden, können Sie den Konsolenassistenten verwenden, der Sie durch den anfänglichen Einrichtungsprozess führt.  Der Assistent unterstützt Sie beim Hinzufügen eines NetApp Support Site (NSS)-Kontos, eines Konsolenagenten, eines Clusters und einer Lizenz oder eines Abonnements und erleichtert Ihnen so den Einstieg in die Verwaltung Ihrer Daten.
+
+
+
+== Erforderliche Rollen für den Zugriff auf den Konsolenassistenten
+
+Der Konsolenassistent ist nur für Benutzer mit der Rolle „Organisationsadministrator“ verfügbar.
+
+
+
+== Wann erscheint der Konsolenassistent?
+
+Der Konsolenassistent ist auf der Startseite der NetApp Konsole verfügbar, bis die obligatorischen Einrichtungsaufgaben abgeschlossen sind.
+
+Verwenden Sie den Assistenten, um diese Aufgaben zu erledigen, von denen einige obligatorisch sind:
+
+* Fügen Sie ein NetApp Support Site (NSS)-Konto hinzu.
+* Stellen Sie eine Verbindung zu Ihrem Speicherbestand her, indem Sie einen Konsolenagenten bereitstellen (obligatorischer Schritt).
+* Verwalten Sie Ihr System, indem Sie einen Cluster hinzufügen oder erkennen (obligatorischer Schritt).
+* Fügen Sie ein Marktplatzabonnement oder eine PAYGO-Lizenz hinzu.
+* Links zu offenen Datendiensten.
+
+
+
+
+== Aktivieren des Konsolenassistenten
+
+Standardmäßig zeigt die NetApp Konsole den Konsolenassistenten auf der Startseite für Erstbenutzer mit der Rolle „Organisationsadministrator“ an.
+
+
+TIP: Sie können den Assistenten erst dann selbst entlassen, wenn Sie oder jemand anderes die erforderlichen Aufgaben erledigt hat.  Nachdem Sie die obligatorischen Elemente abgeschlossen haben, wird der Assistent für alle Benutzer in Ihrer Organisation geschlossen und nicht erneut angezeigt.
+
+
+
+== Verwenden Sie den Konsolenassistenten, um loszulegen
+
+Der Konsolenassistent führt Sie mit den folgenden Aufgaben durch die Einrichtung Ihrer NetApp Konsolenumgebung:
+
+* Fügen Sie ein NetApp Support Site (NSS)-Konto hinzu.
+* Stellen Sie eine Verbindung zu Ihrem Speicherbestand her, indem Sie einen Konsolenagenten bereitstellen, entweder vor Ort oder in der Cloud.  Sie können es manuell oder durch Herunterladen einer OVA bereitstellen.  Dieser Schritt ist obligatorisch.
+* Verwalten Sie Ihr System, indem Sie einen Cluster hinzufügen oder erkennen.  Dieser Schritt ist obligatorisch.
+* Fügen Sie ein Marktplatzabonnement oder eine PAYGO-Lizenz hinzu.
+* Erfahren Sie mehr über NetApp Datenservices.
+

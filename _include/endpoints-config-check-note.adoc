@@ -1,0 +1,11 @@
+= 
+:allow-uri-read: 
+
+
+[IMPORTANT]
+====
+* Bei der Bereitstellung neuer Agenten prüft NetApp die folgenden Endpunkte:link:reference-networking-saas-console.html["hier aufgeführt"^] .  Diese Konfigurationsprüfung schlägt mit einem Fehler fehl, wenn Sie die vorherigen Endpunkte verwenden, die für Upgrades verwendet wurden.link:reference-networking-saas-console-previous.html["hier aufgeführt"] .  NetApp empfiehlt, Ihre Firewall-Regeln so schnell wie möglich zu aktualisieren, um den Zugriff auf die aktuellen Endpunkte zu ermöglichen und den Zugriff auf die vorherigen Endpunkte zu blockieren.link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihr Netzwerk aktualisieren"] .
+* Wenn Sie die Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
+
+
+====

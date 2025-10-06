@@ -1,0 +1,402 @@
+---
+sidebar: sidebar 
+permalink: task-adding-aws-accounts.html 
+keywords: permissions, aws, policy, iam, iam role, role, granting, policy, iam policy, iam user, access keys, arn, cloud provider accounts, aws, cloud provider profile, json, iam, credentials, adding credentials, add credentials, bluexp 
+summary: Fügen Sie AWS-Anmeldeinformationen hinzu und verwalten Sie diese, damit die NetApp Konsole über die erforderlichen Berechtigungen zum Bereitstellen und Verwalten von Cloud-Ressourcen in Ihren AWS-Konten verfügt.  Wenn Sie mehrere AWS-Abonnements verwalten, können Sie jedem von ihnen auf der Seite „Anmeldeinformationen“ unterschiedliche AWS-Anmeldeinformationen zuweisen. 
+---
+= Verwalten Sie AWS-Anmeldeinformationen und Marktplatz-Abonnements für die NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Fügen Sie AWS-Anmeldeinformationen hinzu und verwalten Sie diese, damit Sie Cloud-Ressourcen in Ihren AWS-Konten über die NetApp Konsole bereitstellen und verwalten können.  Wenn Sie mehrere AWS Marketplace-Abonnements verwalten, können Sie jedem Abonnement auf der Seite „Anmeldeinformationen“ unterschiedliche AWS-Anmeldeinformationen zuweisen.
+
+
+
+== Überblick
+
+Sie können AWS-Anmeldeinformationen zu einem vorhandenen Konsolenagenten oder direkt zur Konsole hinzufügen:
+
+* Fügen Sie einem vorhandenen Agenten zusätzliche AWS-Anmeldeinformationen hinzu
++
+Fügen Sie einem Konsolenagenten AWS-Anmeldeinformationen hinzu, um Cloud-Ressourcen zu verwalten. <<add-aws-credentials-agent-creation,Erfahren Sie, wie Sie einem Konsolenagenten AWS-Anmeldeinformationen hinzufügen>> .
+
+* Fügen Sie der Konsole AWS-Anmeldeinformationen hinzu, um einen Konsolenagenten zu erstellen
++
+Durch das Hinzufügen neuer AWS-Anmeldeinformationen zur Konsole erhalten Sie die erforderlichen Berechtigungen zum Erstellen eines Konsolenagenten. <<add-aws-credentials-agent-creation,Erfahren Sie, wie Sie AWS-Anmeldeinformationen zur NetApp Konsole hinzufügen>> .
+
+* AWS-Anmeldeinformationen zur Konsole für FSx for ONTAP hinzufügen
++
+Fügen Sie der Konsole neue AWS-Anmeldeinformationen hinzu, um FSx für ONTAP zu erstellen und zu verwalten. https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Erfahren Sie, wie Sie Berechtigungen für FSx für ONTAP einrichten"^]
+
+
+
+
+
+== So rotieren Sie Anmeldeinformationen
+
+Mit der NetApp Konsole können Sie AWS-Anmeldeinformationen auf verschiedene Weise bereitstellen: über eine mit der Agenteninstanz verknüpfte IAM-Rolle, durch die Übernahme einer IAM-Rolle in einem vertrauenswürdigen Konto oder durch die Bereitstellung von AWS-Zugriffsschlüsseln. link:concept-accounts-aws.html["Erfahren Sie mehr über AWS-Anmeldeinformationen und -Berechtigungen"] .
+
+Bei den ersten beiden Optionen verwendet die Konsole den AWS Security Token Service, um temporäre Anmeldeinformationen zu erhalten, die ständig rotieren.  Dieser Vorgang ist die beste Vorgehensweise, da er automatisch und sicher ist.
+
+Rotieren Sie AWS-Zugriffsschlüssel manuell, indem Sie sie in der Konsole aktualisieren.
+
+
+
+== Hinzufügen zusätzlicher Anmeldeinformationen zu einem Konsolenagenten
+
+Fügen Sie einem Konsolenagenten zusätzliche AWS-Anmeldeinformationen hinzu, damit er über die erforderlichen Berechtigungen zum Verwalten von Ressourcen und Prozessen in Ihrer öffentlichen Cloud-Umgebung verfügt.  Sie können entweder die ARN einer IAM-Rolle in einem anderen Konto angeben oder AWS-Zugriffsschlüssel bereitstellen.
+
+Wenn Sie gerade erst mit der Konsole beginnen,link:concept-accounts-aws.html["Erfahren Sie, wie die NetApp Konsole AWS-Anmeldeinformationen und -Berechtigungen verwendet"] .
+
+
+
+=== Berechtigungen erteilen
+
+Erteilen Sie Berechtigungen, bevor Sie einem Konsolenagenten AWS-Anmeldeinformationen hinzufügen.  Die Berechtigungen ermöglichen einem Konsolenagenten, Ressourcen und Prozesse innerhalb dieses AWS-Kontos zu verwalten.  Sie können die Berechtigungen mit der ARN einer Rolle in einem vertrauenswürdigen Konto oder mit AWS-Schlüsseln bereitstellen.
+
+
+NOTE: Wenn Sie einen Konsolenagenten über die Konsole bereitgestellt haben, wurden automatisch AWS-Anmeldeinformationen für das Konto hinzugefügt, in dem Sie einen Konsolenagenten bereitgestellt haben.  Dadurch wird sichergestellt, dass die erforderlichen Berechtigungen zum Verwalten von Ressourcen vorhanden sind. link:concept-accounts-aws.html["Erfahren Sie mehr über AWS-Anmeldeinformationen und -Berechtigungen"] .
+
+*Auswahl*
+
+* <<Erteilen Sie Berechtigungen, indem Sie eine IAM-Rolle in einem anderen Konto übernehmen>>
+* <<Erteilen Sie Berechtigungen durch die Bereitstellung von AWS-Schlüsseln>>
+
+
+
+
+==== Erteilen Sie Berechtigungen, indem Sie eine IAM-Rolle in einem anderen Konto übernehmen
+
+Sie können mithilfe von IAM-Rollen eine Vertrauensbeziehung zwischen dem AWS-Quellkonto, in dem Sie eine Konsolen-Agent-Instanz bereitgestellt haben, und anderen AWS-Konten einrichten.  Anschließend stellen Sie der Konsole die ARN der IAM-Rollen der vertrauenswürdigen Konten zur Verfügung.
+
+Wenn ein Konsolenagent vor Ort installiert ist, können Sie diese Authentifizierungsmethode nicht verwenden.  Sie müssen AWS-Schlüssel verwenden.
+
+.Schritte
+. Gehen Sie zur IAM-Konsole im Zielkonto, in dem Sie einem Konsolenagenten Berechtigungen erteilen möchten.
+. Wählen Sie unter „Zugriffsverwaltung“ *Rollen > Rolle erstellen* und befolgen Sie die Schritte zum Erstellen der Rolle.
++
+Stellen Sie sicher, dass Sie Folgendes tun:
+
++
+** Wählen Sie unter *Vertrauenswürdiger Entitätstyp* *AWS-Konto* aus.
+** Wählen Sie *Ein anderes AWS-Konto* und geben Sie die ID des Kontos ein, in dem sich eine Konsolen-Agent-Instanz befindet.
+** Erstellen Sie die erforderlichen Richtlinien, indem Sie den Inhalt von kopieren und einfügenlink:reference-permissions-aws.html["die IAM-Richtlinien für einen Konsolenagenten"] .
+
+
+. Kopieren Sie die Rollen-ARN der IAM-Rolle, damit Sie sie später in die Konsole einfügen können.
+
+
+.Ergebnis
+Das Konto verfügt über die erforderlichen Berechtigungen. <<add-the-credentials,Sie können jetzt die Anmeldeinformationen zu einem Konsolenagenten hinzufügen>> .
+
+
+
+==== Erteilen Sie Berechtigungen durch die Bereitstellung von AWS-Schlüsseln
+
+Wenn Sie der Konsole AWS-Schlüssel für einen IAM-Benutzer bereitstellen möchten, müssen Sie diesem Benutzer die erforderlichen Berechtigungen erteilen.  Die IAM-Richtlinie der Konsole definiert die AWS-Aktionen und -Ressourcen, die die Konsole verwenden darf.
+
+Sie müssen diese Authentifizierungsmethode verwenden, wenn ein Konsolenagent vor Ort installiert ist.  Sie können keine IAM-Rolle verwenden.
+
+.Schritte
+. Erstellen Sie in der IAM-Konsole Richtlinien, indem Sie den Inhalt vonlink:reference-permissions-aws.html["die IAM-Richtlinien für einen Konsolenagenten"] .
++
+https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AWS-Dokumentation: Erstellen von IAM-Richtlinien"^]
+
+. Ordnen Sie die Richtlinien einer IAM-Rolle oder einem IAM-Benutzer zu.
++
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create.html["AWS-Dokumentation: Erstellen von IAM-Rollen"^]
+** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS-Dokumentation: Hinzufügen und Entfernen von IAM-Richtlinien"^]
+
+
+
+
+.Ergebnis
+Das Konto verfügt über die erforderlichen Berechtigungen. <<add-the-credentials,Sie können jetzt die Anmeldeinformationen zu einem Konsolenagenten hinzufügen>> .
+
+
+
+=== Fügen Sie die Anmeldeinformationen hinzu
+
+Nachdem Sie ein AWS-Konto mit den erforderlichen Berechtigungen versehen haben, können Sie die Anmeldeinformationen für dieses Konto einem vorhandenen Agenten hinzufügen.  Dadurch können Sie Cloud Volumes ONTAP -Systeme in diesem Konto mit demselben Agenten starten.
+
+ New credentials in your cloud provider may take a few minutes to become available. Then, add the credentials.
+.Schritte
+. Wählen Sie über die obere Navigationsleiste einen Konsolenagenten aus, dem Sie Anmeldeinformationen hinzufügen möchten.
+. Wählen Sie in der linken Navigationsleiste *Administration > Anmeldeinformationen*.
+. Wählen Sie auf der Seite *Anmeldeinformationen der Organisation* die Option *Anmeldeinformationen hinzufügen* aus und folgen Sie den Schritten des Assistenten.
++
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > Agent*.
+.. *Anmeldeinformationen definieren*: Geben Sie den ARN (Amazon Resource Name) einer vertrauenswürdigen IAM-Rolle an oder geben Sie einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel ein.
+.. *Marketplace-Abonnement*: Verknüpfen Sie ein Marketplace-Abonnement mit diesen Anmeldeinformationen, indem Sie sich jetzt anmelden oder ein vorhandenes Abonnement auswählen.
++
+Um Dienste mit einem Stundensatz (PAYGO) oder mit einem Jahresvertrag zu bezahlen, müssen Sie AWS-Anmeldeinformationen mit Ihrem AWS Marketplace-Abonnement verknüpfen.
+
+.. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
+
+
+
+
+.Ergebnis
+Sie können jetzt auf der Seite „Details und Anmeldeinformationen“ zu einem anderen Satz von Anmeldeinformationen wechseln, wenn Sie der Konsole ein System hinzufügen.
+
+image:screenshot_accounts_switch_aws.png["Ein Screenshot, der die Auswahl zwischen Cloud-Anbieterkonten zeigt, nachdem Sie auf der Seite „Details und Anmeldeinformationen“ die Option „Konto wechseln“ ausgewählt haben."]
+
+
+
+== Fügen Sie der Konsole Anmeldeinformationen zum Erstellen eines Konsolenagenten hinzu
+
+Fügen Sie AWS-Anmeldeinformationen hinzu, indem Sie die ARN einer IAM-Rolle angeben, die die zum Erstellen eines Konsolenagenten erforderlichen Berechtigungen erteilt.  Sie können diese Anmeldeinformationen beim Erstellen eines neuen Agenten auswählen.
+
+
+
+=== Einrichten der IAM-Rolle
+
+Richten Sie eine IAM-Rolle ein, die es der NetApp Console-Software als Serviceebene (SaaS) ermöglicht, die Rolle zu übernehmen.
+
+.Schritte
+. Gehen Sie zur IAM-Konsole im Zielkonto.
+. Wählen Sie unter „Zugriffsverwaltung“ *Rollen > Rolle erstellen* und befolgen Sie die Schritte zum Erstellen der Rolle.
++
+Stellen Sie sicher, dass Sie Folgendes tun:
+
++
+** Wählen Sie unter *Vertrauenswürdiger Entitätstyp* *AWS-Konto* aus.
+** Wählen Sie *Ein anderes AWS-Konto* und geben Sie die ID der NetApp Console SaaS ein: 952013314444
+** Bearbeiten Sie speziell für Amazon FSx for NetApp ONTAP die Richtlinie *Vertrauensbeziehungen*, um "AWS": "arn:aws:iam::952013314444:root" einzuschließen.
++
+Die Richtlinie sollte beispielsweise folgendermaßen aussehen:
+
++
+[source, JSON]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::952013314444:root",
+        "Service": "ec2.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+----
++
+Siehe link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["AWS Identity and Access Management (IAM)-Dokumentation"^] für weitere Informationen zum kontoübergreifenden Ressourcenzugriff in IAM.
+
+** Erstellen Sie eine Richtlinie, die die zum Erstellen eines Konsolenagenten erforderlichen Berechtigungen enthält.
++
+*** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Anzeigen der für FSx for ONTAP erforderlichen Berechtigungen"^]
+*** link:task-install-connector-aws-bluexp.html#aws-permissions-agent["Anzeigen der Agent-Bereitstellungsrichtlinie"]
+
+
+
+
+. Kopieren Sie die Rollen-ARN der IAM-Rolle, damit Sie sie im nächsten Schritt in die Konsole einfügen können.
+
+
+.Ergebnis
+Die IAM-Rolle verfügt jetzt über die erforderlichen Berechtigungen. <<add-the-credentials-2,Sie können es jetzt zur Konsole hinzufügen>> .
+
+
+
+=== Fügen Sie die Anmeldeinformationen hinzu
+
+Nachdem Sie die IAM-Rolle mit den erforderlichen Berechtigungen ausgestattet haben, fügen Sie die Rollen-ARN zur Konsole hinzu.
+
+.Bevor Sie beginnen
+Wenn Sie die IAM-Rolle gerade erst erstellt haben, kann es einige Minuten dauern, bis sie zur Verwendung verfügbar ist.  Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen zur Konsole hinzufügen.
+
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
++
+image:screenshot-settings-icon-organization.png["Ein Screenshot, der das Einstellungssymbol oben rechts in der Konsole zeigt."]
+
+. Wählen Sie auf der Seite *Anmeldeinformationen der Organisation* oder *Anmeldeinformationen des Kontos* die Option *Anmeldeinformationen hinzufügen* aus und folgen Sie den Schritten des Assistenten.
++
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > NetApp Konsole*.
+.. *Anmeldeinformationen definieren*: Geben Sie den ARN (Amazon Resource Name) der IAM-Rolle an.
+.. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
+
+
+
+
+
+
+== Anmeldeinformationen zur Konsole für Amazon FSx for ONTAP hinzufügen
+
+Einzelheiten finden Sie im https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["die Konsolendokumentation für Amazon FSx for ONTAP"^]
+
+
+
+== Konfigurieren eines AWS-Abonnements
+
+Nachdem Sie Ihre AWS-Anmeldeinformationen hinzugefügt haben, können Sie mit diesen Anmeldeinformationen ein AWS Marketplace-Abonnement konfigurieren.  Mit dem Abonnement können Sie Cloud Volumes ONTAP auf Stundenbasis (PAYGO) oder über einen Jahresvertrag bezahlen und weitere Datendienste nutzen.
+
+Es gibt zwei Szenarien, in denen Sie ein AWS Marketplace-Abonnement konfigurieren können, nachdem Sie die Anmeldeinformationen bereits hinzugefügt haben:
+
+* Sie haben beim ersten Hinzufügen der Anmeldeinformationen kein Abonnement konfiguriert.
+* Sie möchten das AWS Marketplace-Abonnement ändern, das für die AWS-Anmeldeinformationen konfiguriert ist.
++
+Durch das Ersetzen des aktuellen Marktplatzabonnements durch ein neues Abonnement wird das Marktplatzabonnement für alle vorhandenen Cloud Volumes ONTAP Systeme und alle neuen Systeme geändert.
+
+
+
+.Bevor Sie beginnen
+Sie müssen einen Konsolenagenten erstellen, bevor Sie ein Abonnement konfigurieren können. link:concept-connectors.html#connector-installation["Erfahren Sie, wie Sie einen Konsolenagenten erstellen"] .
+
+Das folgende Video zeigt die Schritte zum Abonnieren von NetApp Intelligent Services vom AWS Marketplace:
+
+.Abonnieren Sie NetApp Intelligent Services vom AWS Marketplace
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
+.Schritte
+. Wählen Sie *Administration > *Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen der Organisation* aus.
+. Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
++
+Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Konsole verknüpft sind.
+
++
+image:screenshot_aws_configure_subscription.png["Ein Screenshot des Aktionsmenüs für einen Satz vorhandener Anmeldeinformationen."]
+
+. Um die Anmeldeinformationen mit einem vorhandenen Abonnement zu verknüpfen, wählen Sie das Abonnement aus der Dropdown-Liste aus und wählen Sie *Konfigurieren*.
+. Um die Anmeldeinformationen einem neuen Abonnement zuzuordnen, wählen Sie *Abonnement hinzufügen > Fortfahren* und folgen Sie den Schritten im AWS Marketplace:
++
+.. Wählen Sie *Kaufoptionen anzeigen*.
+.. Wählen Sie *Abonnieren*.
+.. Wählen Sie *Konto einrichten*.
++
+Sie werden zur NetApp Konsole weitergeleitet.
+
+.. Auf der Seite *Abonnementzuweisung*:
++
+*** Wählen Sie die Konsolenorganisationen oder -konten aus, mit denen Sie dieses Abonnement verknüpfen möchten.
+*** Wählen Sie im Feld *Vorhandenes Abonnement ersetzen* aus, ob Sie das vorhandene Abonnement für eine Organisation oder ein Konto automatisch durch dieses neue Abonnement ersetzen möchten.
++
+Die Konsole ersetzt das vorhandene Abonnement für alle Anmeldeinformationen in der Organisation oder im Konto durch dieses neue Abonnement.  Wenn ein Satz von Anmeldeinformationen nie mit einem Abonnement verknüpft war, wird dieses neue Abonnement nicht mit diesen Anmeldeinformationen verknüpft.
+
++
+Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell zuordnen, indem Sie diese Schritte wiederholen.
+
+*** Wählen Sie *Speichern*.
+
+
+
+
+
+
+
+
+== Verknüpfen Sie ein vorhandenes Abonnement mit Ihrer Organisation oder Ihrem Konto
+
+Wenn Sie sich beim AWS Marketplace anmelden, besteht der letzte Schritt im Prozess darin, das Abonnement Ihrer Organisation zuzuordnen.  Wenn Sie diesen Schritt nicht abgeschlossen haben, können Sie das Abonnement nicht mit Ihrer Organisation oder Ihrem Konto verwenden.
+
+* link:concept-modes.html["Erfahren Sie mehr über die Bereitstellungsmodi der Konsole"]
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der Konsole"]
+
+
+Führen Sie die folgenden Schritte aus, wenn Sie NetApp Intelligent Data Services vom AWS Marketplace abonniert haben, aber den Schritt zum Verknüpfen des Abonnements mit Ihrem Konto verpasst haben.
+
+.Schritte
+. Bestätigen Sie, dass Sie Ihr Abonnement nicht mit Ihrer Konsolenorganisation oder Ihrem Konsolenkonto verknüpft haben.
++
+.. Wählen Sie im Navigationsmenü *Administration > Lizenzen und Abonnements*.
+.. Wählen Sie *Abonnements* aus.
+.. Stellen Sie sicher, dass Ihr Abonnement nicht angezeigt wird.
++
+Sie sehen nur die Abonnements, die mit der Organisation oder dem Konto verknüpft sind, das Sie gerade anzeigen.  Wenn Ihr Abonnement nicht angezeigt wird, fahren Sie mit den folgenden Schritten fort.
+
+
+
+. Melden Sie sich bei der AWS-Konsole an und navigieren Sie zu *AWS Marketplace-Abonnements*.
+. Suchen Sie das Abonnement.
++
+image:screenshot-aws-marketplace-bluexp-subscription.png["Ein Screenshot des AWS Marketplace, der ein NetApp -Abonnement zeigt."]
+
+. Wählen Sie *Produkt einrichten*.
++
+Die Abonnementangebotsseite sollte in einem neuen Browser-Tab oder -Fenster geladen werden.
+
+. Wählen Sie *Konto einrichten*.
++
+image:screenshot-aws-marketplace-set-up-account.png["Ein Screenshot des AWS Marketplace, der ein NetApp -Abonnement und die Option „Konto einrichten“ zeigt, die oben rechts auf der Seite angezeigt wird."]
+
++
+Die Seite *Abonnementzuweisung* auf netapp.com sollte in einem neuen Browser-Tab oder -Fenster geladen werden.
+
++
+Beachten Sie, dass Sie möglicherweise zuerst aufgefordert werden, sich bei der Konsole anzumelden.
+
+. Auf der Seite *Abonnementzuweisung*:
++
+** Wählen Sie die Konsolenorganisationen oder -konten aus, mit denen Sie dieses Abonnement verknüpfen möchten.
+** Wählen Sie im Feld *Vorhandenes Abonnement ersetzen* aus, ob Sie das vorhandene Abonnement für eine Organisation oder ein Konto automatisch durch dieses neue Abonnement ersetzen möchten.
++
+Die Konsole ersetzt das vorhandene Abonnement für alle Anmeldeinformationen in der Organisation oder im Konto durch dieses neue Abonnement.  Wenn ein Satz von Anmeldeinformationen nie mit einem Abonnement verknüpft war, wird dieses neue Abonnement nicht mit diesen Anmeldeinformationen verknüpft.
+
++
+Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell zuordnen, indem Sie diese Schritte wiederholen.
+
++
+image:screenshot-subscription-assignment.png["Ein Screenshot der Seite „Abonnementzuweisung“, auf der Sie die Organisationen auswählen können, die diesem Abonnement zugeordnet werden sollen."]
+
+
+
+. Bestätigen Sie, dass das Abonnement mit Ihrer Organisation oder Ihrem Konto verknüpft ist.
++
+.. Wählen Sie im Navigationsmenü *Administration > Lizenzen und Abonnements*.
+.. Wählen Sie *Abonnements* aus.
+.. Überprüfen Sie, ob Ihr Abonnement angezeigt wird.
+
+
+. Bestätigen Sie, dass das Abonnement mit Ihren AWS-Anmeldeinformationen verknüpft ist.
++
+.. Wählen Sie oben rechts in der Konsole das Symbol „Einstellungen“ und dann „Anmeldeinformationen“ aus.
+.. Überprüfen Sie auf der Seite *Anmeldeinformationen der Organisation*, ob das Abonnement mit Ihren AWS-Anmeldeinformationen verknüpft ist.
++
+Hier ist ein Beispiel.
+
++
+image:screenshot-credentials-with-subscription.png["Ein Screenshot der Anmeldeinformationsseite des Konsolenkontos, auf der die AWS-Anmeldeinformationen angezeigt werden, die ein Abonnementfeld enthalten, das den Namen des Abonnements angibt, das mit den Anmeldeinformationen verknüpft ist."]
+
+
+
+
+
+
+
+== Anmeldeinformationen bearbeiten
+
+Bearbeiten Sie Ihre AWS-Anmeldeinformationen, indem Sie den Kontotyp ändern (AWS-Schlüssel oder Rolle übernehmen), den Namen bearbeiten oder die Anmeldeinformationen selbst aktualisieren (die Schlüssel oder die Rollen-ARN).
+
+
+NOTE: Sie können die Anmeldeinformationen für ein Instanzprofil, das mit einer Konsolen-Agent-Instanz oder einer Amazon FSx for ONTAP -Instanz verknüpft ist, nicht bearbeiten.  Sie können die Anmeldeinformationen nur für eine FSx for ONTAP Instanz umbenennen.
+
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
+. Wählen Sie auf der Seite *Anmeldeinformationen der Organisation* oder *Anmeldeinformationen des Kontos* das Aktionsmenü für einen Satz von Anmeldeinformationen aus und wählen Sie dann *Anmeldeinformationen bearbeiten*.
+. Nehmen Sie die erforderlichen Änderungen vor und wählen Sie dann *Übernehmen*.
+
+
+
+
+== Anmeldeinformationen löschen
+
+Wenn Sie einen Satz Anmeldeinformationen nicht mehr benötigen, können Sie ihn löschen.  Sie können nur Anmeldeinformationen löschen, die keinem System zugeordnet sind.
+
+
+TIP: Sie können die Anmeldeinformationen für ein Instanzprofil, das einer Konsolenagenteninstanz zugeordnet ist, nicht löschen.
+
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
+. Wählen Sie auf der Seite *Anmeldeinformationen der Organisation* oder *Anmeldeinformationen des Kontos* das Aktionsmenü für einen Satz von Anmeldeinformationen aus und wählen Sie dann *Anmeldeinformationen löschen*.
+. Wählen Sie zur Bestätigung *Löschen*.
+

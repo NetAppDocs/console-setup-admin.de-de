@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-federation-ping.html 
+keywords: PingFederate, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, X.509 certificate, Audience/Entity ID, Reply URL, organization admin 
+summary: 'Verbinden Sie sich mit Ihrem PingFederate IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.' 
+---
+= Föderieren Sie die NetApp -Konsole mit PingFederate
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verbinden Sie sich mit Ihrem PingFederate IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.
+
+.Erforderliche Rollen
+Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+
+NOTE: Sie können eine Föderation mit Ihrem Unternehmens-IdP oder mit der NetApp -Support-Site herstellen.  NetApp empfiehlt, sich für das eine oder das andere zu entscheiden, aber nicht für beides.
+
+NetApp unterstützt nur vom Dienstanbieter initiiertes (SP-initiiertes) SSO.  Sie müssen zunächst den Identitätsanbieter so konfigurieren, dass er NetApp als Dienstanbieter vertraut.  Anschließend können Sie in der Konsole eine Verbindung erstellen, die die Konfiguration des Identitätsanbieters verwendet.
+
+Sie können mit PingFederate eine Verbundverbindung einrichten, um Single Sign-On (SSO) für die Konsole zu aktivieren.  Der Vorgang umfasst die Konfiguration Ihres PingFederate-Servers, sodass dieser der Konsole als Dienstanbieter vertraut, und die anschließende Herstellung der Verbindung in der Konsole.
+
+.Bevor Sie beginnen
+* Es ist ein IdP-Konto mit Administratorrechten erforderlich.  Koordinieren Sie die Durchführung der Schritte mit Ihrem IdP-Administrator.
+* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Konsole"] Thema.
+
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Föderation* aus, um die Seite *Föderationen* anzuzeigen.
+. Wählen Sie *Neue Föderation konfigurieren*.
+. Geben Sie Ihre Domänendetails ein:
++
+.. Wählen Sie, ob Sie eine verifizierte Domäne oder Ihre E-Mail-Domäne verwenden möchten.  Die E-Mail-Domäne ist die Domäne, die mit dem Konto verknüpft ist, mit dem Sie angemeldet sind.
+.. Geben Sie den Namen der Föderation ein, die Sie konfigurieren.
+.. Wenn Sie eine verifizierte Domäne auswählen, wählen Sie die Domäne aus der Liste aus.
+
+
+. Wählen Sie *Weiter*.
+. Wählen Sie als Verbindungsmethode *Provider* und dann *PingFederate*.
+. Wählen Sie *Weiter*.
+. Konfigurieren Sie Ihren PingFederate-Server so, dass er NetApp als Dienstanbieter vertraut.  Sie müssen diesen Schritt auf Ihrem PingFederate-Server ausführen.
++
+.. Verwenden Sie die folgenden Werte, wenn Sie PingFederate so konfigurieren, dass es der NetApp Konsole vertraut:
++
+*** Für die *Antwort-URL* oder *Assertion Consumer Service (ACS)-URL* verwenden Sie `https://netapp-cloud-account.auth0.com/login/callback`
+*** Verwenden Sie für die *Abmelde-URL* `https://netapp-cloud-account.auth0.com/logout`
+*** Verwenden Sie für *Zielgruppen-/Entitäts-ID* `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>` wobei <fed-domain-name-pingfederate> der Domänenname für die Föderation ist.  Wenn Ihre Domäne beispielsweise `example.com` , wäre die Zielgruppen-/Entitäts-ID `urn:auth0:netappcloud-account:fed-example-com-pingfederate` .
+
+
+.. Kopieren Sie die URL des PingFederate-Servers.  Sie benötigen diese URL, wenn Sie die Verbindung in der Konsole herstellen.
+.. Laden Sie das X.509-Zertifikat von Ihrem PingFederate-Server herunter.  Es muss im Base64-codierten PEM-Format (.pem, .crt, .cer) vorliegen.
+
+
+. Kehren Sie zur Konsole zurück und wählen Sie *Weiter*, um die Verbindung herzustellen.
+. Erstellen Sie die Verbindung mit PingFederate
++
+.. Geben Sie die PingFederate-Server-URL ein, die Sie im vorherigen Schritt kopiert haben.
+.. Laden Sie das X.509-Signaturzertifikat hoch.  Das Zertifikat muss im PEM-, CER- oder CRT-Format vorliegen.
+
+
+. Wählen Sie *Verbindung erstellen*.  Das System stellt die Verbindung in wenigen Sekunden her.
+. Wählen Sie *Weiter*.
+. Wählen Sie *Verbindung testen*, um Ihre Verbindung zu testen.  Sie werden zu einer Anmeldeseite für Ihren IdP-Server weitergeleitet.  Melden Sie sich mit Ihren IdP-Anmeldeinformationen an, um den Test abzuschließen, und kehren Sie zur Konsole zurück, um die Verbindung zu aktivieren.
+. Wählen Sie *Weiter*.
+. Überprüfen Sie auf der Seite *Föderation aktivieren* die Föderationsdetails und wählen Sie dann *Föderation aktivieren* aus.
+. Wählen Sie *Fertig*, um den Vorgang abzuschließen.
+
+
+Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Konsole anmelden.

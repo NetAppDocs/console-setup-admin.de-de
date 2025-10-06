@@ -1,0 +1,143 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-keystone-roles.html 
+keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
+summary: Das Identitäts- und Zugriffsmanagement der NetApp Konsole bietet zwei Keystone Rollen, die Sie den Mitgliedern Ihrer Organisation zuweisen können. 
+---
+= Keystone -Zugriffsrollen in der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Keystone -Rollen bieten Zugriff auf die Keystone Dashboards und ermöglichen Benutzern das Anzeigen und Verwalten ihres Keystone Abonnements.  Es gibt zwei Keystone -Rollen: Keystone -Administrator und Keystone Viewer.  Der Hauptunterschied zwischen den beiden Rollen besteht in den Aktionen, die sie in Keystone ausführen können.  Die Keystone Administratorrolle ist die einzige Rolle, die Serviceanfragen erstellen oder Abonnements ändern darf.
+
+.Beispiel für Keystone -Rollen in der NetApp Konsole
+Bei der XYZ Corporation sind vier Speichertechniker aus verschiedenen Abteilungen beschäftigt, die sich die Keystone Abonnementinformationen ansehen.  Obwohl alle diese Benutzer das Keystone Abonnement überwachen müssen, darf nur der Teamleiter Serviceanfragen stellen.  Drei Teammitglieder erhalten die Rolle „Keystone -Viewer“, während der Teamleiter die Rolle „Keystone Administrator“ erhält, sodass es einen Kontrollpunkt für die Serviceanfragen des Unternehmens gibt.
+
+Die folgende Tabelle zeigt die Aktionen, die jede Keystone -Rolle ausführen kann.
+
+[cols="40,20a,20a"]
+|===
+| Funktion und Aktion | Keystone -Administrator | Keystone -Viewer 
+
+
+| Zeigen Sie die folgenden Registerkarten an: Abonnement, Assets, Monitor und Verwaltung  a| 
+Ja
+ a| 
+Ja
+
+
+
+3+| * Keystone -Abonnementseite*: 
+
+
+| Abonnements anzeigen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Abonnements ändern oder verlängern  a| 
+Ja
+ a| 
+Nein
+
+
+
+3+| * Keystone -Asset-Seite*: 
+
+
+| Assets anzeigen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Verwalten von Assets  a| 
+Ja
+ a| 
+Nein
+
+
+
+3+| * Keystone -Warnseite*: 
+
+
+| Warnungen anzeigen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Verwalten von Warnungen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Erstellen Sie Benachrichtigungen für sich selbst  a| 
+Ja
+ a| 
+Ja
+
+
+
+3+| *Lizenzen und Abonnements*: 
+
+
+| Kann Lizenzen und Abonnements anzeigen  a| 
+Ja
+ a| 
+Ja
+
+
+
+3+| * Keystone -Berichtsseite*: 
+
+
+| Berichte herunterladen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Berichte verwalten  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Berichte für sich selbst erstellen  a| 
+Ja
+ a| 
+Ja
+
+
+
+3+| *Serviceanfragen*: 
+
+
+| Serviceanfragen erstellen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Zeigen Sie Serviceanfragen an, die von einem beliebigen Benutzer innerhalb der Organisation erstellt wurden  a| 
+Ja
+ a| 
+Ja
+
+|===

@@ -1,0 +1,49 @@
+= Connector 3.9.53
+:allow-uri-read: 
+
+
+
+
+=== Connector 3.9.53
+
+Diese Version des BlueXP Connector enthält Sicherheitsverbesserungen und Fehlerbehebungen.
+
+Die Version 3.9.53 ist für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+=== Warnungen zur Speicherplatznutzung
+
+Das Benachrichtigungscenter enthält jetzt Warnungen zur Speicherplatznutzung auf dem Connector.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#monitor-disk-space["Erfahren Sie mehr."^]
+
+
+
+=== Audit-Verbesserungen
+
+Die Zeitleiste enthält jetzt Anmelde- und Abmeldeereignisse für Benutzer.  Sie können die Anmeldeaktivität sehen, was bei der Prüfung und Sicherheitsüberwachung hilfreich sein kann.  API-Benutzer mit der Rolle „Organisationsadministrator“ können die E-Mail-Adresse des angemeldeten Benutzers anzeigen, indem sie Folgendes angeben: `includeUserData=true`` Parameter wie im Folgenden: `/audit/<account_id>?includeUserData=true` .
+
+
+
+=== Keystone -Abonnementverwaltung in BlueXP verfügbar
+
+Sie können Ihr NetApp Keystone Abonnement von BlueXP aus verwalten.
+
+link:https://docs.netapp.com/us-en/keystone-staas/index.html["Erfahren Sie mehr über die Keystone -Abonnementverwaltung in BlueXP."^]
+
+
+
+=== BlueXP Identitäts- und Zugriffsmanagement (IAM)
+
+
+
+==== Multi-Faktor-Authentifizierung (MFA)
+
+Nicht föderierte Benutzer können MFA für ihre BlueXP -Konten aktivieren, um die Sicherheit zu verbessern.  Administratoren können MFA-Einstellungen verwalten und MFA für Benutzer nach Bedarf zurücksetzen oder deaktivieren.  Dies wird nur im Standardmodus unterstützt.
+
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-user-settings.html#task-user-mfa["Erfahren Sie, wie Sie die Multi-Faktor-Authentifizierung selbst einrichten."^] link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-iam-manage-members-permissions.html#manage-mfa["Erfahren Sie mehr über die Verwaltung der Multi-Faktor-Authentifizierung für Benutzer."^]
+
+
+
+=== Arbeitslasten
+
+Sie können jetzt Anmeldeinformationen für Amazon FSx for NetApp ONTAP auf der Anmeldeinformationsseite in BlueXP anzeigen und löschen.

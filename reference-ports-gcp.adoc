@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: reference-ports-gcp.html 
+keywords: ports, firewall rules, http, https, inbound, outbound, connector, agent 
+summary: Die Google Cloud-Firewallregeln für den Agenten erfordern sowohl eingehende als auch ausgehende Regeln.  Die NetApp Konsole erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten von der Konsole aus erstellen. Für andere Installationsoptionen müssen Sie diese Sicherheitsgruppe manuell einrichten. 
+---
+= Agent-Firewallregeln in Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Die Google Cloud-Firewallregeln für den Agenten erfordern sowohl eingehende als auch ausgehende Regeln.  Die NetApp Konsole erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten von der Konsole aus erstellen. Für andere Installationsoptionen müssen Sie diese Sicherheitsgruppe manuell einrichten.
+
+
+
+== Eingehende Regeln
+
+[cols="10,10,80"]
+|===
+| Protokoll | Hafen | Zweck 
+
+
+| SSH | 22 | Bietet SSH-Zugriff auf den Agent-Host 
+
+
+| HTTP | 80  a| 
+* Bietet HTTP-Zugriff von Client-Webbrowsern auf die lokale Benutzeroberfläche
+* Wird während des Upgrade-Prozesses von Cloud Volumes ONTAP verwendet
+
+
+
+
+| HTTPS | 443 | Bietet HTTPS-Zugriff von Client-Webbrowsern auf die lokale Benutzeroberfläche 
+
+
+| TCP | 3128 | Bietet Cloud Volumes ONTAP Internetzugang.  Sie müssen diesen Port nach der Bereitstellung manuell öffnen. 
+|===
+
+
+== Ausgangsregeln
+
+Die vordefinierten Firewall-Regeln des Agenten öffnen den gesamten ausgehenden Datenverkehr.  Befolgen Sie die grundlegenden Ausgangsregeln, sofern dies akzeptabel ist, oder verwenden Sie erweiterte Ausgangsregeln für strengere Anforderungen.
+
+
+
+=== Grundlegende Ausgangsregeln
+
+Die vordefinierten Firewall-Regeln für den Agenten umfassen die folgenden ausgehenden Regeln.
+
+[cols="20,20,60"]
+|===
+| Protokoll | Hafen | Zweck 
+
+
+| Alle TCP | Alle | Der gesamte ausgehende Verkehr 
+
+
+| Alle UDP | Alle | Der gesamte ausgehende Verkehr 
+|===
+
+
+=== Erweiterte Ausgangsregeln
+
+Wenn Sie strenge Regeln für den ausgehenden Datenverkehr benötigen, können Sie die folgenden Informationen verwenden, um nur die Ports zu öffnen, die für die ausgehende Kommunikation durch den Agenten erforderlich sind.
+
+
+NOTE: Die Quell-IP-Adresse ist der Agent-Host.
+
+[cols="5*"]
+|===
+| Service | Protokoll | Hafen | Ziel | Zweck 
+
+
+| API-Aufrufe und AutoSupport | HTTPS | 443 | Outbound-Internet und ONTAP Cluster-Management-LIF | API-Aufrufe an Google Cloud, an ONTAP, an NetApp Data Classification und das Senden von AutoSupport -Nachrichten an NetApp 
+
+
+| API-Aufrufe | TCP | 8080 | Datenklassifizierung | Testen der Datenklassifizierungsinstanz während der Bereitstellung 
+
+
+| DNS | UDP | 53 | DNS | Wird für die DNS-Auflösung durch Datenklassifizierung verwendet 
+|===

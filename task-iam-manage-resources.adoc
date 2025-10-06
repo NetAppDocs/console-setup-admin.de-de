@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: task-iam-manage-resources.html 
+keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management 
+summary: Verwalten Sie die Ressourcenhierarchie Ihrer Organisation, indem Sie Ressourcen bestimmten Projekten und Ordnern zuordnen. 
+---
+= Verwalten Sie die Ressourcenhierarchie in Ihrer NetApp Console-Organisation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie ein Mitglied Ihrer Organisation zuordnen, erteilen Sie Berechtigungen auf Organisations-, Ordner- oder Projektebene.  Um sicherzustellen, dass diese Mitglieder über die Berechtigungen zum Zugriff auf die richtigen Ressourcen verfügen, müssen Sie die Ressourcenhierarchie Ihrer Organisation verwalten, indem Sie Ressourcen bestimmten Projekten und Ordnern zuordnen.  Eine _Ressource_ ist ein Speichersystem oder ein Konsolenagent, den die Konsole bereits verwaltet oder kennt.
+
+
+
+== Zeigen Sie die Ressourcen in Ihrer Organisation an
+
+Sie können sowohl entdeckte als auch unentdeckte Ressourcen anzeigen, die mit Ihrer Organisation verknüpft sind. Unentdeckte Ressourcen sind Speicherressourcen, die identifiziert, aber noch nicht zur Konsole hinzugefügt wurden.
+
+
+NOTE: HINWEIS: Auf der Seite „Ressourcen“ sind Amazon FSx for NetApp ONTAP -Ressourcen nicht enthalten, da Benutzer sie keiner Rolle zuordnen können.  Zeigen Sie sie auf der Seite „Systeme“ oder unter „Workloads“ an.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Ressourcen* aus.
+. Wählen Sie *Erweiterte Suche und Filterung*.
+. Verwenden Sie eine der verfügbaren Optionen, um die gesuchte Ressource zu finden:
++
+** *Suche nach Ressourcennamen*: Geben Sie eine Textzeichenfolge ein und wählen Sie *Hinzufügen*.
+** *Plattform*: Wählen Sie eine oder mehrere Plattformen aus, beispielsweise Amazon Web Services.
+** *Ressourcen*: Wählen Sie eine oder mehrere Ressourcen aus, beispielsweise Cloud Volumes ONTAP.
+** *Organisation, Ordner oder Projekt*: Wählen Sie die gesamte Organisation, einen bestimmten Ordner oder ein bestimmtes Projekt aus.
+
+
+. Wählen Sie *Suchen*.
+
+
+
+
+== Zuordnen einer Ressource zu Ordnern und Projekten
+
+Ordnen Sie eine Ressource einem Ordner oder Projekt zu, um sie verfügbar zu machen.
+
+.Bevor Sie beginnen
+Sie sollten verstehen, wie die Ressourcenzuordnung funktioniert. link:concept-identity-and-access-management.html#resources["Informieren Sie sich über Ressourcen, beispielsweise darüber, wann eine Ressource einem Ordner zugeordnet werden sollte."] .
+
+.Schritte
+. Navigieren Sie auf der Seite *Ressourcen* zu einer Ressource in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Mit Ordnern oder Projekten verknüpfen*.
+. Wählen Sie einen Ordner oder ein Projekt aus und wählen Sie dann *Akzeptieren*.
+. Um einen zusätzlichen Ordner oder ein zusätzliches Projekt zuzuordnen, wählen Sie *Ordner oder Projekt hinzufügen* und wählen Sie dann den Ordner oder das Projekt aus.
++
+Beachten Sie, dass Sie nur aus den Ordnern und Projekten auswählen können, für die Sie über Administratorberechtigungen verfügen.
+
+. Wählen Sie *Ressourcen zuordnen*.
++
+** Wenn Sie die Ressource mit Projekten verknüpft haben, können Mitglieder, die über Berechtigungen für diese Projekte verfügen, jetzt über die Konsole auf die Ressource zugreifen.
+** Wenn Sie die Ressource mit einem Ordner verknüpft haben, kann ein _Ordner- oder Projektadministrator_ jetzt auf die Ressource zugreifen und sie mit einem Projekt innerhalb des Ordners verknüpfen. link:concept-identity-and-access-management.html#resources["Informationen zum Verknüpfen einer Ressource mit einem Ordner"] .
+
+
+
+
+.Nach Abschluss
+Wenn Sie mithilfe eines Konsolenagenten eine Ressource entdecken, verknüpfen Sie den Konsolenagenten mit dem Projekt, um Zugriff zu gewähren.  Andernfalls sind der Konsolenagent und die zugehörige Ressource für Mitglieder ohne die Rolle „Organisationsadministrator“ nicht zugänglich.
+
+link:task-iam-associate-connectors.html["Erfahren Sie, wie Sie einen Konsolenagenten mit einem Ordner oder Projekt verknüpfen"] .
+
+
+
+== Anzeigen der mit einer Ressource verknüpften Ordner und Projekte
+
+Sie können die Ordner und Projekte anzeigen, die mit einer bestimmten Ressource verknüpft sind.
+
+
+NOTE: Wenn Sie herausfinden möchten, welche Organisationsmitglieder Zugriff auf die Ressource haben, können Sielink:task-iam-manage-folders-projects.html#view-associated-resources-members["Zeigen Sie die Mitglieder an, die Zugriff auf die Ordner und Projekte haben, die mit der Ressource verknüpft sind."] .
+
+.Schritte
+. Navigieren Sie auf der Seite *Ressourcen* zu einer Ressource in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
+
+
+Das folgende Beispiel zeigt eine Ressource, die mit einem Projekt verknüpft ist.
+
+image:screenshot-iam-resource-details.png["Ein Screenshot der Ressourcendetailseite, der eine Ressource zeigt, die mit einem Projekt verknüpft ist, das sich direkt unter der Organisation befindet."]
+
+
+NOTE: Wenn Sie feststellen möchten, welche Organisationsmitglieder Zugriff auf die Ressource haben, können Sielink:task-iam-manage-folders-projects.html#view-associated-resources-members["Zeigen Sie die Mitglieder an, die Zugriff auf die Ordner und Projekte haben, die mit der Ressource verknüpft sind."] .
+
+
+
+== Entfernen einer Ressource aus einem Ordner oder Projekt
+
+Um eine Ressource aus einem Ordner oder Projekt zu entfernen, müssen Sie die Verknüpfung zwischen dem Ordner oder Projekt und der Ressource entfernen. Wenn Sie die Zuordnung entfernen, können Mitglieder die Ressource im Ordner oder Projekt nicht mehr verwalten.
+
+
+NOTE: Um eine erkannte Ressource aus der gesamten Organisation zu entfernen, entfernen Sie das System von der Seite *Systeme*.
+
+.Schritte
+. Navigieren Sie auf der Seite *Ressourcen* zu einer Ressource in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
+. Wählen Sie für den Ordner oder das Projekt, für das Sie die Ressource entfernen möchten,image:icon-delete.png["Ein Symbol einer Mülltonne"]
+. Bestätigen Sie, dass Sie die Zuordnung entfernen möchten, indem Sie *Löschen* auswählen.
+
+
+
+
+== Ähnliche Informationen
+
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identität und Zugriff in der NetApp Konsole"]
+* link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff in der NetApp Konsole"]
+* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identität und Zugriff"^]
+

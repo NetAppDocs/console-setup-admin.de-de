@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-create.html 
+keywords: partner organizations, create partnership, MSPs, service provider access 
+summary: Bauen Sie Partnerschaften auf, um sichere, verwaltete Verbindungen zwischen Ihrem Unternehmen und vertrauenswürdigen Partnern für ein kollaboratives NetApp Ressourcenmanagement herzustellen. 
+---
+= Verwalten Sie Partnerschaften in der NetApp -Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bauen Sie Partnerschaften auf, um sichere, verwaltete Verbindungen zwischen Ihrem Unternehmen und vertrauenswürdigen Partnern für ein kollaboratives NetApp Ressourcenmanagement herzustellen.
+
+Durch Partnerschaften können Sie NetApp -Ressourcen über Grenzen hinweg sicher verwalten, indem Sie rollenbasierte Beziehungen in der Konsole nutzen.  Die initiierende Organisation gewährt Zugriff auf ihre Ressourcen, während die akzeptierende Organisation die Benutzer oder Dienstkonten bereitstellt, denen Zugriff gewährt werden soll.  Partnerschaften werden über einen Self-Service-Workflow eingerichtet, der der initiierenden Organisation die volle Kontrolle darüber gibt, welche Ressourcen gemeinsam genutzt und welche Rollen zugewiesen werden. Außerdem hat sie die Möglichkeit, den Partnerzugriff nach Bedarf zu integrieren, zu verwalten oder zu widerrufen.
+
+.Erforderliche Rollen
+Zum Erstellen und Verwalten von Partnerschaften ist die Rolle *Partnerschaftsadministrator* erforderlich.  Der *Partnerschaftsbetrachter* kann die Seite „Partnerschaften“ anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+
+
+== Initiieren Sie eine Organisationspartnerschaft
+
+Sie können eine Partnerschaft mit einer anderen Organisation beantragen, wenn Sie deren Organisations-ID kennen.  Die empfangende Organisation genehmigt die Anfrage, bevor die Partnerschaft fortgesetzt werden kann.
+
+Bevor Sie beginnen, stellen Sie sicher, dass Sie über die Organisations-ID der Partnerorganisation verfügen und dass Ihnen die Rolle *Partnerschaftsadministrator* zugewiesen wurde.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie die Registerkarte *Partnerschaften*.
+. Wählen Sie *Partnerschaft hinzufügen*.
+. Geben Sie im Dialogfeld *Partnerschaft erstellen* die Partnerorganisations-ID des gewünschten Partners ein und wählen Sie *Hinzufügen*.
++
+Die Partnerschaftsanfrage wird zur Genehmigung an die Partnerorganisation gesendet.  Den Status der Partnerschaftsanfrage können Sie auf der Seite *Partnerschaften* einsehen.
+
+
+
+
+
+== Genehmigen einer Organisationspartnerschaft
+
+Eine Anfrage für eine Organisationspartnerschaft muss von der empfangenden Organisation angenommen werden, bevor die Partnerschaft fortgesetzt werden kann.  Sie müssen über die Rolle *Partnerschaftsadministrator* verfügen, um Partnerschaften zu genehmigen und zu verwalten.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Partnerschaften* aus.
+. Wählen Sie die Registerkarte *Partnerschaft erhalten*.
+. Navigieren Sie zu der empfangenen Partnerschaft, die Sie genehmigen möchten, und wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Genehmigen*.
+. Überprüfen Sie die Details der Partnerschaft, einschließlich des Namens und der Organisations-ID der Organisation, die die Partnerschaft angefordert hat, und wählen Sie *Weiter* aus.
+. Fügen Sie optional Organisationsmitglieder zur Partnerschaft hinzu und wählen Sie *Übernehmen*.
++
+Sie können jederzeit weitere Mitglieder über die Seite *Partnerschaft* hinzufügen.
+
++
+
+NOTE: Alle von Ihnen hinzugefügten Mitglieder werden in der Organisation des Partners sichtbar, wo der Partner sie Ressourcen zuweisen kann.
+
+
+
+.Ergebnis
+Die von Ihnen genehmigte Partnerschaft weist jetzt den Status *Etabliert* auf.  Benutzer mit der Rolle *Partnerschaftsadministrator* oder *Partnerschaftsbetrachter* in einer der beiden Organisationen können die Partnerschaft anzeigen.
+
+
+
+== Partnerschaftsstatus anzeigen
+
+Sehen Sie sich den Status Ihrer Partnerschaften an.
+
+.Erforderliche Rolle
+Partnerschaftsadministrator, Partnerschaftsbetrachter.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie die *Partnerschaften* aus.
+. Wählen Sie entweder die Registerkarte *Initiierte Partnerschaften* oder *Erhaltene Partnerschaften*.
+. Sehen Sie sich die jeweilige Tabelle an, in der Partnerschaften und deren Status angezeigt werden.
+
+
+
+
+== Deaktivieren einer Organisationspartnerschaft
+
+Um eine Partnerschaft zu deaktivieren, müssen Sie Mitglied der initiierenden Organisation sein.  Durch die Deaktivierung einer Partnerschaft wird der Zugriff auf alle Ressourcen in Ihrer Organisation, die mit der Partnerorganisation geteilt wurden, sofort widerrufen.
+
+.Erforderliche Rolle
+Partnerschaftsverwaltung.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie die *Partnerschaften* aus.
+. Wählen Sie entweder die Registerkarte *Initiierte Partnerschaften* aus.
+. Sehen Sie sich die jeweilige Tabelle an, in der Partnerschaften und deren Status angezeigt werden.
+. Navigieren Sie zu der initiierten Partnerschaft, die Sie deaktivieren möchten, und wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Deaktivieren*.
+

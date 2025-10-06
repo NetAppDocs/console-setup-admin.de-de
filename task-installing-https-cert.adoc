@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: task-installing-https-cert.html 
+keywords: https certificate, certificate, adding, installing, ca, certificate authority, format, encoding, restricted mode, access 
+summary: Installieren Sie ein von einer Zertifizierungsstelle signiertes Zertifikat für den Benutzerzugriff auf die webbasierte Konsole, wenn Sie die NetApp -Konsole im eingeschränkten Modus verwenden. 
+---
+= Installieren Sie ein CA-signiertes Zertifikat für den webbasierten Konsolenzugriff
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie die NetApp Konsole im eingeschränkten Modus verwenden, ist die Benutzeroberfläche über die virtuelle Maschine des Konsolenagenten zugänglich, die in Ihrer Cloud-Region oder vor Ort bereitgestellt wird.  Standardmäßig verwendet die Konsole ein selbstsigniertes SSL-Zertifikat, um sicheren HTTPS-Zugriff auf die webbasierte Konsole bereitzustellen, die auf dem Konsolenagenten ausgeführt wird.
+
+Falls Ihr Unternehmen dies erfordert, können Sie ein von einer Zertifizierungsstelle (CA) signiertes Zertifikat installieren, das einen besseren Sicherheitsschutz bietet als ein selbstsigniertes Zertifikat.  Nachdem Sie das Zertifikat installiert haben, verwendet die Konsole das von der Zertifizierungsstelle signierte Zertifikat, wenn Benutzer auf die webbasierte Konsole zugreifen.
+
+
+
+== Installieren eines HTTPS-Zertifikats
+
+Installieren Sie ein von einer Zertifizierungsstelle signiertes Zertifikat für den sicheren Zugriff auf die webbasierte Konsole, die auf dem Konsolenagenten ausgeführt wird.
+
+.Informationen zu diesem Vorgang
+Sie können das Zertifikat mit einer der folgenden Optionen installieren:
+
+* Generieren Sie eine Zertifikatsignieranforderung (CSR) von der Konsole aus, übermitteln Sie die Zertifikatsanforderung an eine Zertifizierungsstelle und installieren Sie dann das von der Zertifizierungsstelle signierte Zertifikat auf dem Konsolenagenten.
++
+Das Schlüsselpaar, das die Konsole zum Generieren der CSR verwendet, wird intern auf dem Konsolenagenten gespeichert.  Die Konsole ruft automatisch dasselbe Schlüsselpaar (privater Schlüssel) ab, wenn Sie das Zertifikat auf dem Konsolenagenten installieren.
+
+* Installieren Sie ein CA-signiertes Zertifikat, das Sie bereits haben.
++
+Bei dieser Option wird die CSR nicht über die Konsole generiert.  Sie generieren die CSR separat und speichern den privaten Schlüssel extern.  Sie stellen der Konsole den privaten Schlüssel zur Verfügung, wenn Sie das Zertifikat installieren.
+
+
+
+.Schritte
+. Wählen Sie *Administration > Agenten*.
+. Wählen Sie auf der Seite *Übersicht* das Aktionsmenü für einen Konsolenagenten und wählen Sie *HTTPS-Setup*.
++
+Zum Bearbeiten muss der Konsolenagent aktiv sein.
+
+. Installieren Sie auf der Seite „HTTPS-Setup“ ein Zertifikat, indem Sie eine Zertifikatsignieranforderung (CSR) generieren oder Ihr eigenes CA-signiertes Zertifikat installieren:
++
+[cols="25,75"]
+|===
+| Option | Beschreibung 
+
+
+| Erstellen Sie eine CSR  a| 
+.. Geben Sie den Hostnamen oder DNS des Konsolenagent-Hosts (seinen allgemeinen Namen) ein und wählen Sie dann *CSR generieren*.
++
+Die Konsole zeigt eine Zertifikatsignieranforderung an.
+
+.. Verwenden Sie die CSR, um eine SSL-Zertifikatsanforderung an eine Zertifizierungsstelle zu senden.
++
+Das Zertifikat muss das Base-64-codierte X.509-Format von Privacy Enhanced Mail (PEM) verwenden.
+
+.. Laden Sie die Zertifikatsdatei hoch und wählen Sie dann *Installieren*.
+
+
+
+
+| Installieren Sie Ihr eigenes CA-signiertes Zertifikat  a| 
+.. Wählen Sie *CA-signiertes Zertifikat installieren*.
+.. Laden Sie sowohl die Zertifikatsdatei als auch den privaten Schlüssel und wählen Sie dann *Installieren*.
++
+Das Zertifikat muss das Base-64-codierte X.509-Format von Privacy Enhanced Mail (PEM) verwenden.
+
+
+
+|===
+
+
+.Ergebnis
+Der Konsolenagent verwendet jetzt das von der Zertifizierungsstelle signierte Zertifikat, um sicheren HTTPS-Zugriff bereitzustellen.  Das folgende Bild zeigt einen Agenten, der für sicheren Zugriff konfiguriert ist:
+
+image:screenshot_https_cert.gif["Screenshot: Zeigt die HTTPS-Setup-Seite, nachdem Sie ein signiertes Zertifikat installiert haben.  Auf der Seite werden die Zertifikatseigenschaften und eine Option zum Erneuern des Zertifikats angezeigt."]
+
+
+
+== Erneuern Sie das HTTPS-Zertifikat der Konsole
+
+Sie sollten das HTTPS-Zertifikat des Agenten vor Ablauf erneuern, um einen sicheren Zugriff zu gewährleisten.  Wenn Sie das Zertifikat nicht vor Ablauf erneuern, wird eine Warnung angezeigt, wenn Benutzer über HTTPS auf die Webkonsole zugreifen.
+
+.Schritte
+. Wählen Sie *Administration > Agenten*.
+. Wählen Sie auf der Seite *Übersicht* das Aktionsmenü für einen Konsolenagenten und wählen Sie *HTTPS-Setup*.
++
+Es werden Details zum Zertifikat angezeigt, einschließlich des Ablaufdatums.
+
+. Wählen Sie *Zertifikat ändern* und folgen Sie den Schritten zum Generieren einer CSR oder zum Installieren Ihres eigenen CA-signierten Zertifikats.
+

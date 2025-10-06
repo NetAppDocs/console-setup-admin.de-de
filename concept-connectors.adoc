@@ -1,0 +1,197 @@
+---
+sidebar: sidebar 
+permalink: concept-connectors.html 
+keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
+summary: Ein _Konsolenagent_ ist eine NetApp -Software, die in Ihrem Cloud-Netzwerk oder lokalen Netzwerk ausgeführt wird.  Sie verwenden einen Konsolenagenten, um NetApp -Konsolendienste mit Ihren Speicherumgebungen zu verbinden. 
+---
+= Erfahren Sie mehr über NetApp Console-Agenten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Ein _Konsolenagent_ wird in Ihrem Cloud-Netzwerk oder lokalen Netzwerk ausgeführt.  Sie verwenden einen Konsolenagenten, um NetApp -Konsolendienste mit Ihren Speicherumgebungen zu verbinden.
+
+
+
+== Was Sie ohne Konsolenagent tun können
+
+Einige Konsolenfunktionen und -dienste sind verfügbar, wenn Sie keinen Konsolenagenten bereitstellen:
+
+* Amazon FSx for NetApp ONTAP
++
+Für einige Aktionen ist ein Konsolenagent oder ein NetApp Workloads-Link erforderlich. https://docs.netapp.com/us-en/bluexp-fsx-ontap/start/concept-fsx-aws.html["Erfahren Sie, für welche Aktionen ein Konsolenagent oder -link erforderlich ist"^]
+
+* Automatisierungszentrum
+* Azure NetApp Files
++
+Sie benötigen keinen Konsolenagenten, um Azure NetApp Files zu verwalten, aber Sie benötigen einen, um Azure NetApp Files mithilfe der NetApp -Datenklassifizierung zu scannen.
+
+* Google Cloud NetApp Volumes
+* NetApp Copy and Sync
+* Digitaler Berater
+* Überwachen Sie die Lizenznutzung. Für die Abonnementüberwachung ist ein Konsolenagent erforderlich.
++
+Normalerweise können Sie der NetApp Konsole eine Lizenz ohne Konsolenagent hinzufügen.
+
++
+Zum Hinzufügen knotenbasierter Lizenzen für Cloud Volumes ONTAP ist ein Agent erforderlich, da die Daten aus den auf Cloud Volumes ONTAP Systemen installierten Lizenzen stammen.
+
+* Direkte Erkennung von On-Premises- ONTAP -Clustern
++
+Sie benötigen keinen Konsolenagenten, um der Konsole einen lokalen ONTAP Cluster hinzuzufügen, für zusätzliche Konsolenfunktionen und Datendienste ist jedoch einer erforderlich.
+
++
+https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["Erfahren Sie mehr über Erkennungs- und Verwaltungsoptionen für lokale ONTAP Cluster"^]
+
+* Software-Updates
+* Nachhaltigkeit
+* NetApp Workloads
+
+
+
+
+== Wenn ein Konsolenagent erforderlich ist
+
+Im Standardmodus benötigt die Konsole einen Konsolenagenten für:
+
+* Warnungen
+* Amazon FSx für ONTAP -Verwaltungsfunktionen
+* Amazon S3-Speicher
+* Azure Blob-Speicher
+* NetApp Backup und Recovery
+* Datenklassifizierung
+* Cloud Volumes ONTAP
+* NetApp Disaster Recovery
+* Systeme der E-Serie
+* Wirtschaftlichkeit ^1^
+* Google Cloud Storage-Buckets
+* On-Premises- ONTAP -Cluster-Integration mit NetApp -Datendiensten
+* NetApp Ransomware-Resilienz
+* StorageGRID -Systeme
+* NetApp Cloud Tiering
+* NetApp Volume-Caching
+
+
+^1^ Sie können auf diese Dienste ohne einen Konsolenagenten zugreifen, zum Einleiten von Aktionen ist jedoch ein Konsolenagent erforderlich.
+
+Sie benötigen immer einen Konsolenagenten, um die Konsole im eingeschränkten Modus zu verwenden.
+
+
+
+== Konsolenagenten müssen jederzeit betriebsbereit sein
+
+Konsolenagenten sind ein grundlegender Bestandteil der NetApp Konsole.  Es liegt in Ihrer Verantwortung (des Kunden), sicherzustellen, dass die relevanten Agenten jederzeit aktiv, betriebsbereit und erreichbar sind.  Die Konsole kann kurze Agentenausfälle bewältigen, Infrastrukturfehler müssen Sie jedoch schnell beheben.
+
+Diese Dokumentation unterliegt der EULA.  Der Betrieb des Produkts außerhalb der Dokumentation kann seine Funktionalität und Ihre EULA-Rechte beeinträchtigen.
+
+
+
+== Unterstützte Standorte
+
+Sie können Agenten an den folgenden Orten installieren:
+
+* Amazon Web Services
+* Microsoft Azure
++
+Stellen Sie einen Konsolenagenten in Azure in derselben Region bereit wie die von ihm verwalteten Cloud Volumes ONTAP -Systeme.  Alternativ können Sie es in der https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure-Regionenpaar"^] .  Dadurch wird sichergestellt, dass zwischen Cloud Volumes ONTAP und den zugehörigen Speicherkonten eine Azure Private Link-Verbindung verwendet wird. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["Erfahren Sie, wie Cloud Volumes ONTAP einen Azure Private Link verwendet"^]
+
+* Google Cloud
++
+Um die Konsole und Datendienste mit Google Cloud zu verwenden, stellen Sie Ihren Agenten in Google Cloud bereit.
+
+* Bei Ihnen vor Ort
+
+
+
+
+== Kommunikation mit Cloud-Anbietern
+
+Der Agent verwendet TLS 1.3 für die gesamte Kommunikation mit AWS, Azure und Google Cloud.
+
+
+
+== Eingeschränkter Modus
+
+Um die Konsole im eingeschränkten Modus zu verwenden, installieren Sie einen Konsolenagenten und greifen auf die Konsolenschnittstelle zu, die lokal auf dem Konsolenagenten ausgeführt wird.
+
+link:concept-modes.html["Erfahren Sie mehr über die Bereitstellungsmodi der NetApp Konsole"] .
+
+
+
+== So installieren Sie einen Konsolenagenten
+
+Sie können einen Konsolenagenten direkt von der Konsole, vom Marktplatz Ihres Cloud-Anbieters oder durch manuelle Installation der Software auf Ihrem eigenen Linux-Host oder in Ihrer VCenter-Umgebung installieren.  Wie Sie beginnen, hängt davon ab, ob Sie die Konsole im Standardmodus oder im eingeschränkten Modus verwenden.
+
+* link:concept-modes.html["Erfahren Sie mehr über die Bereitstellungsmodi der NetApp Konsole"]
+* link:task-quick-start-standard-mode.html["Erste Schritte mit der NetApp Konsole im Standardmodus"]
+* link:task-quick-start-restricted-mode.html["Erste Schritte mit der NetApp Konsole im eingeschränkten Modus"]
+
+
+
+
+== Cloud-Berechtigungen
+
+Sie benötigen spezielle Berechtigungen, um den Konsolenagenten direkt von der NetApp Konsole aus zu erstellen, und einen weiteren Satz von Berechtigungen für die Konsolenagenteninstanz selbst.  Wenn Sie den Konsolenagenten in AWS oder Azure direkt von der Konsole aus erstellen, erstellt die Konsole den Konsolenagenten mit den erforderlichen Berechtigungen.
+
+Wenn Sie die Konsole im Standardmodus verwenden, hängt die Art und Weise, wie Sie Berechtigungen erteilen, davon ab, wie Sie den Konsolenagenten erstellen möchten.
+
+Informationen zum Einrichten von Berechtigungen finden Sie hier:
+
+* Standardmodus
++
+** link:concept-install-options-aws.html["Agent-Installationsoptionen in AWS"]
+** link:concept-install-options-azure.html["Agent-Installationsoptionen in Azure"]
+** link:concept-install-options-google.html["Agent-Installationsoptionen in Google Cloud"]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Einrichten von Cloudberechtigungen für lokale Bereitstellungen"]
+
+
+* link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den eingeschränkten Modus einrichten"]
+
+
+Informationen zu den genauen Berechtigungen, die der Konsolenagent für den täglichen Betrieb benötigt, finden Sie auf den folgenden Seiten:
+
+* link:reference-permissions-aws.html["Erfahren Sie, wie der Konsolenagent AWS-Berechtigungen verwendet"]
+* link:reference-permissions-azure.html["Erfahren Sie, wie der Konsolen-Agent Azure-Berechtigungen verwendet."]
+* link:reference-permissions-gcp.html["Erfahren Sie, wie der Konsolenagent Google Cloud-Berechtigungen verwendet"]
+
+
+Es liegt in Ihrer Verantwortung, die Richtlinien des Konsolenagenten zu aktualisieren, wenn in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden.  In den Versionshinweisen sind neue Berechtigungen aufgeführt.
+
+
+
+== Agent-Upgrades
+
+NetApp aktualisiert die Agentensoftware monatlich, um Funktionen hinzuzufügen und die Stabilität zu verbessern.  Einige Konsolenfunktionen, wie Cloud Volumes ONTAP und die lokale ONTAP Clusterverwaltung, basieren auf der Version und den Einstellungen des Konsolenagenten.
+
+Im Standard- oder eingeschränkten Modus aktualisiert sich der Konsolenagent automatisch, wenn er über einen Internetzugang verfügt.
+
+
+
+== Betriebssystem- und VM-Wartung
+
+Die Wartung des Betriebssystems auf dem Konsolenagent-Host liegt in Ihrer (Kunden-)Verantwortung.  Beispielsweise sollten Sie (der Kunde) Sicherheitsupdates auf das Betriebssystem auf dem Konsolenagent-Host anwenden, indem Sie die Standardverfahren Ihres Unternehmens zur Betriebssystemverteilung befolgen.
+
+Beachten Sie, dass Sie (der Kunde) beim Anwenden kleinerer Sicherheitsupdates keine Dienste auf dem Console Gent-Host stoppen müssen.
+
+Wenn Sie (der Kunde) die Konsolen-Agent-VM stoppen und dann starten müssen, sollten Sie dies über die Konsole Ihres Cloud-Anbieters oder mithilfe der Standardverfahren für die lokale Verwaltung tun.
+
+<<connectors-must-be-operational-at-all-times,Der Konsolenagent muss jederzeit betriebsbereit sein>> .
+
+
+
+== Mehrere Systeme und Agenten
+
+Ein Agent kann mehrere Systeme verwalten und Datendienste in der Konsole unterstützen.  Sie können einen einzelnen Agenten verwenden, um mehrere Systeme basierend auf der Bereitstellungsgröße und den von Ihnen verwendeten Datendiensten zu verwalten.
+
+Arbeiten Sie bei groß angelegten Bereitstellungen mit Ihrem NetApp -Vertreter zusammen, um die Größe Ihrer Umgebung festzulegen.  Wenden Sie sich bei Problemen an den NetApp -Support.
+
+Hier sind einige Beispiele für Agentenbereitstellungen:
+
+* Sie verfügen über eine Multicloud-Umgebung (z. B. AWS und Azure) und möchten lieber einen Agenten in AWS und einen anderen in Azure haben.  Jedes verwaltet die in diesen Umgebungen ausgeführten Cloud Volumes ONTAP -Systeme.
+* Ein Dienstanbieter könnte eine Konsolenorganisation nutzen, um seinen Kunden Dienste bereitzustellen, während er eine andere Organisation für die Notfallwiederherstellung einer seiner Geschäftseinheiten nutzt.  Jede Organisation benötigt ihren eigenen Agenten.
+

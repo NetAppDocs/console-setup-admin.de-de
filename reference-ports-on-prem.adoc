@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: reference-ports-on-prem.html 
+keywords: networking, network, requirements, ports, on-prem, linux, http, https, bluexp 
+summary: Der Konsolenagent verwendet _eingehende_ Ports, wenn er manuell auf einem lokalen Linux-Host installiert wird.  Beziehen Sie sich bei Planungen auf diese Häfen. 
+---
+= Ports für den lokalen Konsolenagenten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Der Konsolenagent verwendet _eingehende_ Ports, wenn er manuell auf einem lokalen Linux-Host installiert wird.  Beziehen Sie sich bei Planungen auf diese Häfen.
+
+Diese eingehenden Regeln gelten für alle Bereitstellungsmodi der NetApp Konsole.
+
+[cols="10,10,80"]
+|===
+| Protokoll | Hafen | Zweck 
+
+
+| HTTP | 80  a| 
+* Bietet HTTP-Zugriff von Client-Webbrowsern auf die lokale Benutzeroberfläche
+* Wird während des Upgrade-Prozesses von Cloud Volumes ONTAP verwendet
+
+
+
+
+| HTTPS | 443 | Bietet HTTPS-Zugriff von Client-Webbrowsern auf die lokale Benutzeroberfläche 
+|===

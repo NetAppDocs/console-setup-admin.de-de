@@ -1,0 +1,40 @@
+= Neue sichere Endpunkte zum Abrufen von Connector-Bildern
+:allow-uri-read: 
+
+
+
+
+=== Neue sichere Endpunkte zum Abrufen von Connector-Bildern
+
+Wenn Sie den Connector installieren oder wenn ein automatisches Upgrade erfolgt, kontaktiert der Connector Repositorys, um Images für die Installation oder das Upgrade herunterzuladen.  Standardmäßig hat der Connector immer die folgenden Endpunkte kontaktiert:
+
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
+
+
+Der erste Endpunkt enthält ein Platzhalterzeichen, da wir keinen definitiven Standort angeben können.  Der Lastenausgleich des Repository wird vom Dienstanbieter verwaltet, was bedeutet, dass die Downloads von verschiedenen Endpunkten aus erfolgen können.
+
+Zur Erhöhung der Sicherheit kann der Connector jetzt Installations- und Upgrade-Images von dedizierten Endpunkten herunterladen:
+
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+
+Wir empfehlen Ihnen, mit der Verwendung dieser neuen Endpunkte zu beginnen, indem Sie die vorhandenen Endpunkte aus Ihren Firewall-Regeln entfernen und die neuen Endpunkte zulassen.
+
+Diese neuen Endpunkte werden ab der Version 3.9.47 des Connectors unterstützt.  Es besteht keine Abwärtskompatibilität mit früheren Versionen des Connectors.
+
+Beachten Sie Folgendes:
+
+* Die vorhandenen Endpunkte werden weiterhin unterstützt.  Wenn Sie die neuen Endpunkte nicht verwenden möchten, sind keine Änderungen erforderlich.
+* Der Connector kontaktiert zuerst die vorhandenen Endpunkte.  Wenn diese Endpunkte nicht erreichbar sind, kontaktiert der Connector automatisch die neuen Endpunkte.
+* Die neuen Endpunkte werden in den folgenden Szenarien nicht unterstützt:
++
+** Wenn der Connector in einer Regierungsregion installiert ist.
+** Wenn Sie den Connector mit BlueXP backup and recovery oder BlueXP ransomware protection verwenden.
+
+
++
+Für beide Szenarien können Sie die vorhandenen Endpunkte weiterhin verwenden.
+
+

@@ -1,0 +1,224 @@
+---
+sidebar: sidebar 
+permalink: task-dashboard.html 
+keywords: bluexp, dashboard, console, home page 
+summary: In der NetApp Konsole können Sie Metriken auf der Startseite anzeigen. 
+---
+= Anzeigen von Metriken auf der Startseite der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Durch die Überwachung des Zustands Ihres Speicherbestands wird sichergestellt, dass Sie über Probleme mit dem Speicherschutz informiert sind und Schritte zu deren Lösung unternehmen können.  Zeigen Sie auf der Startseite der NetApp -Konsole den Status Ihrer Sicherungen und Wiederherstellungen von NetApp Backup and Recovery sowie die Anzahl der Workloads an, die einem Ransomware-Angriff ausgesetzt sind oder gemäß NetApp Ransomware Resilience geschützt sind.  Sie können die Speicherkapazität für einzelne Cluster und Cloud Volumes ONTAP, ONTAP Warnmeldungen, die Speicherleistungskapazität pro Cluster oder Cloud Volumes ONTAP System, die verschiedenen Arten Ihrer Lizenzen und mehr überprüfen.
+
+Alle Bereiche auf der Startseite zeigen Daten auf Organisationsebene.  In den Bereichen „Speicherkapazität“ und „Speicherleistung“ werden mit Projekten verknüpfte Systeme angezeigt, auf die der Benutzer basierend auf IAM-Berechtigungen zugreifen kann.
+
+Das System aktualisiert die Daten auf der Startseite alle fünf Minuten.  Durch das Caching können die Daten auf dieser Seite bis zu 15 Minuten lang von den tatsächlichen Werten abweichen.
+
+
+NOTE: Für genaue Messwerte auf der Startseite sind entsprechend dimensionierte und konfigurierte Konsolenagenten erforderlich.
+
+
+
+== Erforderliche NetApp Konsolenrollen
+
+Jeder Bereich auf der Startseite erfordert unterschiedliche Benutzerrollen:
+
+* *Speicherkapazitätsbereich*: Möglichkeit, die Seite „NetApp -Konsolensysteme“ anzuzeigen
+* * ONTAP -Warnbereich*: Ordner- oder Projektadministrator, Operations Support Analyst, Organisationsadministrator, Organisationsbetrachter, Superadministrator, Superbetrachter
+* *Speicherleistungskapazitätsbereich*: Möglichkeit, die Seite „NetApp -Konsolensysteme“ anzuzeigen
+* *Bereich „Lizenzen und Abonnements“*: Ordner- oder Projektadministrator, Organisationsadministrator, Organisationsbetrachter, Superadministrator, Superbetrachter
+* *Bereich „Ransomware-Resilienz“*: Ordner- oder Projektadministrator, Organisationsadministrator, Ransomware-Schutzadministrator, Ransomware-Schutzbetrachter, Superadministrator, Superbetrachter
+* *Bereich „Backup und Wiederherstellung“*: Backup- und Wiederherstellungs-Backup-Administrator, Super-Admin für Backup und Wiederherstellung, Backup- und Wiederherstellungs-Backup-Viewer, Backup- und Wiederherstellungs-Klon-Administrator, Ordner- oder Projekt-Administrator, Organisations-Administrator, Backup- und Wiederherstellungs-Wiederherstellungs-Administrator, Super-Admin, Super-Viewer
+
+
+Wenn Sie nicht über die Berechtigung zum Zugriff auf einen Bereich verfügen, wird in dem Bereich eine Meldung angezeigt, die darauf hinweist, dass Ihnen die Berechtigung zur Verwendung des Bereichs fehlt.
+
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über die Zugriffsrollen der NetApp Konsole."] .
+
+.Schritte
+. Wählen Sie im NetApp -Konsolenmenü *Home* aus.
++
+Wenn Sie über die Rolle des Organisationsadministrators verfügen und kein Agent oder Speichersystem eingerichtet ist, werden auf der Startseite Informationen zu den ersten Schritten angezeigt.
+
++
+image:screenshot-home-greenfield.png["Startseite der NetApp -Konsole zur Begrüßung neuer Benutzer"]
+
++
+Wenn Sie die NetApp Konsole bereits eingerichtet haben, mindestens ein Konsolenagent aktiviert ist und mindestens ein Cluster oder Cloud Volumes ONTAP System auf diesem Agenten hinzugefügt wurde, werden auf der Startseite Kennzahlen zu Ihrer Speicherumgebung angezeigt.
+
++
+image:screenshot-home-metrics.png["Startseite der NetApp Konsole mit Metriken"]
+
+
+
+
+
+== Aktivieren Sie die Anzeige von Metriken auf der Startseite
+
+Sie können Metriken auf der Startseite sehen, wenn die folgenden Bedingungen erfüllt sind:
+
+* Sie sind bei einer SaaS-Instanz der NetApp -Konsole angemeldet.
+* Sie gehören zu einer Organisation mit vorhandenen Speicherressourcen (Agent und Cluster oder Cloud Volumes ONTAP System).
+* Mindestens ein Konsolenagent ist aktiviert.
+* Auf diesem Agenten wurde mindestens ein Cluster oder Cloud Volumes ONTAP -System hinzugefügt.
+
+
+Führen Sie die folgenden Aufgaben aus, um die Anzeige von Metriken auf der Startseite zu aktivieren:
+
+* Aktivieren Sie mindestens einen Konsolenagenten.
+* Fügen Sie mit diesem Agenten mindestens einen Cluster oder ein Cloud Volumes ONTAP hinzu.
+
+
+
+
+== Gesamtspeicherkapazität anzeigen
+
+Der Bereich „Speicherkapazität“ bietet die folgenden Informationen zu ONTAP Clustern und Cloud Volumes ONTAP Systemen:
+
+* Anzahl der in der Konsole erkannten ONTAP -Systeme
+* Anzahl der in der Konsole erkannten Cloud Volumes ONTAP -Systeme
+* Kapazitätsnutzung pro Cluster
+
+
+Die Reihenfolge der Cluster bzw. Cloud Volumes ONTAP -Systeme richtet sich nach der genutzten Kapazität.  Zur einfachen Identifizierung wird der Cluster oder das System mit der höchsten Kapazität zuerst angezeigt.
+
+Warnanzeigen werden für Cluster mit 80 % Kapazität angezeigt, wobei die Daten alle fünf Minuten aktualisiert werden.
+
+
+TIP: Wenn Sie mehrere Projekte haben, werden im Bereich „Speicherkapazität“ möglicherweise andere Daten angezeigt als auf der Seite „Systeme“.  Dies liegt daran, dass auf der Seite „Systeme“ Informationen auf Projektebene angezeigt werden, während im Bereich „Speicherkapazität“ Informationen auf Organisationsebene angezeigt werden.  Außerdem können die Daten in diesem Bereich maximal 15 Minuten lang von den tatsächlichen Werten abweichen, da die Daten für diesen Zeitraum zwischengespeichert werden, um die Leistung zu optimieren.
+
+.Schritte
+. Überprüfen Sie im NetApp -Konsolenmenü den Bereich „Speicherkapazität“.
+. Wählen Sie im Bereich „Speicherkapazität“ *Anzeigen* aus, um zur Seite „Konsolensysteme“ zu gelangen.
+. Wählen Sie auf der Seite „Systeme“ das Projekt aus, das den Cluster enthält, den Sie anzeigen möchten.
+. Wählen Sie auf der Seite „Systeme“ einen Cluster aus, um weitere Details zu diesem Cluster anzuzeigen.
+
+
+
+
+== ONTAP Warnmeldungen anzeigen
+
+Zeigen Sie Probleme oder potenzielle Risiken in Ihren lokalen NetApp ONTAP Umgebungen an. Sie können einige Nicht-EMS-Warnungen und einige EMS-Warnungen sehen.
+
+Die Daten werden alle 5 Minuten aktualisiert.
+
+Sie können ONTAP -Warnmeldungen mit diesen Schweregraden sehen:
+
+* Kritisch
+* Warnung
+* Informativ
+
+
+Sie können ONTAP -Warnmeldungen für diese betroffenen Bereiche sehen:
+
+* Kapazität
+* Performance
+* Schutz
+* Verfügbarkeit
+* Sicherheit
+
+
+
+TIP: Durch das Zwischenspeichern wird die Leistung optimiert, es kann jedoch dazu führen, dass die Daten in diesem Bereich bis zu 15 Minuten lang von den tatsächlichen Werten abweichen.
+
+*Unterstützte Systeme*
+
+* Ein lokales ONTAP NAS- oder SAN-System wird unterstützt.
+* Cloud Volumes ONTAP -Systeme werden nicht unterstützt.
+
+
+*Unterstützte Datenquellen*
+
+Zeigen Sie Warnungen zu bestimmten Ereignissen an, die in ONTAP auftreten. Sie sind eine Kombination aus EMS- und metrischen Warnungen.
+
+Weitere Informationen zu ONTAP -Warnmeldungen finden Sie unter https://docs.netapp.com/us-en/bluexp-alerts/index.html["Informationen zu ONTAP -Warnmeldungen"^] .
+
+Eine Liste der möglicherweise angezeigten Warnmeldungen finden Sie unter https://docs.netapp.com/us-en/bluexp-alerts/alerts-use-dashboard.html["Mögliche Risiken im ONTAP -Speicher anzeigen"^] .
+
+.Schritte
+. Überprüfen Sie im NetApp Konsolenmenü den Bereich „ONTAP -Warnmeldungen“.
+. Filtern Sie die Warnungen optional, indem Sie den Schweregrad auswählen, oder ändern Sie den Filter, um Warnungen basierend auf dem Auswirkungsbereich anzuzeigen.
+. Wählen Sie im Bereich „ONTAP -Warnmeldungen“ die Option „Anzeigen“ aus, um zur Seite „Konsolenwarnungen“ zu gelangen.
+
+
+
+
+== Anzeigen der Speicherleistungskapazität
+
+Überprüfen Sie die pro Cluster oder Cloud Volumes ONTAP System verwendete Speicherleistungskapazität, um festzustellen, wie sich Leistungskapazität, Latenz und IOPS auf Ihre Workloads auswirken.  Beispielsweise stellen Sie möglicherweise fest, dass Sie Workloads verschieben müssen, um die Latenz zu minimieren und IOPS und Durchsatz für Ihre kritischen Workloads zu maximieren.
+
+Das System ordnet Cluster und Systeme nach Leistungskapazität an und listet zur einfachen Identifizierung die Systeme mit der höchsten Kapazität zuerst auf.
+
+
+TIP: Durch das Zwischenspeichern wird die Leistung optimiert, es kann jedoch dazu führen, dass die Daten in diesem Bereich bis zu 15 Minuten lang von den tatsächlichen Werten abweichen.
+
+.Schritte
+. Überprüfen Sie im NetApp -Konsolenmenü den Bereich „Speicherleistung“.
+. Wählen Sie im Bereich „Speicherleistung“ *Anzeigen* aus, um zu einer Leistungsseite zu gelangen, auf der alle Cluster- und Cloud Volumes ONTAP -Systemdaten hinsichtlich Leistungskapazität, IOPS und Latenz aufgelistet sind.
+. Wählen Sie einen Cluster aus, um seine Details im System Manager anzuzeigen.
+
+
+
+
+== Zeigen Sie die Lizenzen und Abonnements an, die Sie haben
+
+Überprüfen Sie die folgenden Informationen im Bereich „Lizenzen und Abonnements“:
+
+* Die Gesamtzahl Ihrer Lizenzen und Abonnements.
+* Die Anzahl der einzelnen Lizenz- und Abonnementtypen, die Sie besitzen (Direktlizenz, Jahresvertrag oder PAYGO).
+* Die Anzahl der Lizenzen und Abonnements, die aktiv sind, Maßnahmen erfordern oder bald ablaufen.
+* Das System zeigt Indikatoren neben den Lizenztypen an, bei denen Maßnahmen erforderlich sind oder die bald ablaufen.
+
+
+Die Daten werden alle 5 Minuten aktualisiert.
+
+
+TIP: Durch das Zwischenspeichern wird die Leistung optimiert, es kann jedoch dazu führen, dass die Daten in diesem Bereich bis zu 15 Minuten lang von den tatsächlichen Werten abweichen.
+
+.Schritte
+. Überprüfen Sie im NetApp -Konsolenmenü den Bereich „Lizenzen und Abonnements“.
+. Wählen Sie im Bereich „Lizenzen und Abonnements“ die Option „Anzeigen“ aus, um zur Seite „Konsolenlizenzen und -abonnements“ zu gelangen.
+
+
+
+
+== Ransomware-Resilienzstatus anzeigen
+
+Finden Sie mit dem NetApp Ransomware Resilience-Datendienst heraus, ob Workloads einem Risiko durch Ransomware-Angriffe ausgesetzt sind oder geschützt sind.  Sie können die Gesamtmenge der geschützten Daten überprüfen, die Anzahl der empfohlenen Aktionen anzeigen und die Anzahl der Warnungen im Zusammenhang mit dem Ransomware-Schutz einsehen.
+
+Die Daten werden alle 5 Minuten aktualisiert und stimmen mit den im NetApp Ransomware Resilience Dashboard angezeigten Daten überein.
+
+https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Erfahren Sie mehr über NetApp Ransomware Resilience"^] .
+
+.Schritte
+. Überprüfen Sie im NetApp -Konsolenmenü den Bereich „Ransomware-Resilienz“.
+. Führen Sie im Bereich „Ransomware-Resilienz“ einen der folgenden Schritte aus:
++
+** Wählen Sie *Anzeigen*, um zum NetApp Ransomware Resilience Dashboard zu gelangen. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["Überwachen Sie den Workload-Zustand mit dem NetApp Ransomware Resilience Dashboard"^] .
+** Lesen Sie die „Empfohlenen Maßnahmen“ im NetApp Ransomware Resilience Dashboard. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["Überprüfen Sie die Schutzempfehlungen im NetApp Ransomware Resilience Dashboard"^] .
+** Wählen Sie den Warnlink aus, um Warnmeldungen auf der Seite „NetApp Ransomware Resilience Alerts“ zu überprüfen.  Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["Behandeln Sie erkannte Ransomware-Warnmeldungen mit NetApp Ransomware Resilience"^] .
+
+
+
+
+
+
+== Anzeigen des Sicherungs- und Wiederherstellungsstatus
+
+Überprüfen Sie den Gesamtstatus Ihrer Backups und Wiederherstellungen von NetApp Backup and Recovery.  Sie können die Anzahl der geschützten und ungeschützten Ressourcen sehen.  Sie können auch den Prozentsatz der Sicherungs- und Wiederherstellungsvorgänge zum Schutz Ihrer Workloads sehen.  Ein höherer Prozentsatz weist auf einen verbesserten Datenschutz hin.
+
+Die Daten werden alle 5 Minuten aktualisiert.
+
+
+TIP: Durch das Zwischenspeichern wird die Leistung optimiert, es kann jedoch dazu führen, dass die Daten in diesem Bereich bis zu 15 Minuten lang von den tatsächlichen Werten abweichen.
+
+.Schritte
+. Überprüfen Sie im NetApp -Konsolenmenü den Bereich „Backup und Wiederherstellung“.
+. Wählen Sie *Anzeigen*, um zum NetApp Backup and Recovery Dashboard zu gelangen. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["NetApp Backup- und Recovery-Dokumentation"^] .
+

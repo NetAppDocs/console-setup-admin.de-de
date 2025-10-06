@@ -1,0 +1,43 @@
+= 
+:allow-uri-read: 
+
+
+Das folgende Video zeigt die Schritte zum Abonnieren von NetApp Intelligent Services vom AWS Marketplace:
+
+.Abonnieren Sie NetApp Intelligent Services vom AWS Marketplace
+video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
+.Schritte
+. Wählen Sie *Administration > *Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen der Organisation* aus.
+. Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
++
+Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Konsole verknüpft sind.
+
++
+image:screenshot_aws_configure_subscription.png["Ein Screenshot des Aktionsmenüs für einen Satz vorhandener Anmeldeinformationen."]
+
+. Um die Anmeldeinformationen mit einem vorhandenen Abonnement zu verknüpfen, wählen Sie das Abonnement aus der Dropdown-Liste aus und wählen Sie *Konfigurieren*.
+. Um die Anmeldeinformationen einem neuen Abonnement zuzuordnen, wählen Sie *Abonnement hinzufügen > Fortfahren* und folgen Sie den Schritten im AWS Marketplace:
++
+.. Wählen Sie *Kaufoptionen anzeigen*.
+.. Wählen Sie *Abonnieren*.
+.. Wählen Sie *Konto einrichten*.
++
+Sie werden zur NetApp Konsole weitergeleitet.
+
+.. Auf der Seite *Abonnementzuweisung*:
++
+*** Wählen Sie die Konsolenorganisationen oder -konten aus, mit denen Sie dieses Abonnement verknüpfen möchten.
+*** Wählen Sie im Feld *Vorhandenes Abonnement ersetzen* aus, ob Sie das vorhandene Abonnement für eine Organisation oder ein Konto automatisch durch dieses neue Abonnement ersetzen möchten.
++
+Die Konsole ersetzt das vorhandene Abonnement für alle Anmeldeinformationen in der Organisation oder im Konto durch dieses neue Abonnement.  Wenn ein Satz von Anmeldeinformationen nie mit einem Abonnement verknüpft war, wird dieses neue Abonnement nicht mit diesen Anmeldeinformationen verknüpft.
+
++
+Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell zuordnen, indem Sie diese Schritte wiederholen.
+
+*** Wählen Sie *Speichern*.
+
+
+
+
+

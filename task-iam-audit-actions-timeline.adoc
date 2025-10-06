@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: task-iam-audit-actions-timeline.html 
+keywords: iam, audit, monitor, audit iam actions, monitor iam actions 
+summary: Überwachen oder prüfen Sie die Identitäts- und Zugriffsverwaltungsaktionen der NetApp Konsole auf der Seite „Audit“. 
+---
+= Überwachen oder prüfen Sie die IAM-Aktivität
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie eine abgeschlossene Aktion im Zusammenhang mit Identität und Zugriff überwachen oder prüfen müssen, können Sie Details auf der Seite „Prüfung“ anzeigen.  Sie möchten beispielsweise überprüfen, wer ein Mitglied zu einer Organisation hinzugefügt hat oder ob ein Projekt erfolgreich gelöscht wurde.
+
+.Schritte
+. Wählen Sie *Administration > Audit*.
+. Verwenden Sie auf der Seite *Audit* die Filter, um die Ergebnisse einzugrenzen.  Wählen Sie *Service* und dann *Tenancy*.
+. Verwenden Sie einen der anderen Filter, um zu ändern, welche Aktionen in der Tabelle angezeigt werden.
++
+Sie können beispielsweise den Filter *Benutzer* verwenden, um Aktionen anzuzeigen, die sich auf ein bestimmtes Benutzerkonto beziehen.
+
+

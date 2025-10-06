@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: task-federation-import.html 
+keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity, 
+summary: 'Wenn Sie zuvor die Föderation über NetApp Cloud Central (eine externe Anwendung der NetApp Konsole) eingerichtet haben, werden Sie auf der Föderationsseite aufgefordert, Ihre vorhandene föderierte Verbindung in die Konsole zu importieren, damit Sie sie in der neuen Schnittstelle verwalten können.  Sie können dann die neuesten Verbesserungen nutzen, ohne Ihre Verbundverbindung neu erstellen zu müssen.' 
+---
+= Importieren Sie Ihre Föderation in die NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie zuvor die Föderation über NetApp Cloud Central (eine externe Anwendung der NetApp Konsole) eingerichtet haben, werden Sie auf der Föderationsseite aufgefordert, Ihre vorhandene föderierte Verbindung in die Konsole zu importieren, damit Sie sie in der neuen Schnittstelle verwalten können.  Sie können dann die neuesten Verbesserungen nutzen, ohne Ihre Verbundverbindung neu erstellen zu müssen.
+
+
+NOTE: Nachdem Sie Ihre vorhandene Föderation importiert haben, können Sie die Föderation auf der Seite *Föderationen* verwalten.link:task-federation-manage.html["Erfahren Sie mehr über die Verwaltung von Föderationen."]
+
+.Erforderliche Rolle
+Organisationsadministrator oder Föderationsadministrator.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie die Registerkarte *Föderation* aus.
+. Wählen Sie *Föderation importieren*.
+

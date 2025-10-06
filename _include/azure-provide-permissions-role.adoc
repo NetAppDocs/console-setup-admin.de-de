@@ -1,0 +1,31 @@
+= 
+:allow-uri-read: 
+
+
+Gehen Sie zum Azure-Portal und weisen Sie der virtuellen Maschine des Konsolen-Agents für ein oder mehrere Abonnements die benutzerdefinierte Azure-Rolle zu.
+
+.Schritte
+. Öffnen Sie im Azure-Portal den Dienst *Abonnements* und wählen Sie Ihr Abonnement aus.
++
+Es ist wichtig, die Rolle vom Dienst *Abonnements* zuzuweisen, da dies den Umfang der Rollenzuweisung auf Abonnementebene angibt.  Der _Bereich_ definiert die Menge der Ressourcen, auf die der Zugriff angewendet wird.  Wenn Sie einen Bereich auf einer anderen Ebene angeben (z. B. auf der Ebene der virtuellen Maschine), wird Ihre Fähigkeit, Aktionen innerhalb der NetApp Konsole auszuführen, beeinträchtigt.
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure-Dokumentation: Umfang von Azure RBAC verstehen"^]
+
+. Wählen Sie *Zugriffskontrolle (IAM)* > *Hinzufügen* > *Rollenzuweisung hinzufügen*.
+. Wählen Sie auf der Registerkarte *Rolle* die Rolle *Konsolenbediener* aus und klicken Sie auf *Weiter*.
++
+
+NOTE: „Konsolenoperator“ ist der in der Richtlinie angegebene Standardname.  Wenn Sie einen anderen Namen für die Rolle gewählt haben, wählen Sie stattdessen diesen Namen aus.
+
+. Führen Sie auf der Registerkarte *Mitglieder* die folgenden Schritte aus:
++
+.. Weisen Sie einer *verwalteten Identität* Zugriff zu.
+.. Wählen Sie *Mitglieder auswählen*, wählen Sie das Abonnement aus, in dem die virtuelle Maschine des Konsolen-Agents erstellt wurde, wählen Sie unter *Verwaltete Identität* *Virtuelle Maschine* und wählen Sie dann die virtuelle Maschine des Konsolen-Agents aus.
+.. Wählen Sie *Auswählen*.
+.. Wählen Sie *Weiter*.
+.. Wählen Sie *Überprüfen + zuweisen*.
+.. Wenn Sie Ressourcen in zusätzlichen Azure-Abonnements verwalten möchten, wechseln Sie zu diesem Abonnement und wiederholen Sie diese Schritte.
+
+
+

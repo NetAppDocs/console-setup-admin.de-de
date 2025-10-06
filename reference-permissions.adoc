@@ -1,0 +1,247 @@
+---
+sidebar: sidebar 
+permalink: reference-permissions.html 
+keywords: permissions, actions 
+summary: Um die Funktionen und Dienste der NetApp -Konsole nutzen zu können, müssen Sie Berechtigungen erteilen, damit die Konsole Vorgänge in Ihrer Cloud-Umgebung ausführen kann.  Verwenden Sie die Links auf dieser Seite, um schnell auf die Berechtigungen zuzugreifen, die Sie je nach Ihrem Ziel benötigen. 
+---
+= Berechtigungsübersicht für die NetApp -Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um die Funktionen und Dienste der NetApp -Konsole nutzen zu können, müssen Sie Berechtigungen erteilen, damit die Konsole Vorgänge in Ihrer Cloud-Umgebung ausführen kann.  Verwenden Sie die Links auf dieser Seite, um schnell auf die Berechtigungen zuzugreifen, die Sie je nach Ihrem Ziel benötigen.
+
+
+
+== AWS-Berechtigungen
+
+Die NetApp Konsole erfordert AWS-Berechtigungen für einen Konsolenagenten und für einzelne Dienste.
+
+
+
+=== Konsolenagenten
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Bereitstellen eines Konsolenagenten über die Konsole | Der Benutzer, der einen Konsolenagenten aus der Konsole erstellt, benötigt bestimmte Berechtigungen, um die Instanz in AWS bereitzustellen. | link:task-install-connector-aws-bluexp.html#aws-permissions-agent["AWS-Berechtigungen einrichten"] 
+
+
+| Berechtigungen für einen Konsolenagenten bereitstellen | Wenn die Konsole einen Konsolenagenten bereitstellt, fügt sie der Instanz eine Richtlinie hinzu, die die erforderlichen Berechtigungen zum Verwalten von Ressourcen und Prozessen in Ihrem AWS-Konto bereitstellt.  Sie müssen die Richtlinie selbst einrichten, wenn Sie einen Konsolen-Agenten vom AWS Marketplace bereitstellen, wenn Sie einen Konsolen-Agenten manuell installieren oder wenn Sielink:task-adding-aws-accounts.html#add-credentials-agent-aws["Fügen Sie einem Konsolenagenten weitere AWS-Anmeldeinformationen hinzu"] .  Sie müssen außerdem sicherstellen, dass die Richtlinie auf dem neuesten Stand ist, da in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden. | link:reference-permissions-aws.html["AWS-Berechtigungen für einen Konsolenagenten"] 
+|===
+
+
+=== NetApp Backup und Recovery
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Sichern Sie lokale ONTAP -Cluster mit NetApp Backup and Recovery auf Amazon S3 | Beim Aktivieren von Backups auf Ihren ONTAP Volumes werden Sie von NetApp Backup and Recovery aufgefordert, einen Zugriffsschlüssel und ein Geheimnis für einen IAM-Benutzer mit bestimmten Berechtigungen einzugeben. | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-aws.html["S3-Berechtigungen für Backups einrichten"^] 
+|===
+
+
+=== Cloud Volumes ONTAP
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Berechtigungen für Cloud Volumes ONTAP -Knoten bereitstellen | Jedem Cloud Volumes ONTAP Knoten in AWS muss eine IAM-Rolle zugeordnet werden.  Dasselbe gilt für den HA-Mediator.  Die Standardoption besteht darin, die IAM-Rollen von der Konsole erstellen zu lassen. Sie können jedoch auch Ihre eigenen Rollen verwenden, wenn Sie das System in der Konsole erstellen. | https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-set-up-iam-roles.html["Erfahren Sie, wie Sie die IAM-Rollen selbst einrichten"^] 
+|===
+
+
+=== NetApp Copy and Sync
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Bereitstellen des Datenbrokers in AWS | Das AWS-Benutzerkonto, das Sie zum Bereitstellen des Datenbrokers verwenden, muss über bestimmte Berechtigungen verfügen. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws["Erforderliche Berechtigungen zum Bereitstellen des Datenbrokers in AWS"^] 
+
+
+| Berechtigungen für den Datenbroker bereitstellen | Wenn NetApp Copy and Sync den Datenbroker bereitstellt, wird eine IAM-Rolle für die Datenbrokerinstanz erstellt.  Sie können den Datenbroker bei Bedarf mit Ihrer eigenen IAM-Rolle bereitstellen. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["Voraussetzungen für die Verwendung einer eigenen IAM-Rolle mit dem AWS-Datenbroker"^] 
+
+
+| Aktivieren Sie den AWS-Zugriff für einen manuell installierten Datenbroker | Wenn Sie den Datenbroker mit einer Synchronisierungsbeziehung verwenden, die einen S3-Bucket umfasst, sollten Sie den Linux-Host für den AWS-Zugriff vorbereiten.  Wenn Sie den Datenbroker installieren, müssen Sie AWS-Schlüssel für einen IAM-Benutzer bereitstellen, der über programmgesteuerten Zugriff und bestimmte Berechtigungen verfügt. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-aws["Aktivieren des Zugriffs auf AWS"^] 
+|===
+
+
+=== FSx für ONTAP
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Erstellen und Verwalten von FSx für ONTAP | Um ein Amazon FSx for NetApp ONTAP System zu erstellen oder zu verwalten, müssen Sie der Konsole AWS-Anmeldeinformationen hinzufügen, indem Sie die ARN einer IAM-Rolle angeben, die der Konsole die erforderlichen Berechtigungen erteilt. | https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Erfahren Sie, wie Sie AWS-Anmeldeinformationen für FSx einrichten"^] 
+|===
+
+
+=== NetApp Cloud Tiering
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Tiering von lokalen ONTAP -Clustern auf Amazon S3 | Wenn Sie NetApp Cloud Tiering für AWS aktivieren, fordert Sie der Assistent auf, einen Zugriffsschlüssel und einen geheimen Schlüssel einzugeben.  Diese Anmeldeinformationen werden an den ONTAP Cluster weitergegeben, damit ONTAP Daten in den S3-Bucket einstufen kann. | https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#set-up-s3-permissions["Einrichten von S3-Berechtigungen für das Tiering"^] 
+|===
+
+
+== Azure-Berechtigungen
+
+Die Konsole erfordert Azure-Berechtigungen für einen Konsolen-Agenten und für einzelne Dienste.
+
+
+
+=== Konsolenagent
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Bereitstellen eines Konsolenagenten über die Konsole | Wenn Sie einen Konsolen-Agenten über die Konsole bereitstellen, müssen Sie ein Azure-Konto oder einen Dienstprinzipal verwenden, der über die Berechtigung zum Bereitstellen einer Konsolen-Agent-VM in Azure verfügt. | link:task-install-connector-azure-bluexp.html#connector-custom-role["Einrichten von Azure-Berechtigungen"] 
+
+
+| Berechtigungen für einen Konsolenagenten bereitstellen  a| 
+Wenn die Konsole eine Konsolen-Agent-VM in Azure bereitstellt, erstellt sie eine benutzerdefinierte Rolle, die die erforderlichen Berechtigungen zum Verwalten von Ressourcen und Prozessen innerhalb dieses Azure-Abonnements bereitstellt.
+
+Sie müssen die benutzerdefinierte Rolle selbst einrichten, wenn Sie einen Konsolen-Agenten vom Marktplatz aus starten, wenn Sie einen Konsolen-Agenten manuell installieren oder wenn Sielink:task-adding-azure-accounts.html#add-credentials-azure["Fügen Sie einem Konsolen-Agenten weitere Azure-Anmeldeinformationen hinzu"] .
+
+Sie müssen außerdem sicherstellen, dass die Richtlinie auf dem neuesten Stand ist, da in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden.
+ a| 
+link:reference-permissions-azure.html["Azure-Berechtigungen für einen Konsolen-Agent"]
+
+|===
+
+
+=== NetApp Backup und Recovery
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Sichern Sie Cloud Volumes ONTAP im Azure Blob Storage  a| 
+Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwenden, müssen Sie in den folgenden Szenarien Berechtigungen zu einem Konsolenagenten hinzufügen:
+
+* Sie möchten die Funktion „Suchen und Wiederherstellen“ verwenden
+* Sie möchten vom Kunden verwaltete Verschlüsselungsschlüssel (CMEK) verwenden
+
+ a| 
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-azure.html["Sichern Sie Cloud Volumes ONTAP Daten mit Backup und Recovery im Azure Blob-Speicher"^]
+
+
+
+
+| Sichern Sie lokale ONTAP -Cluster im Azure Blob Storage | Wenn Sie NetApp Backup and Recovery zum Sichern von ONTAP-Clustern vor Ort verwenden, müssen Sie einem Konsolenagenten Berechtigungen hinzufügen, um die Funktion „Suchen und Wiederherstellen“ verwenden zu können. | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-azure.html["Sichern Sie lokale ONTAP -Daten mit Backup und Recovery im Azure Blob-Speicher"^] 
+|===
+
+
+=== NetApp Kopieren und Synchronisieren
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Bereitstellen des Datenbrokers in Azure | Das Azure-Benutzerkonto, das Sie zum Bereitstellen des Datenbrokers verwenden, muss über die erforderlichen Berechtigungen verfügen. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-azure.html#permissions-required-to-deploy-the-data-broker-in-azure["Erforderliche Berechtigungen zum Bereitstellen des Datenbrokers in Azure"^] 
+|===
+
+
+== Google Cloud-Berechtigungen
+
+Die Konsole erfordert Google Cloud-Berechtigungen für einen Konsolenagenten und für einzelne Dienste.
+
+
+
+=== Konsolenagenten
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Bereitstellen eines Konsolenagenten über die Konsole | Der Google Cloud-Benutzer, der einen Konsolen-Agenten von der Konsole aus bereitstellt, benötigt bestimmte Berechtigungen, um einen Konsolen-Agenten in Google Cloud bereitzustellen. | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["Richten Sie Berechtigungen zum Erstellen eines Konsolenagenten ein"] 
+
+
+| Berechtigungen für einen Konsolenagenten bereitstellen | Das Dienstkonto für eine VM-Instanz des Konsolenagenten muss über bestimmte Berechtigungen für den täglichen Betrieb verfügen.  Sie müssen das Dienstkonto während der Bereitstellung mit einem Konsolenagenten verknüpfen.  Sie müssen außerdem sicherstellen, dass die Richtlinie auf dem neuesten Stand ist, da in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden. | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["Einrichten von Berechtigungen für einen Konsolenagenten"] 
+|===
+
+
+=== NetApp Backup und Recovery
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Sichern Sie Cloud Volumes ONTAP in Google Cloud  a| 
+Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwenden, müssen Sie in den folgenden Szenarien Berechtigungen zu einem Konsolenagenten hinzufügen:
+
+* Sie möchten die Funktion „Suchen und Wiederherstellen“ verwenden
+* Sie möchten vom Kunden verwaltete Verschlüsselungsschlüssel (CMEK) verwenden
+
+ a| 
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html["Sichern Sie Cloud Volumes ONTAP Daten mit Backup und Recovery in Google Cloud Storage"^]
+* https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-cvo-gcp.html["Berechtigungen für CMEKs"^]
+
+
+
+
+| Sichern Sie lokale ONTAP -Cluster in der Google Cloud | Wenn Sie NetApp Backup and Recovery zum Sichern von ONTAP-Clustern vor Ort verwenden, müssen Sie einem Konsolenagenten Berechtigungen hinzufügen, um die Funktion „Suchen und Wiederherstellen“ verwenden zu können. | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-gcp.html["Sichern Sie lokale ONTAP -Daten mit Backup und Recovery in Google Cloud Storage"^] 
+|===
+
+
+=== NetApp Copy and Sync
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Bereitstellen des Datenbrokers in Google Cloud | Stellen Sie sicher, dass der Google Cloud-Benutzer, der den Datenbroker bereitstellt, über die erforderlichen Berechtigungen verfügt. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-gcp.html#permissions-required-to-deploy-the-data-broker-in-google-cloud["Erforderliche Berechtigungen zum Bereitstellen des Datenbrokers in Google Cloud"^] 
+
+
+| Aktivieren Sie den Google Cloud-Zugriff für einen manuell installierten Datenbroker | Wenn Sie den Datenbroker mit einer Synchronisierungsbeziehung verwenden möchten, die einen Google Cloud Storage-Bucket umfasst, sollten Sie den Linux-Host für den Google Cloud-Zugriff vorbereiten.  Wenn Sie den Datenbroker installieren, müssen Sie einen Schlüssel für ein Dienstkonto mit bestimmten Berechtigungen angeben. | https://docs.netapp.com/us-en/bluexp-copy-sync/task-installing-linux.html#enabling-access-to-google-cloud["Zugriff auf Google Cloud aktivieren"^] 
+|===
+
+
+== StorageGRID Berechtigungen
+
+Die Konsole benötigt StorageGRID -Berechtigungen für zwei Dienste.
+
+
+
+=== NetApp Backup und Recovery
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Sichern Sie lokale ONTAP -Cluster auf StorageGRID | Wenn Sie StorageGRID als Sicherungsziel für ONTAP Cluster vorbereiten, werden Sie von NetApp Backup and Recovery aufgefordert, einen Zugriffsschlüssel und ein Geheimnis für einen IAM-Benutzer mit bestimmten Berechtigungen einzugeben. | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["Bereiten Sie StorageGRID als Ihr Sicherungsziel vor"^] 
+|===
+
+
+=== NetApp Cloud Tiering
+
+[cols="20,60,20"]
+|===
+| Ziel | Beschreibung | Link 
+
+
+| Tiering von lokalen ONTAP -Clustern auf StorageGRID | Wenn Sie NetApp Cloud Tiering für StorageGRID einrichten, müssen Sie Cloud Tiering einen S3-Zugriffsschlüssel und einen geheimen Schlüssel bereitstellen.  Beim Cloud-Tiering werden die Schlüssel für den Zugriff auf Ihre Buckets verwendet. | https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-backup-onprem-storagegrid.html["Tiering für StorageGRID vorbereiten"^] 
+|===

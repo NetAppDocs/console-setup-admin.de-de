@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-logging-in.html 
+keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account, federated, federation, federated login, federation login, login with netapp, log in with netapp, sign up, create account 
+summary: Wie Sie sich bei der NetApp Konsole anmelden, hängt davon ab, welchen Bereitstellungsmodus Sie verwenden. 
+---
+= Melden Sie sich bei der NetApp Konsole an
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wie Sie sich bei der NetApp Konsole anmelden, hängt davon ab, welchen Bereitstellungsmodus Sie verwenden.
+
+Sie werden nach 24 Stunden oder beim Schließen Ihres Browsers automatisch abgemeldet.
+
+link:concept-modes.html["Informationen zu den Bereitstellungsmodi der Konsole"] .
+
+[role="tabbed-block"]
+====
+.Standardmodus
+--
+Nachdem Sie sich bei der NetApp Konsole angemeldet haben, können Sie sich von der webbasierten Konsole aus anmelden, um mit der Verwaltung Ihrer Daten- und Speicherinfrastruktur zu beginnen.
+
+.Informationen zu diesem Vorgang
+Sie können sich mit einer der folgenden Optionen bei der NetApp Konsole anmelden:
+
+* Ihre vorhandenen Anmeldeinformationen für die NetApp Support Site (NSS)
+* Ein NetApp -Konsolenkonto mit Ihrer E-Mail-Adresse und einem Passwort
+* Eine Verbundverbindung
++
+Sie können Single Sign-On verwenden, um sich mit den Anmeldeinformationen aus Ihrem Unternehmensverzeichnis anzumelden (föderierte Identität). link:concept-federation.html["Erfahren Sie, wie Sie eine Identitätsföderation einrichten"] .
+
+
+
+.Schritte
+. Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Konsole"]
+. Geben Sie auf der Seite *Anmelden* die E-Mail-Adresse ein, die mit Ihrem Login verknüpft ist.
+. Abhängig von der mit Ihrer Anmeldung verknüpften Authentifizierungsmethode werden Sie aufgefordert, Ihre Anmeldeinformationen einzugeben:
++
+** NetApp Cloud-Anmeldeinformationen: Geben Sie Ihr Passwort ein
+** Verbundbenutzer: Geben Sie Ihre Verbundidentitäts-Anmeldeinformationen ein
+** NetApp Support Site-Konto: Geben Sie Ihre NetApp Support Site-Anmeldeinformationen ein
+
+
+
+
+.Ergebnis
+Sie sind jetzt angemeldet und können mit der Verwaltung Ihrer hybriden Multi-Cloud-Infrastruktur beginnen.
+
+--
+.Eingeschränkter Modus
+--
+Wenn Sie die Konsole im eingeschränkten Modus verwenden, müssen Sie sich über die Benutzeroberfläche, die lokal auf dem Agenten ausgeführt wird, bei der Konsole anmelden.
+
+.Informationen zu diesem Vorgang
+Die Konsole unterstützt im eingeschränkten Modus die Anmeldung mit einer der folgenden Optionen:
+
+* Eine NetApp -Konsolenanmeldung mit Ihrer E-Mail-Adresse und einem Passwort
+* Eine Verbundverbindung
++
+Sie können Single Sign-On verwenden, um sich mit den Anmeldeinformationen aus Ihrem Unternehmensverzeichnis anzumelden (föderierte Identität). link:concept-federation.html["Erfahren Sie, wie Sie die Identitätsföderation nutzen"] .
+
+
+
+.Schritte
+. Öffnen Sie einen Webbrowser und geben Sie die IP-Adresse ein, unter der der Agent installiert ist.
+. Geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich anzumelden.
+
+
+--
+====

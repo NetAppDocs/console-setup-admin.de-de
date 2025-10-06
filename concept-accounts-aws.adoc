@@ -1,0 +1,153 @@
+---
+sidebar: sidebar 
+permalink: concept-accounts-aws.html 
+keywords: cloud provider accounts, aws, aws accounts, keys, multiple accounts, permission, aws permissions, policy, policies, credentials, marketplace, subscription, replace subscription, subscription, amazon, bluexp, agent 
+summary: Erfahren Sie, wie die NetApp Konsole AWS-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere AWS-Konten in der Konsole verwalten.  Sie möchten beispielsweise erfahren, wann Sie der Konsole zusätzliche AWS-Anmeldeinformationen hinzufügen müssen. 
+---
+= Erfahren Sie mehr über AWS-Anmeldeinformationen und Berechtigungen in der NetApp Konsole
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Erfahren Sie, wie die NetApp Konsole AWS-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere AWS-Konten in der NetApp Konsole verwalten.  Sie möchten beispielsweise erfahren, wann Sie zusätzliche AWS-Anmeldeinformationen hinzufügen müssen.
+
+
+
+== Anfängliche AWS-Anmeldeinformationen
+
+Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, müssen Sie die ARN einer IAM-Rolle oder Zugriffsschlüssel für einen IAM-Benutzer angeben.  Die Authentifizierungsmethode muss über Berechtigungen zum Bereitstellen der Konsole in AWS verfügen.  Die erforderlichen Berechtigungen sind im Link:task-install-connector-aws-the Console.html#console-permissions-aws[Agent-Bereitstellungsrichtlinie für AWS] aufgeführt.
+
+Wenn die Konsole die Konsolenagent-Instanz in AWS startet, erstellt sie eine IAM-Rolle und ein Instanzprofil für die Instanz.  Außerdem wird eine Richtlinie angehängt, die dem Konsolenagenten die Berechtigung erteilt, Ressourcen und Prozesse innerhalb dieses AWS-Kontos zu verwalten. link:reference-permissions-aws.html["Überprüfen Sie, wie die Konsole die Berechtigungen verwendet"] .
+
+image:diagram_permissions_initial_aws.png["Ein konzeptionelles Bild, das die Konsole zeigt, die den Konsolenagenten in einem AWS-Konto bereitstellt.  Einer IAM-Rolle wird eine IAM-Richtlinie zugewiesen, die an die Konsoleninstanz angehängt ist."]
+
+Wenn Sie ein neues Cloud Volumes ONTAP -System hinzufügen, wählt die Konsole standardmäßig diese AWS-Anmeldeinformationen aus:
+
+image:screenshot_accounts_select_aws.gif["Ein Screenshot, der die Option „Konto wechseln“ auf der Seite „Details und Anmeldeinformationen“ zeigt."]
+
+Stellen Sie alle Ihre Cloud Volumes ONTAP -Systeme mit den anfänglichen AWS-Anmeldeinformationen bereit, oder fügen Sie zusätzliche Anmeldeinformationen hinzu.
+
+
+
+== Zusätzliche AWS-Anmeldeinformationen
+
+In den folgenden Fällen können Sie der Konsole zusätzliche AWS-Anmeldeinformationen hinzufügen:
+
+* So verwenden Sie Ihren vorhandenen Konsolenagenten mit einem zusätzlichen AWS-Konto
+* So erstellen Sie einen neuen Agenten in einem bestimmten AWS-Konto
+* So erstellen und verwalten Sie FSx for ONTAP Dateisysteme
+
+
+Weitere Einzelheiten finden Sie in den folgenden Abschnitten.
+
+
+
+=== Fügen Sie AWS-Anmeldeinformationen hinzu, um einen Konsolenagenten mit einem anderen AWS-Konto zu verwenden
+
+Wenn Sie die Konsole mit zusätzlichen AWS-Konten verwenden möchten, können Sie entweder AWS-Schlüssel für einen IAM-Benutzer oder die ARN einer Rolle in einem vertrauenswürdigen Konto angeben.  Das folgende Bild zeigt zwei zusätzliche Konten, eines, das Berechtigungen über eine IAM-Rolle in einem vertrauenswürdigen Konto bereitstellt, und ein anderes über die AWS-Schlüssel eines IAM-Benutzers:
+
+image:diagram_permissions_multiple_aws.png["Ein konzeptionelles Bild, das zwei zusätzliche Konten zeigt.  Jeder hat eine IAM-Richtlinie, eine ist an einen IAM-Benutzer und die andere an eine IAM-Rolle angehängt."]
+
+Anschließend fügen Sie die Kontoanmeldeinformationen zur Konsole hinzu, indem Sie den Amazon-Ressourcennamen (ARN) der IAM-Rolle oder die AWS-Schlüssel für den IAM-Benutzer angeben.
+
+Sie können beispielsweise beim Erstellen eines neuen Cloud Volumes ONTAP Systems zwischen Anmeldeinformationen wechseln:
+
+image:screenshot_accounts_switch_aws.png["Ein Screenshot, der die Auswahl zwischen Cloud-Anbieterkonten zeigt, nachdem Sie auf der Seite „Details und Anmeldeinformationen“ die Option „Konto wechseln“ ausgewählt haben."]
+
+link:task-adding-aws-accounts.html#add-credentials-agent-aws["Erfahren Sie, wie Sie einem vorhandenen Agenten AWS-Anmeldeinformationen hinzufügen."]
+
+
+
+=== Fügen Sie AWS-Anmeldeinformationen hinzu, um einen Konsolenagenten zu erstellen
+
+Durch das Hinzufügen neuer AWS-Anmeldeinformationen zur Konsole erhalten Sie die erforderlichen Berechtigungen zum Erstellen eines Konsolenagenten.
+
+link:task-adding-aws-accounts.html#add-credentials-agent-aws["Erfahren Sie, wie Sie der Konsole AWS-Anmeldeinformationen hinzufügen, um einen Konsolenagenten zu erstellen"]
+
+
+
+=== AWS-Anmeldeinformationen für FSx for ONTAP hinzufügen
+
+Fügen Sie der Konsole AWS-Anmeldeinformationen hinzu, um die erforderlichen Berechtigungen zum Erstellen und Verwalten eines FSx for ONTAP Systems bereitzustellen.
+
+https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Erfahren Sie, wie Sie AWS-Anmeldeinformationen zur Konsole für Amazon FSx for ONTAP hinzufügen"^]
+
+
+
+== Anmeldeinformationen und Marktplatzabonnements
+
+Die Anmeldeinformationen, die Sie einem Konsolenagenten hinzufügen, müssen mit einem AWS Marketplace-Abonnement verknüpft sein, damit Sie Cloud Volumes ONTAP zu einem Stundensatz (PAYGO) und andere NetApp -Datendienste oder über einen Jahresvertrag bezahlen können. link:task-adding-aws-accounts.html#subscribe["Erfahren Sie, wie Sie ein AWS-Abonnement zuordnen"] .
+
+Beachten Sie Folgendes zu AWS-Anmeldeinformationen und Marktplatz-Abonnements:
+
+* Sie können nur ein AWS Marketplace-Abonnement mit einem Satz AWS-Anmeldeinformationen verknüpfen
+* Sie können ein bestehendes Marktplatz-Abonnement durch ein neues Abonnement ersetzen
+
+
+
+
+== FAQ
+
+Die folgenden Fragen beziehen sich auf Anmeldeinformationen und Abonnements.
+
+
+
+=== Wie kann ich meine AWS-Anmeldeinformationen sicher rotieren?
+
+Wie in den obigen Abschnitten beschrieben, können Sie mit der Konsole AWS-Anmeldeinformationen auf verschiedene Weise bereitstellen: über eine IAM-Rolle, die mit der Agenteninstanz der Konsole verknüpft ist, durch die Übernahme einer IAM-Rolle in einem vertrauenswürdigen Konto oder durch die Bereitstellung von AWS-Zugriffsschlüsseln.
+
+Bei den ersten beiden Optionen verwendet die Konsole den AWS Security Token Service, um temporäre Anmeldeinformationen zu erhalten, die ständig rotieren.  Dieser Prozess ist die beste Vorgehensweise – er ist automatisch und sicher.
+
+Wenn Sie der Konsole AWS-Zugriffsschlüssel bereitstellen, sollten Sie die Schlüssel rotieren, indem Sie sie in regelmäßigen Abständen in der Konsole aktualisieren.  Dies ist ein vollständig manueller Prozess.
+
+
+
+=== Kann ich das AWS Marketplace-Abonnement für Cloud Volumes ONTAP Systeme ändern?
+
+Ja, das können Sie.  Wenn Sie das AWS Marketplace-Abonnement ändern, das mit einem Satz Anmeldeinformationen verknüpft ist, werden alle vorhandenen und neuen Cloud Volumes ONTAP Systeme über das neue Abonnement abgerechnet.
+
+link:task-adding-aws-accounts.html#subscribe["Erfahren Sie, wie Sie ein AWS-Abonnement zuordnen"] .
+
+
+
+=== Kann ich mehrere AWS-Anmeldeinformationen mit jeweils unterschiedlichen Marktplatz-Abonnements hinzufügen?
+
+Alle AWS-Anmeldeinformationen, die zum selben AWS-Konto gehören, werden mit demselben AWS Marketplace-Abonnement verknüpft.
+
+Wenn Sie über mehrere AWS-Anmeldeinformationen verfügen, die zu verschiedenen AWS-Konten gehören, können diese Anmeldeinformationen mit demselben AWS Marketplace-Abonnement oder mit verschiedenen Abonnements verknüpft sein.
+
+
+
+=== Kann ich vorhandene Cloud Volumes ONTAP Systeme auf ein anderes AWS-Konto verschieben?
+
+Nein, es ist nicht möglich, die mit Ihrem Cloud Volumes ONTAP -System verknüpften AWS-Ressourcen auf ein anderes AWS-Konto zu verschieben.
+
+
+
+=== Wie funktionieren Anmeldeinformationen für Marktplatzbereitstellungen und lokale Bereitstellungen?
+
+In den obigen Abschnitten wird die empfohlene Bereitstellungsmethode für den Konsolenagenten beschrieben, die von der Konsole aus erfolgt.  Sie können auch einen Agenten in AWS vom AWS Marketplace aus bereitstellen und die Konsolen-Agent-Software manuell auf Ihrem eigenen Linux-Host installieren.
+
+Wenn Sie den Marketplace verwenden, werden die Berechtigungen auf die gleiche Weise bereitgestellt.  Sie müssen lediglich die IAM-Rolle manuell erstellen und einrichten und dann Berechtigungen für alle zusätzlichen Konten erteilen.
+
+Bei lokalen Bereitstellungen können Sie keine IAM-Rolle für die Konsole einrichten, aber Sie können Berechtigungen mithilfe von AWS-Zugriffsschlüsseln erteilen.
+
+Informationen zum Einrichten von Berechtigungen finden Sie auf den folgenden Seiten:
+
+* Standardmodus
++
+** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions["Einrichten von Berechtigungen für eine AWS Marketplace-Bereitstellung"]
+** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Einrichten von Berechtigungen für lokale Bereitstellungen"]
+
+
+* Eingeschränkter Modus
++
+** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den eingeschränkten Modus einrichten"]
+
+
+

@@ -1,0 +1,8 @@
+= 
+:allow-uri-read: 
+
+
+* Eine Netzwerkverbindung zu den Netzwerken, in denen Sie Systeme erstellen und verwalten möchten
+* Ausgehender Internetzugang zu bestimmten Endpunkten für den täglichen Betrieb
+* Die IP-Adresse, Anmeldeinformationen und das HTTPS-Zertifikat eines Proxyservers, wenn ein Proxyserver für ausgehende Internetverbindungen erforderlich ist
+

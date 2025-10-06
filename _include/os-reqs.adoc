@@ -1,0 +1,190 @@
+= 
+:allow-uri-read: 
+
+
+Dedizierter Host:: Der Konsolenagent wird auf einem Host, der mit anderen Anwendungen gemeinsam genutzt wird, nicht unterstützt. Der Host muss ein dedizierter Host sein.  Der Host kann jede Architektur aufweisen, die die folgenden Größenanforderungen erfüllt:
++
+--
+* CPU: 8 Kerne oder 8 vCPUs
+* Arbeitsspeicher: 32 GB
+* Festplattenspeicher: Für den Host werden 165 GB empfohlen, mit den folgenden Partitionsanforderungen:
++
+** `/opt`: 120 GiB Speicherplatz müssen verfügbar sein
++
+Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzeichnis und dessen Inhalt.
+
+** `/var`: 40 GiB Speicherplatz müssen verfügbar sein
++
+Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podman so konzipiert sind, dass sie die Container in diesem Verzeichnis erstellen.  Konkret werden sie Container in der `/var/lib/containers/storage` Verzeichnis.  Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+
+
+
+
+
+--
+
+
+* CPU: 8 Kerne oder 8 vCPUs
+* Arbeitsspeicher: 32 GB
+* Festplattenspeicher: 165 GB (Thick Provisioning)
+* vSphere 7.0 oder höher
+* ESXi-Host 7.03 oder höher
+
+
+
+NOTE: Der Konsolenagent reserviert den UID- und GID-Bereich von 19000 bis 19200.  Dieser Bereich ist fest und kann nicht geändert werden.  Wenn Drittanbietersoftware auf Ihrem Host UIDs oder GIDs innerhalb dieses Bereichs verwendet, schlägt die Agenteninstallation fehl.  NetApp empfiehlt die Verwendung eines Hosts, der frei von Software von Drittanbietern ist, um Konflikte zu vermeiden.
+
+Hypervisor:: Es ist ein Bare-Metal- oder gehosteter Hypervisor erforderlich, der für die Ausführung eines unterstützten Betriebssystems zertifiziert ist.
+
+
+[[podman-versions]]Betriebssystem- und Containeranforderungen:: Der Konsolenagent wird von den folgenden Betriebssystemen unterstützt, wenn die Konsole im Standardmodus oder eingeschränkten Modus verwendet wird.  Vor der Installation des Agenten ist ein Container-Orchestrierungstool erforderlich.
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| Betriebssystem | Unterstützte Betriebssystemversionen | Unterstützte Agent-Versionen | Erforderliches Container-Tool | SELinux a 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+9,1 bis 9,4
+
+8,6 bis 8,10
+
+* Nur englischsprachige Versionen.
+* Der Host muss bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann der Host während der Agenteninstallation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
+
+ a| 
+3.9.50 oder höher mit der Konsole im Standardmodus oder eingeschränkten Modus
+ a| 
+Podman Version 4.6.1 oder 4.9.4
+
+<<podman-configuration,Podman-Konfigurationsanforderungen anzeigen>> .
+ a| 
+Unterstützt im Durchsetzungsmodus oder im Permissivmodus
+
+* Die Verwaltung von Cloud Volumes ONTAP -Systemen wird NICHT von Agenten unterstützt, auf deren Betriebssystem SELinux aktiviert ist.
+
+
+
+
+ a| 
+Ubuntu
+ a| 
+24,04 LTS
+ a| 
+3.9.45 oder höher mit der NetApp Konsole im Standardmodus oder eingeschränkten Modus
+ a| 
+Docker Engine 23.06 bis 28.0.0.
+ a| 
+Nicht unterstützt
+
+
+
+ a| 
+22,04 LTS
+ a| 
+3.9.50 oder höher
+ a| 
+Docker Engine 23.0.6 bis 28.0.0.
+ a| 
+Nicht unterstützt
+
+|===
+--
+
+
+[[podman-versions]]Betriebssystem- und Containeranforderungen:: Der Konsolenagent wird bei Verwendung der Konsole im privaten Modus mit den folgenden Betriebssystemen unterstützt.  Vor der Installation des Agenten ist ein Container-Orchestrierungstool erforderlich.
++
+--
+[cols="2a,2a,2a,2a,2a"]
+|===
+| Betriebssystem | Unterstützte Betriebssystemversionen | Unterstützte Agent-Versionen | Erforderliches Container-Tool | SELinux 
+
+
+ a| 
+Red Hat Enterprise Linux
+ a| 
+9,1 bis 9,4
+
+8,6 bis 8,10
+ a| 
+3.9.42 oder höher mit der Konsole im privaten Modus
+ a| 
+Podman Version 4.6.1 oder 4.9.4
+
+<<podman-configuration,Podman-Konfigurationsanforderungen anzeigen>> .
+ a| 
+Unterstützt im Durchsetzungsmodus oder im Permissivmodus ^1^
+
+
+
+ a| 
+Ubuntu
+ a| 
+22,04 LTS
+ a| 
+3.9.29 oder höher
+ a| 
+Docker Engine 23.0.6 bis 26.0.0
+
+26.0.0 wird mit _neuen_ Agenten 3.9.44 oder späteren Installationen unterstützt
+ a| 
+Nicht unterstützt
+
+|===
+Hinweise:
+
+. Die Verwaltung von Cloud Volumes ONTAP -Systemen wird von Agenten, auf deren Betriebssystem SELinux aktiviert ist, nicht unterstützt.
+. Der Konsolenagent wird auf englischsprachigen Versionen dieser Betriebssysteme unterstützt.
+. Für RHEL muss der Host bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann der Host während der Agenteninstallation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
+
+
+--
+
+
+CPU:: 8 Kerne oder 8 vCPUs
+RAM:: 32 GB
+
+
+AWS EC2-Instanztyp:: Ein Instanztyp, der die oben genannten CPU- und RAM-Anforderungen erfüllt.  Wir empfehlen t3.2xlarge.
+
+
+Schlüsselpaar:: Wenn Sie den Konsolenagenten erstellen, müssen Sie ein EC2-Schlüsselpaar zur Verwendung mit der Instanz auswählen.
+
+
+PUT-Antwort-Hop-Limit bei Verwendung von IMDSv2:: Wenn IMDSv2 auf der EC2-Instance aktiviert ist (dies ist die Standardeinstellung für neue EC2-Instances), müssen Sie das Hop-Limit für PUT-Antworten auf der Instanz auf 3 ändern.  Wenn Sie das Limit der EC2-Instance nicht ändern, erhalten Sie beim Versuch, den Agenten einzurichten, einen UI-Initialisierungsfehler.
++
+--
+* link:task-require-imdsv2.html["Erfordert die Verwendung von IMDSv2 auf Amazon EC2-Instanzen"]
+* https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["AWS-Dokumentation: Ändern des Hop-Limits für PUT-Antworten"^]
+
+
+--
+
+
+Azure-VM-Größe:: Ein Instanztyp, der die oben genannten CPU- und RAM-Anforderungen erfüllt.  Wir empfehlen Standard_D8s_v3.
+
+
+Google Cloud-Maschinentyp:: Ein Instanztyp, der die oben genannten CPU- und RAM-Anforderungen erfüllt.  Wir empfehlen n2-standard-8.
++
+--
+Der Konsolenagent wird in Google Cloud auf einer VM-Instanz mit einem Betriebssystem unterstützt, das https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Funktionen von Shielded VM"^]
+
+--
+
+
+Speicherplatz in /opt:: 100 GiB Speicherplatz müssen verfügbar sein
++
+--
+Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzeichnis und dessen Inhalt.
+
+--
+Speicherplatz in /var:: 20 GiB Speicherplatz müssen verfügbar sein
++
+--
+Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podman so konzipiert sind, dass sie die Container in diesem Verzeichnis erstellen.  Konkret werden sie Container in der `/var/lib/containers/storage` Verzeichnis.  Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+
+--
+

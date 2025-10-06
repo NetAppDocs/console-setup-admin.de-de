@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: task-partnerships-assign-users.html 
+keywords: switch organizations, switch projects, projects, organizations, change, switch, change organizations, change projects, iam, identity and access management, switch connectors 
+summary: Sie können Benutzer zu einer Partnerschaft hinzufügen, indem Sie sie der Partnerorganisation hinzufügen.  Nachdem Sie Benutzer hinzugefügt haben, ist die Partnerorganisation dafür verantwortlich, ihnen Rollen für bestimmte Ressourcen in ihrer Organisation zuzuweisen. 
+---
+= Mitglieder für eine Partnerschaftsorganisation verwalten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sie können Benutzer zu einer Partnerschaft hinzufügen, indem Sie sie der Partnerorganisation hinzufügen.  Nachdem Sie Benutzer hinzugefügt haben, ist die Partnerorganisation dafür verantwortlich, ihnen Rollen für bestimmte Ressourcen in ihrer Organisation zuzuweisen.
+
+.Erforderliche Rollen
+Zum Erstellen und Verwalten von Partnerschaften ist die Rolle *Partnerschaftsadministrator* erforderlich.  Der *Partnerschaftsbetrachter* kann die Seite „Partnerschaften“ anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+Sie können Benutzer jederzeit aus einer Partnerschaft entfernen.  Durch das Entfernen eines Benutzers aus einer Partnerschaft wird dessen Zugriff auf alle Ressourcen in der Partnerorganisation sofort widerrufen.
+
+
+
+== Mitglieder zu einer Partnerschaft hinzufügen
+
+Wenn Sie einer Partnerschaft Mitglieder hinzufügen, muss der *Partnerschaftsadministrator* der Partnerorganisation ihnen Rollen für bestimmte Ressourcen in seiner Organisation zuweisen, bevor sie auf diese Ressourcen zugreifen können.
+
+Nachdem Sie Mitglieder zu einer Partnerschaft hinzugefügt haben, werden die Mitglieder als Mitglieder in der Partnerorganisation angezeigt, wo der Partner sie Ressourcen zuweisen kann.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Partnerschaften* aus.
+. Wählen Sie die Registerkarte *Partnerschaft erhalten*.
+. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben der bestehenden Partnerschaft, der Sie Mitglieder hinzufügen möchten, und wählen Sie *Mitglieder hinzufügen*.
+. Wählen Sie ein oder mehrere Mitglieder aus, die Sie der Partnerschaft hinzufügen möchten, und wählen Sie *Hinzufügen*.
+
+
+
+
+== Mitglieder aus einer Partnerschaft entfernen
+
+Sie können Mitglieder jederzeit aus einer Partnerschaft entfernen.  Durch das Entfernen eines Benutzers aus einer Partnerschaft wird dessen Zugriff auf alle Ressourcen in der Partnerorganisation sofort widerrufen.
+
+Wenn Sie die Rolle eines Mitglieds oder die Ressourcen, auf die es zugreifen kann, anpassen möchten, muss der Partnerschaftsadministrator der Partnerorganisation diese Änderungen vornehmen.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Partnerschaften* aus.
+. Wählen Sie die Registerkarte *Partnerschaft erhalten*.
+. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben dem Mitglied, das Sie entfernen möchten, und wählen Sie *Zuordnung entfernen*.
+. Bestätigen Sie die Aktion, indem Sie im Dialogfeld *Entfernen* auswählen.
+
+
+
+
+== Anzeigen von Rolleninformationen für einen Benutzer
+
+Sie können die einem Benutzer zugewiesene Rolle und die zugehörigen Ressourcen anzeigen.
+
+Sie können die einem Benutzer zugeordnete Rolle nicht ändern.  Wenn Sie Fragen zu den Ressourcen oder der bereitgestellten Rolle haben, wenden Sie sich an den Administrator der Partnerorganisation.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Partnerschaften* aus.
+. Wählen Sie die Registerkarte *Partnerschaft erhalten*.
+. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
+. Erweitern Sie in der Tabelle die jeweilige Zeile für die Organisation, den Ordner oder das Projekt, in der Sie die zugewiesene Rolle des Mitglieds anzeigen möchten, und wählen Sie die Nummer in der Spalte *Rolle* aus.
+

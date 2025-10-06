@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: task-federation-saml.html 
+keywords: federation, SAML protocol, SAML, federation services,  federate, federated connection, SSO, identity federation, identity management, corporate identity 
+summary: 'Verbinden Sie sich mit Ihrem SAML 2.0-IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.' 
+---
+= Föderieren Sie mit einem SAML-Identitätsanbieter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verbinden Sie sich mit Ihrem SAML 2.0-IdP-Anbieter, um Single Sign-On (SSO) für die NEtApp-Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.
+
+.Erforderliche Rolle
+Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+
+NOTE: Sie können eine Föderation mit Ihrem Unternehmens-IdP oder mit der NetApp -Support-Site herstellen.  Sie können nicht mit beiden eine Föderation bilden.
+
+NetApp unterstützt nur vom Dienstanbieter initiiertes (SP-initiiertes) SSO.  Sie müssen zunächst den Identitätsanbieter so konfigurieren, dass er NetApp als Dienstanbieter vertraut.  Anschließend können Sie in der Konsole eine Verbindung erstellen, die die Konfiguration des Identitätsanbieters verwendet.
+
+Sie können eine Verbundverbindung mit Ihrem SAML 2.0-Anbieter einrichten, um Single Sign-On (SSO) für die Konsole zu aktivieren.  Der Vorgang umfasst die Konfiguration Ihres Providers, sodass dieser NetApp als Serviceprovider vertraut, und die anschließende Herstellung der Verbindung in der Konsole.
+
+.Bevor Sie beginnen
+* Es ist ein IdP-Konto mit Administratorrechten erforderlich.  Koordinieren Sie die Durchführung der Schritte mit Ihrem IdP-Administrator.
+* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Konsole"] Thema.
+
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Föderation* aus, um die Seite *Föderationen* anzuzeigen.
+. Wählen Sie *Neue Föderation konfigurieren*.
+. Geben Sie Ihre Domänendetails ein:
++
+.. Wählen Sie, ob Sie eine verifizierte Domäne oder Ihre E-Mail-Domäne verwenden möchten.  Die E-Mail-Domäne ist die Domäne, die mit dem Konto verknüpft ist, mit dem Sie angemeldet sind.
+.. Geben Sie den Namen der Föderation ein, die Sie konfigurieren.
+.. Wenn Sie eine verifizierte Domäne auswählen, wählen Sie die Domäne aus der Liste aus.
+
+
+. Wählen Sie *Weiter*.
+. Wählen Sie als Verbindungsmethode *Protokoll* und dann *SAML-Identitätsanbieter*.
+. Wählen Sie *Weiter*.
+. Konfigurieren Sie Ihren SAML-Identitätsanbieter so, dass er NetApp als Dienstanbieter vertraut.  Sie müssen diesen Schritt auf dem Server Ihres SAML-Anbieters ausführen.
++
+.. Stellen Sie sicher, dass Ihr IdP das Attribut `email` auf die E-Mail-Adresse des Benutzers eingestellt.  Dies ist erforderlich, damit die Konsole Benutzer korrekt identifizieren kann:
++
+[source, xml]
+----
+<saml:AttributeStatement xmlns:x500="urn:oasis:names:tc:SAML:2.0:profiles:attribute:X500" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <saml:Attribute Name="email" NameFormat="urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName">
+        <saml:AttributeValue xsi:type="xs:string">email@domain.com</saml:AttributeValue>
+    </saml:Attribute>
+</saml:AttributeStatement>
+----
+.. Verwenden Sie die folgenden Werte, wenn Sie Ihre SAML-Anwendung bei der Konsole registrieren:
++
+*** Für die *Antwort-URL* oder *Assertion Consumer Service (ACS)-URL* verwenden Sie `https://netapp-cloud-account.auth0.com/login/callback`
+*** Verwenden Sie für die *Abmelde-URL* `https://netapp-cloud-account.auth0.com/logout`
+*** Verwenden Sie für *Zielgruppen-/Entitäts-ID* `urn:auth0:netapp-cloud-account:<fed-domain-name-saml>` wobei <fed-domain-name-saml> der Domänenname ist, den Sie für die Föderation verwenden möchten.  Wenn Ihre Domäne beispielsweise `example.com` , wäre die Zielgruppen-/Entitäts-ID `urn:auth0:netapp-cloud-account:fed-example-com-samlp` .
+
+
+.. Kopieren Sie nach dem Erstellen des Vertrauens die folgenden Werte vom Server Ihres SAML-Anbieters:
++
+*** Anmelde-URL
+*** Abmelde-URL (optional)
+
+
+.. Laden Sie das X.509-Zertifikat vom Server Ihres SAML-Anbieters herunter.  Es muss im PEM-, CER- oder CRT-Format vorliegen.
+
+
+. Kehren Sie zur Konsole zurück und wählen Sie *Weiter*, um die Verbindung herzustellen.
+. Stellen Sie die Verbindung mit SAML her.
++
+.. Geben Sie die *Anmelde-URL* Ihres SAML-Servers ein.
+.. Laden Sie das X.509-Zertifikat hoch, das Sie vom Server Ihres SAML-Anbieters heruntergeladen haben.
+.. Geben Sie optional die *Abmelde-URL* Ihres SAML-Servers ein.
+
+
+. Wählen Sie *Verbindung erstellen*.  Das System stellt die Verbindung in wenigen Sekunden her.
+. Wählen Sie *Weiter*.
+. Wählen Sie *Verbindung testen*, um Ihre Verbindung zu testen.  Sie werden zu einer Anmeldeseite für Ihren IdP-Server weitergeleitet.  Melden Sie sich mit Ihren IdP-Anmeldeinformationen an, um den Test abzuschließen, und kehren Sie zur Konsole zurück, um die Verbindung zu aktivieren.
+. Wählen Sie *Weiter*.
+. Überprüfen Sie auf der Seite *Föderation aktivieren* die Föderationsdetails und wählen Sie dann *Föderation aktivieren* aus.
+. Wählen Sie *Fertig*, um den Vorgang abzuschließen.
+
+
+Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Konsole anmelden.

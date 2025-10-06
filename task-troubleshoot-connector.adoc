@@ -1,0 +1,280 @@
+---
+sidebar: sidebar 
+permalink: task-troubleshoot-connector.html 
+keywords: troubleshoot, system id, system ID, autosupport, asup, troubleshoot connector, download failure, cloud volumes ontap download failure, agent 
+summary: Um Probleme mit einem Konsolenagenten zu beheben, können Sie mit dem NetApp -Support zusammenarbeiten, der Sie möglicherweise nach Ihrer System-ID, Agentenversion oder den neuesten AutoSupport -Nachrichten fragt.  Sie können auch die NetApp Knowledge Base aufrufen, um Probleme selbst zu beheben. 
+---
+= Fehlerbehebung beim Konsolen-Agent
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um Probleme mit einem Konsolenagenten zu beheben, können Sie die Probleme selbst überprüfen oder mit dem NetApp -Support zusammenarbeiten, der Sie möglicherweise nach Ihrer System-ID, Agentenversion oder den neuesten AutoSupport -Nachrichten fragt.
+
+Wenn Sie über ein NetApp Support Site-Konto verfügen, können Sie auch dielink:https://kb.netapp.com/Cloud/BlueXP["NetApp Wissensdatenbank."]
+
+
+
+== Häufige Fehlermeldungen und Lösungen
+
+In der Tabelle sind häufige Fehlermeldungen und Lösungsvorschläge aufgeführt:
+
+[cols="19,27,27"]
+|===
+| Fehlermeldung | Erläuterung | Was zu tun 
+
+
+ a| 
+Die Benutzeroberfläche des Konsolenagenten konnte nicht geladen werden
+ a| 
+Die Agenteninstallation ist fehlgeschlagen
+ a| 
+* Stellen Sie sicher, dass der Service Manager-Dienst aktiv ist.
+* Stellen Sie sicher, dass alle Container ausgeführt werden.
+* Stellen Sie sicher, dass Ihre Firewall den Zugriff auf den Dienst über Port 8888 zulässt.
+* Wenn das Problem weiterhin besteht, wenden Sie sich an den Support.
+
+
+
+
+ a| 
+Auf die NetApp Agent-Benutzeroberfläche kann nicht zugegriffen werden
+ a| 
+Diese Meldung wird angezeigt, wenn versucht wird, auf die IP-Adresse eines Agenten zuzugreifen.  Die Initialisierung des Agenten kann fehlschlagen, wenn er nicht über den richtigen Netzwerkzugriff verfügt oder instabil ist.
+ a| 
+* Stellen Sie eine Verbindung zum Konsolenagenten her.
+* Überprüfen Sie, ob der Service Manager-Dienst
+* Stellen Sie sicher, dass der Agent über den erforderlichen Netzwerkzugriff verfügt.link:reference-networking-saas-console.html["Erfahren Sie mehr über erforderliche Endpunkte für den Netzwerkzugriff."]
+
+
+
+
+ a| 
+Agenteneinstellungen konnten nicht geladen werden
+ a| 
+Die Konsole zeigt diese Meldung an, wenn Sie versuchen, auf die Seite mit den Agenteneinstellungen zuzugreifen.
+ a| 
+* Überprüfen Sie, ob der OCCM-Container ausgeführt wird und funktioniert.
+* Wenn das Problem weiterhin besteht, wenden Sie sich an den Support.
+
+
+
+
+ a| 
+Supportinformationen für den Agenten konnten nicht geladen werden.
+ a| 
+Diese Meldung wird angezeigt, wenn der Agent nicht auf Ihr Supportkonto zugreifen kann.
+ a| 
+* *.
+
+|===
+
+
+== Überprüfen Sie den Status des Konsolenagenten
+
+Verwenden Sie einen der folgenden Befehle, um Ihren Konsolenagenten zu überprüfen.  Alle Dienste sollten den Status „Wird ausgeführt“ haben.  Wenn dies nicht der Fall ist, wenden Sie sich an den NetApp Support.
+
+[NOTE]
+====
+Ausführlichere Informationen zum Zugriff auf die Konsolen-Agent-Diagnose finden Sie in den folgenden Themen:
+
+* link:task-maintain-connectors.html#connect-linux-host["Überprüfen Sie den Status des Konsolenagenten (für Linux-Hostbereitstellungen)."]
+* link:task-agent-vm-config.html#connect-vcenter-host["Überprüfen Sie den Status des Konsolenagenten (für VCenter-Bereitstellungen)."]
+
+
+====
+Docker (für Ubuntu- und VCenter-Bereitstellungen)::
++
+--
+[source, cli]
+----
+docker ps -a
+----
+--
+Podman (für RedHat Enterprise Linux-Bereitstellungen)::
++
+--
+[source, cli]
+----
+podman ps -a
+----
+--
+
+
+
+
+== Anzeigen der Konsolen-Agent-Version
+
+Zeigen Sie die Version des Konsolenagenten an, um das Upgrade zu bestätigen, oder teilen Sie sie Ihrem NetApp -Vertreter mit.
+
+.Schritte
+. Wählen Sie *Administration > Support > Agenten*.
++
+Die Konsole zeigt die Version oben auf der Seite an.
+
+
+
+
+
+== Überprüfen des Netzwerkzugriffs
+
+Stellen Sie sicher, dass der Konsolenagent über den erforderlichen Netzwerkzugriff verfügt.link:reference-networking-saas-console.html["Erfahren Sie mehr über die erforderlichen Netzwerkzugriffspunkte."]
+
+
+
+== Probleme bei der Installation des Konsolenagenten
+
+Wenn die Installation fehlschlägt, sehen Sie sich den Bericht und die Protokolle an, um die Probleme zu beheben.
+
+Sie können auch direkt vom Konsolen-Agent-Host in den folgenden Verzeichnissen auf den Validierungsbericht im JSON-Format und die Konfigurationsprotokolle zugreifen:
+
+[source, cli]
+----
+/tmp/netapp-console-agents/logs
+
+/tmp/netapp-console-agents/results.json
+
+----
+[IMPORTANT]
+====
+* Bei der Bereitstellung neuer Agenten prüft NetApp die folgenden Endpunkte:link:reference-networking-saas-console.html["hier aufgeführt"^] .  Diese Konfigurationsprüfung schlägt mit einem Fehler fehl, wenn Sie die vorherigen Endpunkte verwenden, die für Upgrades verwendet wurden.link:reference-networking-saas-console-previous.html["hier aufgeführt"] .  NetApp empfiehlt, Ihre Firewall-Regeln so schnell wie möglich zu aktualisieren, um den Zugriff auf die aktuellen Endpunkte zu ermöglichen und den Zugriff auf die vorherigen Endpunkte zu blockieren.link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihr Netzwerk aktualisieren"] .
+* Wenn Sie die Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
+
+
+====
+
+
+=== Deaktivieren Sie Konfigurationsprüfungen für manuelle Installationen
+
+Es kann vorkommen, dass Sie die Konfigurationsprüfungen deaktivieren müssen, die während der Installation die ausgehende Konnektivität überprüfen. Beispiel:
+
+* Wenn Sie einen Agenten manuell in Ihrer Government Cloud-Umgebung installieren, müssen Sie die Konfigurationsprüfungen deaktivieren, sonst schlägt die Installation fehl.
+* Sie können diese Prüfungen auch deaktivieren, wenn Sie für Agent-Upgrades weiterhin die vorherige Endpunktliste verwenden.
+
+
+.Schritte
+Sie deaktivieren die Konfigurationsprüfung, indem Sie das Flag _skipConfigCheck_ in der Datei _com/opt/application/netapp/service-manager-2/config.json_ setzen.  Standardmäßig ist dieses Flag auf „false“ gesetzt und die Konfigurationsprüfung überprüft den ausgehenden Zugriff für den Agenten.  Setzen Sie dieses Flag auf „true“, um die Prüfung zu deaktivieren.  Sie sollten mit der JSON-Syntax vertraut sein, bevor Sie diesen Schritt abschließen.
+
+Um die Konfigurationsprüfung wieder zu aktivieren, führen Sie diese Schritte aus und setzen Sie das Flag _skipConfigCheck_ auf „false“.
+
+.Schritte
+. Greifen Sie als Root oder mit Sudo-Berechtigungen auf den Konsolen-Agent-Host zu.
+. Erstellen Sie eine Sicherungskopie der Datei _/opt/application/netapp/service-manager-2/config.json_, um sicherzustellen, dass Sie Ihre Änderungen rückgängig machen können.
+. Stoppen Sie den Dienst Service Manager 2, indem Sie den folgenden Befehl ausführen:
+
+
+[source, cli]
+----
+systemctl stop netapp-service-manager.service
+----
+. Bearbeiten Sie die Datei _/opt/application/netapp/service-manager-2/config.json_ und ändern Sie den Wert des Flags _skipConfigCheck_ auf „true“.
++
+[source, json]
+----
+  "skipConfigCheck": true,
+----
+. Speichern Sie Ihre Datei.
+. Starten Sie den Dienst Service Manager 2 neu, indem Sie den folgenden Befehl ausführen:
++
+[source, cli]
+----
+systemctl restart netapp-service-manager.service
+----
+
+
+
+
+=== Fehlgeschlagene Installation auf den für Upgrades verwendeten Endpunkten
+
+Wenn Sie immer noch dielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] für Agent-Upgrades verwendet wird, schlägt die Validierung mit einem Fehler fehl.  Um dies zu vermeiden, deaktivieren Sie das Kontrollkästchen *Validierungsagent-Konfiguration* oder überspringen Sie die Konfigurationsprüfung bei der Installation in einem VCenter.
+
+NetApp empfiehlt, Ihre Firewall-Regeln zu aktualisieren, um den Zugriff auf dielink:reference-networking-saas-console.html["aktuelle Endpunkte"] so bald wie möglich. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunkte aktualisieren"] .
+
+Stellen Sie sicher, dass der einzige Fehler mit den vorherigen Endpunkten zusammenhängt:
+
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+
+Wenn weitere Fehler vorliegen, müssen Sie diese beheben, bevor Sie fortfahren.
+
+
+
+== Arbeiten Sie mit dem NetApp Support
+
+Wenn Sie die Probleme mit Ihrem Konsolenagenten nicht lösen konnten, sollten Sie sich an den NetApp -Support wenden.  Der NetApp Support fragt möglicherweise nach der Konsolen-Agent-ID oder fordert Sie auf, ihm die Konsolen-Agent-Protokolle zu senden, falls diese noch nicht vorliegen.
+
+
+
+=== Suchen Sie die Konsolen-Agent-ID
+
+Um Ihnen den Einstieg zu erleichtern, benötigen Sie möglicherweise die System-ID Ihres Konsolenagenten.  Die ID wird normalerweise für Lizenzierungs- und Fehlerbehebungszwecke verwendet.
+
+.Schritte
+. Wählen Sie *Administration > Support > Agenten*.
++
+Die System-ID finden Sie oben auf der Seite.
+
++
+*Beispiel*
+
++
+image:screenshot-system-id.png["Ein Screenshot, der die System-ID zeigt, die im Support-Dashboard angezeigt wird."]
+
+. Bewegen Sie den Mauszeiger über die ID und klicken Sie darauf, um sie zu kopieren.
+
+
+
+
+=== Laden Sie eine AutoSupport -Nachricht herunter oder senden Sie sie
+
+Wenn bei Ihnen Probleme auftreten, werden Sie von NetApp möglicherweise aufgefordert, zur Fehlerbehebung eine AutoSupport -Nachricht an den NetApp -Support zu senden.
+
+
+NOTE: Aufgrund des Lastenausgleichs benötigt die NetApp Konsole bis zu fünf Stunden, um AutoSupport -Nachrichten zu senden.  Laden Sie für dringende Mitteilungen die Datei herunter und senden Sie sie manuell.
+
+.Schritte
+. Wählen Sie *Administration > Support > Agenten*.
+. Wählen Sie je nachdem, wie Sie die Informationen an den NetApp Support senden müssen, eine der folgenden Optionen:
++
+.. Wählen Sie die Option zum Herunterladen der AutoSupport -Nachricht auf Ihren lokalen Computer.  Sie können es dann mit einer bevorzugten Methode an den NetApp -Support senden.
+.. Wählen Sie * AutoSupport senden*, um die Nachricht direkt an den NetApp -Support zu senden.
+
+
+
+
+
+
+== Beheben von Downloadfehlern bei Verwendung eines Google Cloud NAT-Gateways
+
+Der Konsolenagent lädt automatisch Softwareupdates für Cloud Volumes ONTAP herunter.  Ihre Konfiguration kann dazu führen, dass der Download fehlschlägt, wenn ein Google Cloud NAT-Gateway verwendet wird.  Sie können dieses Problem beheben, indem Sie die Anzahl der Teile begrenzen, in die das Software-Image unterteilt ist.  Dieser Schritt muss mithilfe der API abgeschlossen werden.
+
+.Schritt
+. Senden Sie eine PUT-Anfrage an /occm/config mit dem folgenden JSON als Text:
++
+[source]
+----
+{
+  "maxDownloadSessions": 32
+}
+----
++
+Der Wert für _maxDownloadSessions_ kann 1 oder eine beliebige Ganzzahl größer als 1 sein.  Wenn der Wert 1 ist, wird das heruntergeladene Bild nicht geteilt.
+
++
+Beachten Sie, dass 32 ein Beispielwert ist.  Der Wert hängt von Ihrer NAT-Konfiguration und der Anzahl gleichzeitiger Sitzungen ab.
+
+
+
+https://docs.netapp.com/us-en/bluexp-automation/cm/api_ref_resources.html#occmconfig["Erfahren Sie mehr über den API-Aufruf /occm/config"^]
+
+
+
+== Holen Sie sich Hilfe von der NetApp Knowledge Base
+
+https://kb.netapp.com/Special:Search?path=Cloud%2FBlueXP&query=connector&type=wiki["Informationen zur Fehlerbehebung anzeigen, die vom NetApp Support-Team erstellt wurden"] .

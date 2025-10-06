@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task-federation-verify-domain.html 
+keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
+summary: Sie können für die Föderation nur verifizierte Domänen verwenden. Wenn Sie eine Föderation mit einer Domäne durchführen möchten, die sich von Ihrer E-Mail-Domäne unterscheidet, müssen Sie zunächst bestätigen, dass Sie der Eigentümer der Domäne sind.  Sie können für die Föderation nur verifizierte Domänen verwenden. 
+---
+= Überprüfen Sie die E-Mail-Domäne für Ihre Verbundverbindung
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie eine Föderation mit einer Domäne durchführen möchten, die sich von Ihrer E-Mail-Domäne unterscheidet, müssen Sie zunächst bestätigen, dass Sie der Eigentümer der Domäne sind.  Sie können für die Föderation nur verifizierte Domänen verwenden.
+
+.Erforderliche Rollen
+Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+
+Zur Überprüfung Ihrer Domäne müssen Sie den DNS-Einstellungen Ihrer Domäne einen TXT-Eintrag hinzufügen.  Dieser Datensatz dient als Nachweis dafür, dass Sie der Eigentümer der Domäne sind, und ermöglicht der NetApp Konsole, der Domäne für die Föderation zu vertrauen.  Möglicherweise müssen Sie sich mit Ihrem IT- oder Netzwerkadministrator abstimmen, um diesen Schritt abzuschließen.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Föderation* aus, um die Seite *Föderationen* anzuzeigen.
+. Wählen Sie *Neue Föderation konfigurieren*.
+. Wählen Sie *Domänenbesitz bestätigen*.
+. Geben Sie die Domäne ein, die Sie verifizieren möchten, und wählen Sie *Weiter*.
+. Kopieren Sie den bereitgestellten TXT-Eintrag.
+. Gehen Sie zu den DNS-Einstellungen Ihrer Domäne und konfigurieren Sie den TXT-Wert, der als TXT-Eintrag für Ihre Domäne bereitgestellt wurde.  Arbeiten Sie bei Bedarf mit Ihrem IT- oder Netzwerkadministrator zusammen.
+. Nachdem der TXT-Eintrag hinzugefügt wurde, kehren Sie zur Konsole zurück und wählen Sie *Überprüfen*.
+

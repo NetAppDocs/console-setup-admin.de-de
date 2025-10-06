@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: task-quick-start-standard-mode.html 
+keywords: quick start, standard mode quick start 
+summary: Beginnen Sie mit der NetApp Konsole im Standardmodus, indem Sie das Netzwerk für die Konsole vorbereiten, sich anmelden und ein Konto erstellen und optional einen Konsolenagenten erstellen. 
+---
+= Workflow „Erste Schritte“ (Standardmodus)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Beginnen Sie mit der NetApp Konsole im Standardmodus, indem Sie das Netzwerk für die Konsole vorbereiten, sich anmelden und ein Konto erstellen und optional einen Konsolenagenten erstellen.
+
+Im Standardmodus greifen Sie auf eine webbasierte Konsole zu, die als Software-as-a-Service (SaaS)-Produkt von NetApp gehostet wird.  Bevor Sie beginnen, stellen Sie sicher, dass Sie verstehenlink:concept-modes.html["Bereitstellungsmodi"] Undlink:concept-connectors.html["Konsolenagenten"] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:reference-networking-saas-console.html["Vorbereiten des Netzwerks für die Verwendung der NetApp Konsole"]
+[role="quick-margin-para"]
+Computer, die auf die NetApp Konsole zugreifen, sollten Verbindungen zu bestimmten Endpunkten haben.  Wenn Ihr Netzwerk den ausgehenden Zugriff einschränkt, sollten Sie sicherstellen, dass diese Endpunkte zugelassen werden.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] link:task-sign-up-saas.html["Registrieren und eine Organisation erstellen"]
+[role="quick-margin-para"]
+Gehen Sie zum https://console.netapp.com["NetApp Konsole"^] und melden Sie sich an.  Sie haben die Möglichkeit, eine Organisation zu erstellen. Sie sollten diesen Schritt jedoch überspringen, wenn Ihr Unternehmen bereits über eine bestehende Organisation verfügt.
+
+[role="quick-margin-para"]
+An diesem Punkt sind Sie angemeldet und können mit der Speicherverwaltung und der Verwendung von Diensten wie Digital Advisor, Amazon FSx for ONTAP, Azure NetApp Files und mehr beginnen. link:concept-connectors.html["Erfahren Sie, was Sie ohne Konsolenagent tun können"] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Erstellen eines Konsolenagenten
+[role="quick-margin-para"]
+Für erweiterte Speicherverwaltungsfunktionen und einige NetApp Datendienste ist die Installation eines Konsolenagenten erforderlich.  Der Konsolenagent ermöglicht der Konsole die Verwaltung von Ressourcen und Prozessen innerhalb Ihrer Hybrid-Cloud-Umgebung.
+
+[role="quick-margin-para"]
+Sie können einen Konsolenagenten in Ihrer Cloud oder Ihrem lokalen Netzwerk erstellen.
+
+[role="quick-margin-list"]
+* link:concept-connectors.html["Erfahren Sie mehr darüber, wann Konsolenagenten erforderlich sind und wie sie funktionieren"]
+* link:concept-install-options-aws.html["Erfahren Sie, wie Sie einen Konsolenagenten in AWS erstellen"]
+* link:concept-install-options-azure.html["Erfahren Sie, wie Sie einen Konsolen-Agent in Azure erstellen"]
+* link:concept-install-options-google.html["Erfahren Sie, wie Sie einen Konsolenagenten in Google Cloud erstellen"]
+* link:task-install-connector-on-prem.html["Erfahren Sie, wie Sie einen Konsolenagenten vor Ort erstellen"]
+
+
+[role="quick-margin-para"]
+Um NetApp Intelligent Data Services zum Verwalten von Speicher und Daten in Google Cloud zu verwenden, stellen Sie sicher, dass der Konsolenagent in Google Cloud ausgeführt wird.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"] link:task-subscribe-standard-mode.html["Abonnieren Sie NetApp Intelligent Services (optional)"]
+[role="quick-margin-para"]
+Melden Sie sich über Ihren Cloud-Anbieter für NetApp Intelligent Services an und zahlen Sie stundenweise (PAYGO) oder über einen Jahresvertrag.  Zu den intelligenten Diensten von NetApp gehören NetApp Backup und Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience und NetApp Disaster Recovery.  Die NetApp Datenklassifizierung ist ohne zusätzliche Kosten in Ihrem Abonnement enthalten.

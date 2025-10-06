@@ -1,0 +1,76 @@
+= Connector 3.9.52
+:allow-uri-read: 
+
+
+
+
+=== Connector 3.9.52
+
+Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen sowie einige zusätzliche Updates.
+
+Derzeit ist die Version 3.9.52 für den Standardmodus und den eingeschränkten Modus verfügbar.
+
+
+
+==== Unterstützung für Docker 27 und Docker 28
+
+Docker 27 und Docker 28 werden jetzt mit dem Connector unterstützt.
+
+
+
+==== Cloud Volumes ONTAP
+
+Cloud Volumes ONTAP -Knoten werden nicht mehr heruntergefahren, wenn der Connector nicht konform ist oder länger als 14 Tage ausfällt.  Cloud Volumes ONTAP sendet weiterhin Event Management-Nachrichten, wenn der Zugriff auf den Connector verloren geht.  Diese Änderung soll sicherstellen, dass Cloud Volumes ONTAP auch dann weiterbetrieben werden kann, wenn der Connector für einen längeren Zeitraum ausfällt.  Die Compliance-Anforderungen für den Connector werden dadurch nicht geändert.
+
+
+
+=== Keystone -Verwaltung in BlueXP verfügbar
+
+Die Beta für NetApp Keystone in BlueXP hat Zugriff auf die Keystone -Verwaltung hinzugefügt.  Sie können über die linke Navigationsleiste von BlueXP auf die Anmeldeseite für die Betaversion von NetApp Keystone zugreifen.
+
+
+
+=== BlueXP Identitäts- und Zugriffsmanagement (IAM)
+
+
+
+==== Neue Speicherverwaltungsrollen
+
+Die Rollen „Speicheradministrator“, „Systemintegritätsspezialist“ und „Speicherbetrachter“ sind verfügbar und können Benutzern zugewiesen werden.
+
+Mithilfe dieser Rollen können Sie verwalten, wer in Ihrem Unternehmen Speicherressourcen ermitteln und verwalten sowie Informationen zum Speicherzustand anzeigen und Softwareupdates durchführen kann.
+
+Diese Rollen werden zur Steuerung des Zugriffs auf die folgenden Speicherressourcen unterstützt:
+
+* Systeme der E-Serie
+* StorageGRID -Systeme
+* On-Premises- ONTAP -Systeme
+
+
+Sie können diese Rollen auch verwenden, um den Zugriff auf die folgenden BlueXP -Dienste zu steuern:
+
+* Software-Updates
+* Digitaler Berater
+* Betriebsstabilität
+* Wirtschaftlichkeit
+* Nachhaltigkeit
+
+
+Die folgenden Rollen wurden hinzugefügt:
+
+* *Speicheradministrator*
++
+Verwalten Sie die Speicherintegrität, Governance und Erkennung für die Speicherressourcen in der Organisation.  Diese Rolle kann auch Software-Updates für Speicherressourcen durchführen.
+
+* *Systemintegritätsspezialist*
++
+Verwalten Sie die Speicherintegrität und -verwaltung für die Speicherressourcen in der Organisation.  Diese Rolle kann auch Software-Updates für Speicherressourcen durchführen.  Diese Rolle kann keine Arbeitsumgebungen ändern oder löschen.
+
+* *Speicheranzeige*
++
+Zeigen Sie Informationen zum Speicherzustand und Governance-Daten an.
+
++
+link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."^]
+
+
