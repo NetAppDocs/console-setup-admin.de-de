@@ -48,7 +48,7 @@ Das Menü *Speicher* enthält außerdem *Warnungen* zum Anzeigen von ONTAP -Syst
 
 NetApp hat Keystone außerdem in das Menü *Speicher* verschoben, wo Sie Ihre NetApp Keystone -Abonnements verwalten und Ihre Nutzung anzeigen können.
 
-image:https://docs.netapp.com/us-en/console-setup-admin/screenshot-storage-menu.png["Ein Screenshot des Speichermenüs."]
+image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-menu.png["Ein Screenshot des Speichermenüs."]
 
 
 
