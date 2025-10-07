@@ -31,6 +31,13 @@ Stellen Sie vor der Installation sicher, dass Ihr VM-Host die Anforderungen erf�
 
 Stellen Sie sicher, dass Ihr Hostcomputer die Installationsanforderungen erfüllt, bevor Sie den Konsolenagenten installieren.
 
+* CPU: 8 Kerne oder 8 vCPUs
+* Arbeitsspeicher: 32 GB
+* Festplattenspeicher: 165 GB (Thick Provisioning)
+* vSphere 7.0 oder höher
+* ESXi-Host 7.03 oder höher
+
+
 
 NOTE: Installieren Sie den Agenten in einer vCenter-Umgebung und nicht direkt auf einem ESXi-Host.
 
