@@ -187,6 +187,13 @@ Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Su
 
 
  a| 
+\https://support.netapp.com
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
+
+
+
+ a| 
 \https://signin.b2c.netapp.com
  a| 
 So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Konsole neue NSS-Anmeldeinformationen hinzu.
@@ -242,6 +249,13 @@ Zum Verwalten von Ressourcen in Azure China-Regionen.
 
  a| 
 \https://mysupport.netapp.com
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
+
+
+
+ a| 
+\https://support.netapp.com
  a| 
 Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
 
