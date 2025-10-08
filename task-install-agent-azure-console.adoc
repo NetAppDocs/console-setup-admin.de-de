@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-azure-bluexp.html 
+permalink: task-install-agent-azure-console.html 
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector 
 summary: Um einen Konsolen-Agenten in Azure aus der NetApp -Konsole zu erstellen, müssen Sie Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten und dann den Konsolen-Agenten erstellen. 
 ---
@@ -17,7 +17,7 @@ summary: Um einen Konsolen-Agenten in Azure aus der NetApp -Konsole zu erstellen
 Um einen Konsolen-Agenten in Azure aus der NetApp -Konsole zu erstellen, müssen Sie Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten und dann den Konsolen-Agenten erstellen.
 
 .Bevor Sie beginnen
-* Sie sollten über einelink:concept-connectors.html["Verständnis von Konsolenagenten"] .
+* Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
 * Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 
@@ -429,7 +429,7 @@ Ihr Dienstprinzipal ist jetzt eingerichtet und Sie sollten die Anwendungs-ID (Cl
 Erstellen Sie den Konsolenagenten direkt von der NetApp -Konsole aus.
 
 .Informationen zu diesem Vorgang
-* Durch das Erstellen des Konsolenagenten aus der Konsole wird eine virtuelle Maschine in Azure mit einer Standardkonfiguration bereitgestellt.  Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren VM-Instanz mit weniger CPUs oder weniger RAM. link:reference-connector-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
+* Durch das Erstellen des Konsolenagenten aus der Konsole wird eine virtuelle Maschine in Azure mit einer Standardkonfiguration bereitgestellt. Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren VM-Instanz mit weniger CPUs oder weniger RAM. link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
 * Wenn die Konsole den Konsolenagenten bereitstellt, erstellt sie eine benutzerdefinierte Rolle und weist sie der Konsolenagent-VM zu.  Diese Rolle umfasst Berechtigungen, die es dem Konsolenagenten ermöglichen, Azure-Ressourcen zu verwalten.  Sie müssen sicherstellen, dass die Rolle auf dem neuesten Stand gehalten wird, da in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden. link:reference-permissions-azure.html["Erfahren Sie mehr über die benutzerdefinierte Rolle für den Konsolenagenten"] .
 
 

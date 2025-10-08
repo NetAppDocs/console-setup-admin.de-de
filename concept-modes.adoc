@@ -97,9 +97,9 @@ Die Konsole funktioniert im Standardmodus wie folgt:
 Ausgehende Kommunikation:: Für den täglichen Betrieb ist eine Konnektivität von einem Konsolenagenten zur SaaS-Ebene der Konsole, zu den öffentlich verfügbaren Ressourcen Ihres Cloud-Anbieters und zu anderen wichtigen Komponenten erforderlich.
 +
 --
-* link:task-install-connector-aws-bluexp.html#networking-aws-agent["Endpunkte, die ein Agent in AWS kontaktiert"]
-* link:task-install-connector-azure-bluexp.html#networking-azure-agent["Endpunkte, die ein Agent in Azure kontaktiert"]
-* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["Endpunkte, die ein Agent in Google Cloud kontaktiert"]
+* link:task-install-agent-aws-console.html#networking-aws-agent["Endpunkte, die ein Agent in AWS kontaktiert"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["Endpunkte, die ein Agent in Azure kontaktiert"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["Endpunkte, die ein Agent in Google Cloud kontaktiert"]
 
 
 --

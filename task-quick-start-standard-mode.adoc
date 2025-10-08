@@ -16,7 +16,7 @@ summary: Beginnen Sie mit der NetApp Konsole im Standardmodus, indem Sie das Net
 [role="lead"]
 Beginnen Sie mit der NetApp Konsole im Standardmodus, indem Sie das Netzwerk für die Konsole vorbereiten, sich anmelden und ein Konto erstellen und optional einen Konsolenagenten erstellen.
 
-Im Standardmodus greifen Sie auf eine webbasierte Konsole zu, die als Software-as-a-Service (SaaS)-Produkt von NetApp gehostet wird.  Bevor Sie beginnen, stellen Sie sicher, dass Sie verstehenlink:concept-modes.html["Bereitstellungsmodi"] Undlink:concept-connectors.html["Konsolenagenten"] .
+Im Standardmodus greifen Sie auf eine webbasierte Konsole zu, die als Software-as-a-Service (SaaS)-Produkt von NetApp gehostet wird. Bevor Sie beginnen, stellen Sie sicher, dass Sie verstehenlink:concept-modes.html["Bereitstellungsmodi"] Undlink:concept-agents.html["Konsolenagenten"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:reference-networking-saas-console.html["Vorbereiten des Netzwerks für die Verwendung der NetApp Konsole"]
 [role="quick-margin-para"]
@@ -27,7 +27,7 @@ Computer, die auf die NetApp Konsole zugreifen, sollten Verbindungen zu bestimmt
 Gehen Sie zum https://console.netapp.com["NetApp Konsole"^] und melden Sie sich an.  Sie haben die Möglichkeit, eine Organisation zu erstellen. Sie sollten diesen Schritt jedoch überspringen, wenn Ihr Unternehmen bereits über eine bestehende Organisation verfügt.
 
 [role="quick-margin-para"]
-An diesem Punkt sind Sie angemeldet und können mit der Speicherverwaltung und der Verwendung von Diensten wie Digital Advisor, Amazon FSx for ONTAP, Azure NetApp Files und mehr beginnen. link:concept-connectors.html["Erfahren Sie, was Sie ohne Konsolenagent tun können"] .
+An diesem Punkt sind Sie angemeldet und können mit der Speicherverwaltung und der Verwendung von Diensten wie Digital Advisor, Amazon FSx for ONTAP, Azure NetApp Files und mehr beginnen. link:concept-agents.html["Erfahren Sie, was Sie ohne Konsolenagent tun können"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Erstellen eines Konsolenagenten
 [role="quick-margin-para"]
@@ -37,11 +37,11 @@ Für erweiterte Speicherverwaltungsfunktionen und einige NetApp Datendienste ist
 Sie können einen Konsolenagenten in Ihrer Cloud oder Ihrem lokalen Netzwerk erstellen.
 
 [role="quick-margin-list"]
-* link:concept-connectors.html["Erfahren Sie mehr darüber, wann Konsolenagenten erforderlich sind und wie sie funktionieren"]
+* link:concept-agents.html["Erfahren Sie mehr darüber, wann Konsolenagenten erforderlich sind und wie sie funktionieren"]
 * link:concept-install-options-aws.html["Erfahren Sie, wie Sie einen Konsolenagenten in AWS erstellen"]
 * link:concept-install-options-azure.html["Erfahren Sie, wie Sie einen Konsolen-Agent in Azure erstellen"]
 * link:concept-install-options-google.html["Erfahren Sie, wie Sie einen Konsolenagenten in Google Cloud erstellen"]
-* link:task-install-connector-on-prem.html["Erfahren Sie, wie Sie einen Konsolenagenten vor Ort erstellen"]
+* link:task-install-agent-on-prem.html["Erfahren Sie, wie Sie einen Konsolenagenten vor Ort erstellen"]
 
 
 [role="quick-margin-para"]

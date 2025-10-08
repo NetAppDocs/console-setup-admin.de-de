@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: concept-connectors.html 
+permalink: concept-agents.html 
 keywords: 'concept, connectors, learn about connectors, what are connectors, what is a connector, what"s a connector, days, 14 days, when is a connector required, connector supported locations, restricted mode, private mode, dark site, permissions, multiple connectors, disaster recovery, agents, multiple agents, what is a Console agent' 
 summary: Ein _Konsolenagent_ ist eine NetApp -Software, die in Ihrem Cloud-Netzwerk oder lokalen Netzwerk ausgeführt wird.  Sie verwenden einen Konsolenagenten, um NetApp -Konsolendienste mit Ihren Speicherumgebungen zu verbinden. 
 ---
@@ -147,7 +147,7 @@ Informationen zum Einrichten von Berechtigungen finden Sie hier:
 ** link:concept-install-options-aws.html["Agent-Installationsoptionen in AWS"]
 ** link:concept-install-options-azure.html["Agent-Installationsoptionen in Azure"]
 ** link:concept-install-options-google.html["Agent-Installationsoptionen in Google Cloud"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Einrichten von Cloudberechtigungen für lokale Bereitstellungen"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Einrichten von Cloudberechtigungen für lokale Bereitstellungen"]
 
 
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den eingeschränkten Modus einrichten"]
@@ -180,7 +180,7 @@ Beachten Sie, dass Sie (der Kunde) beim Anwenden kleinerer Sicherheitsupdates ke
 
 Wenn Sie (der Kunde) die Konsolen-Agent-VM stoppen und dann starten müssen, sollten Sie dies über die Konsole Ihres Cloud-Anbieters oder mithilfe der Standardverfahren für die lokale Verwaltung tun.
 
-<<connectors-must-be-operational-at-all-times,Der Konsolenagent muss jederzeit betriebsbereit sein>> .
+<<agents-must-be-operational-at-all-times,Der Konsolenagent muss jederzeit betriebsbereit sein>> .
 
 
 

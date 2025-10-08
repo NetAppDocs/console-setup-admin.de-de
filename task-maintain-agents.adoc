@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-maintain-connectors.html 
+permalink: task-maintain-agents.html 
 keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, agent ip address, agent uri, connector, connector health 
 summary: Die Wartung des Betriebssystems auf dem Agent-Host liegt in Ihrer Verantwortung.  Sie sollten beispielsweise Sicherheitsupdates auf das Betriebssystem auf dem Konsolenagent-Host anwenden, indem Sie die Standardverfahren Ihres Unternehmens zur Betriebssystemverteilung befolgen. 
 ---
@@ -17,7 +17,7 @@ summary: Die Wartung des Betriebssystems auf dem Agent-Host liegt in Ihrer Veran
 Die Wartung des Betriebssystems auf dem Konsolenagent-Host liegt in Ihrer (der Verantwortung des Kunden).  Beispielsweise sollten Sie (der Kunde) Sicherheitsupdates auf das Betriebssystem auf dem Agent-Host anwenden, indem Sie die Standardverfahren Ihres Unternehmens zur Betriebssystemverteilung befolgen.
 
 
-TIP: Wenn Sie bereits einen Agenten haben, sollten Sie Folgendes beachten:link:reference-connector-operating-system-changes.html["Änderungen an unterstützten Linux-Betriebssystemen"] .
+TIP: Wenn Sie bereits einen Agenten haben, sollten Sie Folgendes beachten:link:reference-agent-operating-system-changes.html["Änderungen an unterstützten Linux-Betriebssystemen"] .
 
 
 
@@ -37,7 +37,7 @@ CPU:: 8 Kerne oder 8 vCPUs
 RAM:: 32 GB
 
 
-link:reference-connector-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Agenten"] .
+link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Agenten"] .
 
 
 
@@ -71,7 +71,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations
 
 Stoppen und starten Sie die Agent-VM bei Bedarf über die Konsole Ihres Cloud-Anbieters oder über standardmäßige Verfahren vor Ort.
 
-link:concept-connectors.html#connectors-must-be-operational-at-all-times["Beachten Sie, dass der Konsolenagent jederzeit betriebsbereit sein muss"] .
+link:concept-agents.html#agents-must-be-operational-at-all-times["Beachten Sie, dass der Konsolenagent jederzeit betriebsbereit sein muss"] .
 
 
 

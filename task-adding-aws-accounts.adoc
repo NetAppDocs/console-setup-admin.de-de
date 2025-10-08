@@ -195,7 +195,7 @@ Siehe link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cros
 ** Erstellen Sie eine Richtlinie, die die zum Erstellen eines Konsolenagenten erforderlichen Berechtigungen enthält.
 +
 *** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Anzeigen der für FSx for ONTAP erforderlichen Berechtigungen"^]
-*** link:task-install-connector-aws-bluexp.html#aws-permissions-agent["Anzeigen der Agent-Bereitstellungsrichtlinie"]
+*** link:task-install-agent-aws-console.html#aws-permissions-agent["Anzeigen der Agent-Bereitstellungsrichtlinie"]
 
 
 
@@ -251,14 +251,14 @@ Durch das Ersetzen des aktuellen Marktplatzabonnements durch ein neues Abonnemen
 
 
 .Bevor Sie beginnen
-Sie müssen einen Konsolenagenten erstellen, bevor Sie ein Abonnement konfigurieren können. link:concept-connectors.html#connector-installation["Erfahren Sie, wie Sie einen Konsolenagenten erstellen"] .
+Sie müssen einen Konsolenagenten erstellen, bevor Sie ein Abonnement konfigurieren können. link:concept-agents.html#agent-installation["Erfahren Sie, wie Sie einen Konsolenagenten erstellen"] .
 
 Das folgende Video zeigt die Schritte zum Abonnieren von NetApp Intelligent Services vom AWS Marketplace:
 
 .Abonnieren Sie NetApp Intelligent Services vom AWS Marketplace
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Schritte
-. Wählen Sie *Administration > *Anmeldeinformationen*.
+. Wählen Sie *Administration > Anmeldeinformationen*.
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
 +

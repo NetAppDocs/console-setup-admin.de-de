@@ -39,7 +39,7 @@ Das folgende Video zeigt die Schritte zum Abonnieren von NetApp Intelligent Serv
 .Abonnieren Sie NetApp Intelligent Services vom AWS Marketplace
 video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Schritte
-. Wählen Sie *Administration > *Anmeldeinformationen*.
+. Wählen Sie *Administration > Anmeldeinformationen*.
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
 +
@@ -78,7 +78,7 @@ Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell 
 .Azurblau
 --
 .Schritte
-. Wählen Sie *Administration > *Anmeldeinformationen*.
+. Wählen Sie *Administration > Anmeldeinformationen*.
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
 +

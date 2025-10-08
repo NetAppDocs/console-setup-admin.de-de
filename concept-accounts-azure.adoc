@@ -20,7 +20,7 @@ Erfahren Sie, wie die NetApp Konsole Azure-Anmeldeinformationen verwendet, um Ak
 
 == Anfängliche Azure-Anmeldeinformationen
 
-Wenn Sie einen Konsolen-Agenten über die Konsole bereitstellen, müssen Sie ein Azure-Konto oder einen Dienstprinzipal verwenden, der über die Berechtigung zum Bereitstellen der virtuellen Maschine des Konsolen-Agenten verfügt.  Die erforderlichen Berechtigungen sind in derlink:task-install-connector-azure-bluexp.html#connector-custom-role["Agent-Bereitstellungsrichtlinie für Azure"] .
+Wenn Sie einen Konsolen-Agenten über die Konsole bereitstellen, müssen Sie ein Azure-Konto oder einen Dienstprinzipal verwenden, der über die Berechtigung zum Bereitstellen der virtuellen Maschine des Konsolen-Agenten verfügt. Die erforderlichen Berechtigungen sind in derlink:task-install-agent-azure-console.html#agent-custom-role["Agent-Bereitstellungsrichtlinie für Azure"] .
 
 Wenn die Konsole die virtuelle Maschine des Konsolen-Agenten in Azure bereitstellt, ermöglicht sie eine https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["systemseitig zugewiesene verwaltete Identität"^] auf der virtuellen Maschine, erstellt eine benutzerdefinierte Rolle und weist sie der virtuellen Maschine zu.  Die Rolle stellt der Konsole die erforderlichen Berechtigungen zum Verwalten von Ressourcen und Prozessen innerhalb dieses Azure-Abonnements zur Verfügung. link:reference-permissions-azure.html["Überprüfen Sie, wie die Konsole die Berechtigungen verwendet"] .
 
@@ -108,8 +108,8 @@ Informationen zum Einrichten von Berechtigungen finden Sie auf den folgenden Sei
 
 * Standardmodus
 +
-** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["Einrichten von Berechtigungen für eine Azure Marketplace-Bereitstellung"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Einrichten von Berechtigungen für lokale Bereitstellungen"]
+** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["Einrichten von Berechtigungen für eine Azure Marketplace-Bereitstellung"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Einrichten von Berechtigungen für lokale Bereitstellungen"]
 
 
 * Eingeschränkter Modus

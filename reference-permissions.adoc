@@ -31,7 +31,7 @@ Die NetApp Konsole erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 | Ziel | Beschreibung | Link 
 
 
-| Bereitstellen eines Konsolenagenten über die Konsole | Der Benutzer, der einen Konsolenagenten aus der Konsole erstellt, benötigt bestimmte Berechtigungen, um die Instanz in AWS bereitzustellen. | link:task-install-connector-aws-bluexp.html#aws-permissions-agent["AWS-Berechtigungen einrichten"] 
+| Bereitstellen eines Konsolenagenten über die Konsole | Der Benutzer, der einen Konsolenagenten aus der Konsole erstellt, benötigt bestimmte Berechtigungen, um die Instanz in AWS bereitzustellen. | link:task-install-agent-aws-console.html#aws-permissions-agent["AWS-Berechtigungen einrichten"] 
 
 
 | Berechtigungen für einen Konsolenagenten bereitstellen | Wenn die Konsole einen Konsolenagenten bereitstellt, fügt sie der Instanz eine Richtlinie hinzu, die die erforderlichen Berechtigungen zum Verwalten von Ressourcen und Prozessen in Ihrem AWS-Konto bereitstellt.  Sie müssen die Richtlinie selbst einrichten, wenn Sie einen Konsolen-Agenten vom AWS Marketplace bereitstellen, wenn Sie einen Konsolen-Agenten manuell installieren oder wenn Sielink:task-adding-aws-accounts.html#add-credentials-agent-aws["Fügen Sie einem Konsolenagenten weitere AWS-Anmeldeinformationen hinzu"] .  Sie müssen außerdem sicherstellen, dass die Richtlinie auf dem neuesten Stand ist, da in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden. | link:reference-permissions-aws.html["AWS-Berechtigungen für einen Konsolenagenten"] 
@@ -112,7 +112,7 @@ Die Konsole erfordert Azure-Berechtigungen für einen Konsolen-Agenten und für 
 | Ziel | Beschreibung | Link 
 
 
-| Bereitstellen eines Konsolenagenten über die Konsole | Wenn Sie einen Konsolen-Agenten über die Konsole bereitstellen, müssen Sie ein Azure-Konto oder einen Dienstprinzipal verwenden, der über die Berechtigung zum Bereitstellen einer Konsolen-Agent-VM in Azure verfügt. | link:task-install-connector-azure-bluexp.html#connector-custom-role["Einrichten von Azure-Berechtigungen"] 
+| Bereitstellen eines Konsolenagenten über die Konsole | Wenn Sie einen Konsolen-Agenten über die Konsole bereitstellen, müssen Sie ein Azure-Konto oder einen Dienstprinzipal verwenden, der über die Berechtigung zum Bereitstellen einer Konsolen-Agent-VM in Azure verfügt. | link:task-install-agent-azure-console.html#agent-custom-role["Einrichten von Azure-Berechtigungen"] 
 
 
 | Berechtigungen für einen Konsolenagenten bereitstellen  a| 
@@ -174,10 +174,10 @@ Die Konsole erfordert Google Cloud-Berechtigungen für einen Konsolenagenten und
 | Ziel | Beschreibung | Link 
 
 
-| Bereitstellen eines Konsolenagenten über die Konsole | Der Google Cloud-Benutzer, der einen Konsolen-Agenten von der Konsole aus bereitstellt, benötigt bestimmte Berechtigungen, um einen Konsolen-Agenten in Google Cloud bereitzustellen. | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["Richten Sie Berechtigungen zum Erstellen eines Konsolenagenten ein"] 
+| Bereitstellen eines Konsolenagenten über die Konsole | Der Google Cloud-Benutzer, der einen Konsolen-Agenten von der Konsole aus bereitstellt, benötigt bestimmte Berechtigungen, um einen Konsolen-Agenten in Google Cloud bereitzustellen. | link:task-install-agent-google-console-gcloud.html#console-permissions-google["Richten Sie Berechtigungen zum Erstellen eines Konsolenagenten ein"] 
 
 
-| Berechtigungen für einen Konsolenagenten bereitstellen | Das Dienstkonto für eine VM-Instanz des Konsolenagenten muss über bestimmte Berechtigungen für den täglichen Betrieb verfügen.  Sie müssen das Dienstkonto während der Bereitstellung mit einem Konsolenagenten verknüpfen.  Sie müssen außerdem sicherstellen, dass die Richtlinie auf dem neuesten Stand ist, da in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden. | link:task-install-connector-google-bluexp-gcloud.html#console-permissions-google["Einrichten von Berechtigungen für einen Konsolenagenten"] 
+| Berechtigungen für einen Konsolenagenten bereitstellen | Das Dienstkonto für eine VM-Instanz des Konsolenagenten muss über bestimmte Berechtigungen für den täglichen Betrieb verfügen.  Sie müssen das Dienstkonto während der Bereitstellung mit einem Konsolenagenten verknüpfen.  Sie müssen außerdem sicherstellen, dass die Richtlinie auf dem neuesten Stand ist, da in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden. | link:task-install-agent-google-console-gcloud.html#console-permissions-google["Einrichten von Berechtigungen für einen Konsolenagenten"] 
 |===
 
 

@@ -276,7 +276,7 @@ Nachdem Sie ein Azure-Konto mit den erforderlichen Berechtigungen bereitgestellt
 Wenn Sie diese Anmeldeinformationen gerade bei Ihrem Cloud-Anbieter erstellt haben, kann es einige Minuten dauern, bis sie zur Verwendung verfügbar sind.  Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen zur Konsole hinzufügen.
 
 .Bevor Sie beginnen
-Sie müssen einen Konsolenagenten erstellen, bevor Sie die Konsoleneinstellungen ändern können. link:concept-connectors.html#connector-installation["Erfahren Sie, wie Sie einen Konsolenagenten erstellen"] .
+Sie müssen einen Konsolenagenten erstellen, bevor Sie die Konsoleneinstellungen ändern können. link:concept-agents.html#agent-installation["Erfahren Sie, wie Sie einen Konsolenagenten erstellen"] .
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.
@@ -323,7 +323,7 @@ Durch das Ersetzen des aktuellen Marktplatzabonnements wird es für vorhandene u
 
 
 .Schritte
-. Wählen Sie *Administration > *Anmeldeinformationen*.
+. Wählen Sie *Administration > Anmeldeinformationen*.
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
 +

@@ -67,7 +67,7 @@ Beachten Sie, dass Sie nur aus den Ordnern und Projekten auswählen können, fü
 .Nach Abschluss
 Wenn Sie mithilfe eines Konsolenagenten eine Ressource entdecken, verknüpfen Sie den Konsolenagenten mit dem Projekt, um Zugriff zu gewähren.  Andernfalls sind der Konsolenagent und die zugehörige Ressource für Mitglieder ohne die Rolle „Organisationsadministrator“ nicht zugänglich.
 
-link:task-iam-associate-connectors.html["Erfahren Sie, wie Sie einen Konsolenagenten mit einem Ordner oder Projekt verknüpfen"] .
+link:task-iam-associate-agents.html["Erfahren Sie, wie Sie einen Konsolenagenten mit einem Ordner oder Projekt verknüpfen"] .
 
 
 

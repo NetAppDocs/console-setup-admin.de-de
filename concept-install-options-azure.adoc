@@ -18,15 +18,15 @@ Es gibt verschiedene Möglichkeiten, einen Konsolen-Agent in Azure zu erstellen.
 
 Folgende Installationsoptionen stehen zur Verfügung:
 
-* link:task-install-connector-azure-bluexp.html["Erstellen Sie einen Konsolenagenten direkt aus der NetApp Konsole"](Dies ist die Standardoption)
+* link:task-install-agent-azure-console.html["Erstellen Sie einen Konsolenagenten direkt aus der NetApp Konsole"](Dies ist die Standardoption)
 +
 Diese Aktion startet eine VM mit Linux und der Konsolen-Agent-Software in einem VNet Ihrer Wahl.
 
-* link:task-install-connector-azure-marketplace.html["Erstellen eines Konsolen-Agents aus dem Azure Marketplace"]
+* link:task-install-agent-azure-marketplace.html["Erstellen eines Konsolen-Agents aus dem Azure Marketplace"]
 +
 Diese Aktion startet auch eine VM, auf der Linux und die Konsolen-Agent-Software ausgeführt werden, die Bereitstellung wird jedoch direkt vom Azure Marketplace und nicht von der Konsole aus initiiert.
 
-* link:task-install-connector-azure-manual.html["Laden Sie die Software herunter und installieren Sie sie manuell auf Ihrem eigenen Linux-Host"]
+* link:task-install-agent-azure-manual.html["Laden Sie die Software herunter und installieren Sie sie manuell auf Ihrem eigenen Linux-Host"]
 
 
 Die von Ihnen gewählte Installationsoption wirkt sich darauf aus, wie Sie sich auf die Installation vorbereiten.  Dazu gehört, wie Sie dem Konsolen-Agenten die erforderlichen Berechtigungen erteilen, die er zum Authentifizieren und Verwalten von Ressourcen in Azure benötigt.

@@ -83,7 +83,7 @@ Verwenden Sie einen der folgenden Befehle, um Ihren Konsolenagenten zu überprü
 ====
 Ausführlichere Informationen zum Zugriff auf die Konsolen-Agent-Diagnose finden Sie in den folgenden Themen:
 
-* link:task-maintain-connectors.html#connect-linux-host["Überprüfen Sie den Status des Konsolenagenten (für Linux-Hostbereitstellungen)."]
+* link:task-maintain-agents.html#connect-linux-host["Überprüfen Sie den Status des Konsolenagenten (für Linux-Hostbereitstellungen)."]
 * link:task-agent-vm-config.html#connect-vcenter-host["Überprüfen Sie den Status des Konsolenagenten (für VCenter-Bereitstellungen)."]
 
 

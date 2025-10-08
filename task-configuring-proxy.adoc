@@ -112,7 +112,7 @@ Stellen Sie sicher, dass die Zertifikatsdatei im PEM-Format vorliegt und sich im
 
 === Ändern Sie den transparenten Proxy für den Konsolenagenten
 
-Sie können den vorhandenen transparenten Proxy-Server eines Konsolen-Agenten aktualisieren, indem Sie den `proxy update` Befehl oder entfernen Sie den transparenten Proxyserver mithilfe des `proxy remove` Befehl.  Weitere Informationen finden Sie in der Dokumentation zulink:reference-connector-maint-console.html["Agenten-Wartungskonsole"] .
+Sie können den vorhandenen transparenten Proxy-Server eines Konsolen-Agenten aktualisieren, indem Sie den `proxy update` Befehl oder entfernen Sie den transparenten Proxyserver mithilfe des `proxy remove` Befehl. Weitere Informationen finden Sie in der Dokumentation zulink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
 
 
 IMPORTANT: Nachdem Sie einen Proxy konfiguriert haben, können Sie den Proxy-Typ nicht mehr ändern.  Wenn Sie den Proxy-Typ ändern müssen, entfernen Sie den Konsolen-Agenten und fügen einen neuen Agenten mit dem neuen Proxy-Typ hinzu.

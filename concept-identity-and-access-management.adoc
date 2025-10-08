@@ -234,7 +234,7 @@ Die folgenden Beispiele beschreiben, wie Sie IAM zum Verwalten Ihrer Konsolenorg
 * link:task-iam-manage-folders-projects.html["Organisieren Sie Ihre Ressourcen in der NetApp -Konsole mit Ordnern und Projekten"]
 * link:task-iam-manage-members-permissions.html["Verwalten Sie NetApp Console-Mitglieder und ihre Berechtigungen"]
 * link:task-iam-manage-resources.html["Verwalten Sie die Ressourcenhierarchie in Ihrer NetApp Console-Organisation"]
-* link:task-iam-associate-connectors.html["Agenten Ordnern und Projekten zuordnen"]
+* link:task-iam-associate-agents.html["Agenten Ordnern und Projekten zuordnen"]
 * link:task-iam-switch-organizations-projects.html["Wechseln Sie zwischen NetApp Console-Projekten und -Organisationen"]
 * link:task-iam-rename-organization.html["Benennen Sie Ihre NetApp Konsolenorganisation um"]
 * link:task-iam-audit-actions-timeline.html["Überwachen oder prüfen Sie die IAM-Aktivität"]

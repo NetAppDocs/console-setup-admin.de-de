@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-aws-manual.html 
+permalink: task-install-agent-aws-manual.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector 
 summary: Sie können einen Konsolenagenten manuell auf einem Linux-Host installieren, der in AWS ausgeführt wird.  Um den Konsolen-Agenten manuell auf Ihrem eigenen Linux-Host zu installieren, müssen Sie die Hostanforderungen überprüfen, Ihr Netzwerk einrichten, AWS-Berechtigungen vorbereiten, den Konsolen-Agenten installieren und dann die vorbereiteten Berechtigungen bereitstellen. 
 ---
@@ -17,7 +17,7 @@ summary: Sie können einen Konsolenagenten manuell auf einem Linux-Host installi
 Sie können einen Konsolenagenten manuell auf einem Linux-Host installieren, der in AWS ausgeführt wird.  Um den Konsolen-Agenten manuell auf Ihrem eigenen Linux-Host zu installieren, müssen Sie die Hostanforderungen überprüfen, Ihr Netzwerk einrichten, AWS-Berechtigungen vorbereiten, den Konsolen-Agenten installieren und dann die vorbereiteten Berechtigungen bereitstellen.
 
 .Bevor Sie beginnen
-* Sie sollten über einelink:concept-connectors.html["Verständnis von Konsolenagenten"] .
+* Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
 * Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 
@@ -513,7 +513,7 @@ Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfiguri
 
 
 
-NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen.  Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-connector-maint-console.html["Agenten-Wartungskonsole"] .
+NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
 
 .Informationen zu diesem Vorgang
 Das auf der NetApp Support-Site verfügbare Installationsprogramm ist möglicherweise eine frühere Version.  Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.

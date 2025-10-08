@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-uninstall-connector.html 
+permalink: task-uninstall-agent.html 
 keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
 summary: Deinstallieren Sie einen Konsolenagenten, um Probleme zu beheben oder ihn dauerhaft vom Host zu entfernen.  Die erforderlichen Schritte hängen vom verwendeten Bereitstellungsmodus ab.  Nachdem Sie einen Konsolenagenten aus Ihrer Umgebung entfernt haben, können Sie ihn aus der Konsole entfernen. 
 ---

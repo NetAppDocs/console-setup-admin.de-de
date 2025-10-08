@@ -18,15 +18,15 @@ Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu er
 
 Folgende Installationsoptionen stehen zur Verfügung:
 
-* link:task-install-connector-google-bluexp-gcloud.html["Erstellen Sie den Konsolenagenten direkt aus der Konsole"](Dies ist die Standardoption)
+* link:task-install-agent-google-console-gcloud.html["Erstellen Sie den Konsolenagenten direkt aus der Konsole"](Dies ist die Standardoption)
 +
 Diese Aktion startet eine VM-Instanz, auf der Linux und die Konsolenagent-Software in einer VPC Ihrer Wahl ausgeführt werden.
 
-* link:task-install-connector-google-bluexp-gcloud.html["Erstellen Sie den Konsolenagenten mithilfe der Google Platform"]
+* link:task-install-agent-google-console-gcloud.html["Erstellen Sie den Konsolenagenten mithilfe der Google Platform"]
 +
 Diese Aktion startet auch eine VM-Instanz, auf der Linux und die Konsolen-Agent-Software ausgeführt werden, die Bereitstellung wird jedoch direkt von Google Cloud und nicht von der Konsole aus initiiert.
 
-* link:task-install-connector-google-manual.html["Laden Sie die Software herunter und installieren Sie sie manuell auf Ihrem eigenen Linux-Host"]
+* link:task-install-agent-google-manual.html["Laden Sie die Software herunter und installieren Sie sie manuell auf Ihrem eigenen Linux-Host"]
 
 
 Die von Ihnen gewählte Installationsoption wirkt sich darauf aus, wie Sie sich auf die Installation vorbereiten.  Dazu gehört, wie Sie der Konsole die erforderlichen Berechtigungen erteilen, die sie zum Authentifizieren und Verwalten von Ressourcen in Google Cloud benötigt.

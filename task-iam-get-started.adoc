@@ -56,7 +56,7 @@ Durch das Hinzufügen oder Erkennen eines Systems in der Konsole wird die Ressou
 
 [role="quick-margin-list"]
 * link:task-iam-manage-resources.html["Erfahren Sie, wie Sie die Ressourcenhierarchie Ihres Unternehmens verwalten"] .
-* link:task-iam-associate-connectors.html["Erfahren Sie, wie Sie einen Konsolenagenten mit einem Ordner oder Projekt verknüpfen"] .
+* link:task-iam-associate-agents.html["Erfahren Sie, wie Sie einen Konsolenagenten mit einem Ordner oder Projekt verknüpfen"] .
 
 
 .Ähnliche Informationen

@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-iam-associate-connectors.html 
+permalink: task-iam-associate-agents.html 
 keywords: agent, associate agent, folder, project, associate folder with connector, associate project with connector, associate connector with project, associate connector with resource, connector, associate connector, 
 summary: Wenn Mitglieder Ihrer Organisation einen Konsolenagenten in einem anderen Projekt verwenden müssen, müssen Sie diesen Konsolenagenten mit dem jeweiligen Projekt verknüpfen. 
 ---
@@ -44,7 +44,7 @@ Ordnen Sie die Ressourcen des Konsolenagenten denselben Ordnern und Projekten vo
 link:task-iam-manage-resources.html#associate-resource["Erfahren Sie, wie Sie eine Ressource mit Ordnern und Projekten verknüpfen"] .
 
 .Ähnliche Informationen
-* link:concept-connectors.html["Erfahren Sie mehr über NetApp Console-Agenten"]
+* link:concept-agents.html["Erfahren Sie mehr über NetApp Console-Agenten"]
 * link:concept-identity-and-access-management.html["Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der NetApp Console"]
 * link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff"]
 * https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identitäts- und Zugriffsverwaltung"^]

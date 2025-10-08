@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-manage-multiple-connectors.html 
+permalink: task-manage-multiple-agents.html 
 keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
 summary: Wenn Sie mehrere Konsolenagenten verwenden, können Sie direkt von der Konsole aus zwischen diesen Agenten wechseln.  Sie können auch ein einzelnes System mit mehreren Konsolenagenten verwalten. 
 ---

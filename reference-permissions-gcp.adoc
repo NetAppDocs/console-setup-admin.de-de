@@ -24,7 +24,7 @@ Die unten gezeigte benutzerdefinierte Rolle bietet die Berechtigungen, die ein K
 
 Sie müssen diese benutzerdefinierte Rolle auf ein Dienstkonto anwenden, das an die Konsolen-Agent-VM angehängt wird.
 
-* link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Google Cloud-Berechtigungen für den Standardmodus einrichten"]
+* link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Google Cloud-Berechtigungen für den Standardmodus einrichten"]
 * link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den eingeschränkten Modus einrichten"]
 
 

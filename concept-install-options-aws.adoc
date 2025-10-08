@@ -18,15 +18,15 @@ Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in AWS zu erstellen. 
 
 Folgende Installationsoptionen stehen zur Verfügung:
 
-* link:task-install-connector-aws-bluexp.html["Erstellen Sie den Konsolenagenten direkt aus der Konsole"](Dies ist die Standardoption)
+* link:task-install-agent-aws-console.html["Erstellen Sie den Konsolenagenten direkt aus der Konsole"](Dies ist die Standardoption)
 +
 Diese Aktion startet eine EC2-Instance mit Linux und der Konsolenagent-Software in einer VPC Ihrer Wahl.
 
-* link:task-install-connector-aws-marketplace.html["Erstellen Sie einen Konsolenagenten aus dem AWS Marketplace"]
+* link:task-install-agent-aws-marketplace.html["Erstellen Sie einen Konsolenagenten aus dem AWS Marketplace"]
 +
 Diese Aktion startet auch eine EC2-Instance, auf der Linux und die Konsolen-Agent-Software ausgeführt werden, die Bereitstellung wird jedoch direkt vom AWS Marketplace und nicht von der Konsole aus initiiert.
 
-* link:task-install-connector-aws-manual.html["Laden Sie die Software herunter und installieren Sie sie manuell auf Ihrem eigenen Linux-Host"]
+* link:task-install-agent-aws-manual.html["Laden Sie die Software herunter und installieren Sie sie manuell auf Ihrem eigenen Linux-Host"]
 
 
 Die von Ihnen gewählte Installationsoption wirkt sich darauf aus, wie Sie sich auf die Installation vorbereiten.  Dazu gehört, wie Sie der Konsole die erforderlichen Berechtigungen erteilen, die sie zum Authentifizieren und Verwalten von Ressourcen in AWS benötigt.

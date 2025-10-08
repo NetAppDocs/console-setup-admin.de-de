@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: reference-connector-default-config.html 
+permalink: reference-agent-default-config.html 
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
 summary: Informieren Sie sich vor der Bereitstellung über den Konsolenagenten. 
 ---
@@ -34,7 +34,7 @@ Wenn Sie einen Konsolenagenten über die Konsole oder den Marktplatz des Cloud-A
 Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um auf das System zuzugreifen.
 
 * Die Installation umfasst Docker Engine, das erforderliche Container-Orchestrierungstool.
-* Der Benutzername für die EC2-Linux-Instanz ist ubuntu (für Agenten, die vor Mai 2023 erstellt wurden, war der Benutzername ec2-user).
+* Der Benutzername für die EC2-Linux-Instanz ist ubuntu (für Agenten, die vor Mai 2023 erstellt wurden, lautet der Benutzername ec2-user).
 * Die Standardsystemfestplatte ist eine 100-GiB-gp2-Festplatte.
 
 

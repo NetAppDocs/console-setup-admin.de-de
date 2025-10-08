@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: reference-connector-operating-system-changes.html 
+permalink: reference-agent-operating-system-changes.html 
 keywords: connector, operating systems, connector operating systems, os support, supported operating systems, rhel 8, rhel 9, red hat, docker, podman, agent 
 summary: NetApp fügt gelegentlich Unterstützung für den Konsolenagenten auf bestimmten Linux-Betriebssystemen hinzu und entfernt diese wieder. Erfahren Sie, wie sich diese Unterstützung auf Ihre vorhandenen Konsolenagenten auswirkt. 
 ---

@@ -15,7 +15,7 @@ Diese Tabelle dient als Referenz und Ihre Umgebung sollte die Berechtigungstabel
 
 
 | Google-Konto zum Bereitstellen des Agenten | Brauch | Serviceprojekt  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Richtlinie zur Agentenbereitstellung"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Richtlinie zur Agentenbereitstellung"]
  a| 
 compute.networkUser
 | Bereitstellen des Agenten im Serviceprojekt 

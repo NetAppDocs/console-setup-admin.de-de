@@ -19,7 +19,7 @@ sidebar:
     - title: Bekannte Einschränkungen
       url: "/reference-limitations.html"
     - title: Änderungen an unterstützten Linux-Betriebssystemen
-      url: "/reference-connector-operating-system-changes.html"
+      url: "/reference-agent-operating-system-changes.html"
   - title: Erste Schritte
     entries:
     - title: Lernen Sie die Grundlagen
@@ -27,7 +27,7 @@ sidebar:
       - title: NetApp Konsole
         url: "/concept-overview.html"
       - title: Konsolenagenten
-        url: "/concept-connectors.html"
+        url: "/concept-agents.html"
       - title: Bereitstellungsmodi
         url: "/concept-modes.html"
     - title: Erste Schritte mit dem NetApp Console-Assistenten
@@ -49,35 +49,35 @@ sidebar:
           - title: Installationsoptionen für den Konsolenagenten
             url: "/concept-install-options-aws.html"
           - title: Erstellen Sie einen Konsolenagenten über die NetApp Konsole
-            url: "/task-install-connector-aws-bluexp.html"
+            url: "/task-install-agent-aws-console.html"
           - title: Erstellen Sie einen Konsolenagenten aus dem Marktplatz
-            url: "/task-install-connector-aws-marketplace.html"
+            url: "/task-install-agent-aws-marketplace.html"
           - title: Manuelle Installation des Konsolenagenten
-            url: "/task-install-connector-aws-manual.html"
+            url: "/task-install-agent-aws-manual.html"
         - title: Azurblau
           entries:
           - title: Installationsoptionen für den Konsolenagenten
             url: "/concept-install-options-azure.html"
           - title: Erstellen Sie einen Konsolenagenten über die NetApp Konsole
-            url: "/task-install-connector-azure-bluexp.html"
+            url: "/task-install-agent-azure-console.html"
           - title: Erstellen Sie einen Konsolenagenten aus dem Marktplatz
-            url: "/task-install-connector-azure-marketplace.html"
+            url: "/task-install-agent-azure-marketplace.html"
           - title: Manuelle Installation des Konsolenagenten
-            url: "/task-install-connector-azure-manual.html"
+            url: "/task-install-agent-azure-manual.html"
         - title: Google Cloud
           entries:
           - title: Installationsoptionen für den Konsolenagenten
             url: "/concept-install-options-google.html"
           - title: Erstellen Sie einen Konsolenagenten über die NetApp Konsole
-            url: "/task-install-connector-google-bluexp-gcloud.html"
+            url: "/task-install-agent-google-console-gcloud.html"
           - title: Erstellen Sie einen Konsolenagenten aus Google Cloud
             url: "/task-install-agent-google-gcloud.html"
           - title: Manuelle Installation des Konsolenagenten
-            url: "/task-install-connector-google-manual.html"
+            url: "/task-install-agent-google-manual.html"
         - title: Installieren eines Agenten vor Ort
           entries:
           - title: Manuelles Installieren eines Agenten vor Ort
-            url: "/task-install-connector-on-prem.html"
+            url: "/task-install-agent-on-prem.html"
           - title: Installieren Sie einen lokalen Agenten in VCenter
             url: "/task-install-agent-on-prem-ova.html"
       - title: Abonnieren Sie NetApp Intelligent Services
@@ -126,7 +126,7 @@ sidebar:
       - title: Verwalten Sie Ihre Ressourcenhierarchie
         url: "/task-iam-manage-resources.html"
       - title: Verknüpfen Sie einen Konsolenagenten mit anderen Ordnern und Projekten
-        url: "/task-iam-associate-connectors.html"
+        url: "/task-iam-associate-agents.html"
       - title: Wechseln Sie zwischen Organisationen, Projekten und Konsolenagenten
         url: "/task-iam-switch-organizations-projects.html"
       - title: Organisations- und Projekt-IDs
@@ -194,7 +194,7 @@ sidebar:
     - title: Konsolenagenten
       entries:
       - title: Wartung der VM und des Betriebssystems
-        url: "/task-maintain-connectors.html"
+        url: "/task-maintain-agents.html"
       - title: Verwalten eines in VCenter installierten Agenten
         url: "/task-agent-vm-config.html"
       - title: Installieren Sie ein CA-signiertes Zertifikat für den Zugriff auf die
@@ -204,18 +204,18 @@ sidebar:
         url: "/task-configuring-proxy.html"
       - title: Erfordert die Verwendung von IMDSv2 auf EC2-Instanzen
         url: "/task-require-imdsv2.html"
-      - title: Connector-Upgrades verwalten
-        url: "/task-upgrade-connector.html"
+      - title: Verwalten von Agent-Upgrades
+        url: "/task-upgrade-agent.html"
       - title: Arbeiten mit mehreren Konsolenagenten
-        url: "/task-manage-multiple-connectors.html"
+        url: "/task-manage-multiple-agents.html"
       - title: Fehlerbehebung beim Konsolen-Agent
         url: "/task-troubleshoot-agent.html"
       - title: Deinstallieren und entfernen Sie den Konsolenagenten
-        url: "/task-uninstall-connector.html"
+        url: "/task-uninstall-agent.html"
       - title: Standardkonfiguration
-        url: "/reference-connector-default-config.html"
+        url: "/reference-agent-default-config.html"
       - title: Erzwingen Sie ONTAP -Berechtigungen in der NetApp Konsole
-        url: "/task-ontap-access-connector.html"
+        url: "/task-ontap-access-agent.html"
     - title: Anmeldeinformationen und Abonnements
       entries:
       - title: AWS
@@ -248,7 +248,7 @@ sidebar:
     - title: Agenten-Wartungskonsole
       entries:
       - title: Agenten-Wartungskonsole
-        url: "/reference-connector-maint-console.html"
+        url: "/reference-agent-maint-console.html"
     - title: Berechtigungen
       entries:
       - title: Zusammenfassung der Berechtigungen

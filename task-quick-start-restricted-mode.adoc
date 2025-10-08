@@ -16,7 +16,7 @@ summary: Beginnen Sie mit der NetApp Konsole im eingeschränkten Modus, indem Si
 [role="lead"]
 Beginnen Sie mit der NetApp Konsole im eingeschränkten Modus, indem Sie Ihre Umgebung vorbereiten und den Konsolen-Agenten bereitstellen.
 
-Der eingeschränkte Modus wird normalerweise von staatlichen und lokalen Behörden sowie regulierten Unternehmen verwendet, einschließlich Bereitstellungen in AWS GovCloud- und Azure Government-Regionen.  Bevor Sie beginnen, stellen Sie sicher, dass Sie Folgendes verstehen:link:concept-connectors.html["Konsolenagenten"] Undlink:concept-modes.html["Bereitstellungsmodi"] .
+Der eingeschränkte Modus wird normalerweise von staatlichen und lokalen Behörden sowie regulierten Unternehmen verwendet, einschließlich Bereitstellungen in AWS GovCloud- und Azure Government-Regionen. Bevor Sie beginnen, stellen Sie sicher, dass Sie Folgendes verstehen:link:concept-agents.html["Konsolenagenten"] Undlink:concept-modes.html["Bereitstellungsmodi"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:task-prepare-restricted-mode.html["Vorbereiten der Bereitstellung"]
 [role="quick-margin-list"]

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-google-manual.html 
-keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, manual install, create connector, gcp installation, gcp connector 
-summary: Um den Konsolen-Agenten manuell auf Ihrem eigenen Linux-Host zu installieren, müssen Sie die Hostanforderungen überprüfen, Ihr Netzwerk einrichten, Google Cloud-Berechtigungen vorbereiten, Google Cloud-APIs aktivieren, die Konsole installieren und dann die vorbereiteten Berechtigungen bereitstellen. 
+permalink: task-install-agent-azure-manual.html 
+keywords: install connector, azure connector installation, azure connector, install connector in azure, manual install 
+summary: Um den Konsolen-Agent manuell auf Ihrem eigenen Linux-Host zu installieren, müssen Sie die Hostanforderungen überprüfen, Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten, den Konsolen-Agent installieren und dann die vorbereiteten Berechtigungen bereitstellen. 
 ---
-= Installieren Sie den Konsolenagenten manuell in Google Cloud
+= Manuelles Installieren des Konsolen-Agents in Azure
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: Um den Konsolen-Agenten manuell auf Ihrem eigenen Linux-Host zu install
 
 
 [role="lead"]
-Um den Konsolen-Agenten manuell auf Ihrem eigenen Linux-Host zu installieren, müssen Sie die Hostanforderungen überprüfen, Ihr Netzwerk einrichten, Google Cloud-Berechtigungen vorbereiten, Google Cloud-APIs aktivieren, die Konsole installieren und dann die vorbereiteten Berechtigungen bereitstellen.
+Um den Konsolen-Agent manuell auf Ihrem eigenen Linux-Host zu installieren, müssen Sie die Hostanforderungen überprüfen, Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten, den Konsolen-Agent installieren und dann die vorbereiteten Berechtigungen bereitstellen.
 
 .Bevor Sie beginnen
-* Sie sollten über einelink:concept-connectors.html["Verständnis von Konsolenagenten"] .
+* Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
 * Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 
@@ -107,12 +107,7 @@ Nicht unterstützt
 
 |===
 --
-Google Cloud-Maschinentyp:: Ein Instanztyp, der die oben genannten CPU- und RAM-Anforderungen erfüllt.  Wir empfehlen n2-standard-8.
-+
---
-Der Konsolenagent wird in Google Cloud auf einer VM-Instanz mit einem Betriebssystem unterstützt, das https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Funktionen von Shielded VM"^]
-
---
+Azure-VM-Größe:: Ein Instanztyp, der die oben genannten CPU- und RAM-Anforderungen erfüllt.  Wir empfehlen Standard_D8s_v3.
 Speicherplatz in /opt:: 100 GiB Speicherplatz müssen verfügbar sein
 +
 --
@@ -296,7 +291,15 @@ sudo systemctl enable docker && sudo systemctl start docker
 
 == Schritt 3: Einrichten des Netzwerks
 
-Richten Sie Ihr Netzwerk so ein, dass der Konsolenagent Ressourcen und Prozesse in Ihrer Hybrid-Cloud-Umgebung verwalten kann.  Sie müssen beispielsweise sicherstellen, dass Verbindungen zu Zielnetzwerken verfügbar sind und dass ausgehender Internetzugang verfügbar ist.
+Stellen Sie sicher, dass der Netzwerkspeicherort, an dem Sie den Konsolenagenten installieren möchten, die folgenden Anforderungen unterstützt.  Wenn diese Anforderungen erfüllt sind, kann der Konsolenagent Ressourcen und Prozesse in Ihrer Hybrid-Cloud-Umgebung verwalten.
+
+Azure-Region:: Wenn Sie Cloud Volumes ONTAP verwenden, sollte der Konsolenagent in derselben Azure-Region wie die von ihm verwalteten Cloud Volumes ONTAP -Systeme oder in der https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure-Regionenpaar"^] für die Cloud Volumes ONTAP -Systeme.  Diese Anforderung stellt sicher, dass zwischen Cloud Volumes ONTAP und den zugehörigen Speicherkonten eine Azure Private Link-Verbindung verwendet wird.
++
+--
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["Erfahren Sie, wie Cloud Volumes ONTAP einen Azure Private Link verwendet"^]
+
+--
+
 
 Verbindungen zu Zielnetzwerken:: Der Konsolenagent erfordert eine Netzwerkverbindung zu dem Standort, an dem Sie Systeme erstellen und verwalten möchten.  Beispielsweise das Netzwerk, in dem Sie Cloud Volumes ONTAP -Systeme oder ein Speichersystem in Ihrer lokalen Umgebung erstellen möchten.
 
@@ -325,9 +328,16 @@ Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
 
 
  a| 
-\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+\https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
  a| 
-Zum Verwalten von Ressourcen in Google Cloud.
+Zum Verwalten von Ressourcen in öffentlichen Azure-Regionen.
+
+
+
+ a| 
+\https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
+ a| 
+Zum Verwalten von Ressourcen in Azure China-Regionen.
 
 
 
@@ -412,140 +422,216 @@ Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unter
 
 
 
-== Schritt 4: Berechtigungen für den Konsolen-Agent einrichten
+== Schritt 4: Einrichten der Bereitstellungsberechtigungen für den Konsolen-Agenten
 
-Ein Google Cloud-Dienstkonto ist erforderlich, um dem Konsolenagenten die Berechtigungen zu erteilen, die die Konsole zum Verwalten von Ressourcen in Google Cloud benötigt.  Wenn Sie den Konsolen-Agenten erstellen, müssen Sie dieses Dienstkonto mit der Konsolen-Agent-VM verknüpfen.
+Sie müssen dem Konsolen-Agenten Azure-Berechtigungen erteilen, indem Sie eine der folgenden Optionen verwenden:
 
-Es liegt in Ihrer Verantwortung, die benutzerdefinierte Rolle zu aktualisieren, wenn in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden.  Wenn neue Berechtigungen erforderlich sind, werden diese in den Versionshinweisen aufgeführt.
+* Option 1: Weisen Sie der Azure-VM mithilfe einer systemseitig zugewiesenen verwalteten Identität eine benutzerdefinierte Rolle zu.
+* Option 2: Geben Sie dem Konsolen-Agenten die Anmeldeinformationen für einen Azure-Dienstprinzipal mit den erforderlichen Berechtigungen.
+
+
+Befolgen Sie die Schritte, um Berechtigungen für den Konsolenagenten vorzubereiten.
+
+[role="tabbed-block"]
+====
+.Erstellen einer benutzerdefinierten Rolle für die Bereitstellung des Konsolenagenten
+--
+Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle mithilfe des Azure-Portals, Azure PowerShell, Azure CLI oder REST-API erstellen können.  Die folgenden Schritte zeigen, wie Sie die Rolle mithilfe der Azure CLI erstellen.  Wenn Sie eine andere Methode bevorzugen, lesen Sie bitte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure-Dokumentation"^]
 
 .Schritte
-. Erstellen Sie eine benutzerdefinierte Rolle in Google Cloud:
+. Wenn Sie die Software manuell auf Ihrem eigenen Host installieren möchten, aktivieren Sie eine systemseitig zugewiesene verwaltete Identität auf der VM, damit Sie die erforderlichen Azure-Berechtigungen über eine benutzerdefinierte Rolle bereitstellen können.
 +
-.. Erstellen Sie eine YAML-Datei, die den Inhalt derlink:reference-permissions-gcp.html["Dienstkontoberechtigungen für den Konsolenagenten"] .
-.. Aktivieren Sie Cloud Shell in Google Cloud.
-.. Laden Sie die YAML-Datei hoch, die die erforderlichen Berechtigungen enthält.
-.. Erstellen Sie eine benutzerdefinierte Rolle mithilfe der `gcloud iam roles create` Befehl.
-+
-Das folgende Beispiel erstellt auf Projektebene eine Rolle mit dem Namen „Connector“:
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure-Dokumentation: Konfigurieren verwalteter Identitäten für Azure-Ressourcen auf einer VM mithilfe des Azure-Portals"^]
 
+. Kopieren Sie den Inhalt derlink:reference-permissions-azure.html["benutzerdefinierte Rollenberechtigungen für den Connector"] und speichern Sie sie in einer JSON-Datei.
+. Ändern Sie die JSON-Datei, indem Sie dem zuweisbaren Bereich Azure-Abonnement-IDs hinzufügen.
 +
-`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+Sie sollten die ID für jedes Azure-Abonnement hinzufügen, das Sie mit der NetApp Konsole verwenden möchten.
 
 +
-https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud-Dokumente: Erstellen und Verwalten benutzerdefinierter Rollen"^]
-
-
-
-. Erstellen Sie ein Dienstkonto in Google Cloud und weisen Sie dem Dienstkonto die Rolle zu:
-+
-.. Wählen Sie im IAM- und Admin-Dienst *Dienstkonten > Dienstkonto erstellen*.
-.. Geben Sie die Details des Dienstkontos ein und wählen Sie *Erstellen und fortfahren*.
-.. Wählen Sie die Rolle aus, die Sie gerade erstellt haben.
-.. Führen Sie die restlichen Schritte aus, um die Rolle zu erstellen.
-+
-https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud-Dokumente: Erstellen eines Dienstkontos"^]
-
-
-
-. Wenn Sie Cloud Volumes ONTAP -Systeme in anderen Projekten als dem Projekt bereitstellen möchten, in dem sich der Konsolenagent befindet, müssen Sie dem Dienstkonto des Konsolenagenten Zugriff auf diese Projekte gewähren.
-+
-Nehmen wir beispielsweise an, der Konsolenagent befindet sich in Projekt 1 und Sie möchten Cloud Volumes ONTAP -Systeme in Projekt 2 erstellen.  Sie müssen dem Dienstkonto in Projekt 2 Zugriff gewähren.
+*Beispiel*
 
 +
-.. Wählen Sie im IAM- und Admin-Dienst das Google Cloud-Projekt aus, in dem Sie Cloud Volumes ONTAP -Systeme erstellen möchten.
-.. Wählen Sie auf der *IAM*-Seite *Zugriff gewähren* aus und geben Sie die erforderlichen Details ein.
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+. Verwenden Sie die JSON-Datei, um eine benutzerdefinierte Rolle in Azure zu erstellen.
 +
-*** Geben Sie die E-Mail-Adresse des Dienstkontos des Konsolenagenten ein.
-*** Wählen Sie die benutzerdefinierte Rolle des Konsolenagenten aus.
-*** Wählen Sie *Speichern*.
-
-
-
+Die folgenden Schritte beschreiben, wie Sie die Rolle mithilfe von Bash in Azure Cloud Shell erstellen.
 
 +
-Weitere Einzelheiten finden Sie unter https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single-role["Google Cloud-Dokumentation"^]
+.. Start https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure Cloud Shell"^] und wählen Sie die Bash-Umgebung.
+.. Laden Sie die JSON-Datei hoch.
++
+image:screenshot_azure_shell_upload.png["Ein Screenshot der Azure Cloud Shell, in dem Sie die Option zum Hochladen einer Datei auswählen können."]
+
+.. Verwenden Sie die Azure CLI, um die benutzerdefinierte Rolle zu erstellen:
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
+
+
+
+
+--
+.Dienstprinzipal
+--
+Erstellen und richten Sie einen Dienstprinzipal in Microsoft Entra ID ein und rufen Sie die Azure-Anmeldeinformationen ab, die der Konsolenagent benötigt.
+
+.Erstellen Sie eine Microsoft Entra-Anwendung für die rollenbasierte Zugriffskontrolle
+. Stellen Sie sicher, dass Sie in Azure über die Berechtigung verfügen, eine Active Directory-Anwendung zu erstellen und die Anwendung einer Rolle zuzuweisen.
++
+Weitere Einzelheiten finden Sie unter https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Microsoft Azure-Dokumentation: Erforderliche Berechtigungen"^]
+
+. Öffnen Sie im Azure-Portal den Dienst *Microsoft Entra ID*.
++
+image:screenshot_azure_ad.png["Zeigt den Active Directory-Dienst in Microsoft Azure."]
+
+. Wählen Sie im Menü *App-Registrierungen* aus.
+. Wählen Sie *Neuregistrierung*.
+. Geben Sie Details zur Anwendung an:
++
+** *Name*: Geben Sie einen Namen für die Anwendung ein.
+** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der NetApp Konsole).
+** *Umleitungs-URI*: Sie können dieses Feld leer lassen.
+
+
+. Wählen Sie *Registrieren*.
++
+Sie haben die AD-Anwendung und den Dienstprinzipal erstellt.
+
+
+
+.Zuweisen der Anwendung zu einer Rolle
+. Erstellen Sie eine benutzerdefinierte Rolle:
++
+Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle mithilfe des Azure-Portals, Azure PowerShell, Azure CLI oder REST-API erstellen können.  Die folgenden Schritte zeigen, wie Sie die Rolle mithilfe der Azure CLI erstellen.  Wenn Sie eine andere Methode bevorzugen, lesen Sie bitte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure-Dokumentation"^]
+
++
+.. Kopieren Sie den Inhalt derlink:reference-permissions-azure.html["benutzerdefinierte Rollenberechtigungen für den Konsolenagenten"] und speichern Sie sie in einer JSON-Datei.
+.. Ändern Sie die JSON-Datei, indem Sie dem zuweisbaren Bereich Azure-Abonnement-IDs hinzufügen.
++
+Sie sollten die ID für jedes Azure-Abonnement hinzufügen, aus dem Benutzer Cloud Volumes ONTAP -Systeme erstellen.
+
++
+*Beispiel*
+
++
+[source, json]
+----
+"AssignableScopes": [
+"/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
+"/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
+"/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+----
+.. Verwenden Sie die JSON-Datei, um eine benutzerdefinierte Rolle in Azure zu erstellen.
++
+Die folgenden Schritte beschreiben, wie Sie die Rolle mithilfe von Bash in Azure Cloud Shell erstellen.
+
++
+*** Start https://docs.microsoft.com/en-us/azure/cloud-shell/overview["Azure Cloud Shell"^] und wählen Sie die Bash-Umgebung.
+*** Laden Sie die JSON-Datei hoch.
++
+image:screenshot_azure_shell_upload.png["Ein Screenshot der Azure Cloud Shell, in dem Sie die Option zum Hochladen einer Datei auswählen können."]
+
+*** Verwenden Sie die Azure CLI, um die benutzerdefinierte Rolle zu erstellen:
++
+[source, azurecli]
+----
+az role definition create --role-definition Connector_Policy.json
+----
++
+Sie sollten jetzt über eine benutzerdefinierte Rolle namens „Konsolenoperator“ verfügen, die Sie der virtuellen Maschine des Konsolenagenten zuweisen können.
 
 
 
 
 
-== Schritt 5: Einrichten freigegebener VPC-Berechtigungen
+. Weisen Sie die Anwendung der Rolle zu:
++
+.. Öffnen Sie im Azure-Portal den Dienst *Abonnements*.
+.. Wählen Sie das Abonnement aus.
+.. Wählen Sie *Zugriffskontrolle (IAM) > Hinzufügen > Rollenzuweisung hinzufügen*.
+.. Wählen Sie auf der Registerkarte *Rolle* die Rolle *Konsolenbediener* aus und klicken Sie auf *Weiter*.
+.. Führen Sie auf der Registerkarte *Mitglieder* die folgenden Schritte aus:
++
+*** Behalten Sie die Auswahl von *Benutzer, Gruppe oder Dienstprinzipal* bei.
+*** Wählen Sie *Mitglieder auswählen*.
++
+image:screenshot-azure-service-principal-role.png["Ein Screenshot des Azure-Portals, der die Seite „Mitglieder“ beim Hinzufügen einer Rolle zu einer Anwendung zeigt."]
 
-Wenn Sie eine gemeinsam genutzte VPC verwenden, um Ressourcen in einem Serviceprojekt bereitzustellen, müssen Sie Ihre Berechtigungen vorbereiten.
+*** Suchen Sie nach dem Namen der Anwendung.
++
+Hier ist ein Beispiel:
 
-Diese Tabelle dient als Referenz und Ihre Umgebung sollte die Berechtigungstabelle widerspiegeln, wenn die IAM-Konfiguration abgeschlossen ist.
++
+image:screenshot_azure_service_principal_role.png["Ein Screenshot des Azure-Portals, der das Formular „Rollenzuweisung hinzufügen“ im Azure-Portal zeigt."]
 
-.Berechtigungen für freigegebene VPCs anzeigen
-[%collapsible]
+*** Wählen Sie die Anwendung aus und wählen Sie *Auswählen*.
+*** Wählen Sie *Weiter*.
+
+
+.. Wählen Sie *Überprüfen + zuweisen*.
++
+Der Dienstprinzipal verfügt jetzt über die erforderlichen Azure-Berechtigungen zum Bereitstellen des Konsolen-Agenten.
+
++
+Wenn Sie Cloud Volumes ONTAP aus mehreren Azure-Abonnements bereitstellen möchten, müssen Sie den Dienstprinzipal an jedes dieser Abonnements binden.  In der NetApp Konsole können Sie das Abonnement auswählen, das Sie beim Bereitstellen von Cloud Volumes ONTAP verwenden möchten.
+
+
+
+
+
+.Fügen Sie Berechtigungen für die Windows Azure Service Management-API hinzu
+. Wählen Sie im Dienst *Microsoft Entra ID* *App-Registrierungen* und wählen Sie die Anwendung aus.
+. Wählen Sie *API-Berechtigungen > Berechtigung hinzufügen*.
+. Wählen Sie unter *Microsoft-APIs* *Azure Service Management* aus.
++
+image:screenshot_azure_service_mgmt_apis.gif["Ein Screenshot des Azure-Portals, der die Berechtigungen der Azure Service Management-API zeigt."]
+
+. Wählen Sie *Auf Azure Service Management als Organisationsbenutzer zugreifen* und dann *Berechtigungen hinzufügen*.
++
+image:screenshot_azure_service_mgmt_apis_add.gif["Ein Screenshot des Azure-Portals, der das Hinzufügen der Azure Service Management-APIs zeigt."]
+
+
+
+.Abrufen der Anwendungs-ID und Verzeichnis-ID für die Anwendung
+. Wählen Sie im Dienst *Microsoft Entra ID* *App-Registrierungen* und wählen Sie die Anwendung aus.
+. Kopieren Sie die *Anwendungs-ID (Client-ID)* und die *Verzeichnis-ID (Mandant-ID)*.
++
+image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für eine Anwendung in Microsoft Entra IDy zeigt."]
+
++
+Wenn Sie das Azure-Konto zur Konsole hinzufügen, müssen Sie die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für die Anwendung angeben.  Die Konsole verwendet die IDs zur programmgesteuerten Anmeldung.
+
+
+
+.Erstellen eines Client-Geheimnisses
+. Öffnen Sie den Dienst *Microsoft Entra ID*.
+. Wählen Sie *App-Registrierungen* und wählen Sie Ihre Anwendung aus.
+. Wählen Sie *Zertifikate und Geheimnisse > Neues Clientgeheimnis*.
+. Geben Sie eine Beschreibung des Geheimnisses und eine Dauer an.
+. Wählen Sie *Hinzufügen*.
+. Kopieren Sie den Wert des Client-Geheimnisses.
++
+image:screenshot_azure_client_secret.gif["Ein Screenshot des Azure-Portals, der ein Clientgeheimnis für den Microsoft Entra-Dienstprinzipal zeigt."]
+
+
+
+.Ergebnis
+Ihr Dienstprinzipal ist jetzt eingerichtet und Sie sollten die Anwendungs-ID (Client-ID), die Verzeichnis-ID (Mandant-ID) und den Wert des Client-Geheimnisses kopiert haben.  Sie müssen diese Informationen in der Konsole eingeben, wenn Sie ein Azure-Konto hinzufügen.
+
+--
 ====
-[cols="10,10,10,18,18,34"]
-|===
-| Identität | Schöpfer | Gehostet in | Serviceprojektberechtigungen | Host-Projektberechtigungen | Zweck 
 
 
-| Google-Konto zum Bereitstellen des Agenten | Brauch | Serviceprojekt  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Richtlinie zur Agentenbereitstellung"]
- a| 
-compute.networkUser
-| Bereitstellen des Agenten im Serviceprojekt 
-
-
-| Agent-Dienstkonto | Brauch | Serviceprojekt  a| 
-link:reference-permissions-gcp.html["Agent-Dienstkontorichtlinie"]
-| compute.networkUser deploymentmanager.editor | Bereitstellung und Wartung von Cloud Volumes ONTAP und Diensten im Serviceprojekt 
-
-
-| Cloud Volumes ONTAP Dienstkonto | Brauch | Serviceprojekt | storage.admin-Mitglied: NetApp -Konsolendienstkonto als serviceAccount.user | k. A. | (Optional) Für NetApp Cloud Tiering und NetApp Backup und Recovery 
-
-
-| Google APIs-Dienstagent | Google Cloud | Serviceprojekt  a| 
-(Standard-)Editor
- a| 
-compute.networkUser
-| Interagiert im Rahmen der Bereitstellung mit Google Cloud-APIs.  Ermöglicht der Konsole die Verwendung des freigegebenen Netzwerks. 
-
-
-| Standarddienstkonto von Google Compute Engine | Google Cloud | Serviceprojekt  a| 
-(Standard-)Editor
- a| 
-compute.networkUser
-| Stellt Google Cloud-Instanzen und Recheninfrastruktur im Auftrag der Bereitstellung bereit.  Ermöglicht der Konsole die Verwendung des freigegebenen Netzwerks. 
-|===
-Hinweise:
-
-. deploymentmanager.editor wird im Hostprojekt nur benötigt, wenn Sie keine Firewall-Regeln an die Bereitstellung übergeben und diese von der Konsole für Sie erstellen lassen.  Die NetApp Konsole erstellt eine Bereitstellung im Hostprojekt, die die VPC0-Firewallregel enthält, wenn keine Regel angegeben ist.
-. firewall.create und firewall.delete sind nur erforderlich, wenn Sie keine Firewall-Regeln an die Bereitstellung übergeben und diese von der Konsole für Sie erstellen lassen möchten.  Diese Berechtigungen befinden sich in der YAML-Datei des Konsolenkontos.  Wenn Sie ein HA-Paar mithilfe einer gemeinsam genutzten VPC bereitstellen, werden diese Berechtigungen zum Erstellen der Firewall-Regeln für VPC1, 2 und 3 verwendet.  Bei allen anderen Bereitstellungen werden diese Berechtigungen auch zum Erstellen von Regeln für VPC0 verwendet.
-. Für Cloud Tiering muss das Tiering-Dienstkonto über die Rolle serviceAccount.user für das Dienstkonto verfügen, nicht nur auf Projektebene.  Wenn Sie derzeit serviceAccount.user auf Projektebene zuweisen, werden die Berechtigungen nicht angezeigt, wenn Sie das Dienstkonto mit getIAMPolicy abfragen.
-
-
-====
-
-
-== Schritt 6: Google Cloud APIs aktivieren
-
-Bevor Sie Cloud Volumes ONTAP -Systeme in Google Cloud bereitstellen können, müssen mehrere Google Cloud-APIs aktiviert werden.
-
-.Schritt
-. Aktivieren Sie die folgenden Google Cloud-APIs in Ihrem Projekt:
-+
-** Cloud Deployment Manager V2 API
-** Cloud Logging API
-** Cloud Resource Manager-API
-** Compute Engine-API
-** API für Identitäts- und Zugriffsverwaltung (IAM)
-** Cloud Key Management Service (KMS)-API
-+
-(Nur erforderlich, wenn Sie NetApp Backup and Recovery mit vom Kunden verwalteten Verschlüsselungsschlüsseln (CMEK) verwenden möchten)
-
-
-
-
-
-https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud-Dokumentation: APIs aktivieren"^]
-
-
-
-== Schritt 7: Installieren des Konsolenagenten
+== Schritt 5: Installieren des Konsolenagenten
 
 Nachdem die Voraussetzungen erfüllt sind, können Sie die Software manuell auf Ihrem eigenen Linux-Host installieren.
 
@@ -561,7 +647,13 @@ Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfiguri
 
 
 
-NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen.  Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-connector-maint-console.html["Agenten-Wartungskonsole"] .
+NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
+
+* Eine auf der VM in Azure aktivierte verwaltete Identität, sodass Sie die erforderlichen Azure-Berechtigungen über eine benutzerdefinierte Rolle bereitstellen können.
++
+https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure-Dokumentation: Konfigurieren verwalteter Identitäten für Azure-Ressourcen auf einer VM mithilfe des Azure-Portals"^]
+
+
 
 .Informationen zu diesem Vorgang
 Das auf der NetApp Support-Site verfügbare Installationsprogramm ist möglicherweise eine frühere Version.  Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.
@@ -693,24 +785,74 @@ Sie sollten den eingeschränkten Modus deaktiviert lassen, da diese Schritte die
 .. Wählen Sie *Los geht's*.
 
 
-+
-
-NOTE: Wenn die Installation fehlschlägt, können Sie Protokolle und einen Bericht anzeigen, die Ihnen bei der Fehlerbehebung helfen.link:task-troubleshoot-agent.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]
 
 
-
-Wenn Sie Google Cloud Storage-Buckets im selben Google Cloud-Konto haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Google Cloud Storage-System angezeigt. https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["Erfahren Sie, wie Sie Google Cloud Storage über die NetApp -Konsole verwalten"^]
+Wenn Sie Azure Blob Storage im selben Azure-Abonnement haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Azure Blob Storage-System angezeigt. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Erfahren Sie, wie Sie Azure Blob Storage über die NetApp -Konsole verwalten"^]
 
 
 
-== Schritt 8: Erteilen Sie dem Konsolenagenten Berechtigungen
+== Schritt 6: Berechtigungen für die NetApp Konsole erteilen
 
-Sie müssen dem Konsolenagenten die Google Cloud-Berechtigungen erteilen, die Sie zuvor eingerichtet haben.  Durch die Bereitstellung der Berechtigungen kann der Konsolenagent Ihre Daten und Speicherinfrastruktur in Google Cloud verwalten.
+Nachdem Sie den Konsolen-Agent installiert haben, müssen Sie dem Konsolen-Agenten die Azure-Berechtigungen erteilen, die Sie zuvor eingerichtet haben.  Durch die Bereitstellung der Berechtigungen kann die Konsole Ihre Daten- und Speicherinfrastruktur in Azure verwalten.
+
+[role="tabbed-block"]
+====
+.Benutzerdefinierte Rolle
+--
+Gehen Sie zum Azure-Portal und weisen Sie der virtuellen Maschine des Konsolen-Agents für ein oder mehrere Abonnements die benutzerdefinierte Azure-Rolle zu.
 
 .Schritte
-. Gehen Sie zum Google Cloud-Portal und weisen Sie das Dienstkonto der VM-Instanz des Konsolenagenten zu.
+. Öffnen Sie im Azure-Portal den Dienst *Abonnements* und wählen Sie Ihr Abonnement aus.
 +
-https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud-Dokumentation: Ändern des Dienstkontos und der Zugriffsbereiche für eine Instanz"^]
+Es ist wichtig, die Rolle vom Dienst *Abonnements* zuzuweisen, da dies den Umfang der Rollenzuweisung auf Abonnementebene angibt.  Der _Bereich_ definiert die Menge der Ressourcen, auf die der Zugriff angewendet wird.  Wenn Sie einen Bereich auf einer anderen Ebene angeben (z. B. auf der Ebene der virtuellen Maschine), wird Ihre Fähigkeit, Aktionen innerhalb der NetApp Konsole auszuführen, beeinträchtigt.
 
-. Wenn Sie Ressourcen in anderen Google Cloud-Projekten verwalten möchten, gewähren Sie Zugriff, indem Sie das Dienstkonto mit der Rolle „Konsolenagent“ zu diesem Projekt hinzufügen. Sie müssen diesen Schritt für jedes Projekt wiederholen.
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure-Dokumentation: Umfang von Azure RBAC verstehen"^]
 
+. Wählen Sie *Zugriffskontrolle (IAM)* > *Hinzufügen* > *Rollenzuweisung hinzufügen*.
+. Wählen Sie auf der Registerkarte *Rolle* die Rolle *Konsolenbediener* aus und klicken Sie auf *Weiter*.
++
+
+NOTE: „Konsolenoperator“ ist der in der Richtlinie angegebene Standardname.  Wenn Sie einen anderen Namen für die Rolle gewählt haben, wählen Sie stattdessen diesen Namen aus.
+
+. Führen Sie auf der Registerkarte *Mitglieder* die folgenden Schritte aus:
++
+.. Weisen Sie einer *verwalteten Identität* Zugriff zu.
+.. Wählen Sie *Mitglieder auswählen*, wählen Sie das Abonnement aus, in dem die virtuelle Maschine des Konsolen-Agents erstellt wurde, wählen Sie unter *Verwaltete Identität* *Virtuelle Maschine* und wählen Sie dann die virtuelle Maschine des Konsolen-Agents aus.
+.. Wählen Sie *Auswählen*.
+.. Wählen Sie *Weiter*.
+.. Wählen Sie *Überprüfen + zuweisen*.
+.. Wenn Sie Ressourcen in zusätzlichen Azure-Abonnements verwalten möchten, wechseln Sie zu diesem Abonnement und wiederholen Sie diese Schritte.
+
+
+
+
+.Wie geht es weiter?
+Gehen Sie zum https://console.netapp.com["NetApp Konsole"^] um mit der Verwendung des Konsolenagenten zu beginnen.
+
+--
+.Dienstprinzipal
+--
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
++
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Microsoft Azure > Agent*.
+.. *Anmeldeinformationen definieren*: Geben Sie Informationen zum Microsoft Entra-Dienstprinzipal ein, der die erforderlichen Berechtigungen erteilt:
++
+*** Anwendungs-ID (Client-ID)
+*** Verzeichnis-ID (Mandant)
+*** Client-Geheimnis
+
+
+.. *Marketplace-Abonnement*: Verknüpfen Sie ein Marketplace-Abonnement mit diesen Anmeldeinformationen, indem Sie sich jetzt anmelden oder ein vorhandenes Abonnement auswählen.
+.. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
+
+
+
+
+.Ergebnis
+Der Konsolenagent verfügt jetzt über die erforderlichen Berechtigungen, um in Ihrem Namen Aktionen in Azure auszuführen.
+
+--
+====

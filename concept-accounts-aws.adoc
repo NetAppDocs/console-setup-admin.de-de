@@ -20,7 +20,7 @@ Erfahren Sie, wie die NetApp Konsole AWS-Anmeldeinformationen verwendet, um Akti
 
 == Anfängliche AWS-Anmeldeinformationen
 
-Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, müssen Sie die ARN einer IAM-Rolle oder Zugriffsschlüssel für einen IAM-Benutzer angeben.  Die Authentifizierungsmethode muss über Berechtigungen zum Bereitstellen der Konsole in AWS verfügen.  Die erforderlichen Berechtigungen sind im Link:task-install-connector-aws-the Console.html#console-permissions-aws[Agent-Bereitstellungsrichtlinie für AWS] aufgeführt.
+Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, müssen Sie die ARN einer IAM-Rolle oder Zugriffsschlüssel für einen IAM-Benutzer angeben. Die Authentifizierungsmethode muss über Berechtigungen zum Bereitstellen der Konsole in AWS verfügen. Die erforderlichen Berechtigungen sind im Link:task-install-agent-aws-the Console.html#console-permissions-aws[Agent-Bereitstellungsrichtlinie für AWS] aufgeführt.
 
 Wenn die Konsole die Konsolenagent-Instanz in AWS startet, erstellt sie eine IAM-Rolle und ein Instanzprofil für die Instanz.  Außerdem wird eine Richtlinie angehängt, die dem Konsolenagenten die Berechtigung erteilt, Ressourcen und Prozesse innerhalb dieses AWS-Kontos zu verwalten. link:reference-permissions-aws.html["Überprüfen Sie, wie die Konsole die Berechtigungen verwendet"] .
 
@@ -141,8 +141,8 @@ Informationen zum Einrichten von Berechtigungen finden Sie auf den folgenden Sei
 
 * Standardmodus
 +
-** link:task-install-connector-aws-marketplace.html#step-2-set-up-aws-permissions["Einrichten von Berechtigungen für eine AWS Marketplace-Bereitstellung"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Einrichten von Berechtigungen für lokale Bereitstellungen"]
+** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["Einrichten von Berechtigungen für eine AWS Marketplace-Bereitstellung"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Einrichten von Berechtigungen für lokale Bereitstellungen"]
 
 
 * Eingeschränkter Modus

@@ -28,8 +28,8 @@ Sie müssen sicherstellen, dass die Rolle auf dem neuesten Stand ist, da in nach
 
 * Schritt-für-Schritt-Anleitungen zur Verwendung dieser Richtlinien finden Sie auf den folgenden Seiten:
 +
-** link:task-install-connector-azure-marketplace.html#step-3-set-up-permissions["Einrichten von Berechtigungen für eine Azure Marketplace-Bereitstellung"]
-** link:task-install-connector-on-prem.html#agent-permission-aws-azure["Einrichten von Berechtigungen für lokale Bereitstellungen"]
+** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["Einrichten von Berechtigungen für eine Azure Marketplace-Bereitstellung"]
+** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Einrichten von Berechtigungen für lokale Bereitstellungen"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den eingeschränkten Modus einrichten"]
 
 

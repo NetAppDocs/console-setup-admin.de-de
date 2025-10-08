@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-azure-marketplace.html 
+permalink: task-install-agent-azure-marketplace.html 
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector, marketplace, azure marketplace 
 summary: Um einen Konsolen-Agenten aus dem Azure Marketplace zu erstellen, müssen Sie Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten, die Instanzanforderungen überprüfen und dann den Konsolen-Agenten erstellen. 
 ---
@@ -17,7 +17,7 @@ summary: Um einen Konsolen-Agenten aus dem Azure Marketplace zu erstellen, müss
 Sie können einen Konsolen-Agent in Azure direkt vom Azure Marketplace aus erstellen.  Um einen Konsolen-Agenten aus dem Azure Marketplace zu erstellen, müssen Sie Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten, die Instanzanforderungen überprüfen und dann den Konsolen-Agenten erstellen.
 
 .Bevor Sie beginnen
-* Sie sollten über einelink:concept-connectors.html["Verständnis von Konsolenagenten"] .
+* Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
 * Rezensionlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 
@@ -376,7 +376,7 @@ image:screenshot_azure_client_secret.gif["Ein Screenshot des Azure-Portals, der 
 Starten Sie den Konsolen-Agent direkt vom Azure Marketplace.
 
 .Informationen zu diesem Vorgang
-Durch Erstellen des Konsolen-Agenten aus dem Azure Marketplace wird eine virtuelle Maschine mit einer Standardkonfiguration eingerichtet. link:reference-connector-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
+Durch Erstellen des Konsolen-Agenten aus dem Azure Marketplace wird eine virtuelle Maschine mit einer Standardkonfiguration eingerichtet. link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
 
 .Bevor Sie beginnen
 Folgendes sollten Sie haben:

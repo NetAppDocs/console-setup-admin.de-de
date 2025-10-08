@@ -3,7 +3,7 @@
 
 
 .Schritte
-. Wählen Sie *Administration > *Anmeldeinformationen*.
+. Wählen Sie *Administration > Anmeldeinformationen*.
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
 +

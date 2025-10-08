@@ -143,7 +143,7 @@ Die Konsole bietet Identitäts- und Zugriffsverwaltung (IAM) für die Ressourcen
 
 Für einige zusätzliche Funktionen und Datendienste wird ein Konsolenagent benötigt.  Es ermöglicht Ihnen, Ressourcen und Prozesse in Ihren lokalen und Cloud-Umgebungen zu verwalten.  Sie benötigen es, um einige Systeme zu verwalten (z. B. Cloud Volumes ONTAP) und um einige NetApp -Datendienste zu verwenden.
 
-link:concept-connectors.html["Erfahren Sie mehr über Konsolenagenten"] .
+link:concept-agents.html["Erfahren Sie mehr über Konsolenagenten"] .
 
 
 

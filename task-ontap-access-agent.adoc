@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-ontap-access-connector.html 
+permalink: task-ontap-access-agent.html 
 keywords: administer, credentials, ONTAP, connector, Cloud Volumes ONTAP, on-premises, roles, permissions, console agent, agent 
 summary: Administratoren können die NetApp Konsole so konfigurieren, dass ein Benutzer zur Eingabe seiner ONTAP Anmeldeinformationen aufgefordert wird. 
 ---

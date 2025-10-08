@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-aws-marketplace.html 
+permalink: task-install-agent-aws-marketplace.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, aws marketplace, manual install, create connector 
 summary: Um einen Konsolenagenten aus dem AWS Marketplace zu erstellen, müssen Sie Ihr Netzwerk einrichten, AWS-Berechtigungen vorbereiten, die Instanzanforderungen überprüfen und dann den Konsolenagenten erstellen. 
 ---
@@ -17,7 +17,7 @@ summary: Um einen Konsolenagenten aus dem AWS Marketplace zu erstellen, müssen 
 Sie erstellen einen Konsolenagenten in AWS direkt vom AWS Marketplace.  Um einen Konsolenagenten aus dem AWS Marketplace zu erstellen, müssen Sie Ihr Netzwerk einrichten, AWS-Berechtigungen vorbereiten, die Instanzanforderungen überprüfen und dann den Konsolenagenten erstellen.
 
 .Bevor Sie beginnen
-* Sie sollten über einelink:concept-connectors.html["Verständnis von Konsolenagenten"] .
+* Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
 * Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 
@@ -194,7 +194,7 @@ AWS EC2-Instanztyp:: Ein Instanztyp, der die oben genannten CPU- und RAM-Anforde
 Erstellen Sie den Konsolenagenten direkt vom AWS Marketplace.
 
 .Informationen zu diesem Vorgang
-Durch Erstellen des Konsolenagenten aus dem AWS Marketplace wird eine EC2-Instanz in AWS mithilfe einer Standardkonfiguration bereitgestellt. link:reference-connector-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
+Durch Erstellen des Konsolenagenten aus dem AWS Marketplace wird eine EC2-Instanz in AWS mithilfe einer Standardkonfiguration bereitgestellt. link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
 
 .Bevor Sie beginnen
 Folgendes sollten Sie haben:

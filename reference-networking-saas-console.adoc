@@ -81,10 +81,10 @@ Konsolenagenten müssen Zugriff auf dieselben Endpunkte wie die NetApp Konsole h
 
 Richten Sie den Netzwerk-Endpunktzugriff ein, bevor Sie den Konsolen-Agenten installieren.
 
-* link:task-install-connector-aws-bluexp.html#networking-aws-agent["Einrichten des AWS-Netzwerkzugriffs für einen Konsolenagenten"]
-* link:task-install-connector-azure-bluexp.html#networking-azure-agent["Einrichten des Azure-Netzwerkzugriffs für einen Konsolen-Agent"]
-* link:task-install-connector-google-bluexp-gcloud.html#networking-gcp-agent["Einrichten des Google Cloud-Netzwerkzugriffs für einen Konsolenagenten"]
-* link:task-install-connector-on-prem.html#network-access-agent["Einrichten des lokalen Netzwerkzugriffs für einen Konsolen-Agenten"]
+* link:task-install-agent-aws-console.html#networking-aws-agent["Einrichten des AWS-Netzwerkzugriffs für einen Konsolenagenten"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["Einrichten des Azure-Netzwerkzugriffs für einen Konsolen-Agent"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["Einrichten des Google Cloud-Netzwerkzugriffs für einen Konsolenagenten"]
+* link:task-install-agent-on-prem.html#network-access-agent["Einrichten des lokalen Netzwerkzugriffs für einen Konsolen-Agenten"]
 
 
 

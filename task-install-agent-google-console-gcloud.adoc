@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: task-install-connector-google-bluexp-gcloud.html 
+permalink: task-install-agent-google-console-gcloud.html 
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
 summary: Um einen Konsolenagenten in Google Cloud über die NetApp -Konsole oder mithilfe von Google Cloud zu erstellen, müssen Sie Ihr Netzwerk einrichten, Google Cloud-Berechtigungen vorbereiten, Google Cloud-APIs aktivieren und dann den Konsolenagenten erstellen. 
 ---
@@ -17,7 +17,7 @@ summary: Um einen Konsolenagenten in Google Cloud über die NetApp -Konsole oder
 Sie können über die Konsole einen Konsolenagenten in Google Cloud erstellen.  Sie müssen Ihr Netzwerk einrichten, Google Cloud-Berechtigungen vorbereiten, Google Cloud-APIs aktivieren und dann den Konsolenagenten erstellen.
 
 .Bevor Sie beginnen
-* Sie sollten über einelink:concept-connectors.html["Verständnis von Konsolenagenten"] .
+* Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
 * Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 
@@ -313,7 +313,7 @@ Diese Tabelle dient als Referenz und Ihre Umgebung sollte die Berechtigungstabel
 
 
 | Google-Konto zum Bereitstellen des Agenten | Brauch | Serviceprojekt  a| 
-link:task-install-connector-google-bluexp-gcloud.html#agent-permissions-google["Richtlinie zur Agentenbereitstellung"]
+link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Richtlinie zur Agentenbereitstellung"]
  a| 
 compute.networkUser
 | Bereitstellen des Agenten im Serviceprojekt 
@@ -379,7 +379,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud-D
 Erstellen Sie einen Konsolenagenten direkt aus der Konsole.
 
 .Informationen zu diesem Vorgang
-Durch Erstellen des Konsolenagenten wird eine VM-Instanz in Google Cloud mithilfe einer Standardkonfiguration bereitgestellt.  Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren VM-Instanz mit weniger CPUs oder weniger RAM. link:reference-connector-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
+Durch Erstellen des Konsolenagenten wird eine VM-Instanz in Google Cloud mithilfe einer Standardkonfiguration bereitgestellt. Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren VM-Instanz mit weniger CPUs oder weniger RAM. link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
 
 .Bevor Sie beginnen
 Folgendes sollten Sie haben:
