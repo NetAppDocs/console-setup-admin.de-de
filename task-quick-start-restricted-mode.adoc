@@ -19,8 +19,6 @@ Beginnen Sie mit der NetApp Konsole im eingeschränkten Modus, indem Sie Ihre Um
 Der eingeschränkte Modus wird normalerweise von staatlichen und lokalen Behörden sowie regulierten Unternehmen verwendet, einschließlich Bereitstellungen in AWS GovCloud- und Azure Government-Regionen.  Bevor Sie beginnen, stellen Sie sicher, dass Sie Folgendes verstehen:link:concept-connectors.html["Konsolenagenten"] Undlink:concept-modes.html["Bereitstellungsmodi"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:task-prepare-restricted-mode.html["Vorbereiten der Bereitstellung"]
-https://raw.githubusercontent.com/NetAppDocs/console-setup-admin-internal/blob/main/media/screenshot-canvas.png[]
-
 [role="quick-margin-list"]
 . Bereiten Sie einen dedizierten Linux-Host vor, der die Anforderungen hinsichtlich CPU, RAM, Speicherplatz, Container-Orchestrierungstool und mehr erfüllt.
 . Richten Sie ein Netzwerk ein, das Zugriff auf die Zielnetzwerke, ausgehenden Internetzugang für manuelle Installationen und ausgehendes Internet für den täglichen Zugriff bietet.

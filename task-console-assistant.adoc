@@ -4,7 +4,7 @@ permalink: task-console-assistant.html
 keywords: bluexp,netapp console,console assistant,assistant,setup assistant,get started,quick start,first time user,first time setup,setup wizard 
 summary: 'Wenn Sie die NetApp Konsole zum ersten Mal verwenden, führt Sie der Konsolenassistent durch den ersten Einrichtungsprozess.  Der Assistent unterstützt Sie beim Hinzufügen eines NetApp Support Site (NSS)-Kontos, eines Konsolenagenten, eines Clusters und einer Lizenz oder eines Abonnements und erleichtert Ihnen so den Einstieg in die Verwaltung Ihrer Daten.' 
 ---
-= Erste Schritte mit dem NetApp Console Assistant
+= Erste Schritte mit dem NetApp Console-Assistenten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -28,7 +28,7 @@ Der Konsolenassistent ist nur für Benutzer mit der Rolle „Organisationsadmini
 
 Der Konsolenassistent ist auf der Startseite der NetApp Konsole verfügbar, bis die obligatorischen Einrichtungsaufgaben abgeschlossen sind.
 
-Verwenden Sie den Assistenten, um diese Aufgaben zu erledigen, von denen einige obligatorisch sind:
+Nutzen Sie den Assistenten, um diese, teilweise obligatorischen Aufgaben zu erledigen:
 
 * Fügen Sie ein NetApp Support Site (NSS)-Konto hinzu.
 * Stellen Sie eine Verbindung zu Ihrem Speicherbestand her, indem Sie einen Konsolenagenten bereitstellen (obligatorischer Schritt).
@@ -39,12 +39,12 @@ Verwenden Sie den Assistenten, um diese Aufgaben zu erledigen, von denen einige 
 
 
 
-== Aktivieren des Konsolenassistenten
+== Aktivieren Sie den Konsolenassistenten
 
 Standardmäßig zeigt die NetApp Konsole den Konsolenassistenten auf der Startseite für Erstbenutzer mit der Rolle „Organisationsadministrator“ an.
 
 
-TIP: Sie können den Assistenten erst dann selbst entlassen, wenn Sie oder jemand anderes die erforderlichen Aufgaben erledigt hat.  Nachdem Sie die obligatorischen Elemente abgeschlossen haben, wird der Assistent für alle Benutzer in Ihrer Organisation geschlossen und nicht erneut angezeigt.
+TIP: Sie können den Assistenten erst dann selbst entlassen, wenn Sie oder jemand anderes die obligatorischen Aufgaben erledigt hat.  Nachdem Sie die obligatorischen Elemente abgeschlossen haben, wird der Assistent für alle Benutzer in Ihrer Organisation geschlossen und nicht erneut angezeigt.
 
 
 

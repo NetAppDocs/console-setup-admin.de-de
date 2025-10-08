@@ -33,7 +33,7 @@ Jeder Bereich auf der Startseite erfordert unterschiedliche Benutzerrollen:
 * * ONTAP -Warnbereich*: Ordner- oder Projektadministrator, Operations Support Analyst, Organisationsadministrator, Organisationsbetrachter, Superadministrator, Superbetrachter
 * *Speicherleistungskapazitätsbereich*: Möglichkeit, die Seite „NetApp -Konsolensysteme“ anzuzeigen
 * *Bereich „Lizenzen und Abonnements“*: Ordner- oder Projektadministrator, Organisationsadministrator, Organisationsbetrachter, Superadministrator, Superbetrachter
-* *Bereich „Ransomware-Resilienz“*: Ordner- oder Projektadministrator, Organisationsadministrator, Ransomware-Schutzadministrator, Ransomware-Schutzbetrachter, Superadministrator, Superbetrachter
+* *Ransomware-Resilience-Bereich*: Ordner- oder Projektadministrator, Organisationsadministrator, Ransomware-Resilience-Administrator, Ransomware-Resilience-Viewer, Superadministrator, Super-Viewer
 * *Bereich „Backup und Wiederherstellung“*: Backup- und Wiederherstellungs-Backup-Administrator, Super-Admin für Backup und Wiederherstellung, Backup- und Wiederherstellungs-Backup-Viewer, Backup- und Wiederherstellungs-Klon-Administrator, Ordner- oder Projekt-Administrator, Organisations-Administrator, Backup- und Wiederherstellungs-Wiederherstellungs-Administrator, Super-Admin, Super-Viewer
 
 
@@ -194,7 +194,7 @@ Finden Sie mit dem NetApp Ransomware Resilience-Datendienst heraus, ob Workloads
 
 Die Daten werden alle 5 Minuten aktualisiert und stimmen mit den im NetApp Ransomware Resilience Dashboard angezeigten Daten überein.
 
-https://docs.netapp.com/us-en/bluexp-ransomware-protection/concept-ransomware-protection.html["Erfahren Sie mehr über NetApp Ransomware Resilience"^] .
+https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransomware-resilience.html["Erfahren Sie mehr über NetApp Ransomware Resilience"^] .
 
 .Schritte
 . Überprüfen Sie im NetApp -Konsolenmenü den Bereich „Ransomware-Resilienz“.

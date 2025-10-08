@@ -32,7 +32,7 @@ sidebar:
         url: "/concept-modes.html"
     - title: Erste Schritte mit dem NetApp Assistenten
       entries:
-      - title: Verwenden Sie den NetApp Assistenten
+      - title: Verwenden Sie den NetApp Console-Assistenten
         url: "/task-console-assistant.html"
     - title: Erste Schritte mit dem Standardmodus
       entries:
@@ -209,7 +209,7 @@ sidebar:
       - title: Arbeiten mit mehreren Konsolenagenten
         url: "/task-manage-multiple-connectors.html"
       - title: Fehlerbehebung beim Konsolen-Agent
-        url: "/task-troubleshoot-connector.html"
+        url: "/task-troubleshoot-agent.html"
       - title: Deinstallieren und entfernen Sie den Konsolenagenten
         url: "/task-uninstall-connector.html"
       - title: Standardkonfiguration

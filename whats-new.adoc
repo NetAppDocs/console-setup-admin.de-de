@@ -174,7 +174,7 @@ Wenn Sie einen Konsolenagenten von der NetApp Konsole aus bereitstellen, haben S
 
 === Verbesserte Fehlerbehebung für Konsolenagenten
 
-Der Konsolenagent verfügt über verbesserte Fehlermeldungen, die Ihnen helfen, Probleme besser zu verstehen.link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-connector.html["Erfahren Sie, wie Sie Probleme mit Konsolenagenten beheben."]
+Der Konsolenagent verfügt über verbesserte Fehlermeldungen, die Ihnen helfen, Probleme besser zu verstehen.link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Erfahren Sie, wie Sie Probleme mit Konsolenagenten beheben."]
 
 
 

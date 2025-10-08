@@ -221,7 +221,7 @@ Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfiguri
 
 NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen.  Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-connector-maint-console.html["Agenten-Wartungskonsole"] .
 
-* Sie müssen die Konfigurationsprüfung deaktivieren, die während der Installation die ausgehende Konnektivität überprüft.  Die manuelle Installation schlägt fehl, wenn diese Prüfung nicht deaktiviert ist.link:task-troubleshoot-connector.html["Erfahren Sie, wie Sie Konfigurationsprüfungen für manuelle Installationen deaktivieren."]
+* Sie müssen die Konfigurationsprüfung deaktivieren, die während der Installation die ausgehende Konnektivität überprüft. Die manuelle Installation schlägt fehl, wenn diese Prüfung nicht deaktiviert ist.link:task-troubleshoot-agent.html["Erfahren Sie, wie Sie Konfigurationsprüfungen für manuelle Installationen deaktivieren."]
 * Abhängig von Ihrem Betriebssystem ist entweder Podman oder Docker Engine erforderlich, bevor Sie den Konsolenagenten installieren.
 
 
@@ -252,7 +252,7 @@ chmod +x NetApp_Console_Agent_Cloud_<version>
 +
 Dabei ist <Version> die Version des Konsolenagenten, die Sie heruntergeladen haben.
 
-. Deaktivieren Sie bei der Installation in einer Government Cloud-Umgebung die Konfigurationsprüfungen.link:task-troubleshoot-connector.html#disable-config-check["Erfahren Sie, wie Sie Konfigurationsprüfungen für manuelle Installationen deaktivieren."]
+. Deaktivieren Sie bei der Installation in einer Government Cloud-Umgebung die Konfigurationsprüfungen.link:task-troubleshoot-agent.html#disable-config-check["Erfahren Sie, wie Sie Konfigurationsprüfungen für manuelle Installationen deaktivieren."]
 . Führen Sie das Installationsskript aus.
 +
 [source, cli]

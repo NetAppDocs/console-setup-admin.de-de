@@ -148,7 +148,7 @@ Greifen Sie auf Diagnosetools zu, um Probleme mit dem Konsolenagenten zu beheben
 . Wählen Sie *Webkonsole starten*.
 . Melden Sie sich bei der VM-Instanz mit dem Benutzernamen und dem Kennwort an, die Sie beim Erstellen der VM-Instanz angegeben haben.  Der Benutzername ist `maint` und das Kennwort ist das, das Sie beim Erstellen der VM-Instanz angegeben haben.
 . Eingeben `3` um das Menü „Support und Diagnose“ anzuzeigen.
-. Eingeben `1` um auf die Diagnosetools zuzugreifen und den Anweisungen auf dem Bildschirm zu folgen.  + Sie können beispielsweise überprüfen, ob alle Agentendienste ausgeführt werden. link:task-troubleshoot-connector.html#check-agent-status["Überprüfen Sie den Status des Konsolenagenten"^] .
+. Eingeben `1` um auf die Diagnosetools zuzugreifen und den Anweisungen auf dem Bildschirm zu folgen. + Sie können beispielsweise überprüfen, ob alle Agentendienste ausgeführt werden. link:task-troubleshoot-agent.html#check-agent-status["Überprüfen Sie den Status des Konsolenagenten"^] .
 
 
 
