@@ -30,7 +30,7 @@ sidebar:
         url: "/concept-connectors.html"
       - title: Bereitstellungsmodi
         url: "/concept-modes.html"
-    - title: Erste Schritte mit dem NetApp Assistenten
+    - title: Erste Schritte mit dem NetApp Console-Assistenten
       entries:
       - title: Verwenden Sie den NetApp Console-Assistenten
         url: "/task-console-assistant.html"
