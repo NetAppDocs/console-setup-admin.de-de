@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-ports-on-prem.html 
-keywords: networking, network, requirements, ports, on-prem, linux, http, https, bluexp 
+keywords: networking, network, requirements, ports, on-prem, linux, http, https, bluexp, console agent, console 
 summary: Der Konsolenagent verwendet _eingehende_ Ports, wenn er manuell auf einem lokalen Linux-Host installiert wird.  Beziehen Sie sich bei Planungen auf diese Häfen. 
 ---
 = Ports für den lokalen Konsolenagenten

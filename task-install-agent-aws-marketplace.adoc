@@ -83,7 +83,7 @@ So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder
 
 
  a| 
-\https:\\support.netapp.com
+\https://support.netapp.com
  a| 
 Zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport -Nachrichten an den NetApp Support sowie zum Empfangen von Software-Updates für Cloud Volumes ONTAP.
 
