@@ -60,5 +60,5 @@ Beachten Sie Folgendes zu Google Cloud-Anmeldeinformationen und Marktplatz-Abonn
 Cloud Volumes ONTAP kann sich im selben Projekt wie der Konsolenagent oder in einem anderen Projekt befinden.  Um Cloud Volumes ONTAP in einem anderen Projekt bereitzustellen, müssen Sie zuerst das Dienstkonto und die Rolle des Konsolenagenten zu diesem Projekt hinzufügen.
 
 * link:task-install-agent-google-console-gcloud.html#agent-permissions-google["Erfahren Sie, wie Sie das Dienstkonto einrichten"]
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP in Google Cloud bereitstellen und ein Projekt auswählen"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-deploying-gcp.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP in Google Cloud bereitstellen und ein Projekt auswählen"^]
 

@@ -18,16 +18,16 @@ Die Version 3.9.46 enthält Updates für die folgenden BlueXP Komponenten und -D
 | Anschluss | 3.9.46 | Kleinere Sicherheitsverbesserungen und Fehlerbehebungen 
 
 
-| Sicherung und Wiederherstellung | 22. November 2024 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-backup-recovery/whats-new.html["Was ist neu auf der BlueXP backup and recovery?"^] und beziehen Sie sich auf die Änderungen, die in der Version vom November 2024 enthalten sind 
+| Sicherung und Wiederherstellung | 22. November 2024 | Gehen Sie zum https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["Was ist neu auf der BlueXP backup and recovery?"^] und beziehen Sie sich auf die Änderungen, die in der Version vom November 2024 enthalten sind 
 
 
-| Einstufung | 4. November 2024 (Version 1.37) | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-classification/whats-new.html["Was ist neu auf der BlueXP classification ?"^] und beziehen Sie sich auf die Änderungen in den Versionen 1.32 bis 1.37 
+| Einstufung | 4. November 2024 (Version 1.37) | Gehen Sie zum https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["Was ist neu auf der BlueXP classification ?"^] und beziehen Sie sich auf die Änderungen in den Versionen 1.32 bis 1.37 
 
 
-| Cloud Volumes ONTAP Verwaltung | 11. November 2024 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Neuigkeiten zur Cloud Volumes ONTAP -Verwaltungsseite"^] und beziehen Sie sich auf die Änderungen, die in den Versionen vom Oktober 2024 und November 2024 enthalten sind 
+| Cloud Volumes ONTAP Verwaltung | 11. November 2024 | Gehen Sie zum https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/whats-new.html["Neuigkeiten zur Cloud Volumes ONTAP -Verwaltungsseite"^] und beziehen Sie sich auf die Änderungen, die in den Versionen vom Oktober 2024 und November 2024 enthalten sind 
 
 
-| On-Premises ONTAP Clusterverwaltung | 26. November 2024 | Gehen Sie zum https://docs.netapp.com/us-en/bluexp-ontap-onprem/whats-new.html["Neuigkeiten zur On-Premises ONTAP -Clusterverwaltungsseite"^] und beziehen Sie sich auf die Änderungen, die in der Version vom November 2024 enthalten sind 
+| On-Premises ONTAP Clusterverwaltung | 26. November 2024 | Gehen Sie zum https://docs.netapp.com/us-en/storage-management-ontap-onprem/whats-new.html["Neuigkeiten zur On-Premises ONTAP -Clusterverwaltungsseite"^] und beziehen Sie sich auf die Änderungen, die in der Version vom November 2024 enthalten sind 
 |===
 Obwohl die BlueXP digital wallet und die BlueXP replication auch im privaten Modus enthalten sind, gibt es gegenüber der vorherigen Version des privaten Modus keine Änderungen.
 

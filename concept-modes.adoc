@@ -164,7 +164,7 @@ Unterstützte Speicherverwaltung und Datendienste:: Die folgenden Speicher- und 
 | Azure NetApp Files | Volle Unterstützung 
 
 
-| Sicherung und Wiederherstellung | Wird in Regierungsregionen und kommerziellen Regionen mit eingeschränktem Modus unterstützt. Wird in souveränen Regionen mit eingeschränktem Modus nicht unterstützt. Im eingeschränkten Modus unterstützt NetApp Backup and Recovery nur die Sicherung und Wiederherstellung von ONTAP Volume-Daten. https://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP -Daten anzeigen"^] Das Sichern und Wiederherstellen von Anwendungsdaten und Daten virtueller Maschinen wird nicht unterstützt. 
+| Sicherung und Wiederherstellung | Wird in Regierungsregionen und kommerziellen Regionen mit eingeschränktem Modus unterstützt. Wird in souveränen Regionen mit eingeschränktem Modus nicht unterstützt. Im eingeschränkten Modus unterstützt NetApp Backup and Recovery nur die Sicherung und Wiederherstellung von ONTAP Volume-Daten. https://docs.netapp.com/us-en/data-services-disaster-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP -Daten anzeigen"^] Das Sichern und Wiederherstellen von Anwendungsdaten und Daten virtueller Maschinen wird nicht unterstützt. 
 
 
 | NetApp Datenklassifizierung  a| 
@@ -256,7 +256,7 @@ Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstütz
 | StorageGRID | Nein 
 
 
-.9+| *Datendienste* | NetApp Backup und Recovery | Jahttps://docs.netapp.com/us-en/bluexp-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] 
+.9+| *Datendienste* | NetApp Backup und Recovery | Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] 
 
 
 | NetApp Datenklassifizierung | Ja 

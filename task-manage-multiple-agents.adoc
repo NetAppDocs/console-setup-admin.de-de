@@ -56,6 +56,6 @@ Sie können ein System zur Notfallwiederherstellung gleichzeitig mit mehreren Ko
 Um Konflikte zu vermeiden, sollte nur der Hauptkonsolenagent auf den *Automatikmodus* eingestellt werden.
 
 +
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-capacity-settings.html["Erfahren Sie mehr über den Kapazitätsverwaltungsmodus"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-capacity-settings.html["Erfahren Sie mehr über den Kapazitätsverwaltungsmodus"^]
 
 

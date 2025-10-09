@@ -32,7 +32,7 @@ Durch das Hinzufügen neuer AWS-Anmeldeinformationen zur Konsole erhalten Sie di
 
 * AWS-Anmeldeinformationen zur Konsole für FSx for ONTAP hinzufügen
 +
-Fügen Sie der Konsole neue AWS-Anmeldeinformationen hinzu, um FSx für ONTAP zu erstellen und zu verwalten. https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Erfahren Sie, wie Sie Berechtigungen für FSx für ONTAP einrichten"^]
+Fügen Sie der Konsole neue AWS-Anmeldeinformationen hinzu, um FSx für ONTAP zu erstellen und zu verwalten. https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Erfahren Sie, wie Sie Berechtigungen für FSx für ONTAP einrichten"^]
 
 
 
@@ -194,7 +194,7 @@ Siehe link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cros
 
 ** Erstellen Sie eine Richtlinie, die die zum Erstellen eines Konsolenagenten erforderlichen Berechtigungen enthält.
 +
-*** https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Anzeigen der für FSx for ONTAP erforderlichen Berechtigungen"^]
+*** https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Anzeigen der für FSx for ONTAP erforderlichen Berechtigungen"^]
 *** link:task-install-agent-aws-console.html#aws-permissions-agent["Anzeigen der Agent-Bereitstellungsrichtlinie"]
 
 
@@ -233,7 +233,7 @@ image:screenshot-settings-icon-organization.png["Ein Screenshot, der das Einstel
 
 == Anmeldeinformationen zur Konsole für Amazon FSx for ONTAP hinzufügen
 
-Einzelheiten finden Sie im https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["die Konsolendokumentation für Amazon FSx for ONTAP"^]
+Einzelheiten finden Sie im https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["die Konsolendokumentation für Amazon FSx for ONTAP"^]
 
 
 

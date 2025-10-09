@@ -19,7 +19,7 @@ Nachdem Sie sich angemeldet und die NetApp Konsole im Standardmodus eingerichtet
 
 TIP: Wenn Sie einen Konsolenagenten in AWS, Microsoft Azure oder Google Cloud installiert haben, erkennt die Konsole automatisch Informationen zu den Amazon S3-Buckets, Azure Blob Storage oder Google Cloud Storage-Buckets am Standort, an dem der Agent installiert ist.  Diese Systeme werden automatisch zur Seite *Systeme* hinzugefügt.
 
-Hilfe erhalten Sie unter https://docs.netapp.com/us-en/bluexp-family/["Homepage für die NetApp Console-Dokumentation"^] um die Dokumentation zur NetApp -Konsole anzuzeigen.
+Hilfe erhalten Sie unter https://docs.netapp.com/us-en/console-family/["Homepage für die NetApp Console-Dokumentation"^] um die Dokumentation zur NetApp -Konsole anzuzeigen.
 
 .Ähnliche Informationen
 link:concept-modes.html["Bereitstellungsmodi der NetApp Konsole"]

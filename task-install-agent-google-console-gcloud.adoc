@@ -437,4 +437,4 @@ Nach Abschluss des Vorgangs steht der Konsolenagent zur Verwendung bereit.
 
 NOTE: Wenn die Bereitstellung fehlschlägt, können Sie einen Bericht und Protokolle von der Konsole herunterladen, die Ihnen bei der Behebung der Probleme helfen.link:task-troubleshoot-agent.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]
 
-Wenn Sie Google Cloud Storage-Buckets im selben Google Cloud-Konto haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Google Cloud Storage-System angezeigt. https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["Erfahren Sie, wie Sie Google Cloud Storage über die Konsole verwalten"]
+Wenn Sie Google Cloud Storage-Buckets im selben Google Cloud-Konto haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Google Cloud Storage-System angezeigt. https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["Erfahren Sie, wie Sie Google Cloud Storage über die Konsole verwalten"]

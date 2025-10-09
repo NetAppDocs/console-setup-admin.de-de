@@ -110,5 +110,5 @@ NOTE: Um eine erkannte Ressource aus der gesamten Organisation zu entfernen, ent
 
 * link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identität und Zugriff in der NetApp Konsole"]
 * link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff in der NetApp Konsole"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identität und Zugriff"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identität und Zugriff"^]
 

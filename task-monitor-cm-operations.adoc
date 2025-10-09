@@ -82,7 +82,7 @@ Sie können die Konsole auch so konfigurieren, dass bestimmte Arten von Benachri
 
 Über das Benachrichtigungscenter können Sie den Status der von Ihnen eingeleiteten Vorgänge anzeigen und Warnbenachrichtigungen für bestimmte Arten von Systemaktivitäten einrichten.  Mithilfe von Warnmeldungen können Sie Probleme oder potenzielle Risiken in Ihrer ONTAP Speicherumgebung im Zusammenhang mit Kapazität, Verfügbarkeit, Leistung, Schutz und Sicherheit erkennen.
 
-https://docs.netapp.com/us-en/bluexp-alerts/index.html["Erfahren Sie mehr über NetApp Console-Warnmeldungen"^]
+https://docs.netapp.com/us-en/console-alerts/index.html["Erfahren Sie mehr über NetApp Console-Warnmeldungen"^]
 
 
 

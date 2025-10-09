@@ -75,7 +75,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["Erfahren Sie, wie 
 
 Fügen Sie der Konsole AWS-Anmeldeinformationen hinzu, um die erforderlichen Berechtigungen zum Erstellen und Verwalten eines FSx for ONTAP Systems bereitzustellen.
 
-https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Erfahren Sie, wie Sie AWS-Anmeldeinformationen zur Konsole für Amazon FSx for ONTAP hinzufügen"^]
+https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Erfahren Sie, wie Sie AWS-Anmeldeinformationen zur Konsole für Amazon FSx for ONTAP hinzufügen"^]
 
 
 

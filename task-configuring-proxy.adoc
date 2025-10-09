@@ -131,7 +131,7 @@ Wenn Sie einen Konsolenagenten für die Verwendung eines Proxyservers konfigurie
 
 Wenn Sie Azure Private Links mit Cloud Volumes ONTAP deaktivieren und Service-Endpunkte verwenden, aktivieren Sie den direkten API-Verkehr.  Andernfalls wird der Datenverkehr nicht richtig weitergeleitet.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-enabling-private-link.html["Erfahren Sie mehr über die Verwendung eines Azure Private Link oder von Service-Endpunkten mit Cloud Volumes ONTAP"^]
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-enabling-private-link.html["Erfahren Sie mehr über die Verwendung eines Azure Private Link oder von Service-Endpunkten mit Cloud Volumes ONTAP"^]
 
 .Schritte
 . Wählen Sie *Administration > Agenten*.

@@ -699,7 +699,7 @@ NOTE: Wenn die Installation fehlschlägt, können Sie Protokolle und einen Beric
 
 
 
-Wenn Sie Google Cloud Storage-Buckets im selben Google Cloud-Konto haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Google Cloud Storage-System angezeigt. https://docs.netapp.com/us-en/bluexp-google-cloud-storage/index.html["Erfahren Sie, wie Sie Google Cloud Storage über die NetApp -Konsole verwalten"^]
+Wenn Sie Google Cloud Storage-Buckets im selben Google Cloud-Konto haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Google Cloud Storage-System angezeigt. https://docs.netapp.com/us-en/storage-management-google-cloud-storage/index.html["Erfahren Sie, wie Sie Google Cloud Storage über die NetApp -Konsole verwalten"^]
 
 
 

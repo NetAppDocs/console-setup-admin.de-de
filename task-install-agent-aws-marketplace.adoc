@@ -269,4 +269,4 @@ Der Konsolenagent ist jetzt installiert und mit Ihrer Konsolenorganisation einge
 
 Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Konsole"^] um den Konsolenagenten mit der Konsole zu verwenden.
 
-Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenagenten erstellt haben, wird auf der Seite *Systeme* automatisch eine Amazon S3-Arbeitsumgebung angezeigt. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp Konsole verwalten"^]
+Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenagenten erstellt haben, wird auf der Seite *Systeme* automatisch eine Amazon S3-Arbeitsumgebung angezeigt. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp Konsole verwalten"^]

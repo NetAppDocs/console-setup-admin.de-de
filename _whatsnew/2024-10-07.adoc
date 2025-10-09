@@ -45,7 +45,7 @@ Beachten Sie Folgendes:
 
 
 .API für BlueXP IAM
-Diese Änderung führt eine neue API für BlueXP IAM ein, ist jedoch abwärtskompatibel mit der vorherigen Tenancy-API. https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für BlueXP IAM"^]
+Diese Änderung führt eine neue API für BlueXP IAM ein, ist jedoch abwärtskompatibel mit der vorherigen Tenancy-API. https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für BlueXP IAM"^]
 
 .Unterstützte Bereitstellungsmodi
 BlueXP IAM wird unterstützt, wenn BlueXP im Standardmodus verwendet wird.  Wenn Sie BlueXP im eingeschränkten oder privaten Modus verwenden, verwenden Sie weiterhin ein BlueXP -_Konto_, um Arbeitsbereiche, Benutzer und Ressourcen zu verwalten.

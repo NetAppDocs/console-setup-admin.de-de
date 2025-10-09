@@ -159,10 +159,10 @@ https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-restricted-mode.ht
 
 Auf den folgenden Seiten erfahren Sie, wie Sie Ihre Systeme nach der Bereitstellung eines neuen Konsolenagenten neu erkennen.
 
-* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-adding-systems.html["Hinzufügen vorhandener Cloud Volumes ONTAP -Systeme"^]
-* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-discovering-ontap.html["Entdecken Sie lokale ONTAP -Cluster"^]
-* https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html["Erstellen oder entdecken Sie ein FSx für ONTAP -System"^]
+* https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-adding-systems.html["Hinzufügen vorhandener Cloud Volumes ONTAP -Systeme"^]
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["Entdecken Sie lokale ONTAP -Cluster"^]
+* https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-creating-fsx-working-environment.html["Erstellen oder entdecken Sie ein FSx für ONTAP -System"^]
 * https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-create-system.html["Erstellen eines Azure NetApp Files Systems"^]
-* https://docs.netapp.com/us-en/bluexp-e-series/task-discover-e-series.html["Entdecken Sie die Systeme der E-Serie"^]
-* https://docs.netapp.com/us-en/bluexp-storagegrid/task-discover-storagegrid.html["Entdecken Sie StorageGRID -Systeme"^]
+* https://docs.netapp.com/us-en/storage-management-e-series/task-discover-e-series.html["Entdecken Sie die Systeme der E-Serie"^]
+* https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["Entdecken Sie StorageGRID -Systeme"^]
 

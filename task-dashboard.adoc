@@ -137,9 +137,9 @@ TIP: Durch das Zwischenspeichern wird die Leistung optimiert, es kann jedoch daz
 
 Zeigen Sie Warnungen zu bestimmten Ereignissen an, die in ONTAP auftreten. Sie sind eine Kombination aus EMS- und metrischen Warnungen.
 
-Weitere Informationen zu ONTAP -Warnmeldungen finden Sie unter https://docs.netapp.com/us-en/bluexp-alerts/index.html["Informationen zu ONTAP -Warnmeldungen"^] .
+Weitere Informationen zu ONTAP -Warnmeldungen finden Sie unter https://docs.netapp.com/us-en/console-alerts/index.html["Informationen zu ONTAP -Warnmeldungen"^] .
 
-Eine Liste der möglicherweise angezeigten Warnmeldungen finden Sie unter https://docs.netapp.com/us-en/bluexp-alerts/alerts-use-dashboard.html["Mögliche Risiken im ONTAP -Speicher anzeigen"^] .
+Eine Liste der möglicherweise angezeigten Warnmeldungen finden Sie unter https://docs.netapp.com/us-en/console-alerts/alerts-use-dashboard.html["Mögliche Risiken im ONTAP -Speicher anzeigen"^] .
 
 .Schritte
 . Überprüfen Sie im NetApp Konsolenmenü den Bereich „ONTAP -Warnmeldungen“.
@@ -200,9 +200,9 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 . Überprüfen Sie im NetApp -Konsolenmenü den Bereich „Ransomware-Resilienz“.
 . Führen Sie im Bereich „Ransomware-Resilienz“ einen der folgenden Schritte aus:
 +
-** Wählen Sie *Anzeigen*, um zum NetApp Ransomware Resilience Dashboard zu gelangen. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["Überwachen Sie den Workload-Zustand mit dem NetApp Ransomware Resilience Dashboard"^] .
-** Lesen Sie die „Empfohlenen Maßnahmen“ im NetApp Ransomware Resilience Dashboard. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-dashboard.html["Überprüfen Sie die Schutzempfehlungen im NetApp Ransomware Resilience Dashboard"^] .
-** Wählen Sie den Warnlink aus, um Warnmeldungen auf der Seite „NetApp Ransomware Resilience Alerts“ zu überprüfen.  Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-ransomware-protection/rp-use-alert.html["Behandeln Sie erkannte Ransomware-Warnmeldungen mit NetApp Ransomware Resilience"^] .
+** Wählen Sie *Anzeigen*, um zum NetApp Ransomware Resilience Dashboard zu gelangen. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["Überwachen Sie den Workload-Zustand mit dem NetApp Ransomware Resilience Dashboard"^] .
+** Lesen Sie die „Empfohlenen Maßnahmen“ im NetApp Ransomware Resilience Dashboard. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-dashboard.html["Überprüfen Sie die Schutzempfehlungen im NetApp Ransomware Resilience Dashboard"^] .
+** Wählen Sie den Warnlink aus, um Warnmeldungen auf der Seite „NetApp Ransomware Resilience Alerts“ zu überprüfen. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-services-ransomware-resilience/rp-use-alert.html["Behandeln Sie erkannte Ransomware-Warnmeldungen mit NetApp Ransomware Resilience"^] .
 
 
 
@@ -220,5 +220,5 @@ TIP: Durch das Zwischenspeichern wird die Leistung optimiert, es kann jedoch daz
 
 .Schritte
 . Überprüfen Sie im NetApp -Konsolenmenü den Bereich „Backup und Wiederherstellung“.
-. Wählen Sie *Anzeigen*, um zum NetApp Backup and Recovery Dashboard zu gelangen. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html["NetApp Backup- und Recovery-Dokumentation"^] .
+. Wählen Sie *Anzeigen*, um zum NetApp Backup and Recovery Dashboard zu gelangen. Weitere Einzelheiten finden Sie unter https://docs.netapp.com/us-en/data-services-backup-recovery/index.html["NetApp Backup- und Recovery-Dokumentation"^] .
 

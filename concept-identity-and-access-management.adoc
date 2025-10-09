@@ -239,5 +239,5 @@ Die folgenden Beispiele beschreiben, wie Sie IAM zum Verwalten Ihrer Konsolenorg
 * link:task-iam-rename-organization.html["Benennen Sie Ihre NetApp Konsolenorganisation um"]
 * link:task-iam-audit-actions-timeline.html["Überwachen oder prüfen Sie die IAM-Aktivität"]
 * link:reference-iam-predefined-roles.html["NetApp -Konsolenzugriffsrollen"]
-* https://docs.netapp.com/us-en/bluexp-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für NetApp Console IAM"^]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für NetApp Console IAM"^]
 

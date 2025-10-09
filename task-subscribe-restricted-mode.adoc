@@ -185,8 +185,8 @@ image:screenshot_gcp_associate.gif["Ein Screenshot der Abonnementzuweisungsseite
 --
 ====
 .Ähnliche Informationen
-* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-capacity-licenses.html["Verwalten Sie kapazitätsbasierte BYOL-Lizenzen für Cloud Volumes ONTAP"^]
-* https://docs.netapp.com/us-en/bluexp-digital-wallet/task-manage-data-services-licenses.html["Verwalten Sie BYOL-Lizenzen für Datendienste"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-capacity-licenses.html["Verwalten Sie kapazitätsbasierte BYOL-Lizenzen für Cloud Volumes ONTAP"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-data-services-licenses.html["Verwalten Sie BYOL-Lizenzen für Datendienste"^]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html["Verwalten von AWS-Anmeldeinformationen und Abonnements"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-azure-accounts.html["Verwalten von Azure-Anmeldeinformationen und Abonnements"]
 * https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-gcp-accounts.html["Verwalten Sie Google Cloud-Anmeldeinformationen und -Abonnements"]

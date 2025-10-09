@@ -647,7 +647,7 @@ Sie sollten den eingeschränkten Modus deaktiviert lassen, da diese Schritte die
 
 
 
-Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenagenten erstellt haben, wird auf der Seite *Systeme* automatisch ein Amazon S3-Speichersystem angezeigt. https://docs.netapp.com/us-en/bluexp-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp ConsoleP verwalten"^]
+Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenagenten erstellt haben, wird auf der Seite *Systeme* automatisch ein Amazon S3-Speichersystem angezeigt. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp ConsoleP verwalten"^]
 
 
 
