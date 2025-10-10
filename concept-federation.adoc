@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-federation.html 
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
-summary: Die Identitätsföderation ermöglicht Single Sign-On mit der NetApp Konsole, sodass sich Benutzer mit den Anmeldeinformationen Ihrer Unternehmensidentität anmelden können.  Sehen Sie sich zunächst den Einrichtungsprozess an. 
+summary: Die Identitätsföderation ermöglicht Single Sign-On mit der NetApp Console , sodass sich Benutzer mit den Anmeldeinformationen Ihrer Unternehmensidentität anmelden können.  Sehen Sie sich zunächst den Einrichtungsprozess an. 
 ---
-= Aktivieren Sie Single Sign-On durch die Verwendung der Identitätsföderation mit der NetApp Konsole
+= Aktivieren Sie Single Sign-On durch die Verwendung der Identitätsföderation mit der NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Die Identitätsföderation ermöglicht Single Sign-On mit der NetApp Ko
 
 
 [role="lead"]
-Single-Sign-On (Föderation) vereinfacht den Anmeldevorgang und erhöht die Sicherheit, indem Benutzer sich mit ihren Unternehmensanmeldeinformationen bei der NetApp Konsole anmelden können.  Sie können Single Sign-On (SSO) bei Ihrem Identitätsanbieter (IdP) oder über die NetApp Support-Site aktivieren.
+Single-Sign-On (Föderation) vereinfacht den Anmeldevorgang und erhöht die Sicherheit, indem Benutzer sich mit ihren Unternehmensanmeldeinformationen bei der NetApp Console anmelden können.  Sie können Single Sign-On (SSO) bei Ihrem Identitätsanbieter (IdP) oder über die NetApp Support-Site aktivieren.
 
 .Erforderliche Rolle
 Organisationsadministrator, Föderationsadministrator, Föderationsbetrachter.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
@@ -63,7 +63,7 @@ NetApp unterstützt die folgenden Protokolle und Identitätsanbieter für die F�
 
 
 
-=== Föderation mit NetApp -Konsolen-Workflow
+=== Föderation mit NetApp Console -Workflow
 
 NetApp unterstützt nur vom Dienstanbieter initiiertes (SP-initiiertes) SSO.  Sie müssen zunächst den Identitätsanbieter so konfigurieren, dass er NetApp als Dienstanbieter vertraut.  Anschließend können Sie in der Konsole eine Verbindung erstellen, die die Konfiguration des Identitätsanbieters verwendet.
 

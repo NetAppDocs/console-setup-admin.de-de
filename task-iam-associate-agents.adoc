@@ -17,7 +17,7 @@ summary: Wenn Mitglieder Ihrer Organisation einen Konsolenagenten in einem ander
 Wenn ein _Organisationsadministrator_ einen Konsolenagenten erstellt, wird der Konsolenagent automatisch mit dem aktuell ausgewählten Projekt innerhalb der Organisation verknüpft.  Allerdings kann jemand mit der Rolle „Organisationsadministrator“ von überall in der Organisation auf diesen Konsolenagenten zugreifen.  Andere Mitglieder Ihrer Organisation können auf diesen Konsolenagenten nur über das Projekt zugreifen, in dem er erstellt wurde, es sei denn, Sie verknüpfen diesen Konsolenagenten mit anderen Projekten.
 
 .Bevor Sie beginnen
-Überprüfen Sie, wie die Zuordnung von Konsolenagenten funktioniert. link:concept-identity-and-access-management.html#associate-agents["Erfahren Sie mehr über die Verwendung des Konsolenagenten mit Identität und Zugriff"] .
+Überprüfen Sie, wie die Zuordnung von Konsolenagenten funktioniert. link:concept-identity-and-access-management.html#associate-agents["Erfahren Sie mehr über die Verwendung des Konsolenagenten mit Identity and Access"] .
 
 .Informationen zu diesem Vorgang
 Ein _Ordner- oder Projektadministrator_ kann alle Konsolenagenten auf der *Agenten*-Seite anzeigen, kann Konsolenagenten jedoch nur mit Ordnern und Projekten verknüpfen, für die er über Berechtigungen verfügt. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Aktionen, die ein Ordner- oder Projektadministrator ausführen kann."] .
@@ -44,7 +44,7 @@ Ordnen Sie die Ressourcen des Konsolenagenten denselben Ordnern und Projekten vo
 link:task-iam-manage-resources.html#associate-resource["Erfahren Sie, wie Sie eine Ressource mit Ordnern und Projekten verknüpfen"] .
 
 .Ähnliche Informationen
-* link:concept-agents.html["Erfahren Sie mehr über NetApp Console-Agenten"]
+* link:concept-agents.html["Erfahren Sie mehr über NetApp Console -Agenten"]
 * link:concept-identity-and-access-management.html["Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der NetApp Console"]
 * link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identitäts- und Zugriffsverwaltung"^]

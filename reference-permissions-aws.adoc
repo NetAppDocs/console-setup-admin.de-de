@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-aws.html 
 keywords: permissions, actions, aws, aws permissions, top secret, secret, aws top secret, aws secret, aws govcloud, govcloud, govcloud permissions, secret permissions, top secret permissions 
-summary: Wenn die NetApp Konsole die Agenteninstanz in AWS startet, fügt sie der Instanz eine Richtlinie hinzu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt.  Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere AWS-Dienste zu tätigen, darunter EC2, S3, CloudFormation, IAM, den Key Management Service und mehr. 
+summary: Wenn die NetApp Console die Agenteninstanz in AWS startet, fügt sie der Instanz eine Richtlinie hinzu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt.  Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere AWS-Dienste zu tätigen, darunter EC2, S3, CloudFormation, IAM, den Key Management Service und mehr. 
 ---
 = AWS-Berechtigungen für den Konsolenagenten
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Wenn die NetApp Konsole die Agenteninstanz in AWS startet, fügt sie de
 
 
 [role="lead"]
-Wenn die NetApp Konsole eine Konsolen-Agent-Instanz in AWS startet, fügt sie der Instanz eine Richtlinie hinzu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt.  Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere AWS-Dienste zu tätigen, darunter EC2, S3, CloudFormation, IAM, den Key Management Service (KMS) und mehr.
+Wenn die NetApp Console eine Konsolen-Agent-Instanz in AWS startet, fügt sie der Instanz eine Richtlinie hinzu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt.  Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere AWS-Dienste zu tätigen, darunter EC2, S3, CloudFormation, IAM, den Key Management Service (KMS) und mehr.
 
 
 
@@ -757,7 +757,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
 
 == So werden die AWS-Berechtigungen verwendet
 
-In den folgenden Abschnitten wird beschrieben, wie die Berechtigungen für die einzelnen NetApp Console-Verwaltungs- oder Datendienste verwendet werden.  Diese Informationen können hilfreich sein, wenn Ihre Unternehmensrichtlinien vorschreiben, dass Berechtigungen nur bei Bedarf erteilt werden.
+In den folgenden Abschnitten wird beschrieben, wie die Berechtigungen für die einzelnen NetApp Console -Verwaltungs- oder Datendienste verwendet werden.  Diese Informationen können hilfreich sein, wenn Ihre Unternehmensrichtlinien vorschreiben, dass Berechtigungen nur bei Bedarf erteilt werden.
 
 
 
@@ -805,7 +805,7 @@ s3:GetEncryptionConfiguration
 
 
 
-=== NetApp Backup und Recovery
+=== NetApp Backup and Recovery
 
 Der Agent stellt die folgenden API-Anfragen, um Backups in Amazon S3 zu verwalten:
 
@@ -1215,7 +1215,7 @@ Wenn Berechtigungen hinzugefügt oder entfernt werden, vermerken wir dies in den
 
 === 9. September 2024
 
-Berechtigungen wurden aus Richtlinie Nr. 2 für Standardregionen entfernt, da die NetApp Konsole NetApp -Edge-Caching sowie die Erkennung und Verwaltung von Kubernetes-Clustern nicht mehr unterstützt.
+Berechtigungen wurden aus Richtlinie Nr. 2 für Standardregionen entfernt, da die NetApp Console NetApp -Edge-Caching sowie die Erkennung und Verwaltung von Kubernetes-Clustern nicht mehr unterstützt.
 
 .Anzeigen der Berechtigungen, die aus der Richtlinie entfernt wurden
 [%collapsible]

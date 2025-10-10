@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-analyst-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin 
-summary: Das Identitäts- und Zugriffsmanagement der NetApp Konsole bietet die Rolle eines Supportanalysten zur Unterstützung bei Überwachungs- und Supportfällen. 
+summary: Das Identitäts- und Zugriffsmanagement der NetApp Console bietet die Rolle eines Support-Analysten zur Unterstützung bei Überwachungs- und Supportfällen. 
 ---
-= Zugriffsrolle „Operational Support Analyst“ für die NetApp -Konsole
+= Zugriffsrolle „Operational Support Analyst“ für die NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-whats-next-restricted-mode.html 
 keywords: restricted mode, what you can do 
-summary: Nachdem Sie die NetApp Konsole im eingeschränkten Modus eingerichtet und ausgeführt haben, können Sie mit der Verwendung der Dienste beginnen, die im eingeschränkten Modus unterstützt werden. 
+summary: Nachdem Sie die NetApp Console im eingeschränkten Modus eingerichtet und ausgeführt haben, können Sie mit der Verwendung der im eingeschränkten Modus unterstützten Dienste beginnen. 
 ---
 = Was Sie als Nächstes tun können (eingeschränkter Modus)
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Nachdem Sie die NetApp Konsole im eingeschränkten Modus eingerichtet u
 
 
 [role="lead"]
-Nachdem Sie die NetApp Konsole im eingeschränkten Modus eingerichtet und ausgeführt haben, können Sie mit der Verwendung der Dienste beginnen, die im eingeschränkten Modus unterstützt werden.
+Nachdem Sie die NetApp Console im eingeschränkten Modus eingerichtet und ausgeführt haben, können Sie mit der Verwendung der im eingeschränkten Modus unterstützten Dienste beginnen.
 
 Hilfe finden Sie in der Dokumentation zu diesen Diensten:
 
@@ -28,4 +28,4 @@ Hilfe finden Sie in der Dokumentation zu diesen Diensten:
 
 
 .Ähnliche Informationen
-link:concept-modes.html["Bereitstellungsmodi der NetApp Konsole"]
+link:concept-modes.html["Bereitstellungsmodi der NetApp Console"]

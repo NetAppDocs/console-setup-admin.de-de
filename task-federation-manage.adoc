@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-federation-manage.html 
 keywords: federation, BlueXP, identity provider, IdP, single sign-on, SSO, verified domain, credentials, certificate, client secret, update, manage federations, security, compliance, user access, productivity, account management, authentication, access control, business continuity 
-summary: Nachdem Sie eine Verbundverbindung hinzugefügt haben, können Sie sie in der NetApp Konsole verwalten.  Sie können den Status der Verbindung anzeigen und sie nach Bedarf aktivieren oder deaktivieren. 
+summary: Nachdem Sie eine Verbundverbindung hinzugefügt haben, können Sie sie in der NetApp Console verwalten.  Sie können den Status der Verbindung anzeigen und sie nach Bedarf aktivieren oder deaktivieren. 
 ---
-= Föderationen in der NetApp Konsole verwalten
+= Föderationen in der NetApp Console verwalten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Nachdem Sie eine Verbundverbindung hinzugefügt haben, können Sie sie 
 
 
 [role="lead"]
-Sie können Ihre Föderation in der NetApp Konsole verwalten.  Sie können es deaktivieren, abgelaufene Anmeldeinformationen aktualisieren und es deaktivieren, wenn Sie es nicht mehr benötigen.
+Sie können Ihre Föderation in der NetApp Console verwalten.  Sie können es deaktivieren, abgelaufene Anmeldeinformationen aktualisieren und es deaktivieren, wenn Sie es nicht mehr benötigen.
 
 
 NOTE: Wenn Sie die Föderation mit NetApp Cloud Central konfiguriert haben, importieren Sie sie über die Seite *Föderation*, um sie in der Konsole zu verwalten.link:task-federation-import.html["Erfahren Sie, wie Sie Ihre Föderation importieren"]
@@ -22,7 +22,7 @@ NOTE: Wenn Sie die Föderation mit NetApp Cloud Central konfiguriert haben, impo
 Sie können einer vorhandenen Föderation auch eine verifizierte Domäne hinzufügen, wodurch Sie mehrere Domänen für Ihre föderierte Verbindung verwenden können.
 
 
-NOTE: Ereignisse der Föderationsverwaltung wie das Aktivieren, Deaktivieren und Aktualisieren von Föderationen werden in der Zeitleiste angezeigt.link:task-monitor-cm-operations.html["Erfahren Sie mehr über die Überwachung von Vorgängen in der NetApp Konsole."]
+NOTE: Ereignisse der Föderationsverwaltung wie das Aktivieren, Deaktivieren und Aktualisieren von Föderationen werden in der Zeitleiste angezeigt.link:task-monitor-cm-operations.html["Erfahren Sie mehr über die Überwachung von Vorgängen in der NetApp Console."]
 
 .Erforderliche Rollen
 Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
@@ -82,7 +82,7 @@ Testen Sie die Verbindung einer vorhandenen Föderation, um sicherzustellen, das
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie die Registerkarte *Föderation* aus.
 . Wählen Sie das Aktionsmenüimage:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] neben dem Verbund, dem Sie eine verifizierte Domäne hinzufügen möchten, und wählen Sie *Verbindung testen* aus.
-. Wählen Sie *Test*.  Das System fordert Sie auf, sich mit Ihren Unternehmensanmeldeinformationen anzumelden.  Wenn die Verbindung erfolgreich ist, werden Sie zur NetApp Konsole weitergeleitet.  Wenn die Verbindung fehlschlägt, wird eine Fehlermeldung angezeigt, die auf das Problem mit der Föderation hinweist.
+. Wählen Sie *Test*.  Das System fordert Sie auf, sich mit Ihren Unternehmensanmeldeinformationen anzumelden.  Wenn die Verbindung erfolgreich ist, werden Sie zur NetApp Console weitergeleitet.  Wenn die Verbindung fehlschlägt, wird eine Fehlermeldung angezeigt, die auf das Problem mit der Föderation hinweist.
 . Wählen Sie *Fertig*, um zur Registerkarte *Föderation* zurückzukehren.
 
 

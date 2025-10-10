@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-manage-roles.html 
 keywords: projects, access, resources, user roles, iam, identity and access management, folder, organization, permissions, roles, members, access roles 
-summary: Innerhalb der NetApp Konsole können Sie Benutzern Rollen zuweisen, je nachdem, was sie tun müssen und wo. 
+summary: In der NetApp Console können Sie Benutzern Rollen zuweisen, je nachdem, was sie tun müssen und wo. 
 ---
-= Verwenden Sie Rollen, um den Benutzerzugriff auf NetApp Console-Ressourcen zu verwalten
+= Verwenden Sie Rollen, um den Benutzerzugriff auf NetApp Console -Ressourcen zu verwalten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -85,7 +85,7 @@ NOTE: Benutzern muss mindestens eine Rolle zugewiesen sein.  Sie können einem B
 . Sie können eine vorhandene Rolle für ein Mitglied ändern oder eine Rolle entfernen.
 +
 .. Um die Rolle eines Mitglieds zu ändern, wählen Sie *Ändern* neben der Rolle, die Sie ändern möchten.  Sie können eine Rolle nur in eine Rolle innerhalb derselben Rollenkategorie ändern.  Sie können beispielsweise von einer Datendienstrolle zu einer anderen wechseln.  Bestätigen Sie die Änderung.
-.. Um die Zuweisung einer Rolle eines Mitglieds aufzuheben, wählen Sieimage:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um dem Mitglied die jeweilige Rolle aufzuheben.  Sie werden aufgefordert, die Entfernung zu bestätigen.
+.. Um die Rolle eines Mitglieds aufzuheben, wählen Sieimage:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um dem Mitglied die jeweilige Rolle zu entziehen.  Sie werden aufgefordert, die Entfernung zu bestätigen.
 
 
 

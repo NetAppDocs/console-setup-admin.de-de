@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-upgrade-agent.html 
 keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
-summary: Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden, aktualisiert die NetApp Konsole Ihren Konsolenagenten automatisch auf die neueste Version, sofern der Konsolenagent über ausgehenden Internetzugang verfügt, um das Softwareupdate abzurufen. 
+summary: Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden, aktualisiert die NetApp Console Ihren Konsolenagenten automatisch auf die neueste Version, sofern der Konsolenagent über ausgehenden Internetzugang verfügt, um das Softwareupdate abzurufen. 
 ---
 = Upgrades des Konsolenagenten verwalten
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden, a
 
 
 [role="lead"]
-Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden, aktualisiert die NetApp Konsole Ihren Konsolenagenten automatisch auf die neueste Version, sofern der Konsolenagent über ausgehenden Internetzugang verfügt, um das Softwareupdate abzurufen.
+Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden, aktualisiert die NetApp Console Ihren Konsolenagenten automatisch auf die neueste Version, sofern der Konsolenagent über ausgehenden Internetzugang verfügt, um das Softwareupdate abzurufen.
 
 Wenn Sie manuell verwalten müssen, wann der Konsolenagent aktualisiert wird, können Sie automatische Upgrades für den Standardmodus oder den eingeschränkten Modus deaktivieren.
 
@@ -90,7 +90,7 @@ _
 
 == Aktualisieren Sie den Konsolenagenten
 
-Der Konsolenagent muss während des Upgradevorgangs neu gestartet werden, sodass die NetApp Konsole während des Upgrades nicht verfügbar ist.
+Der Konsolenagent muss während des Upgradevorgangs neu gestartet werden, sodass die NetApp Console während des Upgrades nicht verfügbar ist.
 
 .Schritte
 . Laden Sie die Console-Agent-Software von der https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp Support Site"^] .

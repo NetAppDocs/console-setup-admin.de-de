@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-identity-and-access-management.html 
 keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, bluexp IAM 
-summary: 'Mit Identity and Access Management (IAM) in der NetApp Konsole können Sie den Zugriff auf die Ressourcen Ihres Unternehmens steuern.' 
+summary: 'Mit Identity and Access Management (IAM) in der NetApp Console können Sie den Zugriff auf die Ressourcen Ihres Unternehmens steuern.' 
 ---
 = Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der NetApp Console
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'Mit Identity and Access Management (IAM) in der NetApp Konsole können
 
 
 [role="lead"]
-Mit Identity and Access Management (IAM) in der NetApp Konsole können Sie den Zugriff auf Ihre NetApp -Ressourcen organisieren und steuern.  Sie können Ihre Ressourcen entsprechend der Hierarchie Ihrer Organisation organisieren.  Sie können Ressourcen beispielsweise nach geografischem Standort, Standort oder Geschäftseinheit organisieren.  Anschließend können Sie Mitgliedern in bestimmten Teilen der Hierarchie IAM-Rollen zuweisen, wodurch der Zugriff auf Ressourcen in anderen Teilen der Hierarchie verhindert wird.
+Mit Identity and Access Management (IAM) in der NetApp Console können Sie den Zugriff auf Ihre NetApp -Ressourcen organisieren und steuern.  Sie können Ihre Ressourcen entsprechend der Hierarchie Ihrer Organisation organisieren.  Sie können Ressourcen beispielsweise nach geografischem Standort, Standort oder Geschäftseinheit organisieren.  Anschließend können Sie Mitgliedern in bestimmten Teilen der Hierarchie IAM-Rollen zuweisen, wodurch der Zugriff auf Ressourcen in anderen Teilen der Hierarchie verhindert wird.
 
 * link:concept-modes.html["Informationen zu den Bereitstellungsmodi der Konsole"]
 
@@ -230,14 +230,14 @@ Die folgenden Beispiele beschreiben, wie Sie IAM zum Verwalten Ihrer Konsolenorg
 
 == Wohin als nächstes?
 
-* link:task-iam-get-started.html["Erste Schritte mit IAM in der NetApp Konsole"]
-* link:task-iam-manage-folders-projects.html["Organisieren Sie Ihre Ressourcen in der NetApp -Konsole mit Ordnern und Projekten"]
-* link:task-iam-manage-members-permissions.html["Verwalten Sie NetApp Console-Mitglieder und ihre Berechtigungen"]
-* link:task-iam-manage-resources.html["Verwalten Sie die Ressourcenhierarchie in Ihrer NetApp Console-Organisation"]
+* link:task-iam-get-started.html["Erste Schritte mit IAM in der NetApp Console"]
+* link:task-iam-manage-folders-projects.html["Organisieren Sie Ihre Ressourcen in der NetApp Console mit Ordnern und Projekten"]
+* link:task-iam-manage-members-permissions.html["Verwalten Sie NetApp Console Mitglieder und ihre Berechtigungen"]
+* link:task-iam-manage-resources.html["Verwalten Sie die Ressourcenhierarchie in Ihrer NetApp Console Organisation"]
 * link:task-iam-associate-agents.html["Agenten Ordnern und Projekten zuordnen"]
-* link:task-iam-switch-organizations-projects.html["Wechseln Sie zwischen NetApp Console-Projekten und -Organisationen"]
-* link:task-iam-rename-organization.html["Benennen Sie Ihre NetApp Konsolenorganisation um"]
+* link:task-iam-switch-organizations-projects.html["Wechseln Sie zwischen NetApp Console -Projekten und -Organisationen"]
+* link:task-iam-rename-organization.html["Benennen Sie Ihre NetApp Console um"]
 * link:task-iam-audit-actions-timeline.html["Überwachen oder prüfen Sie die IAM-Aktivität"]
-* link:reference-iam-predefined-roles.html["NetApp -Konsolenzugriffsrollen"]
+* link:reference-iam-predefined-roles.html["NetApp Console"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für NetApp Console IAM"^]
 

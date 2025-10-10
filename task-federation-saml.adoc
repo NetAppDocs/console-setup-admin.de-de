@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-federation-saml.html 
 keywords: federation, SAML protocol, SAML, federation services,  federate, federated connection, SSO, identity federation, identity management, corporate identity 
-summary: 'Verbinden Sie sich mit Ihrem SAML 2.0-IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.' 
+summary: 'Verbinden Sie sich mit Ihrem SAML 2.0-IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Console zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.' 
 ---
 = Föderieren Sie mit einem SAML-Identitätsanbieter
 :hardbreaks:
@@ -28,7 +28,7 @@ Sie können eine Verbundverbindung mit Ihrem SAML 2.0-Anbieter einrichten, um Si
 
 .Bevor Sie beginnen
 * Es ist ein IdP-Konto mit Administratorrechten erforderlich.  Koordinieren Sie die Durchführung der Schritte mit Ihrem IdP-Administrator.
-* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Konsole"] Thema.
+* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Console"] Thema.
 
 
 .Schritte
@@ -89,4 +89,4 @@ Sie können eine Verbundverbindung mit Ihrem SAML 2.0-Anbieter einrichten, um Si
 . Wählen Sie *Fertig*, um den Vorgang abzuschließen.
 
 
-Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Konsole anmelden.
+Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Console anmelden.

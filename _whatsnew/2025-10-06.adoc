@@ -12,7 +12,7 @@ Die NetApp Console basiert auf der verbesserten und neu strukturierten BlueXP -G
 
 === Navigationsmenüs und -seiten
 
-NetApp hat die meisten Menüoptionen in den linken Navigationsbereich verschoben und die Menüs neu organisiert, um die Navigation in der NetApp Konsole zu vereinfachen.
+NetApp hat die meisten Menüoptionen in den linken Navigationsbereich verschoben und die Menüs neu organisiert, um die Navigation in der NetApp Console zu erleichtern.
 
 
 
@@ -36,7 +36,7 @@ image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage
 
 ==== Menü „Verwaltung“
 
-Verwenden Sie das zentralisierte Menü *Administration*, um die NetApp Konsole, Supportfälle, Lizenzen und Abonnements (früher als digitale Geldbörse bezeichnet) zu verwalten.
+Verwenden Sie das zentralisierte Menü *Administration*, um die NetApp Console, Supportfälle, Lizenzen und Abonnements (früher als digitale Geldbörse bezeichnet) zu verwalten.
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-admin-menu.png["Ein Screenshot des Administrationsmenüs."]
 
@@ -64,7 +64,7 @@ NetApp hat mehrere Elemente, Datendienste und Funktionen umbenannt, um ihren Zwe
 
 [cols="10,24"]
 |===
-| *Vorheriger Name* | * NetApp -Konsolenname* 
+| *Vorheriger Name* | * NetApp Console * 
 
 
 | Anschlüsse  a| 
@@ -89,7 +89,7 @@ Zeigen Sie Ihre Systeme über das Menü *Speicher > Verwaltung* an, fügen Sie s
 
 
 | BlueXP Ransomware-Schutz  a| 
-NetApp Ransomware-Resilienz.
+NetApp Ransomware Resilience.
 
 Ransomware Resilience hilft Ihnen, Ihre Daten zu schützen und sich schnell von einem Ransomware-Angriff zu erholen.
 
@@ -105,9 +105,9 @@ Greifen Sie über das Menü *Speicher > Lebenszyklusplanung* auf die Lebenszyklu
 
 
 | BlueXP digital wallet  a| 
-Lizenzen und Abonnements
+Licenses and subscriptions
 
-Greifen Sie über das Menü *Administration > Lizenzen und Abonnements* auf Ihre Lizenzen und Abonnements zu.
+Greifen Sie über das Menü *Administration > Licenses and subscriptions und Abonnements* auf Ihre Lizenzen und Abonnements zu.
 
 |===
 
@@ -142,7 +142,7 @@ NetApp hat die erforderlichen Netzwerkendpunkte für die Konsole und Konsolenage
 
 === Unterstützung für die VCenter-Bereitstellung von Konsolenagenten
 
-Sie können Konsolenagenten in VMware-Umgebungen mithilfe einer OVA-Datei bereitstellen.  Die OVA-Datei enthält ein vorkonfiguriertes VM-Image mit Konsolen-Agent-Software und Einstellungen für die Verbindung mit der NetApp Konsole.  Ein Dateidownload oder eine URL-Bereitstellung ist direkt über die NetApp Konsole möglich.link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["Erfahren Sie, wie Sie einen Konsolenagenten in VMware-Umgebungen bereitstellen."]
+Sie können Konsolenagenten in VMware-Umgebungen mithilfe einer OVA-Datei bereitstellen.  Die OVA-Datei enthält ein vorkonfiguriertes VM-Image mit Konsolen-Agent-Software und Einstellungen für die Verbindung mit der NetApp Console.  Ein Dateidownload oder eine URL-Bereitstellung ist direkt über die NetApp Console möglich.link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem-ova.html["Erfahren Sie, wie Sie einen Konsolenagenten in VMware-Umgebungen bereitstellen."]
 
 Der Console Agent OVA für VMware bietet ein vorkonfiguriertes VM-Image für eine schnelle Bereitstellung.
 
@@ -150,7 +150,7 @@ Der Console Agent OVA für VMware bietet ein vorkonfiguriertes VM-Image für ein
 
 === Validierungsberichte für fehlgeschlagene Agentenbereitstellungen
 
-Wenn Sie einen Konsolenagenten von der NetApp Konsole aus bereitstellen, haben Sie jetzt die Möglichkeit, die Agentenkonfiguration zu validieren.  Wenn die Bereitstellung des Agenten durch die Konsole fehlschlägt, wird ein herunterladbarer Bericht bereitgestellt, der Sie bei der Fehlerbehebung unterstützt.
+Wenn Sie einen Konsolenagenten von der NetApp Console aus bereitstellen, haben Sie jetzt die Möglichkeit, die Agentenkonfiguration zu validieren.  Wenn die Bereitstellung des Agenten durch die Konsole fehlschlägt, wird ein herunterladbarer Bericht bereitgestellt, der Sie bei der Fehlerbehebung unterstützt.
 
 
 
@@ -160,9 +160,9 @@ Der Konsolenagent verfügt über verbesserte Fehlermeldungen, die Ihnen helfen, 
 
 
 
-== NetApp Konsole
+== NetApp Console
 
-Die NetApp Konsolenverwaltung umfasst die folgenden neuen Funktionen:
+Die NetApp Console umfasst die folgenden neuen Funktionen:
 
 
 
@@ -180,7 +180,7 @@ Neue Benutzer mit der Rolle „Organisationsadministrator“ können den NetApp 
 
 === Dienstkontoauthentifizierung
 
-Die NetApp Konsole unterstützt die Authentifizierung von Servicekonten entweder mithilfe einer systemgenerierten Client-ID und geheimer oder kundenverwalteter JWTs. So können Unternehmen den Ansatz auswählen, der ihren Sicherheitsanforderungen und Integrations-Workflows am besten entspricht.  Die JWT-Client-Authentifizierung mit privatem Schlüssel verwendet asymmetrische Kryptografie und bietet eine höhere Sicherheit als herkömmliche Client-ID- und Geheimmethoden.  Die Private Key JWT-Client-Authentifizierung verwendet asymmetrische Kryptografie, wodurch der private Schlüssel in der Umgebung des Kunden sicher bleibt, das Risiko des Diebstahls von Anmeldeinformationen verringert und die Sicherheit Ihres Automatisierungsstapels und Ihrer Client-Anwendungen verbessert wird.link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account["Erfahren Sie, wie Sie ein Dienstkonto hinzufügen."]
+Die NetApp Console unterstützt die Authentifizierung von Servicekonten entweder mithilfe einer systemgenerierten Client-ID und geheimer oder kundenverwalteter JWTs. So können Unternehmen den Ansatz auswählen, der ihren Sicherheitsanforderungen und Integrations-Workflows am besten entspricht.  Die JWT-Client-Authentifizierung mit privatem Schlüssel verwendet asymmetrische Kryptografie und bietet eine höhere Sicherheit als herkömmliche Client-ID- und Geheimmethoden.  Die Private Key JWT-Client-Authentifizierung verwendet asymmetrische Kryptografie, wodurch der private Schlüssel in der Umgebung des Kunden sicher bleibt, das Risiko des Diebstahls von Anmeldeinformationen verringert und die Sicherheit Ihres Automatisierungsstapels und Ihrer Client-Anwendungen verbessert wird.link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#service-account["Erfahren Sie, wie Sie ein Dienstkonto hinzufügen."]
 
 
 
@@ -192,7 +192,7 @@ Das System meldet Benutzer nach 24 Stunden oder beim Schließen ihres Webbrowser
 
 === Unterstützung von Partnerschaften zwischen Organisationen
 
-Sie können in der NetApp Konsole Partnerschaften erstellen, die es Partnern ermöglichen, NetApp -Ressourcen über Unternehmensgrenzen hinweg sicher zu verwalten, wodurch die Zusammenarbeit vereinfacht und die Sicherheit verbessert wird. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["Erfahren Sie, wie Sie Partnerschaften verwalten"] .
+Sie können in der NetApp Console Partnerschaften erstellen, die es Partnern ermöglichen, NetApp -Ressourcen über Unternehmensgrenzen hinweg sicher zu verwalten, wodurch die Zusammenarbeit vereinfacht und die Sicherheit verbessert wird. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-create.html["Erfahren Sie, wie Sie Partnerschaften verwalten"] .
 
 
 
@@ -210,4 +210,4 @@ Die Rollen *Ransomware Resilience-Benutzerverhaltensadministrator* und *Ransomwa
 
 === Support-Chat entfernt
 
-NetApp hat die Support-Chat-Funktion aus der NetApp Konsole entfernt.  Verwenden Sie die Seite *Administration > Support*, um Supportfälle zu erstellen und zu verwalten.
+NetApp hat die Support-Chat-Funktion aus der NetApp Console entfernt.  Verwenden Sie die Seite *Administration > Support*, um Supportfälle zu erstellen und zu verwalten.

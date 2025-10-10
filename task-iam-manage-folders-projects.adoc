@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-manage-folders-projects.html 
 keywords: folders, projects, resource hierarchy, create folders, create projects, iam, identity and access management, project id 
-summary: Mithilfe der Identitäts- und Zugriffsverwaltung in der NetApp Konsole können Sie mithilfe von Ordnern und Projekten eine vollständige Ressourcenhierarchie darstellen. 
+summary: Mithilfe der Identitäts- und Zugriffsverwaltung in der NetApp Console können Sie mithilfe von Ordnern und Projekten eine vollständige Ressourcenhierarchie darstellen. 
 ---
-= Organisieren Sie Ihre NetApp Console-Ressourcen mit Ordnern und Projekten
+= Organisieren Sie Ihre NetApp Console -Ressourcen mit Ordnern und Projekten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Mithilfe der Identitäts- und Zugriffsverwaltung in der NetApp Konsole 
 
 
 [role="lead"]
-In der NetApp Konsole organisieren Sie Ihre NetApp -Ressourcen mithilfe von Projekten und Ordnern.  Ein _Projekt_ stellt einen Arbeitsbereich in der Konsole dar, auf den Mitglieder der Organisation zugreifen, um _Ressourcen_ zu verwalten (z. B. ein Cloud Volumes ONTAP System).  Ein _Ordner_ fasst verwandte Projekte zusammen.  Nachdem Sie Ihre Ressourcen in Ordnern und Projekten organisiert haben, können Sie einen differenzierten Zugriff auf die Ressourcen gewähren, indem Sie den Mitgliedern der Organisation Berechtigungen für bestimmte Ordner und Projekte erteilen.
+In der NetApp Console organisieren Sie Ihre NetApp -Ressourcen mithilfe von Projekten und Ordnern.  Ein _Projekt_ stellt einen Arbeitsbereich in der Konsole dar, auf den Mitglieder der Organisation zugreifen, um _Ressourcen_ zu verwalten (z. B. ein Cloud Volumes ONTAP System).  Ein _Ordner_ fasst verwandte Projekte zusammen.  Nachdem Sie Ihre Ressourcen in Ordnern und Projekten organisiert haben, können Sie einen differenzierten Zugriff auf die Ressourcen gewähren, indem Sie den Mitgliedern der Organisation Berechtigungen für bestimmte Ordner und Projekte erteilen.
 
 
 
@@ -22,7 +22,7 @@ In der NetApp Konsole organisieren Sie Ihre NetApp -Ressourcen mithilfe von Proj
 
 Wenn Sie Ihre Organisation erstellen, umfasst diese ein einzelnes Projekt.  Fügen Sie Projekte hinzu, um Ressourcen zu verwalten, und Ordner, um verwandte Projekte zu gruppieren.
 
-Die Ressourcenhierarchie Ihrer Organisation kann bis zu sieben Ebenen umfassen, wobei Ordner sechs Ebenen tief verschachtelt sind und Projekte sich auf der siebten Ebene befinden.
+Die Ressourcenhierarchie Ihrer Organisation kann bis zu sieben Ebenen umfassen, wobei Ordner sechs Ebenen tief verschachtelt sind und Projekte auf der siebten Ebene liegen.
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
@@ -159,7 +159,7 @@ link:concept-identity-and-access-management.html#role-inheritance["Erfahren Sie 
 
 == Ähnliche Informationen
 
-* link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identität und Zugriff in der NetApp Konsole"]
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identität und Zugriff in der NetApp Console"]
 * link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Erfahren Sie mehr über die Identitäts- und Zugriffs-API"]
 

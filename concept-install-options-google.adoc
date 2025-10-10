@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-install-options-google.html 
 keywords: install connector google cloud, google cloud install connector, connector google cloud, google cloud connector, install connector gcp, gcp install connector, connector gcp, gcp connector, installation options, manual install 
-summary: Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Konsole. 
+summary: Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console . 
 ---
 = Installationsoptionen für den Konsolenagenten in Google Cloud
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cl
 
 
 [role="lead"]
-Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Konsole.  ---
+Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console .  ---
 
 Folgende Installationsoptionen stehen zur Verfügung:
 

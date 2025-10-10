@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-platform-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, bluexp 
-summary: Weisen Sie Benutzern Plattformrollen zu, um ihnen Berechtigungen zum Verwalten der NetApp Konsole, zum Zuweisen von Rollen, zum Hinzufügen von Benutzern, zum Erstellen von Konsolenagenten und zum Verwalten von Föderationen zu erteilen. 
+summary: Weisen Sie Benutzern Plattformrollen zu, um ihnen Berechtigungen zum Verwalten der NetApp Console, zum Zuweisen von Rollen, zum Hinzufügen von Benutzern, zum Erstellen von Konsolenagenten und zum Verwalten von Föderationen zu erteilen. 
 ---
-= Plattformzugriffsrollen für die NetApp -Konsole
+= Plattformzugriffsrollen für die NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Weisen Sie Benutzern Plattformrollen zu, um ihnen Berechtigungen zum Ve
 
 
 [role="lead"]
-Weisen Sie Benutzern Plattformrollen zu, um ihnen Berechtigungen zum Verwalten der NetApp Konsole, zum Zuweisen von Rollen, zum Hinzufügen von Benutzern, zum Erstellen von Konsolenagenten und zum Verwalten von Föderationen zu erteilen.
+Weisen Sie Benutzern Plattformrollen zu, um ihnen Berechtigungen zum Verwalten der NetApp Console, zum Zuweisen von Rollen, zum Hinzufügen von Benutzern, zum Erstellen von Konsolenagenten und zum Verwalten von Föderationen zu erteilen.
 
 .Beispiel für Organisationsrollen für eine große multinationale Organisation
 Die XYZ Corporation organisiert den Datenspeicherzugriff nach Regionen – Nordamerika, Europa und Asien-Pazifik – und bietet regionale Kontrolle mit zentraler Aufsicht.
@@ -127,12 +127,12 @@ Die folgenden Tabellen zeigen die Aktionen, die jede Konsolenplattformrolle ausf
 
 == Superadministrator- und Viewer-Rollen
 
-Die Rolle *Superadministrator* bietet vollständigen Zugriff auf die Verwaltung von Konsolenfunktionen, Speicher und Datendiensten.  Diese Rolle eignet sich für Personen, die für die Verwaltung und Governance zuständig sind.  Im Gegensatz dazu bietet die Rolle „Super Viewer“ schreibgeschützten Zugriff, ideal für Prüfer oder Stakeholder, die Einblick benötigen, ohne Änderungen vornehmen zu müssen.
+Die Rolle *Superadministrator* bietet vollständigen Zugriff auf die Verwaltung von Konsolenfunktionen, Speicher und Datendiensten.  Diese Rolle eignet sich für Personen, die für die Verwaltung und Governance zuständig sind.  Im Gegensatz dazu bietet die Rolle „Super Viewer“ schreibgeschützten Zugriff, ideal für Prüfer oder Stakeholder, die Einblick benötigen, ohne Änderungen vorzunehmen.
 
 Organisationen sollten den *Superadministrator*-Zugriff sparsam verwenden, um Sicherheitsrisiken zu minimieren und das Prinzip der geringsten Privilegien einzuhalten.  Die meisten Organisationen sollten fein abgestufte Rollen mit nur den erforderlichen Berechtigungen zuweisen, um das Risiko zu verringern und die Überprüfbarkeit zu verbessern.
 
 .Beispiel für Superrollen
-ABC Corporation verfügt über ein kleines fünfköpfiges Team, das die NetApp Konsole für Datendienste und Speicherverwaltung nutzt.  Anstatt mehrere Rollen zu verteilen, weisen sie die Rolle des *Superadministrators* zwei leitenden Teammitgliedern zu, die alle Verwaltungsaufgaben übernehmen, einschließlich Benutzerverwaltung und Ressourcenkonfiguration.  Den übrigen drei Teammitgliedern wird die Rolle „Super Viewer“ zugewiesen, die es ihnen ermöglicht, die Speicherintegrität und den Status des Datendienstes zu überwachen, ohne die Möglichkeit zu haben, Einstellungen zu ändern.
+ABC Corporation verfügt über ein kleines fünfköpfiges Team, das die NetApp Console für Datendienste und Speicherverwaltung nutzt.  Anstatt mehrere Rollen zu verteilen, weisen sie die Rolle des *Superadministrators* zwei leitenden Teammitgliedern zu, die alle Verwaltungsaufgaben übernehmen, einschließlich Benutzerverwaltung und Ressourcenkonfiguration.  Den übrigen drei Teammitgliedern wird die Rolle „Super Viewer“ zugewiesen, die es ihnen ermöglicht, die Speicherintegrität und den Status des Datendienstes zu überwachen, ohne die Möglichkeit zu haben, Einstellungen zu ändern.
 
 [cols="2,1"]
 |===

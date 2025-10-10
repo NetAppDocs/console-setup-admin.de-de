@@ -7,7 +7,7 @@ Gehen Sie zum Azure-Portal und weisen Sie der virtuellen Maschine des Konsolen-A
 .Schritte
 . Öffnen Sie im Azure-Portal den Dienst *Abonnements* und wählen Sie Ihr Abonnement aus.
 +
-Es ist wichtig, die Rolle vom Dienst *Abonnements* zuzuweisen, da dies den Umfang der Rollenzuweisung auf Abonnementebene angibt.  Der _Bereich_ definiert die Menge der Ressourcen, auf die der Zugriff angewendet wird.  Wenn Sie einen Bereich auf einer anderen Ebene angeben (z. B. auf der Ebene der virtuellen Maschine), wird Ihre Fähigkeit, Aktionen innerhalb der NetApp Konsole auszuführen, beeinträchtigt.
+Es ist wichtig, die Rolle vom Dienst *Abonnements* zuzuweisen, da dies den Umfang der Rollenzuweisung auf Abonnementebene angibt.  Der _Bereich_ definiert die Menge der Ressourcen, auf die der Zugriff angewendet wird.  Wenn Sie einen Bereich auf einer anderen Ebene angeben (z. B. auf der Ebene der virtuellen Maschine), wird Ihre Fähigkeit, Aktionen innerhalb der NetApp Console auszuführen, beeinträchtigt.
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure-Dokumentation: Umfang von Azure RBAC verstehen"^]

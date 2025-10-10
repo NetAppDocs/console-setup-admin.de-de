@@ -4,7 +4,7 @@ permalink: reference-limitations.html
 keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, BlueXP, Cloud Volumes ONTAP, days, running, Connectors should remain running, imdsv2, https tokens, agents should remain running, Console agent 
 summary: Bekannte Einschränkungen kennzeichnen Plattformen, Geräte oder Funktionen, die von dieser Produktversion nicht unterstützt werden oder nicht ordnungsgemäß mit ihr zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch. 
 ---
-= Bekannte Einschränkungen der NetApp Konsole
+= Bekannte Einschränkungen der NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -26,7 +26,7 @@ Diese Einschränkungen gelten speziell für die Einrichtung der NEtApp-Konsole u
 
 === Möglicher Konflikt mit IP-Adressen im Bereich 172
 
-Die NetApp Konsole stellt einen Agenten mit zwei Schnittstellen bereit, die IP-Adressen in den Bereichen 172.17.0.0/16 und 172.18.0.0/16 haben.
+Die NetApp Console stellt einen Agenten mit zwei Schnittstellen bereit, die IP-Adressen in den Bereichen 172.17.0.0/16 und 172.18.0.0/16 haben.
 
 Wenn in Ihrem Netzwerk ein Subnetz mit einem dieser Bereiche konfiguriert ist, kann es bei der Konsole zu Verbindungsfehlern kommen.  Beispielsweise kann die Erkennung lokaler ONTAP Cluster in der Konsole fehlschlagen.
 

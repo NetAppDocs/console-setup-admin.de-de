@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-accounts-gcp.html 
 keywords: cloud provider accounts, gcp, gcp accounts, google cloud platform, google accounts, google cloud platform accounts, permissions, project, google cloud project, credential, bluexp 
-summary: Erfahren Sie, wie die NetApp Konsole Google Cloud-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere Google Cloud-Projekte verwalten.  Beispielsweise möchten Sie möglicherweise mehr über das Dienstkonto erfahren, das mit der Konsolen-Agent-VM verknüpft ist. 
+summary: Erfahren Sie, wie die NetApp Console Google Cloud-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere Google Cloud-Projekte verwalten.  Beispielsweise möchten Sie möglicherweise mehr über das Dienstkonto erfahren, das mit der Konsolen-Agent-VM verknüpft ist. 
 ---
 = Erfahren Sie mehr über Google Cloud-Projekte und -Berechtigungen
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: Erfahren Sie, wie die NetApp Konsole Google Cloud-Anmeldeinformationen 
 
 
 [role="lead"]
-Erfahren Sie, wie die NetApp Konsole Google Cloud-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere Google Cloud-Projekte verwalten.  Beispielsweise möchten Sie möglicherweise mehr über das Dienstkonto erfahren, das mit der Konsolen-Agent-VM verknüpft ist.
+Erfahren Sie, wie die NetApp Console Google Cloud-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere Google Cloud-Projekte verwalten.  Beispielsweise möchten Sie möglicherweise mehr über das Dienstkonto erfahren, das mit der Konsolen-Agent-VM verknüpft ist.
 
 
 
-== Projekt und Berechtigungen für die NetApp Konsole
+== Projekt und Berechtigungen für die NetApp Console
 
 Bevor Sie die Konsole zum Verwalten von Ressourcen in Ihrem Google Cloud-Projekt verwenden können, müssen Sie zunächst einen Konsolen-Agenten bereitstellen.  Der Agent darf nicht bei Ihnen vor Ort oder bei einem anderen Cloud-Anbieter ausgeführt werden.
 

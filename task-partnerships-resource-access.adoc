@@ -25,7 +25,7 @@ Eine Partnerorganisation muss zunächst Mitglieder zur Partnerschaft hinzufügen
 
 == Verstehen Sie die Rollen für Partnerschaftsbenutzer
 
-Sie können Rollen für Mitglieder von Partnerorganisationen auf dieselbe Weise verwalten wie für Ihre eigenen.  Allerdings stehen Partnerschaftsbenutzern nicht alle Rollen zur Verfügung.  Insbesondere können Sie Partnerbenutzern keine Rolle zuweisen, die Softwareupdates zulässt.  Zum Aktualisieren der ONTAP -Software ist im Allgemeinen ein direkter Netzwerkzugriff erforderlich.
+Sie können Rollen für Mitglieder von Partnerorganisationen auf dieselbe Weise verwalten wie für Ihre eigenen.  Allerdings stehen Partnerschaftsbenutzern nicht alle Rollen zur Verfügung.  Insbesondere können Sie Partnerbenutzern keine Rolle zuweisen, die Softwareupdates zulässt.  Das Aktualisieren der ONTAP -Software erfordert im Allgemeinen direkten Netzwerkzugriff.
 
 Sie können Partnerbenutzern folgende Rollen zuweisen:
 
@@ -97,7 +97,7 @@ In der Liste *Mitglieder* werden die Mitglieder angezeigt, die die Partnerorgani
 . Sie können eine vorhandene Rolle für ein Mitglied ändern oder eine Rolle entfernen.
 +
 .. Um die Rolle eines Mitglieds zu ändern, wählen Sie *Ändern* neben der Rolle, die Sie ändern möchten.  Sie können eine Rolle nur in eine Rolle innerhalb derselben Rollenkategorie ändern.  Sie können beispielsweise von einer Datendienstrolle zu einer anderen wechseln.  Bestätigen Sie die Änderung.
-.. Um die Zuweisung einer Rolle eines Mitglieds aufzuheben, wählen Sieimage:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um dem Mitglied die jeweilige Rolle aufzuheben.  Sie werden aufgefordert, die Entfernung zu bestätigen.
+.. Um die Rolle eines Mitglieds aufzuheben, wählen Sieimage:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um dem Mitglied die jeweilige Rolle zu entziehen.  Sie werden aufgefordert, die Entfernung zu bestätigen.
 
 
 

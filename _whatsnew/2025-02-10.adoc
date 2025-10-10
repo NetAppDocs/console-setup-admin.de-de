@@ -25,7 +25,7 @@ Derzeit ist die Version 3.9.49 für den Standardmodus und den eingeschränkten M
 
 Das Identitäts- und Zugriffsmanagement (IAM) von BlueXP wird jetzt im eingeschränkten Modus verwendet.
 
-BlueXP Identity and Access Management (IAM) ist ein Ressourcen- und Zugriffsverwaltungsmodell, das die bisherige Funktionalität von BlueXP -Konten bei der Verwendung von BlueXP im Standard- und eingeschränkten Modus ersetzt und erweitert.
+BlueXP Identity and Access Management (IAM) ist ein Ressourcen- und Zugriffsverwaltungsmodell, das die bisherige Funktionalität von BlueXP -Konten ersetzt und erweitert, wenn BlueXP im Standard- und eingeschränkten Modus verwendet wird.
 
 .Ähnliche Informationen
 * https://docs.netapp.com/us-en/bluexp-setup-admin/concept-identity-and-access-management.html["Erfahren Sie mehr über BlueXP IAM"]

@@ -11,7 +11,7 @@ video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
 +
-Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Konsole verknüpft sind.
+Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Console verknüpft sind.
 
 +
 image:screenshot_aws_configure_subscription.png["Ein Screenshot des Aktionsmenüs für einen Satz vorhandener Anmeldeinformationen."]
@@ -23,7 +23,7 @@ image:screenshot_aws_configure_subscription.png["Ein Screenshot des Aktionsmenü
 .. Wählen Sie *Abonnieren*.
 .. Wählen Sie *Konto einrichten*.
 +
-Sie werden zur NetApp Konsole weitergeleitet.
+Sie werden zur NetApp Console weitergeleitet.
 
 .. Auf der Seite *Abonnementzuweisung*:
 +

@@ -7,7 +7,7 @@
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
 +
-Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Konsole verknüpft sind.
+Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Console verknüpft sind.
 
 . Um die Anmeldeinformationen mit einem vorhandenen Abonnement zu verknüpfen, wählen Sie das Abonnement aus der Dropdown-Liste aus und wählen Sie *Konfigurieren*.
 . Um die Anmeldeinformationen einem neuen Abonnement zuzuordnen, wählen Sie *Abonnement hinzufügen > Fortfahren* und befolgen Sie die Schritte im Azure Marketplace:
@@ -17,7 +17,7 @@ Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordne
 .. Füllen Sie das Formular aus und wählen Sie *Abonnieren*.
 .. Nachdem der Abonnementvorgang abgeschlossen ist, wählen Sie *Konto jetzt konfigurieren*.
 +
-Sie werden zur NetApp Konsole weitergeleitet.
+Sie werden zur NetApp Console weitergeleitet.
 
 .. Auf der Seite *Abonnementzuweisung*:
 +

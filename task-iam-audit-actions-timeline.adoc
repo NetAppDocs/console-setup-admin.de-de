@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-iam-audit-actions-timeline.html 
 keywords: iam, audit, monitor, audit iam actions, monitor iam actions 
-summary: Überwachen oder prüfen Sie die Identitäts- und Zugriffsverwaltungsaktionen der NetApp Konsole auf der Seite „Audit“. 
+summary: Überwachen oder prüfen Sie die Identitäts- und Zugriffsverwaltungsaktionen der NetApp Console auf der Seite „Audit“. 
 ---
 = Überwachen oder prüfen Sie die IAM-Aktivität
 :hardbreaks:

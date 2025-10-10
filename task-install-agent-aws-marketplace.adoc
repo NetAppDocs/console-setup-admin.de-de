@@ -78,21 +78,21 @@ Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Su
  a| 
 \https://signin.b2c.netapp.com
  a| 
-So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Konsole neue NSS-Anmeldeinformationen hinzu.
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
 
 
 
  a| 
 \https://support.netapp.com
  a| 
-Zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport -Nachrichten an den NetApp Support sowie zum Empfangen von Software-Updates für Cloud Volumes ONTAP.
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden sowie um Software-Updates für Cloud Volumes ONTAP zu erhalten.
 
 
 
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole.
+Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
 
 
 
@@ -137,7 +137,7 @@ Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden
 --
 
 
-Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification-System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
 +
 --
 Implementieren Sie diesen Netzwerkzugriff, nachdem Sie den Konsolenagenten erstellt haben.
@@ -207,7 +207,7 @@ Folgendes sollten Sie haben:
 
 
 .Schritte
-. Gehen Sie zum https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Auflistung des NetApp Console-Agenten im AWS Marketplace"^]
+. Gehen Sie zum https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Auflistung des NetApp Console -Agenten im AWS Marketplace"^]
 . Wählen Sie auf der Marketplace-Seite *Weiter zum Abonnieren* aus.
 . Um die Software zu abonnieren, wählen Sie *Bedingungen akzeptieren*.
 +
@@ -257,7 +257,7 @@ NOTE: Wenn die Installation fehlschlägt, können Sie Protokolle und einen Beric
 .. Geben Sie einen Namen für das System ein.
 .. Lassen Sie unter *Arbeiten Sie in einer sicheren Umgebung?* den eingeschränkten Modus deaktiviert.
 +
-Lassen Sie den eingeschränkten Modus deaktiviert, um die Konsole im Standardmodus zu verwenden.  Sie sollten den eingeschränkten Modus nur aktivieren, wenn Sie über eine sichere Umgebung verfügen und dieses Konto von den Backend-Diensten der Konsole trennen möchten.  Wenn das der Fall ist,link:task-quick-start-restricted-mode.html["Befolgen Sie die Schritte, um mit der NetApp Konsole im eingeschränkten Modus zu beginnen"] .
+Lassen Sie den eingeschränkten Modus deaktiviert, um die Konsole im Standardmodus zu verwenden.  Sie sollten den eingeschränkten Modus nur aktivieren, wenn Sie über eine sichere Umgebung verfügen und dieses Konto von den Backend-Diensten der Konsole trennen möchten.  Wenn das der Fall ist,link:task-quick-start-restricted-mode.html["Befolgen Sie die Schritte, um mit der NetApp Console im eingeschränkten Modus zu beginnen"] .
 
 .. Wählen Sie *Los geht's*.
 
@@ -267,6 +267,6 @@ Lassen Sie den eingeschränkten Modus deaktiviert, um die Konsole im Standardmod
 .Ergebnis
 Der Konsolenagent ist jetzt installiert und mit Ihrer Konsolenorganisation eingerichtet.
 
-Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Konsole"^] um den Konsolenagenten mit der Konsole zu verwenden.
+Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Console"^] um den Konsolenagenten mit der Konsole zu verwenden.
 
-Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenagenten erstellt haben, wird auf der Seite *Systeme* automatisch eine Amazon S3-Arbeitsumgebung angezeigt. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp Konsole verwalten"^]
+Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenagenten erstellt haben, wird auf der Seite *Systeme* automatisch eine Amazon S3-Arbeitsumgebung angezeigt. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp Console verwalten"^]

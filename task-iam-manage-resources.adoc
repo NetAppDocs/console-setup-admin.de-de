@@ -4,7 +4,7 @@ permalink: task-iam-manage-resources.html
 keywords: resource, hierarchy, association, access, resource permissions, resource hierarchy, iam, identity and access management 
 summary: Verwalten Sie die Ressourcenhierarchie Ihrer Organisation, indem Sie Ressourcen bestimmten Projekten und Ordnern zuordnen. 
 ---
-= Verwalten Sie die Ressourcenhierarchie in Ihrer NetApp Console-Organisation
+= Verwalten Sie die Ressourcenhierarchie in Ihrer NetApp Console Organisation
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -108,7 +108,7 @@ NOTE: Um eine erkannte Ressource aus der gesamten Organisation zu entfernen, ent
 
 == Ähnliche Informationen
 
-* link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identität und Zugriff in der NetApp Konsole"]
-* link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff in der NetApp Konsole"]
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identität und Zugriff in der NetApp Console"]
+* link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff in der NetApp Console"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identität und Zugriff"^]
 

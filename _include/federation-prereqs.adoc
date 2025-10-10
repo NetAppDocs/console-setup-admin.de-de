@@ -4,5 +4,5 @@
 
 .Bevor Sie beginnen
 * Es ist ein IdP-Konto mit Administratorrechten erforderlich.  Koordinieren Sie die Durchführung der Schritte mit Ihrem IdP-Administrator.
-* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Konsole"] Thema.
+* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Console"] Thema.
 

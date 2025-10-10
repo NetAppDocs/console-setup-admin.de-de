@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-accounts-azure.html 
 keywords: cloud provider accounts, azure, azure accounts, service principal, multiple accounts, permissions, policy, policies, subscriptions, credentials, marketplace subscription, replace subscription, subscription, bluexp 
-summary: Erfahren Sie, wie die NetApp Konsole Azure-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere Azure-Abonnements verwalten.  Sie möchten beispielsweise wissen, wann Sie der Konsole zusätzliche Azure-Anmeldeinformationen hinzufügen müssen. 
+summary: Erfahren Sie, wie die NetApp Console Azure-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere Azure-Abonnements verwalten.  Sie möchten beispielsweise wissen, wann Sie der Konsole zusätzliche Azure-Anmeldeinformationen hinzufügen müssen. 
 ---
-= Erfahren Sie mehr über Azure-Anmeldeinformationen und Berechtigungen in der NetApp Konsole
+= Erfahren Sie mehr über Azure-Anmeldeinformationen und Berechtigungen in der NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: Erfahren Sie, wie die NetApp Konsole Azure-Anmeldeinformationen verwend
 
 
 [role="lead"]
-Erfahren Sie, wie die NetApp Konsole Azure-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere Azure-Abonnements verwalten.  Sie möchten beispielsweise wissen, wann Sie der Konsole zusätzliche Azure-Anmeldeinformationen hinzufügen müssen.
+Erfahren Sie, wie die NetApp Console Azure-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere Azure-Abonnements verwalten.  Sie möchten beispielsweise wissen, wann Sie der Konsole zusätzliche Azure-Anmeldeinformationen hinzufügen müssen.
 
 
 
 == Anfängliche Azure-Anmeldeinformationen
 
-Wenn Sie einen Konsolen-Agenten über die Konsole bereitstellen, müssen Sie ein Azure-Konto oder einen Dienstprinzipal verwenden, der über die Berechtigung zum Bereitstellen der virtuellen Maschine des Konsolen-Agenten verfügt. Die erforderlichen Berechtigungen sind in derlink:task-install-agent-azure-console.html#agent-custom-role["Agent-Bereitstellungsrichtlinie für Azure"] .
+Wenn Sie einen Konsolen-Agenten über die Konsole bereitstellen, müssen Sie ein Azure-Konto oder einen Dienstprinzipal verwenden, der über die Berechtigung zum Bereitstellen der virtuellen Maschine des Konsolen-Agenten verfügt.  Die erforderlichen Berechtigungen sind in derlink:task-install-agent-azure-console.html#agent-custom-role["Agent-Bereitstellungsrichtlinie für Azure"] .
 
 Wenn die Konsole die virtuelle Maschine des Konsolen-Agenten in Azure bereitstellt, ermöglicht sie eine https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["systemseitig zugewiesene verwaltete Identität"^] auf der virtuellen Maschine, erstellt eine benutzerdefinierte Rolle und weist sie der virtuellen Maschine zu.  Die Rolle stellt der Konsole die erforderlichen Berechtigungen zum Verwalten von Ressourcen und Prozessen innerhalb dieses Azure-Abonnements zur Verfügung. link:reference-permissions-azure.html["Überprüfen Sie, wie die Konsole die Berechtigungen verwendet"] .
 
@@ -56,7 +56,7 @@ image:screenshot_accounts_switch_azure.gif["Ein Screenshot, der die Auswahl zwis
 
 == Anmeldeinformationen und Marktplatzabonnements
 
-Die Anmeldeinformationen, die Sie einem Konsolenagenten hinzufügen, müssen mit einem Azure Marketplace-Abonnement verknüpft sein, damit Sie für Cloud Volumes ONTAP zu einem Stundensatz (PAYGO), für NetApp -Datendienste oder über einen Jahresvertrag bezahlen können.
+Die Anmeldeinformationen, die Sie einem Konsolenagenten hinzufügen, müssen mit einem Azure Marketplace-Abonnement verknüpft sein, damit Sie für Cloud Volumes ONTAP einen Stundensatz (PAYGO), NetApp -Datendienste oder einen Jahresvertrag bezahlen können.
 
 link:task-adding-azure-accounts.html#subscribe["Erfahren Sie, wie Sie ein Azure-Abonnement zuordnen"] .
 
@@ -98,7 +98,7 @@ Nein, es ist nicht möglich, die mit Ihrem Cloud Volumes ONTAP -System verknüpf
 
 === Wie funktionieren Anmeldeinformationen für Marktplatzbereitstellungen und lokale Bereitstellungen?
 
-In den obigen Abschnitten wird die empfohlene Bereitstellungsmethode für den Konsolenagenten beschrieben, die über die Konsole erfolgt.  Sie können auch einen Konsolen-Agenten in Azure vom Azure Marketplace bereitstellen und die Konsolen-Agenten-Software auf Ihrem eigenen Linux-Host installieren.
+In den obigen Abschnitten wird die empfohlene Bereitstellungsmethode für den Konsolenagenten beschrieben, die von der Konsole aus erfolgt.  Sie können auch einen Konsolen-Agenten in Azure vom Azure Marketplace bereitstellen und die Konsolen-Agenten-Software auf Ihrem eigenen Linux-Host installieren.
 
 Wenn Sie den Marketplace verwenden, können Sie Berechtigungen erteilen, indem Sie der Konsolen-Agent-VM und einer systemseitig zugewiesenen verwalteten Identität eine benutzerdefinierte Rolle zuweisen, oder Sie können einen Microsoft Entra-Dienstprinzipal verwenden.
 

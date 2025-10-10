@@ -9,4 +9,4 @@
 . Wählen Sie *Fertig*, um den Vorgang abzuschließen.
 
 
-Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Konsole anmelden.
+Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Console anmelden.

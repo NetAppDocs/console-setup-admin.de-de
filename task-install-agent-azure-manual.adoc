@@ -88,7 +88,7 @@ Ubuntu
  a| 
 24,04 LTS
  a| 
-3.9.45 oder höher mit der NetApp Konsole im Standardmodus oder eingeschränkten Modus
+3.9.45 oder höher mit der NetApp Console im Standardmodus oder eingeschränkten Modus
  a| 
 Docker Engine 23.06 bis 28.0.0.
  a| 
@@ -307,7 +307,7 @@ Verbindungen zu Zielnetzwerken:: Der Konsolenagent erfordert eine Netzwerkverbin
 Ausgehender Internetzugang:: Der Netzwerkstandort, an dem Sie den Konsolenagenten bereitstellen, muss über eine ausgehende Internetverbindung verfügen, um bestimmte Endpunkte zu kontaktieren.
 
 
-Von Computern kontaktierte Endpunkte bei Verwendung der webbasierten NetApp Konsole::
+Von Computern kontaktierte Endpunkte bei Verwendung der webbasierten NetApp Console::
 +
 --
 Computer, die über einen Webbrowser auf die Konsole zugreifen, müssen in der Lage sein, mehrere Endpunkte zu kontaktieren.  Sie müssen die Konsole verwenden, um den Konsolenagenten einzurichten und für die tägliche Verwendung der Konsole.
@@ -358,21 +358,21 @@ Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Su
  a| 
 \https://signin.b2c.netapp.com
  a| 
-So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Konsole neue NSS-Anmeldeinformationen hinzu.
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
 
 
 
  a| 
 \https://support.netapp.com
  a| 
-Zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport -Nachrichten an den NetApp Support sowie zum Empfangen von Software-Updates für Cloud Volumes ONTAP.
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden sowie um Software-Updates für Cloud Volumes ONTAP zu erhalten.
 
 
 
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole.
+Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
 
 
 
@@ -417,7 +417,7 @@ Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden
 --
 
 
-Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification-System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
 
 
 
@@ -446,7 +446,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azur
 . Kopieren Sie den Inhalt derlink:reference-permissions-azure.html["benutzerdefinierte Rollenberechtigungen für den Connector"] und speichern Sie sie in einer JSON-Datei.
 . Ändern Sie die JSON-Datei, indem Sie dem zuweisbaren Bereich Azure-Abonnement-IDs hinzufügen.
 +
-Sie sollten die ID für jedes Azure-Abonnement hinzufügen, das Sie mit der NetApp Konsole verwenden möchten.
+Sie sollten die ID für jedes Azure-Abonnement hinzufügen, das Sie mit der NetApp Console verwenden möchten.
 
 +
 *Beispiel*
@@ -498,7 +498,7 @@ image:screenshot_azure_ad.png["Zeigt den Active Directory-Dienst in Microsoft Az
 . Geben Sie Details zur Anwendung an:
 +
 ** *Name*: Geben Sie einen Namen für die Anwendung ein.
-** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der NetApp Konsole).
+** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der NetApp Console).
 ** *Umleitungs-URI*: Sie können dieses Feld leer lassen.
 
 
@@ -582,7 +582,7 @@ image:screenshot_azure_service_principal_role.png["Ein Screenshot des Azure-Port
 Der Dienstprinzipal verfügt jetzt über die erforderlichen Azure-Berechtigungen zum Bereitstellen des Konsolen-Agenten.
 
 +
-Wenn Sie Cloud Volumes ONTAP aus mehreren Azure-Abonnements bereitstellen möchten, müssen Sie den Dienstprinzipal an jedes dieser Abonnements binden.  In der NetApp Konsole können Sie das Abonnement auswählen, das Sie beim Bereitstellen von Cloud Volumes ONTAP verwenden möchten.
+Wenn Sie Cloud Volumes ONTAP aus mehreren Azure-Abonnements bereitstellen möchten, müssen Sie den Dienstprinzipal an jedes dieser Abonnements binden.  In der NetApp Console können Sie das Abonnement auswählen, das Sie beim Bereitstellen von Cloud Volumes ONTAP verwenden möchten.
 
 
 
@@ -647,7 +647,7 @@ Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfiguri
 
 
 
-NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
+NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen.  Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
 
 * Eine auf der VM in Azure aktivierte verwaltete Identität, sodass Sie die erforderlichen Azure-Berechtigungen über eine benutzerdefinierte Rolle bereitstellen können.
 +
@@ -780,18 +780,18 @@ https://_ipaddress_[]
 .. Geben Sie einen Namen für das System ein.
 .. Lassen Sie unter *Arbeiten Sie in einer sicheren Umgebung?* den eingeschränkten Modus deaktiviert.
 +
-Sie sollten den eingeschränkten Modus deaktiviert lassen, da diese Schritte die Verwendung der Konsole im Standardmodus beschreiben.  Sie sollten den eingeschränkten Modus nur aktivieren, wenn Sie über eine sichere Umgebung verfügen und dieses Konto von den Backend-Diensten trennen möchten.  Wenn das der Fall ist,link:task-quick-start-restricted-mode.html["Befolgen Sie die Schritte, um mit der NetApp Konsole im eingeschränkten Modus zu beginnen"] .
+Sie sollten den eingeschränkten Modus deaktiviert lassen, da diese Schritte die Verwendung der Konsole im Standardmodus beschreiben.  Sie sollten den eingeschränkten Modus nur aktivieren, wenn Sie über eine sichere Umgebung verfügen und dieses Konto von den Backend-Diensten trennen möchten.  Wenn das der Fall ist,link:task-quick-start-restricted-mode.html["Befolgen Sie die Schritte, um mit der NetApp Console im eingeschränkten Modus zu beginnen"] .
 
 .. Wählen Sie *Los geht's*.
 
 
 
 
-Wenn Sie Azure Blob Storage im selben Azure-Abonnement haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Azure Blob Storage-System angezeigt. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Erfahren Sie, wie Sie Azure Blob Storage über die NetApp -Konsole verwalten"^]
+Wenn Sie Azure Blob Storage im selben Azure-Abonnement haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Azure Blob Storage-System angezeigt. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Erfahren Sie, wie Sie Azure Blob Storage über die NetApp Console verwalten"^]
 
 
 
-== Schritt 6: Berechtigungen für die NetApp Konsole erteilen
+== Schritt 6: Berechtigungen für die NetApp Console erteilen
 
 Nachdem Sie den Konsolen-Agent installiert haben, müssen Sie dem Konsolen-Agenten die Azure-Berechtigungen erteilen, die Sie zuvor eingerichtet haben.  Durch die Bereitstellung der Berechtigungen kann die Konsole Ihre Daten- und Speicherinfrastruktur in Azure verwalten.
 
@@ -804,7 +804,7 @@ Gehen Sie zum Azure-Portal und weisen Sie der virtuellen Maschine des Konsolen-A
 .Schritte
 . Öffnen Sie im Azure-Portal den Dienst *Abonnements* und wählen Sie Ihr Abonnement aus.
 +
-Es ist wichtig, die Rolle vom Dienst *Abonnements* zuzuweisen, da dies den Umfang der Rollenzuweisung auf Abonnementebene angibt.  Der _Bereich_ definiert die Menge der Ressourcen, auf die der Zugriff angewendet wird.  Wenn Sie einen Bereich auf einer anderen Ebene angeben (z. B. auf der Ebene der virtuellen Maschine), wird Ihre Fähigkeit, Aktionen innerhalb der NetApp Konsole auszuführen, beeinträchtigt.
+Es ist wichtig, die Rolle vom Dienst *Abonnements* zuzuweisen, da dies den Umfang der Rollenzuweisung auf Abonnementebene angibt.  Der _Bereich_ definiert die Menge der Ressourcen, auf die der Zugriff angewendet wird.  Wenn Sie einen Bereich auf einer anderen Ebene angeben (z. B. auf der Ebene der virtuellen Maschine), wird Ihre Fähigkeit, Aktionen innerhalb der NetApp Console auszuführen, beeinträchtigt.
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure-Dokumentation: Umfang von Azure RBAC verstehen"^]
@@ -828,7 +828,7 @@ NOTE: „Konsolenoperator“ ist der in der Richtlinie angegebene Standardname. 
 
 
 .Wie geht es weiter?
-Gehen Sie zum https://console.netapp.com["NetApp Konsole"^] um mit der Verwendung des Konsolenagenten zu beginnen.
+Gehen Sie zum https://console.netapp.com["NetApp Console"^] um mit der Verwendung des Konsolenagenten zu beginnen.
 
 --
 .Dienstprinzipal

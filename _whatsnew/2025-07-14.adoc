@@ -42,7 +42,7 @@ BlueXP bietet jetzt eine intuitivere Schnittstelle zur Verwaltung der Identität
 
 Durch die Aktivierung von Single Sign-On (SSO) über die Identitätsföderation können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei BlueXP anmelden.  Dies verbessert die Sicherheit, reduziert die Verwendung von Passwörtern und vereinfacht das Onboarding.
 
-Sie werden aufgefordert, alle vorhandenen Verbundverbindungen in die neue Schnittstelle zu importieren, um Zugriff auf die neuen Verwaltungsfunktionen zu erhalten.  Auf diese Weise können Sie die neuesten Verbesserungen nutzen, ohne Ihre Verbundverbindungen neu erstellen zu müssen.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-federation-import.html["Erfahren Sie mehr über den Import Ihrer vorhandenen Verbundverbindung zu BlueXP."]
+Sie werden aufgefordert, alle vorhandenen Verbundverbindungen in die neue Schnittstelle zu importieren, um Zugriff auf die neuen Verwaltungsfunktionen zu erhalten.  Auf diese Weise können Sie die neuesten Verbesserungen nutzen, ohne Ihre Verbundverbindungen neu erstellen zu müssen.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-federation-import.html["Erfahren Sie mehr über das Importieren Ihrer vorhandenen Verbundverbindung zu BlueXP."]
 
 Durch die verbesserte Föderationsverwaltung können Sie:
 
@@ -55,7 +55,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-federation.html["E
 
 
 
-==== Neue Zugriffsrollen für BlueXP backup and recovery, BlueXP disaster recovery und Federation Management
+==== Neue Zugriffsrollen für BlueXP backup and recovery, BlueXP disaster recovery und Föderationsverwaltung
 
 BlueXP unterstützt jetzt die Verwendung von IAM-Rollen für die folgenden Funktionen und Datendienste:
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-ports-gcp.html 
 keywords: ports, firewall rules, http, https, inbound, outbound, connector, agent 
-summary: Die Google Cloud-Firewallregeln für den Agenten erfordern sowohl eingehende als auch ausgehende Regeln.  Die NetApp Konsole erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten von der Konsole aus erstellen. Für andere Installationsoptionen müssen Sie diese Sicherheitsgruppe manuell einrichten. 
+summary: Die Google Cloud-Firewallregeln für den Agenten erfordern sowohl eingehende als auch ausgehende Regeln.  Die NetApp Console erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten aus der Konsole erstellen. Für andere Installationsoptionen müssen Sie diese Sicherheitsgruppe manuell einrichten. 
 ---
 = Agent-Firewallregeln in Google Cloud
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Die Google Cloud-Firewallregeln für den Agenten erfordern sowohl einge
 
 
 [role="lead"]
-Die Google Cloud-Firewallregeln für den Agenten erfordern sowohl eingehende als auch ausgehende Regeln.  Die NetApp Konsole erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten von der Konsole aus erstellen. Für andere Installationsoptionen müssen Sie diese Sicherheitsgruppe manuell einrichten.
+Die Google Cloud-Firewallregeln für den Agenten erfordern sowohl eingehende als auch ausgehende Regeln.  Die NetApp Console erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten aus der Konsole erstellen. Für andere Installationsoptionen müssen Sie diese Sicherheitsgruppe manuell einrichten.
 
 
 
@@ -76,7 +76,7 @@ NOTE: Die Quell-IP-Adresse ist der Agent-Host.
 | Service | Protokoll | Hafen | Ziel | Zweck 
 
 
-| API-Aufrufe und AutoSupport | HTTPS | 443 | Outbound-Internet und ONTAP Cluster-Management-LIF | API-Aufrufe an Google Cloud, an ONTAP, an NetApp Data Classification und das Senden von AutoSupport -Nachrichten an NetApp 
+| API-Aufrufe und AutoSupport | HTTPS | 443 | Outbound-Internet und ONTAP Cluster-Management-LIF | API-Aufrufe an Google Cloud, an ONTAP, an NetApp Data Classification und Senden von AutoSupport -Nachrichten an NetApp 
 
 
 | API-Aufrufe | TCP | 8080 | Datenklassifizierung | Testen der Datenklassifizierungsinstanz während der Bereitstellung 

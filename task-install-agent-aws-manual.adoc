@@ -88,7 +88,7 @@ Ubuntu
  a| 
 24,04 LTS
  a| 
-3.9.45 oder höher mit der NetApp Konsole im Standardmodus oder eingeschränkten Modus
+3.9.45 oder höher mit der NetApp Console im Standardmodus oder eingeschränkten Modus
  a| 
 Docker Engine 23.06 bis 28.0.0.
  a| 
@@ -308,7 +308,7 @@ Verbindungen zu Zielnetzwerken:: Der Konsolenagent erfordert eine Netzwerkverbin
 Ausgehender Internetzugang:: Der Netzwerkstandort, an dem Sie den Konsolenagenten bereitstellen, muss über eine ausgehende Internetverbindung verfügen, um bestimmte Endpunkte zu kontaktieren.
 
 
-Von Computern kontaktierte Endpunkte bei Verwendung der webbasierten NetApp Konsole::
+Von Computern kontaktierte Endpunkte bei Verwendung der webbasierten NetApp Console::
 +
 --
 Computer, die über einen Webbrowser auf die Konsole zugreifen, müssen in der Lage sein, mehrere Endpunkte zu kontaktieren.  Sie müssen die Konsole verwenden, um den Konsolenagenten einzurichten und für die tägliche Verwendung der Konsole.
@@ -360,21 +360,21 @@ Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Su
  a| 
 \https://signin.b2c.netapp.com
  a| 
-So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Konsole neue NSS-Anmeldeinformationen hinzu.
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
 
 
 
  a| 
 \https://support.netapp.com
  a| 
-Zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport -Nachrichten an den NetApp Support sowie zum Empfangen von Software-Updates für Cloud Volumes ONTAP.
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden sowie um Software-Updates für Cloud Volumes ONTAP zu erhalten.
 
 
 
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole.
+Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
 
 
 
@@ -419,14 +419,14 @@ Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden
 --
 
 
-Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification-System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
 
 
 
 
 == Schritt 4: AWS-Berechtigungen für die Konsole einrichten
 
-Sie müssen der NetApp Konsole AWS-Berechtigungen erteilen, indem Sie eine der folgenden Optionen verwenden:
+Sie müssen der NetApp Console AWS-Berechtigungen erteilen, indem Sie eine der folgenden Optionen verwenden:
 
 * Option 1: Erstellen Sie IAM-Richtlinien und fügen Sie die Richtlinien einer IAM-Rolle hinzu, die Sie der EC2-Instance zuordnen können.
 * Option 2: Stellen Sie der Konsole den AWS-Zugriffsschlüssel für einen IAM-Benutzer zur Verfügung, der über die erforderlichen Berechtigungen verfügt.
@@ -487,7 +487,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS-Dokumentation: Hinzufügen und Entfernen von IAM-Richtlinien"^]
 
 
-. Stellen Sie sicher, dass der Benutzer über einen Zugriffsschlüssel verfügt, den Sie der NetApp Konsole hinzufügen können, nachdem Sie den Konsolen-Agenten installiert haben.
+. Stellen Sie sicher, dass der Benutzer über einen Zugriffsschlüssel verfügt, den Sie der NetApp Console hinzufügen können, nachdem Sie den Konsolen-Agenten installiert haben.
 
 
 .Ergebnis
@@ -513,7 +513,7 @@ Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfiguri
 
 
 
-NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
+NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen.  Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
 
 .Informationen zu diesem Vorgang
 Das auf der NetApp Support-Site verfügbare Installationsprogramm ist möglicherweise eine frühere Version.  Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.
@@ -640,7 +640,7 @@ https://_ipaddress_[]
 .. Geben Sie einen Namen für das System ein.
 .. Lassen Sie unter *Arbeiten Sie in einer sicheren Umgebung?* den eingeschränkten Modus deaktiviert.
 +
-Sie sollten den eingeschränkten Modus deaktiviert lassen, da diese Schritte die Verwendung der Konsole im Standardmodus beschreiben.  Sie sollten den eingeschränkten Modus nur aktivieren, wenn Sie über eine sichere Umgebung verfügen und dieses Konto von den Backend-Diensten trennen möchten.  Wenn das der Fall ist,link:task-quick-start-restricted-mode.html["Befolgen Sie die Schritte, um mit der NetApp Konsole im eingeschränkten Modus zu beginnen"] .
+Sie sollten den eingeschränkten Modus deaktiviert lassen, da diese Schritte die Verwendung der Konsole im Standardmodus beschreiben.  Sie sollten den eingeschränkten Modus nur aktivieren, wenn Sie über eine sichere Umgebung verfügen und dieses Konto von den Backend-Diensten trennen möchten.  Wenn das der Fall ist,link:task-quick-start-restricted-mode.html["Befolgen Sie die Schritte, um mit der NetApp Console im eingeschränkten Modus zu beginnen"] .
 
 .. Wählen Sie *Los geht's*.
 
@@ -651,7 +651,7 @@ Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenage
 
 
 
-== Schritt 6: Berechtigungen für die NetApp Konsole erteilen
+== Schritt 6: Berechtigungen für die NetApp Console erteilen
 
 Nachdem Sie den Konsolenagenten installiert haben, müssen Sie der Konsole die AWS-Berechtigungen erteilen, die Sie zuvor eingerichtet haben.  Durch die Bereitstellung der Berechtigungen kann der Konsolenagent Ihre Daten und Speicherinfrastruktur in AWS verwalten.
 
@@ -669,7 +669,7 @@ Fügen Sie die zuvor erstellte IAM-Rolle der EC2-Instance des Konsolenagenten hi
 . Wählen Sie die IAM-Rolle und dann *IAM-Rolle aktualisieren* aus.
 
 
-Gehen Sie zum https://console.netapp.com["NetApp Konsole"^] um mit der Verwendung des Konsolenagenten zu beginnen.
+Gehen Sie zum https://console.netapp.com["NetApp Console"^] um mit der Verwendung des Konsolenagenten zu beginnen.
 
 --
 .AWS-Zugriffsschlüssel
@@ -690,7 +690,7 @@ Stellen Sie der Konsole den AWS-Zugriffsschlüssel für einen IAM-Benutzer berei
 
 
 
-Gehen Sie zum https://console.netapp.com["NetApp Konsole"^] um mit der Verwendung des Konsolenagenten zu beginnen.
+Gehen Sie zum https://console.netapp.com["NetApp Console"^] um mit der Verwendung des Konsolenagenten zu beginnen.
 
 --
 ====

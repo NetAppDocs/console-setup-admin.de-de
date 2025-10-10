@@ -40,7 +40,7 @@ Manuelle Installation::
 
 
 --
-Bereitstellung über die NetApp -Konsole:: Ubuntu 22.04 LTS
+Bereitstellung über die NetApp Console:: Ubuntu 22.04 LTS
 Bereitstellung über den AWS Marketplace:: Ubuntu 22.04 LTS
 Bereitstellung über den Azure Marketplace:: Ubuntu 22.04 LTS
 

@@ -4,7 +4,7 @@ permalink: task-user-settings.html
 keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode 
 summary: Innerhalb der Konsole verfügt jeder Benutzer über ein Profil, das Informationen über den Benutzer und seine Einstellungen enthält. Sie können Ihre Profileinstellungen anzeigen und bearbeiten. 
 ---
-= Verwalten Sie Ihre NetApp -Konsolenbenutzereinstellungen
+= Verwalten Sie Ihre NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

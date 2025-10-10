@@ -26,7 +26,7 @@ link:reference-permissions-gcp.html["Agent-Dienstkontorichtlinie"]
 | compute.networkUser deploymentmanager.editor | Bereitstellung und Wartung von Cloud Volumes ONTAP und Diensten im Serviceprojekt 
 
 
-| Cloud Volumes ONTAP Dienstkonto | Brauch | Serviceprojekt | storage.admin-Mitglied: NetApp -Konsolendienstkonto als serviceAccount.user | k. A. | (Optional) Für NetApp Cloud Tiering und NetApp Backup und Recovery 
+| Cloud Volumes ONTAP Dienstkonto | Brauch | Serviceprojekt | storage.admin-Mitglied: NetApp Console als serviceAccount.user | k. A. | (Optional) Für NetApp Cloud Tiering und NetApp Backup and Recovery 
 
 
 | Google APIs-Dienstagent | Google Cloud | Serviceprojekt  a| 
@@ -44,7 +44,7 @@ compute.networkUser
 |===
 Hinweise:
 
-. deploymentmanager.editor wird im Hostprojekt nur benötigt, wenn Sie keine Firewall-Regeln an die Bereitstellung übergeben und diese von der Konsole für Sie erstellen lassen.  Die NetApp Konsole erstellt eine Bereitstellung im Hostprojekt, die die VPC0-Firewallregel enthält, wenn keine Regel angegeben ist.
+. deploymentmanager.editor wird im Hostprojekt nur benötigt, wenn Sie keine Firewall-Regeln an die Bereitstellung übergeben und diese von der Konsole für Sie erstellen lassen.  Die NetApp Console erstellt eine Bereitstellung im Hostprojekt, die die VPC0-Firewallregel enthält, wenn keine Regel angegeben ist.
 . firewall.create und firewall.delete sind nur erforderlich, wenn Sie keine Firewall-Regeln an die Bereitstellung übergeben und diese von der Konsole für Sie erstellen lassen möchten.  Diese Berechtigungen befinden sich in der YAML-Datei des Konsolenkontos.  Wenn Sie ein HA-Paar mithilfe einer gemeinsam genutzten VPC bereitstellen, werden diese Berechtigungen zum Erstellen der Firewall-Regeln für VPC1, 2 und 3 verwendet.  Bei allen anderen Bereitstellungen werden diese Berechtigungen auch zum Erstellen von Regeln für VPC0 verwendet.
 . Für Cloud Tiering muss das Tiering-Dienstkonto über die Rolle serviceAccount.user für das Dienstkonto verfügen, nicht nur auf Projektebene.  Wenn Sie derzeit serviceAccount.user auf Projektebene zuweisen, werden die Berechtigungen nicht angezeigt, wenn Sie das Dienstkonto mit getIAMPolicy abfragen.
 

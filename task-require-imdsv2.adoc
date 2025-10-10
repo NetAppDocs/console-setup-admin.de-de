@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-require-imdsv2.html 
 keywords: managing connectors, uninstall connector, switch connectors, switch between connectors, local interface, local connector, local cloud manager, local ui, go to local ui 
-summary: Die NetApp Konsole unterstützt IMDSv2 mit dem Konsolenagenten und mit Cloud Volumes ONTAP.  In den meisten Fällen wird IMDSv2 auf neuen EC2-Instanzen automatisch konfiguriert.  IMDSv1 wurde vor März 2024 aktiviert.  Falls Ihre Sicherheitsrichtlinien dies erfordern, müssen Sie IMDSv2 möglicherweise manuell auf Ihren EC2-Instances konfigurieren. 
+summary: Die NetApp Console unterstützt IMDSv2 mit dem Konsolenagenten und mit Cloud Volumes ONTAP.  In den meisten Fällen wird IMDSv2 auf neuen EC2-Instanzen automatisch konfiguriert.  IMDSv1 wurde vor März 2024 aktiviert.  Falls Ihre Sicherheitsrichtlinien dies erfordern, müssen Sie IMDSv2 möglicherweise manuell auf Ihren EC2-Instances konfigurieren. 
 ---
 = Erfordert die Verwendung von IMDSv2 auf Amazon EC2-Instanzen
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Die NetApp Konsole unterstützt IMDSv2 mit dem Konsolenagenten und mit 
 
 
 [role="lead"]
-Die NetApp Konsole unterstützt den Amazon EC2 Instance Metadata Service Version 2 (IMDSv2) mit dem Konsolenagenten und mit Cloud Volumes ONTAP (einschließlich des Mediators für HA-Bereitstellungen).  In den meisten Fällen wird IMDSv2 auf neuen EC2-Instanzen automatisch konfiguriert.  IMDSv1 wurde vor März 2024 aktiviert.  Falls Ihre Sicherheitsrichtlinien dies erfordern, müssen Sie IMDSv2 möglicherweise manuell auf Ihren EC2-Instances konfigurieren.
+Die NetApp Console unterstützt den Amazon EC2 Instance Metadata Service Version 2 (IMDSv2) mit dem Konsolenagenten und mit Cloud Volumes ONTAP (einschließlich des Mediators für HA-Bereitstellungen).  In den meisten Fällen wird IMDSv2 auf neuen EC2-Instanzen automatisch konfiguriert.  IMDSv1 wurde vor März 2024 aktiviert.  Falls Ihre Sicherheitsrichtlinien dies erfordern, müssen Sie IMDSv2 möglicherweise manuell auf Ihren EC2-Instances konfigurieren.
 
 .Bevor Sie beginnen
 * Die Version des Konsolenagenten muss 3.9.38 oder höher sein.

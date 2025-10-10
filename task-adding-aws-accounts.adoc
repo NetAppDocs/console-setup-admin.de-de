@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-adding-aws-accounts.html 
 keywords: permissions, aws, policy, iam, iam role, role, granting, policy, iam policy, iam user, access keys, arn, cloud provider accounts, aws, cloud provider profile, json, iam, credentials, adding credentials, add credentials, bluexp 
-summary: Fügen Sie AWS-Anmeldeinformationen hinzu und verwalten Sie diese, damit die NetApp Konsole über die erforderlichen Berechtigungen zum Bereitstellen und Verwalten von Cloud-Ressourcen in Ihren AWS-Konten verfügt.  Wenn Sie mehrere AWS-Abonnements verwalten, können Sie jedem von ihnen auf der Seite „Anmeldeinformationen“ unterschiedliche AWS-Anmeldeinformationen zuweisen. 
+summary: Fügen Sie AWS-Anmeldeinformationen hinzu und verwalten Sie diese, damit die NetApp Console über die erforderlichen Berechtigungen zum Bereitstellen und Verwalten von Cloud-Ressourcen in Ihren AWS-Konten verfügt.  Wenn Sie mehrere AWS-Abonnements verwalten, können Sie jedem von ihnen auf der Seite „Anmeldeinformationen“ unterschiedliche AWS-Anmeldeinformationen zuweisen. 
 ---
-= Verwalten Sie AWS-Anmeldeinformationen und Marktplatz-Abonnements für die NetApp Konsole
+= Verwalten Sie AWS-Anmeldeinformationen und Marktplatz-Abonnements für die NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Fügen Sie AWS-Anmeldeinformationen hinzu und verwalten Sie diese, dami
 
 
 [role="lead"]
-Fügen Sie AWS-Anmeldeinformationen hinzu und verwalten Sie diese, damit Sie Cloud-Ressourcen in Ihren AWS-Konten über die NetApp Konsole bereitstellen und verwalten können.  Wenn Sie mehrere AWS Marketplace-Abonnements verwalten, können Sie jedem Abonnement auf der Seite „Anmeldeinformationen“ unterschiedliche AWS-Anmeldeinformationen zuweisen.
+Fügen Sie AWS-Anmeldeinformationen hinzu und verwalten Sie diese, damit Sie Cloud-Ressourcen in Ihren AWS-Konten über die NetApp Console bereitstellen und verwalten können.  Wenn Sie mehrere AWS Marketplace-Abonnements verwalten, können Sie jedem Abonnement auf der Seite „Anmeldeinformationen“ unterschiedliche AWS-Anmeldeinformationen zuweisen.
 
 
 
@@ -28,7 +28,7 @@ Fügen Sie einem Konsolenagenten AWS-Anmeldeinformationen hinzu, um Cloud-Ressou
 
 * Fügen Sie der Konsole AWS-Anmeldeinformationen hinzu, um einen Konsolenagenten zu erstellen
 +
-Durch das Hinzufügen neuer AWS-Anmeldeinformationen zur Konsole erhalten Sie die erforderlichen Berechtigungen zum Erstellen eines Konsolenagenten. <<add-aws-credentials-agent-creation,Erfahren Sie, wie Sie AWS-Anmeldeinformationen zur NetApp Konsole hinzufügen>> .
+Durch das Hinzufügen neuer AWS-Anmeldeinformationen zur Konsole erhalten Sie die erforderlichen Berechtigungen zum Erstellen eines Konsolenagenten. <<add-aws-credentials-agent-creation,Erfahren Sie, wie Sie AWS-Anmeldeinformationen zur NetApp Console hinzufügen>> .
 
 * AWS-Anmeldeinformationen zur Konsole für FSx for ONTAP hinzufügen
 +
@@ -40,7 +40,7 @@ Fügen Sie der Konsole neue AWS-Anmeldeinformationen hinzu, um FSx für ONTAP zu
 
 == So rotieren Sie Anmeldeinformationen
 
-Mit der NetApp Konsole können Sie AWS-Anmeldeinformationen auf verschiedene Weise bereitstellen: über eine mit der Agenteninstanz verknüpfte IAM-Rolle, durch die Übernahme einer IAM-Rolle in einem vertrauenswürdigen Konto oder durch die Bereitstellung von AWS-Zugriffsschlüsseln. link:concept-accounts-aws.html["Erfahren Sie mehr über AWS-Anmeldeinformationen und -Berechtigungen"] .
+Mit der NetApp Console können Sie AWS-Anmeldeinformationen auf verschiedene Weise bereitstellen: über eine mit der Agenteninstanz verknüpfte IAM-Rolle, durch die Übernahme einer IAM-Rolle in einem vertrauenswürdigen Konto oder durch die Bereitstellung von AWS-Zugriffsschlüsseln. link:concept-accounts-aws.html["Erfahren Sie mehr über AWS-Anmeldeinformationen und -Berechtigungen"] .
 
 Bei den ersten beiden Optionen verwendet die Konsole den AWS Security Token Service, um temporäre Anmeldeinformationen zu erhalten, die ständig rotieren.  Dieser Vorgang ist die beste Vorgehensweise, da er automatisch und sicher ist.
 
@@ -52,7 +52,7 @@ Rotieren Sie AWS-Zugriffsschlüssel manuell, indem Sie sie in der Konsole aktual
 
 Fügen Sie einem Konsolenagenten zusätzliche AWS-Anmeldeinformationen hinzu, damit er über die erforderlichen Berechtigungen zum Verwalten von Ressourcen und Prozessen in Ihrer öffentlichen Cloud-Umgebung verfügt.  Sie können entweder die ARN einer IAM-Rolle in einem anderen Konto angeben oder AWS-Zugriffsschlüssel bereitstellen.
 
-Wenn Sie gerade erst mit der Konsole beginnen,link:concept-accounts-aws.html["Erfahren Sie, wie die NetApp Konsole AWS-Anmeldeinformationen und -Berechtigungen verwendet"] .
+Wenn Sie gerade erst mit der Konsole beginnen,link:concept-accounts-aws.html["Erfahren Sie, wie die NetApp Console AWS-Anmeldeinformationen und -Berechtigungen verwendet"] .
 
 
 
@@ -128,7 +128,7 @@ Nachdem Sie ein AWS-Konto mit den erforderlichen Berechtigungen versehen haben, 
  New credentials in your cloud provider may take a few minutes to become available. Then, add the credentials.
 .Schritte
 . Wählen Sie über die obere Navigationsleiste einen Konsolenagenten aus, dem Sie Anmeldeinformationen hinzufügen möchten.
-. Wählen Sie in der linken Navigationsleiste *Administration > Anmeldeinformationen*.
+. Wählen Sie in der linken Navigationsleiste *Administration > Anmeldeinformationen* aus.
 . Wählen Sie auf der Seite *Anmeldeinformationen der Organisation* die Option *Anmeldeinformationen hinzufügen* aus und folgen Sie den Schritten des Assistenten.
 +
 .. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > Agent*.
@@ -157,7 +157,7 @@ Fügen Sie AWS-Anmeldeinformationen hinzu, indem Sie die ARN einer IAM-Rolle ang
 
 === Einrichten der IAM-Rolle
 
-Richten Sie eine IAM-Rolle ein, die es der NetApp Console-Software als Serviceebene (SaaS) ermöglicht, die Rolle zu übernehmen.
+Richten Sie eine IAM-Rolle ein, die es der NetApp Console -Software als Serviceebene (SaaS) ermöglicht, die Rolle zu übernehmen.
 
 .Schritte
 . Gehen Sie zur IAM-Konsole im Zielkonto.
@@ -222,7 +222,7 @@ image:screenshot-settings-icon-organization.png["Ein Screenshot, der das Einstel
 
 . Wählen Sie auf der Seite *Anmeldeinformationen der Organisation* oder *Anmeldeinformationen des Kontos* die Option *Anmeldeinformationen hinzufügen* aus und folgen Sie den Schritten des Assistenten.
 +
-.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > NetApp Konsole*.
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > NetApp Console*.
 .. *Anmeldeinformationen definieren*: Geben Sie den ARN (Amazon Resource Name) der IAM-Rolle an.
 .. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
 
@@ -262,7 +262,7 @@ video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
 +
-Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Konsole verknüpft sind.
+Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Console verknüpft sind.
 
 +
 image:screenshot_aws_configure_subscription.png["Ein Screenshot des Aktionsmenüs für einen Satz vorhandener Anmeldeinformationen."]
@@ -274,7 +274,7 @@ image:screenshot_aws_configure_subscription.png["Ein Screenshot des Aktionsmenü
 .. Wählen Sie *Abonnieren*.
 .. Wählen Sie *Konto einrichten*.
 +
-Sie werden zur NetApp Konsole weitergeleitet.
+Sie werden zur NetApp Console weitergeleitet.
 
 .. Auf der Seite *Abonnementzuweisung*:
 +
@@ -308,7 +308,7 @@ Führen Sie die folgenden Schritte aus, wenn Sie NetApp Intelligent Data Service
 .Schritte
 . Bestätigen Sie, dass Sie Ihr Abonnement nicht mit Ihrer Konsolenorganisation oder Ihrem Konsolenkonto verknüpft haben.
 +
-.. Wählen Sie im Navigationsmenü *Administration > Lizenzen und Abonnements*.
+.. Wählen Sie im Navigationsmenü *Verwaltung > Licenses and subscriptions*.
 .. Wählen Sie *Abonnements* aus.
 .. Stellen Sie sicher, dass Ihr Abonnement nicht angezeigt wird.
 +

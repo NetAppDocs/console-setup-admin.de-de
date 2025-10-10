@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-federation-entra-id.html 
 keywords: Microsoft Entra ID, BlueXP, federation, single sign-on, SSO, identity provider, IdP, service provider-initiated SSO, domain verification, client secret, redirect URL, organization admin, 
-summary: 'Verbinden Sie sich mit Ihrem Microsoft Entra ID IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.' 
+summary: 'Verbinden Sie sich mit Ihrem Microsoft Entra ID IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Console zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.' 
 ---
-= Verbinden Sie die NetApp Konsole mit der Microsoft Entra-ID
+= Verbinden Sie die NetApp Console mit der Microsoft Entra-ID
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Verbinden Sie sich mit Ihrem Microsoft Entra ID IdP-Anbieter, um Singl
 
 
 [role="lead"]
-Verbinden Sie sich mit Ihrem Microsoft Entra ID IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.
+Verbinden Sie sich mit Ihrem Microsoft Entra ID IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Console zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.
 
 .Erforderliche Rollen
 Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
@@ -28,7 +28,7 @@ Sie können eine Verbundverbindung mit der Microsoft Entra ID einrichten, um Sin
 
 .Bevor Sie beginnen
 * Es ist ein IdP-Konto mit Administratorrechten erforderlich.  Koordinieren Sie die Durchführung der Schritte mit Ihrem IdP-Administrator.
-* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Konsole"] Thema.
+* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Console"] Thema.
 
 
 .Schritte
@@ -96,4 +96,4 @@ Sie können eine Verbundverbindung mit der Microsoft Entra ID einrichten, um Sin
 . Wählen Sie *Fertig*, um den Vorgang abzuschließen.
 
 
-Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Konsole anmelden.
+Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Console anmelden.

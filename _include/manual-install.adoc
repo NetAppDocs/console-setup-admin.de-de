@@ -14,7 +14,7 @@ Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfiguri
 
 
 
-NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
+NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen.  Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
 
 .Informationen zu diesem Vorgang
 Das auf der NetApp Support-Site verfügbare Installationsprogramm ist möglicherweise eine frühere Version.  Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.
@@ -143,7 +143,7 @@ https://_ipaddress_[]
 .. Geben Sie einen Namen für das System ein.
 .. Lassen Sie unter *Arbeiten Sie in einer sicheren Umgebung?* den eingeschränkten Modus deaktiviert.
 +
-Sie sollten den eingeschränkten Modus deaktiviert lassen, da diese Schritte die Verwendung der Konsole im Standardmodus beschreiben.  Sie sollten den eingeschränkten Modus nur aktivieren, wenn Sie über eine sichere Umgebung verfügen und dieses Konto von den Backend-Diensten trennen möchten.  Wenn das der Fall ist,link:task-quick-start-restricted-mode.html["Befolgen Sie die Schritte, um mit der NetApp Konsole im eingeschränkten Modus zu beginnen"] .
+Sie sollten den eingeschränkten Modus deaktiviert lassen, da diese Schritte die Verwendung der Konsole im Standardmodus beschreiben.  Sie sollten den eingeschränkten Modus nur aktivieren, wenn Sie über eine sichere Umgebung verfügen und dieses Konto von den Backend-Diensten trennen möchten.  Wenn das der Fall ist,link:task-quick-start-restricted-mode.html["Befolgen Sie die Schritte, um mit der NetApp Console im eingeschränkten Modus zu beginnen"] .
 
 .. Wählen Sie *Los geht's*.
 

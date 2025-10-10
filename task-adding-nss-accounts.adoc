@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-adding-nss-accounts.html 
 keywords: adding, creating, netapp support site account, nss, update account, update nss account, update nss credentials, delete nss account, remove nss account, change working environment, working environment nss, digital wallet, license, change system, system nss, licenses and subscriptions 
-summary: Verknüpfen Sie ein NetApp Support Site-Konto mit Ihrer NetApp Console-Organisation, um wichtige Workflows für Cloud Volumes ONTAP zu aktivieren.  Diese NSS-Anmeldeinformationen sind mit der gesamten Organisation verknüpft. 
+summary: Verknüpfen Sie ein NetApp Support Site-Konto mit Ihrer NetApp Console -Organisation, um wichtige Workflows für Cloud Volumes ONTAP zu aktivieren.  Diese NSS-Anmeldeinformationen sind mit der gesamten Organisation verknüpft. 
 ---
-= Verwalten der mit der NetApp Konsole verknüpften NSS-Anmeldeinformationen
+= Verwalten der mit der NetApp Console verknüpften NSS-Anmeldeinformationen
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -26,7 +26,7 @@ Um die folgenden Aufgaben zu ermöglichen, müssen Sie die Anmeldeinformationen 
 
 * Bereitstellen von Cloud Volumes ONTAP mit eigener Lizenz (BYOL)
 +
-Die Angabe Ihres NSS-Kontos ist erforderlich, damit die Konsole Ihren Lizenzschlüssel hochladen und das Abonnement für die von Ihnen erworbene Laufzeit aktivieren kann. Hierzu gehören automatische Updates bei Laufzeitverlängerungen.
+Die Angabe Ihres NSS-Kontos ist erforderlich, damit die Konsole Ihren Lizenzschlüssel hochladen und das Abonnement für die von Ihnen erworbene Laufzeit aktivieren kann.  Hierzu gehören automatische Updates bei Laufzeitverlängerungen.
 
 * Registrieren von Pay-as-you-go Cloud Volumes ONTAP Systemen
 +
@@ -60,12 +60,12 @@ NOTE: NetApp verwendet Microsoft Entra ID als Identitätsanbieter für Authentif
 Nach erfolgreicher Anmeldung speichert NetApp den NSS-Benutzernamen.
 
 +
-Dies ist eine vom System generierte ID, die Ihrer E-Mail-Adresse zugeordnet ist. Auf der Seite *NSS-Verwaltung* können Sie Ihre E-Mail-Adresse aus demimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Ein Symbol mit drei horizontalen Punkten"] Speisekarte.
+Dies ist eine vom System generierte ID, die Ihrer E-Mail-Adresse zugeordnet ist.  Auf der Seite *NSS-Verwaltung* können Sie Ihre E-Mail-Adresse aus demimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Ein Symbol mit drei horizontalen Punkten"] Speisekarte.
 
 +
 ** Wenn Sie Ihre Anmeldeinformationen aktualisieren müssen, gibt es auch die Option *Anmeldeinformationen aktualisieren* imimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Ein Symbol mit drei horizontalen Punkten"] Speisekarte.
 +
-Bei Verwendung dieser Option werden Sie aufgefordert, sich erneut anzumelden. Beachten Sie, dass das Token für diese Konten nach 90 Tagen abläuft. Sie werden durch eine entsprechende Benachrichtigung darauf aufmerksam gemacht.
+Bei Verwendung dieser Option werden Sie aufgefordert, sich erneut anzumelden.  Beachten Sie, dass das Token für diese Konten nach 90 Tagen abläuft.  Sie werden durch eine entsprechende Benachrichtigung darauf aufmerksam gemacht.
 
 
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-quick-start-restricted-mode.html 
 keywords: quick start, restricted mode quick start, govcloud, government, aws gov, azure gov 
-summary: Beginnen Sie mit der NetApp Konsole im eingeschränkten Modus, indem Sie Ihre Umgebung vorbereiten und den Konsolen-Agenten bereitstellen. 
+summary: Beginnen Sie mit der NetApp Console im eingeschränkten Modus, indem Sie Ihre Umgebung vorbereiten und den Konsolen-Agenten bereitstellen. 
 ---
 = Workflow „Erste Schritte“ (eingeschränkter Modus)
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: Beginnen Sie mit der NetApp Konsole im eingeschränkten Modus, indem Si
 
 
 [role="lead"]
-Beginnen Sie mit der NetApp Konsole im eingeschränkten Modus, indem Sie Ihre Umgebung vorbereiten und den Konsolen-Agenten bereitstellen.
+Beginnen Sie mit der NetApp Console im eingeschränkten Modus, indem Sie Ihre Umgebung vorbereiten und den Konsolen-Agenten bereitstellen.
 
-Der eingeschränkte Modus wird normalerweise von staatlichen und lokalen Behörden sowie regulierten Unternehmen verwendet, einschließlich Bereitstellungen in AWS GovCloud- und Azure Government-Regionen. Bevor Sie beginnen, stellen Sie sicher, dass Sie Folgendes verstehen:link:concept-agents.html["Konsolenagenten"] Undlink:concept-modes.html["Bereitstellungsmodi"] .
+Der eingeschränkte Modus wird normalerweise von staatlichen und lokalen Behörden sowie regulierten Unternehmen verwendet, einschließlich Bereitstellungen in AWS GovCloud- und Azure Government-Regionen.  Bevor Sie beginnen, stellen Sie sicher, dass Sie Folgendes verstehen:link:concept-agents.html["Konsolenagenten"] Undlink:concept-modes.html["Bereitstellungsmodi"] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:task-prepare-restricted-mode.html["Vorbereiten der Bereitstellung"]
 [role="quick-margin-list"]
@@ -28,10 +28,10 @@ Der eingeschränkte Modus wird normalerweise von staatlichen und lokalen Behörd
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] link:task-install-restricted-mode.html["Bereitstellen des Konsolenagenten"]
 [role="quick-margin-list"]
 . Installieren Sie den Konsolenagenten vom Marktplatz Ihres Cloud-Anbieters oder indem Sie die Software manuell auf Ihrem eigenen Linux-Host installieren.
-. Richten Sie die NetApp -Konsole ein, indem Sie einen Webbrowser öffnen und die IP-Adresse des Linux-Hosts eingeben.
+. Richten Sie die NetApp Console ein, indem Sie einen Webbrowser öffnen und die IP-Adresse des Linux-Hosts eingeben.
 . Geben Sie dem Konsolenagenten die Berechtigungen, die Sie zuvor eingerichtet haben.
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"] link:task-subscribe-restricted-mode.html["Abonnieren Sie NetApp Intelligent Services (optional)"]
 [role="quick-margin-para"]
-Optional: Abonnieren Sie NetApp Intelligent Services über den Marktplatz Ihres Cloud-Anbieters, um Datendienste zu einem Stundensatz (PAYGO) oder über einen Jahresvertrag zu bezahlen.  Zu den intelligenten Diensten von NetApp gehören NetApp Backup und Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience und NetApp Disaster Recovery.  Die NetApp Datenklassifizierung ist ohne zusätzliche Kosten in Ihrem Abonnement enthalten.
+Optional: Abonnieren Sie NetApp Intelligent Services über den Marktplatz Ihres Cloud-Anbieters, um Datendienste zu einem Stundensatz (PAYGO) oder über einen Jahresvertrag zu bezahlen.  Zu den NetApp Intelligent Services gehören NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience und NetApp Disaster Recovery.  Die NetApp Data Classification ist ohne zusätzliche Kosten in Ihrem Abonnement enthalten.

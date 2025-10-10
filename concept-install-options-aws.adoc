@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-install-options-aws.html 
 keywords: install connector aws, aws install connector, connector aws, aws connector, installation options, aws marketplace, manual install, deploy 
-summary: Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in AWS zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Konsole. 
+summary: Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in AWS zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console . 
 ---
 = Installationsoptionen für Konsolenagenten in AWS
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in AWS zu er
 
 
 [role="lead"]
-Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in AWS zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Konsole.
+Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in AWS zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console .
 
 Folgende Installationsoptionen stehen zur Verfügung:
 

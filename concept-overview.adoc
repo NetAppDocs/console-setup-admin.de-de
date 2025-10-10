@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-overview.html 
 keywords: overview, concepts, features, use case, cloud manager, bluexp, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
-summary: Die NetApp Konsole ermöglicht die zentrale Verwaltung von NetApp -Speicher- und Datendiensten in lokalen und Cloud-Umgebungen im Unternehmensmaßstab. 
+summary: Die NetApp Console ermöglicht die zentrale Verwaltung von NetApp -Speicher- und Datendiensten in lokalen und Cloud-Umgebungen im Unternehmensmaßstab. 
 ---
-= Erfahren Sie mehr über die NetApp Konsole
+= Erfahren Sie mehr über die NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -16,7 +16,7 @@ summary: Die NetApp Konsole ermöglicht die zentrale Verwaltung von NetApp -Spei
 [role="lead"]
 Die NetApp Console ermöglicht die zentrale Verwaltung von NetApp Storage und NetApp Data Services in On-Premises- und Cloud-Umgebungen auf Unternehmensniveau. Sie liefert Einblicke in Echtzeit, schnellere Workflows und vereinfachte Administration mit hoher Sicherheit und Konformität.
 
-Es ist als Serviceplattform (SaaS) verfügbar, die Speicherverwaltung, Datenmobilität, Datenschutz sowie Datenanalyse und -kontrolle bietet.  Verwaltungsfunktionen werden über eine webbasierte Konsole und APIs bereitgestellt.
+Es ist als Serviceplattform (SaaS) verfügbar und bietet Speicherverwaltung, Datenmobilität, Datenschutz sowie Datenanalyse und -kontrolle.  Verwaltungsfunktionen werden über eine webbasierte Konsole und APIs bereitgestellt.
 
 
 
@@ -82,19 +82,19 @@ Die Konsole bietet Datendienste zur Sicherung und Aufrechterhaltung der Speicher
 
 Speicherwarnungen:: Zeigen Sie Probleme im Zusammenhang mit Kapazität, Verfügbarkeit, Leistung, Schutz und Sicherheit in Ihrer ONTAP Umgebung an.
 Automatisierungszentrum:: Verwenden Sie skriptbasierte Lösungen, um die Bereitstellung und Integration von NetApp -Produkten und -Services zu automatisieren.
-NetApp Backup und Recovery:: Sichern und Wiederherstellen von Cloud- und lokalen Daten.
-NetApp Datenklassifizierung:: Machen Sie Ihre Anwendungsdaten und Cloud-Umgebungen datenschutzbereit.
+NetApp Backup and Recovery:: Sichern und Wiederherstellen von Cloud- und lokalen Daten.
+NetApp Data Classification:: Machen Sie Ihre Anwendungsdaten und Cloud-Umgebungen datenschutzbereit.
 NetApp Copy and Sync:: Synchronisieren Sie Daten zwischen lokalen und Cloud-Datenspeichern.
 NetApp Digital Advisor (Active IQ):: Nutzen Sie prädiktive Analysen und proaktiven Support, um Ihre Dateninfrastruktur zu optimieren.
-Lizenzen und Abonnements:: Verwalten und überwachen Sie Ihre Lizenzen und Abonnements.
-NetApp Disaster Recovery:: Schützen Sie lokale VMware-Workloads mit VMware Cloud auf Amazon FSx für ONTAP als Disaster Recovery-Site.
+Licenses and subscriptions:: Verwalten und überwachen Sie Ihre Lizenzen und Abonnements.
+NetApp Disaster Recovery:: Schützen Sie lokale VMware-Workloads mithilfe von VMware Cloud auf Amazon FSx für ONTAP als Disaster Recovery-Site.
 Lebenszyklusplanung:: Identifizieren Sie Cluster mit aktueller oder prognostizierter geringer Kapazität und implementieren Sie Empfehlungen zur Datenschichtung oder zusätzlichen Kapazität.
-NetApp Ransomware-Resilienz:: Erkennen Sie Anomalien, die zu Ransomware-Angriffen führen könnten.  Schützen und stellen Sie Workloads wieder her.
-NetApp Replikation:: Replizieren Sie Daten zwischen Speichersystemen, um Backup und Notfallwiederherstellung zu unterstützen.
+NetApp Ransomware Resilience:: Erkennen Sie Anomalien, die zu Ransomware-Angriffen führen könnten.  Schützen und stellen Sie Workloads wieder her.
+NetApp Replication:: Replizieren Sie Daten zwischen Speichersystemen, um Backup und Notfallwiederherstellung zu unterstützen.
 Software-Updates:: Automatisieren Sie die Bewertung, Planung und Ausführung von ONTAP -Upgrades.
 Nachhaltigkeits-Dashboard:: Analysieren Sie die Nachhaltigkeit Ihrer Speichersysteme.
 NetApp Cloud Tiering:: Erweitern Sie Ihren lokalen ONTAP -Speicher auf die Cloud.
-NetApp Volume-Caching:: Erstellen Sie ein beschreibbares Cache-Volume, um den Datenzugriff zu beschleunigen oder den Datenverkehr von stark beanspruchten Volumes zu entlasten.
+NetApp Volume Caching:: Erstellen Sie ein beschreibbares Cache-Volume, um den Datenzugriff zu beschleunigen oder den Datenverkehr von stark beanspruchten Volumes zu entlasten.
 NetApp Workloads:: Entwerfen, einrichten und betreiben Sie wichtige Workloads mit Amazon FSx for NetApp ONTAP.
 
 
@@ -110,13 +110,13 @@ Mit der Konsole können Sie Cloud-Speicher verwalten und Cloud-Dienste in Amazon
 
 == Kosten
 
-Für die NetApp Konsole fallen keine Gebühren an.  Wenn Sie Konsolenagenten in der Cloud bereitstellen oder den in der Cloud bereitgestellten eingeschränkten Modus verwenden, entstehen Ihnen Kosten.  Mit einigen NetApp -Datendiensten sind Kosten verbunden.https://bluexp.netapp.com/pricing["Informieren Sie sich über die Preise für NetApp Datenservices"^]
+Für die NetApp Console fallen keine Gebühren an.  Wenn Sie Konsolenagenten in der Cloud bereitstellen oder den in der Cloud bereitgestellten eingeschränkten Modus verwenden, entstehen Ihnen Kosten.  Mit einigen NetApp -Datendiensten sind Kosten verbunden.https://bluexp.netapp.com/pricing["Informieren Sie sich über die Preise für NetApp Datenservices"^]
 
 
 
-== So funktioniert die NetApp Konsole
+== So funktioniert die NetApp Console
 
-Die NetApp Konsole ist eine webbasierte Konsole, die über die SaaS-Schicht, ein Ressourcen- und Zugriffsverwaltungssystem, Konsolenagenten, die Speichersysteme verwalten und NetApp Datendienste aktivieren, sowie verschiedene Bereitstellungsmodi bereitgestellt wird, um Ihren Geschäftsanforderungen gerecht zu werden.
+Die NetApp Console ist eine webbasierte Konsole, die über die SaaS-Schicht, ein Ressourcen- und Zugriffsverwaltungssystem, Konsolenagenten, die Speichersysteme verwalten und NetApp Datendienste aktivieren, sowie verschiedene Bereitstellungsmodi bereitgestellt wird, um Ihren Geschäftsanforderungen gerecht zu werden.
 
 
 
@@ -131,10 +131,10 @@ Sie greifen auf die Konsole zu über eine https://console.netapp.com["webbasiert
 Die Konsole bietet Identitäts- und Zugriffsverwaltung (IAM) für die Ressourcen- und Zugriffsverwaltung.  Dieses IAM-Modell ermöglicht eine detaillierte Verwaltung von Ressourcen und Berechtigungen:
 
 * Eine Top-Level-Organisation ermöglicht Ihnen die Verwaltung des Zugriffs über Ihre verschiedenen Projekte hinweg.
-* _Ordner_ ermöglichen es Ihnen, verwandte Projekte zu gruppieren
+* _Ordner_ ermöglichen es Ihnen, verwandte Projekte zusammenzufassen
 * Mit der Ressourcenverwaltung können Sie eine Ressource einem oder mehreren Ordnern oder Projekten zuordnen
 * Mit der Zugriffsverwaltung können Sie Mitgliedern auf verschiedenen Ebenen der Organisationshierarchie eine Rolle zuweisen
-* link:concept-identity-and-access-management.html["Erfahren Sie mehr über IAM in der NetApp Konsole"]
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über IAM in der NetApp Console"]
 
 
 
@@ -149,7 +149,7 @@ link:concept-agents.html["Erfahren Sie mehr über Konsolenagenten"] .
 
 === Bereitstellungsmodi
 
-NetApp bietet zwei Bereitstellungsmodi für die NetApp Konsole: Der _Standardmodus_ verwendet eine Software-as-a-Service-Schicht (SaaS) für die volle Funktionalität, während der _eingeschränkte Modus_ die ausgehende Konnektivität begrenzt.
+NetApp bietet zwei Bereitstellungsmodi für die NetApp Console: Der _Standardmodus_ verwendet eine Software-as-a-Service-Schicht (SaaS) für die volle Funktionalität, während der _eingeschränkte Modus_ die ausgehende Konnektivität begrenzt.
 
 NetApp bietet BlueXP weiterhin für Standorte an, die keine ausgehende Konnektivität benötigen.  BlueXP ist nur im privaten Modus verfügbar.link:task-quick-start-private-mode.html["Informieren Sie sich über BlueXP (privater Modus) für Websites ohne Internetverbindung."]
 

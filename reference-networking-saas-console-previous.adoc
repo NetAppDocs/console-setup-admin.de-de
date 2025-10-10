@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-networking-saas-console-previous.html 
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
-summary: Wenn Sie sich anmelden und die webbasierte Konsole verwenden, kontaktiert diese mehrere Endpunkte, um die von Ihnen initiierten Aktionen abzuschließen.  Computer, die auf die NetApp Konsole zugreifen, müssen über Verbindungen zu diesen Endpunkten verfügen. 
+summary: Wenn Sie sich anmelden und die webbasierte Konsole verwenden, kontaktiert diese mehrere Endpunkte, um die von Ihnen initiierten Aktionen abzuschließen.  Computer, die auf die NetApp Console zugreifen, müssen über Verbindungen zu diesen Endpunkten verfügen. 
 ---
 = Erforderliche Netzwerkzugriffspunkte für 3.9.55 und darunter
 :hardbreaks:
@@ -14,9 +14,9 @@ summary: Wenn Sie sich anmelden und die webbasierte Konsole verwenden, kontaktie
 
 
 [role="lead"]
-In diesem Thema wird der Netzwerkzugriff beschrieben, der für Versionen des NetApp Console-Standardmodus vor der Version 4.0.0 der NetApp Console, des NetApp Console-Agenten und des ausgehenden Internetzugriffs der NetApp -Datendienste sowie die Möglichkeit zur Kontaktaufnahme mit den erforderlichen Endpunkten erforderlich ist.  Sie müssen sicherstellen, dass die Konsole und alle von Ihnen installierten Agenten über den richtigen Netzwerkzugriff auf die Funktionseigenschaft verfügen.
+In diesem Thema wird der Netzwerkzugriff beschrieben, der für Versionen des NetApp Console Standardmodus vor der Version 4.0.0 der NetApp Console, des NetApp Console Agenten und des ausgehenden Internetzugriffs der NetApp -Datendienste sowie die Möglichkeit zur Kontaktaufnahme mit den erforderlichen Endpunkten erforderlich ist.  Sie müssen sicherstellen, dass die Konsole und alle von Ihnen installierten Agenten über den richtigen Netzwerkzugriff auf die Funktionseigenschaft verfügen.
 
-Sie müssen den Netzwerkzugriff für Computer einrichten, die als Software as a Service (SaaS) auf die NetApp Konsole zugreifen, sowie für alle Konsolenagenten, die Sie vor Ort oder in der Cloud installieren.  Möglicherweise benötigen Sie auch zusätzliche Endpunkte für bestimmte NetApp -Datendienste, einschließlich Cloud Volumes ONTAP.
+Sie müssen den Netzwerkzugriff für Computer einrichten, die als Software as a Service (SaaS) auf die NetApp Console zugreifen, sowie für alle Konsolenagenten, die Sie vor Ort oder in der Cloud installieren.  Möglicherweise benötigen Sie auch zusätzliche Endpunkte für bestimmte NetApp -Datendienste, einschließlich Cloud Volumes ONTAP.
 
 
 
@@ -47,13 +47,13 @@ systemctl status netapp-service-manager.service
 
 
 
-== Von der NetApp Konsole kontaktierte Endpunkte
+== Von der NetApp Console kontaktierte Endpunkte
 
-Jeder Computer, der auf die NetApp Konsole zugreift, muss über Verbindungen zu den unten aufgeführten Endpunkten verfügen.
+Jeder Computer, der auf die NetApp Console zugreift, muss über Verbindungen zu den unten aufgeführten Endpunkten verfügen.
 
 Das System kontaktiert diese Endpunkte in zwei Szenarien:
 
-* Von einem Computer aus, der auf die https://console.netapp.com["NetApp Konsole"^] als Software as a Service (SaaS).
+* Von einem Computer aus, der auf die https://console.netapp.com["NetApp Console"^] als Software as a Service (SaaS).
 * Von einem Computer aus, der direkt auf einen Agentenhost zugreift, entweder um sich anzumelden und ihn einzurichten oder um vom Agentenhost aus auf die Konsole zuzugreifen.
 
 
@@ -65,7 +65,7 @@ Das System kontaktiert diese Endpunkte in zwei Szenarien:
 | \https://support.netapp.com \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden. 
 
 
-| \https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com | Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole. 
+| \https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com | Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen. 
 
 
  a| 
@@ -97,7 +97,7 @@ NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese 
 
 Sie installieren den Konsolenagenten vor Ort oder in der Cloud und er kontaktiert Endpunkte, um von der Konsole initiierte Aktionen abzuschließen.
 
-Konsolenagenten benötigen Zugriff auf dieselben Endpunkte wie die NetApp Konsole sowie auf zusätzliche Endpunkte, wenn Sie den Agenten bei Ihrem Cloud-Anbieter bereitstellen.
+Konsolenagenten benötigen Zugriff auf dieselben Endpunkte wie die NetApp Console sowie auf zusätzliche Endpunkte, wenn Sie den Agenten bei Ihrem Cloud-Anbieter bereitstellen.
 
 
 

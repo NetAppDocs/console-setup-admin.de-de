@@ -4,7 +4,7 @@ permalink: reference-iam-backup-rec-roles.html
 keywords: backing up, restoring, back up, backup, restore, cloud volumes ontap, aws, azure, s3, blob, google cloud, storagegrid, back up volumes, cloud backup, restore volumes, cost, on-premises ontap, onprem, applications, virtual machines, backup and recovery, roles, permissions, access control, role-based access control, rbac, role-based access 
 summary: Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf NetApp Backup and Recovery innerhalb der Konsole zu gewähren.  Mithilfe von Sicherungs- und Wiederherstellungsrollen können Sie Benutzern flexibel eine Rolle zuweisen, die speziell auf die Aufgaben zugeschnitten ist, die sie in Ihrem Unternehmen erledigen müssen. Wie Sie Rollen zuweisen, hängt von Ihren eigenen Geschäfts- und Speicherverwaltungspraktiken ab. 
 ---
-= NetApp Backup- und Recovery-Rollen in der NetApp Konsole
+= NetApp Backup and Recovery -Rollen in der NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,20 +18,20 @@ Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf NetApp
 
 Der Dienst verwendet die folgenden Rollen, die spezifisch für NetApp Backup and Recovery sind.
 
-* *Superadministrator für Backup und Wiederherstellung*: Führen Sie beliebige Aktionen in NetApp Backup und Wiederherstellung aus.
+* *Superadministrator für Backup und Wiederherstellung*: Führen Sie beliebige Aktionen in NetApp Backup and Recovery aus.
 * *Backup- und Recovery-Backup-Administrator*: Führen Sie Sicherungen auf lokalen Snapshots durch, replizieren Sie auf sekundären Speicher und sichern Sie Aktionen auf Objektspeicher in NetApp Backup and Recovery.
-* *Administrator für Backup- und Wiederherstellungswiederherstellung*: Stellen Sie Workloads mit NetApp Backup and Recovery wieder her.
+* *Backup- und Recovery-Wiederherstellungsadministrator*: Stellen Sie Workloads mit NetApp Backup and Recovery wieder her.
 * *Backup- und Recovery-Klonadministrator*: Klonen Sie Anwendungen und Daten mit NetApp Backup and Recovery.
 * *Backup- und Recovery-Viewer*: Informationen in NetApp Backup and Recovery anzeigen, aber keine Aktionen ausführen.
 
 
-Einzelheiten zu allen NetApp Konsolenzugriffsrollen finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["die Dokumentation zur Einrichtung und Verwaltung der Konsole"^] .
+Einzelheiten zu allen NetApp Console finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["die Dokumentation zur Einrichtung und Verwaltung der Konsole"^] .
 
 
 
 == Für allgemeine Aktionen verwendete Rollen
 
-Die folgende Tabelle zeigt die Aktionen, die jede NetApp Backup and Recovery-Rolle für alle Workloads ausführen kann.
+Die folgende Tabelle zeigt die Aktionen, die jede NetApp Backup and Recovery -Rolle für alle Workloads ausführen kann.
 
 [cols="20,20,15,15a,15a,15a"]
 |===
@@ -293,13 +293,13 @@ Nein
 
 == Für Workload-spezifische Aktionen verwendete Rollen
 
-Die folgende Tabelle zeigt die Aktionen, die jede NetApp Backup and Recovery-Rolle für bestimmte Workloads ausführen kann.
+Die folgende Tabelle zeigt die Aktionen, die jede NetApp Backup and Recovery -Rolle für bestimmte Workloads ausführen kann.
 
 
 
 === Kubernetes-Workloads
 
-Diese Tabelle zeigt die Aktionen, die jede NetApp Backup- und Recovery-Rolle für Aktionen ausführen kann, die spezifisch für Kubernetes-Workloads sind.
+Diese Tabelle zeigt die Aktionen, die jede NetApp Backup and Recovery -Rolle für Aktionen ausführen kann, die spezifisch für Kubernetes-Workloads sind.
 
 [cols="20,20,15,15a,15a"]
 |===

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-accounts-aws.html 
 keywords: cloud provider accounts, aws, aws accounts, keys, multiple accounts, permission, aws permissions, policy, policies, credentials, marketplace, subscription, replace subscription, subscription, amazon, bluexp, agent 
-summary: Erfahren Sie, wie die NetApp Konsole AWS-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere AWS-Konten in der Konsole verwalten.  Sie möchten beispielsweise erfahren, wann Sie der Konsole zusätzliche AWS-Anmeldeinformationen hinzufügen müssen. 
+summary: Erfahren Sie, wie die NetApp Console AWS-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere AWS-Konten in der Konsole verwalten.  Sie möchten beispielsweise erfahren, wann Sie der Konsole zusätzliche AWS-Anmeldeinformationen hinzufügen müssen. 
 ---
-= Erfahren Sie mehr über AWS-Anmeldeinformationen und Berechtigungen in der NetApp Konsole
+= Erfahren Sie mehr über AWS-Anmeldeinformationen und Berechtigungen in der NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,15 +14,15 @@ summary: Erfahren Sie, wie die NetApp Konsole AWS-Anmeldeinformationen verwendet
 
 
 [role="lead"]
-Erfahren Sie, wie die NetApp Konsole AWS-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere AWS-Konten in der NetApp Konsole verwalten.  Sie möchten beispielsweise erfahren, wann Sie zusätzliche AWS-Anmeldeinformationen hinzufügen müssen.
+Erfahren Sie, wie die NetApp Console AWS-Anmeldeinformationen verwendet, um Aktionen in Ihrem Namen auszuführen, und wie diese Anmeldeinformationen mit Marktplatzabonnements verknüpft werden.  Das Verständnis dieser Details kann hilfreich sein, wenn Sie die Anmeldeinformationen für ein oder mehrere AWS-Konten in der NetApp Console verwalten.  Sie möchten beispielsweise erfahren, wann Sie zusätzliche AWS-Anmeldeinformationen hinzufügen müssen.
 
 
 
 == Anfängliche AWS-Anmeldeinformationen
 
-Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, müssen Sie die ARN einer IAM-Rolle oder Zugriffsschlüssel für einen IAM-Benutzer angeben. Die Authentifizierungsmethode muss über Berechtigungen zum Bereitstellen der Konsole in AWS verfügen. Die erforderlichen Berechtigungen sind im Link:task-install-agent-aws-the Console.html#console-permissions-aws[Agent-Bereitstellungsrichtlinie für AWS] aufgeführt.
+Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, müssen Sie die ARN einer IAM-Rolle oder Zugriffsschlüssel für einen IAM-Benutzer angeben.  Die Authentifizierungsmethode muss über Berechtigungen zum Bereitstellen der Konsole in AWS verfügen.  Die erforderlichen Berechtigungen sind im Link:task-install-agent-aws-the Console.html#console-permissions-aws[Agent-Bereitstellungsrichtlinie für AWS] aufgeführt.
 
-Wenn die Konsole die Konsolenagent-Instanz in AWS startet, erstellt sie eine IAM-Rolle und ein Instanzprofil für die Instanz.  Außerdem wird eine Richtlinie angehängt, die dem Konsolenagenten die Berechtigung erteilt, Ressourcen und Prozesse innerhalb dieses AWS-Kontos zu verwalten. link:reference-permissions-aws.html["Überprüfen Sie, wie die Konsole die Berechtigungen verwendet"] .
+Wenn die Konsole die Konsolenagentinstanz in AWS startet, erstellt sie eine IAM-Rolle und ein Instanzprofil für die Instanz.  Außerdem wird eine Richtlinie angehängt, die dem Konsolenagenten die Berechtigung erteilt, Ressourcen und Prozesse innerhalb dieses AWS-Kontos zu verwalten. link:reference-permissions-aws.html["Überprüfen Sie, wie die Konsole die Berechtigungen verwendet"] .
 
 image:diagram_permissions_initial_aws.png["Ein konzeptionelles Bild, das die Konsole zeigt, die den Konsolenagenten in einem AWS-Konto bereitstellt.  Einer IAM-Rolle wird eine IAM-Richtlinie zugewiesen, die an die Konsoleninstanz angehängt ist."]
 

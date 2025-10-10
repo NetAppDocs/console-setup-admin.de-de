@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-adding-azure-accounts.html 
 keywords: permissions, microsoft, azure, permissions, custom role, role, json, active directory, ad, service principal, key, tenant id, application key, application id, operator role, managed identity, iam, operator, role, virtual machine, create custom role, create azure custom role, azure custom role 
-summary: Fügen Sie Azure-Anmeldeinformationen hinzu und verwalten Sie diese, damit die NetApp Konsole über die erforderlichen Berechtigungen zum Bereitstellen und Verwalten von Cloud-Ressourcen in Ihren Azure-Abonnements verfügt.  Wenn Sie mehrere Azure Marketplace-Abonnements verwalten, können Sie jedem Abonnement auf der Seite „Anmeldeinformationen“ unterschiedliche Azure-Anmeldeinformationen zuweisen. 
+summary: Fügen Sie Azure-Anmeldeinformationen hinzu und verwalten Sie diese, damit die NetApp Console über die erforderlichen Berechtigungen zum Bereitstellen und Verwalten von Cloud-Ressourcen in Ihren Azure-Abonnements verfügt.  Wenn Sie mehrere Azure Marketplace-Abonnements verwalten, können Sie jedem Abonnement auf der Seite „Anmeldeinformationen“ unterschiedliche Azure-Anmeldeinformationen zuweisen. 
 ---
-= Verwalten Sie Azure-Anmeldeinformationen und Marketplace-Abonnements für die NetApp Konsole
+= Verwalten Sie Azure-Anmeldeinformationen und Marketplace-Abonnements für die NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Fügen Sie Azure-Anmeldeinformationen hinzu und verwalten Sie diese, da
 
 
 [role="lead"]
-Fügen Sie Azure-Anmeldeinformationen hinzu und verwalten Sie diese, damit die NetApp Konsole über die erforderlichen Berechtigungen zum Bereitstellen und Verwalten von Cloud-Ressourcen in Ihren Azure-Abonnements verfügt.  Wenn Sie mehrere Azure Marketplace-Abonnements verwalten, können Sie jedem Abonnement auf der Seite „Anmeldeinformationen“ unterschiedliche Azure-Anmeldeinformationen zuweisen.
+Fügen Sie Azure-Anmeldeinformationen hinzu und verwalten Sie diese, damit die NetApp Console über die erforderlichen Berechtigungen zum Bereitstellen und Verwalten von Cloud-Ressourcen in Ihren Azure-Abonnements verfügt.  Wenn Sie mehrere Azure Marketplace-Abonnements verwalten, können Sie jedem Abonnement auf der Seite „Anmeldeinformationen“ unterschiedliche Azure-Anmeldeinformationen zuweisen.
 
 
 
@@ -65,7 +65,7 @@ image:screenshot_accounts_switch_azure_subscription.gif["Ein Screenshot, der die
 
 
 
-== Fügen Sie der NetApp Konsole zusätzliche Azure-Anmeldeinformationen hinzu
+== Fügen Sie der NetApp Console zusätzliche Azure-Anmeldeinformationen hinzu
 
 Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, aktiviert die Konsole eine vom System zugewiesene verwaltete Identität auf der virtuellen Maschine, die über die erforderlichen Berechtigungen verfügt.  Die Konsole wählt diese Azure-Anmeldeinformationen standardmäßig aus, wenn Sie ein neues System für Cloud Volumes ONTAP erstellen.
 
@@ -113,7 +113,7 @@ image:screenshot_azure_ad.png["Zeigt den Active Directory-Dienst in Microsoft Az
 . Geben Sie Details zur Anwendung an:
 +
 ** *Name*: Geben Sie einen Namen für die Anwendung ein.
-** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der NetApp Konsole).
+** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der NetApp Console).
 ** *Umleitungs-URI*: Sie können dieses Feld leer lassen.
 
 
@@ -203,7 +203,7 @@ image:screenshot_azure_service_principal_role.png["Ein Screenshot des Azure-Port
 Der Dienstprinzipal verfügt jetzt über die erforderlichen Azure-Berechtigungen zum Bereitstellen des Konsolen-Agenten.
 
 +
-Wenn Sie Cloud Volumes ONTAP aus mehreren Azure-Abonnements bereitstellen möchten, müssen Sie den Dienstprinzipal an jedes dieser Abonnements binden.  In der NetApp Konsole können Sie das Abonnement auswählen, das Sie beim Bereitstellen von Cloud Volumes ONTAP verwenden möchten.
+Wenn Sie Cloud Volumes ONTAP aus mehreren Azure-Abonnements bereitstellen möchten, müssen Sie den Dienstprinzipal an jedes dieser Abonnements binden.  In der NetApp Console können Sie das Abonnement auswählen, das Sie beim Bereitstellen von Cloud Volumes ONTAP verwenden möchten.
 
 
 
@@ -327,7 +327,7 @@ Durch das Ersetzen des aktuellen Marktplatzabonnements wird es für vorhandene u
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie das Aktionsmenü für einen Satz von Anmeldeinformationen aus, die einem Konsolenagenten zugeordnet sind, und wählen Sie dann *Abonnement konfigurieren*.
 +
-Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Konsole verknüpft sind.
+Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Console verknüpft sind.
 
 . Um die Anmeldeinformationen mit einem vorhandenen Abonnement zu verknüpfen, wählen Sie das Abonnement aus der Dropdown-Liste aus und wählen Sie *Konfigurieren*.
 . Um die Anmeldeinformationen einem neuen Abonnement zuzuordnen, wählen Sie *Abonnement hinzufügen > Fortfahren* und befolgen Sie die Schritte im Azure Marketplace:
@@ -337,7 +337,7 @@ Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordne
 .. Füllen Sie das Formular aus und wählen Sie *Abonnieren*.
 .. Nachdem der Abonnementvorgang abgeschlossen ist, wählen Sie *Konto jetzt konfigurieren*.
 +
-Sie werden zur NetApp Konsole weitergeleitet.
+Sie werden zur NetApp Console weitergeleitet.
 
 .. Auf der Seite *Abonnementzuweisung*:
 +

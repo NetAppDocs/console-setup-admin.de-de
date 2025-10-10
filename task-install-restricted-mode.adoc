@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-install-restricted-mode.html 
 keywords: government region, gov, govcloud, connector, sovereign cloud 
-summary: Stellen Sie den Konsolenagenten im eingeschränkten Modus bereit, damit Sie die NetApp Konsole mit eingeschränkter ausgehender Konnektivität verwenden können.  Installieren Sie zunächst den Konsolen-Agenten, richten Sie die Konsole ein, indem Sie auf die Benutzeroberfläche zugreifen, die auf dem Konsolen-Agenten ausgeführt wird, und geben Sie dann die Cloud-Berechtigungen an, die Sie zuvor eingerichtet haben. 
+summary: Stellen Sie den Konsolenagenten im eingeschränkten Modus bereit, damit Sie die NetApp Console mit eingeschränkter ausgehender Konnektivität verwenden können.  Installieren Sie zunächst den Konsolen-Agenten, richten Sie die Konsole ein, indem Sie auf die Benutzeroberfläche zugreifen, die auf dem Konsolen-Agenten ausgeführt wird, und geben Sie dann die Cloud-Berechtigungen an, die Sie zuvor eingerichtet haben. 
 ---
 = Bereitstellen des Konsolenagenten im eingeschränkten Modus
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Stellen Sie den Konsolenagenten im eingeschränkten Modus bereit, damit
 
 
 [role="lead"]
-Stellen Sie den Konsolenagenten im eingeschränkten Modus bereit, damit Sie die NetApp Konsole mit eingeschränkter ausgehender Konnektivität verwenden können.  Installieren Sie zunächst den Konsolen-Agenten, richten Sie die Konsole ein, indem Sie auf die Benutzeroberfläche zugreifen, die auf dem Konsolen-Agenten ausgeführt wird, und geben Sie dann die Cloud-Berechtigungen an, die Sie zuvor eingerichtet haben.
+Stellen Sie den Konsolenagenten im eingeschränkten Modus bereit, damit Sie die NetApp Console mit eingeschränkter ausgehender Konnektivität verwenden können.  Installieren Sie zunächst den Konsolen-Agenten, richten Sie die Konsole ein, indem Sie auf die Benutzeroberfläche zugreifen, die auf dem Konsolen-Agenten ausgeführt wird, und geben Sie dann die Cloud-Berechtigungen an, die Sie zuvor eingerichtet haben.
 
 
 
@@ -46,7 +46,7 @@ link:task-prepare-restricted-mode.html#step-3-review-host-requirements["Überpr�
 
 
 .Schritte
-. Gehen Sie zum https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Auflistung des NetApp Console-Agenten im AWS Marketplace"^]
+. Gehen Sie zum https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Auflistung des NetApp Console -Agenten im AWS Marketplace"^]
 . Wählen Sie auf der Marketplace-Seite *Weiter zum Abonnieren* aus.
 . Um die Software zu abonnieren, wählen Sie *Bedingungen akzeptieren*.
 +
@@ -88,7 +88,7 @@ Wenn Sie die Amazon EBS-Verschlüsselung auf dem Stammvolume aktivieren möchten
 AWS startet die Software mit den angegebenen Einstellungen.  Die Konsolen-Agentinstanz und -Software werden in etwa fünf Minuten ausgeführt.
 
 .Wie geht es weiter?
-Richten Sie die NetApp Konsole ein.
+Richten Sie die NetApp Console ein.
 
 --
 .AWS Gov Marketplace
@@ -109,13 +109,13 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Erfahre
 
 
 .Schritte
-. Gehen Sie zum NetApp Console-Agent-Angebot im AWS Marketplace.
+. Gehen Sie zum NetApp Console -Agent-Angebot im AWS Marketplace.
 +
 .. Öffnen Sie den EC2-Dienst und wählen Sie *Instanz starten*.
 .. Wählen Sie *AWS Marketplace* aus.
-.. Suchen Sie nach der NetApp -Konsole und wählen Sie das Angebot aus.
+.. Suchen Sie nach der NetApp Console und wählen Sie das Angebot aus.
 +
-image:screenshot-gov-cloud-mktp.png["Ein Screenshot, der das NetApp Konsolenangebot zeigt, nachdem im AWS Marketplace danach gesucht wurde"]
+image:screenshot-gov-cloud-mktp.png["Ein Screenshot, der das NetApp Console zeigt, nachdem im AWS Marketplace danach gesucht wurde"]
 
 .. Wählen Sie *Weiter*.
 
@@ -161,7 +161,7 @@ link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Erfahre
 
 
 .Schritte
-. Gehen Sie zur VM-Seite des NetApp Console-Agents im Azure Marketplace.
+. Gehen Sie zur VM-Seite des NetApp Console Agents im Azure Marketplace.
 +
 ** https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-oncommand-cloud-manager["Azure Marketplace-Seite für kommerzielle Regionen"^]
 ** https://portal.azure.us/#create/netapp.netapp-oncommand-cloud-manageroccm-byol["Azure Marketplace-Seite für Azure Government-Regionen"^]
@@ -191,7 +191,7 @@ link:reference-ports-azure.html["Anzeigen von Sicherheitsgruppenregeln für Azur
 
 ** *Identität*: Wählen Sie unter *Verwaltung* die Option *Vom System zugewiesene verwaltete Identität aktivieren*.
 +
-Diese Einstellung ist wichtig, da eine verwaltete Identität es der virtuellen Maschine des Konsolen-Agenten ermöglicht, sich gegenüber der Microsoft Entra ID zu identifizieren, ohne Anmeldeinformationen angeben zu müssen. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Erfahren Sie mehr über verwaltete Identitäten für Azure-Ressourcen"^] .
+Diese Einstellung ist wichtig, da eine verwaltete Identität es der virtuellen Maschine des Konsolenagenten ermöglicht, sich gegenüber der Microsoft Entra ID zu identifizieren, ohne Anmeldeinformationen angeben zu müssen. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Erfahren Sie mehr über verwaltete Identitäten für Azure-Ressourcen"^] .
 
 
 
@@ -202,7 +202,7 @@ Diese Einstellung ist wichtig, da eine verwaltete Identität es der virtuellen M
 Azure stellt die virtuelle Maschine mit den angegebenen Einstellungen bereit.  Die virtuelle Maschine und die Konsolenagent-Software sollten in etwa fünf Minuten ausgeführt werden.
 
 .Wie geht es weiter?
-Richten Sie die NetApp Konsole ein.
+Richten Sie die NetApp Console ein.
 
 --
 .Manuelle Installation
@@ -219,9 +219,9 @@ Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfiguri
 
 
 
-NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
+NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen.  Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
 
-* Sie müssen die Konfigurationsprüfung deaktivieren, die während der Installation die ausgehende Konnektivität überprüft. Die manuelle Installation schlägt fehl, wenn diese Prüfung nicht deaktiviert ist.link:task-troubleshoot-agent.html["Erfahren Sie, wie Sie Konfigurationsprüfungen für manuelle Installationen deaktivieren."]
+* Sie müssen die Konfigurationsprüfung deaktivieren, die während der Installation die ausgehende Konnektivität überprüft.  Die manuelle Installation schlägt fehl, wenn diese Prüfung nicht deaktiviert ist.link:task-troubleshoot-agent.html["Erfahren Sie, wie Sie Konfigurationsprüfungen für manuelle Installationen deaktivieren."]
 * Abhängig von Ihrem Betriebssystem ist entweder Podman oder Docker Engine erforderlich, bevor Sie den Konsolenagenten installieren.
 
 
@@ -337,13 +337,13 @@ Esc:wq
 Der Konsolenagent ist jetzt installiert.  Am Ende der Installation wird der Konsolenagentdienst (occm) zweimal neu gestartet, wenn Sie einen Proxyserver angegeben haben.
 
 .Wie geht es weiter?
-Richten Sie die NetApp Konsole ein.
+Richten Sie die NetApp Console ein.
 
 --
 ====
 
 
-== Schritt 2: NetApp -Konsole einrichten
+== Schritt 2: NetApp Console einrichten
 
 Wenn Sie zum ersten Mal auf die Konsole zugreifen, werden Sie aufgefordert, eine Organisation für den Konsolenagenten auszuwählen und den eingeschränkten Modus zu aktivieren.
 
@@ -354,7 +354,7 @@ Wenn Ihr Login mit einer anderen Organisation verknüpft ist, müssen Sie sich m
 
 .Schritte
 . Öffnen Sie einen Webbrowser auf einem Host, der über eine Verbindung zur Konsolen-Agenteninstanz verfügt, und geben Sie die folgende URL des von Ihnen installierten Konsolen-Agenten ein.
-. Registrieren Sie sich oder melden Sie sich bei der NetApp Konsole an.
+. Registrieren Sie sich oder melden Sie sich bei der NetApp Console an.
 . Nachdem Sie sich angemeldet haben, richten Sie die Konsole ein:
 +
 .. Geben Sie einen Namen für den Konsolenagenten ein.
@@ -373,14 +373,14 @@ Wenn Sie den Konsolenagenten in einer Regierungsregion bereitgestellt haben, ist
 
 
 .Ergebnis
-Der Konsolenagent ist jetzt installiert und mit Ihrer Konsolenorganisation eingerichtet.  Alle Benutzer müssen über die IP-Adresse der Konsolen-Agenteninstanz auf die Konsole zugreifen.
+Der Konsolenagent ist jetzt installiert und mit Ihrer Konsolenorganisation eingerichtet.  Alle Benutzer müssen über die IP-Adresse der Konsolen-Agentinstanz auf die Konsole zugreifen.
 
 .Wie geht es weiter?
 Geben Sie der Konsole die Berechtigungen, die Sie zuvor eingerichtet haben.
 
 
 
-== Schritt 3: Berechtigungen für die NetApp Konsole erteilen
+== Schritt 3: Berechtigungen für die NetApp Console erteilen
 
 Wenn Sie den Konsolen-Agenten aus dem Azure Marketplace bereitgestellt oder die Konsolen-Agenten-Software manuell installiert haben, müssen Sie die zuvor eingerichteten Berechtigungen angeben.
 
@@ -407,7 +407,7 @@ Diese Schritte gelten nur, wenn Sie den Konsolenagenten manuell in AWS installie
 --
 .AWS-Zugriffsschlüssel
 --
-Stellen Sie der NetApp Konsole den AWS-Zugriffsschlüssel für einen IAM-Benutzer bereit, der über die erforderlichen Berechtigungen verfügt.
+Stellen Sie der NetApp Console den AWS-Zugriffsschlüssel für einen IAM-Benutzer bereit, der über die erforderlichen Berechtigungen verfügt.
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.
@@ -430,7 +430,7 @@ Gehen Sie zum Azure-Portal und weisen Sie der virtuellen Maschine des Konsolen-A
 .Schritte
 . Öffnen Sie im Azure-Portal den Dienst *Abonnements* und wählen Sie Ihr Abonnement aus.
 +
-Es ist wichtig, die Rolle vom Dienst *Abonnements* zuzuweisen, da dies den Umfang der Rollenzuweisung auf Abonnementebene angibt.  Der _Bereich_ definiert die Menge der Ressourcen, auf die der Zugriff angewendet wird.  Wenn Sie einen Bereich auf einer anderen Ebene angeben (z. B. auf der Ebene der virtuellen Maschine), wird Ihre Fähigkeit, Aktionen innerhalb der NetApp Konsole auszuführen, beeinträchtigt.
+Es ist wichtig, die Rolle vom Dienst *Abonnements* zuzuweisen, da dies den Umfang der Rollenzuweisung auf Abonnementebene angibt.  Der _Bereich_ definiert die Menge der Ressourcen, auf die der Zugriff angewendet wird.  Wenn Sie einen Bereich auf einer anderen Ebene angeben (z. B. auf der Ebene der virtuellen Maschine), wird Ihre Fähigkeit, Aktionen innerhalb der NetApp Console auszuführen, beeinträchtigt.
 
 +
 https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure-Dokumentation: Umfang von Azure RBAC verstehen"^]
@@ -456,7 +456,7 @@ NOTE: „Konsolenoperator“ ist der in der Richtlinie angegebene Standardname. 
 --
 .Azure-Dienstprinzipal
 --
-Geben Sie in der NetApp Konsole die Anmeldeinformationen für den Azure-Dienstprinzipal ein, den Sie zuvor eingerichtet haben.
+Geben Sie in der NetApp Console die Anmeldeinformationen für den Azure-Dienstprinzipal ein, den Sie zuvor eingerichtet haben.
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.
@@ -477,7 +477,7 @@ Geben Sie in der NetApp Konsole die Anmeldeinformationen für den Azure-Dienstpr
 
 
 .Ergebnis
-Die NetApp Konsole verfügt jetzt über die erforderlichen Berechtigungen, um in Ihrem Namen Aktionen in Azure auszuführen.
+Die NetApp Console verfügt jetzt über die erforderlichen Berechtigungen, um in Ihrem Namen Aktionen in Azure auszuführen.
 
 --
 .Google Cloud-Dienstkonto
@@ -485,7 +485,7 @@ Die NetApp Konsole verfügt jetzt über die erforderlichen Berechtigungen, um in
 Verknüpfen Sie das Dienstkonto mit der Konsolen-Agent-VM.
 
 .Schritte
-. Gehen Sie zum Google Cloud-Portal und weisen Sie das Dienstkonto der VM-Instanz des Konsolenagenten zu.
+. Gehen Sie zum Google Cloud-Portal und weisen Sie das Dienstkonto der VM-Instanz des Console-Agenten zu.
 +
 https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud-Dokumentation: Ändern des Dienstkontos und der Zugriffsbereiche für eine Instanz"^]
 

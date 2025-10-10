@@ -4,7 +4,7 @@ permalink: task-monitor-cm-operations.html
 keywords: administer, monitor, timeline, notifications, alerts, events, notification center, email, audit page, audit action 
 summary: Sie können den Status der von der Konsole ausgeführten Vorgänge überwachen, um festzustellen, ob Probleme vorliegen, die Sie beheben müssen.  Sie können den Status auf der Audit-Seite oder im Benachrichtigungscenter anzeigen oder sich Benachrichtigungen per E-Mail senden lassen. 
 ---
-= Überwachen Sie NetApp -Konsolenvorgänge
+= Überwachen Sie NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -82,7 +82,7 @@ Sie können die Konsole auch so konfigurieren, dass bestimmte Arten von Benachri
 
 Über das Benachrichtigungscenter können Sie den Status der von Ihnen eingeleiteten Vorgänge anzeigen und Warnbenachrichtigungen für bestimmte Arten von Systemaktivitäten einrichten.  Mithilfe von Warnmeldungen können Sie Probleme oder potenzielle Risiken in Ihrer ONTAP Speicherumgebung im Zusammenhang mit Kapazität, Verfügbarkeit, Leistung, Schutz und Sicherheit erkennen.
 
-https://docs.netapp.com/us-en/console-alerts/index.html["Erfahren Sie mehr über NetApp Console-Warnmeldungen"^]
+https://docs.netapp.com/us-en/console-alerts/index.html["Erfahren Sie mehr über NetApp Console -Warnmeldungen"^]
 
 
 
@@ -140,12 +140,12 @@ Sie können bestimmte Arten von Benachrichtigungen per E-Mail senden, sodass Sie
 
 [NOTE]
 ====
-* Die Konsole sendet E-Mail-Benachrichtigungen für den Agenten, Lizenzen und Abonnements, NetApp Copy and Sync sowie NetApp Backup and Recovery.
+* Die Konsole sendet E-Mail-Benachrichtigungen für den Agenten, Lizenzen und Abonnements, NetApp Copy and Sync und NetApp Backup and Recovery.
 * Das Senden von E-Mail-Benachrichtigungen wird nicht unterstützt, wenn der Konsolenagent auf einer Site ohne Internetzugang installiert ist.
 
 
 ====
-Die Filter, die Sie im Benachrichtigungscenter festlegen, bestimmen nicht die Art der Benachrichtigungen, die Sie per E-Mail erhalten.  Standardmäßig erhält jeder Organisationsadministrator E-Mails für alle „Kritischen“ und „Empfehlungs“-Benachrichtigungen.  Diese Benachrichtigungen gelten für alle Dienste. Sie können nicht auswählen, nur für bestimmte Dienste, beispielsweise Agenten oder NetApp Backup and Recovery, Benachrichtigungen zu erhalten.
+Die Filter, die Sie im Benachrichtigungscenter festlegen, bestimmen nicht die Art der Benachrichtigungen, die Sie per E-Mail erhalten.  Standardmäßig erhält jeder Organisationsadministrator E-Mails für alle „Kritischen“ und „Empfehlungs“-Benachrichtigungen.  Diese Benachrichtigungen gelten für alle Dienste. Sie können nicht auswählen, nur für bestimmte Dienste Benachrichtigungen zu erhalten, beispielsweise für Agenten oder NetApp Backup and Recovery.
 
 Alle anderen Benutzer und Empfänger sind so konfiguriert, dass sie keine Benachrichtigungs-E-Mails erhalten. Daher müssen Sie für alle weiteren Benutzer die Benachrichtigungseinstellungen konfigurieren.
 
@@ -169,7 +169,7 @@ Auf der Seite *Zusätzliche Empfänger* können Sie die Konsole so konfigurieren
 
 === Zusätzliche E-Mail-Empfänger hinzufügen
 
-Die Benutzer, die auf der Seite „Organisationsbenutzer“ angezeigt werden, werden automatisch aus den Benutzern Ihrer Organisation oder Ihres Kontos gefüllt.  Sie können auf der Seite „Zusätzliche Empfänger“ E-Mail-Adressen für andere Personen oder Gruppen hinzufügen, die keinen Zugriff auf die Konsole haben, aber über bestimmte Arten von Warnungen und Benachrichtigungen benachrichtigt werden müssen.
+Die Benutzer, die auf der Seite „Benutzer der Organisation“ angezeigt werden, werden automatisch aus den Benutzern Ihrer Organisation oder Ihres Kontos gefüllt.  Sie können auf der Seite „Zusätzliche Empfänger“ E-Mail-Adressen für andere Personen oder Gruppen hinzufügen, die keinen Zugriff auf die Konsole haben, aber über bestimmte Arten von Warnungen und Benachrichtigungen benachrichtigt werden müssen.
 
 .Schritte
 . Wählen Sie auf der Seite *Benachrichtigungseinstellungen* die Option *Neue Empfänger hinzufügen* aus.

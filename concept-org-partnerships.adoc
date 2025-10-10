@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: concept-org-partnerships.html 
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
-summary: Durch die Einrichtung von Partnerschaften zwischen Organisationen in der NetApp -Konsole können Organisationspartner NetApp -Ressourcen über Organisationsgrenzen hinweg sicher verwalten, die Zusammenarbeit optimieren und die Sicherheit verbessern. 
+summary: Durch die Einrichtung von Partnerschaften zwischen Organisationen in der NetApp Console können Organisationspartner NetApp -Ressourcen über Organisationsgrenzen hinweg sicher verwalten, die Zusammenarbeit optimieren und die Sicherheit verbessern. 
 ---
-= Partnerschaften in der NetApp -Konsole
+= Partnerschaften in der NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Durch die Einrichtung von Partnerschaften zwischen Organisationen in de
 
 
 [role="lead"]
-Durch die Schaffung von Partnerschaften zwischen Organisationen ermöglicht die NetApp Konsole Partnern die sichere Verwaltung von NetApp Ressourcen über Organisationsgrenzen hinweg, wodurch die Zusammenarbeit optimiert und die Sicherheit verbessert wird.
+Durch die Schaffung von Partnerschaften zwischen Organisationen ermöglicht die NetApp Console Partnern die sichere Verwaltung von NetApp Ressourcen über Organisationsgrenzen hinweg, wodurch die Zusammenarbeit optimiert und die Sicherheit verbessert wird.
 
 .Erforderliche Rollen
 Partnerschaftsadministratorlink:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
@@ -30,7 +30,7 @@ Weisen Sie einem oder mehreren Benutzern in der initiierenden und der empfangend
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Teilen Sie Ihre Organisations-ID mit der initiierenden Organisation
 [role="quick-margin-para"]
-Um eine Partnerschaft zu initiieren, muss der Initiator die Organisations-ID der Zielorganisation kennen.  Auf diese Organisations-ID kann nur die jeweilige Organisation zugreifen.  Geben Sie es direkt per E-Mail oder auf andere Weise außerhalb der NetApp Konsole an die initiierende Organisation weiter.
+Um eine Partnerschaft zu initiieren, muss der Initiator die Organisations-ID der Zielorganisation kennen.  Auf diese Organisations-ID kann nur die jeweilige Organisation zugreifen.  Geben Sie es direkt per E-Mail oder auf andere Weise außerhalb der NetApp Console an die initiierende Organisation weiter.
 
 Die initiierende Organisation ist die Organisation, die Zugriff auf ihre Ressourcen gewährt.
 
@@ -38,7 +38,7 @@ image:diagram-partnership-org-id.png["Diagramm, das die ursprünglichen Organisa
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Initiieren Sie die Partnerschaft innerhalb der NetApp Console
 [role="quick-margin-para"]
-Die Organisation, die die Partnerschaft initiiert, tut dies innerhalb der NetApp Konsole, indem sie eine Partnerschaftsanfrage sendet.
+Die Organisation, die die Partnerschaft initiiert, tut dies innerhalb der NetApp Console, indem sie eine Partnerschaftsanfrage sendet.
 
 image:diagram-partnership-accept.png["Diagramm, das die Akzeptanz der Partnerschaft zeigt"]
 

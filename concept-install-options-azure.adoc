@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-install-options-azure.html 
 keywords: install connector azure, azure install connector, connector azure, azure connector, installation options, azure marketplace, manual install 
-summary: Es gibt verschiedene Möglichkeiten, einen Konsolen-Agent in Azure zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Konsole. 
+summary: Es gibt verschiedene Möglichkeiten, einen Konsolen-Agent in Azure zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console . 
 ---
 = Installationsoptionen für den Konsolen-Agenten in Azure
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: Es gibt verschiedene Möglichkeiten, einen Konsolen-Agent in Azure zu e
 
 
 [role="lead"]
-Es gibt verschiedene Möglichkeiten, einen Konsolen-Agent in Azure zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Konsole.
+Es gibt verschiedene Möglichkeiten, einen Konsolen-Agent in Azure zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console .
 
 Folgende Installationsoptionen stehen zur Verfügung:
 
-* link:task-install-agent-azure-console.html["Erstellen Sie einen Konsolenagenten direkt aus der NetApp Konsole"](Dies ist die Standardoption)
+* link:task-install-agent-azure-console.html["Erstellen Sie einen Konsolenagenten direkt aus der NetApp Console"](Dies ist die Standardoption)
 +
 Diese Aktion startet eine VM mit Linux und der Konsolen-Agent-Software in einem VNet Ihrer Wahl.
 

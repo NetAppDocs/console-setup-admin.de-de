@@ -4,7 +4,7 @@ permalink: reference-iam-disaster-rec-roles.html
 keywords: disaster recovery, role-based access control, failover admin, replication plans, job- monitoring, business continuity, compliance- management, operational governance, access delegation, rbac, IAM roles 
 summary: Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf NetApp Disaster Recovery innerhalb der Konsole zu gewähren.  Mithilfe von Disaster Recovery-Rollen können Sie Benutzern flexibel Rollen zuweisen, die speziell auf die Aufgaben zugeschnitten sind, die sie in Ihrer Organisation erledigen müssen. Wie Sie Rollen zuweisen, hängt von Ihren eigenen Geschäfts- und Speicherverwaltungspraktiken ab. 
 ---
-= NetApp Disaster Recovery-Rollen in der NetApp -Konsole
+= NetApp Disaster Recovery Rollen in der NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

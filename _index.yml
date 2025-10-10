@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: Dokumentation zur Einrichtung und Verwaltung der NetApp Konsole
+  title: Dokumentation zur Einrichtung und Verwaltung der NetApp Console
   summary: Beginnen Sie mit der NetApp Console, damit Sie mit dem Erstellen, Schützen
     und Verwalten von Daten in Ihren lokalen und Cloud-Umgebungen beginnen können.  Nach
     Abschluss der Einrichtung können Sie den Zugriff auf Ihre Ressourcen mithilfe
@@ -16,7 +16,7 @@ indexpage:
   tiles:
   - title: Erste Schritte
     links:
-    - title: Erfahren Sie mehr über die NetApp Konsole
+    - title: Erfahren Sie mehr über die NetApp Console
       url: concept-overview.html
     - title: Informationen zu Bereitstellungsmodi
       url: concept-modes.html
@@ -88,9 +88,9 @@ indexpage:
       url: task-install-agent-on-prem-ova.html
   - title: Blogs und Community
     links:
-    - title: NetApp Konsole
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: NetApp Datenservices
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: NetApp Community
       url: https://community.netapp.com/

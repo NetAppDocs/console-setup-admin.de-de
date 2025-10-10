@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-install-agent-aws-console.html 
 keywords: install connector, aws connector installation, aws connector, install connector in aws, bluexp, create connector 
-summary: Sie können einen Konsolenagenten in AWS direkt von der NetApp Konsole aus erstellen.  Bevor Sie über die Konsole einen Konsolenagenten in AWS erstellen, müssen Sie Ihr Netzwerk einrichten und AWS-Berechtigungen vorbereiten. 
+summary: Sie können einen Konsolenagenten in AWS direkt von der NetApp Console aus erstellen.  Bevor Sie über die Konsole einen Konsolenagenten in AWS erstellen, müssen Sie Ihr Netzwerk einrichten und AWS-Berechtigungen vorbereiten. 
 ---
-= Erstellen Sie einen Konsolenagenten in AWS über die NetApp -Konsole
+= Erstellen Sie einen Konsolenagenten in AWS über die NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Sie können einen Konsolenagenten in AWS direkt von der NetApp Konsole 
 
 
 [role="lead"]
-Sie können einen Konsolenagenten in AWS direkt von der NetApp Konsole aus erstellen.  Bevor Sie über die Konsole einen Konsolenagenten in AWS erstellen, müssen Sie Ihr Netzwerk einrichten und AWS-Berechtigungen vorbereiten.
+Sie können einen Konsolenagenten in AWS direkt von der NetApp Console aus erstellen.  Bevor Sie über die Konsole einen Konsolenagenten in AWS erstellen, müssen Sie Ihr Netzwerk einrichten und AWS-Berechtigungen vorbereiten.
 
 .Bevor Sie beginnen
 * Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
@@ -78,21 +78,21 @@ Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Su
  a| 
 \https://signin.b2c.netapp.com
  a| 
-So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Konsole neue NSS-Anmeldeinformationen hinzu.
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
 
 
 
  a| 
 \https://support.netapp.com
  a| 
-Zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport -Nachrichten an den NetApp Support sowie zum Empfangen von Software-Updates für Cloud Volumes ONTAP.
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden sowie um Software-Updates für Cloud Volumes ONTAP zu erhalten.
 
 
 
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole.
+Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
 
 
 
@@ -112,7 +112,7 @@ Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp 
 --
 
 
-Von der NetApp Konsole kontaktierte Endpunkte:: Wenn Sie die webbasierte NetApp Konsole verwenden, die über die SaaS-Schicht bereitgestellt wird, kontaktiert diese mehrere Endpunkte, um Datenverwaltungsaufgaben abzuschließen.  Dazu gehören Endpunkte, die kontaktiert werden, um den Konsolenagenten von der Konsole aus bereitzustellen.
+Von der NetApp Konsole kontaktierte Endpunkte:: Wenn Sie die webbasierte NetApp Console verwenden, die über die SaaS-Schicht bereitgestellt wird, kontaktiert diese mehrere Endpunkte, um Datenverwaltungsaufgaben abzuschließen.  Dazu gehören Endpunkte, die kontaktiert werden, um den Konsolenagenten von der Konsole aus bereitzustellen.
 +
 --
 link:reference-networking-saas-console.html["Zeigen Sie die Liste der von der NetApp Konsole kontaktierten Endpunkte an"] .
@@ -145,7 +145,7 @@ Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden
 --
 
 
-Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification-System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
 +
 --
 Sie müssen diese Netzwerkanforderung implementieren, nachdem Sie den Konsolenagenten erstellt haben.
@@ -289,7 +289,7 @@ Sie sollten jetzt über eine IAM-Rolle mit den erforderlichen Berechtigungen ode
 Erstellen Sie den Konsolenagenten direkt von der webbasierten Konsole aus.
 
 .Informationen zu diesem Vorgang
-* Durch Erstellen des Konsolenagenten aus der Konsole wird eine EC2-Instanz in AWS mithilfe einer Standardkonfiguration bereitgestellt. Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren EC2-Instance mit weniger CPUs oder weniger RAM. link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
+* Durch Erstellen des Konsolenagenten aus der Konsole wird eine EC2-Instanz in AWS mithilfe einer Standardkonfiguration bereitgestellt.  Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren EC2-Instance mit weniger CPUs oder weniger RAM. link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
 * Wenn die Konsole den Konsolenagenten erstellt, erstellt sie eine IAM-Rolle und ein Instanzprofil für die Instanz.  Diese Rolle umfasst Berechtigungen, die es dem Konsolenagenten ermöglichen, AWS-Ressourcen zu verwalten.  Stellen Sie sicher, dass die Rolle aktualisiert wird, wenn in zukünftigen Versionen neue Berechtigungen hinzugefügt werden. link:reference-permissions-aws.html["Erfahren Sie mehr über die IAM-Richtlinie für den Konsolenagenten"] .
 
 
@@ -353,4 +353,4 @@ Nachdem der Vorgang abgeschlossen ist, steht der Konsolenagent für die Verwendu
 
 NOTE: Wenn die Bereitstellung fehlschlägt, können Sie einen Bericht und Protokolle von der Konsole herunterladen, die Ihnen bei der Behebung der Probleme helfen.link:task-troubleshoot-agent.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]
 
-Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenagenten erstellt haben, wird auf der Seite *Systeme* automatisch eine Amazon S3-Arbeitsumgebung angezeigt. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp Konsole verwalten"^]
+Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenagenten erstellt haben, wird auf der Seite *Systeme* automatisch eine Amazon S3-Arbeitsumgebung angezeigt. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp Console verwalten"^]

@@ -22,7 +22,7 @@ Wenn Sie die Organisation oder einen Ordner auswählen, verfügt das Mitglied ü
 . Sie können eine vorhandene Rolle für ein Mitglied ändern oder eine Rolle entfernen.
 +
 .. Um die Rolle eines Mitglieds zu ändern, wählen Sie *Ändern* neben der Rolle, die Sie ändern möchten.  Sie können eine Rolle nur in eine Rolle innerhalb derselben Rollenkategorie ändern.  Sie können beispielsweise von einer Datendienstrolle zu einer anderen wechseln.  Bestätigen Sie die Änderung.
-.. Um die Zuweisung einer Rolle eines Mitglieds aufzuheben, wählen Sieimage:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um dem Mitglied die jeweilige Rolle aufzuheben.  Sie werden aufgefordert, die Entfernung zu bestätigen.
+.. Um die Rolle eines Mitglieds aufzuheben, wählen Sieimage:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um dem Mitglied die jeweilige Rolle zu entziehen.  Sie werden aufgefordert, die Entfernung zu bestätigen.
 
 
 

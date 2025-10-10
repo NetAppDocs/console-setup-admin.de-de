@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-permissions.html 
 keywords: permissions, actions 
-summary: Um die Funktionen und Dienste der NetApp -Konsole nutzen zu können, müssen Sie Berechtigungen erteilen, damit die Konsole Vorgänge in Ihrer Cloud-Umgebung ausführen kann.  Verwenden Sie die Links auf dieser Seite, um schnell auf die Berechtigungen zuzugreifen, die Sie je nach Ihrem Ziel benötigen. 
+summary: Um die Funktionen und Dienste der NetApp Console nutzen zu können, müssen Sie Berechtigungen erteilen, damit die Konsole Vorgänge in Ihrer Cloud-Umgebung ausführen kann.  Verwenden Sie die Links auf dieser Seite, um schnell auf die Berechtigungen zuzugreifen, die Sie je nach Ihrem Ziel benötigen. 
 ---
-= Berechtigungsübersicht für die NetApp -Konsole
+= Berechtigungsübersicht für die NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: Um die Funktionen und Dienste der NetApp -Konsole nutzen zu können, m�
 
 
 [role="lead"]
-Um die Funktionen und Dienste der NetApp -Konsole nutzen zu können, müssen Sie Berechtigungen erteilen, damit die Konsole Vorgänge in Ihrer Cloud-Umgebung ausführen kann.  Verwenden Sie die Links auf dieser Seite, um schnell auf die Berechtigungen zuzugreifen, die Sie je nach Ihrem Ziel benötigen.
+Um die Funktionen und Dienste der NetApp Console nutzen zu können, müssen Sie Berechtigungen erteilen, damit die Konsole Vorgänge in Ihrer Cloud-Umgebung ausführen kann.  Verwenden Sie die Links auf dieser Seite, um schnell auf die Berechtigungen zuzugreifen, die Sie je nach Ihrem Ziel benötigen.
 
 
 
 == AWS-Berechtigungen
 
-Die NetApp Konsole erfordert AWS-Berechtigungen für einen Konsolenagenten und für einzelne Dienste.
+Die NetApp Console erfordert AWS-Berechtigungen für einen Konsolenagenten und für einzelne Dienste.
 
 
 
@@ -38,7 +38,7 @@ Die NetApp Konsole erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 |===
 
 
-=== NetApp Backup und Recovery
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -70,7 +70,7 @@ Die NetApp Konsole erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 | Bereitstellen des Datenbrokers in AWS | Das AWS-Benutzerkonto, das Sie zum Bereitstellen des Datenbrokers verwenden, muss über bestimmte Berechtigungen verfügen. | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws["Erforderliche Berechtigungen zum Bereitstellen des Datenbrokers in AWS"^] 
 
 
-| Berechtigungen für den Datenbroker bereitstellen | Wenn NetApp Copy and Sync den Datenbroker bereitstellt, wird eine IAM-Rolle für die Datenbrokerinstanz erstellt.  Sie können den Datenbroker bei Bedarf mit Ihrer eigenen IAM-Rolle bereitstellen. | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["Voraussetzungen für die Verwendung einer eigenen IAM-Rolle mit dem AWS-Datenbroker"^] 
+| Berechtigungen für den Datenbroker bereitstellen | Wenn NetApp Copy and Sync den Datenbroker bereitstellt, wird eine IAM-Rolle für die Datenbrokerinstanz erstellt.  Sie können den Datenbroker bei Bedarf mit Ihrer eigenen IAM-Rolle bereitstellen. | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["Voraussetzungen für die Nutzung einer eigenen IAM-Rolle beim AWS-Datenbroker"^] 
 
 
 | Aktivieren Sie den AWS-Zugriff für einen manuell installierten Datenbroker | Wenn Sie den Datenbroker mit einer Synchronisierungsbeziehung verwenden, die einen S3-Bucket umfasst, sollten Sie den Linux-Host für den AWS-Zugriff vorbereiten.  Wenn Sie den Datenbroker installieren, müssen Sie AWS-Schlüssel für einen IAM-Benutzer bereitstellen, der über programmgesteuerten Zugriff und bestimmte Berechtigungen verfügt. | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-linux.html#enabling-access-to-aws["Aktivieren des Zugriffs auf AWS"^] 
@@ -84,7 +84,7 @@ Die NetApp Konsole erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 | Ziel | Beschreibung | Link 
 
 
-| Erstellen und Verwalten von FSx für ONTAP | Um ein Amazon FSx for NetApp ONTAP System zu erstellen oder zu verwalten, müssen Sie der Konsole AWS-Anmeldeinformationen hinzufügen, indem Sie die ARN einer IAM-Rolle angeben, die der Konsole die erforderlichen Berechtigungen erteilt. | https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Erfahren Sie, wie Sie AWS-Anmeldeinformationen für FSx einrichten"^] 
+| Erstellen und verwalten Sie FSx für ONTAP | Um ein Amazon FSx for NetApp ONTAP System zu erstellen oder zu verwalten, müssen Sie der Konsole AWS-Anmeldeinformationen hinzufügen, indem Sie die ARN einer IAM-Rolle angeben, die der Konsole die erforderlichen Berechtigungen erteilt. | https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Erfahren Sie, wie Sie AWS-Anmeldeinformationen für FSx einrichten"^] 
 |===
 
 
@@ -127,7 +127,7 @@ link:reference-permissions-azure.html["Azure-Berechtigungen für einen Konsolen-
 |===
 
 
-=== NetApp Backup und Recovery
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -135,7 +135,7 @@ link:reference-permissions-azure.html["Azure-Berechtigungen für einen Konsolen-
 
 
 | Sichern Sie Cloud Volumes ONTAP im Azure Blob Storage  a| 
-Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwenden, müssen Sie in den folgenden Szenarien Berechtigungen zu einem Konsolenagenten hinzufügen:
+Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwenden, müssen Sie in den folgenden Szenarien einem Konsolenagenten Berechtigungen hinzufügen:
 
 * Sie möchten die Funktion „Suchen und Wiederherstellen“ verwenden
 * Sie möchten vom Kunden verwaltete Verschlüsselungsschlüssel (CMEK) verwenden
@@ -181,7 +181,7 @@ Die Konsole erfordert Google Cloud-Berechtigungen für einen Konsolenagenten und
 |===
 
 
-=== NetApp Backup und Recovery
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===
@@ -189,7 +189,7 @@ Die Konsole erfordert Google Cloud-Berechtigungen für einen Konsolenagenten und
 
 
 | Sichern Sie Cloud Volumes ONTAP in Google Cloud  a| 
-Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwenden, müssen Sie in den folgenden Szenarien Berechtigungen zu einem Konsolenagenten hinzufügen:
+Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwenden, müssen Sie in den folgenden Szenarien einem Konsolenagenten Berechtigungen hinzufügen:
 
 * Sie möchten die Funktion „Suchen und Wiederherstellen“ verwenden
 * Sie möchten vom Kunden verwaltete Verschlüsselungsschlüssel (CMEK) verwenden
@@ -225,7 +225,7 @@ Die Konsole benötigt StorageGRID -Berechtigungen für zwei Dienste.
 
 
 
-=== NetApp Backup und Recovery
+=== NetApp Backup and Recovery
 
 [cols="20,60,20"]
 |===

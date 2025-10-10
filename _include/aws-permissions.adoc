@@ -28,5 +28,5 @@
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS-Dokumentation: Hinzufügen und Entfernen von IAM-Richtlinien"^]
 
 
-. Stellen Sie sicher, dass der Benutzer über einen Zugriffsschlüssel verfügt, den Sie der NetApp Konsole hinzufügen können, nachdem Sie den Konsolen-Agenten installiert haben.
+. Stellen Sie sicher, dass der Benutzer über einen Zugriffsschlüssel verfügt, den Sie der NetApp Console hinzufügen können, nachdem Sie den Konsolen-Agenten installiert haben.
 

@@ -14,7 +14,7 @@ summary: Der Konsolenagent benötigt Berechtigungen, um Aktionen bei Ihrem Cloud
 
 
 [role="lead"]
-Die NetApp Konsole benötigt Berechtigungen zum Ausführen von Aktionen in Google Cloud.  Diese Berechtigungen sind in einer benutzerdefinierten Rolle enthalten, die von NetApp bereitgestellt wird.  Sie sollten verstehen, was der Agent mit diesen Berechtigungen macht.
+Die NetApp Console benötigt Berechtigungen zum Ausführen von Aktionen in Google Cloud.  Diese Berechtigungen sind in einer benutzerdefinierten Rolle enthalten, die von NetApp bereitgestellt wird.  Sie sollten verstehen, was der Agent mit diesen Berechtigungen macht.
 
 
 
@@ -230,7 +230,7 @@ includedPermissions:
 | - compute.networks.updatePolicy | So wenden Sie Firewall-Regeln auf die VPCs und Subnetze für ein HA-Paar an. 
 
 
-| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | So aktivieren Sie die NetApp Datenklassifizierung. 
+| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | So aktivieren Sie die NetApp Data Classification. 
 
 
 | - compute.instanceGroups.get - compute.addresses.get - compute.instances.updateNetworkInterface | Zum Erstellen und Verwalten von Speicher-VMs auf Cloud Volumes ONTAP HA-Paaren. 
@@ -271,4 +271,4 @@ Die folgenden Berechtigungen wurden der Richtlinie hinzugefügt:
 * cloudkms.keyRings.setIamPolicy
 
 
-Diese Berechtigungen sind für NetApp Backup und Recovery erforderlich.
+Diese Berechtigungen sind für NetApp Backup and Recovery erforderlich.

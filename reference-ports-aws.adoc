@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-ports-aws.html 
 keywords: ports, security group, http, https, inbound, outbound 
-summary: Die AWS-Sicherheitsgruppe für den Konsolenagenten erfordert sowohl eingehende als auch ausgehende Regeln.  Die NetApp Konsole erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten von der Konsole aus erstellen.  Sie müssen diese Sicherheitsgruppe für alle anderen Installationsoptionen einrichten. 
+summary: Die AWS-Sicherheitsgruppe für den Konsolenagenten erfordert sowohl eingehende als auch ausgehende Regeln.  Die NetApp Console erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten von der Konsole aus erstellen.  Sie müssen diese Sicherheitsgruppe für alle anderen Installationsoptionen einrichten. 
 ---
 = Sicherheitsgruppenregeln für Konsolenagenten in AWS
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Die AWS-Sicherheitsgruppe für den Konsolenagenten erfordert sowohl ein
 
 
 [role="lead"]
-Die AWS-Sicherheitsgruppe für den Agenten erfordert sowohl eingehende als auch ausgehende Regeln.  Die NetApp Konsole erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten von der Konsole aus erstellen.  Sie müssen diese Sicherheitsgruppe für alle anderen Installationsoptionen einrichten.
+Die AWS-Sicherheitsgruppe für den Agenten erfordert sowohl eingehende als auch ausgehende Regeln.  Die NetApp Console erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten von der Konsole aus erstellen.  Sie müssen diese Sicherheitsgruppe für alle anderen Installationsoptionen einrichten.
 
 
 
@@ -35,7 +35,7 @@ Die AWS-Sicherheitsgruppe für den Agenten erfordert sowohl eingehende als auch 
 
 
 
-| HTTPS | 443 | Bietet HTTPS-Zugriff auf die lokale Benutzeroberfläche und Verbindungen von der NetApp Data Classification-Instanz 
+| HTTPS | 443 | Bietet HTTPS-Zugriff auf die lokale Benutzeroberfläche und Verbindungen von der NetApp Data Classification Instanz 
 
 
 | TCP | 3128 | Bietet Cloud Volumes ONTAP Internetzugang.  Sie müssen diesen Port nach der Bereitstellung manuell öffnen. 
@@ -76,10 +76,10 @@ NOTE: Die Quell-IP-Adresse ist der Agent-Host.
 | Service | Protokoll | Hafen | Ziel | Zweck 
 
 
-| API-Aufrufe und AutoSupport | HTTPS | 443 | Outbound-Internet und ONTAP Cluster-Management-LIF | API-Aufrufe an AWS, an ONTAP, an NetApp Data Classification und Senden von AutoSupport -Nachrichten an NetApp 
+| API-Aufrufe und AutoSupport | HTTPS | 443 | Outbound-Internet und ONTAP Cluster-Management-LIF | API-Aufrufe an AWS, ONTAP, NetApp Data Classification und Senden von AutoSupport -Nachrichten an NetApp 
 
 
-.2+| API-Aufrufe | TCP | 3000 | ONTAP HA-Mediator | Kommunikation mit dem ONTAP HA-Mediator 
+.2+| API-Aufrufe | TCP | 3000 | ONTAP HA-Mediator | Kommunikation mit dem ONTAP HA Mediator 
 
 
 | TCP | 8080 | Datenklassifizierung | Testen der Datenklassifizierungsinstanz während der Bereitstellung 

@@ -236,7 +236,7 @@ image:screenshot-system-id.png["Ein Screenshot, der die System-ID zeigt, die im 
 Wenn bei Ihnen Probleme auftreten, werden Sie von NetApp möglicherweise aufgefordert, zur Fehlerbehebung eine AutoSupport -Nachricht an den NetApp -Support zu senden.
 
 
-NOTE: Aufgrund des Lastenausgleichs benötigt die NetApp Konsole bis zu fünf Stunden, um AutoSupport -Nachrichten zu senden.  Laden Sie für dringende Mitteilungen die Datei herunter und senden Sie sie manuell.
+NOTE: Aufgrund des Lastenausgleichs benötigt die NetApp Console bis zu fünf Stunden, um AutoSupport -Nachrichten zu senden.  Laden Sie für dringende Mitteilungen die Datei herunter und senden Sie sie manuell.
 
 .Schritte
 . Wählen Sie *Administration > Support > Agenten*.

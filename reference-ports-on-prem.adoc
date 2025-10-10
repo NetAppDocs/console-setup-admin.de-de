@@ -16,7 +16,7 @@ summary: Der Konsolenagent verwendet _eingehende_ Ports, wenn er manuell auf ein
 [role="lead"]
 Der Konsolenagent verwendet _eingehende_ Ports, wenn er manuell auf einem lokalen Linux-Host installiert wird.  Beziehen Sie sich bei Planungen auf diese Häfen.
 
-Diese eingehenden Regeln gelten für alle Bereitstellungsmodi der NetApp Konsole.
+Diese eingehenden Regeln gelten für alle Bereitstellungsmodi der NetApp Console .
 
 [cols="10,10,80"]
 |===

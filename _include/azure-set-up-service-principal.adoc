@@ -15,7 +15,7 @@ image:screenshot_azure_ad.png["Zeigt den Active Directory-Dienst in Microsoft Az
 . Geben Sie Details zur Anwendung an:
 +
 ** *Name*: Geben Sie einen Namen für die Anwendung ein.
-** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der NetApp Konsole).
+** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der NetApp Console).
 ** *Umleitungs-URI*: Sie können dieses Feld leer lassen.
 
 
@@ -98,7 +98,7 @@ image:screenshot_azure_service_principal_role.png["Ein Screenshot des Azure-Port
 Der Dienstprinzipal verfügt jetzt über die erforderlichen Azure-Berechtigungen zum Bereitstellen des Konsolen-Agenten.
 
 +
-Wenn Sie Cloud Volumes ONTAP aus mehreren Azure-Abonnements bereitstellen möchten, müssen Sie den Dienstprinzipal an jedes dieser Abonnements binden.  In der NetApp Konsole können Sie das Abonnement auswählen, das Sie beim Bereitstellen von Cloud Volumes ONTAP verwenden möchten.
+Wenn Sie Cloud Volumes ONTAP aus mehreren Azure-Abonnements bereitstellen möchten, müssen Sie den Dienstprinzipal an jedes dieser Abonnements binden.  In der NetApp Console können Sie das Abonnement auswählen, das Sie beim Bereitstellen von Cloud Volumes ONTAP verwenden möchten.
 
 
 

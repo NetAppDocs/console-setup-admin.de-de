@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-iam-predefined-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, classification viewer, snapcenter admin, role, iam role, admin, iam, identity and access management, access roles, rbac, bluexp 
-summary: Das Identitäts- und Zugriffsmanagement der NetApp Konsole umfasst vordefinierte Rollen, die Sie den Mitgliedern Ihrer Organisation zuweisen können. 
+summary: Das Identitäts- und Zugriffsmanagement der NetApp Console umfasst vordefinierte Rollen, die Sie den Mitgliedern Ihrer Organisation zuweisen können. 
 ---
-= Erfahren Sie mehr über die Zugriffsrollen der NetApp Konsole
+= Erfahren Sie mehr über die Zugriffsrollen der NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: Das Identitäts- und Zugriffsmanagement der NetApp Konsole umfasst vord
 
 
 [role="lead"]
-Das Identitäts- und Zugriffsmanagement (IAM) in der NetApp Konsole bietet vordefinierte Rollen, die Sie den Mitgliedern Ihrer Organisation auf verschiedenen Ebenen Ihrer Ressourcenhierarchie zuweisen können.  Bevor Sie diese Rollen zuweisen, sollten Sie sich über die Berechtigungen im Klaren sein, die jede Rolle umfasst.  Rollen fallen in die folgenden Kategorien: Plattform, Anwendung und Datendienst.
+Das Identitäts- und Zugriffsmanagement (IAM) in der NetApp Console bietet vordefinierte Rollen, die Sie den Mitgliedern Ihrer Organisation auf verschiedenen Ebenen Ihrer Ressourcenhierarchie zuweisen können.  Bevor Sie diese Rollen zuweisen, sollten Sie sich über die Berechtigungen im Klaren sein, die jede Rolle umfasst.  Rollen fallen in die folgenden Kategorien: Plattform, Anwendung und Datendienst.
 
 
 
 == Plattformrollen
 
-Plattformrollen gewähren Administratorberechtigungen für die NetApp Konsole, einschließlich Rollenzuweisung und Benutzerverwaltung.  Die Konsole hat mehrere Plattformrollen.
+Plattformrollen gewähren Administratorberechtigungen für die NetApp Console , einschließlich Rollenzuweisung und Benutzerverwaltung.  Die Konsole hat mehrere Plattformrollen.
 
 [cols="1,2"]
 |===
@@ -110,7 +110,7 @@ Nachfolgend finden Sie eine Liste der Rollen in der Kategorie Datendienste.  Jed
 | link:reference-iam-backup-rec-roles.html["Backup- und Wiederherstellungs-Viewer"] | Informationen zur Sicherung und Wiederherstellung anzeigen. 
 
 
-| link:reference-iam-disaster-rec-roles.html["Disaster Recovery-Administrator"] | Führen Sie alle Aktionen im NetApp Disaster Recovery-Dienst aus. 
+| link:reference-iam-disaster-rec-roles.html["Disaster Recovery-Administrator"] | Führen Sie alle Aktionen im NetApp Disaster Recovery -Dienst aus. 
 
 
 | link:reference-iam-disaster-rec-roles.html["Disaster Recovery-Failover-Administrator"] | Führen Sie Failover und Migrationen durch. 
@@ -122,7 +122,7 @@ Nachfolgend finden Sie eine Liste der Rollen in der Kategorie Datendienste.  Jed
 | link:reference-iam-disaster-rec-roles.html["Disaster Recovery-Viewer"] | Nur Informationen anzeigen. 
 
 
-| Klassifizierungsanzeige | Ermöglicht Benutzern das Anzeigen der Scanergebnisse der NetApp Datenklassifizierung.  Benutzer mit dieser Rolle können Compliance-Informationen anzeigen und Berichte für Ressourcen erstellen, auf die sie Zugriffsberechtigung haben.  Diese Benutzer können das Scannen von Volumes, Buckets oder Datenbankschemata weder aktivieren noch deaktivieren.  Die Klassifizierung hat keine Betrachterrolle. 
+| Klassifizierungsanzeige | Ermöglicht Benutzern das Anzeigen der Scanergebnisse der NetApp Data Classification .  Benutzer mit dieser Rolle können Compliance-Informationen anzeigen und Berichte für Ressourcen erstellen, auf die sie Zugriffsberechtigung haben.  Diese Benutzer können das Scannen von Volumes, Buckets oder Datenbankschemata weder aktivieren noch deaktivieren.  Die Klassifizierung hat keine Betrachterrolle. 
 
 
 | link:reference-iam-ransomware-roles.html["Ransomware-Resilienz-Administrator"] | Verwalten Sie Aktionen auf den Registerkarten „Schützen“, „Warnungen“, „Wiederherstellen“, „Einstellungen“ und „Berichte“ von NetApp Ransomware Resilience. 
@@ -137,7 +137,7 @@ Nachfolgend finden Sie eine Liste der Rollen in der Kategorie Datendienste.  Jed
 | link:reference-iam-ransomware-roles.html["Ransomware Resilience-Benutzerverhaltensanzeige"] | Zeigen Sie Warnungen und Einblicke zu verdächtigem Benutzerverhalten in Ransomware Resilience an. 
 
 
-| SnapCenter -Administrator | Bietet die Möglichkeit, Snapshots von lokalen ONTAP Clustern mithilfe von NetApp Backup and Recovery für Anwendungen zu sichern.  Ein Mitglied mit dieser Rolle kann die folgenden Aktionen ausführen: * Alle Aktionen unter „Sicherung und Wiederherstellung > Anwendungen“ ausführen * Alle Systeme in den Projekten und Ordnern verwalten, für die es Berechtigungen hat * Alle NetApp Konsolendienste verwenden SnapCenter hat keine Viewer-Rolle. 
+| SnapCenter -Administrator | Bietet die Möglichkeit, Snapshots von lokalen ONTAP Clustern mithilfe von NetApp Backup and Recovery für Anwendungen zu sichern.  Ein Mitglied mit dieser Rolle kann die folgenden Aktionen ausführen: * Alle Aktionen unter „Sicherung und Wiederherstellung > Anwendungen“ ausführen * Alle Systeme in den Projekten und Ordnern verwalten, für die es Berechtigungen hat * Alle NetApp Console verwenden SnapCenter hat keine Viewer-Rolle. 
 |===
 
 
@@ -145,6 +145,6 @@ Nachfolgend finden Sie eine Liste der Rollen in der Kategorie Datendienste.  Jed
 
 * link:concept-identity-and-access-management.html["Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der NetApp Console"]
 * link:task-iam-get-started.html["Erste Schritte mit NetApp Console IAM"]
-* link:task-iam-manage-members-permissions.html["Verwalten Sie NetApp Console-Mitglieder und ihre Berechtigungen"]
+* link:task-iam-manage-members-permissions.html["Verwalten Sie NetApp Console Mitglieder und ihre Berechtigungen"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für NetApp Console IAM"^]
 

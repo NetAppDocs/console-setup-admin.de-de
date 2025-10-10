@@ -4,7 +4,7 @@ permalink: task-install-agent-google-console-gcloud.html
 keywords: install connector, google cloud connector installation, google cloud connector, install connector in google cloud, bluexp, gcloud, create connector, gcp installation, gcp connector 
 summary: Um einen Konsolenagenten in Google Cloud über die NetApp -Konsole oder mithilfe von Google Cloud zu erstellen, müssen Sie Ihr Netzwerk einrichten, Google Cloud-Berechtigungen vorbereiten, Google Cloud-APIs aktivieren und dann den Konsolenagenten erstellen. 
 ---
-= Erstellen Sie einen Konsolenagenten in Google Cloud über die NetApp -Konsole
+= Erstellen Sie einen Konsolenagenten in Google Cloud über die NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -70,21 +70,21 @@ Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Su
  a| 
 \https://signin.b2c.netapp.com
  a| 
-So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Konsole neue NSS-Anmeldeinformationen hinzu.
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
 
 
 
  a| 
 \https://support.netapp.com
  a| 
-Zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport -Nachrichten an den NetApp Support sowie zum Empfangen von Software-Updates für Cloud Volumes ONTAP.
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden sowie um Software-Updates für Cloud Volumes ONTAP zu erhalten.
 
 
 
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole.
+Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
 
 
 
@@ -104,7 +104,7 @@ Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp 
 --
 
 
-Von der NetApp Konsole kontaktierte Endpunkte:: Wenn Sie die webbasierte NetApp Konsole verwenden, die über die SaaS-Schicht bereitgestellt wird, kontaktiert diese mehrere Endpunkte, um Datenverwaltungsaufgaben abzuschließen.  Dazu gehören Endpunkte, die kontaktiert werden, um den Konsolenagenten von der Konsole aus bereitzustellen.
+Von der NetApp Konsole kontaktierte Endpunkte:: Wenn Sie die webbasierte NetApp Console verwenden, die über die SaaS-Schicht bereitgestellt wird, kontaktiert diese mehrere Endpunkte, um Datenverwaltungsaufgaben abzuschließen.  Dazu gehören Endpunkte, die kontaktiert werden, um den Konsolenagenten von der Konsole aus bereitzustellen.
 +
 --
 link:reference-networking-saas-console.html["Zeigen Sie die Liste der von der NetApp Konsole kontaktierten Endpunkte an"] .
@@ -137,7 +137,7 @@ Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden
 --
 
 
-Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification-System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
 +
 --
 Implementieren Sie diese Netzwerkanforderung, nachdem Sie den Konsolenagenten erstellt haben.
@@ -324,7 +324,7 @@ link:reference-permissions-gcp.html["Agent-Dienstkontorichtlinie"]
 | compute.networkUser deploymentmanager.editor | Bereitstellung und Wartung von Cloud Volumes ONTAP und Diensten im Serviceprojekt 
 
 
-| Cloud Volumes ONTAP Dienstkonto | Brauch | Serviceprojekt | storage.admin-Mitglied: NetApp -Konsolendienstkonto als serviceAccount.user | k. A. | (Optional) Für NetApp Cloud Tiering und NetApp Backup und Recovery 
+| Cloud Volumes ONTAP Dienstkonto | Brauch | Serviceprojekt | storage.admin-Mitglied: NetApp Console als serviceAccount.user | k. A. | (Optional) Für NetApp Cloud Tiering und NetApp Backup and Recovery 
 
 
 | Google APIs-Dienstagent | Google Cloud | Serviceprojekt  a| 
@@ -342,7 +342,7 @@ compute.networkUser
 |===
 Hinweise:
 
-. deploymentmanager.editor wird im Hostprojekt nur benötigt, wenn Sie keine Firewall-Regeln an die Bereitstellung übergeben und diese von der Konsole für Sie erstellen lassen.  Die NetApp Konsole erstellt eine Bereitstellung im Hostprojekt, die die VPC0-Firewallregel enthält, wenn keine Regel angegeben ist.
+. deploymentmanager.editor wird im Hostprojekt nur benötigt, wenn Sie keine Firewall-Regeln an die Bereitstellung übergeben und diese von der Konsole für Sie erstellen lassen.  Die NetApp Console erstellt eine Bereitstellung im Hostprojekt, die die VPC0-Firewallregel enthält, wenn keine Regel angegeben ist.
 . firewall.create und firewall.delete sind nur erforderlich, wenn Sie keine Firewall-Regeln an die Bereitstellung übergeben und diese von der Konsole für Sie erstellen lassen möchten.  Diese Berechtigungen befinden sich in der YAML-Datei des Konsolenkontos.  Wenn Sie ein HA-Paar mithilfe einer gemeinsam genutzten VPC bereitstellen, werden diese Berechtigungen zum Erstellen der Firewall-Regeln für VPC1, 2 und 3 verwendet.  Bei allen anderen Bereitstellungen werden diese Berechtigungen auch zum Erstellen von Regeln für VPC0 verwendet.
 . Für Cloud Tiering muss das Tiering-Dienstkonto über die Rolle serviceAccount.user für das Dienstkonto verfügen, nicht nur auf Projektebene.  Wenn Sie derzeit serviceAccount.user auf Projektebene zuweisen, werden die Berechtigungen nicht angezeigt, wenn Sie das Dienstkonto mit getIAMPolicy abfragen.
 
@@ -379,7 +379,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud-D
 Erstellen Sie einen Konsolenagenten direkt aus der Konsole.
 
 .Informationen zu diesem Vorgang
-Durch Erstellen des Konsolenagenten wird eine VM-Instanz in Google Cloud mithilfe einer Standardkonfiguration bereitgestellt. Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren VM-Instanz mit weniger CPUs oder weniger RAM. link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
+Durch Erstellen des Konsolenagenten wird eine VM-Instanz in Google Cloud mithilfe einer Standardkonfiguration bereitgestellt.  Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren VM-Instanz mit weniger CPUs oder weniger RAM. link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
 
 .Bevor Sie beginnen
 Folgendes sollten Sie haben:

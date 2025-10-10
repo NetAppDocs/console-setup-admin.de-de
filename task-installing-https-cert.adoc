@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-installing-https-cert.html 
 keywords: https certificate, certificate, adding, installing, ca, certificate authority, format, encoding, restricted mode, access 
-summary: Installieren Sie ein von einer Zertifizierungsstelle signiertes Zertifikat für den Benutzerzugriff auf die webbasierte Konsole, wenn Sie die NetApp -Konsole im eingeschränkten Modus verwenden. 
+summary: Installieren Sie ein von einer Zertifizierungsstelle signiertes Zertifikat für den Benutzerzugriff auf die webbasierte Konsole, wenn Sie die NetApp Console im eingeschränkten Modus verwenden. 
 ---
 = Installieren Sie ein CA-signiertes Zertifikat für den webbasierten Konsolenzugriff
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Installieren Sie ein von einer Zertifizierungsstelle signiertes Zertifi
 
 
 [role="lead"]
-Wenn Sie die NetApp Konsole im eingeschränkten Modus verwenden, ist die Benutzeroberfläche über die virtuelle Maschine des Konsolenagenten zugänglich, die in Ihrer Cloud-Region oder vor Ort bereitgestellt wird.  Standardmäßig verwendet die Konsole ein selbstsigniertes SSL-Zertifikat, um sicheren HTTPS-Zugriff auf die webbasierte Konsole bereitzustellen, die auf dem Konsolenagenten ausgeführt wird.
+Wenn Sie die NetApp Console im eingeschränkten Modus verwenden, ist die Benutzeroberfläche über die virtuelle Maschine des Konsolenagenten zugänglich, die in Ihrer Cloud-Region oder vor Ort bereitgestellt wird.  Standardmäßig verwendet die Konsole ein selbstsigniertes SSL-Zertifikat, um sicheren HTTPS-Zugriff auf die webbasierte Konsole bereitzustellen, die auf dem Konsolenagenten ausgeführt wird.
 
 Falls Ihr Unternehmen dies erfordert, können Sie ein von einer Zertifizierungsstelle (CA) signiertes Zertifikat installieren, das einen besseren Sicherheitsschutz bietet als ein selbstsigniertes Zertifikat.  Nachdem Sie das Zertifikat installiert haben, verwendet die Konsole das von der Zertifizierungsstelle signierte Zertifikat, wenn Benutzer auf die webbasierte Konsole zugreifen.
 

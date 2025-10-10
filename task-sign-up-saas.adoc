@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-sign-up-saas.html 
 keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
-summary: Auf die NetApp -Konsole kann über eine webbasierte Konsole zugegriffen werden.  Um mit der Konsole zu beginnen, müssen Sie sich zunächst mit Ihren Anmeldeinformationen für die NetApp Support-Site registrieren oder anmelden oder ein Login für die NetApp -Konsole erstellen. 
+summary: Auf die NetApp Console kann über eine webbasierte Konsole zugegriffen werden.  Um mit der Konsole zu beginnen, müssen Sie sich zunächst mit Ihren Anmeldeinformationen für die NetApp Support-Site registrieren oder anmelden oder ein Login für die NetApp Console erstellen. 
 ---
-= Registrieren oder bei der NetApp Konsole anmelden
+= Registrieren oder bei der NetApp Console anmelden
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,28 +14,28 @@ summary: Auf die NetApp -Konsole kann über eine webbasierte Konsole zugegriffen
 
 
 [role="lead"]
-Auf die NetApp -Konsole kann über eine webbasierte Konsole zugegriffen werden.  Um mit der Konsole zu beginnen, müssen Sie sich zunächst mit Ihren Anmeldeinformationen für die NetApp Support-Site registrieren oder anmelden oder ein Login für die NetApp -Konsole erstellen.
+Auf die NetApp Console kann über eine webbasierte Konsole zugegriffen werden.  Um mit der Konsole zu beginnen, müssen Sie sich zunächst mit Ihren Anmeldeinformationen für die NetApp Support-Site registrieren oder anmelden oder ein Login für die NetApp Console erstellen.
 
 .Informationen zu diesem Vorgang
 Wenn Sie zum ersten Mal auf die Konsole zugreifen, können Sie sich mit einer der folgenden Optionen registrieren oder anmelden:
 
-NetApp Konsolen-Anmeldung:: Sie können sich anmelden, indem Sie ein Login erstellen.  Bei dieser Authentifizierungsmethode müssen Sie Ihre E-Mail-Adresse und ein Passwort angeben.  Nachdem Sie Ihre E-Mail-Adresse bestätigt haben, können Sie sich anmelden und dann eine Organisation erstellen, falls Sie noch keiner angehören.
+NetApp Console -Anmeldung:: Sie können sich anmelden, indem Sie ein Login erstellen.  Bei dieser Authentifizierungsmethode müssen Sie Ihre E-Mail-Adresse und ein Passwort angeben.  Nachdem Sie Ihre E-Mail-Adresse bestätigt haben, können Sie sich anmelden und dann eine Organisation erstellen, falls Sie noch keiner angehören.
 Anmeldeinformationen für die NetApp Support Site (NSS):: Wenn Sie bereits über Anmeldeinformationen für die NetApp -Support-Site verfügen, müssen Sie sich nicht für die Konsole anmelden.  Sie melden sich mit Ihren NSS-Anmeldeinformationen an und werden dann von der Konsole aufgefordert, eine Organisation zu erstellen, falls Sie noch keiner angehören.
 +
 --
 Sie erhalten einen Einmalpasscode (OTP) an die registrierte E-Mail-Adresse.  Bei jedem Anmeldeversuch wird ein neues OTP generiert.
 
 --
-Verbundverbindung:: Wenn Ihr Unternehmen bereits über eine NetApp Konsoleninstanz verfügt, hat Ihr Konsolenadministrator möglicherweise Single Sign-On eingerichtet, um sich mit Anmeldeinformationen aus Ihrem Unternehmensverzeichnis anzumelden (föderierte Identität).
+Verbundverbindung:: Wenn Ihr Unternehmen bereits über eine NetApp Console verfügt, hat Ihr Konsolenadministrator möglicherweise Single Sign-On eingerichtet, um sich mit Anmeldeinformationen aus Ihrem Unternehmensverzeichnis anzumelden (föderierte Identität).
 +
 --
-link:concept-federation.html["Erfahren Sie, wie Sie die Identitätsföderation mit der NetApp -Konsole nutzen"] .
+link:concept-federation.html["Erfahren Sie, wie Sie die Identitätsföderation mit der NetApp Console nutzen"] .
 
 --
 
 
 .Schritte
-. Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Konsole"^]
+. Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Console"^]
 . Wenn Sie über ein NetApp Support Site-Konto verfügen oder bereits eine Identitätsföderation eingerichtet haben, geben Sie die mit Ihrem Konto verknüpfte E-Mail-Adresse direkt auf der Seite *Anmelden* ein.
 +
 In beiden Fällen werden Sie im Rahmen dieser ersten Anmeldung für die Konsole angemeldet.

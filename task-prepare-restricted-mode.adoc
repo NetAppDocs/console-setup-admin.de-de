@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-prepare-restricted-mode.html 
 keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
-summary: Bereiten Sie Ihre Umgebung vor, bevor Sie die NetApp Konsole im eingeschränkten Modus bereitstellen.  Sie müssen die Hostanforderungen überprüfen, das Netzwerk vorbereiten, Berechtigungen einrichten und vieles mehr. 
+summary: Bereiten Sie Ihre Umgebung vor, bevor Sie die NetApp Console im eingeschränkten Modus bereitstellen.  Sie müssen die Hostanforderungen überprüfen, das Netzwerk vorbereiten, Berechtigungen einrichten und vieles mehr. 
 ---
 = Vorbereiten der Bereitstellung im eingeschränkten Modus
 :hardbreaks:
@@ -14,15 +14,15 @@ summary: Bereiten Sie Ihre Umgebung vor, bevor Sie die NetApp Konsole im eingesc
 
 
 [role="lead"]
-Bereiten Sie Ihre Umgebung vor, bevor Sie die NetApp Konsole im eingeschränkten Modus bereitstellen.  Sie müssen die Hostanforderungen überprüfen, das Netzwerk vorbereiten, Berechtigungen einrichten und vieles mehr.
+Bereiten Sie Ihre Umgebung vor, bevor Sie die NetApp Console im eingeschränkten Modus bereitstellen.  Sie müssen die Hostanforderungen überprüfen, das Netzwerk vorbereiten, Berechtigungen einrichten und vieles mehr.
 
 
 
 == Schritt 1: Verstehen, wie der eingeschränkte Modus funktioniert
 
-Machen Sie sich vor dem Start mit der Funktionsweise der NetApp Konsole im eingeschränkten Modus vertraut.
+Machen Sie sich vor dem Start mit der Funktionsweise der NetApp Console im eingeschränkten Modus vertraut.
 
-Verwenden Sie die browserbasierte Schnittstelle, die lokal über den installierten NetApp Console-Agenten verfügbar ist.  Sie können nicht über die webbasierte Konsole, die über die SaaS-Schicht bereitgestellt wird, auf die NetApp -Konsole zugreifen.
+Verwenden Sie die browserbasierte Schnittstelle, die lokal über den installierten NetApp Console Agenten verfügbar ist.  Sie können nicht über die webbasierte Konsole, die über die SaaS-Schicht bereitgestellt wird, auf die NetApp Console zugreifen.
 
 Darüber hinaus sind nicht alle Konsolenfunktionen und NetApp Datendienste verfügbar.
 
@@ -105,7 +105,7 @@ Ubuntu
  a| 
 24,04 LTS
  a| 
-3.9.45 oder höher mit der NetApp Konsole im Standardmodus oder eingeschränkten Modus
+3.9.45 oder höher mit der NetApp Console im Standardmodus oder eingeschränkten Modus
  a| 
 Docker Engine 23.06 bis 28.0.0.
  a| 
@@ -320,7 +320,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 Richten Sie den Netzwerkzugriff ein, damit der Konsolenagent Ressourcen in Ihrer öffentlichen Cloud verwalten kann.  Zusätzlich zum Vorhandensein eines virtuellen Netzwerks und Subnetzes für den Konsolenagenten müssen Sie sicherstellen, dass die folgenden Anforderungen erfüllt sind.
 
 Verbindungen zu Zielnetzwerken:: Stellen Sie sicher, dass der Konsolenagent über eine Netzwerkverbindung zu den Speicherorten verfügt.  Beispielsweise das VPC oder VNet, in dem Sie Cloud Volumes ONTAP bereitstellen möchten, oder das Rechenzentrum, in dem sich Ihre lokalen ONTAP Cluster befinden.
-Vorbereiten des Netzwerks für den Benutzerzugriff auf die NetApp -Konsole:: Im eingeschränkten Modus greifen Benutzer über die Konsolen-Agent-VM auf die Konsole zu.  Der Konsolenagent kontaktiert einige Endpunkte, um Datenverwaltungsaufgaben abzuschließen.  Diese Endpunkte werden vom Computer eines Benutzers aus kontaktiert, wenn bestimmte Aktionen von der Konsole aus ausgeführt werden.
+Vorbereiten des Netzwerks für den Benutzerzugriff auf die NetApp Console:: Im eingeschränkten Modus greifen Benutzer über die Konsolen-Agent-VM auf die Konsole zu.  Der Konsolenagent kontaktiert einige Endpunkte, um Datenverwaltungsaufgaben abzuschließen.  Diese Endpunkte werden vom Computer eines Benutzers aus kontaktiert, wenn bestimmte Aktionen von der Konsole aus ausgeführt werden.
 
 
 
@@ -333,12 +333,12 @@ NOTE: Konsolenagenten vor Version 4.0.0 benötigen zusätzliche Endpunkte.  Wenn
 | Endpunkte | Zweck 
 
 
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole. 
+| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen. 
 
 
-| \https://cdn.auth0.com \https://services.cloud.netapp.com | Ihr Webbrowser stellt über die NetApp Konsole eine Verbindung zu diesen Endpunkten her, um eine zentrale Benutzerauthentifizierung durchzuführen. 
+| \https://cdn.auth0.com \https://services.cloud.netapp.com | Ihr Webbrowser stellt über die NetApp Console eine Verbindung zu diesen Endpunkten her, um eine zentrale Benutzerauthentifizierung durchzuführen. 
 |===
-Ausgehender Internetzugang für den täglichen Betrieb:: Der Netzwerkstandort des Konsolenagenten muss über ausgehenden Internetzugang verfügen.  Es muss in der Lage sein, die SaaS-Dienste der NetApp -Konsole sowie Endpunkte innerhalb Ihrer jeweiligen öffentlichen Cloud-Umgebung zu erreichen.
+Ausgehender Internetzugang für den täglichen Betrieb:: Der Netzwerkstandort des Konsolenagenten muss über ausgehenden Internetzugang verfügen.  Es muss in der Lage sein, die SaaS-Dienste der NetApp Console sowie Endpunkte innerhalb Ihrer jeweiligen öffentlichen Cloud-Umgebung zu erreichen.
 +
 --
 [cols="2a,1a"]
@@ -405,7 +405,7 @@ Zum Verwalten von Ressourcen in Google Cloud.
 
 
  a| 
-* NetApp Konsolen-Endpunkte*
+* NetApp Console -Endpunkte*
 
 
 
@@ -426,21 +426,21 @@ Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Su
  a| 
 \https://signin.b2c.netapp.com
  a| 
-So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Konsole neue NSS-Anmeldeinformationen hinzu.
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
 
 
 
  a| 
 \https://support.netapp.com
  a| 
-Zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport -Nachrichten an den NetApp Support sowie zum Empfangen von Software-Updates für Cloud Volumes ONTAP.
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden sowie um Software-Updates für Cloud Volumes ONTAP zu erhalten.
 
 
 
  a| 
 \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
  a| 
-Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Konsole.
+Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
 
 
 
@@ -497,7 +497,7 @@ Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden
 --
 
 
-Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification-System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
 +
 --
 Wenn Sie vorhaben, einen Konsolen-Agenten aus dem Marktplatz Ihres Cloud-Anbieters zu erstellen, implementieren Sie diese Netzwerkanforderung, nachdem Sie den Konsolen-Agenten erstellt haben.
@@ -571,7 +571,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
 ** https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html["AWS-Dokumentation: Hinzufügen und Entfernen von IAM-Richtlinien"^]
 
 
-. Stellen Sie sicher, dass der Benutzer über einen Zugriffsschlüssel verfügt, den Sie der NetApp Konsole hinzufügen können, nachdem Sie den Konsolen-Agenten installiert haben.
+. Stellen Sie sicher, dass der Benutzer über einen Zugriffsschlüssel verfügt, den Sie der NetApp Console hinzufügen können, nachdem Sie den Konsolen-Agenten installiert haben.
 
 
 --
@@ -589,7 +589,7 @@ https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azur
 . Kopieren Sie den Inhalt derlink:reference-permissions-azure.html["benutzerdefinierte Rollenberechtigungen für den Connector"] und speichern Sie sie in einer JSON-Datei.
 . Ändern Sie die JSON-Datei, indem Sie dem zuweisbaren Bereich Azure-Abonnement-IDs hinzufügen.
 +
-Sie sollten die ID für jedes Azure-Abonnement hinzufügen, das Sie mit der NetApp Konsole verwenden möchten.
+Sie sollten die ID für jedes Azure-Abonnement hinzufügen, das Sie mit der NetApp Console verwenden möchten.
 
 +
 *Beispiel*
@@ -641,7 +641,7 @@ image:screenshot_azure_ad.png["Zeigt den Active Directory-Dienst in Microsoft Az
 . Geben Sie Details zur Anwendung an:
 +
 ** *Name*: Geben Sie einen Namen für die Anwendung ein.
-** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der NetApp Konsole).
+** *Kontotyp*: Wählen Sie einen Kontotyp aus (alle funktionieren mit der NetApp Console).
 ** *Umleitungs-URI*: Sie können dieses Feld leer lassen.
 
 
@@ -725,7 +725,7 @@ image:screenshot_azure_service_principal_role.png["Ein Screenshot des Azure-Port
 Der Dienstprinzipal verfügt jetzt über die erforderlichen Azure-Berechtigungen zum Bereitstellen des Konsolen-Agenten.
 
 +
-Wenn Sie Cloud Volumes ONTAP aus mehreren Azure-Abonnements bereitstellen möchten, müssen Sie den Dienstprinzipal an jedes dieser Abonnements binden.  In der NetApp Konsole können Sie das Abonnement auswählen, das Sie beim Bereitstellen von Cloud Volumes ONTAP verwenden möchten.
+Wenn Sie Cloud Volumes ONTAP aus mehreren Azure-Abonnements bereitstellen möchten, müssen Sie den Dienstprinzipal an jedes dieser Abonnements binden.  In der NetApp Console können Sie das Abonnement auswählen, das Sie beim Bereitstellen von Cloud Volumes ONTAP verwenden möchten.
 
 
 

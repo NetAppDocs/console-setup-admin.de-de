@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-get-help.html 
 keywords: help, ticket, open support case, support, netapp support, technical support, call support, phone number, open ticket, web ticket, open an issue 
-summary: 'NetApp bietet auf verschiedene Weise Support für die NetApp Konsole. Umfangreiche kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, beispielsweise Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung beinhaltet technischen Remote-Support per Web-Ticketing.' 
+summary: 'NetApp bietet auf verschiedene Weise Support für die NetApp Console .  Umfangreiche kostenlose Self-Support-Optionen stehen rund um die Uhr zur Verfügung, beispielsweise Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung beinhaltet technischen Remote-Support per Web-Ticketing.' 
 ---
 = Hilfe erhalten
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'NetApp bietet auf verschiedene Weise Support für die NetApp Konsole. 
 
 
 [role="lead"]
-NetApp bietet auf vielfältige Weise Support für die NetApp Console und ihre Cloud-Dienste. Umfangreiche kostenlose Selbsthilfeoptionen stehen rund um die Uhr zur Verfügung, beispielsweise Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung beinhaltet technischen Remote-Support per Web-Ticketing.
+NetApp bietet auf vielfältige Weise Support für die NetApp Console und ihre Cloud-Dienste.  Umfangreiche kostenlose Selbsthilfeoptionen stehen rund um die Uhr zur Verfügung, beispielsweise Knowledge Base-Artikel (KB) und ein Community-Forum. Ihre Support-Registrierung beinhaltet technischen Remote-Support per Web-Ticketing.
 
 
 
@@ -34,7 +34,7 @@ Diese Optionen stehen Ihnen 24 Stunden am Tag, 7 Tage die Woche kostenlos zur Ve
 
 * Dokumentation
 +
-Die NetApp Konsolendokumentation, die Sie gerade anzeigen.
+Die NetApp Console Konsolendokumentation, die Sie gerade anzeigen.
 
 * https://kb.netapp.com/Cloud/BlueXP["Wissensdatenbank"^]
 +
@@ -42,7 +42,7 @@ Durchsuchen Sie die NetApp Wissensdatenbank nach hilfreichen Artikeln zur Proble
 
 * http://community.netapp.com/["Gemeinschaften"^]
 +
-Treten Sie der NetApp Console-Community bei, um aktuelle Diskussionen zu verfolgen oder neue zu starten.
+Treten Sie der NetApp Console Community bei, um aktuelle Diskussionen zu verfolgen oder neue zu starten.
 
 
 
@@ -58,13 +58,13 @@ Zusätzlich zu den oben genannten Self-Support-Optionen können Sie nach der Akt
 
 
 .Schritte
-. Wählen Sie in der NetApp Konsole *Hilfe > Support*.
+. Wählen Sie in der NetApp Console*Hilfe > Support*.
 . Wählen Sie auf der Seite *Ressourcen* unter „Technischer Support“ eine der verfügbaren Optionen aus:
 +
-.. Wählen Sie *Rufen Sie uns an*, wenn Sie mit jemandem telefonieren möchten. Sie werden zu einer Seite auf netapp.com weitergeleitet, auf der die Telefonnummern aufgeführt sind, die Sie anrufen können.
+.. Wählen Sie *Rufen Sie uns an*, wenn Sie mit jemandem telefonieren möchten.  Sie werden zu einer Seite auf netapp.com weitergeleitet, auf der die Telefonnummern aufgeführt sind, die Sie anrufen können.
 .. Wählen Sie *Fall erstellen*, um ein Ticket bei einem NetApp -Support-Spezialisten zu öffnen:
 +
-*** *Dienst*: Wählen Sie den Dienst aus, mit dem das Problem verknüpft ist. Beispiel: * NetApp -Konsole*, wenn es sich speziell um ein technisches Supportproblem mit Workflows oder Funktionen innerhalb der Konsole handelt.
+*** *Dienst*: Wählen Sie den Dienst aus, mit dem das Problem verknüpft ist.  Beispiel: * NetApp Console*, wenn es sich speziell um ein technisches Supportproblem mit Workflows oder Funktionen innerhalb der Konsole handelt.
 *** *System*: Wählen Sie, falls für den Speicher zutreffend, * Cloud Volumes ONTAP* oder *On-Prem* und dann die zugehörige Arbeitsumgebung aus.
 +
 Die Liste der Systeme liegt im Rahmen der Konsolenorganisation und des Konsolenagenten, den Sie im oberen Banner ausgewählt haben.
@@ -77,7 +77,7 @@ Um weitere Einzelheiten zu diesen Prioritäten zu erfahren, bewegen Sie die Maus
 *** *Zusätzliche E-Mail-Adressen*: Geben Sie zusätzliche E-Mail-Adressen ein, wenn Sie jemand anderen auf dieses Problem aufmerksam machen möchten.
 *** *Anhang (optional)*: Laden Sie bis zu fünf Anhänge hoch, einen nach dem anderen.
 +
-Anhänge sind auf 25 MB pro Datei begrenzt. Die folgenden Dateierweiterungen werden unterstützt: txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx und csv.
+Anhänge sind auf 25 MB pro Datei begrenzt.  Die folgenden Dateierweiterungen werden unterstützt: txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx und csv.
 
 
 
@@ -89,15 +89,15 @@ image:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/scr
 
 
 .Nach Abschluss
-Ein Popup mit Ihrer Support-Fallnummer wird angezeigt. Ein NetApp -Support-Spezialist wird Ihren Fall prüfen und sich in Kürze bei Ihnen melden.
+Es erscheint ein Popup mit Ihrer Support-Fallnummer.  Ein NetApp -Support-Spezialist wird Ihren Fall prüfen und sich in Kürze bei Ihnen melden.
 
-Um einen Verlauf Ihrer Supportfälle anzuzeigen, können Sie *Einstellungen > Zeitleiste* auswählen und nach Aktionen mit der Bezeichnung „Supportfall erstellen“ suchen. Über eine Schaltfläche ganz rechts können Sie die Aktion erweitern, um Details anzuzeigen.
+Um einen Verlauf Ihrer Supportfälle anzuzeigen, können Sie *Einstellungen > Zeitleiste* auswählen und nach Aktionen mit der Bezeichnung „Supportfall erstellen“ suchen.  Über eine Schaltfläche ganz rechts können Sie die Aktion erweitern, um Details anzuzeigen.
 
 Beim Versuch, einen Fall zu erstellen, kann es sein, dass die folgende Fehlermeldung angezeigt wird:
 
 „Sie sind nicht berechtigt, einen Fall für den ausgewählten Dienst zu erstellen.“
 
-Dieser Fehler könnte bedeuten, dass das NSS-Konto und das damit verknüpfte Unternehmen nicht dasselbe Unternehmen sind, für das die Seriennummer des NetApp Konsolenkontos gilt (d. h. 960xxxx) oder die Seriennummer der Arbeitsumgebung. Sie können auf eine der folgenden Arten Hilfe anfordern:
+Dieser Fehler könnte bedeuten, dass das NSS-Konto und das damit verknüpfte Unternehmen nicht dasselbe Unternehmen sind, für das die Seriennummer des NetApp Console gilt (d. h.  960xxxx) oder die Seriennummer der Arbeitsumgebung.  Sie können auf eine der folgenden Arten Hilfe anfordern:
 
 * Senden Sie einen nicht-technischen Fall an https://mysupport.netapp.com/site/help[]
 
@@ -106,7 +106,7 @@ Dieser Fehler könnte bedeuten, dass das NSS-Konto und das damit verknüpfte Unt
 
 == Verwalten Sie Ihre Supportfälle
 
-Sie können aktive und gelöste Supportfälle direkt von der Konsole aus anzeigen und verwalten. Sie können die mit Ihrem NSS-Konto und Ihrem Unternehmen verknüpften Fälle verwalten.
+Sie können aktive und gelöste Supportfälle direkt von der Konsole aus anzeigen und verwalten.  Sie können die mit Ihrem NSS-Konto und Ihrem Unternehmen verknüpften Fälle verwalten.
 
 Beachten Sie Folgendes:
 
@@ -119,7 +119,7 @@ Beachten Sie Folgendes:
 +
 Die Ergebnisse in der Tabelle spiegeln die Fälle wider, die mit der von Ihnen ausgewählten Ansicht in Zusammenhang stehen.
 
-* Sie können interessante Spalten hinzufügen oder entfernen und den Inhalt von Spalten wie „Priorität“ und „Status“ filtern. Andere Spalten bieten lediglich Sortierfunktionen.
+* Sie können interessante Spalten hinzufügen oder entfernen und den Inhalt von Spalten wie „Priorität“ und „Status“ filtern.  Andere Spalten bieten lediglich Sortierfunktionen.
 +
 Weitere Einzelheiten finden Sie in den folgenden Schritten.
 
@@ -127,10 +127,10 @@ Weitere Einzelheiten finden Sie in den folgenden Schritten.
 
 
 .Schritte
-. Wählen Sie in der NetApp Konsole *Hilfe > Support*.
+. Wählen Sie in der NetApp Console*Hilfe > Support*.
 . Wählen Sie *Fallmanagement* und fügen Sie bei entsprechender Aufforderung Ihr NSS-Konto zur Konsole hinzu.
 +
-Auf der Seite *Fallverwaltung* werden offene Fälle angezeigt, die sich auf das NSS-Konto beziehen, das mit Ihrem Konsolenbenutzerkonto verknüpft ist. Dies ist dasselbe NSS-Konto, das oben auf der *NSS-Verwaltungsseite* angezeigt wird.
+Auf der Seite *Fallverwaltung* werden offene Fälle angezeigt, die sich auf das NSS-Konto beziehen, das mit Ihrem Konsolenbenutzerkonto verknüpft ist.  Dies ist dasselbe NSS-Konto, das oben auf der *NSS-Verwaltungsseite* angezeigt wird.
 
 . Ändern Sie optional die in der Tabelle angezeigten Informationen:
 +
@@ -145,7 +145,7 @@ Auf der Seite *Fallverwaltung* werden offene Fälle angezeigt, die sich auf das 
 ** *Fall anzeigen*: Alle Details zu einem bestimmten Fall anzeigen.
 ** *Fallnotizen aktualisieren*: Geben Sie zusätzliche Details zu Ihrem Problem an oder wählen Sie *Dateien hochladen*, um bis zu fünf Dateien anzuhängen.
 +
-Anhänge sind auf 25 MB pro Datei begrenzt. Die folgenden Dateierweiterungen werden unterstützt: txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx und csv.
+Anhänge sind auf 25 MB pro Datei begrenzt.  Die folgenden Dateierweiterungen werden unterstützt: txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx und csv.
 
 ** *Fall schließen*: Geben Sie Details zum Grund für das Schließen des Falls an und wählen Sie *Fall schließen* aus.
 

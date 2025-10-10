@@ -19,7 +19,7 @@ Wenn Sie eine Föderation mit einer Domäne durchführen möchten, die sich von 
 .Erforderliche Rollen
 Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
 
-Zur Überprüfung Ihrer Domäne müssen Sie den DNS-Einstellungen Ihrer Domäne einen TXT-Eintrag hinzufügen.  Dieser Datensatz dient als Nachweis dafür, dass Sie der Eigentümer der Domäne sind, und ermöglicht der NetApp Konsole, der Domäne für die Föderation zu vertrauen.  Möglicherweise müssen Sie sich mit Ihrem IT- oder Netzwerkadministrator abstimmen, um diesen Schritt abzuschließen.
+Zur Überprüfung Ihrer Domäne müssen Sie den DNS-Einstellungen Ihrer Domäne einen TXT-Eintrag hinzufügen.  Dieser Datensatz dient als Nachweis dafür, dass Sie der Eigentümer der Domäne sind, und ermöglicht der NetApp Console, der Domäne für die Föderation zu vertrauen.  Möglicherweise müssen Sie sich mit Ihrem IT- oder Netzwerkadministrator abstimmen, um diesen Schritt abzuschließen.
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.

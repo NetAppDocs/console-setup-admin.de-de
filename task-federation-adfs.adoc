@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-federation-adfs.html 
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
-summary: 'Verbinden Sie sich mit Ihren Active Directory Federation Services (AD FS), um Single Sign-On (SSO) für die NetApp Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.' 
+summary: 'Verbinden Sie sich mit Ihren Active Directory Federation Services (AD FS), um Single Sign-On (SSO) für die NetApp Console zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.' 
 ---
-= Verbinden Sie die NetApp Konsole mit Active Directory Federation Services (AD FS).
+= Verbinden Sie die NetApp Console mit Active Directory Federation Services (AD FS).
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Verbinden Sie sich mit Ihren Active Directory Federation Services (AD 
 
 
 [role="lead"]
-Verbinden Sie Ihre Active Directory Federation Services (AD FS) mit der NetApp Konsole, um Single Sign-On (SSO) für die NetApp Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.
+Verbinden Sie Ihre Active Directory Federation Services (AD FS) mit der NetApp Console , um Single Sign-On (SSO) für die NetApp Console zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.
 
 .Erforderliche Rollen
 Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
@@ -22,13 +22,13 @@ Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadmi
 
 NOTE: Sie können eine Föderation mit Ihrem Unternehmens-IdP oder mit der NetApp -Support-Site herstellen.  NetApp empfiehlt, sich für das eine oder das andere zu entscheiden, aber nicht für beides.
 
-NetApp unterstützt nur vom Dienstanbieter initiiertes (SP-initiiertes) SSO.  Konfigurieren Sie zunächst den Identitätsanbieter so, dass er der NetApp Konsole als Dienstanbieter vertraut.  Erstellen Sie dann mithilfe der Konfiguration Ihres Identitätsanbieters eine Verbindung in der Konsole.
+NetApp unterstützt nur vom Dienstanbieter initiiertes (SP-initiiertes) SSO.  Konfigurieren Sie zunächst den Identitätsanbieter so, dass er der NetApp Console als Dienstanbieter vertraut.  Erstellen Sie dann mithilfe der Konfiguration Ihres Identitätsanbieters eine Verbindung in der Konsole.
 
-Sie können eine Föderation mit Ihrem AD FS-Server einrichten, um Single Sign-On (SSO) für die NetApp Konsole zu aktivieren.  Der Vorgang umfasst die Konfiguration Ihres AD FS, sodass es der Konsole als Dienstanbieter vertraut, und die anschließende Herstellung der Verbindung in der NetApp -Konsole.
+Sie können eine Föderation mit Ihrem AD FS-Server einrichten, um Single Sign-On (SSO) für die NetApp Console zu aktivieren.  Der Vorgang umfasst die Konfiguration Ihres AD FS, sodass es der Konsole als Dienstanbieter vertraut, und die anschließende Herstellung der Verbindung in der NetApp Console.
 
 .Bevor Sie beginnen
 * Es ist ein IdP-Konto mit Administratorrechten erforderlich.  Koordinieren Sie die Durchführung der Schritte mit Ihrem IdP-Administrator.
-* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Konsole"] Thema.
+* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Console"] Thema.
 
 
 .Schritte
@@ -54,7 +54,7 @@ Sie können eine Föderation mit Ihrem AD FS-Server einrichten, um Single Sign-O
 (new-object Net.WebClient -property @{Encoding = [Text.Encoding]::UTF8}).DownloadString("https://raw.github.com/auth0/AD FS-auth0/master/AD FS.ps1") | iex
 AddRelyingParty "urn:auth0:netapp-cloud-account" "https://netapp-cloud-account.auth0.com/login/callback"
 ----
-.. Alternativ können Sie die Vertrauensstellung manuell in der AD FS-Verwaltungskonsole erstellen.  Verwenden Sie beim Erstellen der Vertrauensstellung die folgenden NetApp -Konsolenwerte:
+.. Alternativ können Sie die Vertrauensstellung manuell in der AD FS-Verwaltungskonsole erstellen.  Verwenden Sie beim Erstellen der Vertrauensstellung die folgenden NetApp Console :
 +
 *** Verwenden Sie beim Erstellen der Relying Trust Identifier den Wert **YOUR_TENANT**: `netapp-cloud-account`
 *** Wenn Sie *Unterstützung für WS-Federation aktivieren* auswählen, verwenden Sie den Wert **YOUR_AUTH0_DOMAIN**: `netapp-cloud-account.auth0.com`
@@ -64,7 +64,7 @@ AddRelyingParty "urn:auth0:netapp-cloud-account" "https://netapp-cloud-account.a
 
 
 +
-NetApp empfiehlt die Verwendung der Metadaten-URL, damit die NetApp Konsole automatisch die neueste AD FS-Konfiguration abrufen kann.  Wenn Sie die Federation-Metadatendatei herunterladen, müssen Sie sie bei jeder Änderung Ihrer AD FS-Konfiguration manuell in der NetApp -Konsole aktualisieren.
+NetApp empfiehlt die Verwendung der Metadaten-URL, damit die NetApp Console automatisch die neueste AD FS-Konfiguration abrufen kann.  Wenn Sie die Federation-Metadatendatei herunterladen, müssen Sie sie bei jeder Änderung Ihrer AD FS-Konfiguration manuell in der NetApp Console aktualisieren.
 
 . Kehren Sie zur Konsole zurück und wählen Sie *Weiter*, um die Verbindung herzustellen.
 . Stellen Sie die Verbindung mit AD FS her.
@@ -80,4 +80,4 @@ NetApp empfiehlt die Verwendung der Metadaten-URL, damit die NetApp Konsole auto
 . Wählen Sie *Fertig*, um den Vorgang abzuschließen.
 
 
-Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Konsole anmelden.
+Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Console anmelden.

@@ -13,10 +13,10 @@ image:screenshot_gcp_associate.gif["Ein Screenshot eines Google Cloud-Projekts u
 . Wenn Sie noch kein Abonnement haben, wählen Sie *Abonnement hinzufügen > Fortfahren* und folgen Sie den Schritten im Google Cloud Marketplace.
 +
 
-NOTE: Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie sowohl über Abrechnungsadministratorberechtigungen in Ihrem Google Cloud-Konto als auch über eine NetApp -Konsolenanmeldung verfügen.
+NOTE: Bevor Sie die folgenden Schritte ausführen, stellen Sie sicher, dass Sie sowohl über Abrechnungsadministratorberechtigungen in Ihrem Google Cloud-Konto als auch über eine NetApp Console verfügen.
 
 +
-.. Nachdem Sie weitergeleitet wurden auf die https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["NetApp Intelligent Services-Seite im Google Cloud Marketplace"^] , stellen Sie sicher, dass im oberen Navigationsmenü das richtige Projekt ausgewählt ist.
+.. Nachdem Sie weitergeleitet wurden auf die https://console.cloud.google.com/marketplace/product/netapp-cloudmanager/cloud-manager["NetApp Intelligent Services -Seite im Google Cloud Marketplace"^] , stellen Sie sicher, dass im oberen Navigationsmenü das richtige Projekt ausgewählt ist.
 +
 image:screenshot_gcp_cvo_marketplace.png["Ein Screenshot der Cloud Volumes ONTAP Marktplatzseite in Google Cloud."]
 
@@ -36,7 +36,7 @@ image:screenshot_gcp_marketplace_register.png["Ein Screenshot eines Registrierun
 .. Führen Sie die Schritte auf der Seite *Abonnementzuweisung* aus:
 +
 
-NOTE: Wenn jemand aus Ihrer Organisation bereits ein Marktplatz-Abonnement von Ihrem Abrechnungskonto hat, werden Sie weitergeleitet zu https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["die Cloud Volumes ONTAP -Seite in der NetApp Konsole"^] stattdessen.  Wenn dies unerwartet vorkommt, wenden Sie sich an Ihr NetApp -Vertriebsteam.  Google ermöglicht nur ein Abonnement pro Google-Abrechnungskonto.
+NOTE: Wenn jemand aus Ihrer Organisation bereits ein Marktplatz-Abonnement von Ihrem Abrechnungskonto hat, werden Sie weitergeleitet zu https://bluexp.netapp.com/ontap-cloud?x-gcp-marketplace-token=["die Cloud Volumes ONTAP -Seite in der NetApp Console"^] stattdessen.  Wenn dies unerwartet vorkommt, wenden Sie sich an Ihr NetApp -Vertriebsteam.  Google ermöglicht nur ein Abonnement pro Google-Abrechnungskonto.
 
 +
 *** Wählen Sie die Konsolenorganisationen oder -konten aus, mit denen Sie dieses Abonnement verknüpfen möchten.

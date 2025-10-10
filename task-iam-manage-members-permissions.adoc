@@ -4,7 +4,7 @@ permalink: task-iam-manage-members-permissions.html
 keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management 
 summary: Verwalten Sie die Mitglieder Ihrer Organisation, um Berechtigungen auf verschiedenen Ebenen der Ressourcenhierarchie Ihrer Organisation bereitzustellen. 
 ---
-= Fügen Sie der NetApp Konsole Mitglieder und Dienstkonten hinzu
+= Fügen Sie der NetApp Console Mitglieder und Dienstkonten hinzu
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -37,7 +37,7 @@ _Ordner- oder Projektadministratoren_ können alle Mitglieder auf der Seite *Mit
 
 Sie können Ihrer Organisation zwei Arten von Mitgliedern hinzufügen: ein Benutzerkonto und ein Dienstkonto. Anwendungen verwenden Dienstkonten, um API-Aufgaben ohne menschliches Eingreifen auszuführen.  Normalerweise verwendet eine Person ein Benutzerkonto, um sich anzumelden und Ressourcen zu verwalten.
 
-Benutzer müssen sich für die NetApp Konsole anmelden, bevor Sie sie zu einer Organisation hinzufügen oder ihnen eine Rolle zuweisen können.  Sie erstellen Dienstkonten direkt von der Konsole aus.
+Benutzer müssen sich für die NetApp Console anmelden, bevor Sie sie zu einer Organisation hinzufügen oder ihnen eine Rolle zuweisen können.  Sie erstellen Dienstkonten direkt von der Konsole aus.
 
 Um Benutzer und ihre Berechtigungen zu verwalten, müssen Sie über die Rolle *Organisationsadministrator* oder die Rolle *Ordner- oder Projektadministrator* verfügen.  Denken Sie daran, dass Benutzer mit der Rolle *Ordner- oder Projektadministrator* nur Mitglieder für die Ordner oder Projekte verwalten können, für die sie über Administratorberechtigungen verfügen.
 
@@ -45,15 +45,15 @@ Um Benutzer und ihre Berechtigungen zu verwalten, müssen Sie über die Rolle *O
 
 === Hinzufügen eines Benutzerkontos
 
-Obwohl sich Benutzer selbst für die NetApp Konsole anmelden, müssen sie explizit einer Organisation oder bestimmten Ordnern oder Projekten hinzugefügt werden, um auf Ressourcen in der Konsole zugreifen zu können.
+Obwohl sich Benutzer selbst für die NetApp Console anmelden, müssen sie explizit einer Organisation oder bestimmten Ordnern oder Projekten hinzugefügt werden, um auf Ressourcen in der Konsole zugreifen zu können.
 
 .Schritte
-. Leiten Sie den Benutzer zum Besuch weiter https://console.netapp.com/["NetApp Konsole"^] um sich anzumelden.
+. Leiten Sie den Benutzer zum Besuch weiter https://console.netapp.com/["NetApp Console"^] um sich anzumelden.
 +
 Sobald sich Benutzer angemeldet haben, füllen sie die Seite *Anmelden* aus, überprüfen ihre E-Mails und melden sich an. Wenn die Konsole Benutzer auffordert, eine Organisation zu erstellen, schließen sie diese und benachrichtigen Sie über die Erstellung ihres Kontos.  Anschließend können Sie den Benutzer zu Ihrer bestehenden Organisation hinzufügen.
 
 +
-link:task-sign-up-saas.html["Erfahren Sie, wie Sie sich für die NetApp -Konsole anmelden"] .
+link:task-sign-up-saas.html["Erfahren Sie, wie Sie sich für die NetApp Console anmelden"] .
 
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Mitglieder* aus.
@@ -65,7 +65,7 @@ link:task-sign-up-saas.html["Erfahren Sie, wie Sie sich für die NetApp -Konsole
 Beachten Sie Folgendes:
 
 +
-** Sie können nur aus den Ordnern und Projekten auswählen, für die Sie über Berechtigungen verfügen.
+** Sie können nur aus den Ordnern und Projekten auswählen, für die Sie Berechtigungen haben.
 ** Durch die Auswahl einer Organisation oder eines Ordners erhält das Mitglied Zugriff auf alle Inhalte.
 ** Sie können die Rolle *Organisationsadministrator* nur auf Organisationsebene zuweisen.
 
@@ -104,7 +104,7 @@ Ihr X.509-Zertifikat.  Es muss im PEM-, CRT- oder CER-Format vorliegen.
 Beachten Sie Folgendes:
 
 +
-** Sie können nur aus den Ordnern und Projekten auswählen, für die Sie über Berechtigungen verfügen.
+** Sie können nur aus den Ordnern und Projekten auswählen, für die Sie Berechtigungen haben.
 ** Durch die Auswahl einer Organisation oder eines Ordners erhält das Mitglied Zugriff auf alle Inhalte.
 ** Sie können die Rolle *Organisationsadministrator* nur auf Organisationsebene zuweisen.
 

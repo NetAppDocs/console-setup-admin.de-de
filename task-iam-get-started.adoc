@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-iam-get-started.html 
 keywords: iam, quick start, get started, get started with iam, identity and access management 
-summary: Um mit der Identitäts- und Zugriffsverwaltung in der NetApp Konsole zu beginnen, passen Sie die Hierarchie der Organisation an, fügen Sie zusätzliche Mitglieder hinzu, fügen Sie Ressourcen hinzu oder ermitteln Sie sie und verknüpfen Sie diese Ressourcen mit Projekten. 
+summary: Um mit der Identitäts- und Zugriffsverwaltung in der NetApp Console zu beginnen, passen Sie die Hierarchie der Organisation an, fügen Sie zusätzliche Mitglieder hinzu, fügen Sie Ressourcen hinzu oder ermitteln Sie sie und verknüpfen Sie diese Ressourcen mit Projekten. 
 ---
-= Erste Schritte mit Identität und Zugriff in der NetApp Konsole
+= Erste Schritte mit Identität und Zugriff in der NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Um mit der Identitäts- und Zugriffsverwaltung in der NetApp Konsole zu
 
 
 [role="lead"]
-Wenn Sie sich für die NetApp Konsole anmelden, werden Sie aufgefordert, eine neue Organisation zu erstellen.  Die Organisation umfasst ein Mitglied (einen Organisationsadministrator) und ein Standardprojekt.  Um die Identitäts- und Zugriffsverwaltung (IAM) so einzurichten, dass sie Ihren Geschäftsanforderungen entspricht, müssen Sie die Hierarchie Ihrer Organisation anpassen, zusätzliche Mitglieder hinzufügen, Ressourcen hinzufügen oder ermitteln und diese Ressourcen in Ihrer Hierarchie verknüpfen.
+Wenn Sie sich für die NetApp Console anmelden, werden Sie aufgefordert, eine neue Organisation zu erstellen.  Die Organisation umfasst ein Mitglied (einen Organisationsadministrator) und ein Standardprojekt.  Um die Identitäts- und Zugriffsverwaltung (IAM) so einzurichten, dass sie Ihren Geschäftsanforderungen entspricht, müssen Sie die Hierarchie Ihrer Organisation anpassen, zusätzliche Mitglieder hinzufügen, Ressourcen hinzufügen oder ermitteln und diese Ressourcen in Ihrer Hierarchie verknüpfen.
 
 Sie müssen über die Berechtigung *Organisationsadministrator* verfügen, um die Identität und den Zugriff für Ihre gesamte Organisation zu verwalten.  Wenn Sie über die Berechtigung *Ordner- oder Projektadministrator* verfügen, können Sie nur die Ordner und Projekte verwalten, für die Sie über die Berechtigung verfügen.
 
@@ -60,6 +60,6 @@ Durch das Hinzufügen oder Erkennen eines Systems in der Konsole wird die Ressou
 
 
 .Ähnliche Informationen
-* link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identitäts- und Zugriffsmanagement in der NetApp -Konsole"]
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identitäts- und Zugriffsmanagement in der NetApp Console"]
 * https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identität und Zugriff"^]
 

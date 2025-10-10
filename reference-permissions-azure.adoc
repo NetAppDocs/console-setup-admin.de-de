@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-azure.html 
 keywords: permissions, azure, azure permissions, bluexp 
-summary: Wenn die NetApp Konsole einen Konsolenagenten in Azure startet, weist sie der VM eine benutzerdefinierte Rolle zu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses Azure-Abonnements erteilt.  Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere Azure-Dienste zu tätigen. 
+summary: Wenn die NetApp Console einen Konsolenagenten in Azure startet, weist sie der VM eine benutzerdefinierte Rolle zu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses Azure-Abonnements erteilt.  Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere Azure-Dienste zu tätigen. 
 ---
 = Azure-Berechtigungen für den Konsolen-Agent
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: Wenn die NetApp Konsole einen Konsolenagenten in Azure startet, weist s
 
 
 [role="lead"]
-Wenn die NetApp Konsole einen Konsolenagenten in Azure startet, weist sie der VM eine benutzerdefinierte Rolle zu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses Azure-Abonnements erteilt.  Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere Azure-Dienste zu tätigen.
+Wenn die NetApp Console einen Konsolenagenten in Azure startet, weist sie der VM eine benutzerdefinierte Rolle zu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses Azure-Abonnements erteilt.  Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere Azure-Dienste zu tätigen.
 
 Ob Sie diese benutzerdefinierte Rolle für den Agenten erstellen müssen, hängt davon ab, wie Sie sie bereitgestellt haben.
 
-.Bereitstellen über die NetApp -Konsole
+.Bereitstellen über die NetApp Console
 Wenn Sie die Konsole verwenden, um die Agent-VM in Azure bereitzustellen, ermöglicht dies eine https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["systemseitig zugewiesene verwaltete Identität"^] auf der virtuellen Maschine, erstellt eine benutzerdefinierte Rolle und weist sie der virtuellen Maschine zu.  Die Rolle stellt der Konsole die erforderlichen Berechtigungen zum Verwalten von Ressourcen und Prozessen innerhalb dieses Azure-Abonnements zur Verfügung.  Die Berechtigungen der Rolle werden beim Upgrade des Agenten auf dem neuesten Stand gehalten.  Sie müssen diese Rolle für den Agenten nicht erstellen oder Updates verwalten.
 
 .Manuelle Bereitstellung oder Bereitstellung über den Azure Marketplace
@@ -183,7 +183,7 @@ In den folgenden Abschnitten wird beschrieben, wie die Berechtigungen für jedes
 
 === Azure NetApp Files
 
-Der Agent stellt die folgenden API-Anforderungen, wenn Sie die NetApp Datenklassifizierung zum Scannen von Azure NetApp Files -Daten verwenden:
+Der Agent stellt die folgenden API-Anforderungen, wenn Sie die NetApp Data Classification zum Scannen von Azure NetApp Files -Daten verwenden:
 
 * NetApp/netAppAccounts/read
 * NetApp/netAppAccounts/capacityPools/read
@@ -194,7 +194,7 @@ Der Agent stellt die folgenden API-Anforderungen, wenn Sie die NetApp Datenklass
 
 
 
-=== NetApp Backup und Recovery
+=== NetApp Backup and Recovery
 
 Der Konsolenagent stellt die folgenden API-Anfragen für NetApp Backup and Recovery:
 
@@ -242,7 +242,7 @@ Der Agent stellt die folgenden API-Anfragen, wenn Sie die Such- und Wiederherste
 
 
 
-=== NetApp Datenklassifizierung
+=== NetApp Data Classification
 
 Der Agent stellt die folgenden API-Anfragen, wenn Sie die Datenklassifizierung verwenden.
 
@@ -801,7 +801,7 @@ Die folgenden Berechtigungen wurden der JSON-Richtlinie hinzugefügt:
 * Microsoft.Storage/storageAccounts/listAccountSas/action
 * Microsoft.Synapse/workspaces/privateEndpointConnectionsApproval/action
 +
-Diese Berechtigungen sind für NetApp Backup und Recovery erforderlich.
+Diese Berechtigungen sind für NetApp Backup and Recovery erforderlich.
 
 * Microsoft.Network/loadBalancers/backendAddressPools/join/action
 +

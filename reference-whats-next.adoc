@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-whats-next.html 
 keywords: standard mode, what you can do 
-summary: Nachdem Sie sich angemeldet und die NetApp Konsole im Standardmodus eingerichtet haben, können Benutzer Speichersysteme erstellen und erkennen sowie NetApp -Datendienste verwenden. 
+summary: Nachdem Sie sich angemeldet und die NetApp Console im Standardmodus eingerichtet haben, können Benutzer Speichersysteme erstellen und erkennen sowie NetApp -Datendienste verwenden. 
 ---
 = Was Sie als Nächstes tun können (Standardmodus)
 :hardbreaks:
@@ -14,12 +14,12 @@ summary: Nachdem Sie sich angemeldet und die NetApp Konsole im Standardmodus ein
 
 
 [role="lead"]
-Nachdem Sie sich angemeldet und die NetApp Konsole im Standardmodus eingerichtet haben, können Benutzer Speichersysteme erstellen und erkennen sowie NetApp -Datendienste verwenden.
+Nachdem Sie sich angemeldet und die NetApp Console im Standardmodus eingerichtet haben, können Benutzer Speichersysteme erstellen und erkennen sowie NetApp -Datendienste verwenden.
 
 
 TIP: Wenn Sie einen Konsolenagenten in AWS, Microsoft Azure oder Google Cloud installiert haben, erkennt die Konsole automatisch Informationen zu den Amazon S3-Buckets, Azure Blob Storage oder Google Cloud Storage-Buckets am Standort, an dem der Agent installiert ist.  Diese Systeme werden automatisch zur Seite *Systeme* hinzugefügt.
 
-Hilfe erhalten Sie unter https://docs.netapp.com/us-en/console-family/["Homepage für die NetApp Console-Dokumentation"^] um die Dokumentation zur NetApp -Konsole anzuzeigen.
+Hilfe erhalten Sie unter https://docs.netapp.com/us-en/console-family/["Homepage für die NetApp Console Dokumentation"^] um die Dokumentation zur NetApp Console anzuzeigen.
 
 .Ähnliche Informationen
-link:concept-modes.html["Bereitstellungsmodi der NetApp Konsole"]
+link:concept-modes.html["Bereitstellungsmodi der NetApp Console"]

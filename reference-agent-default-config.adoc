@@ -20,7 +20,7 @@ Informieren Sie sich vor der Bereitstellung des Konsolenagenten über dessen Kon
 
 == Standardkonfiguration mit Internetzugang
 
-Die folgenden Konfigurationsdetails gelten, wenn Sie einen Konsolenagenten von der NetApp -Konsole oder vom Marktplatz Ihres Cloud-Anbieters bereitgestellt haben oder wenn Sie einen Konsolenagenten manuell auf einem lokalen Linux-Host mit Internetzugang installiert haben.
+Die folgenden Konfigurationsdetails gelten, wenn Sie einen Konsolenagenten von der NetApp Console oder vom Marktplatz Ihres Cloud-Anbieters bereitgestellt haben oder wenn Sie einen Konsolenagenten manuell auf einem lokalen Linux-Host mit Internetzugang installiert haben.
 
 
 

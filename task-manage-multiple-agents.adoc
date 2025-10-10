@@ -25,7 +25,7 @@ Wenn Sie über mehrere Konsolenagenten verfügen, können Sie zwischen ihnen wec
 Beispielsweise haben Sie in einer Multi-Cloud-Umgebung möglicherweise einen Agenten in AWS und einen anderen in Google Cloud.  Wechseln Sie zwischen diesen Agenten, um die Cloud Volumes ONTAP -Systeme in den jeweiligen Cloud-Umgebungen zu verwalten.
 
 
-NOTE: Diese Option ist nicht verfügbar, wenn Sie die NetApp Konsole über die lokale Benutzeroberfläche des Agenten anzeigen.
+NOTE: Diese Option ist nicht verfügbar, wenn Sie die NetApp Console über die lokale Benutzeroberfläche des Agenten anzeigen.
 
 .Schritt
 . Wählen Sie das Symbol „Konsolenagenten“ (image:icon-agent.png["Agentensymbol"] ), um die Liste der verfügbaren Agenten anzuzeigen.

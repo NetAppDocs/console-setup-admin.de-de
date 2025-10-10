@@ -4,7 +4,7 @@ permalink: task-partnerships-create.html
 keywords: partner organizations, create partnership, MSPs, service provider access 
 summary: Bauen Sie Partnerschaften auf, um sichere, verwaltete Verbindungen zwischen Ihrem Unternehmen und vertrauenswürdigen Partnern für ein kollaboratives NetApp Ressourcenmanagement herzustellen. 
 ---
-= Verwalten Sie Partnerschaften in der NetApp -Konsole
+= Verwalten Sie Partnerschaften in der NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
