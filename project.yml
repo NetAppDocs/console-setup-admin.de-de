@@ -155,7 +155,7 @@ sidebar:
             url: "/reference-iam-backup-rec-roles.html"
           - title: Rollen für die Notfallwiederherstellung
             url: "/reference-iam-disaster-rec-roles.html"
-          - title: Rollen zum Schutz vor Ransomware
+          - title: Ransomware-Resilienzrollen
             url: "/reference-iam-ransomware-roles.html"
     - title: Partnerorganisationen
       entries:

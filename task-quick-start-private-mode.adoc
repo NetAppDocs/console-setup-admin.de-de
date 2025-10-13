@@ -85,7 +85,7 @@ Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstütz
 | Wirtschaftlichkeit | Nein 
 
 
-| Ransomware-Schutz | Nein 
+| Ransomware-Resilienz | Nein 
 
 
 | Replikation | Ja 

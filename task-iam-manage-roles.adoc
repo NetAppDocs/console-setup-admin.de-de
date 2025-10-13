@@ -16,9 +16,9 @@ summary: In der NetApp Console können Sie Benutzern Rollen zuweisen, je nachdem
 [role="lead"]
 Innerhalb der Konsole können Sie Benutzern Rollen zuweisen, je nachdem, was sie tun müssen und wo.
 
-Benutzer mit der Rolle *Organisationsadministrator* oder *Ordner- oder Projektadministrator* sind dafür verantwortlich, anderen Benutzern Rollen zuzuweisen.  Sie können Zugriffsrollen auf Projekt- oder Ordnerbasis zuweisen.  Sie können einem Benutzer beispielsweise für ein Projekt die Administratorrolle für den Ransomware-Schutz und für ein anderes Projekt die Administratorrolle für SnapCenter zuweisen.  Wenn ein Benutzer alternativ die Klassifizierungsadministratorrolle für alle Projekte in einem bestimmten Ordner benötigt, können Sie ihm diese Rolle auf Ordnerebene zuweisen.
+Benutzer mit der Rolle *Organisationsadministrator* oder *Ordner- oder Projektadministrator* sind dafür verantwortlich, anderen Benutzern Rollen zuzuweisen. Sie können Zugriffsrollen auf Projekt- oder Ordnerbasis zuweisen. Sie können einem Benutzer beispielsweise für ein Projekt die Administratorrolle „Ransomware Resilience“ und für ein anderes Projekt die Administratorrolle „SnapCenter“ zuweisen. Wenn ein Benutzer alternativ die Klassifizierungsadministratorrolle für alle Projekte in einem bestimmten Ordner benötigt, können Sie ihm diese Rolle auf Ordnerebene zuweisen.
 
-Verwenden Sie Zugriffsrollen, um den Zugriff auf Speicherressourcen basierend auf den spezifischen Aufgaben zuzuweisen, die Benutzer ausführen müssen.  Wenn ein Benutzer beispielsweise mit Ransomware-Schutzdiensten interagieren muss, muss ihm eine Zugriffsrolle zugewiesen werden, die entweder Anzeige- oder Administratorberechtigungen für den Ransomware-Schutzdienst für das Projekt umfasst, für das die Zugriffsrolle gewährt wird.
+Verwenden Sie Zugriffsrollen, um den Zugriff auf Speicherressourcen basierend auf den spezifischen Aufgaben zuzuweisen, die Benutzer ausführen müssen. Wenn ein Benutzer beispielsweise mit Ransomware Resilience interagieren muss, muss ihm eine Zugriffsrolle zugewiesen werden, die entweder Anzeige- oder Administratorberechtigungen für Ransomware Resilience für das Projekt umfasst, für das die Zugriffsrolle gewährt wird.
 
 Weisen Sie Benutzern basierend auf Ihrer IAM-Strategie Rollen zu, um die Sicherheit zu erhöhen.  IAM-Rollen stellen sicher, dass Benutzer nur den Zugriff haben, den sie benötigen.
 
@@ -45,7 +45,7 @@ Normalerweise weisen Sie eine Rolle zu, wenn Sie ein Mitglied zu Ihrer Organisat
 
 Sie können einem Benutzer eine Zugriffsrolle für Ihre Organisation, Ihren Ordner oder Ihr Projekt zuweisen.
 
-Mitglieder können innerhalb desselben Projekts und in verschiedenen Projekten mehrere Rollen haben.  Beispielsweise können kleinere Organisationen alle verfügbaren Zugriffsrollen demselben Benutzer zuweisen, während größere Organisationen Benutzer mit spezialisierteren Aufgaben betrauen.  Alternativ können Sie einem Benutzer auch die Administratorrolle für den Ransomware-Schutz einer Organisation zuweisen.  In diesem Beispiel könnte der Benutzer Ransomware-Schutzaufgaben für alle Projekte innerhalb Ihrer Organisation durchführen.
+Mitglieder können innerhalb desselben Projekts und in verschiedenen Projekten mehrere Rollen haben. Beispielsweise können kleinere Organisationen alle verfügbaren Zugriffsrollen demselben Benutzer zuweisen, während größere Organisationen Benutzer mit spezialisierteren Aufgaben betrauen. Alternativ können Sie einem Benutzer auch die Administratorrolle „Ransomware Resilience“ für eine Organisation zuweisen.  In diesem Beispiel könnte der Benutzer Ransomware-Resilience-Aufgaben für alle Projekte innerhalb Ihrer Organisation ausführen.
 
 Ihre Zugriffsrollenstrategie sollte mit der Art und Weise übereinstimmen, wie Sie Ihre NetApp -Ressourcen organisiert haben.
 

@@ -71,7 +71,7 @@ Im Standardmodus benötigt die Konsole einen Konsolenagenten für:
 * Wirtschaftlichkeit ^1^
 * Google Cloud Storage-Buckets
 * On-Premises- ONTAP -Cluster-Integration mit NetApp -Datendiensten
-* NetApp Ransomware-Resilienz
+* NetApp Ransomware Resilience
 * StorageGRID -Systeme
 * NetApp Cloud Tiering
 * NetApp Volume Caching
