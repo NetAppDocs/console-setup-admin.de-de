@@ -153,7 +153,7 @@ sidebar:
           entries:
           - title: Sicherungs- und Wiederherstellungsrollen
             url: "/reference-iam-backup-rec-roles.html"
-          - title: Rollen für die Notfallwiederherstellung
+          - title: Disaster Recovery-Rollen
             url: "/reference-iam-disaster-rec-roles.html"
           - title: Ransomware-Resilienzrollen
             url: "/reference-iam-ransomware-roles.html"

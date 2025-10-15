@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
-summary: In der NetApp Console können Sie Rollen zuweisen, um Benutzern Zugriff auf NetApp Ransomware Resilience zu gewähren. 
+summary: Ransomware Resilience bietet verschiedene Benutzerrollen zur Verwaltung des Zugriffs auf Berechtigungsaktionen und Berichte. 
 ---
 = Ransomware Resilience-Zugriffsrollen für die NetApp Console
 :hardbreaks:
@@ -22,32 +22,26 @@ Ransomware Resilience-Rollen bieten Benutzern Zugriff auf NetApp Ransomware Resi
 * Ransomware Resilience-Benutzerverhaltensanzeige
 
 
-Die Rollen gewähren unterschiedlichen Zugriff auf Einstellungen und Aktionen.  Um verdächtige Benutzerverhaltensaktivitäten zu konfigurieren oder anzuzeigen, müssen Sie eine der Benutzerverhaltensrollen verwenden.
+Die Rollen gewähren unterschiedliche Zugriffsebenen auf Einstellungen und Aktionen.
 
-Die folgende Tabelle zeigt die Aktionen, die jede Rolle ausführen kann.
+Die für die Rollen „Benutzerverhaltensadministrator“ und „Benutzerverhaltensbetrachter“ von Ransomware Resilience verfügbaren Aktionen sind beschränkt auf link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["verdächtige Benutzeraktivität"^]. Diese Rollen sind dazu vorgesehen, den Administrator- oder Viewer-Rollen von Ransomware Resilience hinzugefügt zu werden. Um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren und auf Warnungen zu reagieren, muss ein Benutzer über die Administratorrolle „Ransomware Resilience-Benutzerverhalten“ verfügen. Um nur Warnungen zu verdächtigem Benutzerverhalten anzuzeigen, sollte ein Benutzer über die Rolle „Ransomware Resilience-Benutzerverhaltensanzeiger“ verfügen.
 
-[cols="40,20a,20a,20a,20a"]
+In der folgenden Tabelle werden die Aktionen unterschieden, die den Rollen „Ransomware Resilience-Administrator“ und „Ransomware Resilience-Viewer“ zur Verfügung stehen.
+
+[cols="40,20a,20a"]
 |===
-| Funktion und Aktion | Ransomware-Resilienz-Administrator | Ransomware Resilience-Viewer | Ransomware Resilience-Benutzerverhaltensadministrator | Ransomware Resilience-Benutzerverhaltensanzeige 
+| Funktion und Aktion | Ransomware-Resilienz-Administrator | Ransomware Resilience-Viewer 
 
 
 | Dashboard und alle Registerkarten anzeigen  a| 
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
 | Aktualisieren Sie den Empfehlungsstatus auf dem Dashboard  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -57,19 +51,11 @@ Nein
 Ja
  a| 
 Nein
- a| 
-Nein
- a| 
-Nein
 
 
 
 | Ermittlung von Workloads initiieren  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -79,22 +65,14 @@ Nein
 Ja
  a| 
 Nein
- a| 
-Nein
- a| 
-Nein
 
 
 
-5+| *Auf der Registerkarte „Schützen“*: 
+3+| *Auf der Registerkarte „Schützen“*: 
 
 
 | Schutzpläne hinzufügen, ändern oder löschen  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -104,19 +82,11 @@ Nein
 Ja
  a| 
 Nein
- a| 
-Nein
- a| 
-Nein
 
 
 
 | Identifizieren Sie die Gefährdung sensibler Daten  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -126,10 +96,6 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
@@ -137,10 +103,6 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
@@ -148,19 +110,11 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
-| Schutzgruppe erstellen, bearbeiten oder löschen  a| 
+| Erstellen, Bearbeiten oder Löschen einer Schutzgruppe  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -170,33 +124,21 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
-5+| *Auf der Registerkarte „Warnungen“*: 
+3+| *Auf der Registerkarte „Warnungen“*: 
 
 
 | Anzeigen von Warnungen und Warnungsdetails  a| 
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
 | Vorfallstatus bearbeiten  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -206,10 +148,6 @@ Nein
 Ja
  a| 
 Nein
- a| 
-Nein
- a| 
-Nein
 
 
 
@@ -217,19 +155,11 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
 | Vorfälle verwerfen oder lösen  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -239,19 +169,11 @@ Nein
 Ja
  a| 
 Nein
- a| 
-Nein
- a| 
-Nein
 
 
 
 | Vollständige Liste der betroffenen Dateien abrufen  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -261,10 +183,6 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
@@ -272,22 +190,14 @@ Nein
 Nein
  a| 
 Nein
- a| 
-Ja
- a| 
-Ja
 
 
 
-5+| *Auf der Registerkarte „Wiederherstellen“*: 
+3+| *Auf der Registerkarte „Wiederherstellen“*: 
 
 
 | Betroffene Dateien herunterladen  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -297,10 +207,6 @@ Nein
 Ja
  a| 
 Nein
- a| 
-Nein
- a| 
-Nein
 
 
 
@@ -308,10 +214,6 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
@@ -319,22 +221,14 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
-5+| *Auf der Registerkarte „Einstellungen“*: 
+3+| *Auf der Registerkarte „Einstellungen“*: 
 
 
 | Hinzufügen oder Ändern von Sicherungszielen  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -344,10 +238,6 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
@@ -355,19 +245,11 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
 | SIEM-Ziele hinzufügen oder ändern  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -377,19 +259,11 @@ Nein
 Ja
  a| 
 Nein
- a| 
-Nein
- a| 
-Nein
 
 
 
 | Starten Sie die Bereitschaftsübung  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -399,19 +273,11 @@ Nein
 Ja
  a| 
 Nein
- a| 
-Nein
- a| 
-Nein
 
 
 
 | Bereitschaftsübung bearbeiten  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -421,19 +287,11 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
 | Aktualisieren der Erkennungskonfiguration  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
  a| 
 Nein
 
@@ -443,10 +301,6 @@ Nein
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 
 
@@ -454,23 +308,15 @@ Nein
 Nein
  a| 
 Nein
- a| 
-Ja
- a| 
-Nein
 
 
 
-5+| *Auf der Registerkarte „Berichte“*: 
+3+| *Auf der Registerkarte „Berichte“*: 
 
 
 | Berichte herunterladen  a| 
 Ja
  a| 
 Ja
- a| 
-Nein
- a| 
-Nein
 
 |===
