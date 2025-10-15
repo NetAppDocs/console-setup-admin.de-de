@@ -225,3 +225,38 @@ NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese 
 
 
 == Lokale Agent-Endpunkte
+
+[cols="2*"]
+|===
+| Endpunkte | Zweck 
+
+
+| \https://support.netapp.com \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden. 
+
+
+| \https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com | Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen. 
+
+
+ a| 
+Wählen Sie zwischen zwei Endpunktsätzen:
+
+* Option 1 (empfohlen)
++
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+
+* Option 2
++
+\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+
+
+ a| 
+Um Bilder für Upgrades des Konsolenagenten zu erhalten.
+
+NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen, es sei denn, Sie verwenden Ransomware Resilience oder Backup and Recovery.  Beachten Sie Folgendes zu diesen Endpunkten:
+
+* Endpunkte der Option 1 werden in 3.9.47 und höher unterstützt.  Versionen vor 3.9.47 unterstützen keine Abwärtskompatibilität.
+* Der Konsolenagent initiiert zuerst den Kontakt mit den Endpunkten in Option 2.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.
+* Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
+
+
+|===

@@ -42,13 +42,13 @@ Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
 
 | Zum Verwalten von Ressourcen in Google Cloud.
 
-| \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport Nachrichten an den NetApp Support zu senden. | \https://support.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport Nachrichten an den NetApp Support zu senden. | \https://signin.b2c.netapp.com | So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu. | \https://support.netapp.com | Zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport Nachrichten an den NetApp Support sowie zum Empfangen von Software-Updates für Cloud Volumes ONTAP.
+| \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport Nachrichten an den NetApp Support zu senden. | \https://signin.b2c.netapp.com | So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu. | \https://support.netapp.com | Zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport Nachrichten an den NetApp Support sowie zum Empfangen von Software-Updates für Cloud Volumes ONTAP.
 
 | \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Console.
 
 a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| Um Bilder für Upgrades des Konsolenagenten zu erhalten.
 
-* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten.  Wenn Sielink:link:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl.  Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
+* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten. Wenn Sielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl. Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
 +
 Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
 

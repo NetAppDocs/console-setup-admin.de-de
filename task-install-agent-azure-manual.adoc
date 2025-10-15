@@ -149,7 +149,7 @@ Befolgen Sie diese Schritte, um Podman zu installieren und zu konfigurieren:
 * Installieren Sie Python3
 * Installieren Sie das Podman-Compose-Paket Version 1.0.6
 * Fügen Sie podman-compose zur Umgebungsvariablen PATH hinzu
-* Wenn Sie Red Hat Enterprise Linux 8 verwenden, überprüfen Sie, ob Ihre Podman-Version Aardvark DNS anstelle von CNI verwendet
+* Wenn Sie Red Hat Enterprise Linux verwenden, überprüfen Sie, ob Ihre Podman-Version Netavark Aardvark DNS anstelle von CNI verwendet
 
 
 
@@ -349,13 +349,6 @@ Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Su
 
 
  a| 
-\https://support.netapp.com
- a| 
-Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
-
-
-
- a| 
 \https://signin.b2c.netapp.com
  a| 
 So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
@@ -381,7 +374,7 @@ Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
  a| 
 Um Bilder für Upgrades des Konsolenagenten zu erhalten.
 
-* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten.  Wenn Sielink:link:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl.  Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
+* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten. Wenn Sielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl. Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
 +
 Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
 
