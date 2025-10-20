@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-iam-ransomware-roles.html 
 keywords: predefined roles, iam roles, organization admin, folder or project admin, identity and access management, access roles, admin, 
-summary: Ransomware Resilience bietet verschiedene Benutzerrollen zur Verwaltung des Zugriffs auf Berechtigungsaktionen und Berichte. 
+summary: Ransomware Resilience bietet verschiedene Benutzerrollen zur Verwaltung des Zugriffs auf Einstellungen, Aktionen und Berichte. 
 ---
 = Ransomware Resilience-Zugriffsrollen für die NetApp Console
 :hardbreaks:
@@ -16,17 +16,28 @@ summary: Ransomware Resilience bietet verschiedene Benutzerrollen zur Verwaltung
 [role="lead"]
 Ransomware Resilience-Rollen bieten Benutzern Zugriff auf NetApp Ransomware Resilience. Ransomware Resilience unterstützt die folgenden Rollen:
 
-* Ransomware-Resilienz-Administrator
-* Ransomware Resilience-Viewer
-* Ransomware Resilience-Benutzerverhaltensadministrator
-* Ransomware Resilience-Benutzerverhaltensanzeige
+**Basisrollen**
+
+* Ransomware-Resilience-Administrator – Konfigurieren Sie die Ransomware-Resilience-Einstellungen; untersuchen Sie Verschlüsselungswarnungen und reagieren Sie darauf.
+* Ransomware Resilience Viewer – Anzeigen von Verschlüsselungsvorfällen, Berichten und Erkennungseinstellungen
 
 
-Die Rollen gewähren unterschiedliche Zugriffsebenen auf Einstellungen und Aktionen.
+**Aktivitätsrollen für Benutzerverhalten**link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Erkennung verdächtiger Benutzeraktivitäten"^] Warnungen bieten Einblick in Daten wie Dateiaktivitätsereignisse. Diese Warnungen umfassen Dateinamen und vom Benutzer ausgeführte Dateiaktionen (wie Lesen, Schreiben, Löschen, Umbenennen).  Um die Sichtbarkeit dieser Daten einzuschränken, können nur Benutzer mit diesen Rollen diese Warnungen verwalten oder anzeigen.
 
-Die für die Rollen „Benutzerverhaltensadministrator“ und „Benutzerverhaltensbetrachter“ von Ransomware Resilience verfügbaren Aktionen sind beschränkt auf link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["verdächtige Benutzeraktivität"^]. Diese Rollen sind dazu vorgesehen, den Administrator- oder Viewer-Rollen von Ransomware Resilience hinzugefügt zu werden. Um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren und auf Warnungen zu reagieren, muss ein Benutzer über die Administratorrolle „Ransomware Resilience-Benutzerverhalten“ verfügen. Um nur Warnungen zu verdächtigem Benutzerverhalten anzuzeigen, sollte ein Benutzer über die Rolle „Ransomware Resilience-Benutzerverhaltensanzeiger“ verfügen.
+* Ransomware Resilience-Benutzerverhaltensadministrator – Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten, untersuchen Sie verdächtige Benutzeraktivitäten und reagieren Sie auf Warnungen zu verdächtigen Benutzeraktivitäten
+* Ransomware Resilience-Benutzerverhaltensanzeige – Anzeigen von Warnungen zu verdächtigen Benutzeraktivitäten
 
-In der folgenden Tabelle werden die Aktionen unterschieden, die den Rollen „Ransomware Resilience-Administrator“ und „Ransomware Resilience-Viewer“ zur Verfügung stehen.
+
+
+NOTE: Benutzerverhaltensrollen sind keine eigenständigen Rollen. Sie sind dafür vorgesehen, den Administrator- oder Viewer-Rollen von Ransomware Resilience hinzugefügt zu werden. Weitere Informationen finden Sie unter <<Benutzerverhaltensrollen>>.
+
+Ausführliche Beschreibungen der einzelnen Rollen finden Sie in den folgenden Tabellen.
+
+
+
+== Basisrollen
+
+In der folgenden Tabelle werden die Aktionen beschrieben, die den Administrator- und Viewer-Rollen von Ransomware Resilience zur Verfügung stehen.
 
 [cols="40,20a,20a"]
 |===
@@ -71,7 +82,7 @@ Nein
 3+| *Auf der Registerkarte „Schützen“*: 
 
 
-| Schutzpläne hinzufügen, ändern oder löschen  a| 
+| Hinzufügen, Ändern oder Löschen von Schutzplänen für _Verschlüsselungs_richtlinien  a| 
 Ja
  a| 
 Nein
@@ -85,7 +96,7 @@ Nein
 
 
 
-| Identifizieren Sie die Gefährdung sensibler Daten  a| 
+| Identifizieren Sie die Gefährdung sensibler Daten mit der Datenklassifizierung  a| 
 Ja
  a| 
 Nein
@@ -113,7 +124,7 @@ Ja
 
 
 
-| Erstellen, Bearbeiten oder Löschen einer Schutzgruppe  a| 
+| Erstellen, Bearbeiten oder Löschen von Schutzgruppen  a| 
 Ja
  a| 
 Nein
@@ -130,64 +141,57 @@ Ja
 3+| *Auf der Registerkarte „Warnungen“*: 
 
 
-| Anzeigen von Warnungen und Warnungsdetails  a| 
+| Anzeigen von Verschlüsselungswarnungen und Warnungsdetails  a| 
 Ja
  a| 
 Ja
 
 
 
-| Vorfallstatus bearbeiten  a| 
-Ja
- a| 
-Nein
-
-
-
-| Alarm zur Wiederherstellung markieren  a| 
+| Verschlüsselungsvorfallstatus bearbeiten  a| 
 Ja
  a| 
 Nein
 
 
 
-| Vorfalldetails anzeigen  a| 
-Ja
- a| 
-Ja
-
-
-
-| Vorfälle verwerfen oder lösen  a| 
+| Verschlüsselungsalarm zur Wiederherstellung markieren  a| 
 Ja
  a| 
 Nein
 
 
 
-| Benutzer blockieren  a| 
-Ja
- a| 
-Nein
-
-
-
-| Vollständige Liste der betroffenen Dateien abrufen  a| 
-Ja
- a| 
-Nein
-
-
-
-| Warndaten herunterladen  a| 
+| Details zum Verschlüsselungsvorfall anzeigen  a| 
 Ja
  a| 
 Ja
 
 
 
-| Anzeigen verdächtiger Benutzeraktivitäten  a| 
+| Verschlüsselungsvorfälle verwerfen oder beheben  a| 
+Ja
+ a| 
 Nein
+
+
+
+| Vollständige Liste der betroffenen Dateien im Verschlüsselungsereignis abrufen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Daten zu Verschlüsselungsereigniswarnungen herunterladen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Benutzer blockieren (mit Workload Security-Agent-Konfiguration)  a| 
+Ja
  a| 
 Nein
 
@@ -196,28 +200,28 @@ Nein
 3+| *Auf der Registerkarte „Wiederherstellen“*: 
 
 
-| Betroffene Dateien herunterladen  a| 
+| Herunterladen der betroffenen Dateien vom Verschlüsselungsereignis  a| 
 Ja
  a| 
 Nein
 
 
 
-| Workload wiederherstellen  a| 
+| Workload nach Verschlüsselungsereignis wiederherstellen  a| 
 Ja
  a| 
 Nein
 
 
 
-| Wiederherstellungsdaten herunterladen  a| 
+| Wiederherstellungsdaten aus dem Verschlüsselungsereignis herunterladen  a| 
 Ja
  a| 
 Ja
 
 
 
-| Berichte herunterladen  a| 
+| Laden Sie Berichte vom Verschlüsselungsereignis herunter  a| 
 Ja
  a| 
 Ja
@@ -262,21 +266,7 @@ Nein
 
 
 
-| Starten Sie die Bereitschaftsübung  a| 
-Ja
- a| 
-Nein
-
-
-
-| Übung zur Reset-Bereitschaft  a| 
-Ja
- a| 
-Nein
-
-
-
-| Bereitschaftsübung bearbeiten  a| 
+| Bereitschaftsübung starten, zurücksetzen oder bearbeiten  a| 
 Ja
  a| 
 Nein
@@ -304,17 +294,155 @@ Ja
 
 
 
-| Konfigurieren Sie Einstellungen für verdächtiges Benutzerverhalten  a| 
-Nein
+3+| *Auf der Registerkarte „Berichte“*: 
+
+
+| Berichte herunterladen  a| 
+Ja
+ a| 
+Ja
+
+|===
+
+
+== Benutzerverhaltensrollen
+
+Um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren und auf Warnungen zu reagieren, muss ein Benutzer über die Administratorrolle „Ransomware Resilience-Benutzerverhalten“ verfügen. Um nur Warnungen zu verdächtigem Benutzerverhalten anzuzeigen, sollte ein Benutzer über die Rolle „Ransomware Resilience-Benutzerverhaltensanzeiger“ verfügen.
+
+Benutzerverhaltensrollen sollten Benutzern mit vorhandenen Ransomware Resilience-Administrator- oder Viewer-Berechtigungen zugewiesen werden, die Zugriff auf Folgendes benötigen:link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Einstellungen und Warnungen bei verdächtigen Benutzeraktivitäten"^] .  Ein Benutzer mit der Administratorrolle „Ransomware Resilience“ sollte beispielsweise die Administratorrolle „Ransomware Resilience-Benutzerverhalten“ erhalten, um Benutzeraktivitäts-Agenten zu konfigurieren und Benutzer zu sperren oder die Sperrung aufzuheben.  Die Administratorrolle für das Benutzerverhalten von Ransomware Resilience sollte keinem Ransomware Resilience-Viewer übertragen werden.
+
+In der folgenden Tabelle werden die Aktionen beschrieben, die für die Administrator- und Viewer-Rollen des Benutzerverhaltens von Ransomware Resilience verfügbar sind.
+
+[cols="40,20a,20a"]
+|===
+| Funktion und Aktion | Ransomware Resilience-Benutzerverhaltensadministrator | Ransomware Resilience-Benutzerverhaltensanzeige 
+
+
+3+| *Auf der Registerkarte „Einstellungen“*: 
+
+
+| Erstellen, Ändern oder Löschen eines Benutzeraktivitätsagenten  a| 
+Ja
  a| 
 Nein
 
 
 
-3+| *Auf der Registerkarte „Berichte“*: 
+| Benutzerverzeichnis-Connector erstellen oder löschen  a| 
+Ja
+ a| 
+Nein
 
 
-| Berichte herunterladen  a| 
+
+| Datensammler anhalten oder fortsetzen  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Führen Sie eine Übung zur Vorbereitung auf Datenschutzverletzungen durch  a| 
+Ja
+ a| 
+Nein
+
+
+
+3+| *Auf der Registerkarte „Schützen“*: 
+
+
+| Hinzufügen, Ändern oder Löschen von Schutzplänen für Richtlinien zu _verdächtigem Benutzerverhalten_  a| 
+Ja
+ a| 
+Nein
+
+
+
+3+| *Auf der Registerkarte „Warnungen“*: 
+
+
+| Anzeigen von Benutzeraktivitätswarnungen und Warnungsdetails  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Bearbeiten des Vorfallstatus für Benutzeraktivitäten  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Benutzeraktivitätswarnung zur Wiederherstellung markieren  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Details zum Vorfall mit Benutzeraktivität anzeigen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Abweisen oder Lösen von Vorfällen im Zusammenhang mit Benutzeraktivitäten  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Vollständige Liste der betroffenen Dateien nach verdächtigem Benutzer abrufen  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Laden Sie Ereigniswarnungsdaten zu Benutzeraktivitäten herunter  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Benutzer blockieren oder entsperren  a| 
+Ja
+ a| 
+Nein
+
+
+
+3+| *Auf der Registerkarte „Wiederherstellen“*: 
+
+
+| Herunterladen betroffener Dateien für Benutzeraktivitätsereignisse  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Wiederherstellen der Arbeitslast aus dem Benutzeraktivitätsereignis  a| 
+Ja
+ a| 
+Nein
+
+
+
+| Laden Sie Wiederherstellungsdaten aus dem Benutzeraktivitätsereignis herunter  a| 
+Ja
+ a| 
+Ja
+
+
+
+| Laden Sie Berichte zum Benutzeraktivitätsereignis herunter  a| 
 Ja
  a| 
 Ja

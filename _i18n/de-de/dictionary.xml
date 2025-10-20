@@ -2211,40 +2211,22 @@
   <block id="2961ef9224153d664a9bde6ee6ef2570" category="cell">Aktualisieren Sie den Empfehlungsstatus auf dem Dashboard</block>
   <block id="bb73fa2a07d0c544491039dc1ffed7b8" category="cell">Neuermittlung von Workloads einleiten</block>
   <block id="26548eb85488e3cdc0f0b9b27802995f" category="cell">*Auf der Registerkarte „Schützen“*:</block>
-  <block id="8ae06231e3533fd967c3e2959a7f5325" category="cell">Schutzpläne hinzufügen, ändern oder löschen</block>
   <block id="bf4011ddd9ae5a6521f75843972999ab" category="cell">Workloads schützen</block>
-  <block id="579066063b3104c9f6c74d2084e0e7e4" category="cell">Identifizieren Sie die Gefährdung sensibler Daten</block>
   <block id="e1b7f478f4648932399a0f8d6835740b" category="cell">Listen Sie Schutzpläne und Details auf</block>
   <block id="8921dd8678af3de7359bee784af9a8e0" category="cell">Auflisten von Schutzgruppen</block>
   <block id="97803e7af23cd9dd5e46bef4245a8480" category="cell">Anzeigen von Schutzgruppendetails</block>
   <block id="4330b42a340140b836c42bbe9c7105be" category="cell">Daten herunterladen</block>
   <block id="b1e60ac72e50f485ca0a5ea9c82143d2" category="cell">*Auf der Registerkarte „Warnungen“*:</block>
-  <block id="a0da34eb7fa7ce71299612d3548b6f6a" category="cell">Anzeigen von Warnungen und Warnungsdetails</block>
-  <block id="f700fad2259a25a87fbe56ba2810e8ff" category="cell">Vorfallstatus bearbeiten</block>
-  <block id="e975f9abac95a06f0645ce83ab0e4e37" category="cell">Alarm zur Wiederherstellung markieren</block>
-  <block id="ef9988f85b068b8709daa3be2c31fca3" category="cell">Vorfalldetails anzeigen</block>
-  <block id="d1f58f4fcc4cff94a574e5986b051d2f" category="cell">Vorfälle verwerfen oder lösen</block>
-  <block id="f84e2dc493985bbd340b2cd14bf2daeb" category="cell">Benutzer blockieren</block>
-  <block id="38de1b212ca13fa4c230f4c20adbb48a" category="cell">Vollständige Liste der betroffenen Dateien abrufen</block>
-  <block id="4b1b2c63b979feafab4b35d6b2307876" category="cell">Warndaten herunterladen</block>
-  <block id="406fe9c43e4a6d01dd8db03e3c5cd178" category="cell">Anzeigen verdächtiger Benutzeraktivitäten</block>
   <block id="b338bf8c8e0fbc61d8a0fad3b4a74e35" category="cell">*Auf der Registerkarte „Wiederherstellen“*:</block>
-  <block id="f5f949f53a00b2da6ffa7a9f7a0fd0f8" category="cell">Betroffene Dateien herunterladen</block>
-  <block id="65ca8041cc328ebb64db5f8368a9101a" category="cell">Workload wiederherstellen</block>
-  <block id="4ebc1406711ca6754873e22a81f31c6f" category="cell">Wiederherstellungsdaten herunterladen</block>
   <block id="a4f2411faacb07693dd051a3d2d9f97e" category="cell">*Auf der Registerkarte „Einstellungen“*:</block>
   <block id="fc36f5b7ec87bb05d12fcec7b985fe79" category="cell">Hinzufügen oder Ändern von Sicherungszielen</block>
   <block id="765ffd3ea8472bde364d6d75c648c7e2" category="cell">Auflisten der Sicherungsziele</block>
   <block id="be9d2f996415c0e9128f109806d13e74" category="cell">Verbundene SIEM-Ziele anzeigen</block>
   <block id="08fec10c338548595a28b0310a1c0600" category="cell">SIEM-Ziele hinzufügen oder ändern</block>
   <block id="0e12704ac2cf7981683f2392843a3751" category="cell">Bereitschaftsübung konfigurieren</block>
-  <block id="fbca60f39e39ac567548a02c9e536305" category="cell">Starten Sie die Bereitschaftsübung</block>
-  <block id="9e914ba4c13fe3f6329717ca31b8bfca" category="cell">Übung zur Reset-Bereitschaft</block>
-  <block id="45f15fba3339f71439f0c72c967fc0d3" category="cell">Bereitschaftsübung bearbeiten</block>
   <block id="62bbacc7c65bd53641f4347319efbc1b" category="cell">Status der Bereitschaftsübung überprüfen</block>
   <block id="0e6583bdbbf88acbfc57d3f868629d3c" category="cell">Aktualisieren der Erkennungskonfiguration</block>
   <block id="5439d77b96ff7a9498be958a6755e89a" category="cell">Anzeigen der Erkennungskonfiguration</block>
-  <block id="9bc78d326dd9484756d8fb832592a4b8" category="cell">Konfigurieren Sie Einstellungen für verdächtiges Benutzerverhalten</block>
   <block id="1ed006cd78ff9bf590a02c6fc268141f" category="cell">*Auf der Registerkarte „Berichte“*:</block>
   <block id="a8017d11a1434e0a01ee8fa5f418c244" category="summary">Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf die Speicherverwaltungsfunktionen in der NetApp Console zu gewähren.  Sie können Benutzern eine Administratorrolle zum Verwalten des Speichers oder eine Viewer-Rolle zum Überwachen zuweisen.</block>
   <block id="222c6290ae86e7e691125c5ef19048ae" category="doc">Speicherzugriffsrollen für die NetApp Console</block>
@@ -5558,12 +5540,56 @@
   <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten. Wenn Sie<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block> , schlägt die Validierungsprüfung fehl. Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.</block>
   <block id="cfc9caf6832f568fe347d970af78e108" category="list-text">Wenn Sie Red Hat Enterprise Linux verwenden, überprüfen Sie, ob Ihre Podman-Version Netavark Aardvark DNS anstelle von CNI verwendet</block>
   <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">Wird in Regierungsregionen und kommerziellen Regionen mit eingeschränktem Modus unterstützt. Wird in souveränen Regionen mit eingeschränktem Modus nicht unterstützt. Im eingeschränkten Modus unterstützt NetApp Backup and Recovery nur die Sicherung und Wiederherstellung von ONTAP Volume-Daten.<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block> Das Sichern und Wiederherstellen von Anwendungsdaten und Daten virtueller Maschinen wird nicht unterstützt.</block>
-  <block id="7ce9d6824315daa5b3ba4a80bef8768d" category="summary">Ransomware Resilience bietet verschiedene Benutzerrollen zur Verwaltung des Zugriffs auf Berechtigungsaktionen und Berichte.</block>
-  <block id="f74b0b36940f757370478cb904680fe8" category="paragraph">Die Rollen gewähren unterschiedliche Zugriffsebenen auf Einstellungen und Aktionen.</block>
-  <block id="d8ed8dce9d98718d4019d9388c24353d" category="inline-link-macro">verdächtige Benutzeraktivität</block>
-  <block id="592abd5ea65ad47726532e14cc5e25d7" category="paragraph">Die für die Rollen „Benutzerverhaltensadministrator“ und „Benutzerverhaltensbetrachter“ von Ransomware Resilience verfügbaren Aktionen sind beschränkt auf <block ref="ab0f0a524b6807cce9d5b60fdac0f887" category="inline-link-macro-rx"></block>. Diese Rollen sind dazu vorgesehen, den Administrator- oder Viewer-Rollen von Ransomware Resilience hinzugefügt zu werden. Um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren und auf Warnungen zu reagieren, muss ein Benutzer über die Administratorrolle „Ransomware Resilience-Benutzerverhalten“ verfügen. Um nur Warnungen zu verdächtigem Benutzerverhalten anzuzeigen, sollte ein Benutzer über die Rolle „Ransomware Resilience-Benutzerverhaltensanzeiger“ verfügen.</block>
-  <block id="6ebf0d56afdbe7f6542cf91826e113ef" category="paragraph">In der folgenden Tabelle werden die Aktionen unterschieden, die den Rollen „Ransomware Resilience-Administrator“ und „Ransomware Resilience-Viewer“ zur Verfügung stehen.</block>
-  <block id="1ea8198251e36e2c445f036c869bfd7f" category="cell">Erstellen, Bearbeiten oder Löschen einer Schutzgruppe</block>
   <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">Sicherungs- und Wiederherstellungsrollen</block>
   <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">Disaster Recovery-Rollen</block>
+  <block id="fffc92a6b6a3b44b650e6669aa797cac" category="summary">Ransomware Resilience bietet verschiedene Benutzerrollen zur Verwaltung des Zugriffs auf Einstellungen, Aktionen und Berichte.</block>
+  <block id="1f0992962e7aa72491d3ea02fc5edda4" category="paragraph">**Basisrollen**</block>
+  <block id="170e16c6dd1a9b91467ae7129f97a1d7" category="list-text">Ransomware-Resilience-Administrator – Konfigurieren Sie die Ransomware-Resilience-Einstellungen; untersuchen Sie Verschlüsselungswarnungen und reagieren Sie darauf.</block>
+  <block id="cdfd65d81032924213a156d66245ab10" category="list-text">Ransomware Resilience Viewer – Anzeigen von Verschlüsselungsvorfällen, Berichten und Erkennungseinstellungen</block>
+  <block id="e8664260e9d447452785abaf08b8b8f6" category="inline-link-macro">Erkennung verdächtiger Benutzeraktivitäten</block>
+  <block id="04724d8f5ba2b38975c69834e3e8b920" category="paragraph">**Aktivitätsrollen für Benutzerverhalten**<block ref="885ef4a0557ed3cd017b2efccb0c3de5" category="inline-link-macro-rx"></block> Warnungen bieten Einblick in Daten wie Dateiaktivitätsereignisse. Diese Warnungen umfassen Dateinamen und vom Benutzer ausgeführte Dateiaktionen (wie Lesen, Schreiben, Löschen, Umbenennen).  Um die Sichtbarkeit dieser Daten einzuschränken, können nur Benutzer mit diesen Rollen diese Warnungen verwalten oder anzeigen.</block>
+  <block id="eb660a2de52d250becf4703c75d4aaff" category="list-text">Ransomware Resilience-Benutzerverhaltensadministrator – Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten, untersuchen Sie verdächtige Benutzeraktivitäten und reagieren Sie auf Warnungen zu verdächtigen Benutzeraktivitäten</block>
+  <block id="fd26172aba8622db091eebe480cd7e37" category="list-text">Ransomware Resilience-Benutzerverhaltensanzeige – Anzeigen von Warnungen zu verdächtigen Benutzeraktivitäten</block>
+  <block id="e98813c3c921a36511f197fc7a9fe204" category="admonition">Benutzerverhaltensrollen sind keine eigenständigen Rollen. Sie sind dafür vorgesehen, den Administrator- oder Viewer-Rollen von Ransomware Resilience hinzugefügt zu werden. Weitere Informationen finden Sie unter <block ref="97d5369167883766cc87d7bf7a5c9d91" category="inline-xref-macro-rx"></block>.</block>
+  <block id="aaf2eccc92917d658995c66b880cfb26" category="paragraph">Ausführliche Beschreibungen der einzelnen Rollen finden Sie in den folgenden Tabellen.</block>
+  <block id="bc206e6bf9f2ba8322bc8d55dceb3451" category="section-title">Basisrollen</block>
+  <block id="b9f5850597eac5d0eb99ea44b9b7fbc1" category="paragraph">In der folgenden Tabelle werden die Aktionen beschrieben, die den Administrator- und Viewer-Rollen von Ransomware Resilience zur Verfügung stehen.</block>
+  <block id="b3c2dec7fd62e5ac2afdc696b279f52e" category="cell">Hinzufügen, Ändern oder Löschen von Schutzplänen für _Verschlüsselungs_richtlinien</block>
+  <block id="daa48308bc964d092772d98c1a8a5562" category="cell">Identifizieren Sie die Gefährdung sensibler Daten mit der Datenklassifizierung</block>
+  <block id="3fa1d1b73ebf3c6b2e14ce235e91e131" category="cell">Erstellen, Bearbeiten oder Löschen von Schutzgruppen</block>
+  <block id="3ebecde38a0e7a26d762a9e15a5a5a9a" category="cell">Anzeigen von Verschlüsselungswarnungen und Warnungsdetails</block>
+  <block id="b004643cf84c26e96f5e987bda405d21" category="cell">Verschlüsselungsvorfallstatus bearbeiten</block>
+  <block id="518a814bfff8a4a1edc429720f3feeb4" category="cell">Verschlüsselungsalarm zur Wiederherstellung markieren</block>
+  <block id="783ddfc17d71a086a45112d2198f9149" category="cell">Details zum Verschlüsselungsvorfall anzeigen</block>
+  <block id="2cf6d9c6c4e7e4e84b70b24691035739" category="cell">Verschlüsselungsvorfälle verwerfen oder beheben</block>
+  <block id="6faf16eee5ba7ea63a49b8477a34791d" category="cell">Vollständige Liste der betroffenen Dateien im Verschlüsselungsereignis abrufen</block>
+  <block id="972e748f513e3e427b0f8b61933ea87e" category="cell">Daten zu Verschlüsselungsereigniswarnungen herunterladen</block>
+  <block id="1ab486a8f581ae47a45d2d4deef97251" category="cell">Benutzer blockieren (mit Workload Security-Agent-Konfiguration)</block>
+  <block id="63ef6293e2221c1c01beb10f135a6c0e" category="cell">Herunterladen der betroffenen Dateien vom Verschlüsselungsereignis</block>
+  <block id="fab67a6ef7c066c05b4a81be858d67bc" category="cell">Workload nach Verschlüsselungsereignis wiederherstellen</block>
+  <block id="f9b0c09989fcd6b8da430effb430fd15" category="cell">Wiederherstellungsdaten aus dem Verschlüsselungsereignis herunterladen</block>
+  <block id="6a85f7b86db00c39f8204fc81ec39a9e" category="cell">Laden Sie Berichte vom Verschlüsselungsereignis herunter</block>
+  <block id="5f6caca12756189febec29e78ca157b3" category="cell">Bereitschaftsübung starten, zurücksetzen oder bearbeiten</block>
+  <block id="ef42b54359e596b7aa50418f7960a6a5" category="section-title">Benutzerverhaltensrollen</block>
+  <block id="bdd638184754634b202e21c33e499493" category="paragraph">Um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren und auf Warnungen zu reagieren, muss ein Benutzer über die Administratorrolle „Ransomware Resilience-Benutzerverhalten“ verfügen. Um nur Warnungen zu verdächtigem Benutzerverhalten anzuzeigen, sollte ein Benutzer über die Rolle „Ransomware Resilience-Benutzerverhaltensanzeiger“ verfügen.</block>
+  <block id="d8e882f82c91850fe60b139660a3451f" category="inline-link-macro">Einstellungen und Warnungen bei verdächtigen Benutzeraktivitäten</block>
+  <block id="64873820e76b32a77a5cf79a547b9efa" category="paragraph">Benutzerverhaltensrollen sollten Benutzern mit vorhandenen Ransomware Resilience-Administrator- oder Viewer-Berechtigungen zugewiesen werden, die Zugriff auf Folgendes benötigen:<block ref="dabde4cfb2462919536551734d022527" category="inline-link-macro-rx"></block> .  Ein Benutzer mit der Administratorrolle „Ransomware Resilience“ sollte beispielsweise die Administratorrolle „Ransomware Resilience-Benutzerverhalten“ erhalten, um Benutzeraktivitäts-Agenten zu konfigurieren und Benutzer zu sperren oder die Sperrung aufzuheben.  Die Administratorrolle für das Benutzerverhalten von Ransomware Resilience sollte keinem Ransomware Resilience-Viewer übertragen werden.</block>
+  <block id="759c83e40f93cea3a1eccdc76fde4c4b" category="paragraph">In der folgenden Tabelle werden die Aktionen beschrieben, die für die Administrator- und Viewer-Rollen des Benutzerverhaltens von Ransomware Resilience verfügbar sind.</block>
+  <block id="5c34bf47745609542194c315fe2964f9" category="cell">Erstellen, Ändern oder Löschen eines Benutzeraktivitätsagenten</block>
+  <block id="485cfdddcabc76dc28501c429282df6b" category="cell">Benutzerverzeichnis-Connector erstellen oder löschen</block>
+  <block id="458cd4b16a6ccc8096a881213d00476c" category="cell">Datensammler anhalten oder fortsetzen</block>
+  <block id="82ad0db10e8a69c003b2b161e3364e26" category="cell">Führen Sie eine Übung zur Vorbereitung auf Datenschutzverletzungen durch</block>
+  <block id="ced72ba7a22f2e6df64b261e0e0a6067" category="cell">Hinzufügen, Ändern oder Löschen von Schutzplänen für Richtlinien zu _verdächtigem Benutzerverhalten_</block>
+  <block id="38b33583e093e4fae906630deb4cdba6" category="cell">Anzeigen von Benutzeraktivitätswarnungen und Warnungsdetails</block>
+  <block id="d50892e502cf72b3ff332800b1520eb6" category="cell">Bearbeiten des Vorfallstatus für Benutzeraktivitäten</block>
+  <block id="83cc063050f992a5b154b590dd0ec572" category="cell">Benutzeraktivitätswarnung zur Wiederherstellung markieren</block>
+  <block id="19981db9b0f973b5a01494a279e6253b" category="cell">Details zum Vorfall mit Benutzeraktivität anzeigen</block>
+  <block id="7df1d0b273c07752f3c6d8bae8860df1" category="cell">Abweisen oder Lösen von Vorfällen im Zusammenhang mit Benutzeraktivitäten</block>
+  <block id="e0984822bc2981ddb16b2a2e5bb4dcdd" category="cell">Vollständige Liste der betroffenen Dateien nach verdächtigem Benutzer abrufen</block>
+  <block id="f7bc873fd62a198eead5ce503fec14d7" category="cell">Laden Sie Ereigniswarnungsdaten zu Benutzeraktivitäten herunter</block>
+  <block id="e69a1c0d984eb32417be3469adae2895" category="cell">Benutzer blockieren oder entsperren</block>
+  <block id="90b5bc69606833e095e0da3967bdfcdb" category="cell">Herunterladen betroffener Dateien für Benutzeraktivitätsereignisse</block>
+  <block id="59358657bd56c540dd5a88214e34361a" category="cell">Wiederherstellen der Arbeitslast aus dem Benutzeraktivitätsereignis</block>
+  <block id="0bcd0f2de89d5cc2513b3b19cac9d193" category="cell">Laden Sie Wiederherstellungsdaten aus dem Benutzeraktivitätsereignis herunter</block>
+  <block id="615b930aeaebafc57f53ff8e632fb38d" category="cell">Laden Sie Berichte zum Benutzeraktivitätsereignis herunter</block>
 </blocks>
