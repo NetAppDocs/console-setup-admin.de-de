@@ -24,8 +24,8 @@ Bevor Sie die Konsole zum Verwalten von Ressourcen in Ihrem Google Cloud-Projekt
 
 Bevor Sie einen Konsolenagenten direkt von der Konsole aus bereitstellen können, müssen zwei Berechtigungssätze vorhanden sein:
 
-. Sie müssen einen Konsolen-Agenten mit einem Google-Konto bereitstellen, das über die Berechtigung zum Starten der VM-Instanz des Konsolen-Agenten von der Konsole aus verfügt.
-. Beim Bereitstellen des Konsolenagenten werden Sie aufgefordert, einen https://cloud.google.com/iam/docs/service-accounts["Dienstkonto"^] für die VM-Instanz.  Die Konsole erhält vom Dienstkonto die Berechtigung, Cloud Volumes ONTAP -Systeme zu erstellen und zu verwalten, Backups mithilfe von NetApp Backup und Recovery zu verwalten und mehr.  Berechtigungen werden erteilt, indem dem Dienstkonto eine benutzerdefinierte Rolle zugewiesen wird.
+. Sie müssen einen Konsolen-Agenten mit einem Google-Konto bereitstellen, das über die Berechtigung zum Starten des Konsolen-Agenten von der Konsole aus verfügt.
+. Beim Bereitstellen des Konsolenagenten werden Sie aufgefordert, einen https://cloud.google.com/iam/docs/service-accounts["Dienstkonto"^] für den Agenten Die Konsole erhält vom Dienstkonto Berechtigungen zum Erstellen und Verwalten von Cloud Volumes ONTAP -Systemen, zum Verwalten von Backups mithilfe von NetApp Backup und Recovery und mehr. Berechtigungen werden erteilt, indem dem Dienstkonto eine benutzerdefinierte Rolle zugewiesen wird.
 
 
 Die folgende Abbildung veranschaulicht die unter den Nummern 1 und 2 beschriebenen Berechtigungsanforderungen:

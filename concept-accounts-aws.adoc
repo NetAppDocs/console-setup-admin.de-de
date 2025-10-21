@@ -20,11 +20,11 @@ Erfahren Sie, wie die NetApp Console AWS-Anmeldeinformationen verwendet, um Akti
 
 == Anfängliche AWS-Anmeldeinformationen
 
-Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, müssen Sie die ARN einer IAM-Rolle oder Zugriffsschlüssel für einen IAM-Benutzer angeben.  Die Authentifizierungsmethode muss über Berechtigungen zum Bereitstellen der Konsole in AWS verfügen.  Die erforderlichen Berechtigungen sind im Link:task-install-agent-aws-the Console.html#console-permissions-aws[Agent-Bereitstellungsrichtlinie für AWS] aufgeführt.
+Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, müssen Sie die ARN einer IAM-Rolle oder Zugriffsschlüssel für einen IAM-Benutzer angeben. Die Authentifizierungsmethode muss über Berechtigungen zum Bereitstellen der Konsole in AWS verfügen. Die erforderlichen Berechtigungen sind im Link:task-install-agent-aws-the Console.html#aws-permissions-agent [Agent-Bereitstellungsrichtlinie für AWS] aufgeführt.
 
-Wenn die Konsole die Konsolenagentinstanz in AWS startet, erstellt sie eine IAM-Rolle und ein Instanzprofil für die Instanz.  Außerdem wird eine Richtlinie angehängt, die dem Konsolenagenten die Berechtigung erteilt, Ressourcen und Prozesse innerhalb dieses AWS-Kontos zu verwalten. link:reference-permissions-aws.html["Überprüfen Sie, wie die Konsole die Berechtigungen verwendet"] .
+Wenn die Konsole den Konsolenagenten in AWS startet, erstellt sie eine IAM-Rolle und ein Profil für den Agenten. Außerdem wird eine Richtlinie angehängt, die dem Konsolenagenten die Berechtigung erteilt, Ressourcen und Prozesse innerhalb dieses AWS-Kontos zu verwalten. link:reference-permissions-aws.html["Überprüfen Sie, wie der Agent die Berechtigungen verwendet"].
 
-image:diagram_permissions_initial_aws.png["Ein konzeptionelles Bild, das die Konsole zeigt, die den Konsolenagenten in einem AWS-Konto bereitstellt.  Einer IAM-Rolle wird eine IAM-Richtlinie zugewiesen, die an die Konsoleninstanz angehängt ist."]
+image:diagram_permissions_initial_aws.png["Ein konzeptionelles Bild, das die Konsole zeigt, die den Konsolenagenten in einem AWS-Konto bereitstellt. Einer IAM-Rolle wird eine IAM-Richtlinie zugewiesen, die an die Konsole angehängt ist."]
 
 Wenn Sie ein neues Cloud Volumes ONTAP -System hinzufügen, wählt die Konsole standardmäßig diese AWS-Anmeldeinformationen aus:
 
@@ -99,7 +99,7 @@ Die folgenden Fragen beziehen sich auf Anmeldeinformationen und Abonnements.
 
 === Wie kann ich meine AWS-Anmeldeinformationen sicher rotieren?
 
-Wie in den obigen Abschnitten beschrieben, können Sie mit der Konsole AWS-Anmeldeinformationen auf verschiedene Weise bereitstellen: über eine IAM-Rolle, die mit der Agenteninstanz der Konsole verknüpft ist, durch die Übernahme einer IAM-Rolle in einem vertrauenswürdigen Konto oder durch die Bereitstellung von AWS-Zugriffsschlüsseln.
+Wie in den obigen Abschnitten beschrieben, können Sie mit der Konsole AWS-Anmeldeinformationen auf verschiedene Weise bereitstellen: über eine mit dem Konsolenagenten verknüpfte IAM-Rolle, durch die Übernahme einer IAM-Rolle in einem vertrauenswürdigen Konto oder durch die Bereitstellung von AWS-Zugriffsschlüsseln.
 
 Bei den ersten beiden Optionen verwendet die Konsole den AWS Security Token Service, um temporäre Anmeldeinformationen zu erhalten, die ständig rotieren.  Dieser Prozess ist die beste Vorgehensweise – er ist automatisch und sicher.
 

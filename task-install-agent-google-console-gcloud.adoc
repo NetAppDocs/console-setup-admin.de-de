@@ -420,7 +420,7 @@ Wenn Sie immer noch dielink:reference-networking-saas-console-previous.html["vor
 ====
 . Wählen Sie *Hinzufügen*.
 +
-Die Instanz ist in etwa 10 Minuten bereit. Bleiben Sie auf der Seite, bis der Vorgang abgeschlossen ist.
+Der Agent ist in etwa 10 Minuten bereit. Bleiben Sie auf der Seite, bis der Vorgang abgeschlossen ist.
 
 
 

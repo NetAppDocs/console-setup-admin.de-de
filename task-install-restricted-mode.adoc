@@ -38,9 +38,9 @@ link:task-prepare-restricted-mode.html["Informieren Sie sich über die Netzwerka
 link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Erfahren Sie, wie Sie AWS-Berechtigungen einrichten"]
 
 * Berechtigungen zum Abonnieren und Abbestellen des AWS Marketplace für Ihren IAM-Benutzer.
-* Ein Verständnis der CPU- und RAM-Anforderungen für die Instanz.
+* Ein Verständnis der CPU- und RAM-Anforderungen für den Agenten.
 +
-link:task-prepare-restricted-mode.html#step-3-review-host-requirements["Überprüfen der Instanzanforderungen"] .
+link:task-prepare-restricted-mode.html#step-3-review-host-requirements["Überprüfen Sie die Agentenanforderungen"].
 
 * Ein Schlüsselpaar für die EC2-Instanz.
 
@@ -85,7 +85,7 @@ Wenn Sie die Amazon EBS-Verschlüsselung auf dem Stammvolume aktivieren möchten
 
 
 .Ergebnis
-AWS startet die Software mit den angegebenen Einstellungen.  Die Konsolen-Agentinstanz und -Software werden in etwa fünf Minuten ausgeführt.
+AWS startet die Software mit den angegebenen Einstellungen. Die Bereitstellung des Konsolenagenten dauert etwa fünf Minuten.
 
 .Wie geht es weiter?
 Richten Sie die NetApp Console ein.
@@ -139,7 +139,7 @@ image:screenshot_aws_iam_role.gif["Ein Screenshot, der Felder auf der Seite „I
 
 
 .Ergebnis
-AWS startet die Software mit den angegebenen Einstellungen.  Die Konsolen-Agentinstanz und -Software werden in etwa fünf Minuten ausgeführt.
+AWS startet die Software mit den angegebenen Einstellungen. Die Bereitstellung des Konsolenagenten dauert etwa fünf Minuten.
 
 .Wie geht es weiter?
 Richten Sie die Konsole ein.
@@ -180,7 +180,7 @@ Beachten Sie beim Konfigurieren der VM Folgendes:
 image:screenshot-azure-sku.png["Ein Screenshot der Erstellung einer neuen IP-Adresse in Azure, der es Ihnen ermöglicht, im Feld „SKU“ „Basic“ auszuwählen."]
 
 +
-Wenn Sie stattdessen eine Standard-SKU-IP-Adresse verwenden, verwendet die Konsole die _private_ IP-Adresse des Konsolenagenten anstelle der öffentlichen IP.  Wenn der Computer, den Sie für den Zugriff auf die Konsole verwenden, keinen Zugriff auf diese private IP-Adresse hat, schlagen Aktionen von der Konsole fehl.
+Wenn Sie stattdessen eine Standard-SKU-IP-Adresse verwenden, verwendet die Konsole die _private_ IP-Adresse des Konsolenagenten anstelle der öffentlichen IP. Wenn der Computer, den Sie für den Zugriff auf die Konsole verwenden, keinen Zugriff auf diese private IP-Adresse hat, schlagen Aktionen von der Konsole fehl.
 
 +
 https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure-Dokumentation: Öffentliche IP-SKU"^]

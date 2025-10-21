@@ -52,7 +52,7 @@ Rotieren Sie AWS-Zugriffsschlüssel manuell, indem Sie sie in der Konsole aktual
 
 Fügen Sie einem Konsolenagenten zusätzliche AWS-Anmeldeinformationen hinzu, damit er über die erforderlichen Berechtigungen zum Verwalten von Ressourcen und Prozessen in Ihrer öffentlichen Cloud-Umgebung verfügt.  Sie können entweder die ARN einer IAM-Rolle in einem anderen Konto angeben oder AWS-Zugriffsschlüssel bereitstellen.
 
-Wenn Sie gerade erst mit der Konsole beginnen,link:concept-accounts-aws.html["Erfahren Sie, wie die NetApp Console AWS-Anmeldeinformationen und -Berechtigungen verwendet"] .
+link:concept-accounts-aws.html["Erfahren Sie, wie die NetApp Console AWS-Anmeldeinformationen und -Berechtigungen verwendet"].
 
 
 
@@ -61,7 +61,7 @@ Wenn Sie gerade erst mit der Konsole beginnen,link:concept-accounts-aws.html["Er
 Erteilen Sie Berechtigungen, bevor Sie einem Konsolenagenten AWS-Anmeldeinformationen hinzufügen.  Die Berechtigungen ermöglichen einem Konsolenagenten, Ressourcen und Prozesse innerhalb dieses AWS-Kontos zu verwalten.  Sie können die Berechtigungen mit der ARN einer Rolle in einem vertrauenswürdigen Konto oder mit AWS-Schlüsseln bereitstellen.
 
 
-NOTE: Wenn Sie einen Konsolenagenten über die Konsole bereitgestellt haben, wurden automatisch AWS-Anmeldeinformationen für das Konto hinzugefügt, in dem Sie einen Konsolenagenten bereitgestellt haben.  Dadurch wird sichergestellt, dass die erforderlichen Berechtigungen zum Verwalten von Ressourcen vorhanden sind. link:concept-accounts-aws.html["Erfahren Sie mehr über AWS-Anmeldeinformationen und -Berechtigungen"] .
+NOTE: Wenn Sie einen Konsolenagenten über die Konsole bereitgestellt haben, wurden automatisch AWS-Anmeldeinformationen für das Konto hinzugefügt, in dem Sie einen Konsolenagenten bereitgestellt haben. Dadurch wird sichergestellt, dass die erforderlichen Berechtigungen zum Verwalten von Ressourcen vorhanden sind.
 
 *Auswahl*
 
@@ -73,7 +73,7 @@ NOTE: Wenn Sie einen Konsolenagenten über die Konsole bereitgestellt haben, wur
 
 ==== Erteilen Sie Berechtigungen, indem Sie eine IAM-Rolle in einem anderen Konto übernehmen
 
-Sie können mithilfe von IAM-Rollen eine Vertrauensbeziehung zwischen dem AWS-Quellkonto, in dem Sie eine Konsolen-Agent-Instanz bereitgestellt haben, und anderen AWS-Konten einrichten.  Anschließend stellen Sie der Konsole die ARN der IAM-Rollen der vertrauenswürdigen Konten zur Verfügung.
+Sie können mithilfe von IAM-Rollen eine Vertrauensbeziehung zwischen dem AWS-Quellkonto, in dem Sie einen Konsolenagenten bereitgestellt haben, und anderen AWS-Konten einrichten. Anschließend stellen Sie der Konsole die ARN der IAM-Rollen der vertrauenswürdigen Konten zur Verfügung.
 
 Wenn ein Konsolenagent vor Ort installiert ist, können Sie diese Authentifizierungsmethode nicht verwenden.  Sie müssen AWS-Schlüssel verwenden.
 
@@ -116,16 +116,15 @@ https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html["AW
 
 
 
-.Ergebnis
-Das Konto verfügt über die erforderlichen Berechtigungen. <<add-the-credentials,Sie können jetzt die Anmeldeinformationen zu einem Konsolenagenten hinzufügen>> .
 
 
-
-=== Fügen Sie die Anmeldeinformationen hinzu
+=== Fügen Sie die Anmeldeinformationen zu einem vorhandenen Agenten hinzu
 
 Nachdem Sie ein AWS-Konto mit den erforderlichen Berechtigungen versehen haben, können Sie die Anmeldeinformationen für dieses Konto einem vorhandenen Agenten hinzufügen.  Dadurch können Sie Cloud Volumes ONTAP -Systeme in diesem Konto mit demselben Agenten starten.
 
- New credentials in your cloud provider may take a few minutes to become available. Then, add the credentials.
+
+NOTE: Es kann einige Minuten dauern, bis neue Anmeldeinformationen bei Ihrem Cloud-Anbieter verfügbar sind.
+
 .Schritte
 . Wählen Sie über die obere Navigationsleiste einen Konsolenagenten aus, dem Sie Anmeldeinformationen hinzufügen möchten.
 . Wählen Sie in der linken Navigationsleiste *Administration > Anmeldeinformationen* aus.
@@ -143,7 +142,7 @@ Um Dienste mit einem Stundensatz (PAYGO) oder mit einem Jahresvertrag zu bezahle
 
 
 .Ergebnis
-Sie können jetzt auf der Seite „Details und Anmeldeinformationen“ zu einem anderen Satz von Anmeldeinformationen wechseln, wenn Sie der Konsole ein System hinzufügen.
+Sie können jetzt auf der Seite „Details und Anmeldeinformationen“ zu einem anderen Satz von Anmeldeinformationen wechseln, wenn Sie der Konsole ein Abonnement hinzufügen.
 
 image:screenshot_accounts_switch_aws.png["Ein Screenshot, der die Auswahl zwischen Cloud-Anbieterkonten zeigt, nachdem Sie auf der Seite „Details und Anmeldeinformationen“ die Option „Konto wechseln“ ausgewählt haben."]
 
@@ -204,7 +203,7 @@ Siehe link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cros
 
 
 .Ergebnis
-Die IAM-Rolle verfügt jetzt über die erforderlichen Berechtigungen. <<add-the-credentials-2,Sie können es jetzt zur Konsole hinzufügen>> .
+Die IAM-Rolle verfügt jetzt über die erforderlichen Berechtigungen. <<add-the-credentials,Sie können es jetzt zur Konsole hinzufügen>>.
 
 
 
@@ -220,9 +219,9 @@ Wenn Sie die IAM-Rolle gerade erst erstellt haben, kann es einige Minuten dauern
 +
 image:screenshot-settings-icon-organization.png["Ein Screenshot, der das Einstellungssymbol oben rechts in der Konsole zeigt."]
 
-. Wählen Sie auf der Seite *Anmeldeinformationen der Organisation* oder *Anmeldeinformationen des Kontos* die Option *Anmeldeinformationen hinzufügen* aus und folgen Sie den Schritten des Assistenten.
+. Wählen Sie auf der Seite *Anmeldeinformationen der Organisation* die Option *Anmeldeinformationen hinzufügen* aus und folgen Sie den Schritten des Assistenten.
 +
-.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > NetApp Console*.
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > Konsole*.
 .. *Anmeldeinformationen definieren*: Geben Sie den ARN (Amazon Resource Name) der IAM-Rolle an.
 .. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
 
@@ -239,7 +238,7 @@ Einzelheiten finden Sie im https://docs.netapp.com/us-en/storage-management-fsx-
 
 == Konfigurieren eines AWS-Abonnements
 
-Nachdem Sie Ihre AWS-Anmeldeinformationen hinzugefügt haben, können Sie mit diesen Anmeldeinformationen ein AWS Marketplace-Abonnement konfigurieren.  Mit dem Abonnement können Sie Cloud Volumes ONTAP auf Stundenbasis (PAYGO) oder über einen Jahresvertrag bezahlen und weitere Datendienste nutzen.
+Nachdem Sie Ihre AWS-Anmeldeinformationen hinzugefügt haben, können Sie mit diesen Anmeldeinformationen ein AWS Marketplace-Abonnement konfigurieren. Mit dem Abonnement können Sie NetApp Datendienste und Cloud Volumes ONTAP auf Stundenbasis (PAYGO) oder über einen Jahresvertrag bezahlen.
 
 Es gibt zwei Szenarien, in denen Sie ein AWS Marketplace-Abonnement konfigurieren können, nachdem Sie die Anmeldeinformationen bereits hinzugefügt haben:
 
@@ -295,18 +294,18 @@ Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell 
 
 
 
-== Verknüpfen Sie ein vorhandenes Abonnement mit Ihrer Organisation oder Ihrem Konto
+== Verknüpfen Sie ein vorhandenes Abonnement mit Ihrer Organisation
 
-Wenn Sie sich beim AWS Marketplace anmelden, besteht der letzte Schritt im Prozess darin, das Abonnement Ihrer Organisation zuzuordnen.  Wenn Sie diesen Schritt nicht abgeschlossen haben, können Sie das Abonnement nicht mit Ihrer Organisation oder Ihrem Konto verwenden.
+Wenn Sie sich beim AWS Marketplace anmelden, besteht der letzte Schritt im Prozess darin, das Abonnement Ihrer Organisation zuzuordnen. Wenn Sie diesen Schritt nicht abgeschlossen haben, können Sie das Abonnement nicht mit Ihrer Organisation verwenden.
 
 * link:concept-modes.html["Erfahren Sie mehr über die Bereitstellungsmodi der Konsole"]
 * link:concept-identity-and-access-management.html["Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der Konsole"]
 
 
-Führen Sie die folgenden Schritte aus, wenn Sie NetApp Intelligent Data Services vom AWS Marketplace abonniert haben, aber den Schritt zum Verknüpfen des Abonnements mit Ihrem Konto verpasst haben.
+Führen Sie die folgenden Schritte aus, wenn Sie NetApp Intelligent Services vom AWS Marketplace abonniert haben, aber den Schritt zum Verknüpfen des Abonnements mit Ihrem Konto verpasst haben.
 
 .Schritte
-. Bestätigen Sie, dass Sie Ihr Abonnement nicht mit Ihrer Konsolenorganisation oder Ihrem Konsolenkonto verknüpft haben.
+. Bestätigen Sie, dass Sie Ihr Abonnement nicht mit Ihrer Konsolenorganisation verknüpft haben.
 +
 .. Wählen Sie im Navigationsmenü *Verwaltung > Licenses and subscriptions*.
 .. Wählen Sie *Abonnements* aus.
@@ -350,7 +349,7 @@ image:screenshot-subscription-assignment.png["Ein Screenshot der Seite „Abonne
 
 
 
-. Bestätigen Sie, dass das Abonnement mit Ihrer Organisation oder Ihrem Konto verknüpft ist.
+. Bestätigen Sie, dass das Abonnement mit Ihrer Organisation verknüpft ist.
 +
 .. Wählen Sie im Navigationsmenü *Administration > Lizenzen und Abonnements*.
 .. Wählen Sie *Abonnements* aus.
@@ -359,7 +358,7 @@ image:screenshot-subscription-assignment.png["Ein Screenshot der Seite „Abonne
 
 . Bestätigen Sie, dass das Abonnement mit Ihren AWS-Anmeldeinformationen verknüpft ist.
 +
-.. Wählen Sie oben rechts in der Konsole das Symbol „Einstellungen“ und dann „Anmeldeinformationen“ aus.
+.. Wählen Sie *Administration > Anmeldeinformationen*.
 .. Überprüfen Sie auf der Seite *Anmeldeinformationen der Organisation*, ob das Abonnement mit Ihren AWS-Anmeldeinformationen verknüpft ist.
 +
 Hier ist ein Beispiel.
@@ -378,11 +377,11 @@ image:screenshot-credentials-with-subscription.png["Ein Screenshot der Anmeldein
 Bearbeiten Sie Ihre AWS-Anmeldeinformationen, indem Sie den Kontotyp ändern (AWS-Schlüssel oder Rolle übernehmen), den Namen bearbeiten oder die Anmeldeinformationen selbst aktualisieren (die Schlüssel oder die Rollen-ARN).
 
 
-NOTE: Sie können die Anmeldeinformationen für ein Instanzprofil, das mit einer Konsolen-Agent-Instanz oder einer Amazon FSx for ONTAP -Instanz verknüpft ist, nicht bearbeiten.  Sie können die Anmeldeinformationen nur für eine FSx for ONTAP Instanz umbenennen.
+NOTE: Sie können die Anmeldeinformationen für ein Instanzprofil, das mit einer Konsolen-Agent-Instanz oder einer Amazon FSx for ONTAP -Instanz verknüpft ist, nicht bearbeiten. Sie können die Anmeldeinformationen nur für eine FSx for ONTAP Instanz umbenennen.
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.
-. Wählen Sie auf der Seite *Anmeldeinformationen der Organisation* oder *Anmeldeinformationen des Kontos* das Aktionsmenü für einen Satz von Anmeldeinformationen aus und wählen Sie dann *Anmeldeinformationen bearbeiten*.
+. Wählen Sie auf der Seite *Anmeldeinformationen der Organisation* das Aktionsmenü für einen Satz von Anmeldeinformationen aus und wählen Sie dann *Anmeldeinformationen bearbeiten*.
 . Nehmen Sie die erforderlichen Änderungen vor und wählen Sie dann *Übernehmen*.
 
 
@@ -393,7 +392,7 @@ NOTE: Sie können die Anmeldeinformationen für ein Instanzprofil, das mit einer
 Wenn Sie einen Satz Anmeldeinformationen nicht mehr benötigen, können Sie ihn löschen.  Sie können nur Anmeldeinformationen löschen, die keinem System zugeordnet sind.
 
 
-TIP: Sie können die Anmeldeinformationen für ein Instanzprofil, das einer Konsolenagenteninstanz zugeordnet ist, nicht löschen.
+TIP: Sie können die Anmeldeinformationen für ein Instanzprofil, das einem Konsolenagenten zugeordnet ist, nicht löschen.
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.

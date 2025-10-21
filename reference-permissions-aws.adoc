@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-permissions-aws.html 
 keywords: permissions, actions, aws, aws permissions, top secret, secret, aws top secret, aws secret, aws govcloud, govcloud, govcloud permissions, secret permissions, top secret permissions 
-summary: Wenn die NetApp Console die Agenteninstanz in AWS startet, fügt sie der Instanz eine Richtlinie hinzu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt.  Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere AWS-Dienste zu tätigen, darunter EC2, S3, CloudFormation, IAM, den Key Management Service und mehr. 
+summary: Wenn die NetApp Console den Agenten in AWS startet, fügt sie dem Agenten eine Richtlinie hinzu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt. Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere AWS-Dienste zu tätigen, darunter EC2, S3, CloudFormation, IAM, den Key Management Service und mehr. 
 ---
 = AWS-Berechtigungen für den Konsolenagenten
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Wenn die NetApp Console die Agenteninstanz in AWS startet, fügt sie de
 
 
 [role="lead"]
-Wenn die NetApp Console eine Konsolen-Agent-Instanz in AWS startet, fügt sie der Instanz eine Richtlinie hinzu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt.  Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere AWS-Dienste zu tätigen, darunter EC2, S3, CloudFormation, IAM, den Key Management Service (KMS) und mehr.
+Wenn die NetApp Console einen Konsolenagenten in AWS startet, fügt sie dem Agenten eine Richtlinie hinzu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt. Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere AWS-Dienste zu tätigen, darunter EC2, S3, CloudFormation, IAM, den Key Management Service (KMS) und mehr.
 
 
 
@@ -1026,7 +1026,7 @@ Der Agent stellt die folgenden API-Anfragen, um Cloud Volumes ONTAP in AWS berei
 | Kennzeichnen Sie Ressourcen mit den Tags „WorkingEnvironment“ und „WorkingEnvironmentId“, die für die Wartung und Kostenzuordnung verwendet werden | ec2:CreateTags | Ja | Ja | Nein 
 
 
-.6+| Verwalten Sie EBS-Volumes, die Cloud Volumes ONTAP als Back-End-Speicher verwendet | ec2:CreateVolume | Ja | Ja | Nein 
+.6+| Verwalten Sie EBS-Volumes, die Cloud Volumes ONTAP als Backend-Speicher verwendet | ec2:CreateVolume | Ja | Ja | Nein 
 
 
 | ec2:DescribeVolumes | Ja | Ja | Ja 

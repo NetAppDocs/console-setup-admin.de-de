@@ -14,7 +14,7 @@ summary: Der Konsolenagent benötigt Berechtigungen, um Aktionen bei Ihrem Cloud
 
 
 [role="lead"]
-Die NetApp Console benötigt Berechtigungen zum Ausführen von Aktionen in Google Cloud.  Diese Berechtigungen sind in einer benutzerdefinierten Rolle enthalten, die von NetApp bereitgestellt wird.  Sie sollten verstehen, was der Agent mit diesen Berechtigungen macht.
+Der Konsolenagent benötigt Berechtigungen zum Ausführen von Aktionen in Google Cloud. Diese Berechtigungen sind in einer benutzerdefinierten Rolle enthalten, die von NetApp bereitgestellt wird. Sie sollten verstehen, was der Agent mit diesen Berechtigungen macht.
 
 
 
@@ -33,7 +33,7 @@ Sie müssen außerdem sicherstellen, dass die Rolle auf dem neuesten Stand ist, 
 [source, yaml]
 ----
 title: NetApp Console agent
-description: Permissions for the service account associated with the Console agent instance.
+description: Permissions for the service account associated with the Console agent.
 stage: GA
 includedPermissions:
 - iam.serviceAccounts.actAs

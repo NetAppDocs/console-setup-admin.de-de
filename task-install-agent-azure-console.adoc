@@ -159,7 +159,7 @@ Sie müssen diese Netzwerkanforderung implementieren, nachdem Sie den Konsolenag
 
 Sie müssen eine benutzerdefinierte Rolle erstellen, die über die Berechtigung zum Bereitstellen des Konsolen-Agenten in Azure verfügt.
 
-Erstellen Sie eine benutzerdefinierte Azure-Rolle, die Sie Ihrem Azure-Konto oder einem Microsoft Entra-Dienstprinzipal zuweisen können.  Die Konsole authentifiziert sich bei Azure und verwendet diese Berechtigungen, um die Konsolen-Agentinstanz in Ihrem Namen zu erstellen.
+Erstellen Sie eine benutzerdefinierte Azure-Rolle, die Sie Ihrem Azure-Konto oder einem Microsoft Entra-Dienstprinzipal zuweisen können. Die Konsole authentifiziert sich bei Azure und verwendet diese Berechtigungen, um den Konsolen-Agenten in Ihrem Namen zu erstellen.
 
 Die Konsole stellt die Konsolen-Agent-VM in Azure bereit und ermöglicht eine https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["systemseitig zugewiesene verwaltete Identität"^] , erstellt die erforderliche Rolle und weist sie der VM zu. link:reference-permissions-azure.html["Überprüfen Sie, wie die Konsole die Berechtigungen verwendet"] .
 
@@ -444,7 +444,7 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=L
 
 * Wenn Sie nicht möchten, dass die Konsole automatisch eine Azure-Rolle für den Konsolen-Agenten erstellt, müssen Sie Ihre eigene erstellen.link:reference-permissions-azure.html["unter Verwendung der Richtlinien auf dieser Seite"] .
 +
-Diese Berechtigungen gelten für die Konsolen-Agentinstanz selbst.  Es handelt sich um einen anderen Satz von Berechtigungen als den, den Sie zuvor zum Bereitstellen der Konsolen-Agent-VM eingerichtet haben.
+Diese Berechtigungen gelten für den Konsolenagenten selbst. Es handelt sich um einen anderen Satz von Berechtigungen als den, den Sie zuvor zum Bereitstellen der Konsolen-Agent-VM eingerichtet haben.
 
 
 
@@ -481,7 +481,7 @@ Die Authentifizierungsmethode für die virtuelle Maschine kann ein Kennwort oder
 +
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Erfahren Sie mehr über die Verbindung mit einer Linux-VM in Azure."^]
 
-. Geben Sie auf der Seite *Details* einen Namen für die Instanz ein, geben Sie Tags an und wählen Sie, ob die Konsole eine neue Rolle mit den erforderlichen Berechtigungen erstellen soll oder ob Sie eine vorhandene Rolle auswählen möchten, die Sie mitlink:reference-permissions-azure.html["die erforderlichen Berechtigungen"] .
+. Geben Sie auf der Seite *Details* einen Namen für den Agenten ein, geben Sie Tags an und wählen Sie, ob die Konsole eine neue Rolle mit den erforderlichen Berechtigungen erstellen soll oder ob Sie eine vorhandene Rolle auswählen möchten, die Sie mitlink:reference-permissions-azure.html["die erforderlichen Berechtigungen"] .
 +
 Beachten Sie, dass Sie die mit dieser Rolle verknüpften Azure-Abonnements auswählen können.  Jedes von Ihnen ausgewählte Abonnement erteilt dem Konsolenagenten die Berechtigung, Ressourcen in diesem Abonnement zu verwalten (z. B. Cloud Volumes ONTAP).
 
@@ -506,7 +506,7 @@ Wenn Sie immer noch dielink:reference-networking-saas-console-previous.html["vor
 ====
 . Wählen Sie *Hinzufügen*.
 +
-Die Konsole bereitet die Instanz in etwa 10 Minuten vor.  Bleiben Sie auf der Seite, bis der Vorgang abgeschlossen ist.
+Die Konsole bereitet den Agenten in etwa 10 Minuten vor. Bleiben Sie auf der Seite, bis der Vorgang abgeschlossen ist.
 
 
 
@@ -516,4 +516,4 @@ Nachdem der Vorgang abgeschlossen ist, steht der Konsolenagent für die Verwendu
 
 NOTE: Wenn die Bereitstellung fehlschlägt, können Sie einen Bericht und Protokolle von der Konsole herunterladen, die Ihnen bei der Behebung der Probleme helfen.link:task-troubleshoot-agent.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]
 
-Wenn Sie Azure Blob Storage im selben Azure-Abonnement haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Azure Blob Storage-System angezeigt. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Erfahren Sie, wie Sie Azure Blob Storage über die NetApp Console verwalten"^]
+Wenn Sie Azure Blob Storage im selben Azure-Konto haben, in dem Sie den Konsolen-Agent erstellt haben, wird Azure Blob Storage automatisch auf der Seite *Systeme* angezeigt. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Erfahren Sie, wie Sie Azure Blob Storage über die NetApp Console verwalten"^]
