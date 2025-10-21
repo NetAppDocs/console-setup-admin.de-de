@@ -350,12 +350,6 @@ Die Konsole ersetzt das vorhandene Abonnement für alle Anmeldeinformationen in 
 Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell zuordnen, indem Sie diese Schritte wiederholen.
 
 *** Wählen Sie *Speichern*.
-+
-Das folgende Video zeigt die Schritte zum Abonnieren über den Azure Marketplace:
-
-+
-.Abonnieren Sie NetApp Intelligent Services vom Azure Marketplace
-video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 
 

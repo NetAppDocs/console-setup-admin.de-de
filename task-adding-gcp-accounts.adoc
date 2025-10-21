@@ -76,19 +76,15 @@ Die Konsole ersetzt das vorhandene Abonnement für alle Anmeldeinformationen in 
 Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell zuordnen, indem Sie diese Schritte wiederholen.
 
 *** Wählen Sie *Speichern*.
-+
-Das folgende Video zeigt die Schritte zum Abonnieren vom Google Cloud Marketplace:
-
-+
-.Abonnieren Sie über den Google Cloud Marketplace
-video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 
-.. Navigieren Sie nach Abschluss dieses Vorgangs zurück zur Seite „Anmeldeinformationen“ in der Konsole und wählen Sie dieses neue Abonnement aus.
+
+
+
+
+. Navigieren Sie nach Abschluss dieses Vorgangs zurück zur Seite „Anmeldeinformationen“ in der Konsole und wählen Sie dieses neue Abonnement aus.
 +
 image:screenshot_gcp_associate.gif["Ein Screenshot der Abonnementzuweisungsseite."]
-
-
 
 
 

@@ -252,10 +252,6 @@ Durch das Ersetzen des aktuellen Marktplatzabonnements durch ein neues Abonnemen
 .Bevor Sie beginnen
 Sie müssen einen Konsolenagenten erstellen, bevor Sie ein Abonnement konfigurieren können. link:concept-agents.html#agent-installation["Erfahren Sie, wie Sie einen Konsolenagenten erstellen"] .
 
-Das folgende Video zeigt die Schritte zum Abonnieren von NetApp Intelligent Services vom AWS Marketplace:
-
-.Abonnieren Sie NetApp Intelligent Services vom AWS Marketplace
-video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.

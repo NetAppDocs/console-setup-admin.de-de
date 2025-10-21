@@ -2,10 +2,6 @@
 :allow-uri-read: 
 
 
-Das folgende Video zeigt die Schritte zum Abonnieren von NetApp Intelligent Services vom AWS Marketplace:
-
-.Abonnieren Sie NetApp Intelligent Services vom AWS Marketplace
-video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.

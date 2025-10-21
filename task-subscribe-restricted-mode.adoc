@@ -34,10 +34,6 @@ Sie müssen bereits einen Konsolenagenten bereitgestellt haben, um Datendienste 
 ====
 .AWS
 --
-Das folgende Video zeigt die Schritte zum Abonnieren von NetApp Intelligent Services vom AWS Marketplace:
-
-.Abonnieren Sie NetApp Intelligent Services vom AWS Marketplace
-video::096e1740-d115-44cf-8c27-b051011611eb[panopto]
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
@@ -105,12 +101,6 @@ Die Konsole ersetzt das vorhandene Abonnement für alle Anmeldeinformationen in 
 Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell zuordnen, indem Sie diese Schritte wiederholen.
 
 *** Wählen Sie *Speichern*.
-+
-Das folgende Video zeigt die Schritte zum Abonnieren über den Azure Marketplace:
-
-+
-.Abonnieren Sie NetApp Intelligent Services vom Azure Marketplace
-video::b7e97509-2ecf-4fa0-b39b-b0510109a318[panopto]
 
 
 
@@ -170,19 +160,15 @@ Die Konsole ersetzt das vorhandene Abonnement für alle Anmeldeinformationen in 
 Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell zuordnen, indem Sie diese Schritte wiederholen.
 
 *** Wählen Sie *Speichern*.
-+
-Das folgende Video zeigt die Schritte zum Abonnieren vom Google Cloud Marketplace:
-
-+
-.Abonnieren Sie über den Google Cloud Marketplace
-video::373b96de-3691-4d84-b3f3-b05101161638[panopto]
 
 
-.. Navigieren Sie nach Abschluss dieses Vorgangs zurück zur Seite „Anmeldeinformationen“ in der Konsole und wählen Sie dieses neue Abonnement aus.
+
+
+
+
+. Navigieren Sie nach Abschluss dieses Vorgangs zurück zur Seite „Anmeldeinformationen“ in der Konsole und wählen Sie dieses neue Abonnement aus.
 +
 image:screenshot_gcp_associate.gif["Ein Screenshot der Abonnementzuweisungsseite."]
-
-
 
 
 
