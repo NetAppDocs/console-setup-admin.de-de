@@ -50,6 +50,7 @@ Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podm
 
 
 --
+Azure-VM-Größe:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt Standard_D8s_v3.
 Hypervisor:: Es ist ein Bare-Metal- oder gehosteter Hypervisor erforderlich, der für die Ausführung eines unterstützten Betriebssystems zertifiziert ist.
 [[podman-versions]]Betriebssystem- und Containeranforderungen:: Der Konsolenagent wird von den folgenden Betriebssystemen unterstützt, wenn die Konsole im Standardmodus oder eingeschränkten Modus verwendet wird.  Vor der Installation des Agenten ist ein Container-Orchestrierungstool erforderlich.
 +
@@ -106,19 +107,6 @@ Docker Engine 23.0.6 bis 28.0.0.
 Nicht unterstützt
 
 |===
---
-Azure-VM-Größe:: Ein Instanztyp, der die oben genannten CPU- und RAM-Anforderungen erfüllt.  Wir empfehlen Standard_D8s_v3.
-Speicherplatz in /opt:: 100 GiB Speicherplatz müssen verfügbar sein
-+
---
-Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzeichnis und dessen Inhalt.
-
---
-Speicherplatz in /var:: 20 GiB Speicherplatz müssen verfügbar sein
-+
---
-Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podman so konzipiert sind, dass sie die Container in diesem Verzeichnis erstellen.  Konkret werden sie Container in der `/var/lib/containers/storage` Verzeichnis.  Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
-
 --
 
 
@@ -466,7 +454,7 @@ image:screenshot_azure_shell_upload.png["Ein Screenshot der Azure Cloud Shell, i
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 
 
@@ -537,7 +525,7 @@ image:screenshot_azure_shell_upload.png["Ein Screenshot der Azure Cloud Shell, i
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 +
 Sie sollten jetzt über eine benutzerdefinierte Rolle namens „Konsolenoperator“ verfügen, die Sie der virtuellen Maschine des Konsolenagenten zuweisen können.

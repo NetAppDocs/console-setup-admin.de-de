@@ -153,7 +153,7 @@ Wählen Sie beim Erstellen des Konsolenagenten einen virtuellen Maschinentyp aus
 
 CPU:: 8 Kerne oder 8 vCPUs
 RAM:: 32 GB
-Azure-VM-Größe:: Ein Instanztyp, der die oben genannten CPU- und RAM-Anforderungen erfüllt.  Wir empfehlen Standard_D8s_v3.
+Azure-VM-Größe:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt Standard_D8s_v3.
 
 
 
@@ -209,7 +209,7 @@ image:screenshot_azure_shell_upload.png["Ein Screenshot der Azure Cloud Shell, i
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 
 
@@ -280,7 +280,7 @@ image:screenshot_azure_shell_upload.png["Ein Screenshot der Azure Cloud Shell, i
 +
 [source, azurecli]
 ----
-az role definition create --role-definition Connector_Policy.json
+az role definition create --role-definition agent_Policy.json
 ----
 +
 Sie sollten jetzt über eine benutzerdefinierte Rolle namens „Konsolenoperator“ verfügen, die Sie der virtuellen Maschine des Konsolenagenten zuweisen können.

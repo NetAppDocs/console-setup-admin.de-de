@@ -140,16 +140,16 @@ Auf den folgenden Seiten finden Sie Einzelheiten zu Hostanforderungen, Podman-An
 ====
 .Standardmodus
 --
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["Installieren und Einrichten eines Konsolen-Agenten vor Ort"]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-aws-manual.html["Manuelle Installation des Konsolenagenten in AWS"]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-azure-manual.html["Manuelles Installieren des Konsolen-Agents in Azure"]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-google-manual.html["Installieren Sie den Konsolenagenten manuell in Google Cloud"]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Installieren und Einrichten eines Konsolen-Agenten vor Ort"]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-aws-manual.html["Manuelle Installation des Konsolenagenten in AWS"]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-azure-manual.html["Manuelles Installieren des Konsolen-Agents in Azure"]
+* https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-google-manual.html["Installieren Sie den Konsolenagenten manuell in Google Cloud"]
 
 
 --
 .Eingeschränkter Modus
 --
-https://docs.netapp.com/us-en/bluexp-setup-admin/task-prepare-restricted-mode.html["Vorbereiten der Bereitstellung im eingeschränkten Modus"]
+https://docs.netapp.com/us-en/console-setup-admin/task-prepare-restricted-mode.html["Vorbereiten der Bereitstellung im eingeschränkten Modus"]
 
 --
 ====
@@ -161,7 +161,7 @@ Auf den folgenden Seiten erfahren Sie, wie Sie Ihre Systeme nach der Bereitstell
 
 * https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-adding-systems.html["Hinzufügen vorhandener Cloud Volumes ONTAP -Systeme"^]
 * https://docs.netapp.com/us-en/storage-management-ontap-onprem/task-discovering-ontap.html["Entdecken Sie lokale ONTAP -Cluster"^]
-* https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-creating-fsx-working-environment.html["Erstellen oder entdecken Sie ein FSx für ONTAP -System"^]
+* https://docs.netapp.com/us-en/storage-management-fsx-ontap/use/task-create-fsx-system.html["Erstellen oder entdecken Sie ein FSx für ONTAP -System"^]
 * https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-create-system.html["Erstellen eines Azure NetApp Files Systems"^]
 * https://docs.netapp.com/us-en/storage-management-e-series/task-discover-e-series.html["Entdecken Sie die Systeme der E-Serie"^]
 * https://docs.netapp.com/us-en/storage-management-storagegrid/task-discover-storagegrid.html["Entdecken Sie StorageGRID -Systeme"^]

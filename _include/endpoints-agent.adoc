@@ -46,6 +46,46 @@ Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
 
 | \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Console.
 
+[cols="2*"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+\https://support.netapp.com \https://mysupport.netapp.com
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
+
+
+
+ a| 
+\https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com
+| Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen. 
+
+
+ a| 
+Wählen Sie zwischen zwei Endpunktsätzen:
+
+* Option 1 (empfohlen)
++
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+
+* Option 2
++
+\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+
+
+ a| 
+Um Bilder für Upgrades des Konsolenagenten zu erhalten.
+
+NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen, es sei denn, Sie verwenden Ransomware Resilience oder Backup and Recovery.  Beachten Sie Folgendes zu diesen Endpunkten:
+
+* Endpunkte der Option 1 werden in 3.9.47 und höher unterstützt.  Versionen vor 3.9.47 unterstützen keine Abwärtskompatibilität.
+* Der Konsolenagent initiiert zuerst den Kontakt mit den Endpunkten in Option 2.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.
+* Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
+
+
+|===
 a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| Um Bilder für Upgrades des Konsolenagenten zu erhalten.
 
 * Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten. Wenn Sielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl. Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
@@ -80,3 +120,56 @@ a| Wenn sich der Konsolenagent in einer kommerziellen oder souveränen Region be
 
 
 | Um Bilder für Upgrades des Konsolen-Agenten zu erhalten, wenn der Konsolen-Agent in einer kommerziellen oder souveränen Region installiert ist.
+
+[cols="3*"]
+|===
+| *Vorherige Endpunkte* | *Endpunkte für 4.0.0 und höher* | *Zweck* 
+
+
+ a| 
+* \https://support.netapp.com
+* \https://mysupport.netapp.com
+
+ a| 
+* \https://mysupport.netapp.com
+* \https://signin.b2c.netapp.com
+* \https://support.netapp.com
+
+ a| 
+Informationen zur Lizenzierung und Kontaktaufnahme mit dem NetApp -Support.
+
+
+
+ a| 
+* \https://*.api.bluexp.netapp.com
+* \https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \https://cloudmanager.cloud.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.bluexp.netapp.com
+* \https://*.console.bluexp.netapp.com
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+Für den täglichen Betrieb.
+
+
+
+ a| 
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
+
+ a| 
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+| Um Bilder für Upgrades des Konsolenagenten zu erhalten. 
+|===

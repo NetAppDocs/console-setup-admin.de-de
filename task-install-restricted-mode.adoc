@@ -380,7 +380,7 @@ Geben Sie der Konsole die Berechtigungen, die Sie zuvor eingerichtet haben.
 
 
 
-== Schritt 3: Berechtigungen für die NetApp Console erteilen
+== Schritt 3: Erteilen Sie dem Konsolenagenten Berechtigungen
 
 Wenn Sie den Konsolen-Agenten aus dem Azure Marketplace bereitgestellt oder die Konsolen-Agenten-Software manuell installiert haben, müssen Sie die zuvor eingerichteten Berechtigungen angeben.
 

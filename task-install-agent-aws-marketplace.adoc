@@ -177,7 +177,7 @@ Wenn Sie den Konsolenagenten erstellen, müssen Sie einen EC2-Instance-Typ ausw�
 
 CPU:: 8 Kerne oder 8 vCPUs
 RAM:: 32 GB
-AWS EC2-Instanztyp:: Ein Instanztyp, der die oben genannten CPU- und RAM-Anforderungen erfüllt.  Wir empfehlen t3.2xlarge.
+AWS EC2-Instanztyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt t3.2xlarge.
 
 
 

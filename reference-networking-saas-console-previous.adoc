@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference-networking-saas-console-previous.html 
-keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
-summary: Wenn Sie sich anmelden und die webbasierte Konsole verwenden, kontaktiert diese mehrere Endpunkte, um die von Ihnen initiierten Aktionen abzuschließen.  Computer, die auf die NetApp Console zugreifen, müssen über Verbindungen zu diesen Endpunkten verfügen. 
+keywords: networking, urls, endpoints, web browser, console, network, set up networking, netapp console 
+summary: Sie müssen sicherstellen, dass die Konsole und alle von Ihnen installierten Agenten über den richtigen Netzwerkzugriff verfügen, um ordnungsgemäß zu funktionieren. 
 ---
-= Erforderliche Netzwerkzugriffspunkte für 3.9.55 und darunter
+= Erforderlicher Netzwerkzugriff für 3.9.55 und darunter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,9 +14,16 @@ summary: Wenn Sie sich anmelden und die webbasierte Konsole verwenden, kontaktie
 
 
 [role="lead"]
-In diesem Thema wird der Netzwerkzugriff beschrieben, der für Versionen des NetApp Console Standardmodus vor der Version 4.0.0 der NetApp Console, des NetApp Console Agenten und des ausgehenden Internetzugriffs der NetApp -Datendienste sowie die Möglichkeit zur Kontaktaufnahme mit den erforderlichen Endpunkten erforderlich ist.  Sie müssen sicherstellen, dass die Konsole und alle von Ihnen installierten Agenten über den richtigen Netzwerkzugriff auf die Funktionseigenschaft verfügen.
+NetApp Console, der NetApp Console Agent und NetApp Datendienste erfordern ausgehenden Internetzugang, um die erforderlichen Endpunkte zu kontaktieren.
 
-Sie müssen den Netzwerkzugriff für Computer einrichten, die als Software as a Service (SaaS) auf die NetApp Console zugreifen, sowie für alle Konsolenagenten, die Sie vor Ort oder in der Cloud installieren.  Möglicherweise benötigen Sie auch zusätzliche Endpunkte für bestimmte NetApp -Datendienste, einschließlich Cloud Volumes ONTAP.
+
+NOTE: In diesem Thema wird der Netzwerkzugriff dokumentiert, der für Versionen des NetApp Console Standardmodus 3.9.55 und darunter erforderlich ist.  Informationen zu den erforderlichen Endpunkten für 4.0.0 und höher finden Sie unterlink:reference-networking-saas-console.html["die erforderlichen Endpunkte für 4.0.0 und höher"] .
+
+Sie müssen den Netzwerkzugriff für Folgendes einrichten:
+
+* Computer, die als Software as a Service (SaaS) auf die NetApp Console zugreifen
+* Konsolenagenten, die Sie vor Ort oder in der Cloud installieren.
+
 
 
 
@@ -24,11 +31,62 @@ Sie müssen den Netzwerkzugriff für Computer einrichten, die als Software as a 
 
 Ab Version 4.0.0 benötigen Konsolenagenten weniger Endpunkte.  Vorhandene Bereitstellungen vor 4.0.0 werden weiterhin unterstützt.  Nach dem Upgrade auf 4.0.0 oder höher können Sie die alten Endpunkte bei Bedarf aus Ihrer Zulassungsliste entfernen.
 
-NetApp empfiehlt, dass Sie Ihre Firewall-Regeln aktualisieren, um die überarbeitete Endpunktliste zu verwenden.  Die überarbeitete Liste ist kleiner und somit sicherer und einfacher zu verwalten.
+NetApp empfiehlt, die Firewall-Regeln zu aktualisieren, um die überarbeitete Endpunktliste zu verwenden, die kleiner, sicherer und einfacher zu verwalten ist.  NetApp macht Platzhaltereinträge überflüssig und Endpunkte für Agent-Upgrades unterstützen alle Datendienste.
 
-Rezensionlink:reference-networking-saas-console.html["unterstützte Endpunkte für 4.0.0 und höher"]
+[cols="3*"]
+|===
+| *Vorherige Endpunkte* | *Endpunkte für 4.0.0 und höher* | *Zweck* 
 
+
+ a| 
+* \https://support.netapp.com
+* \https://mysupport.netapp.com
+
+ a| 
+* \https://mysupport.netapp.com
+* \https://signin.b2c.netapp.com
+* \https://support.netapp.com
+
+ a| 
+Informationen zur Lizenzierung und Kontaktaufnahme mit dem NetApp -Support.
+
+
+
+ a| 
+* \https://*.api.bluexp.netapp.com
+* \https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \https://cloudmanager.cloud.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.bluexp.netapp.com
+* \https://*.console.bluexp.netapp.com
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+Für den täglichen Betrieb.
+
+
+
+ a| 
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
+
+ a| 
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+| Um Bilder für Upgrades des Konsolenagenten zu erhalten. 
+|===
 .Schritte
+. Stellen Sie sicher, dass Ihr Agent die Version 4.0.0 oder höher hat.link:task-troubleshoot-agent.html#view-the-console-agent-version["Agentenversion anzeigen."]
 . Whitelist der Endpunkte inlink:reference-networking-saas-console.html["Unterstützte Endpunkte für 4.0.0 und höher"] .
 . Starten Sie den Dienst „Service Manager 2“ auf jedem Agenten neu, indem Sie den folgenden Befehl ausführen:
 +
@@ -42,30 +100,30 @@ systemctl restart netapp-service-manager.service
 ----
 systemctl status netapp-service-manager.service
 ----
-. Entfernen Sie die alten Endpunkte aus Ihrer Zulassungsliste.
+. Entfernen Sie die alten Endpunkte aus der Zulassungsliste Ihrer Firewall.
 
 
 
 
-== Von der NetApp Console kontaktierte Endpunkte
+== Endpunkte für NetApp Console und Konsolenagenten für 3.9.55 und darunter
 
-Jeder Computer, der auf die NetApp Console zugreift, muss über Verbindungen zu den unten aufgeführten Endpunkten verfügen.
-
-Das System kontaktiert diese Endpunkte in zwei Szenarien:
-
-* Von einem Computer aus, der auf die https://console.netapp.com["NetApp Console"^] als Software as a Service (SaaS).
-* Von einem Computer aus, der direkt auf einen Agentenhost zugreift, entweder um sich anzumelden und ihn einzurichten oder um vom Agentenhost aus auf die Konsole zuzugreifen.
-
+Diese Endpunkte werden für Konsolenagenten 3.9.55 und darunter verwendet.
 
 [cols="2*"]
 |===
 | Endpunkte | Zweck 
 
 
-| \https://support.netapp.com \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden. 
+ a| 
+\https://support.netapp.com \https://mysupport.netapp.com
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
 
 
-| \https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com | Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen. 
+
+ a| 
+\https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com
+| Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen. 
 
 
  a| 
@@ -93,170 +151,30 @@ NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese 
 |===
 
 
-== Vom Konsolenagenten kontaktierte Endpunkte
+== Vom Konsolenagenten kontaktierte Cloud-Provider-Endpunkte
 
-Sie installieren den Konsolenagenten vor Ort oder in der Cloud und er kontaktiert Endpunkte, um von der Konsole initiierte Aktionen abzuschließen.
+Konsolenagenten müssen Zugriff auf zusätzliche Endpunkte haben, wenn diese bei Ihrem Cloud-Anbieter bereitgestellt werden.
 
-Konsolenagenten benötigen Zugriff auf dieselben Endpunkte wie die NetApp Console sowie auf zusätzliche Endpunkte, wenn Sie den Agenten bei Ihrem Cloud-Anbieter bereitstellen.
+Aktivieren Sie den Zugriff auf die Endpunkte des Cloud-Anbieters, bevor Sie den Konsolenagenten installieren.
 
+* link:task-install-agent-aws-console.html#networking-aws-agent["Einrichten des AWS-Netzwerkzugriffs für einen Konsolenagenten"]
+* link:task-install-agent-azure-console.html#networking-azure-agent["Einrichten des Azure-Netzwerkzugriffs für einen Konsolen-Agent"]
+* link:task-install-agent-google-console-gcloud.html#networking-gcp-agent["Einrichten des Google Cloud-Netzwerkzugriffs für einen Konsolenagenten"]
 
 
-=== Agent-Endpunkte für AWS
+Die Endpunkte des Cloud-Anbieters sind für alle Versionen gleich.
 
-Diese Endpunkte sind für Konsolenagenten vor 4.0.0 anwendbar.
 
-[cols="2*"]
-|===
-| Endpunkte | Zweck 
 
+== Vom Konsolenagenten kontaktierte Datendienstendpunkte
 
-| AWS-Dienste (amazonaws.com): CloudFormation Elastic Compute Cloud (EC2) Identity and Access Management (IAM) Key Management Service (KMS) Security Token Service (STS) Simple Storage Service (S3) | Zum Verwalten von Ressourcen in AWS.  Der genaue Endpunkt hängt von der von Ihnen verwendeten AWS-Region ab.  Weitere Informationen zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport -Nachrichten an den NetApp Support finden Sie in der AWS-Dokumentation. 
+Der Konsolenagent erfordert zusätzlichen ausgehenden Internetzugang, um einige NetApp Datendienste und Cloud Volumes ONTAP zu unterstützen.
 
 
-| \https://support.netapp.com \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden. 
 
+=== Endpunkte für Cloud Volumes ONTAP
 
- a| 
-Wählen Sie zwischen zwei Endpunktsätzen:
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["Endpunkte für Cloud Volumes ONTAP in AWS"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Endpunkte für Cloud Volumes ONTAP in Azure"]
+* link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Endpunkte für Cloud Volumes ONTAP in Google Cloud"]
 
-* Option 1 (empfohlen)
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* Option 2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Um Bilder für Upgrades des Konsolenagenten zu erhalten.
-
-NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen, es sei denn, Sie verwenden Ransomware Resilience oder Backup and Recovery.  Beachten Sie Folgendes zu diesen Endpunkten:
-
-* Endpunkte der Option 1 werden in 3.9.47 und höher unterstützt.  Versionen vor 3.9.47 unterstützen keine Abwärtskompatibilität.
-* Der Konsolenagent initiiert zuerst den Kontakt mit den Endpunkten in Option 2.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.
-* Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
-
-
-|===
-
-
-=== Agent-Endpunkte für Azure
-
-Diese Endpunkte gelten für Konsolenagenten vor 4.0.0.
-
-[cols="2*"]
-|===
-| Endpunkte | Zweck 
-
-
-| \https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net | Zum Verwalten von Ressourcen in öffentlichen Azure-Regionen. 
-
-
-| \https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn | Zum Verwalten von Ressourcen in Azure China-Regionen. 
-
-
-| \https://support.netapp.com \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden. 
-
-
- a| 
-Wählen Sie zwischen zwei Endpunktsätzen:
-
-* Option 1 (empfohlen)
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* Option 2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Um Bilder für Upgrades des Konsolenagenten zu erhalten.
-
-NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen, es sei denn, Sie verwenden Ransomware Resilience oder Backup and Recovery.  Beachten Sie Folgendes zu diesen Endpunkten:
-
-* Endpunkte der Option 1 werden in 3.9.47 und höher unterstützt.  Versionen vor 3.9.47 unterstützen keine Abwärtskompatibilität.
-* Der Konsolenagent initiiert zuerst den Kontakt mit den Endpunkten in Option 2.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.
-* Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
-
-
-|===
-
-
-=== Agent-Endpunkte für Google Cloud
-
-Diese Endpunkte gelten für Konsolenagenten vor 4.0.0.
-
-[cols="2*"]
-|===
-| Endpunkte | Zweck 
-
-
-| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/project | Zum Verwalten von Ressourcen in Google Cloud. 
-
-
-| \https://support.netapp.com \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden. 
-
-
- a| 
-Wählen Sie zwischen zwei Endpunktsätzen:
-
-* Option 1 (empfohlen)
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* Option 2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Um Bilder für Upgrades des Konsolenagenten zu erhalten.
-
-NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen.  Beachten Sie Folgendes zu diesen Endpunkten:
-
-* Ab der Version 3.9.47 des Konsolenagenten unterstützt das System die in Option 1 aufgeführten Endpunkte.  Frühere Versionen des Konsolenagenten unterstützen keine Abwärtskompatibilität.
-* Der Konsolenagent kontaktiert die Endpunkte zuerst in Option 2.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.
-* Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
-
-
-|===
-
-
-== Lokale Agent-Endpunkte
-
-[cols="2*"]
-|===
-| Endpunkte | Zweck 
-
-
-| \https://support.netapp.com \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden. 
-
-
-| \https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com | Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen. 
-
-
- a| 
-Wählen Sie zwischen zwei Endpunktsätzen:
-
-* Option 1 (empfohlen)
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* Option 2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Um Bilder für Upgrades des Konsolenagenten zu erhalten.
-
-NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen, es sei denn, Sie verwenden Ransomware Resilience oder Backup and Recovery.  Beachten Sie Folgendes zu diesen Endpunkten:
-
-* Endpunkte der Option 1 werden in 3.9.47 und höher unterstützt.  Versionen vor 3.9.47 unterstützen keine Abwärtskompatibilität.
-* Der Konsolenagent initiiert zuerst den Kontakt mit den Endpunkten in Option 2.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.
-* Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
-
-
-|===

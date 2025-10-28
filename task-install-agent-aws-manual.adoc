@@ -50,6 +50,7 @@ Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podm
 
 
 --
+AWS EC2-Instanztyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt t3.2xlarge.
 Hypervisor:: Es ist ein Bare-Metal- oder gehosteter Hypervisor erforderlich, der für die Ausführung eines unterstützten Betriebssystems zertifiziert ist.
 [[podman-versions]]Betriebssystem- und Containeranforderungen:: Der Konsolenagent wird von den folgenden Betriebssystemen unterstützt, wenn die Konsole im Standardmodus oder eingeschränkten Modus verwendet wird.  Vor der Installation des Agenten ist ein Container-Orchestrierungstool erforderlich.
 +
@@ -107,7 +108,6 @@ Nicht unterstützt
 
 |===
 --
-AWS EC2-Instanztyp:: Ein Instanztyp, der die oben genannten CPU- und RAM-Anforderungen erfüllt.  Wir empfehlen t3.2xlarge.
 Schlüsselpaar:: Wenn Sie den Konsolenagenten erstellen, müssen Sie ein EC2-Schlüsselpaar zur Verwendung mit der Instanz auswählen.
 PUT-Antwort-Hop-Limit bei Verwendung von IMDSv2:: Wenn IMDSv2 auf der EC2-Instance aktiviert ist (dies ist die Standardeinstellung für neue EC2-Instances), müssen Sie das Hop-Limit für PUT-Antworten auf der Instanz auf 3 ändern.  Wenn Sie das Limit der EC2-Instance nicht ändern, erhalten Sie beim Versuch, den Agenten einzurichten, einen UI-Initialisierungsfehler.
 +
@@ -115,18 +115,6 @@ PUT-Antwort-Hop-Limit bei Verwendung von IMDSv2:: Wenn IMDSv2 auf der EC2-Instan
 * link:task-require-imdsv2.html["Erfordert die Verwendung von IMDSv2 auf Amazon EC2-Instanzen"]
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-IMDS-existing-instances.html#modify-PUT-response-hop-limit["AWS-Dokumentation: Ändern des Hop-Limits für PUT-Antworten"^]
 
-
---
-Speicherplatz in /opt:: 100 GiB Speicherplatz müssen verfügbar sein
-+
---
-Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzeichnis und dessen Inhalt.
-
---
-Speicherplatz in /var:: 20 GiB Speicherplatz müssen verfügbar sein
-+
---
-Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podman so konzipiert sind, dass sie die Container in diesem Verzeichnis erstellen.  Konkret werden sie Container in der `/var/lib/containers/storage` Verzeichnis.  Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
 
 --
 
