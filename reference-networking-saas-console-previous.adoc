@@ -35,7 +35,7 @@ NetApp empfiehlt, die Firewall-Regeln zu aktualisieren, um die überarbeitete En
 
 [cols="3*"]
 |===
-| *Vorherige Endpunkte* | *Endpunkte für 4.0.0 und höher* | *Zweck* 
+| *Endpunkte für Version 3.9.55 und älter* | *Endpunkte für 4.0.0 und höher* | *Zweck* 
 
 
  a| 
