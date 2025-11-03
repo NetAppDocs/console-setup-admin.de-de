@@ -64,6 +64,9 @@ Nachfolgend finden Sie eine Liste der Rollen in der Anwendungskategorie.  Jede R
 | link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes Administrator"] | Benutzer mit der Rolle „Google Cloud NetApp Volumes“ können Google Cloud NetApp Volumes erkennen und verwalten. 
 
 
+| link:reference-iam-gcnv-roles.html["Google Cloud NetApp Volumes Benutzer"] | Benutzer mit der Benutzerrolle „Google Cloud NetApp Volumes“ können Google Cloud NetApp Volumes anzeigen. 
+
+
 | link:reference-iam-keystone-roles.html["Keystone -Administrator"] | Benutzer mit der Keystone Administratorrolle können Serviceanfragen erstellen.  Ermöglicht Benutzern, Nutzung, Ressourcen und Administratordetails innerhalb des Keystone Mandanten, auf den sie zugreifen, zu überwachen und anzuzeigen. 
 
 
