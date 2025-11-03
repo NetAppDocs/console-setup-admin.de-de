@@ -19,5 +19,5 @@ Sie können Benutzern die folgende Rolle zuweisen, um ihnen Zugriff auf die Goog
 Google Cloud NetApp Volumes verwendet die folgende Rolle:
 
 * * Google Cloud NetApp Volumes Administrator*: Entdecken und verwalten Sie Google Cloud NetApp Volumes in der Konsole.
-* * Google Cloud NetApp Volumes -Benutzer*: Google Cloud NetApp Volumes in der Konsole anzeigen.
+* * Google Cloud NetApp Volumes Viewer*: Google Cloud NetApp Volumes in der Konsole anzeigen.
 
