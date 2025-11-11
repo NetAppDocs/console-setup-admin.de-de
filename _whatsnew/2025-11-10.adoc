@@ -4,7 +4,7 @@
 
 
 
-== Konsolenagent 4.1.0
+=== Konsolenagent 4.1.0
 
 Diese Version des Konsolenagenten enthält Sicherheitsverbesserungen, Fehlerbehebungen und die folgenden Funktionen:
 
@@ -18,7 +18,7 @@ Der Console-Agent unterstützt nun RHEL 9.6 und Podman 5.4.0. Darüber hinaus un
 
 
 
-== NetApp Console
+=== NetApp Console
 
 Diese Version enthält Folgendes:
 

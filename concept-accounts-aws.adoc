@@ -131,7 +131,7 @@ Nein, es ist nicht möglich, die mit Ihrem Cloud Volumes ONTAP -System verknüpf
 
 === Wie funktionieren Anmeldeinformationen für Marktplatzbereitstellungen und lokale Bereitstellungen?
 
-In den obigen Abschnitten wird die empfohlene Bereitstellungsmethode für den Konsolenagenten beschrieben, die von der Konsole aus erfolgt.  Sie können auch einen Agenten in AWS vom AWS Marketplace aus bereitstellen und die Konsolen-Agent-Software manuell auf Ihrem eigenen Linux-Host installieren.
+In den obigen Abschnitten wird die empfohlene Bereitstellungsmethode für den Konsolenagenten beschrieben, die von der Konsole aus erfolgt. Sie können auch einen Agenten in AWS über den AWS Marketplace bereitstellen und die Console-Agent-Software manuell auf Ihrem eigenen Linux-Host oder in Ihrem VCenter installieren.
 
 Wenn Sie den Marketplace verwenden, werden die Berechtigungen auf die gleiche Weise bereitgestellt.  Sie müssen lediglich die IAM-Rolle manuell erstellen und einrichten und dann Berechtigungen für alle zusätzlichen Konten erteilen.
 
