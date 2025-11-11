@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-agent-default-config.html 
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
-summary: Informieren Sie sich vor der Bereitstellung über den Konsolenagenten. 
+summary: Informieren Sie sich genauer über den Console-Agenten, bevor Sie ihn einsetzen. 
 ---
 = Standardkonfiguration für den Konsolenagenten
 :hardbreaks:
@@ -24,7 +24,7 @@ Die folgenden Konfigurationsdetails gelten, wenn Sie einen Konsolenagenten von d
 
 
 
-=== AWS-Details
+=== VM-Details des Konsolenagenten für AWS
 
 Wenn Sie einen Konsolenagenten über die Konsole oder den Marktplatz des Cloud-Anbieters bereitgestellt haben, beachten Sie Folgendes:
 
@@ -40,7 +40,7 @@ Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um a
 
 
 
-=== Azure-Details
+=== VM-Details des Konsolenagenten für Azure
 
 Wenn Sie einen Konsolenagenten über die Konsole oder den Marktplatz des Cloud-Anbieters bereitgestellt haben, beachten Sie Folgendes:
 
@@ -55,7 +55,7 @@ Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um a
 
 
 
-=== Google Cloud-Details
+=== VM-Details des Console-Agenten für Google Cloud
 
 Wenn Sie einen Konsolenagenten über die Konsole bereitgestellt haben, beachten Sie Folgendes:
 
@@ -72,9 +72,9 @@ Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um a
 
 === Installationsordner
 
-Der Installationsordner des Agenten befindet sich am folgenden Speicherort:
+Der Ordner für die Agenteninstallation befindet sich an folgendem Speicherort:
 
-/opt/application/netapp/cloudmanager
+`/opt/application/netapp/cloudmanager`
 
 
 
@@ -82,12 +82,12 @@ Der Installationsordner des Agenten befindet sich am folgenden Speicherort:
 
 Protokolldateien sind in den folgenden Ordnern enthalten:
 
-* /opt/application/netapp/cloudmanager/log oder
-* /opt/application/netapp/service-manager-2/logs (beginnend mit neuen 3.9.23-Installationen)
+* `/opt/application/netapp/cloudmanager/log` oder
+* `/opt/application/netapp/service-manager-2/logs` (beginnend mit Neuinstallationen der Version 3.9.23)
 +
 Die Protokolle in diesen Ordnern enthalten Details zum Konsolenagenten.
 
-* /opt/application/netapp/cloudmanager/docker_occm/data/log
+* `/opt/application/netapp/cloudmanager/docker_occm/data/log`
 +
 Die Protokolle in diesem Ordner enthalten Details zu Cloud-Diensten und dem Konsolendienst, der auf dem Konsolenagenten ausgeführt wird.
 
@@ -120,13 +120,13 @@ Der Agent verwendet die folgenden Ports auf dem Linux-Host:
 
 Die folgende Konfiguration gilt, wenn Sie den Konsolen-Agent manuell auf einem lokalen Linux-Host installiert haben, der keinen Internetzugang hat. link:task-quick-start-private-mode.html["Erfahren Sie mehr über diese Installationsoption"] .
 
-* Der Installationsordner des Agenten befindet sich am folgenden Speicherort:
+* Der Ordner für die Agenteninstallation befindet sich an folgendem Speicherort:
 +
-/opt/application/netapp/ds
+`/opt/application/netapp/ds`
 
 * Protokolldateien sind in den folgenden Ordnern enthalten:
 +
-/var/lib/docker/volumes/ds_occmdata/_data/log
+`/var/lib/docker/volumes/ds_occmdata/_data/log`
 
 +
 Die Protokolle in diesem Ordner enthalten Details zum Konsolenagenten und zu Docker-Images.

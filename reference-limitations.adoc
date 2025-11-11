@@ -36,7 +36,7 @@ Siehe Knowledge Base-Artikellink:https://kb.netapp.com/Advice_and_Troubleshootin
 
 === SSL-Entschlüsselung wird nicht unterstützt
 
-Die Konsole unterstützt keine Firewall-Konfigurationen mit aktivierter SSL-Entschlüsselung.  Wenn die SSL-Entschlüsselung aktiviert ist, werden in der Konsole Fehlermeldungen angezeigt und die Agenteninstanz wird als inaktiv angezeigt.
+Die Konsole unterstützt keine Firewall-Konfigurationen mit aktivierter SSL-Entschlüsselung. Wenn die SSL-Entschlüsselung aktiviert ist, werden Fehlermeldungen in der Konsole angezeigt und die Agenteninstanz wird als *Getrennt* angezeigt.
 
 Für mehr Sicherheit haben Sie die Möglichkeit,link:task-installing-https-cert.html["Installieren Sie ein von einer Zertifizierungsstelle (CA) signiertes HTTPS-Zertifikat."] .
 
@@ -56,6 +56,6 @@ Der Agent wird auf einer VM, die mit anderen Anwendungen gemeinsam genutzt wird,
 
 
 
-=== Agenten und Erweiterungen von Drittanbietern
+=== Drittanbieter-Agenten und Erweiterungen
 
-Agenten oder VM-Erweiterungen von Drittanbietern werden auf der Agent-VM nicht unterstützt.
+Agenten von Drittanbietern oder VM-Erweiterungen werden auf der Agenten-VM nicht unterstützt.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-manage-multiple-agents.html 
 keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
-summary: Wenn Sie mehrere Konsolenagenten verwenden, können Sie direkt von der Konsole aus zwischen diesen Agenten wechseln.  Sie können auch ein einzelnes System mit mehreren Konsolenagenten verwalten. 
+summary: Wenn Sie mehrere Konsolenagenten verwenden, können Sie direkt von der Konsole aus zwischen diesen Agenten wechseln. 
 ---
 = Arbeiten mit mehreren Konsolenagenten
 :hardbreaks:
@@ -36,26 +36,3 @@ image:screenshot-connector-switch.png["Ein Screenshot, der das Agentensymbol in 
 
 .Ergebnis
 Die Konsole wird aktualisiert und zeigt die mit dem ausgewählten Agenten verknüpften Systeme an.
-
-
-
-== Einrichten einer Notfallwiederherstellungskonfiguration
-
-Sie können ein System zur Notfallwiederherstellung gleichzeitig mit mehreren Konsolenagenten verwalten.  Wenn ein Konsolenagent ausfällt, können Sie zum anderen Agenten wechseln, um das System sofort zu verwalten.
-
-.Schritte
-. Wechseln Sie zu dem anderen Konsolenagenten, den Sie mit dem Konsolenagenten verwalten möchten.
-. Entdecken Sie das vorhandene System.
-+
-** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-adding-systems.html["Fügen Sie vorhandene Cloud Volumes ONTAP -Systeme zur Konsole hinzu"^]
-** https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-discovering-ontap.html["Entdecken Sie ONTAP Cluster"^]
-
-
-. Wenn Sie ein Cloud Volumes ONTAP -System verwalten, stellen Sie den Kapazitätsverwaltungsmodus auf *Manueller Modus* ein.
-+
-Um Konflikte zu vermeiden, sollte nur der Hauptkonsolenagent auf den *Automatikmodus* eingestellt werden.
-
-+
-https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-capacity-settings.html["Erfahren Sie mehr über den Kapazitätsverwaltungsmodus"^]
-
-

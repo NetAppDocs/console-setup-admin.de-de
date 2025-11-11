@@ -361,8 +361,6 @@
   <block id="e115a77efdd4b6a7256261431461cb96" category="list-text">Wenn das Kennwort eines der folgenden Sonderzeichen enthält, müssen Sie dieses Sonderzeichen durch Voranstellen eines Backslashs maskieren: &amp; oder !</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">Beispiel:</block>
   <block id="9a8e93f292200e4d86cfd716262b53cc" category="paragraph">\http://bxpproxyuser:netapp1\!@Adresse:3128</block>
-  <block id="5ee4651c5c9cc230b5562d22f6bee0d6" category="paragraph"><block ref="a2bb8d2428da5c2a723c47bd3b78308d" prefix="" category="inline-code"></block>Gibt ein von einer Zertifizierungsstelle signiertes Zertifikat an, das für den HTTPS-Zugriff zwischen dem Konsolenagenten und dem Proxyserver verwendet werden soll.  Dieser Parameter ist für HTTPS-Proxyserver, abfangende Proxyserver und transparente Proxyserver erforderlich.</block>
-  <block id="546e142a2330599c0ba92c6922dd0480" category="paragraph">+ Hier ist ein Beispiel für die Konfiguration eines transparenten Proxyservers.  Wenn Sie einen transparenten Proxy konfigurieren, müssen Sie den Proxyserver nicht definieren.  Sie fügen Ihrem Konsolen-Agent-Host lediglich ein von einer Zertifizierungsstelle signiertes Zertifikat hinzu:</block>
   <block id="4d286ab7c41699ac1c0222a6a25c8ee6" category="list-text">Wenn Sie Podman verwendet haben, müssen Sie den Aardvark-DNS-Port anpassen.</block>
   <block id="e8dcd2e9fa3c43b9aef9e395e7e2b4c9" category="list-text">Stellen Sie eine SSH-Verbindung zur virtuellen Maschine des Konsolenagenten her.</block>
   <block id="dbd4c3db8125866be9bb5a796f445d43" category="list-text">Öffnen Sie die Datei podman_/usr/share/containers/containers.conf_ und ändern Sie den gewählten Port für den Aardvark-DNS-Dienst.  Ändern Sie ihn beispielsweise in 54.</block>
@@ -536,7 +534,6 @@
   <block id="d85624226a34d354eb24bd9f58803ee7" category="list-text">Aktivieren und starten Sie den Dienst podman.socket.</block>
   <block id="c258dc586685c07a851bfdce98251de9" category="list-text">Installieren Sie python3.</block>
   <block id="97c0d440ee76e86ece38ee9da4a462cb" category="list-text">Installieren Sie das EPEL-Repository-Paket, falls es auf Ihrem System noch nicht verfügbar ist.</block>
-  <block id="07a2769ace9f16b5207f20d01a394569" category="list-text">Bei Verwendung von Red Hat Enterprise:</block>
   <block id="93052470e7c6a20358c8d89c161e4880" category="paragraph">Dieser Schritt ist erforderlich, da podman-compose im Repository „Extra Packages for Enterprise Linux“ (EPEL) verfügbar ist.</block>
   <block id="6f3a42415c589950b9ae4d3fe1f87dc7" category="list-text">Installieren Sie das Podman-Compose-Paket 1.0.6.</block>
   <block id="ec7c87651a5ede2a98ad4091fe48b517" category="admonition">Verwenden des<block ref="02c7499137a5d8d10292d68634eb22a0" prefix=" " category="inline-code"></block> Der Befehl erfüllt die Anforderung zum Hinzufügen von „podman-compose“ zur Umgebungsvariablen PATH.  Der Installationsbefehl fügt podman-compose zu /usr/bin hinzu, das bereits im<block ref="c9bac30d1d0554c0790285219e5ad518" prefix=" " category="inline-code"></block> Option auf dem Host.</block>
@@ -1763,12 +1760,10 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Hinweisdateien enthalten Informationen zu Urheberrechten und Lizenzen Dritter, die in der NetApp -Software verwendet werden.</block>
   <block id="50dbf63cd0ab8144a287e5cd6a0f1de2" category="inline-link-macro">Hinweis zur NetApp Console</block>
   <block id="2fdb3c88062031f1ec65eef60690cee3" category="paragraph"><block ref="2fdb3c88062031f1ec65eef60690cee3" category="inline-link-macro-rx"></block></block>
-  <block id="dee61e6ddd6fefdf0afebb3453a2f2ae" category="summary">Informieren Sie sich vor der Bereitstellung über den Konsolenagenten.</block>
   <block id="40ee256581d30fba4f74b0c1e02c7709" category="doc">Standardkonfiguration für den Konsolenagenten</block>
   <block id="7cfc350cfd83ea139353035474462a76" category="paragraph">Informieren Sie sich vor der Bereitstellung des Konsolenagenten über dessen Konfiguration.</block>
   <block id="87047facc49847cec237f6d055d56b31" category="section-title">Standardkonfiguration mit Internetzugang</block>
   <block id="ee67bef980f9156a14c8bfbb2de4f437" category="paragraph">Die folgenden Konfigurationsdetails gelten, wenn Sie einen Konsolenagenten von der NetApp Console oder vom Marktplatz Ihres Cloud-Anbieters bereitgestellt haben oder wenn Sie einen Konsolenagenten manuell auf einem lokalen Linux-Host mit Internetzugang installiert haben.</block>
-  <block id="5eeca886fa07462826a9ea747483f528" category="section-title">AWS-Details</block>
   <block id="716a3a2cd4a75b8f8b3cee509c10b300" category="paragraph">Wenn Sie einen Konsolenagenten über die Konsole oder den Marktplatz des Cloud-Anbieters bereitgestellt haben, beachten Sie Folgendes:</block>
   <block id="33ff271280dc3e0c2c15bf39aeefdeb9" category="list-text">Der EC2-Instanztyp ist t3.2xlarge.</block>
   <block id="7c42c6e2f8295dada12f50f825327ddf" category="list-text">Das Betriebssystem für das Image ist Ubuntu 22.04 LTS.</block>
@@ -1776,22 +1771,15 @@
   <block id="688aea6136f160e02c8d5bbec6894343" category="list-text">Die Installation umfasst Docker Engine, das erforderliche Container-Orchestrierungstool.</block>
   <block id="8061654f55b31a1347dadde5417b3bbe" category="list-text">Der Benutzername für die EC2-Linux-Instanz ist ubuntu (für Agenten, die vor Mai 2023 erstellt wurden, lautet der Benutzername ec2-user).</block>
   <block id="efabd80ebdd217a47d9be936e5f0b8aa" category="list-text">Die Standardsystemfestplatte ist eine 100-GiB-gp2-Festplatte.</block>
-  <block id="b8c4a5bd8ed4eb470e80955a542dd4bf" category="section-title">Azure-Details</block>
   <block id="f637fe372218bb6ee39fd481301dc99f" category="list-text">Der VM-Typ ist Standard_D8s_v3.</block>
   <block id="474a089504b47eb34ee00ee62f121108" category="list-text">Die Standardsystemfestplatte ist eine 100-GiB-Premium-SSD-Festplatte.</block>
-  <block id="f246cf5f23e765f0a7ebed4a6c1d923a" category="section-title">Google Cloud-Details</block>
   <block id="691706b9c4449b81a486ce65a12e3b41" category="paragraph">Wenn Sie einen Konsolenagenten über die Konsole bereitgestellt haben, beachten Sie Folgendes:</block>
   <block id="d8c41b98cc9656d72fb99f79ff2425ba" category="list-text">Die VM-Instanz ist n2-standard-8.</block>
   <block id="6cb5fb9b61376b8ee3092321445fdea4" category="list-text">Die Standardsystemfestplatte ist eine persistente SSD-Festplatte mit 100 GiB.</block>
   <block id="bc4aa6323016172de14a6835883b27c7" category="section-title">Installationsordner</block>
-  <block id="aca8e180ed4d4b3e9c008a4c9e1a9221" category="paragraph">Der Installationsordner des Agenten befindet sich am folgenden Speicherort:</block>
-  <block id="1290fecb35d9c7e8b4f1faf1f9b5c7f3" category="paragraph">/opt/application/netapp/cloudmanager</block>
   <block id="81fae4ea40cc442afa43dab4cc001004" category="section-title">Protokolldateien</block>
   <block id="af22c16aeca9d8bc2515764efff73455" category="paragraph">Protokolldateien sind in den folgenden Ordnern enthalten:</block>
-  <block id="ff6e28c8eaa73c74f132f30b8a504071" category="list-text">/opt/application/netapp/cloudmanager/log oder</block>
-  <block id="f41aa0898b72dcd91cd63bd3d33d4258" category="list-text">/opt/application/netapp/service-manager-2/logs (beginnend mit neuen 3.9.23-Installationen)</block>
   <block id="e414095fd4f025b97d685f64e5c1c7af" category="paragraph">Die Protokolle in diesen Ordnern enthalten Details zum Konsolenagenten.</block>
-  <block id="b7fb1cb20b803995e802d3588f424efa" category="list-text">/opt/application/netapp/cloudmanager/docker_occm/data/log</block>
   <block id="d1a35865336c23dad37aac219ce9f1eb" category="paragraph">Die Protokolle in diesem Ordner enthalten Details zu Cloud-Diensten und dem Konsolendienst, der auf dem Konsolenagenten ausgeführt wird.</block>
   <block id="aa72bf3f5aa3c9bc5daf446b3f9fdc56" category="section-title">Konsolenagentdienst</block>
   <block id="f7a5a4e55ec5894123bb84b3d77ad464" category="list-text">Der Konsolenagentdienst heißt occm.</block>
@@ -1803,8 +1791,6 @@
   <block id="953a0ee991cb0f7fd649dff3efa51614" category="section-title">Standardkonfiguration ohne Internetzugang</block>
   <block id="23b1e0717b9b8b52e9ae0f29f7fc4241" category="inline-link-macro">Erfahren Sie mehr über diese Installationsoption</block>
   <block id="1422f7c6b7eca106db4cb823ab49f18a" category="paragraph">Die folgende Konfiguration gilt, wenn Sie den Konsolen-Agent manuell auf einem lokalen Linux-Host installiert haben, der keinen Internetzugang hat. <block ref="571c6581ab5c68db9f7f7beaff42a50d" category="inline-link-macro-rx"></block> .</block>
-  <block id="7068d488f38430eabf6c395a593e8e5a" category="paragraph">/opt/application/netapp/ds</block>
-  <block id="a15b1a7954f2d926c5ee7f261a97b4d2" category="paragraph">/var/lib/docker/volumes/ds_occmdata/_data/log</block>
   <block id="76a8602c4b7b9c5cc69c5fd8bd4bd2e0" category="paragraph">Die Protokolle in diesem Ordner enthalten Details zum Konsolenagenten und zu Docker-Images.</block>
   <block id="590b2ea5933ad8ead3c9a15a914f1a9c" category="list-text">Alle Dienste werden in Docker-Containern ausgeführt</block>
   <block id="f76b4c57c56377745199382d59cdeed3" category="paragraph">Die Dienste sind abhängig vom laufenden Docker-Runtime-Dienst</block>
@@ -2164,7 +2150,6 @@
   <block id="0b4f61b04d569052cea1ace94b4690a4" category="cell"><block ref="0b4f61b04d569052cea1ace94b4690a4" category="inline-link-macro-rx"></block></block>
   <block id="b30f7fc42ef226f0249c91a8c5e5e7da" category="cell">Nur Informationen anzeigen.</block>
   <block id="1393a4279651a3334e20f39925a139f5" category="cell">Klassifizierungsanzeige</block>
-  <block id="f373bf1ea256b4e774a8cdeea678371c" category="cell">Ermöglicht Benutzern das Anzeigen der Scanergebnisse der NetApp Data Classification .  Benutzer mit dieser Rolle können Compliance-Informationen anzeigen und Berichte für Ressourcen erstellen, auf die sie Zugriffsberechtigung haben.  Diese Benutzer können das Scannen von Volumes, Buckets oder Datenbankschemata weder aktivieren noch deaktivieren.  Die Klassifizierung hat keine Betrachterrolle.</block>
   <block id="c10ec7420a89528925b58b685b8759d7" category="cell"><block ref="c10ec7420a89528925b58b685b8759d7" category="inline-link-macro-rx"></block></block>
   <block id="2b0e5e5222c0782da1fb9f13296d9728" category="cell">Verwalten Sie Aktionen auf den Registerkarten „Schützen“, „Warnungen“, „Wiederherstellen“, „Einstellungen“ und „Berichte“ von NetApp Ransomware Resilience.</block>
   <block id="afa8b9420190b4b20d1eb84b7e53d1d6" category="cell"><block ref="afa8b9420190b4b20d1eb84b7e53d1d6" category="inline-link-macro-rx"></block></block>
@@ -2253,7 +2238,6 @@
   <block id="3908aae7c317936ea6bb5e64e5b1e19b" category="inline-link-macro">Agent-IP-Konflikt mit vorhandenem Netzwerk</block>
   <block id="e0f2ecf720846ace68fd17b91a2fe18b" category="paragraph">Siehe Knowledge Base-Artikel<block ref="7fdfcc240d5e57de761ad01a7e9f5a42" category="inline-link-macro-rx"></block> Anweisungen zum Ändern der IP-Adresse der Schnittstellen des Agenten.</block>
   <block id="1bc21092e961975ea4123f4414693f69" category="section-title">SSL-Entschlüsselung wird nicht unterstützt</block>
-  <block id="312404bd3f092c4ae2981261f9be883d" category="paragraph">Die Konsole unterstützt keine Firewall-Konfigurationen mit aktivierter SSL-Entschlüsselung.  Wenn die SSL-Entschlüsselung aktiviert ist, werden in der Konsole Fehlermeldungen angezeigt und die Agenteninstanz wird als inaktiv angezeigt.</block>
   <block id="7bd92bd111bfbf23b12f73672eb0dd1c" category="inline-link-macro">Installieren Sie ein von einer Zertifizierungsstelle (CA) signiertes HTTPS-Zertifikat.</block>
   <block id="c3ce271d53cbf6a7afd137a37f4ee8d6" category="paragraph">Für mehr Sicherheit haben Sie die Möglichkeit,<block ref="11df3d19916b70ba1d82d33e876689bc" category="inline-link-macro-rx"></block> .</block>
   <block id="e949623e23f093c132f86ba2771e8a2e" category="section-title">Leere Seite beim Laden der lokalen Benutzeroberfläche</block>
@@ -2261,8 +2245,6 @@
   <block id="1f8685c3e9591b0ac770ad3c60e0ea9b" category="paragraph">Dieses Problem hängt mit einem Caching-Problem zusammen.  Die Problemumgehung besteht darin, eine Inkognito- oder private Webbrowser-Sitzung zu verwenden.</block>
   <block id="3b9690f89f4029f3b099f8b7c371b951" category="section-title">Gemeinsam genutzte Linux-Hosts werden nicht unterstützt</block>
   <block id="55334f6c7481482659eaa1b0aef1601a" category="paragraph">Der Agent wird auf einer VM, die mit anderen Anwendungen gemeinsam genutzt wird, nicht unterstützt.  Die VM muss der Agentensoftware gewidmet sein.</block>
-  <block id="39c131bd8f90ef7749228972a6486162" category="section-title">Agenten und Erweiterungen von Drittanbietern</block>
-  <block id="4b7e9b197f794c9b7019035a05713f81" category="paragraph">Agenten oder VM-Erweiterungen von Drittanbietern werden auf der Agent-VM nicht unterstützt.</block>
   <block id="7b7f8f1228adee0b98f669d033848211" category="section-title">Aktualisieren Sie Ihre Endpunktliste auf die überarbeitete Liste für 4.0.0 und höher</block>
   <block id="4c9c91c3daf4ca466e31f9eaa8cef3d2" category="paragraph">Ab Version 4.0.0 benötigen Konsolenagenten weniger Endpunkte.  Vorhandene Bereitstellungen vor 4.0.0 werden weiterhin unterstützt.  Nach dem Upgrade auf 4.0.0 oder höher können Sie die alten Endpunkte bei Bedarf aus Ihrer Zulassungsliste entfernen.</block>
   <block id="ae702d0a49628819c46d528d565558a9" category="inline-link-macro">Unterstützte Endpunkte für 4.0.0 und höher</block>
@@ -3321,7 +3303,6 @@
   <block id="349027440539dc46278ee9e93260025d" category="section-title">Aktualisieren Sie den Proxy des Konsolenagenten, wenn dieser den Zugriff auf das Internet verliert</block>
   <block id="71164e4bc7911ce651a366899f4f487b" category="paragraph">Wenn sich die Proxy-Konfiguration für Ihr Netzwerk ändert, verliert Ihr Agent möglicherweise den Zugriff auf das Internet.  Zum Beispiel, wenn jemand das Passwort für den Proxyserver ändert oder das Zertifikat aktualisiert.  In diesem Fall müssen Sie direkt vom Konsolenagent-Host auf die Benutzeroberfläche zugreifen und die Einstellungen aktualisieren.  Stellen Sie sicher, dass Sie Netzwerkzugriff auf den Konsolen-Agent-Host haben und sich bei der Konsole anmelden können.</block>
   <block id="54734e5bba3b83b2757e43d1ff24b2c4" category="section-title">Aktivieren Sie den direkten API-Verkehr</block>
-  <block id="2a398a7caf83846d0b6a5ffb7e46e036" category="paragraph">Wenn Sie einen Konsolenagenten für die Verwendung eines Proxyservers konfiguriert haben, können Sie den direkten API-Verkehr auf dem Konsolenagenten aktivieren, um API-Aufrufe direkt an die Dienste des Cloud-Anbieters zu senden, ohne den Proxy zu durchlaufen. Agenten, die in AWS, Azure oder Google Cloud ausgeführt werden, unterstützen diese Option.</block>
   <block id="c37870a98a047f7cae1ee48e164d5230" category="paragraph">Wenn Sie Azure Private Links mit Cloud Volumes ONTAP deaktivieren und Service-Endpunkte verwenden, aktivieren Sie den direkten API-Verkehr.  Andernfalls wird der Datenverkehr nicht richtig weitergeleitet.</block>
   <block id="ac10c9401f16ed5ff0a029bce2712adc" category="inline-link">Erfahren Sie mehr über die Verwendung eines Azure Private Link oder von Service-Endpunkten mit Cloud Volumes ONTAP</block>
   <block id="7036572e3eccb7a8e3ea89ae1a860266" category="paragraph"><block ref="7036572e3eccb7a8e3ea89ae1a860266" category="inline-link-rx"></block></block>
@@ -4554,7 +4535,6 @@
   <block id="776c814c9b0c72880dcd5eaf49118ff2" category="paragraph">Sie können den Uniform Resource Identifier (URI) für einen Agenten hinzufügen und entfernen.</block>
   <block id="ae3e99ad1c50edf4e25c2d64cf2eefa5" category="list-text">Erweitern Sie die Leiste *Agent-URIs*, um Agent-URIs anzuzeigen.</block>
   <block id="fb9b59364e346ccfcbfc4636f13644b5" category="list-text">Fügen Sie URIs hinzu und entfernen Sie sie, und wählen Sie dann *Übernehmen* aus.</block>
-  <block id="b6abeefbbae1a52ba573ab84b4b8c35a" category="summary">Wenn Sie mehrere Konsolenagenten verwenden, können Sie direkt von der Konsole aus zwischen diesen Agenten wechseln.  Sie können auch ein einzelnes System mit mehreren Konsolenagenten verwalten.</block>
   <block id="322805244d3cfbc06b20be41ebf54d36" category="doc">Arbeiten mit mehreren Konsolenagenten</block>
   <block id="c73b380f2cf43cbe65e10db11adc4709" category="paragraph">Wenn Sie mehrere Konsolenagenten verwenden, können Sie direkt von der Konsole aus zwischen diesen Konsolenagenten wechseln, um die zugehörigen Systeme anzuzeigen.</block>
   <block id="74bd0729b4aa2adbd6a34d8410d08abb" category="paragraph">Beispielsweise haben Sie in einer Multi-Cloud-Umgebung möglicherweise einen Agenten in AWS und einen anderen in Google Cloud.  Wechseln Sie zwischen diesen Agenten, um die Cloud Volumes ONTAP -Systeme in den jeweiligen Cloud-Umgebungen zu verwalten.</block>
@@ -4563,18 +4543,6 @@
   <block id="39a66cbd55302576b83a0a5471064712" category="inline-image-macro">Ein Screenshot, der das Agentensymbol in der Kopfzeile und die Switch-Aktion zeigt.</block>
   <block id="2bf29a9ec2a497699149ddb5c47450d4" category="paragraph"><block ref="2bf29a9ec2a497699149ddb5c47450d4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7453879259a0b97c6566954016435290" category="paragraph">Die Konsole wird aktualisiert und zeigt die mit dem ausgewählten Agenten verknüpften Systeme an.</block>
-  <block id="5cb02414ba99e03fa83bad53db22c1e4" category="section-title">Einrichten einer Notfallwiederherstellungskonfiguration</block>
-  <block id="30e4546ef393337cf90d00ca9e7087d9" category="paragraph">Sie können ein System zur Notfallwiederherstellung gleichzeitig mit mehreren Konsolenagenten verwalten.  Wenn ein Konsolenagent ausfällt, können Sie zum anderen Agenten wechseln, um das System sofort zu verwalten.</block>
-  <block id="093c50014a3f6a42c69939ec5e59a13b" category="list-text">Wechseln Sie zu dem anderen Konsolenagenten, den Sie mit dem Konsolenagenten verwalten möchten.</block>
-  <block id="7a9a9f715597e50c4cb86a39ec829d54" category="list-text">Entdecken Sie das vorhandene System.</block>
-  <block id="08018a7c53e51cbc09b4bf8d9664fd5e" category="inline-link">Fügen Sie vorhandene Cloud Volumes ONTAP -Systeme zur Konsole hinzu</block>
-  <block id="a6725a99f3665240f29a037172d05628" category="list-text"><block ref="a6725a99f3665240f29a037172d05628" category="inline-link-rx"></block></block>
-  <block id="a1ebf612d281c8e7fb16bbfa253b9627" category="inline-link">Entdecken Sie ONTAP Cluster</block>
-  <block id="49aaf65c31a811a37b2627a951f6f6d2" category="list-text"><block ref="49aaf65c31a811a37b2627a951f6f6d2" category="inline-link-rx"></block></block>
-  <block id="6bf1988b3312f00ea9a8a52aa7a47355" category="list-text">Wenn Sie ein Cloud Volumes ONTAP -System verwalten, stellen Sie den Kapazitätsverwaltungsmodus auf *Manueller Modus* ein.</block>
-  <block id="0bf2e021b970775f65586d6866bfeb5f" category="paragraph">Um Konflikte zu vermeiden, sollte nur der Hauptkonsolenagent auf den *Automatikmodus* eingestellt werden.</block>
-  <block id="f05a0e154340f7c017b3a9bfa5a8bf05" category="inline-link">Erfahren Sie mehr über den Kapazitätsverwaltungsmodus</block>
-  <block id="17fc88f224620f6881e6e779aa01025c" category="paragraph"><block ref="17fc88f224620f6881e6e779aa01025c" category="inline-link-rx"></block></block>
   <block id="1e12fbabb20fb5fd9d147dfb17d80816" category="summary">Abhängig von den Aktionen, die Sie in der Konsole ausgeführt haben, haben Sie möglicherweise ONTAP Anmeldeinformationen und Anmeldeinformationen für die NetApp Support Site (NSS) mit Ihrer Benutzeranmeldung verknüpft.  Sie können diese Anmeldeinformationen anzeigen und verwalten, nachdem Sie sie verknüpft haben.  Wenn Sie beispielsweise das Kennwort für diese Anmeldeinformationen ändern, müssen Sie das Kennwort in der Konsole aktualisieren.</block>
   <block id="d86c06c14b06c848fca4417d1ccfa279" category="doc">Verwalten Sie die mit Ihrer NetApp Console verknüpften Anmeldeinformationen</block>
   <block id="823a6e1d7fe661be55dd3af05f972b11" category="section-title">ONTAP -Anmeldeinformationen</block>
@@ -5130,11 +5098,9 @@
   <block id="e1b145fbf942267f38a8e6f0928d8629" category="paragraph"><block ref="9ff6aead716ef57f3a1e9e40a858062f" prefix="" category="inline-code"></block></block>
   <block id="0bb43692ecd0352eecc69c235e34d6f0" category="paragraph">_silent_ führt das Skript aus, ohne Sie zur Bestätigung aufzufordern.</block>
   <block id="5706dd8bbae1725311aa98f5ff571442" category="section-title">Entfernen von Konsolenagenten aus der Konsole</block>
-  <block id="d6e4f33a31f72ef4b58be87971dbaf7e" category="paragraph">Wenn ein Konsolenagent inaktiv ist, können Sie ihn aus der Agentenliste entfernen.  Dies ist möglicherweise der Fall, wenn Sie die virtuelle Agentenmaschine löschen oder die Agentensoftware deinstallieren.</block>
   <block id="6535e883467a2f7723aa12bfbf398d49" category="paragraph">Beachten Sie beim Entfernen eines Konsolenagenten Folgendes:</block>
   <block id="41b9dde34c587a177c2f3827a8427dfd" category="list-text">Durch diese Aktion wird die virtuelle Maschine nicht gelöscht.</block>
   <block id="4d921e8b119cda6cf295382929919d43" category="list-text">Diese Aktion kann nicht rückgängig gemacht werden. Wenn Sie einen Konsolenagenten einmal entfernt haben, können Sie ihn nicht wieder hinzufügen.</block>
-  <block id="3865cf3e4751d28b58d7666313ad5652" category="list-text">Wählen Sie auf der Seite *Übersicht* das Aktionsmenü für einen inaktiven Agenten und wählen Sie *Agent entfernen*.</block>
   <block id="592190ac81807f2097b7f4253f7b5646" category="list-text">Geben Sie zur Bestätigung den Namen des Agenten ein und wählen Sie dann *Entfernen*.</block>
   <block id="2c474831a621d6f0b4bdd5da67196b84" category="summary">Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden, aktualisiert die NetApp Console Ihren Konsolenagenten automatisch auf die neueste Version, sofern der Konsolenagent über ausgehenden Internetzugang verfügt, um das Softwareupdate abzurufen.</block>
   <block id="ca901ca59322c0976d1191fbab40ddfb" category="doc">Upgrades des Konsolenagenten verwalten</block>
@@ -5197,24 +5163,19 @@
   <block id="54fd6ad42040e4dcd0dcda5cc49c6c66" category="summary">Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetApp Console : IAM, Konsolenagenten, Anmeldeinformationen für Cloud-Anbieter und mehr.</block>
   <block id="490414e0366b091220802d406e52c076" category="doc">Was ist neu</block>
   <block id="3243765239f2c6f00af00297914a69d4" category="paragraph">Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetApp Console : Identitäts- und Zugriffsverwaltung (IAM), Konsolenagenten, Anmeldeinformationen von Cloud-Anbietern und mehr.</block>
-  <block id="91d6aafc857e46203357e992ab4434f8" category="section-title">6. Oktober 2025</block>
   <block id="b9d888f58b09c4007db0247286e392b5" category="section-title">11. August 2025</block>
   <block id="328e39c031d3f6a77403904d6dda2377" category="section-title">31. Juli 2025</block>
   <block id="6bf86021a24fd009a31d432250a9ad20" category="section-title">21. Juli 2025</block>
   <block id="f2673d4a3fe0162a501d43f5168ae950" category="section-title">14. Juli 2025</block>
-  <block id="f27f1ce6df3e2ec2518f77e8e1a4a531" category="section-title">9. Juni 2025</block>
   <block id="1971cba9fca6bc598cf10a08dfb20cb6" category="section-title">29. Mai 2025</block>
   <block id="4409983c60e456858bb3e9ef5737f98a" category="section-title">14. April 2025</block>
   <block id="5f2734b84896bdabcf7fd3574325d116" category="section-title">28. März 2025</block>
   <block id="f070435ef55d6c7cc1db59f0a41a4609" category="section-title">10. März 2025</block>
-  <block id="278edfabbac204688aa13f79c6f52497" category="section-title">6. März 2025</block>
   <block id="df3f743aae5476a7b16bbbc329251f85" category="section-title">18. Februar 2025</block>
   <block id="c523b074da0b63e607578686184d5981" category="section-title">10. Februar 2025</block>
   <block id="2b513ec32615ab736c1cab315db516f8" category="section-title">13. Januar 2025</block>
   <block id="c33f35ab44944cc0d09e5bb702125592" category="section-title">16. Dezember 2024</block>
-  <block id="1f86b1e4048d088ce153a6f451fb30d6" category="section-title">9. Dezember 2024</block>
   <block id="a1fe52ea216874a5214f41ae7e5bbd63" category="section-title">10. Oktober 2024</block>
-  <block id="e5182edc3707e8e354c40ab7fa819f39" category="section-title">7. Oktober 2024</block>
   <block id="964635dcf6206ebb279b58d13cf69a92" category="section-title">30. September 2024</block>
   <block id="2e5948b55d019081bde9b17268d72c2c" category="section-title">Konnektor 3.9.44</block>
   <block id="eef503d0bc4de5d76d47f4691b412e15" category="paragraph">Diese Version enthält Unterstützung für Docker Engine 26, eine Verbesserung der SSL-Zertifikate und Fehlerbehebungen.</block>
@@ -5603,4 +5564,49 @@
   <block id="caf28471250404467f130940e7fd6e28" category="cell">Benutzer mit der Benutzerrolle „Google Cloud NetApp Volumes“ können Google Cloud NetApp Volumes anzeigen.</block>
   <block id="ab925d8c9a6924f34df64e8e1fb1a38d" category="list-text">* Google Cloud NetApp Volumes Viewer*: Google Cloud NetApp Volumes in der Konsole anzeigen.</block>
   <block id="7d04a8adb8b138151b42f809761295c7" category="cell"><block ref="7d04a8adb8b138151b42f809761295c7" category="inline-link-macro-rx"></block></block>
+  <block id="a5e170ce8c9d104f0b20e67e54257be5" category="paragraph">Sie müssen Proxy-Informationen hinzufügen, wenn Ihr Netzwerk einen Proxy für den Internetzugang benötigt. Sie können entweder während der Installation einen expliziten Proxy hinzufügen. Die Parameter --proxy und --cacert sind optional und Sie werden nicht aufgefordert, sie hinzuzufügen. Wenn Sie einen expliziten Proxy-Server verwenden, müssen Sie die Parameter wie gezeigt eingeben.</block>
+  <block id="247a6a0ee254b2ff09347b727ee46227" category="inline-link-macro">Erfahren Sie mehr über die Agentenwartungskonsole.</block>
+  <block id="ed63faa45dd9543220a2183fa0e02b97" category="admonition">Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun. <block ref="6d6c38ccb358695b7ab850225fcd83aa" category="inline-link-macro-rx"></block></block>
+  <block id="fbcd7669a7a0c8cc9053c7c78029654b" category="admonition">Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über die <block ref="d3f69ee6935d5f5f8542f4da69ac2bb6" category="inline-link-macro-rx"></block>Die</block>
+  <block id="4fcd2b24226e5ab1f33572cdc55d9b7b" category="list-text">Bei Verwendung von Red Hat Enterprise 9:</block>
+  <block id="334ed7efb24267c8a9d5f60a214ee627" category="list-text">Installieren Sie das Podman-Compose-Paket 1.5.0.</block>
+  <block id="83291537b9ae75a78c7add56b73a4688" category="list-text">Bei Verwendung von Red Hat Enterprise Linux 8:</block>
+  <block id="9c1b6a208384484254769349d91e3af9" category="doc">Konsolenagent 4.1.0</block>
+  <block id="e8cdaf5bab63b64f0740dc40a9389ed9" category="paragraph">Diese Version des Konsolenagenten enthält Sicherheitsverbesserungen, Fehlerbehebungen und die folgenden Funktionen:</block>
+  <block id="e32e1b9613d2e086e1fc46ae7489620c" category="paragraph">Die Version 4.1.0 ist für den Standardmodus und den eingeschränkten Modus verfügbar.</block>
+  <block id="650940dddaeb353d547fc2674ba4d35b" category="paragraph-title">Umbenannte Agentenstatusanzeigen</block>
+  <block id="9722491a4236a9be86f414fa5b3eebb8" category="paragraph">Die Statusanzeigen für den Konsolenagenten wurden von *Aktiv* und *Inaktiv* in *Verbunden* und *Getrennt* umbenannt, um ihren Zweck deutlicher zu machen.</block>
+  <block id="d9e7da7d4b9cc9086a7ab3a5a270f7da" category="paragraph-title">Unterstützung für Red Hat Enterprise Linux (RHEL) 9.6 und Podman 5.4.0</block>
+  <block id="d90d113f70d4f4d024f99f4015bbbb96" category="paragraph">Der Console-Agent unterstützt nun RHEL 9.6 und Podman 5.4.0. Darüber hinaus unterstützt NetApp bei Verwendung von RHEL 9 und höher podman-compose 1.5.0.</block>
+  <block id="2749b80160d80f9500fa8b5d5b4da1ba" category="section-title">NetApp Console</block>
+  <block id="a0d96dec6c85f67c2563063cec22ac66" category="paragraph">Diese Version enthält Folgendes:</block>
+  <block id="ac740509743c941164fb7e88fc8b768e" category="paragraph-title">Neue E-Mail-Adresse für NetApp Console Benachrichtigungen</block>
+  <block id="3ded9fa2f8cf197bdf563d5509101e3a" category="paragraph">Die E-Mail-Adresse, an die NetApp Console Benachrichtigungen gesendet werden, hat sich von *service@console.bluexp.netapp.com* auf *service@console.netapp.com* geändert. NetApp empfiehlt, alle E-Mail-Regeln so zu aktualisieren, dass *service@console.netapp.com* zugelassen wird, um sicherzustellen, dass Sie weiterhin E-Mail-Benachrichtigungen von NetApp Console erhalten.</block>
+  <block id="6ee211c536d8760f2108dd2c3e9fde0b" category="summary">Informieren Sie sich genauer über den Console-Agenten, bevor Sie ihn einsetzen.</block>
+  <block id="e079e06be34bd849355b3a013a28ade3" category="section-title">VM-Details des Konsolenagenten für AWS</block>
+  <block id="0759ecf4e00f5c23dd6fcb46adfd5f73" category="section-title">VM-Details des Konsolenagenten für Azure</block>
+  <block id="a284e20714904b80b3bc57b894975967" category="section-title">VM-Details des Console-Agenten für Google Cloud</block>
+  <block id="ccc39ad27a3e5ae6ae32a3552e89ecf6" category="paragraph">Der Ordner für die Agenteninstallation befindet sich an folgendem Speicherort:</block>
+  <block id="d19b8636dbd523d212642fc43cc17d39" category="paragraph"><block ref="1290fecb35d9c7e8b4f1faf1f9b5c7f3" prefix="" category="inline-code"></block></block>
+  <block id="549ccc427eb51e8795fefc7eb58efbd7" category="list-text"><block ref="9038f40808a3b534dd4031904a7d2ce8" prefix="" category="inline-code"></block> oder</block>
+  <block id="7879cfbe1211d2f970424c1b2506a0a1" category="list-text"><block ref="0d4b69d94aa57fab56e1a31c631b6b9d" prefix="" category="inline-code"></block> (beginnend mit Neuinstallationen der Version 3.9.23)</block>
+  <block id="77504c6121663bb82697faa2adb426c0" category="list-text"><block ref="b7fb1cb20b803995e802d3588f424efa" prefix="" category="inline-code"></block></block>
+  <block id="8c0ce03e205216a2506b72de21ab36d0" category="paragraph"><block ref="7068d488f38430eabf6c395a593e8e5a" prefix="" category="inline-code"></block></block>
+  <block id="a7678a59b185360eec3ece4df3f90a18" category="paragraph"><block ref="a15b1a7954f2d926c5ee7f261a97b4d2" prefix="" category="inline-code"></block></block>
+  <block id="49868b41c479810c405bc3509cdb1907" category="cell">Ermöglicht Benutzern das Anzeigen der Scanergebnisse der NetApp Data Classification . Benutzer mit dieser Rolle können Compliance-Informationen anzeigen und Berichte für Ressourcen erstellen, auf die sie Zugriffsberechtigung haben. Diese Benutzer können das Scannen von Volumes, Buckets oder Datenbankschemata weder aktivieren noch deaktivieren. Die Klassifizierung hat keine Administratorrolle.</block>
+  <block id="93fd98d5e6dc8e59c7d87e83e4b28b54" category="paragraph">Die Konsole unterstützt keine Firewall-Konfigurationen mit aktivierter SSL-Entschlüsselung. Wenn die SSL-Entschlüsselung aktiviert ist, werden Fehlermeldungen in der Konsole angezeigt und die Agenteninstanz wird als *Getrennt* angezeigt.</block>
+  <block id="5ef1446cf0ab868961d473d928c394d6" category="section-title">Drittanbieter-Agenten und Erweiterungen</block>
+  <block id="08ea771e22fb933fc1428178b36eb902" category="paragraph">Agenten von Drittanbietern oder VM-Erweiterungen werden auf der Agenten-VM nicht unterstützt.</block>
+  <block id="c976a9d1d7322a1a795f641867000e2b" category="paragraph">Wenn Sie einen Console-Agenten für die Verwendung eines Proxy-Servers konfiguriert haben, können Sie den direkten API-Datenverkehr auf dem Console-Agenten aktivieren, um API-Aufrufe direkt an Cloud-Anbieterdienste zu senden, ohne den Proxy zu durchlaufen. Agenten, die in AWS, Azure oder Google Cloud ausgeführt werden, unterstützen diese Option.</block>
+  <block id="8b1d2ab0552c5d7793153d9fda3b575d" category="paragraph"><block ref="51298227862ac5270d9350ee1061138a" category="inline-link-macro-rx"></block>.</block>
+  <block id="e5d52cc85bda9d53a6d755f08201667b" category="summary">Wenn Sie mehrere Konsolenagenten verwenden, können Sie direkt von der Konsole aus zwischen diesen Agenten wechseln.</block>
+  <block id="b634c2786e9d7bad38c80a81b3416dd7" category="paragraph">Wenn Sie eine Agenten-VM gelöscht oder den Agenten deinstalliert haben, sollten Sie ihn aus der Liste der Agenten in der Konsole entfernen. Nach dem Löschen einer Agenten-VM oder der Deinstallation der Agentensoftware wird der Agent in der Konsole als *Getrennt* angezeigt.</block>
+  <block id="f6b8e4c4df658aad1c40b366b5c5d259" category="list-text">Auf der Seite *Übersicht* wählen Sie das Aktionsmenü für einen getrennten Agenten und anschließend *Agent entfernen*.</block>
+  <block id="77750efa6f5ff153acdc42067058017f" category="section-title">10. November 2025</block>
+  <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06. Oktober 2025</block>
+  <block id="791d05d0e9072626d0316ef0a7cf21bc" category="section-title">09. Juni 2025</block>
+  <block id="cceeb5ea78b799b3b8575b2829590616" category="section-title">06. März 2025</block>
+  <block id="527d18dfa760fc67196d102d429a8ea0" category="section-title">09. Dezember 2024</block>
+  <block id="f66c63cf0ff76c19209f85ca687a2fb4" category="section-title">7. Oktober 2024</block>
+  <block id="827939177a8e56e6d981ae1fc3dcb065" category="section-title">09. September 2024</block>
 </blocks>

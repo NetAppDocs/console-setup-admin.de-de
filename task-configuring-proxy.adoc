@@ -127,7 +127,7 @@ Wenn sich die Proxy-Konfiguration für Ihr Netzwerk ändert, verliert Ihr Agent 
 
 == Aktivieren Sie den direkten API-Verkehr
 
-Wenn Sie einen Konsolenagenten für die Verwendung eines Proxyservers konfiguriert haben, können Sie den direkten API-Verkehr auf dem Konsolenagenten aktivieren, um API-Aufrufe direkt an die Dienste des Cloud-Anbieters zu senden, ohne den Proxy zu durchlaufen. Agenten, die in AWS, Azure oder Google Cloud ausgeführt werden, unterstützen diese Option.
+Wenn Sie einen Console-Agenten für die Verwendung eines Proxy-Servers konfiguriert haben, können Sie den direkten API-Datenverkehr auf dem Console-Agenten aktivieren, um API-Aufrufe direkt an Cloud-Anbieterdienste zu senden, ohne den Proxy zu durchlaufen. Agenten, die in AWS, Azure oder Google Cloud ausgeführt werden, unterstützen diese Option.
 
 Wenn Sie Azure Private Links mit Cloud Volumes ONTAP deaktivieren und Service-Endpunkte verwenden, aktivieren Sie den direkten API-Verkehr.  Andernfalls wird der Datenverkehr nicht richtig weitergeleitet.
 

@@ -51,7 +51,7 @@ Dabei ist <Version> die Version des Konsolenagenten, die Sie heruntergeladen hab
  ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
-Sie müssen Proxy-Informationen hinzufügen, wenn Ihr Netzwerk einen Proxy für den Internetzugang benötigt.  Sie können entweder einen transparenten oder einen expliziten Proxy hinzufügen.  Die Parameter --proxy und --cacert sind optional und Sie werden nicht aufgefordert, sie hinzuzufügen.  Wenn Sie einen Proxyserver haben, müssen Sie die Parameter wie gezeigt eingeben.
+Sie müssen Proxy-Informationen hinzufügen, wenn Ihr Netzwerk einen Proxy für den Internetzugang benötigt. Sie können entweder während der Installation einen expliziten Proxy hinzufügen. Die Parameter --proxy und --cacert sind optional und Sie werden nicht aufgefordert, sie hinzuzufügen. Wenn Sie einen expliziten Proxy-Server verwenden, müssen Sie die Parameter wie gezeigt eingeben.
 
 +
 Hier ist ein Beispiel für die Konfiguration eines expliziten Proxyservers mit einem von einer Zertifizierungsstelle signierten Zertifikat:
@@ -91,16 +91,9 @@ Beispiel:
 
 
 
-`--cacert`Gibt ein von einer Zertifizierungsstelle signiertes Zertifikat an, das für den HTTPS-Zugriff zwischen dem Konsolenagenten und dem Proxyserver verwendet werden soll.  Dieser Parameter ist für HTTPS-Proxyserver, abfangende Proxyserver und transparente Proxyserver erforderlich.
 
-+ Hier ist ein Beispiel für die Konfiguration eines transparenten Proxyservers.  Wenn Sie einen transparenten Proxy konfigurieren, müssen Sie den Proxyserver nicht definieren.  Sie fügen Ihrem Konsolen-Agent-Host lediglich ein von einer Zertifizierungsstelle signiertes Zertifikat hinzu:
+NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun. link:reference-agent-maint-console.html["Erfahren Sie mehr über die Agentenwartungskonsole."]
 
-+
-
-[source, cli]
-----
- ./NetApp_Console_Agent_Cloud_v4.0.0 --cacert /tmp/cacert/certificate.cer
-----
 . Wenn Sie Podman verwendet haben, müssen Sie den Aardvark-DNS-Port anpassen.
 +
 .. Stellen Sie eine SSH-Verbindung zur virtuellen Maschine des Konsolenagenten her.

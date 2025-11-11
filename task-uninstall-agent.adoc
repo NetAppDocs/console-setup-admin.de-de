@@ -39,7 +39,7 @@ _silent_ führt das Skript aus, ohne Sie zur Bestätigung aufzufordern.
 
 == Entfernen von Konsolenagenten aus der Konsole
 
-Wenn ein Konsolenagent inaktiv ist, können Sie ihn aus der Agentenliste entfernen.  Dies ist möglicherweise der Fall, wenn Sie die virtuelle Agentenmaschine löschen oder die Agentensoftware deinstallieren.
+Wenn Sie eine Agenten-VM gelöscht oder den Agenten deinstalliert haben, sollten Sie ihn aus der Liste der Agenten in der Konsole entfernen. Nach dem Löschen einer Agenten-VM oder der Deinstallation der Agentensoftware wird der Agent in der Konsole als *Getrennt* angezeigt.
 
 Beachten Sie beim Entfernen eines Konsolenagenten Folgendes:
 
@@ -49,6 +49,6 @@ Beachten Sie beim Entfernen eines Konsolenagenten Folgendes:
 
 .Schritte
 . Wählen Sie *Administration > Agenten*.
-. Wählen Sie auf der Seite *Übersicht* das Aktionsmenü für einen inaktiven Agenten und wählen Sie *Agent entfernen*.
+. Auf der Seite *Übersicht* wählen Sie das Aktionsmenü für einen getrennten Agenten und anschließend *Agent entfernen*.
 . Geben Sie zur Bestätigung den Namen des Agenten ein und wählen Sie dann *Entfernen*.
 
