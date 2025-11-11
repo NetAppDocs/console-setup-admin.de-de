@@ -77,18 +77,41 @@ Der Konsolenagent wird in Google Cloud auf einer VM-Instanz mit einem Betriebssy
 --
 Hypervisor:: Es ist ein Bare-Metal- oder gehosteter Hypervisor erforderlich, der für die Ausführung eines unterstützten Betriebssystems zertifiziert ist.
 [[podman-versions]]Betriebssystem- und Containeranforderungen:: Der Konsolenagent wird von den folgenden Betriebssystemen unterstützt, wenn die Konsole im Standardmodus oder eingeschränkten Modus verwendet wird.  Vor der Installation des Agenten ist ein Container-Orchestrierungstool erforderlich.
-+
---
+
+
 [cols="2a,2a,2a,2a,2a"]
 |===
-| Betriebssystem | Unterstützte Betriebssystemversionen | Unterstützte Agent-Versionen | Erforderliches Container-Tool | SELinux a 
+| Betriebssystem | Unterstützte Betriebssystemversionen | Unterstützte Agent-Versionen | Erforderliches Container-Tool | SELinux 
 
 
  a| 
 Red Hat Enterprise Linux
+
+
+
+ a| 
  a| 
 9,1 bis 9,4
 
+* Nur englischsprachige Versionen.
+* Der Host muss bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann der Host während der Agenteninstallation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
+
+ a| 
+3.9.50 oder höher mit der Konsole im Standardmodus oder eingeschränkten Modus
+ a| 
+Podman Version 5.4.0 mit podman-compose 1.5.0.
+
+<<podman-configuration,Podman-Konfigurationsanforderungen anzeigen>> .
+ a| 
+Unterstützt im Durchsetzungsmodus oder im Permissivmodus
+
+* Die Verwaltung von Cloud Volumes ONTAP -Systemen wird NICHT von Agenten unterstützt, auf deren Betriebssystem SELinux aktiviert ist.
+
+
+
+
+ a| 
+ a| 
 8,6 bis 8,10
 
 * Nur englischsprachige Versionen.
@@ -110,6 +133,10 @@ Unterstützt im Durchsetzungsmodus oder im Permissivmodus
 
  a| 
 Ubuntu
+
+
+
+ a| 
  a| 
 24,04 LTS
  a| 
@@ -122,6 +149,7 @@ Nicht unterstützt
 
 
  a| 
+ a| 
 22,04 LTS
  a| 
 3.9.50 oder höher
@@ -131,9 +159,6 @@ Docker Engine 23.0.6 bis 28.0.0.
 Nicht unterstützt
 
 |===
---
-
-
 
 
 == Schritt 4: Installieren Sie Podman oder Docker Engine
