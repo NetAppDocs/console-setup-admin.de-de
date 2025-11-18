@@ -14,7 +14,7 @@ Die Version 4.1.0 ist für den Standardmodus und den eingeschränkten Modus verf
 Die Statusanzeigen für den Konsolenagenten wurden von *Aktiv* und *Inaktiv* in *Verbunden* und *Getrennt* umbenannt, um ihren Zweck deutlicher zu machen.
 
 .Unterstützung für Red Hat Enterprise Linux (RHEL) 9.6 und Podman 5.4.0
-Der Console-Agent unterstützt nun RHEL 9.6 und Podman 5.4.0. Darüber hinaus unterstützt NetApp bei Verwendung von RHEL 9 und höher podman-compose 1.5.0.
+Bei der manuellen Installation eines Console-Agenten unterstützt der Agent nun RHEL 9.6 mit Podman 5.4.0. Darüber hinaus unterstützt NetApp bei Verwendung von RHEL 9 und höher podman-compose 1.5.0. link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html["Betriebssystemanforderungen anzeigen"].
 
 
 

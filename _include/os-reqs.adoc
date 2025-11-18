@@ -52,6 +52,27 @@ Red Hat Enterprise Linux
 
  a| 
  a| 
+9,6
+
+* Nur englischsprachige Versionen.
+* Der Host muss bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann der Host während der Agenteninstallation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
+
+ a| 
+4.0.0 oder höher mit der Konsole im Standardmodus oder eingeschränkten Modus
+ a| 
+Podman Version 5.4.0 mit podman-compose 1.5.0.
+
+<<podman-configuration,Podman-Konfigurationsanforderungen anzeigen>> .
+ a| 
+Unterstützt im Durchsetzungsmodus oder im Permissivmodus
+
+* Die Verwaltung von Cloud Volumes ONTAP -Systemen wird NICHT von Agenten unterstützt, auf deren Betriebssystem SELinux aktiviert ist.
+
+
+
+
+ a| 
+ a| 
 9,1 bis 9,4
 
 * Nur englischsprachige Versionen.
@@ -60,7 +81,7 @@ Red Hat Enterprise Linux
  a| 
 3.9.50 oder höher mit der Konsole im Standardmodus oder eingeschränkten Modus
  a| 
-Podman Version 5.4.0 mit podman-compose 1.5.0.
+Podman Version 4.9.4 mit podman-compose 1.5.0.
 
 <<podman-configuration,Podman-Konfigurationsanforderungen anzeigen>> .
  a| 
@@ -81,7 +102,7 @@ Unterstützt im Durchsetzungsmodus oder im Permissivmodus
  a| 
 3.9.50 oder höher mit der Konsole im Standardmodus oder eingeschränkten Modus
  a| 
-Podman Version 4.6.1 oder 4.9.4
+Podman Version 4.6.1 oder 4.9.4 mit podman-compose 1.0.6.
 
 <<podman-configuration,Podman-Konfigurationsanforderungen anzeigen>> .
  a| 
