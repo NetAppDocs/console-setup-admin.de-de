@@ -48,7 +48,7 @@ Dabei ist <Version> die Version des Konsolenagenten, die Sie heruntergeladen hab
 +
 [source, cli]
 ----
- ./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
 ----
 +
 Sie müssen Proxy-Informationen hinzufügen, wenn Ihr Netzwerk einen Proxy für den Internetzugang benötigt. Sie können entweder während der Installation einen expliziten Proxy hinzufügen. Die Parameter --proxy und --cacert sind optional und Sie werden nicht aufgefordert, sie hinzuzufügen. Wenn Sie einen expliziten Proxy-Server verwenden, müssen Sie die Parameter wie gezeigt eingeben.
@@ -59,7 +59,7 @@ Hier ist ein Beispiel für die Konfiguration eines expliziten Proxyservers mit e
 +
 [source, cli]
 ----
- ./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy`konfiguriert den Konsolenagenten für die Verwendung eines HTTP- oder HTTPS-Proxyservers in einem der folgenden Formate:
@@ -102,15 +102,19 @@ NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie die
 [source, cli]
 ----
 vi /usr/share/containers/containers.conf
-...
+----
++
+Beispiel:
+
++
+[source, text]
+----
 # Port to use for dns forwarding daemon with netavark in rootful bridge
 # mode and dns enabled.
 # Using an alternate port might be useful if other DNS services should
 # run on the machine.
 #
 dns_bind_port = 54
-...
-Esc:wq
 ----
 .. Starten Sie die virtuelle Maschine des Konsolenagenten neu.
 

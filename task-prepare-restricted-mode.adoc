@@ -302,15 +302,17 @@ NOTE: Verwenden des `dnf install` Der Befehl erfüllt die Anforderung zum Hinzuf
 
 
 . Überprüfen Sie, ob Ihr Netzwerk-Backend auf CNI eingestellt ist, indem Sie den folgenden Befehl ausführen:
-+
-[source, cli]
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
 . Wenn das Netzwerk-Backend auf `CNI` , müssen Sie es ändern in `netavark` .
 . Installieren `netavark` Und `aardvark-dns` mit dem folgenden Befehl:
-+
-[source, cli]
+
+
+[listing]
 ----
 dnf install aardvark-dns netavark
 ----
@@ -320,21 +322,21 @@ Wenn `/etc/containers/containers.conf` nicht vorhanden ist, nehmen Sie die Konfi
 
 +
 .. Starten Sie Podman neu.
-+
-[source, cli]
+
+
+
+
+[listing]
 ----
 systemctl restart podman
 ----
-.. Bestätigen Sie mit dem folgenden Befehl, dass networkBackend jetzt in „netavark“ geändert wurde:
-+
-[source, cli]
+. Bestätigen Sie mit dem folgenden Befehl, dass networkBackend jetzt in „netavark“ geändert wurde:
+
+
+[listing]
 ----
 podman info | grep networkBackend
 ----
-
-
-
-
 --
 .Docker-Engine
 --
@@ -636,6 +638,7 @@ Sie sollten die ID für jedes Azure-Abonnement hinzufügen, das Sie mit der NetA
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
 "/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
 "/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+]
 ----
 . Verwenden Sie die JSON-Datei, um eine benutzerdefinierte Rolle in Azure zu erstellen.
 +
@@ -707,6 +710,7 @@ Sie sollten die ID für jedes Azure-Abonnement hinzufügen, aus dem Benutzer Clo
 "/subscriptions/d333af45-0d07-4154-943d-c25fbzzzzzzz",
 "/subscriptions/54b91999-b3e6-4599-908e-416e0zzzzzzz",
 "/subscriptions/398e471c-3b42-4ae7-9b59-ce5bbzzzzzzz"
+]
 ----
 .. Verwenden Sie die JSON-Datei, um eine benutzerdefinierte Rolle in Azure zu erstellen.
 +

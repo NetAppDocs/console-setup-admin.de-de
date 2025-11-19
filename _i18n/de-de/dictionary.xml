@@ -345,7 +345,6 @@
   <block id="68ff18cb109d61d9e97d66c63cadf9e7" category="inline-link-macro">Erfahren Sie, wie Sie Konfigurationsprüfungen für manuelle Installationen deaktivieren.</block>
   <block id="067f3ef114756cdabe76467602ca9b2e" category="list-text">Deaktivieren Sie bei der Installation in einer Government Cloud-Umgebung die Konfigurationsprüfungen.<block ref="9b8bf974e42c4282e3da7fa6c59f1dce" category="inline-link-macro-rx"></block></block>
   <block id="325740f998865be7879e32048d406868" category="list-text">Führen Sie das Installationsskript aus.</block>
-  <block id="95df10d2ac630ff125b089e1f8e0e67f" category="paragraph">Sie müssen Proxy-Informationen hinzufügen, wenn Ihr Netzwerk einen Proxy für den Internetzugang benötigt.  Sie können entweder einen transparenten oder einen expliziten Proxy hinzufügen.  Die Parameter --proxy und --cacert sind optional und Sie werden nicht aufgefordert, sie hinzuzufügen.  Wenn Sie einen Proxyserver haben, müssen Sie die Parameter wie gezeigt eingeben.</block>
   <block id="5f4022bf0d27f22f4c44ac2e617ae12d" category="paragraph">Hier ist ein Beispiel für die Konfiguration eines expliziten Proxyservers mit einem von einer Zertifizierungsstelle signierten Zertifikat:</block>
   <block id="0e4e2076c75603c2622d2ec78b60debe" category="paragraph"><block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix="" category="inline-code"></block>konfiguriert den Konsolenagenten für die Verwendung eines HTTP- oder HTTPS-Proxyservers in einem der folgenden Formate:</block>
   <block id="2ceb0e196c300f23618f8a9e66bf0553" category="list-text">\http://Adresse:Port</block>
@@ -437,9 +436,6 @@
   <block id="9c0e62a86b9fe558cad9c4d280ea439d" category="list-text">Aktivieren von NTP</block>
   <block id="62286fee1b0c285ac291bc232fe7f74f" category="inline-link">Erfahren Sie mehr über die NetApp Datenklassifizierung</block>
   <block id="c2fc633e22b03955b13beee2049ac471" category="list-text">Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird.<block ref="95ad16386ae4ac759ff3f180dcafce84" category="inline-link-rx"></block></block>
-  <block id="64de7c6251637d266e8df72d8ab7c1d3" category="paragraph">--proxy konfiguriert den Konsolenagenten für die Verwendung eines HTTP- oder HTTPS-Proxyservers in einem der folgenden Formate:</block>
-  <block id="9d9d85de516d17d89215c336041bd69c" category="paragraph">--cacert gibt ein von einer Zertifizierungsstelle signiertes Zertifikat an, das für den HTTPS-Zugriff zwischen dem Konsolenagenten und dem Proxyserver verwendet werden soll.  Dieser Parameter ist für HTTPS-Proxyserver, abfangende Proxyserver und transparente Proxyserver erforderlich.</block>
-  <block id="fa5c0c80d3dab7b433f9ebd1f6d0e8db" category="paragraph">Hier ist ein Beispiel für die Konfiguration eines transparenten Proxyservers.  Wenn Sie einen transparenten Proxy konfigurieren, müssen Sie den Proxyserver nicht definieren.  Sie fügen Ihrem Konsolen-Agent-Host lediglich ein von einer Zertifizierungsstelle signiertes Zertifikat hinzu:</block>
   <block id="da9c5bf0a2786648e8cd1c7f9b39bd31" category="list-text">Der Konsolenagent wird auf einem Host, der mit anderen Anwendungen gemeinsam genutzt wird, nicht unterstützt. Der Host muss ein dedizierter Host sein.  Der Host kann jede Architektur aufweisen, die die folgenden Größenanforderungen erfüllt:</block>
   <block id="df4af5ebfed55f726690fe09695fb1fa" category="list-text">CPU: 8 Kerne oder 8 vCPUs</block>
   <block id="357a496c919d7b340d6f4582397b89b5" category="list-text">Arbeitsspeicher: 32 GB</block>
@@ -2262,7 +2258,6 @@
   <block id="87536203946c0c72fcd130937e3cc7ef" category="doc">AWS-Berechtigungen für den Konsolenagenten</block>
   <block id="c1141a37b962270fc1e8960233830c99" category="section-title">IAM-Richtlinien</block>
   <block id="573b0df2f89364b268637488ea138d56" category="paragraph">Die unten verfügbaren IAM-Richtlinien bieten die Berechtigungen, die ein Konsolenagent benötigt, um Ressourcen und Prozesse in Ihrer öffentlichen Cloud-Umgebung basierend auf Ihrer AWS-Region zu verwalten.</block>
-  <block id="61fec915f59809a2c499bb7406d1bae7" category="list-text">Wenn Sie einen Konsolenagenten in einer Standard-AWS-Region direkt von der Konsole aus erstellen, wendet die Konsole automatisch Richtlinien auf den Agenten an.</block>
   <block id="fd09f851de413bc1029af2eb92f37484" category="list-text">Sie müssen die Richtlinien selbst einrichten, wenn Sie den Agenten vom AWS Marketplace bereitstellen, wenn Sie den Agenten manuell auf einem Linux-Host installieren oder wenn Sie der Konsole zusätzliche AWS-Anmeldeinformationen hinzufügen möchten.</block>
   <block id="27bfd6a18f38f12efb7983c46e54e86c" category="list-text">In beiden Fällen müssen Sie sicherstellen, dass die Richtlinien auf dem neuesten Stand sind, da in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden.  Wenn neue Berechtigungen erforderlich sind, werden diese in den Versionshinweisen aufgeführt.</block>
   <block id="5409221a62615b6b2cf0061a5376c983" category="inline-link">AWS-Dokumentation: Bedingungselement</block>
@@ -2445,7 +2440,6 @@
   <block id="6545a52408abec0206b47af0244f3ccf" category="paragraph">Berechtigungen wurden aus Richtlinie Nr. 2 für Standardregionen entfernt, da die NetApp Console NetApp -Edge-Caching sowie die Erkennung und Verwaltung von Kubernetes-Clustern nicht mehr unterstützt.</block>
   <block id="233590199dce2cbcf120d8b311c92db1" category="example-title">Anzeigen der Berechtigungen, die aus der Richtlinie entfernt wurden</block>
   <block id="0683995d371439e19d907680da921ba9" category="section-title">9. Mai 2024</block>
-  <block id="376a26b461e6c64a1c38b284dbc9703f" category="paragraph">Für Cloud Volumes ONTAP sind jetzt die folgenden Berechtigungen erforderlich:</block>
   <block id="6a7140fd5370f297d9a834d30e26ffde" category="section-title">6. Juni 2023</block>
   <block id="14cbfe27bd7092d1b2ab4502adbdd584" category="paragraph">Für Cloud Volumes ONTAP ist jetzt die folgende Berechtigung erforderlich:</block>
   <block id="5fc531b28735a6e141b39c2b5e2f1dcc" category="section-title">14. Februar 2023</block>
@@ -2466,7 +2460,6 @@
   <block id="d532d42cdca6427a0c94a0fe2b7724bf" category="list-text">Microsoft. NetApp/netAppAccounts/capacityPools/volumes/write</block>
   <block id="8a2ef2886600a50e48c7ea77de74ad9a" category="list-text">Microsoft. NetApp/netAppAccounts/capacityPools/volumes/read</block>
   <block id="c937da506293f901431e22784134365b" category="list-text">Microsoft. NetApp/netAppAccounts/capacityPools/volumes/delete</block>
-  <block id="76219afbe04a082bd3390701b179af3f" category="paragraph">Der Konsolenagent stellt die folgenden API-Anfragen für NetApp Backup and Recovery:</block>
   <block id="0e7d546ff80798b31300a1327e64204c" category="list-text">Microsoft.Storage/storageAccounts/listkeys/action</block>
   <block id="b5de09220c1fb4fce37725ad40aa9087" category="list-text">Microsoft.Storage/storageAccounts/read</block>
   <block id="ab2f957dea03d2c901135f72a5272e10" category="list-text">Microsoft.Storage/storageAccounts/write</block>
@@ -2493,7 +2486,6 @@
   <block id="63995d3955eeab39b2079345713c2d18" category="list-text">Microsoft.Network/networkSecurityGroups/delete</block>
   <block id="b80b64cd9bf543f64855143ed4b5fcd0" category="list-text">Microsoft.Resources/deployments/delete</block>
   <block id="9d86ed535c7b2cd7f809bf10164a64e2" category="list-text">Microsoft.ManagedIdentity/userAssignedIdentities/assign/action</block>
-  <block id="875ef5d584e3eb0968edca9a86c0490e" category="paragraph">Der Agent stellt die folgenden API-Anfragen, wenn Sie die Such- und Wiederherstellungsfunktion verwenden:</block>
   <block id="cfefa5c4ff629c9bf9659dbc829c253a" category="list-text">Microsoft.Synapse/workspaces/write</block>
   <block id="3ba03ce8c40b9ebf7c3ac1f662b6b3a0" category="list-text">Microsoft.Synapse/workspaces/read</block>
   <block id="2191541210eaa82f809d85b6c0aa6998" category="list-text">Microsoft.Synapse/workspaces/delete</block>
@@ -5581,4 +5573,31 @@
   <block id="b3df2aaed88f61f572a7284cb28844ec" category="inline-link-macro">Betriebssystemanforderungen anzeigen</block>
   <block id="43a9602052a44f890e2bbc95a0205a46" category="paragraph">Bei der manuellen Installation eines Console-Agenten unterstützt der Agent nun RHEL 9.6 mit Podman 5.4.0. Darüber hinaus unterstützt NetApp bei Verwendung von RHEL 9 und höher podman-compose 1.5.0. <block ref="dd394ea917033ddbf269729b5d828637" category="inline-link-macro-rx"></block>.</block>
   <block id="823f8bc81b61298de6fde6292c77465f" category="list-text">Die Systeme neu entdecken.</block>
+  <block id="0d23055c9cd9e24b47c678ce2ce12890" category="doc">Port, der für den DNS-Weiterleitungs-Daemon mit Netavark in der Rootful-Bridge verwendet werden soll</block>
+  <block id="a4a1852476f94952d74e4b8343a1caa2" category="paragraph">vi /usr/share/containers/containers.conf</block>
+  <block id="d5b159520f19881fc40a4bd748f62fc6" category="section-title">Modus und DNS aktiviert.</block>
+  <block id="b1a96ed8e5a02719308e8b11ad1f055b" category="section-title">Die Verwendung eines alternativen Ports kann hilfreich sein, wenn andere DNS-Dienste ...</block>
+  <block id="090648da33ae39ea5780d1a31fb1c849" category="section-title">Auf der Maschine ausführen.</block>
+  <block id="876565374bfaef3930e6f9d90f47177b" category="paragraph"># dns_bind_port = 54</block>
+  <block id="f20af7c9fe0c9b9091735f55df3a51e1" category="list-text">Wenn Sie einen Console-Agenten in einer Standard-AWS-Region direkt über die Console erstellen, wendet die Console automatisch Richtlinien auf den Agenten an.</block>
+  <block id="8a2272b9faf18eb35a631e80900ec216" category="section-title">Legacy-Berechtigungen für Sicherung und Wiederherstellung</block>
+  <block id="cf1f3a91d24e23f8dd4687e01a5c8192" category="paragraph">Die folgenden Berechtigungen benötigen Sie nur, wenn Sie vor der Veröffentlichung von Indexing v2 ältere Indexierungsfunktionen aktiviert haben:</block>
+  <block id="1760c97f466ea374318a8c0bedcb2aff" category="section-title">11. November 2025</block>
+  <block id="ea135b9ba1abf88c0fc0f304bed7b8b2" category="paragraph">Die folgenden Berechtigungen sind für NetApp Backup and Recovery nicht mehr erforderlich, es sei denn, Sie verwenden die Legacy-Indexierung. Diese Berechtigungen wurden aus den Richtlinien auf dieser Seite entfernt:</block>
+  <block id="6e6af573aec8151ae299651fd317472d" category="paragraph">Nachfolgend finden Sie eine benutzerdefinierte Richtlinie für Sicherung und Wiederherstellung, die mit möglichst wenigen Berechtigungen und einem möglichst engen Geltungsbereich arbeitet:</block>
+  <block id="085d2cc48c6bbf7296c097a07804a4d1" category="section-title">Minimale NetApp Backup and Recovery</block>
+  <block id="46602301e1e9b92a123cc69be96445a2" category="paragraph">Der Console-Agent stellt die folgenden API-Anfragen für die grundlegende NetApp Backup and Recovery :</block>
+  <block id="ff9be13f0dd01fa19eeb632c57e75912" category="list-text">Microsoft.Authorization/locks/write</block>
+  <block id="9c54728f345d88de2c032cfb76dbdb17" category="list-text">Microsoft.Authorization/locks/read</block>
+  <block id="761a802cfbda43d4d27ac578e6d1127e" category="section-title">Zusätzliche Berechtigungen für Datensicherung und -wiederherstellung</block>
+  <block id="02eee31e5109fac37be42cd2ad631e0f" category="paragraph">Der Konsolenagent stellt die folgenden API-Anfragen für erweiterte Sicherungs- und Wiederherstellungsvorgänge sowie Such- und Wiederherstellungsfunktionen. Diese Berechtigungen ermöglichen die Verwaltung von Netzwerken, Schlüsseltresoren und verwalteten Identitäten:</block>
+  <block id="9db96a7be686af799d5b0df68ebdf3a8" category="paragraph">Der Agent führt die folgenden API-Anfragen aus, wenn Sie die Such- und Wiederherstellungsfunktion verwenden. Diese Berechtigungen benötigen Sie nur, wenn Sie vor der Veröffentlichung von Indexing v2 ältere Indexierungsfunktionen aktiviert haben:</block>
+  <block id="d3a274c843d8b8ce75d55d7c7829a6af" category="paragraph">Die folgenden Berechtigungen wurden aus dem JSON-Rollenbeispiel entfernt, damit das Beispiel die minimal erforderlichen Berechtigungen für Backup und Recovery widerspiegelt:</block>
+  <block id="f4b5566a2cd5de876b361e9f7aaa2d92" category="list-text">Microsoft.Insights/Metrics/Read</block>
+  <block id="542e0e990e0a90f3111cc38f8fc96301" category="list-text">Microsoft.Compute/virtualMachines/extensions/write</block>
+  <block id="027acd9694c335956d7cb35872c2d7f5" category="list-text">Microsoft.Compute/virtualMachines/extensions/read</block>
+  <block id="ebd9939fa785bda0707a6efaf5d7b8da" category="paragraph">Dem JSON-Rollenbeispiel wurden die folgenden Berechtigungen hinzugefügt:</block>
+  <block id="73361bbe50a41bd2e76e59f453c19c62" category="paragraph">Die folgenden Berechtigungen werden für die Datensicherung und -wiederherstellung nicht mehr benötigt, es sei denn, Sie verwenden die Legacy-Indexierung:</block>
+  <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">Die folgenden Berechtigungen wurden in den Abschnitt „Zusätzliche Sicherungs- und Wiederherstellungsberechtigungen“ verschoben, da sie für eine minimale Konfiguration nicht erforderlich sind:</block>
+  <block id="862b252e960e9fce5bfb6811edec4eb5" category="list-text">Führen Sie den folgenden Befehl aus und überprüfen Sie, ob der Status des Agenten als _aktiv (läuft)_ angezeigt wird:</block>
 </blocks>

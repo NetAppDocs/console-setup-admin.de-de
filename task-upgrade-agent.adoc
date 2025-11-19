@@ -68,7 +68,7 @@ Um das automatische Upgrade wieder zu aktivieren, führen Sie diese Schritte aus
 +
 [source, json]
 ----
-  "isUpgradeDisabled": true,
+  "isUpgradeDisabled": true
 ----
 . Speichern Sie Ihre Datei.
 . Starten Sie den Dienst Service Manager 2 neu, indem Sie den folgenden Befehl ausführen:
@@ -77,12 +77,11 @@ Um das automatische Upgrade wieder zu aktivieren, führen Sie diese Schritte aus
 ----
 systemctl restart netapp-service-manager.service
 ----
-. Führen Sie den folgenden Befehl aus und überprüfen Sie, ob der Status des Agenten als _aktiv (wird ausgeführt)_ angezeigt wird: _
+. Führen Sie den folgenden Befehl aus und überprüfen Sie, ob der Status des Agenten als _aktiv (läuft)_ angezeigt wird:
 +
 [source, cli]
 ----
 systemctl status netapp-service-manager.service
-_
 ----
 
 

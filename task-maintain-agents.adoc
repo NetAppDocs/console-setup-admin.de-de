@@ -114,27 +114,28 @@ Aktualisieren Sie den Sicherungsspeicherort für jedes Cloud Volumes ONTAP -Syst
 
 +
 .. Legen Sie in der Cloud Volumes ONTAP CLI die Berechtigungsstufe auf „Erweitert“ fest:
-+
-[source, cli]
+
+
+
+
+[listing]
 ----
 set -privilege advanced
 ----
-.. Führen Sie den folgenden Befehl aus, um das aktuelle Sicherungsziel anzuzeigen:
-+
-[source, cli]
+. Führen Sie den folgenden Befehl aus, um das aktuelle Sicherungsziel anzuzeigen:
+
+
+[listing]
 ----
 system configuration backup settings show
 ----
-.. Führen Sie den folgenden Befehl aus, um die IP-Adresse für das Sicherungsziel zu aktualisieren:
-+
-[source, cli]
+. Führen Sie den folgenden Befehl aus, um die IP-Adresse für das Sicherungsziel zu aktualisieren:
+
+
+[listing]
 ----
 system configuration backup settings modify -destination <target-location>
 ----
-
-
-
-
 
 
 == Bearbeiten der URIs eines Agenten

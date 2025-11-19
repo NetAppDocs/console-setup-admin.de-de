@@ -22,7 +22,7 @@ Sie können die Wartungskonsole des Konsolenagenten verwenden, um einen Konsolen
 
 Sie können vom Konsolenagent-Host aus auf die Wartungskonsole zugreifen.  Navigieren Sie zum folgenden Verzeichnis:
 
-[source, CLI]
+[source, cli]
 ----
 /opt/application/netapp/service-manager-2/agent-maint-console
 ----
@@ -38,7 +38,7 @@ Die Agenten-Wartungskonsole bietet Befehle zum Konfigurieren des Agenten für di
 
 Um die aktuelle transparente Proxy-Konfiguration anzuzeigen, verwenden Sie den folgenden Befehl:
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy get
 ----
@@ -48,7 +48,7 @@ Um die aktuelle transparente Proxy-Konfiguration anzuzeigen, verwenden Sie den f
 
 Um einen transparenten Proxyserver hinzuzufügen, verwenden Sie den folgenden Befehl, wobei `/home/ubuntu/myCA1.pem` ist der Pfad zur Zertifikatsdatei für den Proxyserver.  Die Zertifikatsdatei muss im PEM-Format vorliegen:
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy add -c /home/ubuntu/myCA1.pem
 ----
@@ -60,7 +60,7 @@ Stellen Sie sicher, dass sich die Zertifikatsdatei im selben Verzeichnis wie der
 
 Um das Zertifikat für einen transparenten Proxyserver zu aktualisieren, verwenden Sie den folgenden Befehl, wobei `/home/ubuntu/myCA1.pem` ist der Pfad zur neuen Zertifikatsdatei für den Proxyserver.  Die Zertifikatsdatei muss im PEM-Format vorliegen:
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy update -c /home/ubuntu/myCA1.pem
 ----
@@ -72,7 +72,7 @@ Stellen Sie sicher, dass sich die Zertifikatsdatei im selben Verzeichnis wie der
 
 Um den transparenten Proxyserver zu entfernen, verwenden Sie den folgenden Befehl:
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy remove
 ----
@@ -82,7 +82,7 @@ Um den transparenten Proxyserver zu entfernen, verwenden Sie den folgenden Befeh
 
 Um Hilfe zu einem Befehl anzuzeigen, fügen Sie an `--help` zum Befehl.  Um beispielsweise Hilfe für die `proxy add` Befehl, verwenden Sie den folgenden Befehl:
 
-[source, CLI]
+[source, cli]
 ----
 ./agent-maint-console proxy add --help
 ----
