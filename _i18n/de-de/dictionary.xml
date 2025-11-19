@@ -5563,12 +5563,6 @@
   <block id="b3df2aaed88f61f572a7284cb28844ec" category="inline-link-macro">Betriebssystemanforderungen anzeigen</block>
   <block id="43a9602052a44f890e2bbc95a0205a46" category="paragraph">Bei der manuellen Installation eines Console-Agenten unterstützt der Agent nun RHEL 9.6 mit Podman 5.4.0. Darüber hinaus unterstützt NetApp bei Verwendung von RHEL 9 und höher podman-compose 1.5.0. <block ref="dd394ea917033ddbf269729b5d828637" category="inline-link-macro-rx"></block>.</block>
   <block id="823f8bc81b61298de6fde6292c77465f" category="list-text">Die Systeme neu entdecken.</block>
-  <block id="0d23055c9cd9e24b47c678ce2ce12890" category="doc">Port, der für den DNS-Weiterleitungs-Daemon mit Netavark in der Rootful-Bridge verwendet werden soll</block>
-  <block id="a4a1852476f94952d74e4b8343a1caa2" category="paragraph">vi /usr/share/containers/containers.conf</block>
-  <block id="d5b159520f19881fc40a4bd748f62fc6" category="section-title">Modus und DNS aktiviert.</block>
-  <block id="b1a96ed8e5a02719308e8b11ad1f055b" category="section-title">Die Verwendung eines alternativen Ports kann hilfreich sein, wenn andere DNS-Dienste ...</block>
-  <block id="090648da33ae39ea5780d1a31fb1c849" category="section-title">Auf der Maschine ausführen.</block>
-  <block id="876565374bfaef3930e6f9d90f47177b" category="paragraph"># dns_bind_port = 54</block>
   <block id="f20af7c9fe0c9b9091735f55df3a51e1" category="list-text">Wenn Sie einen Console-Agenten in einer Standard-AWS-Region direkt über die Console erstellen, wendet die Console automatisch Richtlinien auf den Agenten an.</block>
   <block id="8a2272b9faf18eb35a631e80900ec216" category="section-title">Legacy-Berechtigungen für Sicherung und Wiederherstellung</block>
   <block id="cf1f3a91d24e23f8dd4687e01a5c8192" category="paragraph">Die folgenden Berechtigungen benötigen Sie nur, wenn Sie vor der Veröffentlichung von Indexing v2 ältere Indexierungsfunktionen aktiviert haben:</block>
@@ -5600,4 +5594,8 @@
   <block id="04a0a4e163c04f3082e39c4a05b56121" category="paragraph">Durch das Hinzufügen von AWS-Anmeldeinformationen werden Berechtigungen zum Erstellen eines Konsolenagenten erteilt.</block>
   <block id="325cf27c7a62fb4beb8b270094e56814" category="paragraph">Sie müssen die Anmeldeinformationen, die Sie einem Console-Agenten hinzufügen, mit einem AWS Marketplace-Abonnement verknüpfen, um Cloud Volumes ONTAP auf Stundenbasis (PAYGO) und andere NetApp -Datendienste oder über einen Jahresvertrag zu bezahlen. <block ref="ec04a55c38de32bb88fa7b4155061e7c" category="inline-link-macro-rx"></block>.</block>
   <block id="349b76807d98d4378df29b585951b7a4" category="summary">Erfahren Sie mehr über die Standardkonfigurationen des Console-Agenten für Standardbereitstellungen (mit Internetzugang) in AWS, Azure und Google Cloud sowie für eingeschränkte Bereitstellungen (ohne Internetzugang) in lokalen Umgebungen.</block>
+  <block id="95df10d2ac630ff125b089e1f8e0e67f" category="paragraph">Sie müssen Proxy-Informationen hinzufügen, wenn Ihr Netzwerk einen Proxy für den Internetzugang benötigt. Sie können entweder einen transparenten oder einen expliziten Proxy hinzufügen. Die Parameter --proxy und --cacert sind optional und Sie werden nicht aufgefordert, sie hinzuzufügen. Wenn Sie einen Proxyserver haben, müssen Sie die Parameter wie gezeigt eingeben.</block>
+  <block id="64de7c6251637d266e8df72d8ab7c1d3" category="paragraph">--proxy konfiguriert den Konsolenagenten für die Verwendung eines HTTP- oder HTTPS-Proxyservers in einem der folgenden Formate:</block>
+  <block id="9d9d85de516d17d89215c336041bd69c" category="paragraph">--cacert gibt ein von einer Zertifizierungsstelle signiertes Zertifikat an, das für den HTTPS-Zugriff zwischen dem Konsolenagenten und dem Proxyserver verwendet werden soll. Dieser Parameter ist für HTTPS-Proxyserver, abfangende Proxyserver und transparente Proxyserver erforderlich.</block>
+  <block id="fa5c0c80d3dab7b433f9ebd1f6d0e8db" category="paragraph">Hier ist ein Beispiel für die Konfiguration eines transparenten Proxyservers. Wenn Sie einen transparenten Proxy konfigurieren, müssen Sie den Proxyserver nicht definieren. Sie fügen Ihrem Konsolen-Agent-Host lediglich ein von einer Zertifizierungsstelle signiertes Zertifikat hinzu:</block>
 </blocks>
