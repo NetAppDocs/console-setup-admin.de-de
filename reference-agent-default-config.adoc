@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-agent-default-config.html 
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
-summary: Informieren Sie sich genauer über den Console-Agenten, bevor Sie ihn einsetzen. 
+summary: 'Erfahren Sie mehr über die Standardkonfigurationen des Console-Agenten für Standardbereitstellungen (mit Internetzugang) in AWS, Azure und Google Cloud sowie für eingeschränkte Bereitstellungen (ohne Internetzugang) in lokalen Umgebungen.' 
 ---
 = Standardkonfiguration für den Konsolenagenten
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Informieren Sie sich genauer über den Console-Agenten, bevor Sie ihn e
 
 
 [role="lead"]
-Informieren Sie sich vor der Bereitstellung des Konsolenagenten über dessen Konfiguration.
+Erfahren Sie mehr über die Standardkonfigurationen des Console-Agenten für Standardbereitstellungen (mit Internetzugang) in AWS, Azure und Google Cloud sowie für eingeschränkte Bereitstellungen (ohne Internetzugang) in lokalen Umgebungen.
 
 
 
