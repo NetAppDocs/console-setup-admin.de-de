@@ -16,9 +16,9 @@ Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf NetApp
 
 Disaster Recovery verwendet die folgenden Rollen:
 
-* *Notfallwiederherstellungsadministrator*: Führen Sie alle Aktionen aus.
-* *Disaster Recovery Failover-Administrator*: Führen Sie Failover und Migrationen durch.
-* *Administrator der Notfallwiederherstellungsanwendung*: Erstellen Sie Replikationspläne.  Replikationspläne ändern.  Starten Sie Test-Failover.
+* *Administrator für Notfallwiederherstellung*: Führen Sie beliebige Aktionen durch.
+* *Disaster Recovery Failover-Administration*: Failover und Migrationen durchführen.
+* *Administrator für Notfallwiederherstellungsanwendungen*: Replikationspläne erstellen. Replikationspläne ändern. Starten Sie Test-Failover.
 * *Disaster Recovery Viewer*: Nur Informationen anzeigen.
 
 
@@ -26,7 +26,7 @@ Die folgende Tabelle zeigt die Aktionen, die jede Rolle ausführen kann.
 
 [cols="30,20a,20a,20a,20a"]
 |===
-| Funktion und Aktion | Notfallwiederherstellungsadministrator | Administrator für Notfallwiederherstellungs-Failover | Administrator der Notfallwiederherstellungsanwendung | Disaster Recovery-Viewer 
+| Funktion und Aktion | Disaster Recovery-Administrator | Disaster Recovery-Failover-Administrator | Disaster Recovery-Anwendungsadministrator | Disaster Recovery-Viewer 
 
 
 | Dashboard und alle Registerkarten anzeigen  a| 
