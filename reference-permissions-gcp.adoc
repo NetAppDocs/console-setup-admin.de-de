@@ -141,111 +141,341 @@ includedPermissions:
 
 == So werden Google Cloud-Berechtigungen verwendet
 
-[cols="50,50"]
+[cols="5*"]
 |===
-| Aktionen | Zweck 
+| Aktionen | Zweck | Wird für die Bereitstellung verwendet? | Wird es für den täglichen Betrieb verwendet? | Zum Löschen verwendet? 
 
 
-| - compute.disks.create - compute.disks.createSnapshot - compute.disks.delete - compute.disks.get - compute.disks.list - compute.disks.setLabels - compute.disks.use | Zum Erstellen und Verwalten von Festplatten für Cloud Volumes ONTAP. 
+| compute.disks.create .7+| Zum Erstellen und Verwalten von Festplatten für Cloud Volumes ONTAP. | Ja | Ja | Nein 
 
 
-| - compute.firewalls.create - compute.firewalls.delete - compute.firewalls.get - compute.firewalls.list | So erstellen Sie Firewall-Regeln für Cloud Volumes ONTAP. 
+| compute.disks.createSnapshot | Nein | Ja | Nein 
 
 
-| - compute.globalOperations.get | Um den Status von Vorgängen abzurufen. 
+| compute.disks.delete | Nein | Ja | Ja 
 
 
-| - compute.images.get - compute.images.getFromFamily - compute.images.list - compute.images.useReadOnly | Um Bilder für VM-Instanzen zu erhalten. 
+| compute.disks.get | Nein | Ja | Nein 
 
 
-| - compute.instances.attachDisk - compute.instances.detachDisk | So schließen Sie Festplatten an Cloud Volumes ONTAP an und trennen sie davon. 
+| compute.disks.list | Ja | Ja | Nein 
 
 
-| - compute.instances.create - compute.instances.delete | Zum Erstellen und Löschen von Cloud Volumes ONTAP VM-Instanzen. 
+| compute.disks.setLabels | Ja | Ja | Nein 
 
 
-| - compute.instances.get | Zum Auflisten von VM-Instanzen. 
+| compute.disks.use | Nein | Ja | Nein 
 
 
-| - compute.instances.getSerialPortOutput | Um Konsolenprotokolle zu erhalten. 
+| compute.firewalls.create .4+| So erstellen Sie Firewall-Regeln für Cloud Volumes ONTAP. | Ja | Nein | Nein 
 
 
-| - compute.instances.list | Zum Abrufen der Liste der Instanzen in einer Zone. 
+| compute.firewalls.delete | Nein | Ja | Ja 
 
 
-| - compute.instances.setDeletionProtection | Um den Löschschutz für die Instanz festzulegen. 
+| compute.firewalls.get | Ja | Ja | Nein 
 
 
-| - compute.instances.setLabels | Um Beschriftungen hinzuzufügen. 
+| compute.firewalls.list | Ja | Ja | Nein 
 
 
-| - compute.instances.setMachineType - compute.instances.setMinCpuPlatform | So ändern Sie den Maschinentyp für Cloud Volumes ONTAP. 
+| compute.globalOperations.get . | Um den Status von Vorgängen abzurufen. | Ja | Ja | Nein 
 
 
-| - compute.instances.setMetadata | Um Metadaten hinzuzufügen. 
+| compute.images.get .4+| Um Bilder für VM-Instanzen zu erhalten. | Ja | Nein | Nein 
 
 
-| - compute.instances.setTags | So fügen Sie Tags für Firewall-Regeln hinzu. 
+| compute.images.getFromFamily | Ja | Nein | Nein 
 
 
-| - compute.instances.start - compute.instances.stop - compute.instances.updateDisplayDevice | So starten und stoppen Sie Cloud Volumes ONTAP. 
+| compute.images.list | Ja | Nein | Nein 
 
 
-| - compute.machineTypes.get | Um die Anzahl der Kerne zu ermitteln und die Quoten zu überprüfen. 
+| compute.images.useReadOnly | Ja | Nein | Nein 
 
 
-| - compute.projects.get | Zur Unterstützung mehrerer Projekte. 
+| compute.instances.attachDisk .2+| So schließen Sie Festplatten an Cloud Volumes ONTAP an und trennen sie davon. | Ja | Ja | Nein 
 
 
-| - compute.snapshots.create - compute.snapshots.delete - compute.snapshots.get - compute.snapshots.list - compute.snapshots.setLabels | Zum Erstellen und Verwalten persistenter Festplatten-Snapshots. 
+| compute.instances.detachDisk | Nein | Ja | Ja 
 
 
-| - compute.networks.get - compute.networks.list - compute.regions.get - compute.regions.list - compute.subnetworks.get - compute.subnetworks.list - compute.zoneOperations.get - compute.zones.get - compute.zones.list | Um die Netzwerkinformationen zu erhalten, die zum Erstellen einer neuen Cloud Volumes ONTAP VM-Instanz erforderlich sind. 
+| compute.instances.create .2+| Zum Erstellen und Löschen von Cloud Volumes ONTAP VM-Instanzen. | Ja | Nein | Nein 
 
 
-| - deploymentmanager.compositeTypes.get - deploymentmanager.compositeTypes.list - deploymentmanager.deployments.create - deploymentmanager.deployments.delete - deploymentmanager.deployments.get - deploymentmanager.deployments.list - deploymentmanager.manifests.get - deploymentmanager.manifests.list - deploymentmanager.operations.get - deploymentmanager.operations.list - deploymentmanager.resources.get - deploymentmanager.resources.list - deploymentmanager.typeProviders.get - deploymentmanager.typeProviders.list - deploymentmanager.types.get - deploymentmanager.types.list | So stellen Sie die Cloud Volumes ONTAP VM-Instanz mithilfe von Google Cloud Deployment Manager bereit. 
+| compute.instances.delete | Nein | Nein | Ja 
 
 
-| - logging.logEntries.list - logging.privateLogEntries.list | Um Stack-Log-Laufwerke zu erhalten. 
+| compute.instances.get | Zum Auflisten von VM-Instanzen. | Ja | Ja | Nein 
 
 
-| - resourcemanager.projects.get | Zur Unterstützung mehrerer Projekte. 
+| compute.instances.getSerialPortOutput | Um Konsolenprotokolle zu erhalten. | Ja | Ja | Nein 
 
 
-| - storage.buckets.create - storage.buckets.delete - storage.buckets.get - storage.buckets.list - storage.buckets.update | So erstellen und verwalten Sie einen Google Cloud Storage-Bucket für die Datenschichtung. 
+| compute.instances.list | Zum Abrufen der Liste der Instanzen in einer Zone. | Ja | Ja | Nein 
 
 
-| - cloudkms.cryptoKeyVersions.useToEncrypt - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.list - cloudkms.keyRings.list | So verwenden Sie vom Kunden verwaltete Verschlüsselungsschlüssel vom Cloud Key Management Service mit Cloud Volumes ONTAP. 
+| compute.instances.setDeletionProtection | Um den Löschschutz für die Instanz festzulegen. | Ja | Nein | Nein 
 
 
-| - compute.instances.setServiceAccount - iam.serviceAccounts.actAs - iam.serviceAccounts.getIamPolicy - iam.serviceAccounts.list - storage.objects.get - storage.objects.list | So richten Sie ein Dienstkonto auf der Cloud Volumes ONTAP -Instanz ein.  Dieses Dienstkonto bietet Berechtigungen für die Datenschichtung in einem Google Cloud Storage-Bucket. 
+| compute.instances.setLabels | Um Beschriftungen hinzuzufügen. | Ja | Nein | Nein 
 
 
-| - compute.addresses.list | Zum Abrufen der Adressen in einer Region beim Bereitstellen eines HA-Paares. 
+| compute.instances.setMachineType .2+| So ändern Sie den Maschinentyp für Cloud Volumes ONTAP. | Ja | Ja | Nein 
 
 
-| - compute.backendServices.create - compute.regionBackendServices.create - compute.regionBackendServices.get - compute.regionBackendServices.list | So konfigurieren Sie einen Backend-Dienst zum Verteilen des Datenverkehrs in einem HA-Paar. 
+| compute.instances.setMinCpuPlatform | Ja | Ja | Nein 
 
 
-| - compute.networks.updatePolicy | So wenden Sie Firewall-Regeln auf die VPCs und Subnetze für ein HA-Paar an. 
+| compute.instances.setMetadata | Um Metadaten hinzuzufügen. | Ja | Ja | Nein 
 
 
-| - compute.subnetworks.use - compute.subnetworks.useExternalIp - compute.instances.addAccessConfig | So aktivieren Sie die NetApp Data Classification. 
+| compute.instances.setTags | So fügen Sie Tags für Firewall-Regeln hinzu. | Ja | Ja | Nein 
 
 
-| - compute.instanceGroups.get - compute.addresses.get - compute.instances.updateNetworkInterface | Zum Erstellen und Verwalten von Speicher-VMs auf Cloud Volumes ONTAP HA-Paaren. 
+| compute.instances.start .3+| So starten und stoppen Sie Cloud Volumes ONTAP. | Ja | Ja | Nein 
 
 
-| - monitoring.timeSeries.list - storage.buckets.getIamPolicy | Um Informationen zu Google Cloud Storage-Buckets zu erhalten. 
+| compute.instances.stop | Ja | Ja | Nein 
 
 
-| - cloudkms.cryptoKeys.get - cloudkms.cryptoKeys.getIamPolicy - cloudkms.cryptoKeys.list - cloudkms.cryptoKeys.setIamPolicy - cloudkms.keyRings.get - cloudkms.keyRings.getIamPolicy - cloudkms.keyRings.list - cloudkms.keyRings.setIamPolicy | So wählen Sie im Aktivierungsassistenten von NetApp Backup and Recovery Ihre eigenen, vom Kunden verwalteten Schlüssel aus, anstatt die standardmäßigen, von Google verwalteten Verschlüsselungsschlüssel zu verwenden. 
+| compute.instances.updateDisplayDevice | Ja | Ja | Nein 
+
+
+| compute.machineTypes.get | Um die Anzahl der Kerne zu ermitteln und die Quoten zu überprüfen. | Ja | Nein | Nein 
+
+
+| compute.projects.get | Zur Unterstützung mehrerer Projekte. | Ja | Nein | Nein 
+
+
+| compute.snapshots.create .5+| Zum Erstellen und Verwalten persistenter Festplatten-Snapshots. | Ja | Ja | Nein 
+
+
+| compute.snapshots.delete | Nein | Ja | Ja 
+
+
+| compute.snapshots.get | Nein | Ja | Nein 
+
+
+| compute.snapshots.list | Nein | Ja | Nein 
+
+
+| compute.snapshots.setLabels | Ja | Ja | Nein 
+
+
+| compute.networks.get .9+| Um die Netzwerkinformationen zu erhalten, die zum Erstellen einer neuen Cloud Volumes ONTAP VM-Instanz erforderlich sind. | Ja | Ja | Nein 
+
+
+| compute.networks.list | Ja | Ja | Nein 
+
+
+| compute.regions.get | Ja | Ja | Nein 
+
+
+| compute.regions.list | Ja | Ja | Nein 
+
+
+| compute.subnetworks.get | Ja | Ja | Nein 
+
+
+| compute.subnetworks.list | Ja | Ja | Nein 
+
+
+| compute.zoneOperations.get | Ja | Ja | Nein 
+
+
+| compute.zones.get | Ja | Ja | Nein 
+
+
+| compute.zones.list | Ja | Ja | Nein 
+
+
+| deploymentmanager.compositeTypes.get .16+| So stellen Sie die Cloud Volumes ONTAP VM-Instanz mithilfe von Google Cloud Deployment Manager bereit. | Ja | Nein | Nein 
+
+
+| deploymentmanager.compositeTypes.list | Ja | Nein | Nein 
+
+
+| deploymentmanager.deployments.create | Ja | Nein | Nein 
+
+
+| deploymentmanager.deployments.delete | Ja | Nein | Nein 
+
+
+| deploymentmanager.deployments.get | Ja | Nein | Nein 
+
+
+| deploymentmanager.deployments.list | Ja | Nein | Nein 
+
+
+| deploymentmanager.manifests.get | Ja | Nein | Nein 
+
+
+| deploymentmanager.manifests.list | Ja | Nein | Nein 
+
+
+| deploymentmanager.operations.get | Ja | Nein | Nein 
+
+
+| deploymentmanager.operations.list | Ja | Nein | Nein 
+
+
+| deploymentmanager.resources.get | Ja | Nein | Nein 
+
+
+| deploymentmanager.resources.list | Ja | Nein | Nein 
+
+
+| deploymentmanager.typeProviders.get | Ja | Nein | Nein 
+
+
+| deploymentmanager.typeProviders.list | Ja | Nein | Nein 
+
+
+| deploymentmanager.types.get | Ja | Nein | Nein 
+
+
+| deploymentmanager.types.list | Ja | Nein | Nein 
+
+
+| logging.logEntries.list .2+| Um Stack-Log-Laufwerke zu erhalten. | Ja | Ja | Nein 
+
+
+| logging.privateLogEntries.list | Ja | Ja | Nein 
+
+
+| resourcemanager.projects.get | Zur Unterstützung mehrerer Projekte. | Ja | Ja | Nein 
+
+
+| storage.buckets.create .5+| So erstellen und verwalten Sie einen Google Cloud Storage-Bucket für die Datenschichtung. | Ja | Ja | Nein 
+
+
+| storage.buckets.delete | Nein | Ja | Ja 
+
+
+| storage.buckets.get | Nein | Ja | Nein 
+
+
+| storage.buckets.list | Nein | Ja | Nein 
+
+
+| storage.buckets.update | Nein | Ja | Nein 
+
+
+| cloudkms.cryptoKeyVersions.useToEncrypt .4+| So verwenden Sie vom Kunden verwaltete Verschlüsselungsschlüssel vom Cloud Key Management Service mit Cloud Volumes ONTAP. | Ja | Ja | Nein 
+
+
+| cloudkms.cryptoKeys.get | Ja | Ja | Nein 
+
+
+| cloudkms.cryptoKeys.list | Ja | Ja | Nein 
+
+
+| cloudkms.keyRings.list | Ja | Ja | Nein 
+
+
+| compute.instances.setServiceAccount .6+| So richten Sie ein Dienstkonto auf der Cloud Volumes ONTAP -Instanz ein.  Dieses Dienstkonto bietet Berechtigungen für die Datenschichtung in einem Google Cloud Storage-Bucket. | Ja | Ja | Nein 
+
+
+| iam.serviceAccounts.actAs | Ja | Nein | Nein 
+
+
+| iam.serviceAccounts.getIamPolicy | Ja | Ja | Nein 
+
+
+| iam.serviceAccounts.list | Ja | Ja | Nein 
+
+
+| storage.objects.get | Ja | Ja | Nein 
+
+
+| storage.objects.list | Ja | Ja | Nein 
+
+
+| compute.addresses.list | Zum Abrufen der Adressen in einer Region beim Bereitstellen eines HA-Paares. | Ja | Nein | Nein 
+
+
+| compute.backendServices.create .4+| So konfigurieren Sie einen Backend-Dienst zum Verteilen des Datenverkehrs in einem HA-Paar. | Ja | Nein | Nein 
+
+
+| compute.regionBackendServices.create | Ja | Nein | Nein 
+
+
+| compute.regionBackendServices.get | Ja | Nein | Nein 
+
+
+| compute.regionBackendServices.list | Ja | Nein | Nein 
+
+
+| compute.networks.updatePolicy | So wenden Sie Firewall-Regeln auf die VPCs und Subnetze für ein HA-Paar an. | Ja | Nein | Nein 
+
+
+| compute.instanceGroups.get .3+| Zum Erstellen und Verwalten von Speicher-VMs auf Cloud Volumes ONTAP HA-Paaren. | Ja | Ja | Nein 
+
+
+| compute.addresses.get | Ja | Ja | Nein 
+
+
+| compute.instances.updateNetworkInterface | Ja | Ja | Nein 
+
+
+| monitoring.timeSerieslist .2+| Um Informationen zu Google Cloud Storage-Buckets zu erhalten. | Ja | Ja | Nein 
+
+
+| storage.buckets.getIamPolicy | Ja | Ja | Nein 
+|===
+
+
+=== Für NetApp Backup and Recovery verwendete Berechtigungen
+
+[cols="5*"]
+|===
+
+
+| Aktionen | Zweck | Wird für die Bereitstellung verwendet? | Wird es für den täglichen Betrieb verwendet? | Zum Löschen verwendet? 
+
+
+ a| 
+* cloudkms.cryptoKeys.get
+* cloudkms.cryptoKeys.getIamPolicy
+* cloudkms.cryptoKeys.list
+* cloudkms.cryptoKeys.setIamPolicy
+* cloudkms.keyRings.get
+* cloudkms.keyRings.getIamPolicy
+* cloudkms.keyRings.list
+* cloudkms.keyRings.setIamPolicy
+
+| So wählen Sie im Aktivierungsassistenten von NetApp Backup and Recovery Ihre eigenen, vom Kunden verwalteten Schlüssel aus, anstatt die standardmäßigen, von Google verwalteten Verschlüsselungsschlüssel zu verwenden. | Ja | Ja | Nein 
+|===
+
+
+=== Für die NetApp Data Classification verwendete Berechtigungen
+
+[cols="5*"]
+|===
+
+
+| Aktionen | Zweck | Wird für die Bereitstellung verwendet? | Wird es für den täglichen Betrieb verwendet? | Zum Löschen verwendet? 
+
+
+ a| 
+* compute.subnetworks.use
+* compute.subnetworks.useExternalIp
+* compute.instances.addAccessConfig
+
+| So aktivieren Sie die NetApp Data Classification. | Ja | Nein | Nein 
 |===
 
 
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt oder entfernt werden, vermerken wir dies in den folgenden Abschnitten.
+
+
+
+=== 26.11.2025
+
+Die Berechtigungen wurden aktualisiert, um ihre Verwendung klarer zu gestalten; es wurden jedoch keine Berechtigungen hinzugefügt oder entfernt. Es wurden drei Spalten hinzugefügt, um anzuzeigen, ob die jeweilige Berechtigung für die Bereitstellung, den täglichen Betrieb oder die Löschung verwendet wird. Darüber hinaus sind einige Berechtigungen nach ihrer Verwendung für NetApp Data Classification und NetApp Backup and Recovery getrennt.
 
 
 
