@@ -5457,7 +5457,6 @@
   <block id="247a6a0ee254b2ff09347b727ee46227" category="inline-link-macro">Erfahren Sie mehr über die Agentenwartungskonsole.</block>
   <block id="ed63faa45dd9543220a2183fa0e02b97" category="admonition">Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun. <block ref="6d6c38ccb358695b7ab850225fcd83aa" category="inline-link-macro-rx"></block></block>
   <block id="fbcd7669a7a0c8cc9053c7c78029654b" category="admonition">Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über die <block ref="d3f69ee6935d5f5f8542f4da69ac2bb6" category="inline-link-macro-rx"></block>Die</block>
-  <block id="4fcd2b24226e5ab1f33572cdc55d9b7b" category="list-text">Bei Verwendung von Red Hat Enterprise 9:</block>
   <block id="334ed7efb24267c8a9d5f60a214ee627" category="list-text">Installieren Sie das Podman-Compose-Paket 1.5.0.</block>
   <block id="83291537b9ae75a78c7add56b73a4688" category="list-text">Bei Verwendung von Red Hat Enterprise Linux 8:</block>
   <block id="9c1b6a208384484254769349d91e3af9" category="doc">Konsolenagent 4.1.0</block>
@@ -5659,4 +5658,5 @@
   <block id="bf58c65de2201356b331dfea5e7eb976" category="paragraph">Podman kann aus den Red Hat Enterprise Linux-Repositories bezogen werden.</block>
   <block id="2632bb82f2d43ffb72d31ea06ed68352" category="list-text">Installieren Sie EPEL, um podman-compose zu erhalten.</block>
   <block id="3c7d277b4a6a1367e3f2567411648df9" category="paragraph">Installieren Sie eine unterstützte Docker Engine-Version, indem Sie die folgenden Schritte befolgen. Installieren Sie nicht die neueste Version, da die Konsole diese nicht unterstützt.</block>
+  <block id="18ecbdaa6bb0f123dda150b973bd53b7" category="list-text">Bei Verwendung von Red Hat Enterprise 9.1 bis 9.6:</block>
 </blocks>
