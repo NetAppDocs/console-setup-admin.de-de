@@ -22,6 +22,13 @@ Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
 
 | Zur Verwaltung von AWS-Ressourcen.  Der Endpunkt hängt von Ihrer AWS-Region ab. https://docs.aws.amazon.com/general/latest/gr/rande.html["Weitere Einzelheiten finden Sie in der AWS-Dokumentation."^]
 
+| Amazon FsX für NetApp ONTAP:
+
+* api.workloads.netapp.com
+
+
+| Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und FSx for ONTAP basierte Workloads zu verwalten und zu betreiben.
+
 | \https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
 
 | Zum Verwalten von Ressourcen in öffentlichen Azure-Regionen.
@@ -38,7 +45,7 @@ Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
 
 | Zum Verwalten von Ressourcen in Azure China-Regionen.
 
-| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+| \https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \//https://config.googleapis.com/v1/projects
 
 | Zum Verwalten von Ressourcen in Google Cloud.
 

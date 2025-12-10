@@ -14,7 +14,7 @@ summary: Durch die Einrichtung von Partnerschaften zwischen Organisationen in de
 
 
 [role="lead"]
-Durch die Schaffung von Partnerschaften zwischen Organisationen ermöglicht die NetApp Console Partnern die sichere Verwaltung von NetApp Ressourcen über Organisationsgrenzen hinweg, wodurch die Zusammenarbeit optimiert und die Sicherheit verbessert wird.
+Durch die Schaffung von Partnerschaften zwischen Organisationen in der NetApp Console können Partner NetApp Ressourcen über Organisationsgrenzen hinweg sicher verwalten, die Zusammenarbeit optimieren und die Sicherheit erhöhen.
 
 .Erforderliche Rollen
 Partnerschaftsadministratorlink:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]

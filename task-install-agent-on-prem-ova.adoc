@@ -106,6 +106,16 @@ Zur Verwaltung von AWS-Ressourcen.  Der Endpunkt hängt von Ihrer AWS-Region ab.
 
 
  a| 
+Amazon FsX für NetApp ONTAP:
+
+* api.workloads.netapp.com
+
+ a| 
+Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und so FSx for ONTAP basierte Workloads zu verwalten und zu betreiben.
+
+
+
+ a| 
 \https://mysupport.netapp.com
  a| 
 Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.

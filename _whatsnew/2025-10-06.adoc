@@ -18,7 +18,7 @@ NetApp hat die meisten Menüoptionen in den linken Navigationsbereich verschoben
 
 ==== Canvas wird durch die Seite „Systeme“ ersetzt
 
-NetApp hat den Canvas in die Seite *Systeme* umbenannt.  Navigieren Sie über das Menü *Speicher > Verwaltung* zur Seite *System*.
+NetApp hat den Canvas in die Seite *Systeme* umbenannt. Navigieren Sie über das Menü *Speicher > Verwaltung* zur Seite *Systeme*.
 
 image:https://docs.netapp.com/us-en/console-setup-admin/media/screenshot-storage-mgmt.png["Ein Screenshot der Systemseite."]
 

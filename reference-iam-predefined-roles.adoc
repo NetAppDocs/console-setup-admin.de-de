@@ -125,7 +125,7 @@ Nachfolgend finden Sie eine Liste der Rollen in der Kategorie Datendienste.  Jed
 | link:reference-iam-disaster-rec-roles.html["Disaster Recovery-Viewer"] | Nur Informationen anzeigen. 
 
 
-| Klassifizierungsanzeige | Ermöglicht Benutzern das Anzeigen der Scanergebnisse der NetApp Data Classification . Benutzer mit dieser Rolle können Compliance-Informationen anzeigen und Berichte für Ressourcen erstellen, auf die sie Zugriffsberechtigung haben. Diese Benutzer können das Scannen von Volumes, Buckets oder Datenbankschemata weder aktivieren noch deaktivieren. Die Datenklassifizierung verfügt über keine Administratorrolle. 
+| Klassifizierungsanzeige | Ermöglicht Benutzern das Anzeigen der Scanergebnisse der NetApp Data Classification . Benutzer mit dieser Rolle können Compliance-Informationen anzeigen und Berichte für Ressourcen erstellen, auf die sie Zugriffsberechtigung haben. Diese Benutzer können das Scannen von Volumes, Buckets oder Datenbankschemata weder aktivieren noch deaktivieren. Die Klassifizierung hat keine Administratorrolle. 
 
 
 | link:reference-iam-ransomware-roles.html["Ransomware-Resilienz-Administrator"] | Verwalten Sie Aktionen auf den Registerkarten „Schützen“, „Warnungen“, „Wiederherstellen“, „Einstellungen“ und „Berichte“ von NetApp Ransomware Resilience. 

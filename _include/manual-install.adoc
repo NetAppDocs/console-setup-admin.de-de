@@ -14,10 +14,10 @@ Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfiguri
 
 
 
-NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen.  Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
+NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über die link:reference-agent-maint-console-proxy.html["Agenten-Wartungskonsole"]Die
 
 .Informationen zu diesem Vorgang
-Das auf der NetApp Support-Site verfügbare Installationsprogramm ist möglicherweise eine frühere Version.  Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.
+Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.
 
 .Schritte
 . Wenn die Systemvariablen _http_proxy_ oder _https_proxy_ auf dem Host festgelegt sind, entfernen Sie sie:
@@ -30,9 +30,14 @@ unset https_proxy
 +
 Wenn Sie diese Systemvariablen nicht entfernen, schlägt die Installation fehl.
 
-. Laden Sie die Console-Agent-Software von der https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp Support Site"^] , und kopieren Sie es dann auf den Linux-Host.
+. Laden Sie die Console-Agent-Software herunter und kopieren Sie sie anschließend auf den Linux-Host.  Sie können es entweder von der NetApp Console oder von der NetApp -Support-Website herunterladen.
 +
-Sie sollten das „Online“-Agent-Installationsprogramm herunterladen, das für die Verwendung in Ihrem Netzwerk oder in der Cloud vorgesehen ist.
+** NetApp Console: Gehen Sie zu *Agents > Management > Agent bereitstellen > On-Premise > Manuelle Installation*.
++
+Wählen Sie entweder die Agenteninstallationsdateien oder eine URL zu den Dateien zum Herunterladen.
+
+** NetApp Supportseite (erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^] ,
+
 
 . Weisen Sie Berechtigungen zum Ausführen des Skripts zu.
 +
@@ -92,7 +97,7 @@ Beispiel:
 
 
 
-NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun. link:reference-agent-maint-console.html["Erfahren Sie mehr über die Agentenwartungskonsole."]
+NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun. link:reference-agent-maint-console-proxy.html["Erfahren Sie mehr über die Agentenwartungskonsole."]
 
 . Wenn Sie Podman verwendet haben, müssen Sie den Aardvark-DNS-Port anpassen.
 +

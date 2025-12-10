@@ -16,11 +16,11 @@ summary: In der NetApp Console können Sie Benutzern Rollen zuweisen, je nachdem
 [role="lead"]
 Innerhalb der Konsole können Sie Benutzern Rollen zuweisen, je nachdem, was sie tun müssen und wo.
 
-Benutzer mit der Rolle *Organisationsadministrator* oder *Ordner- oder Projektadministrator* sind dafür verantwortlich, anderen Benutzern Rollen zuzuweisen. Sie können Zugriffsrollen auf Projekt- oder Ordnerbasis zuweisen. Sie können einem Benutzer beispielsweise für ein Projekt die Administratorrolle „Ransomware Resilience“ und für ein anderes Projekt die Administratorrolle „SnapCenter“ zuweisen. Alternativ können Sie einem Benutzer, der die Administratorrolle für Ransomware-Resilienz für alle Projekte innerhalb eines bestimmten Ordners benötigt, diese Rolle auf Ordnerebene zuweisen.
+Benutzer mit der Rolle *Organisationsadministrator* oder *Ordner- oder Projektadministrator* sind dafür verantwortlich, anderen Benutzern Rollen zuzuweisen. Sie können Zugriffsrollen auf Projekt- oder Ordnerbasis zuweisen. Zugriffsrollen nach Projekt oder Ordner zuweisen.  Weisen Sie beispielsweise einem Benutzer für ein Projekt die Administratorrolle „Ransomware Resilience“ und für ein anderes Projekt die Administratorrolle „SnapCenter“ zu.  Um einem Benutzer die Administratorrolle „Ransomware Resilience“ für alle Projekte in einem Ordner zuzuweisen, weisen Sie die Rolle auf Ordnerebene zu.
 
 Verwenden Sie Zugriffsrollen, um den Zugriff auf Speicherressourcen basierend auf den spezifischen Aufgaben zuzuweisen, die Benutzer ausführen müssen. Wenn ein Benutzer beispielsweise mit Ransomware Resilience interagieren muss, muss ihm eine Zugriffsrolle zugewiesen werden, die entweder Anzeige- oder Administratorberechtigungen für Ransomware Resilience für das Projekt umfasst, für das die Zugriffsrolle gewährt wird.
 
-Weisen Sie Benutzern basierend auf Ihrer IAM-Strategie Rollen zu, um die Sicherheit zu erhöhen.  IAM-Rollen stellen sicher, dass Benutzer nur den Zugriff haben, den sie benötigen.
+Weisen Sie Rollen entsprechend Ihrer IAM-Strategie zu, um die Sicherheit zu verbessern.  IAM-Rollen beschränken den Benutzerzugriff auf das Notwendigste.
 
 
 NOTE: Denken Sie daran, dass Sie keinen direkten Zugriff auf Ressourcen gewähren können.  Weisen Sie den Projekten zunächst Ressourcen zu.  Erwägen Sie die Einrichtung Ihrer Ressourcenhierarchie, bevor Sie Benutzern Zugriff zuweisen.link:task-iam-manage-folders-projects.html["Erfahren Sie, wie Sie Ihre Ressourcen mit Ordnern und Projekten organisieren."]
@@ -29,7 +29,7 @@ NOTE: Denken Sie daran, dass Sie keinen direkten Zugriff auf Ressourcen gewähre
 
 == Einem Mitglied zugewiesene Rollen anzeigen
 
-Wenn Sie Ihrer Organisation ein Mitglied hinzufügen, werden Sie aufgefordert, ihm eine Rolle zuzuweisen.  Sie können bei Mitgliedern überprüfen, welche Rollen ihnen derzeit zugewiesen sind.
+Wenn Sie Ihrer Organisation ein Mitglied hinzufügen, werden Sie aufgefordert, ihm eine Rolle zuzuweisen. Sie können überprüfen, welche Rollen ihnen aktuell zugewiesen sind.
 
 Wenn Sie die Rolle „Ordner- oder Projektadministrator“ haben, werden auf der Seite alle Mitglieder der Organisation angezeigt.  Sie können jedoch nur die Mitgliedsberechtigungen für die Ordner und Projekte anzeigen und verwalten, für die Sie über Berechtigungen verfügen. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Aktionen, die ein Ordner- oder Projektadministrator ausführen kann."] .
 
@@ -73,7 +73,7 @@ Wenn Sie die Organisation oder einen Ordner auswählen, verfügt das Mitglied ü
 
 == Ändern der einem Mitglied zugewiesenen Rolle
 
-Sie können die zugewiesenen Rollen für ein Mitglied ändern, falls Sie den Zugriff für einen Benutzer anpassen müssen.
+Ändern Sie die Rollen eines Mitglieds, um dessen Zugriffsrechte zu aktualisieren.
 
 
 NOTE: Benutzern muss mindestens eine Rolle zugewiesen sein.  Sie können einem Benutzer nicht alle Rollen entziehen.  Wenn Sie alle Rollen entfernen müssen, müssen Sie den Benutzer aus Ihrer Organisation löschen.

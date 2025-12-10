@@ -23,4 +23,4 @@ Bei der manuellen Installation eines Console-Agenten unterstützt der Agent nun 
 Diese Version enthält Folgendes:
 
 .Neue E-Mail-Adresse für NetApp Console Benachrichtigungen
-Die E-Mail-Adresse, an die NetApp Console Benachrichtigungen gesendet werden, hat sich von *service@console.bluexp.netapp.com* auf *service@console.netapp.com* geändert. NetApp empfiehlt, alle E-Mail-Regeln so zu aktualisieren, dass *service@console.netapp.com* zugelassen wird, um sicherzustellen, dass Sie weiterhin E-Mail-Benachrichtigungen von NetApp Console erhalten.
+Die E-Mail-Adresse, an die NetApp Console Benachrichtigungen gesendet werden, hat sich von *service@console.bluexp.netapp.com* auf *service@console.netapp.com* geändert. NetApp empfiehlt, alle E-Mail-Regeln so zu aktualisieren, dass *service@console.netapp.com* zugelassen wird, damit Sie weiterhin E-Mail-Benachrichtigungen von NetApp Console erhalten.

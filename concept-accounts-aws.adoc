@@ -101,7 +101,7 @@ Die folgenden Fragen beziehen sich auf Anmeldeinformationen und Abonnements.
 
 Wie in den obigen Abschnitten beschrieben, können Sie mit der Konsole AWS-Anmeldeinformationen auf verschiedene Weise bereitstellen: über eine mit dem Konsolenagenten verknüpfte IAM-Rolle, durch die Übernahme einer IAM-Rolle in einem vertrauenswürdigen Konto oder durch die Bereitstellung von AWS-Zugriffsschlüsseln.
 
-Bei den ersten beiden Optionen verwendet die Konsole den AWS Security Token Service, um temporäre Anmeldeinformationen zu erhalten, die ständig rotieren.  Dieser Prozess ist die beste Vorgehensweise – er ist automatisch und sicher.
+Bei den ersten beiden Optionen verwendet die Konsole den AWS Security Token Service, um temporäre Anmeldeinformationen zu erhalten, die ständig rotieren. Dieses Verfahren ist die beste Vorgehensweise – es ist automatisch und sicher.
 
 Wenn Sie der Konsole AWS-Zugriffsschlüssel bereitstellen, sollten Sie die Schlüssel rotieren, indem Sie sie in regelmäßigen Abständen in der Konsole aktualisieren.  Dies ist ein vollständig manueller Prozess.
 

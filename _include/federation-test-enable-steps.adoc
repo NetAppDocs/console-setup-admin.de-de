@@ -3,10 +3,14 @@
 
 
 . Wählen Sie *Weiter*.
-. Wählen Sie *Verbindung testen*, um Ihre Verbindung zu testen.  Sie werden zu einer Anmeldeseite für Ihren IdP-Server weitergeleitet.  Melden Sie sich mit Ihren IdP-Anmeldeinformationen an, um den Test abzuschließen, und kehren Sie zur Konsole zurück, um die Verbindung zu aktivieren.
-. Wählen Sie *Weiter*.
-. Überprüfen Sie auf der Seite *Föderation aktivieren* die Föderationsdetails und wählen Sie dann *Föderation aktivieren* aus.
+. . Wählen Sie *Verbindung testen*, um Ihre Verbindung zu testen. Sie werden zu einer Anmeldeseite für Ihren IdP-Server weitergeleitet. Melden Sie sich mit Ihren IdP-Zugangsdaten an.  Nach dem Einloggen müssen Sie zur Konsole zurückkehren, um die Verbindung zu aktivieren.
+. Wählen Sie in der Konsole *Weiter*, um die Zusammenfassungsseite anzuzeigen.
+. Benachrichtigungen einrichten.
++
+Sie haben die Wahl zwischen sieben Tagen oder 30 Tagen.  Das System versendet E-Mail-Benachrichtigungen über das Ablaufdatum und zeigt diese in der Konsole allen Benutzern mit den folgenden Rollen an: Super-Admin, Organisations-Admin, Verbund-Admin und Verbund-Viewer.
+
+. Überprüfen Sie die Föderationsdetails und wählen Sie dann *Föderation aktivieren*.
 . Wählen Sie *Fertig*, um den Vorgang abzuschließen.
 
 
-Nachdem Sie die Föderation aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Console anmelden.
+Nach der Aktivierung der Föderation melden sich die Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Console an.

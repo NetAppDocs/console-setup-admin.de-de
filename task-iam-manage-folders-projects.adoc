@@ -20,18 +20,18 @@ In der NetApp Console organisieren Sie Ihre NetApp -Ressourcen mithilfe von Proj
 
 == Einen Ordner oder ein Projekt hinzufügen
 
-Wenn Sie Ihre Organisation erstellen, umfasst diese ein einzelnes Projekt.  Fügen Sie Projekte hinzu, um Ressourcen zu verwalten, und Ordner, um verwandte Projekte zu gruppieren.
+Wenn Sie Ihre Organisation erstellen, umfasst diese ein einzelnes Projekt. Fügen Sie Projekte hinzu, um Ressourcen zu verwalten, und Ordner, um zusammengehörige Projekte zu gruppieren.
 
-Die Ressourcenhierarchie Ihrer Organisation kann bis zu sieben Ebenen umfassen, wobei Ordner sechs Ebenen tief verschachtelt sind und Projekte auf der siebten Ebene liegen.
+Sie können in der Ressourcenstruktur Ihrer Organisation bis zu sieben Ebenen von Ordnern und Projekten erstellen.  Erstellen Sie Unterordner, um eine verschachtelte Struktur für Ihre Organisation aufzubauen.
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Organisation* aus.
 . Wählen Sie auf der Seite *Organisation* die Option *Ordner oder Projekt hinzufügen* aus.
 . Wählen Sie *Ordner* oder *Projekt*.
-. Geben Sie Details zum Ordner oder Projekt an:
+. Ordner- oder Projektdetails eingeben:
 +
-** *Name und Speicherort*: Geben Sie einen Namen ein und wählen Sie einen Speicherort in der Hierarchie für den Ordner oder das Projekt.  Ein Ordner oder Projekt kann sich direkt unter der Organisation oder innerhalb eines Ordners befinden.
+** *Name und Speicherort*: Geben Sie einen Namen ein und wählen Sie einen Speicherort in der Hierarchie für den Ordner oder das Projekt. Platzieren Sie einen Ordner oder ein Projekt innerhalb der Organisation oder in einem anderen Ordner.
 ** *Ressourcen*: Wählen Sie die Ressourcen aus, die Sie diesem Ordner oder Projekt zuordnen möchten.
 +
 Sie können Ressourcen auswählen, die mit dem übergeordneten Ordner oder Projekt verknüpft sind.
@@ -41,7 +41,7 @@ link:concept-identity-and-access-management.html#associate-resource-folder["Erfa
 
 ** *Zugriff*: Zeigen Sie die Mitglieder an, die basierend auf den bereits in Ihrer Ressourcenhierarchie definierten Berechtigungen Zugriff auf den Ordner oder das Projekt haben.
 +
-Wählen Sie *Mitglied hinzufügen*, um weiteren Mitgliedern Zugriff und eine Rolle zuzuweisen. Eine Rolle definiert die Berechtigungen, die Mitglieder für den Ordner oder das Projekt haben.
+Wählen Sie *Mitglied hinzufügen*, um Zugriffsrechte und eine Rolle zuzuweisen.
 
 +
 link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
@@ -68,10 +68,7 @@ Bei Bedarf können Sie die Namen Ihrer Ordner und Projekte ändern.
 
 Löschen Sie Ordner und Projekte, die Sie nicht mehr benötigen.
 
-.Bevor Sie beginnen
-* Stellen Sie sicher, dass dem Ordner oder Projekt keine Ressourcen zugeordnet sind. <<modify-resources,Erfahren Sie, wie Sie die Zuordnung von Ressourcen aufheben>> .
-* Stellen Sie sicher, dass dem Ordner oder Projekt keine Ressourcen zugeordnet sind.
-
+Bevor Sie einen Ordner oder ein Projekt löschen, vergewissern Sie sich, dass es keine Ressourcen mehr enthält. <<modify-resources,Erfahren Sie, wie Sie Ressourcen entfernen>>.
 
 .Schritte
 . Navigieren Sie auf der Seite *Organisation* zu einem Projekt oder Ordner in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol mit drei Punkten"] und wählen Sie dann *Löschen*.
@@ -101,7 +98,7 @@ image:screenshot-iam-allocated-resources.png["Ein Screenshot der Seite „Projek
 
 
 
-== Ändern der mit einem Ordner oder Projekt verknüpften Ressourcen
+== Ändern Sie die Ressourcen, die einem Ordner oder Projekt zugeordnet sind.
 
 Mitglieder mit Berechtigungen für einen Ordner oder ein Projekt können auf die zugehörigen Ressourcen zugreifen.
 
@@ -119,7 +116,7 @@ In der Tabelle identifiziert die Spalte *Status* die Ressourcen, die mit dem Ord
 +
 image:screenshot-iam-associate-resources.png["Ein Screenshot der Seite „Projekt bearbeiten“, der die Option „Ressourcen zuordnen“ zeigt, die verfügbar ist, nachdem Sie Ressourcen ausgewählt haben, die derzeit nicht zugeordnet sind."]
 
-. Wählen Sie *Übernehmen*
+. Wählen Sie *Übernehmen*.
 
 
 
@@ -136,9 +133,9 @@ image:screenshot-iam-member-access.png["Ein Screenshot der Seite „Projekt bear
 
 == Ändern des Mitgliederzugriffs auf einen Ordner oder ein Projekt
 
-Ändern Sie den Mitgliederzugriff, um sicherzustellen, dass die richtigen Mitglieder auf die zugehörigen Ressourcen zugreifen können.
+Ändern Sie die Zugriffsrechte der Mitglieder, um den Ressourcenzugriff zu steuern.
 
-Der auf einer höheren Hierarchieebene gewährte Mitgliederzugriff kann auf niedrigeren Ebenen nicht geändert werden.  Aktualisieren Sie die Mitgliedsberechtigungen auf der höheren Hierarchieebene, um den Zugriff zu ändern.  Alternativ können Sielink:task-iam-manage-roles.html#manage-permissions["Verwalten Sie Berechtigungen auf der Seite „Mitglieder“"] .
+Die Zugriffsrechte von Mitgliedern auf niedrigeren Ebenen können nicht geändert werden, wenn sie von einer höheren Hierarchieebene geerbt wurden.  Alternativ können Sie Die Aktualisieren Sie die Mitgliedsberechtigungen auf der höheren Hierarchieebene, um den Zugriff zu ändern. Alternativ können Sielink:task-iam-manage-roles.html#manage-permissions["Verwalten Sie Berechtigungen auf der Seite „Mitglieder“"].
 
 link:concept-identity-and-access-management.html#role-inheritance["Erfahren Sie mehr über die Rollenvererbung"] .
 

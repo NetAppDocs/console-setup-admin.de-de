@@ -881,7 +881,7 @@ Die folgenden Berechtigungen benötigen Sie nur, wenn Sie vor der Veröffentlich
 
 
 
-=== Datenklassifizierung
+=== Einstufung
 
 Der Agent stellt die folgenden API-Anfragen, um NetApp Data Classification bereitzustellen:
 

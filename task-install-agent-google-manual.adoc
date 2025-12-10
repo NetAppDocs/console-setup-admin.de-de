@@ -30,7 +30,7 @@ Die Konsolenagent-Software muss auf einem Host ausgeführt werden, der bestimmte
 
 NOTE: Der Konsolenagent reserviert den UID- und GID-Bereich von 19000 bis 19200.  Dieser Bereich ist fest und kann nicht geändert werden.  Wenn Drittanbietersoftware auf Ihrem Host UIDs oder GIDs innerhalb dieses Bereichs verwendet, schlägt die Agenteninstallation fehl.  NetApp empfiehlt die Verwendung eines Hosts, der frei von Software von Drittanbietern ist, um Konflikte zu vermeiden.
 
-Dedizierter Host:: Der Konsolenagent wird auf einem Host, der mit anderen Anwendungen gemeinsam genutzt wird, nicht unterstützt. Der Host muss ein dedizierter Host sein.  Der Host kann jede Architektur aufweisen, die die folgenden Größenanforderungen erfüllt:
+Dedizierter Host:: Der Konsolenagent benötigt einen dedizierten Host.  Jede Architektur wird unterstützt, sofern sie diese Größenanforderungen erfüllt:
 +
 --
 * CPU: 8 Kerne oder 8 vCPUs
@@ -43,14 +43,14 @@ Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzei
 
 ** `/var`: 40 GiB Speicherplatz müssen verfügbar sein
 +
-Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podman so konzipiert sind, dass sie die Container in diesem Verzeichnis erstellen.  Konkret werden sie Container in der `/var/lib/containers/storage` Verzeichnis.  Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+Der Konsolenagent benötigt diesen Speicherplatz. `/var` weil Podman oder Docker so konzipiert sind, dass die Container in diesem Verzeichnis erstellt werden.  Konkret werden sie Container erstellen in der `/var/lib/containers/storage` Verzeichnis und `/var/lib/docker` für Docker. Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
 
 
 
 
 
 --
-Google Cloud-Maschinentyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt n2-standard-8.
+Google Cloud-Maschinentyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt. NetApp empfiehlt n2-standard-8.
 +
 --
 Der Konsolenagent wird in Google Cloud auf einer VM-Instanz mit einem Betriebssystem unterstützt, das https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Funktionen von Shielded VM"^]
@@ -161,7 +161,7 @@ Docker Engine 23.0.6 bis 28.0.0.
 Nicht unterstützt
 
 |===
-Google Cloud-Maschinentyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt n2-standard-8.
+Google Cloud-Maschinentyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt. NetApp empfiehlt n2-standard-8.
 +
 --
 Der Konsolenagent wird in Google Cloud auf einer VM-Instanz mit einem Betriebssystem unterstützt, das https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Funktionen von Shielded VM"^]
@@ -190,13 +190,13 @@ Abhängig von Ihrem Betriebssystem ist vor der Installation des Agenten entweder
 ====
 .Podman
 --
-Podman installieren und konfigurieren:
+Befolgen Sie diese Schritte, um Podman zu installieren und zu konfigurieren:
 
 * Aktivieren und starten Sie den Dienst podman.socket
 * Installieren Sie Python3
-* Installieren Sie das entsprechende podman-compose-Paket
+* Installieren Sie das Podman-Compose-Paket Version 1.0.6
 * Fügen Sie podman-compose zur Umgebungsvariablen PATH hinzu
-* Stellen Sie sicher, dass Ihre Podman-Version Netavark Aardvark DNS anstelle von CNI verwendet.
+* Wenn Sie Red Hat Enterprise Linux verwenden, überprüfen Sie, ob Ihre Podman-Version Netavark Aardvark DNS anstelle von CNI verwendet
 
 
 
@@ -212,7 +212,7 @@ rm /var/run/docker.sock
 ----
 . Installieren Sie Podman.
 +
-Podman kann aus den Red Hat Enterprise Linux-Repositories bezogen werden.
+Sie können Podman aus den offiziellen Red Hat Enterprise Linux-Repositories beziehen.
 
 +
 Für Red Hat Enterprise Linux 9:
@@ -248,32 +248,34 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. Installieren Sie EPEL, um podman-compose zu erhalten.
-+
-.. Bei Verwendung von Red Hat Enterprise 9.1 bis 9.6:
+. Installieren Sie das EPEL-Repository-Paket, falls es auf Ihrem System noch nicht verfügbar ist.
+
+
+Dieser Schritt ist erforderlich, da podman-compose im Repository „Extra Packages for Enterprise Linux“ (EPEL) verfügbar ist.
+
+. Bei Verwendung von Red Hat Enterprise 9.1 bis 9.6:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-
-
-. Installieren Sie das Podman-Compose-Paket 1.5.0.
++
+.. Installieren Sie das Podman-Compose-Paket 1.5.0.
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-+
-.. Bei Verwendung von Red Hat Enterprise Linux 8:
+
+
+. Bei Verwendung von Red Hat Enterprise Linux 8:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-
-
-. Installieren Sie das Podman-Compose-Paket 1.0.6.
++
+.. Installieren Sie das Podman-Compose-Paket 1.0.6.
 +
 [source, cli]
 ----
@@ -283,11 +285,10 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: Verwenden des `dnf install` Der Befehl erfüllt die Anforderung zum Hinzufügen von „podman-compose“ zur Umgebungsvariablen PATH.  Der Installationsbefehl fügt podman-compose zu /usr/bin hinzu, das bereits im `secure_path` Option auf dem Host.
 
-. Wenn Sie Red Hat Enterprise Linux 8 verwenden, überprüfen Sie, ob Ihre Podman-Version NetAvark mit Aardvark DNS anstelle von CNI verwendet.
-+
-.. Überprüfen Sie, ob Ihr Netzwerk-Backend auf CNI eingestellt ist, indem Sie den folgenden Befehl ausführen:
+.. Wenn Sie Red Hat Enterprise Linux 8 verwenden, überprüfen Sie, ob Ihre Podman-Version NetAvark mit Aardvark DNS anstelle von CNI verwendet.
 
 
+. Überprüfen Sie, ob Ihr Netzwerk-Backend auf CNI eingestellt ist, indem Sie den folgenden Befehl ausführen:
 
 
 [listing]
@@ -331,7 +332,7 @@ Befolgen Sie die Dokumentation von Docker, um Docker Engine zu installieren.
 .Schritte
 . https://docs.docker.com/engine/install/["Installationsanweisungen von Docker anzeigen"^]
 +
-Installieren Sie eine unterstützte Docker Engine-Version, indem Sie die folgenden Schritte befolgen. Installieren Sie nicht die neueste Version, da die Konsole diese nicht unterstützt.
+Befolgen Sie die Schritte, um eine unterstützte Docker Engine-Version zu installieren. Installieren Sie nicht die neueste Version, da diese von der Konsole nicht unterstützt wird.
 
 . Stellen Sie sicher, dass Docker aktiviert und ausgeführt wird.
 +
@@ -376,7 +377,7 @@ Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
 
 
  a| 
-\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \//https://config.googleapis.com/v1/projects
  a| 
 Zum Verwalten von Ressourcen in Google Cloud.
 
@@ -470,10 +471,10 @@ Es liegt in Ihrer Verantwortung, die benutzerdefinierte Rolle zu aktualisieren, 
 .. Laden Sie die YAML-Datei hoch, die die erforderlichen Berechtigungen enthält.
 .. Erstellen Sie eine benutzerdefinierte Rolle mithilfe der `gcloud iam roles create` Befehl.
 +
-Das folgende Beispiel erstellt auf Projektebene eine Rolle mit dem Namen „Connector“:
+Das folgende Beispiel erstellt eine Rolle mit dem Namen „Agent“ auf Projektebene:
 
 +
-`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+`gcloud iam roles create connector --project=myproject --file=agent.yaml`
 
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud-Dokumente: Erstellen und Verwalten benutzerdefinierter Rollen"^]
@@ -567,11 +568,12 @@ Hinweise:
 
 == Schritt 6: Google Cloud APIs aktivieren
 
-Bevor Sie Cloud Volumes ONTAP -Systeme in Google Cloud bereitstellen können, müssen mehrere Google Cloud-APIs aktiviert werden.
+Bevor Sie einen Console-Agenten in Google Cloud bereitstellen können, müssen mehrere Google Cloud APIs aktiviert werden.
 
 .Schritt
 . Aktivieren Sie die folgenden Google Cloud-APIs in Ihrem Projekt:
 +
+** Cloud Infrastructure Manager API
 ** Cloud Deployment Manager V2 API
 ** Cloud Logging API
 ** Cloud Resource Manager-API
@@ -593,6 +595,8 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud-D
 
 Nachdem die Voraussetzungen erfüllt sind, können Sie die Software manuell auf Ihrem eigenen Linux-Host installieren.
 
+Wenn Sie einen Agenten bereitstellen, erstellt das System auch einen Google Cloud-Bucket zum Speichern der Bereitstellungsdateien.
+
 .Bevor Sie beginnen
 Folgendes sollten Sie haben:
 
@@ -605,10 +609,10 @@ Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfiguri
 
 
 
-NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen.  Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
+NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über die link:reference-agent-maint-console-proxy.html["Agenten-Wartungskonsole"]Die
 
 .Informationen zu diesem Vorgang
-Das auf der NetApp Support-Site verfügbare Installationsprogramm ist möglicherweise eine frühere Version.  Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.
+Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.
 
 .Schritte
 . Wenn die Systemvariablen _http_proxy_ oder _https_proxy_ auf dem Host festgelegt sind, entfernen Sie sie:
@@ -621,9 +625,14 @@ unset https_proxy
 +
 Wenn Sie diese Systemvariablen nicht entfernen, schlägt die Installation fehl.
 
-. Laden Sie die Console-Agent-Software von der https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp Support Site"^] , und kopieren Sie es dann auf den Linux-Host.
+. Laden Sie die Console-Agent-Software herunter und kopieren Sie sie anschließend auf den Linux-Host.  Sie können es entweder von der NetApp Console oder von der NetApp -Support-Website herunterladen.
 +
-Sie sollten das „Online“-Agent-Installationsprogramm herunterladen, das für die Verwendung in Ihrem Netzwerk oder in der Cloud vorgesehen ist.
+** NetApp Console: Gehen Sie zu *Agents > Management > Agent bereitstellen > On-Premise > Manuelle Installation*.
++
+Wählen Sie entweder die Agenteninstallationsdateien oder eine URL zu den Dateien zum Herunterladen.
+
+** NetApp Supportseite (erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^] ,
+
 
 . Weisen Sie Berechtigungen zum Ausführen des Skripts zu.
 +
@@ -683,7 +692,7 @@ Beispiel:
 
 
 
-NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun. link:reference-agent-maint-console.html["Erfahren Sie mehr über die Agentenwartungskonsole."]
+NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun. link:reference-agent-maint-console-proxy.html["Erfahren Sie mehr über die Agentenwartungskonsole."]
 
 . Wenn Sie Podman verwendet haben, müssen Sie den Aardvark-DNS-Port anpassen.
 +

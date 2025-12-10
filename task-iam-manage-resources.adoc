@@ -20,16 +20,16 @@ Wenn Sie ein Mitglied Ihrer Organisation zuordnen, erteilen Sie Berechtigungen a
 
 == Zeigen Sie die Ressourcen in Ihrer Organisation an
 
-Sie können sowohl entdeckte als auch unentdeckte Ressourcen anzeigen, die mit Ihrer Organisation verknüpft sind. Unentdeckte Ressourcen sind Speicherressourcen, die identifiziert, aber noch nicht zur Konsole hinzugefügt wurden.
+Sie können sowohl entdeckte als auch unentdeckte Ressourcen anzeigen, die mit Ihrer Organisation verknüpft sind. Das System findet Speicherressourcen und markiert sie als nicht entdeckt, bis Sie sie zur Konsole hinzufügen.
 
 
-NOTE: HINWEIS: Auf der Seite „Ressourcen“ sind Amazon FSx for NetApp ONTAP -Ressourcen nicht enthalten, da Benutzer sie keiner Rolle zuordnen können.  Zeigen Sie sie auf der Seite „Systeme“ oder unter „Workloads“ an.
+NOTE: Auf der Seite „Ressourcen“ werden Amazon FSx for NetApp ONTAP -Ressourcen nicht angezeigt, da Benutzer diese keiner Rolle zuordnen können.  Sie können sie auf der Seite *Systeme* oder unter Workloads einsehen.
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Ressourcen* aus.
 . Wählen Sie *Erweiterte Suche und Filterung*.
-. Verwenden Sie eine der verfügbaren Optionen, um die gesuchte Ressource zu finden:
+. Nutzen Sie die verfügbaren Optionen, um eine Ressource zu finden:
 +
 ** *Suche nach Ressourcennamen*: Geben Sie eine Textzeichenfolge ein und wählen Sie *Hinzufügen*.
 ** *Plattform*: Wählen Sie eine oder mehrere Plattformen aus, beispielsweise Amazon Web Services.
@@ -87,7 +87,7 @@ Das folgende Beispiel zeigt eine Ressource, die mit einem Projekt verknüpft ist
 image:screenshot-iam-resource-details.png["Ein Screenshot der Ressourcendetailseite, der eine Ressource zeigt, die mit einem Projekt verknüpft ist, das sich direkt unter der Organisation befindet."]
 
 
-NOTE: Wenn Sie feststellen möchten, welche Organisationsmitglieder Zugriff auf die Ressource haben, können Sielink:task-iam-manage-folders-projects.html#view-associated-resources-members["Zeigen Sie die Mitglieder an, die Zugriff auf die Ordner und Projekte haben, die mit der Ressource verknüpft sind."] .
+NOTE: Um zu sehen, welche Organisationsmitglieder Zugriff auf die Ressource haben,link:task-iam-manage-folders-projects.html#view-associated-resources-members["Mitglieder mit Zugriff auf zugehörige Ordner und Projekte anzeigen"] Die
 
 
 
@@ -96,7 +96,7 @@ NOTE: Wenn Sie feststellen möchten, welche Organisationsmitglieder Zugriff auf 
 Um eine Ressource aus einem Ordner oder Projekt zu entfernen, müssen Sie die Verknüpfung zwischen dem Ordner oder Projekt und der Ressource entfernen. Wenn Sie die Zuordnung entfernen, können Mitglieder die Ressource im Ordner oder Projekt nicht mehr verwalten.
 
 
-NOTE: Um eine erkannte Ressource aus der gesamten Organisation zu entfernen, entfernen Sie das System von der Seite *Systeme*.
+NOTE: Um eine gefundene Ressource aus der gesamten Organisation zu entfernen, gehen Sie zur Seite *Systeme* und entfernen Sie das System.
 
 .Schritte
 . Navigieren Sie auf der Seite *Ressourcen* zu einer Ressource in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.

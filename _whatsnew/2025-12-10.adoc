@@ -1,0 +1,44 @@
+= Konsolenagent 4.2.0
+:allow-uri-read: 
+
+
+
+
+=== Konsolenagent 4.2.0
+
+Die Version 4.2.0 unterstützt sowohl den Standardmodus als auch den eingeschränkten Modus.
+
+Diese Version des Konsolenagenten enthält Sicherheitsverbesserungen, Fehlerbehebungen und die folgenden Funktionen:
+
+.Unterstützung für Google Cloud Infrastructure Manager
+NetApp verwendet jetzt Google Cloud Infrastructure Manager (IM) anstelle von Google Cloud Deployment Manager, um Agenten in Google Cloud bereitzustellen und zu verwalten.  Diese Änderung wurde vorgenommen, weil Google die Funktion einstellen wird.link:https://docs.cloud.google.com/deployment-manager/docs/deprecations["Cloud-Bereitstellungsmanager"] Die
+
+* Alle neuen Agenten ab Version 4.2.0 verwenden Infrastructure Manager. Sie sollten daher sowohl die Benutzer- als auch die Dienstkontoberechtigungen, die für die Bereitstellung verwendet werden, aktualisieren.link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log["Das Änderungsprotokoll der Berechtigungen ansehen."^]
+* Wenn Sie einen Agenten bereitstellen, erstellt das System auch einen Google Cloud-Bucket zum Speichern der Bereitstellungsdateien.
+
+
+.Verbesserte Konfigurationsprüfungen für Konsolenagenten
+* Der Console-Agent prüft nun bei der Konfigurationsprüfung auch auf veraltete Endpunkte.  Wenn Sie die neue Endpunktliste für Version 4.0.0 oder höher noch nicht aktualisiert haben, ist die Installation erfolgreich, wenn das System die vorherige Endpunktliste erreichen kann.link:https://docs.netapp.com/us-en/console-setup-admin/reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie mehr über die erforderlichen Endpunkte für Console-Agenten."^]
+* Führen Sie Konfigurationsprüfungen an installierten Console-Agenten über die Console- oder Agentenwartungskonsole durch, um die Konnektivität zu überprüfen und Probleme zu beheben.link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["Erfahren Sie, wie Sie Konfigurationsprüfungen auf Console-Agenten durchführen."^]
+
+
+.Laden Sie die Agentensoftware direkt von der NetApp Console herunter.
+Wenn Sie einen Agenten manuell installieren müssen, können Sie die Agentensoftware zusätzlich zur NetApp Support-Website auch direkt über die NetApp Console aufrufen.link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-on-prem.html#install-the-console-agent-manually["Erfahren Sie, wie Sie die Console-Agent-Software direkt von der NetApp Console herunterladen können."^]
+
+
+
+=== NetApp Console
+
+Diese Version enthält Folgendes:
+
+.Möglichkeit, Benachrichtigungen für ablaufende Anmeldeinformationen einzurichten.
+Benachrichtigungen für ablaufende Anmeldeinformationen von Dienstkonten und Verbunddiensten einrichten.  Wählen Sie zwischen sieben oder 30 Tagen.  Die Konsole zeigt Benachrichtigungen an und versendet E-Mails an Benutzer mit der entsprechenden Rolle.  Organisationsadministratoren erhalten Benachrichtigungen über Dienstkonten.  Organisationsadministratoren, Föderationsadministratoren und Föderationsbetrachter erhalten Föderationsbenachrichtigungen.
+
+.Lokale Anmeldungen sind nach der Aktivierung der Föderation nicht mehr möglich.
+Nach der Aktivierung der Föderation für eine Konsolenorganisation können Benutzer keine lokalen Anmeldungen mehr verwenden und werden zu Föderationsanmeldungen weitergeleitet.
+
+.Verbesserungen der Benutzerfreundlichkeit der Speicherverwaltungsseiten
+Detaillierte Informationen zu Ihren ONTAP On-Premises-Systemen (und FSx für ONTAP) können jetzt einfacher über die Speicherverwaltungsseiten angezeigt und verwaltet werden.
+
+* Die Seite * Discoverable systems* trennt die zusammenfassenden Informationen von der Registerkartenansicht der verfügbaren Systeme und erleichtert so die Anzeige umfassender Informationen über auffindbare Systeme.
+

@@ -247,8 +247,10 @@ sidebar:
     entries:
     - title: Agenten-Wartungskonsole
       entries:
-      - title: Agenten-Wartungskonsole
+      - title: Konfigurationsprüfungen
         url: "/reference-agent-maint-console.html"
+      - title: Transparenter Proxy
+        url: "/reference-agent-maint-console-proxy.html"
     - title: Berechtigungen
       entries:
       - title: Zusammenfassung der Berechtigungen

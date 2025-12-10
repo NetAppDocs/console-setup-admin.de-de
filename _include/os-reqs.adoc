@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-Dedizierter Host:: Der Konsolenagent wird auf einem Host, der mit anderen Anwendungen gemeinsam genutzt wird, nicht unterstützt. Der Host muss ein dedizierter Host sein.  Der Host kann jede Architektur aufweisen, die die folgenden Größenanforderungen erfüllt:
+Dedizierter Host:: Der Konsolenagent benötigt einen dedizierten Host.  Jede Architektur wird unterstützt, sofern sie diese Größenanforderungen erfüllt:
 +
 --
 * CPU: 8 Kerne oder 8 vCPUs
@@ -15,7 +15,7 @@ Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzei
 
 ** `/var`: 40 GiB Speicherplatz müssen verfügbar sein
 +
-Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podman so konzipiert sind, dass sie die Container in diesem Verzeichnis erstellen.  Konkret werden sie Container in der `/var/lib/containers/storage` Verzeichnis.  Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+Der Konsolenagent benötigt diesen Speicherplatz. `/var` weil Podman oder Docker so konzipiert sind, dass die Container in diesem Verzeichnis erstellt werden.  Konkret werden sie Container erstellen in der `/var/lib/containers/storage` Verzeichnis und `/var/lib/docker` für Docker. Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
 
 
 
@@ -182,7 +182,6 @@ Nicht unterstützt
 |===
 Hinweise:
 
-. Die Verwaltung von Cloud Volumes ONTAP -Systemen wird von Agenten, auf deren Betriebssystem SELinux aktiviert ist, nicht unterstützt.
 . Der Konsolenagent wird auf englischsprachigen Versionen dieser Betriebssysteme unterstützt.
 . Für RHEL muss der Host bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann der Host während der Agenteninstallation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
 
@@ -200,7 +199,7 @@ AWS EC2-Instanztyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt
 Schlüsselpaar:: Wenn Sie den Konsolenagenten erstellen, müssen Sie ein EC2-Schlüsselpaar zur Verwendung mit der Instanz auswählen.
 
 
-PUT-Antwort-Hop-Limit bei Verwendung von IMDSv2:: Wenn IMDSv2 auf der EC2-Instance aktiviert ist (dies ist die Standardeinstellung für neue EC2-Instances), müssen Sie das Hop-Limit für PUT-Antworten auf der Instanz auf 3 ändern.  Wenn Sie das Limit der EC2-Instance nicht ändern, erhalten Sie beim Versuch, den Agenten einzurichten, einen UI-Initialisierungsfehler.
+PUT-Antwort-Hop-Limit bei Verwendung von IMDSv2:: Wenn IMDSv2 aktiviert ist (Standardeinstellung für neue EC2-Instanzen), setzen Sie das Hop-Limit für PUT-Antworten auf 3.  Andernfalls wird während der Agenteneinrichtung ein UI-Initialisierungsfehler angezeigt.
 +
 --
 * link:task-require-imdsv2.html["Erfordert die Verwendung von IMDSv2 auf Amazon EC2-Instanzen"]
@@ -213,7 +212,7 @@ PUT-Antwort-Hop-Limit bei Verwendung von IMDSv2:: Wenn IMDSv2 auf der EC2-Instan
 Azure-VM-Größe:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt Standard_D8s_v3.
 
 
-Google Cloud-Maschinentyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt n2-standard-8.
+Google Cloud-Maschinentyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt. NetApp empfiehlt n2-standard-8.
 +
 --
 Der Konsolenagent wird in Google Cloud auf einer VM-Instanz mit einem Betriebssystem unterstützt, das https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Funktionen von Shielded VM"^]

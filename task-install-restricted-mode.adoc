@@ -27,7 +27,7 @@ Installieren Sie den Konsolenagenten vom Marktplatz Ihres Cloud-Anbieters oder m
 .AWS Commercial Marketplace
 --
 .Bevor Sie beginnen
-Folgendes sollten Sie haben:
+Halten Sie Folgendes bereit:
 
 * Eine VPC und ein Subnetz, das die Netzwerkanforderungen erfüllt.
 +
@@ -94,7 +94,7 @@ Richten Sie die NetApp Console ein.
 .AWS Gov Marketplace
 --
 .Bevor Sie beginnen
-Folgendes sollten Sie haben:
+Halten Sie Folgendes bereit:
 
 * Eine VPC und ein Subnetz, das die Netzwerkanforderungen erfüllt.
 +
@@ -120,7 +120,7 @@ image:screenshot-gov-cloud-mktp.png["Ein Screenshot, der das NetApp Console zeig
 .. Wählen Sie *Weiter*.
 
 
-. Folgen Sie den Anweisungen zum Konfigurieren und Bereitstellen der Instanz:
+. Folgen Sie den Anweisungen, um die Instanz einzurichten und zu starten:
 +
 ** *Wählen Sie einen Instanztyp*: Wählen Sie je nach regionaler Verfügbarkeit einen der unterstützten Instanztypen (t3.2xlarge wird empfohlen).
 +
@@ -175,12 +175,12 @@ Beachten Sie beim Konfigurieren der VM Folgendes:
 +
 ** *VM-Größe*: Wählen Sie eine VM-Größe, die den CPU- und RAM-Anforderungen entspricht.  Wir empfehlen Standard_D8s_v3.
 ** *Festplatten*: Der Konsolenagent kann mit HDD- oder SSD-Festplatten optimal funktionieren.
-** *Öffentliche IP*: Wenn Sie eine öffentliche IP-Adresse mit der Konsolen-Agent-VM verwenden möchten, muss die IP-Adresse eine Basic-SKU verwenden, um sicherzustellen, dass die Konsole diese öffentliche IP-Adresse verwendet.
+** *Öffentliche IP-Adresse*: Um eine öffentliche IP-Adresse mit der Console-Agent-VM zu verwenden, wählen Sie eine Basic-SKU.
 +
 image:screenshot-azure-sku.png["Ein Screenshot der Erstellung einer neuen IP-Adresse in Azure, der es Ihnen ermöglicht, im Feld „SKU“ „Basic“ auszuwählen."]
 
 +
-Wenn Sie stattdessen eine Standard-SKU-IP-Adresse verwenden, verwendet die Konsole die _private_ IP-Adresse des Konsolenagenten anstelle der öffentlichen IP. Wenn der Computer, den Sie für den Zugriff auf die Konsole verwenden, keinen Zugriff auf diese private IP-Adresse hat, schlagen Aktionen von der Konsole fehl.
+Wenn Sie stattdessen eine Standard-SKU-IP-Adresse verwenden, verwendet die Konsole die _private_ IP-Adresse des Konsolenagenten anstelle der öffentlichen IP. Wenn der Rechner, mit dem Sie auf die Konsole zugreifen, die private IP-Adresse nicht erreichen kann, funktioniert die Konsole nicht.
 
 +
 https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses#sku["Azure-Dokumentation: Öffentliche IP-SKU"^]
@@ -191,7 +191,7 @@ link:reference-ports-azure.html["Anzeigen von Sicherheitsgruppenregeln für Azur
 
 ** *Identität*: Wählen Sie unter *Verwaltung* die Option *Vom System zugewiesene verwaltete Identität aktivieren*.
 +
-Diese Einstellung ist wichtig, da eine verwaltete Identität es der virtuellen Maschine des Konsolenagenten ermöglicht, sich gegenüber der Microsoft Entra ID zu identifizieren, ohne Anmeldeinformationen angeben zu müssen. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Erfahren Sie mehr über verwaltete Identitäten für Azure-Ressourcen"^] .
+Eine verwaltete Identität ermöglicht es der Console-Agent-VM, sich gegenüber Microsoft Entra ID ohne Anmeldeinformationen zu identifizieren. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Erfahren Sie mehr über verwaltete Identitäten für Azure-Ressourcen"^] Die
 
 
 
@@ -219,14 +219,14 @@ Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfiguri
 
 
 
-NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen.  Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über dielink:reference-agent-maint-console.html["Agenten-Wartungskonsole"] .
+NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über die link:reference-agent-maint-console-proxy.html["Agenten-Wartungskonsole"]Die
 
 * Sie müssen die Konfigurationsprüfung deaktivieren, die während der Installation die ausgehende Konnektivität überprüft.  Die manuelle Installation schlägt fehl, wenn diese Prüfung nicht deaktiviert ist.link:task-troubleshoot-agent.html["Erfahren Sie, wie Sie Konfigurationsprüfungen für manuelle Installationen deaktivieren."]
 * Abhängig von Ihrem Betriebssystem ist entweder Podman oder Docker Engine erforderlich, bevor Sie den Konsolenagenten installieren.
 
 
 .Informationen zu diesem Vorgang
-Das auf der NetApp Support-Site verfügbare Installationsprogramm ist möglicherweise eine frühere Version.  Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.
+Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.
 
 .Schritte
 . Wenn die Systemvariablen _http_proxy_ oder _https_proxy_ auf dem Host festgelegt sind, entfernen Sie sie:
@@ -239,9 +239,14 @@ unset https_proxy
 +
 Wenn Sie diese Systemvariablen nicht entfernen, schlägt die Installation fehl.
 
-. Laden Sie die Console-Agent-Software von der https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp Support Site"^] , und kopieren Sie es dann auf den Linux-Host.
+. Laden Sie die Console-Agent-Software herunter und kopieren Sie sie anschließend auf den Linux-Host.  Sie können es entweder von der NetApp Console oder von der NetApp -Support-Website herunterladen.
 +
-Sie sollten das „Online“-Agent-Installationsprogramm herunterladen, das für die Verwendung in Ihrem Netzwerk oder in der Cloud vorgesehen ist.
+** NetApp Console: Gehen Sie zu *Agents > Management > Agent bereitstellen > On-Premise > Manuelle Installation*.
++
+Wählen Sie entweder die Agenteninstallationsdateien oder eine URL zu den Dateien zum Herunterladen.
+
+** NetApp Supportseite (erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^] ,
+
 
 . Weisen Sie Berechtigungen zum Ausführen des Skripts zu.
 +
@@ -301,7 +306,7 @@ Beispiel:
 
 
 
-NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun. link:reference-agent-maint-console.html["Erfahren Sie mehr über die Agentenwartungskonsole."]
+NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun. link:reference-agent-maint-console-proxy.html["Erfahren Sie mehr über die Agentenwartungskonsole."]
 
 . Wenn Sie Podman verwendet haben, müssen Sie den Aardvark-DNS-Port anpassen.
 +
@@ -347,7 +352,7 @@ Wenn Sie zum ersten Mal auf die Konsole zugreifen, werden Sie aufgefordert, eine
 .Bevor Sie beginnen
 Die Person, die den Konsolenagenten einrichtet, muss sich mit einem Login bei der Konsole anmelden, der noch nicht zu einer Konsolenorganisation gehört.
 
-Wenn Ihr Login mit einer anderen Organisation verknüpft ist, müssen Sie sich mit einem neuen Login anmelden.  Andernfalls wird die Option zum Aktivieren des eingeschränkten Modus auf dem Einrichtungsbildschirm nicht angezeigt.
+Falls Ihr Login mit einer anderen Organisation verknüpft ist, müssen Sie sich mit einem neuen Login registrieren.  Andernfalls wird Ihnen die Option zum Aktivieren des eingeschränkten Modus auf dem Einstellungsbildschirm nicht angezeigt.
 
 .Schritte
 . Öffnen Sie einen Webbrowser auf einem Host, der über eine Verbindung zur Konsolen-Agenteninstanz verfügt, und geben Sie die folgende URL des von Ihnen installierten Konsolen-Agenten ein.
@@ -379,7 +384,7 @@ Geben Sie der Konsole die Berechtigungen, die Sie zuvor eingerichtet haben.
 
 == Schritt 3: Erteilen Sie dem Konsolenagenten Berechtigungen
 
-Wenn Sie den Konsolen-Agenten aus dem Azure Marketplace bereitgestellt oder die Konsolen-Agenten-Software manuell installiert haben, müssen Sie die zuvor eingerichteten Berechtigungen angeben.
+Wenn Sie den Console-Agenten über den Azure Marketplace oder manuell installiert haben, müssen Sie die zuvor eingerichteten Berechtigungen erteilen.
 
 Diese Schritte gelten nicht, wenn Sie den Konsolenagenten vom AWS Marketplace bereitgestellt haben, da Sie während der Bereitstellung die erforderliche IAM-Rolle ausgewählt haben.
 

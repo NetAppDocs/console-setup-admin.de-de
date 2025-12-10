@@ -41,7 +41,7 @@ Bei dieser Option wird die CSR nicht über die Konsole generiert.  Sie generiere
 . Wählen Sie *Administration > Agenten*.
 . Wählen Sie auf der Seite *Übersicht* das Aktionsmenü für einen Konsolenagenten und wählen Sie *HTTPS-Setup*.
 +
-Zum Bearbeiten muss der Konsolenagent aktiv sein.
+Zum Bearbeiten muss der Konsolenagent verbunden sein.
 
 . Installieren Sie auf der Seite „HTTPS-Setup“ ein Zertifikat, indem Sie eine Zertifikatsignieranforderung (CSR) generieren oder Ihr eigenes CA-signiertes Zertifikat installieren:
 +

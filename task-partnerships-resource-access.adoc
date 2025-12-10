@@ -27,7 +27,7 @@ Eine Partnerorganisation muss zunächst Mitglieder zur Partnerschaft hinzufügen
 
 Sie können Rollen für Mitglieder von Partnerorganisationen auf dieselbe Weise verwalten wie für Ihre eigenen.  Allerdings stehen Partnerschaftsbenutzern nicht alle Rollen zur Verfügung.  Insbesondere können Sie Partnerbenutzern keine Rolle zuweisen, die Softwareupdates zulässt.  Das Aktualisieren der ONTAP -Software erfordert im Allgemeinen direkten Netzwerkzugriff.
 
-Sie können Partnerbenutzern die folgenden Rollen zuweisen:
+Sie können Partnerbenutzern folgende Rollen zuweisen:
 
 * link:reference-iam-platform-roles.html#organization-admin-roles["Organisationsadministrator"]
 * link:reference-iam-platform-roles.html#organization-admin-roles["Ordner- oder Projektadministrator"]
@@ -37,16 +37,12 @@ Sie können Partnerbenutzern die folgenden Rollen zuweisen:
 * link:reference-iam-backup-rec-roles.html["Backup-Viewer"]
 * link:reference-iam-backup-rec-roles.html["Administrator wiederherstellen"]
 * link:reference-iam-backup-rec-roles.html["Klonadministrator"]
-* link:reference-iam-predefined-roles.html["Datenklassifizierungs-Viewer"]
-* link:reference-iam-disaster-rec-roles.html["Disaster Recovery-Administrator"]
-* link:reference-iam-disaster-rec-roles.html["Disaster Recovery-Failover-Administrator"]
-* link:reference-iam-disaster-rec-roles.html["Disaster Recovery-Anwendungsadministrator"]
+* link:reference-iam-disaster-rec-roles.html["Notfallwiederherstellungsadministrator"]
+* link:reference-iam-disaster-rec-roles.html["Administrator für Notfallwiederherstellungs-Failover"]
+* link:reference-iam-disaster-rec-roles.html["Administrator der Notfallwiederherstellungsanwendung"]
 * link:reference-iam-disaster-rec-roles.html["Disaster Recovery-Viewer"]
 * link:reference-iam-storage-roles.html["Betriebsunterstützungsanalyst"]
-* link:reference-iam-ransomware-roles.html["Ransomware-Resilienz-Administrator"]
-* link:reference-iam-ransomware-roles.html["Ransomware Resilience-Viewer"]
-* link:reference-iam-ransomware-roles.html#user-behavior-roles["Ransomware Resilience-Benutzerverhaltensadministrator"]
-* link:reference-iam-ransomware-roles.html#user-behavior-roles["Ransomware Resilience-Benutzerverhaltensanzeige"]
+* link:reference-iam-predefined-roles.html["Klassifizierungsanzeige"]
 
 
 link:reference-iam-predefined-roles.html["Erfahren Sie mehr über vordefinierte Rollen"]

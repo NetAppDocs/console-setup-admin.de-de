@@ -14,10 +14,10 @@ Es liegt in Ihrer Verantwortung, die benutzerdefinierte Rolle zu aktualisieren, 
 .. Laden Sie die YAML-Datei hoch, die die erforderlichen Berechtigungen enthält.
 .. Erstellen Sie eine benutzerdefinierte Rolle mithilfe der `gcloud iam roles create` Befehl.
 +
-Das folgende Beispiel erstellt auf Projektebene eine Rolle mit dem Namen „Connector“:
+Das folgende Beispiel erstellt eine Rolle mit dem Namen „Agent“ auf Projektebene:
 
 +
-`gcloud iam roles create connector --project=myproject --file=connector.yaml`
+`gcloud iam roles create connector --project=myproject --file=agent.yaml`
 
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud-Dokumente: Erstellen und Verwalten benutzerdefinierter Rollen"^]

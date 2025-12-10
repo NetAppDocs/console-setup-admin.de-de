@@ -47,7 +47,7 @@ Ein Host muss bestimmte Betriebssystem-, RAM- und Portanforderungen erfüllen, u
 
 Wenn Sie den Konsolenagenten vom AWS- oder Azure Marketplace bereitstellen, enthält das Image die erforderlichen Betriebssystem- und Softwarekomponenten.  Sie müssen lediglich einen Instanztyp auswählen, der die CPU- und RAM-Anforderungen erfüllt.
 
-Dedizierter Host:: Der Konsolenagent wird auf einem Host, der mit anderen Anwendungen gemeinsam genutzt wird, nicht unterstützt. Der Host muss ein dedizierter Host sein.  Der Host kann jede Architektur aufweisen, die die folgenden Größenanforderungen erfüllt:
+Dedizierter Host:: Der Konsolenagent benötigt einen dedizierten Host.  Jede Architektur wird unterstützt, sofern sie diese Größenanforderungen erfüllt:
 +
 --
 * CPU: 8 Kerne oder 8 vCPUs
@@ -60,7 +60,7 @@ Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzei
 
 ** `/var`: 40 GiB Speicherplatz müssen verfügbar sein
 +
-Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podman so konzipiert sind, dass sie die Container in diesem Verzeichnis erstellen.  Konkret werden sie Container in der `/var/lib/containers/storage` Verzeichnis.  Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+Der Konsolenagent benötigt diesen Speicherplatz. `/var` weil Podman oder Docker so konzipiert sind, dass die Container in diesem Verzeichnis erstellt werden.  Konkret werden sie Container erstellen in der `/var/lib/containers/storage` Verzeichnis und `/var/lib/docker` für Docker. Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
 
 
 
@@ -69,7 +69,7 @@ Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podm
 --
 AWS EC2-Instanztyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt t3.2xlarge.
 Azure-VM-Größe:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt Standard_D8s_v3.
-Google Cloud-Maschinentyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt n2-standard-8.
+Google Cloud-Maschinentyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt. NetApp empfiehlt n2-standard-8.
 +
 --
 Der Konsolenagent wird in Google Cloud auf einer VM-Instanz mit einem Betriebssystem unterstützt, das https://cloud.google.com/compute/shielded-vm/docs/shielded-vm["Funktionen von Shielded VM"^]
@@ -203,13 +203,13 @@ Abhängig von Ihrem Betriebssystem ist vor der Installation des Agenten entweder
 ====
 .Podman
 --
-Podman installieren und konfigurieren:
+Befolgen Sie diese Schritte, um Podman zu installieren und zu konfigurieren:
 
 * Aktivieren und starten Sie den Dienst podman.socket
 * Installieren Sie Python3
-* Installieren Sie das entsprechende podman-compose-Paket
+* Installieren Sie das Podman-Compose-Paket Version 1.0.6
 * Fügen Sie podman-compose zur Umgebungsvariablen PATH hinzu
-* Stellen Sie sicher, dass Ihre Podman-Version Netavark Aardvark DNS anstelle von CNI verwendet.
+* Wenn Sie Red Hat Enterprise Linux verwenden, überprüfen Sie, ob Ihre Podman-Version Netavark Aardvark DNS anstelle von CNI verwendet
 
 
 
@@ -225,7 +225,7 @@ rm /var/run/docker.sock
 ----
 . Installieren Sie Podman.
 +
-Podman kann aus den Red Hat Enterprise Linux-Repositories bezogen werden.
+Sie können Podman aus den offiziellen Red Hat Enterprise Linux-Repositories beziehen.
 
 +
 Für Red Hat Enterprise Linux 9:
@@ -261,32 +261,34 @@ sudo systemctl enable --now podman.socket
 ----
 sudo dnf install python3
 ----
-. Installieren Sie EPEL, um podman-compose zu erhalten.
-+
-.. Bei Verwendung von Red Hat Enterprise 9.1 bis 9.6:
+. Installieren Sie das EPEL-Repository-Paket, falls es auf Ihrem System noch nicht verfügbar ist.
+
+
+Dieser Schritt ist erforderlich, da podman-compose im Repository „Extra Packages for Enterprise Linux“ (EPEL) verfügbar ist.
+
+. Bei Verwendung von Red Hat Enterprise 9.1 bis 9.6:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 ----
-
-
-. Installieren Sie das Podman-Compose-Paket 1.5.0.
++
+.. Installieren Sie das Podman-Compose-Paket 1.5.0.
 +
 [source, cli]
 ----
 sudo dnf install podman-compose-1.5.0
 ----
-+
-.. Bei Verwendung von Red Hat Enterprise Linux 8:
+
+
+. Bei Verwendung von Red Hat Enterprise Linux 8:
 +
 [source, cli]
 ----
 sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ----
-
-
-. Installieren Sie das Podman-Compose-Paket 1.0.6.
++
+.. Installieren Sie das Podman-Compose-Paket 1.0.6.
 +
 [source, cli]
 ----
@@ -296,11 +298,10 @@ sudo dnf install podman-compose-1.0.6
 
 NOTE: Verwenden des `dnf install` Der Befehl erfüllt die Anforderung zum Hinzufügen von „podman-compose“ zur Umgebungsvariablen PATH.  Der Installationsbefehl fügt podman-compose zu /usr/bin hinzu, das bereits im `secure_path` Option auf dem Host.
 
-. Wenn Sie Red Hat Enterprise Linux 8 verwenden, überprüfen Sie, ob Ihre Podman-Version NetAvark mit Aardvark DNS anstelle von CNI verwendet.
-+
-.. Überprüfen Sie, ob Ihr Netzwerk-Backend auf CNI eingestellt ist, indem Sie den folgenden Befehl ausführen:
+.. Wenn Sie Red Hat Enterprise Linux 8 verwenden, überprüfen Sie, ob Ihre Podman-Version NetAvark mit Aardvark DNS anstelle von CNI verwendet.
 
 
+. Überprüfen Sie, ob Ihr Netzwerk-Backend auf CNI eingestellt ist, indem Sie den folgenden Befehl ausführen:
 
 
 [listing]
@@ -344,7 +345,7 @@ Befolgen Sie die Dokumentation von Docker, um Docker Engine zu installieren.
 .Schritte
 . https://docs.docker.com/engine/install/["Installationsanweisungen von Docker anzeigen"^]
 +
-Installieren Sie eine unterstützte Docker Engine-Version, indem Sie die folgenden Schritte befolgen. Installieren Sie nicht die neueste Version, da die Konsole diese nicht unterstützt.
+Befolgen Sie die Schritte, um eine unterstützte Docker Engine-Version zu installieren. Installieren Sie nicht die neueste Version, da diese von der Konsole nicht unterstützt wird.
 
 . Stellen Sie sicher, dass Docker aktiviert und ausgeführt wird.
 +
@@ -410,6 +411,16 @@ Zur Verwaltung von AWS-Ressourcen.  Der Endpunkt hängt von Ihrer AWS-Region ab.
 
 
  a| 
+Amazon FsX für NetApp ONTAP:
+
+* api.workloads.netapp.com
+
+ a| 
+Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und so FSx for ONTAP basierte Workloads zu verwalten und zu betreiben.
+
+
+
+ a| 
 *Azure-Umgebungen*
 
 
@@ -441,7 +452,7 @@ Zum Verwalten von Ressourcen in Azure China-Regionen.
 
 
  a| 
-\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://www.googleapis.com/deploymentmanager/v2/projects
+\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \//https://config.googleapis.com/v1/projects
  a| 
 Zum Verwalten von Ressourcen in Google Cloud.
 
@@ -821,12 +832,12 @@ Erstellen Sie eine Rolle und wenden Sie sie auf ein Dienstkonto an, das Sie für
 .. Laden Sie die YAML-Datei hoch, die die erforderlichen Berechtigungen für den Konsolenagenten enthält.
 .. Erstellen Sie eine benutzerdefinierte Rolle mithilfe der `gcloud iam roles create` Befehl.
 +
-Das folgende Beispiel erstellt auf Projektebene eine Rolle mit dem Namen „Connector“:
+Das folgende Beispiel erstellt eine Rolle mit dem Namen „Agent“ auf Projektebene:
 
 +
 [source, gcloud]
 ----
-gcloud iam roles create connector --project=myproject --file=connector.yaml
+gcloud iam roles create agent --project=myproject --file=agent.yaml
 ----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud-Dokumente: Erstellen und Verwalten benutzerdefinierter Rollen"^]
@@ -846,9 +857,6 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 
 
-.Ergebnis
-Sie verfügen jetzt über ein Dienstkonto, das Sie der VM-Instanz des Konsolenagenten zuweisen können.
-
 --
 ====
 
@@ -860,6 +868,7 @@ Für die Bereitstellung von Cloud Volumes ONTAP in Google Cloud sind mehrere API
 .Schritt
 . https://cloud.google.com/apis/docs/getting-started#enabling_apis["Aktivieren Sie die folgenden Google Cloud APIs in Ihrem Projekt"^]
 +
+** Cloud Infrastructure Manager API
 ** Cloud Deployment Manager V2 API
 ** Cloud Logging API
 ** Cloud Resource Manager-API
