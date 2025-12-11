@@ -105,9 +105,6 @@ Podman Version 5.4.0 mit podman-compose 1.5.0.
  a| 
 Unterstützt im Durchsetzungsmodus oder im Permissivmodus
 
-* Die Verwaltung von Cloud Volumes ONTAP -Systemen wird NICHT von Agenten unterstützt, auf deren Betriebssystem SELinux aktiviert ist.
-
-
 
 
  a| 
@@ -126,9 +123,6 @@ Podman Version 4.9.4 mit podman-compose 1.5.0.
  a| 
 Unterstützt im Durchsetzungsmodus oder im Permissivmodus
 
-* Die Verwaltung von Cloud Volumes ONTAP -Systemen wird NICHT von Agenten unterstützt, auf deren Betriebssystem SELinux aktiviert ist.
-
-
 
 
  a| 
@@ -146,9 +140,6 @@ Podman Version 4.6.1 oder 4.9.4 mit podman-compose 1.0.6.
 <<podman-configuration,Podman-Konfigurationsanforderungen anzeigen>> .
  a| 
 Unterstützt im Durchsetzungsmodus oder im Permissivmodus
-
-* Die Verwaltung von Cloud Volumes ONTAP -Systemen wird NICHT von Agenten unterstützt, auf deren Betriebssystem SELinux aktiviert ist.
-
 
 
 
