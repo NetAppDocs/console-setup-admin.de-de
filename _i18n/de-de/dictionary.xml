@@ -1293,7 +1293,6 @@
   <block id="320a91e2547bc28be93b76779dc849b4" category="paragraph">Die von Ihnen gewählte Installationsoption wirkt sich darauf aus, wie Sie sich auf die Installation vorbereiten.  Dazu gehört, wie Sie dem Konsolen-Agenten die erforderlichen Berechtigungen erteilen, die er zum Authentifizieren und Verwalten von Ressourcen in Azure benötigt.</block>
   <block id="011286419a3e5b900c9f64647edebdf7" category="summary">Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console .</block>
   <block id="89facd2099770d471c8de70fdb5d0651" category="doc">Installationsoptionen für den Konsolenagenten in Google Cloud</block>
-  <block id="0e60cc3f489de1661d16a80c2219b147" category="paragraph">Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console .  ---</block>
   <block id="1a208b984fe61bb9d1e4e6b026e30354" category="list-text"><block ref="84693cca73c9981e6b563eb4572174e7" category="inline-link-macro-rx"></block>(Dies ist die Standardoption)</block>
   <block id="efbe29648b3d8def21619f8bba35784f" category="paragraph">Diese Aktion startet eine VM-Instanz, auf der Linux und die Konsolenagent-Software in einer VPC Ihrer Wahl ausgeführt werden.</block>
   <block id="f47b616e0890c8a8507745d52fc62533" category="inline-link-macro">Erstellen Sie den Konsolenagenten mithilfe der Google Platform</block>
@@ -5904,4 +5903,9 @@
   <block id="4c61619ce49044f354b1f5cc38707fd2" category="sidebar">AWS-Agentenberechtigungen und Sicherheitsregeln</block>
   <block id="20ec4216ad7aef42619add3b96b89c33" category="sidebar">Azure-Berechtigungen und erforderliche Sicherheitsregeln</block>
   <block id="347863a199ea8f4c7e1e9540d041ca12" category="sidebar">Google Cloud-Berechtigungen und erforderliche Firewall-Regeln</block>
+  <block id="772b95b1a689cd9ca0f7d8935114e25c" category="paragraph-title">Zusätzliche Google Cloud-Berechtigungen für Cloud Volumes ONTAP</block>
+  <block id="335ea2f40a7e49b48a24b0867a975d2b" category="paragraph">Zur Unterstützung der Cloud Volumes ONTAP -Verwaltung in Google Cloud benötigt der Console-Agent nun eine zusätzliche Berechtigung. Dem vom Console-Agenten verwendeten Dienstkonto wurde die folgende Berechtigung hinzugefügt: compute.forwardingRules.update</block>
+  <block id="b4c9682d1423fe286221a4951d5900b8" category="paragraph"><block ref="b4c9682d1423fe286221a4951d5900b8" category="inline-link-macro-rx"></block></block>
+  <block id="b18fad63d8ccb120bf7c88b5cde19431" category="cell">compute.forwardingRules.update</block>
+  <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">Bestehende Weiterleitungsregeln für das Verkehrsmanagement aktualisieren.</block>
 </blocks>

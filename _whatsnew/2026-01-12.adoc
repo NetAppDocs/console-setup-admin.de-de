@@ -15,6 +15,11 @@ Sie können jetzt die Netzwerkverbindungen verbundener Console-Agenten direkt ü
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["Erfahren Sie, wie Sie Konfigurationsprüfungen auf Console-Agenten durchführen."]
 
+.Zusätzliche Google Cloud-Berechtigungen für Cloud Volumes ONTAP
+Zur Unterstützung der Cloud Volumes ONTAP -Verwaltung in Google Cloud benötigt der Console-Agent nun eine zusätzliche Berechtigung. Dem vom Console-Agenten verwendeten Dienstkonto wurde die folgende Berechtigung hinzugefügt: compute.forwardingRules.update
+
+link:https://docs.netapp.com/us-en/console-setup-admin/reference-permissions-gcp.html#gcp-permissions-change-log["Das Änderungsprotokoll der Berechtigungen ansehen."]
+
 
 
 === NetApp Console
