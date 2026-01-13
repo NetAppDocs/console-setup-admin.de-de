@@ -4,7 +4,7 @@ permalink: task-iam-manage-roles.html
 keywords: projects, access, resources, user roles, iam, identity and access management, folder, organization, permissions, roles, members, access roles 
 summary: In der NetApp Console können Sie Benutzern Rollen zuweisen, je nachdem, was sie tun müssen und wo. 
 ---
-= Verwenden Sie Rollen, um den Benutzerzugriff auf NetApp Console -Ressourcen zu verwalten
+= Mitgliederzugriffe in der NetApp Console verwalten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,28 +14,88 @@ summary: In der NetApp Console können Sie Benutzern Rollen zuweisen, je nachdem
 
 
 [role="lead"]
-Innerhalb der Konsole können Sie Benutzern Rollen zuweisen, je nachdem, was sie tun müssen und wo.
+Verwalten Sie den Mitgliederzugriff in Ihrer Console-Organisation. Weisen Sie Rollen zu, um Berechtigungen festzulegen. Mitglieder werden entfernt, wenn sie das Unternehmen verlassen.
 
-Benutzer mit der Rolle *Organisationsadministrator* oder *Ordner- oder Projektadministrator* sind dafür verantwortlich, anderen Benutzern Rollen zuzuweisen. Sie können Zugriffsrollen auf Projekt- oder Ordnerbasis zuweisen. Zugriffsrollen nach Projekt oder Ordner zuweisen.  Weisen Sie beispielsweise einem Benutzer für ein Projekt die Administratorrolle „Ransomware Resilience“ und für ein anderes Projekt die Administratorrolle „SnapCenter“ zu.  Um einem Benutzer die Administratorrolle „Ransomware Resilience“ für alle Projekte in einem Ordner zuzuweisen, weisen Sie die Rolle auf Ordnerebene zu.
+.Erforderliche Zugriffsrollen
+Super-Admin, Organisations-Admin oder Ordner- bzw. Projekt-Admin (für die von ihnen verwalteten Ordner und Projekte). Link:reference-iam-predefined-roles.html[Erfahren Sie mehr über Zugriffsrollen].
 
-Verwenden Sie Zugriffsrollen, um den Zugriff auf Speicherressourcen basierend auf den spezifischen Aufgaben zuzuweisen, die Benutzer ausführen müssen. Wenn ein Benutzer beispielsweise mit Ransomware Resilience interagieren muss, muss ihm eine Zugriffsrolle zugewiesen werden, die entweder Anzeige- oder Administratorberechtigungen für Ransomware Resilience für das Projekt umfasst, für das die Zugriffsrolle gewährt wird.
-
-Weisen Sie Rollen entsprechend Ihrer IAM-Strategie zu, um die Sicherheit zu verbessern.  IAM-Rollen beschränken den Benutzerzugriff auf das Notwendigste.
+Sie können Zugriffsrollen projekt- oder ordnerbasiert zuweisen. Weisen Sie beispielsweise einem Benutzer eine Rolle für zwei bestimmte Projekte zu oder weisen Sie die Rolle auf Ordnerebene zu, um einem Benutzer die Administratorrolle für Ransomware-Resilienz für alle Projekte in einem Ordner zu geben.
 
 
-NOTE: Denken Sie daran, dass Sie keinen direkten Zugriff auf Ressourcen gewähren können.  Weisen Sie den Projekten zunächst Ressourcen zu.  Erwägen Sie die Einrichtung Ihrer Ressourcenhierarchie, bevor Sie Benutzern Zugriff zuweisen.link:task-iam-manage-folders-projects.html["Erfahren Sie, wie Sie Ihre Ressourcen mit Ordnern und Projekten organisieren."]
+NOTE: Fügen Sie Ihre Ordner und Projekte hinzu, bevor Sie Benutzern Zugriffsrechte zuweisen. link:task-iam-manage-folders-projects.html["Erfahren Sie, wie Sie Ordner und Projekte hinzufügen."]
+
+
+
+== Verstehen Sie, wie der Zugriff in der NetApp Console gewährt wird.
+
+Die NetApp Console verwendet ein rollenbasiertes Zugriffskontrollmodell (RBAC) zur Verwaltung von Benutzerberechtigungen. Sie können Mitgliedern vordefinierte Rollen einzeln oder über föderierte Gruppen zuweisen. Sie können Dienstkonten und Verbundgruppen Rollen hinzufügen und zuweisen. Jede Rolle definiert, welche Aktionen ein Mitglied an den zugehörigen Ressourcen durchführen kann.
+
+Beachten Sie Folgendes bezüglich der Zugriffsgewährung in der NetApp Console:
+
+* Alle Benutzer müssen sich zunächst bei der NetApp Console registrieren, bevor ihnen Zugriff auf Ressourcen gewährt werden kann.
+* Sie müssen jedem Benutzer in der Konsole explizit eine Rolle zuweisen, bevor er auf Ressourcen zugreifen kann, selbst wenn er Mitglied einer Verbundgruppe ist, der eine Rolle zugewiesen wurde.
+* Sie können Dienstkonten direkt über die Konsole hinzufügen und ihnen Rollen zuweisen.
+
+
+
+
+=== Verwendung der Rollenvererbung
+
+Wenn Sie in der NetApp Console eine Rolle auf Organisations-, Ordner- oder Projektebene zuweisen, wird diese Rolle automatisch an alle Ressourcen innerhalb des ausgewählten Bereichs vererbt. Beispielsweise gelten Rollen auf Ordnerebene für alle darin enthaltenen Projekte, während Rollen auf Projektebene für alle Ressourcen innerhalb dieses Projekts gelten.
+
+
+
+== Organisationsmitglieder anzeigen
+
+Um zu verstehen, welche Ressourcen und Berechtigungen einem Mitglied zur Verfügung stehen, können Sie die dem Mitglied auf verschiedenen Ebenen der Ressourcenhierarchie Ihrer Organisation zugewiesenen Rollen anzeigen.link:task-iam-manage-roles.html["Erfahren Sie, wie Sie mithilfe von Rollen den Zugriff auf Konsolenressourcen steuern."^]
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Mitglieder* aus.
++
+In der Tabelle *Mitglieder* sind die Mitglieder Ihrer Organisation aufgelistet.
+
+. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
+
 
 
 
 == Einem Mitglied zugewiesene Rollen anzeigen
 
-Wenn Sie Ihrer Organisation ein Mitglied hinzufügen, werden Sie aufgefordert, ihm eine Rolle zuzuweisen. Sie können überprüfen, welche Rollen ihnen aktuell zugewiesen sind.
+Sie können überprüfen, welche Rollen ihnen aktuell zugewiesen sind.
 
 Wenn Sie die Rolle „Ordner- oder Projektadministrator“ haben, werden auf der Seite alle Mitglieder der Organisation angezeigt.  Sie können jedoch nur die Mitgliedsberechtigungen für die Ordner und Projekte anzeigen und verwalten, für die Sie über Berechtigungen verfügen. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Aktionen, die ein Ordner- oder Projektadministrator ausführen kann."] .
 
-. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
+. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle und wählen Sie es aus. image:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
 . Erweitern Sie in der Tabelle die jeweilige Zeile für die Organisation, den Ordner oder das Projekt, in dem Sie die zugewiesene Rolle des Mitglieds anzeigen möchten, und wählen Sie in der Spalte *Rolle* die Option *Anzeigen* aus.
 
+
+
+
+== Anzeigen von Mitgliedern, die einem Ordner oder Projekt zugeordnet sind
+
+Sie können die Mitglieder anzeigen, die Zugriff auf einen bestimmten Ordner oder ein bestimmtes Projekt haben.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Organisation* aus.
+. Navigieren Sie auf der Seite *Organisation* zu einem Projekt oder Ordner in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Ordner bearbeiten* oder *Projekt bearbeiten*.
++
+** Wählen Sie *Zugriff* aus, um die Mitglieder anzuzeigen, die Zugriff auf den Ordner oder das Projekt haben.
++
+image:screenshot-iam-member-access.png["Ein Screenshot der Seite „Projekt bearbeiten“, der die Mitglieder zeigt, die Zugriff auf das Projekt haben."]
+
+
+
+
+
+
+
+== Mitgliederzugriff zuweisen oder ändern
+
+Nach der Registrierung eines Benutzers bei der NetApp Console können Sie ihn Ihrer Organisation hinzufügen und ihm eine Rolle zuweisen, um ihm Zugriff auf Ressourcen zu gewähren. link:task-iam-manage-members-permissions.html#add-members["Erfahren Sie, wie Sie Mitglieder zu Ihrer Organisation hinzufügen."^]
+
+Sie können die Zugriffsrechte eines Mitglieds anpassen, indem Sie nach Bedarf Rollen hinzufügen oder entfernen.
 
 
 
@@ -45,15 +105,17 @@ Normalerweise weisen Sie eine Rolle zu, wenn Sie ein Mitglied zu Ihrer Organisat
 
 Sie können einem Benutzer eine Zugriffsrolle für Ihre Organisation, Ihren Ordner oder Ihr Projekt zuweisen.
 
-Mitglieder können innerhalb desselben Projekts und in verschiedenen Projekten mehrere Rollen haben. Beispielsweise können kleinere Organisationen alle verfügbaren Zugriffsrollen demselben Benutzer zuweisen, während größere Organisationen Benutzer mit spezialisierteren Aufgaben betrauen. Alternativ können Sie einem Benutzer auch die Administratorrolle „Ransomware Resilience“ für eine Organisation zuweisen.  In diesem Beispiel könnte der Benutzer Ransomware-Resilience-Aufgaben für alle Projekte innerhalb Ihrer Organisation ausführen.
+Mitglieder können innerhalb desselben Projekts und in verschiedenen Projekten mehrere Rollen innehaben. Kleinere Organisationen weisen beispielsweise alle verfügbaren Zugriffsrollen demselben Benutzer zu, während größere Organisationen ihre Benutzer mit spezialisierteren Aufgaben betrauen. Alternativ könnten Sie auch einem Benutzer die Administratorrolle für Ransomware-Resilienz auf Organisationsebene zuweisen. In diesem Beispiel könnte der Benutzer Ransomware-Resilienzmaßnahmen für alle Projekte innerhalb seiner Organisation durchführen.
 
 Ihre Zugriffsrollenstrategie sollte mit der Art und Weise übereinstimmen, wie Sie Ihre NetApp -Ressourcen organisiert haben.
 
 
-TIP: Einem Mitglied, dem die Rolle „Organisationsadministrator“ zugewiesen ist, können keine weiteren Rollen zugewiesen werden.  Sie verfügen bereits über Berechtigungen für die gesamte Organisation.  Einem Mitglied mit der Ordner- oder Projektrolle können innerhalb des Ordners oder Projekts, in dem es diese Rolle bereits hat, keine anderen Rollen zugewiesen werden.  Beide Rollen bieten Zugriff auf alle Dienste im ihnen zugewiesenen Umfang.
+TIP: Ein Mitglied, dem die Rolle des Organisationsadministrators zugewiesen ist, kann keine weiteren Rollen erhalten. Sie verfügen bereits über Berechtigungen für die gesamte Organisation. Einem Mitglied mit der Rolle „Ordner- oder Projektadministrator“ können innerhalb des Ordners oder Projekts, in dem es diese Rolle bereits innehat, keine weiteren Rollen zugewiesen werden. Beide Rollen gewähren Zugriff auf alle Dienste innerhalb des ihnen zugewiesenen Aufgabenbereichs.
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Mitglieder* aus.
+. Wählen Sie einen der Mitglieder-Tabs aus: *Benutzer*, *Dienstkonten* oder *Verbundgruppen*.
 . Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben dem Mitglied, dem Sie eine Rolle zuweisen möchten, und wählen Sie *Rolle hinzufügen* aus.
 . Um eine Rolle hinzuzufügen, führen Sie die Schritte im Dialogfeld aus:
 +
@@ -80,12 +142,38 @@ NOTE: Benutzern muss mindestens eine Rolle zugewiesen sein.  Sie können einem B
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Mitglieder* aus.
+. Wählen Sie einen der Mitglieder-Tabs aus: *Benutzer*, *Dienstkonten* oder *Verbundgruppen*.
 . Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
 . Erweitern Sie in der Tabelle die jeweilige Zeile für die Organisation, den Ordner oder das Projekt, in dem Sie die zugewiesene Rolle des Mitglieds ändern möchten, und wählen Sie in der Spalte *Rolle* *Anzeigen* aus, um die diesem Mitglied zugewiesenen Rollen anzuzeigen.
 . Sie können eine vorhandene Rolle für ein Mitglied ändern oder eine Rolle entfernen.
 +
 .. Um die Rolle eines Mitglieds zu ändern, wählen Sie *Ändern* neben der Rolle, die Sie ändern möchten.  Sie können eine Rolle nur in eine Rolle innerhalb derselben Rollenkategorie ändern.  Sie können beispielsweise von einer Datendienstrolle zu einer anderen wechseln.  Bestätigen Sie die Änderung.
-.. Um die Rolle eines Mitglieds aufzuheben, wählen Sieimage:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um dem Mitglied die jeweilige Rolle zu entziehen.  Sie werden aufgefordert, die Entfernung zu bestätigen.
+.. Um die Rolle eines Mitglieds aufzuheben, wählen Sie aus image:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um die jeweilige Rolle vom Mitglied zu entfernen. Sie werden aufgefordert, die Entfernung zu bestätigen.
 
 
+
+
+
+
+== Entfernen eines Mitglieds aus Ihrer Organisation
+
+Entfernen Sie ein Mitglied, wenn es Ihre Organisation verlässt.
+
+Wenn Sie ein Mitglied entfernen, entzieht das System ihm die Konsolenberechtigungen, behält aber seine Konsolen- und NetApp -Support-Site-Konten bei.
+
+[NOTE]
+====
+.Verbandsmitglieder
+* Verbundbenutzer verlieren automatisch den Zugriff auf die NetApp Console, wenn sie von Ihrem Identitätsanbieter entfernt werden. Sie sollten sie aber trotzdem aus Ihrer Console-Organisation entfernen, um Ihre Mitgliederliste aktuell zu halten.
+* Wenn Sie einen Benutzer aus einer Verbundgruppe in Ihrem Identitätsanbieter entfernen, verliert er den mit dieser Gruppe verbundenen Konsolenzugriff. Sie behalten jedoch weiterhin alle Zugriffsrechte, die mit einer ihnen in der Konsole explizit zugewiesenen Rolle verbunden sind.
+
+
+====
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Mitglieder* aus.
+. Wählen Sie einen der Mitglieder-Tabs aus: *Benutzer*, *Dienstkonten* oder *Verbundgruppen*.
+. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] Wählen Sie dann *Benutzer löschen*.
+. Bestätigen Sie, dass Sie das Mitglied aus Ihrer Organisation entfernen möchten.
 

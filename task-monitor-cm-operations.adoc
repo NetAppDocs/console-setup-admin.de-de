@@ -44,9 +44,11 @@ Die Tabelle hebt die Funktionen der Audit-Seite und des Benachrichtigungscenters
 
 == Überwachen Sie die Benutzeraktivität auf der Seite „Überwachen“.
 
+Verwenden Sie die Audit-Seite, um zu ermitteln, wer eine Aktion ausgeführt hat oder welchen Status sie hat.
+
 Auf der Seite „Audit“ werden die Aktionen angezeigt, die Benutzer zur Verwaltung Ihrer Organisation oder Ihres Kontos ausgeführt haben.  Dazu gehören Verwaltungsaktionen wie das Zuordnen von Benutzern, das Erstellen von Systemen, das Erstellen von Agenten und mehr.
 
-Verwenden Sie die Audit-Seite, um zu ermitteln, wer eine Aktion ausgeführt hat oder welchen Status sie hat.
+Sie können auch überprüfen, wer ein Mitglied zu einer Organisation hinzugefügt hat oder ob ein Projekt erfolgreich gelöscht wurde.
 
 .Schritte
 . Wählen Sie *Administration > Audit*.

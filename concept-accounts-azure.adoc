@@ -44,7 +44,7 @@ Die der Konsolen-Agent-VM zugewiesene, systemseitig verwaltete Identität ist de
 
 Wenn Sie andere Azure-Anmeldeinformationen mit der Konsole verwenden möchten, müssen Sie die erforderlichen Berechtigungen erteilen, indem Sielink:task-adding-azure-accounts.html["Erstellen und Einrichten eines Dienstprinzipals in Microsoft Entra ID"] für jedes Azure-Konto.  Das folgende Bild zeigt zwei weitere Konten, die jeweils mit einem Dienstprinzipal und einer benutzerdefinierten Rolle eingerichtet sind, die Berechtigungen bereitstellt:
 
-image:diagram_permissions_multiple_azure.png["Ein konzeptionelles Bild, das das erste Azure-Konto zeigt, das Berechtigungen über eine benutzerdefinierte Rolle und eine verwaltete Identität erhält, sowie zwei zusätzliche Konten, die Berechtigungen über eine benutzerdefinierte Rolle und einen Dienstprinzipal erhalten."]
+image:diagram_permissions_multiple_azure.png["Eine konzeptionelle Abbildung, die das ursprüngliche Azure-Konto zeigt, das Berechtigungen über eine benutzerdefinierte Rolle und eine verwaltete Identität erhält, sowie zwei zusätzliche Konten, die Berechtigungen über eine benutzerdefinierte Rolle und einen Dienstprinzipal erhalten."]
 
 Sie würden dannlink:task-adding-azure-accounts.html#add-credentials-azure["Fügen Sie die Kontoanmeldeinformationen zur Konsole hinzu"] indem Sie Details zum AD-Dienstprinzipal angeben.
 

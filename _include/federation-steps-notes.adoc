@@ -1,0 +1,41 @@
+= 
+:allow-uri-read: 
+
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Föderation* aus, um die Seite *Föderationen* anzuzeigen.
+. Wählen Sie *Neue Föderation konfigurieren*.
+
+
+. Wählen Sie *Weiter*.
+. Wählen Sie *Verbindung testen*, um Ihre Verbindung zu testen. Sie werden zu einer Anmeldeseite für Ihren IdP-Server weitergeleitet. Melden Sie sich mit Ihren IdP-Zugangsdaten an. Nach dem Einloggen müssen Sie zur Konsole zurückkehren, um die Verbindung zu aktivieren.
++
+
+NOTE: Wenn Sie die Konsole im eingeschränkten Modus verwenden, kopieren Sie die URL entweder in ein Inkognito-Browserfenster oder in einen separaten Browser, um sich bei Ihrem Identitätsanbieter anzumelden.
+
+. Wählen Sie in der Konsole *Weiter*, um die Zusammenfassungsseite anzuzeigen.
+. Benachrichtigungen einrichten.
++
+Sie haben die Wahl zwischen sieben Tagen oder 30 Tagen.  Das System versendet E-Mail-Benachrichtigungen über das Ablaufdatum und zeigt diese in der Konsole allen Benutzern mit den folgenden Rollen an: Super-Admin, Organisations-Admin, Verbund-Admin und Verbund-Viewer.
+
+. Überprüfen Sie die Föderationsdetails und wählen Sie dann *Föderation aktivieren*.
+. Wählen Sie *Fertig*, um den Vorgang abzuschließen.
+
+
+Nach der Aktivierung der Föderation melden sich die Benutzer mit ihren Unternehmensanmeldeinformationen bei der NetApp Console an.
+
+. Geben Sie Ihre Domänendetails ein:
++
+.. Wählen Sie, ob Sie eine verifizierte Domäne oder Ihre E-Mail-Domäne verwenden möchten.  Die E-Mail-Domäne ist die Domäne, die mit dem Konto verknüpft ist, mit dem Sie angemeldet sind.
+.. Geben Sie den Namen der Föderation ein, die Sie konfigurieren.
+.. Wenn Sie eine verifizierte Domäne auswählen, wählen Sie die Domäne aus der Liste aus.
+
+
+. Wählen Sie *Weiter*.
+
+
+.Bevor Sie beginnen
+* Es ist ein IdP-Konto mit Administratorrechten erforderlich.  Koordinieren Sie die Durchführung der Schritte mit Ihrem IdP-Administrator.
+* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Console"] Thema.
+

@@ -16,7 +16,7 @@ summary: Um mit der Identitäts- und Zugriffsverwaltung in der NetApp Console zu
 [role="lead"]
 Wenn Sie sich für die NetApp Console anmelden, werden Sie aufgefordert, eine neue Organisation zu erstellen.  Die Organisation umfasst ein Mitglied (einen Organisationsadministrator) und ein Standardprojekt.  Um die Identitäts- und Zugriffsverwaltung (IAM) so einzurichten, dass sie Ihren Geschäftsanforderungen entspricht, müssen Sie die Hierarchie Ihrer Organisation anpassen, zusätzliche Mitglieder hinzufügen, Ressourcen hinzufügen oder ermitteln und diese Ressourcen in Ihrer Hierarchie verknüpfen.
 
-Sie müssen über die Berechtigung *Organisationsadministrator* verfügen, um die Identität und den Zugriff für Ihre gesamte Organisation zu verwalten.  Wenn Sie über die Berechtigung *Ordner- oder Projektadministrator* verfügen, können Sie nur die Ordner und Projekte verwalten, für die Sie über die Berechtigung verfügen.
+Sie benötigen die Berechtigungen *Organisationsadministrator* oder *Superadministrator*, um Identität und Zugriff für Ihre Organisation zu verwalten. Mit *Ordner- oder Projektadministratorberechtigungen* können Sie nur die Ordner und Projekte verwalten, auf die Sie Zugriff haben.
 
 Befolgen Sie diese Schritte, um eine neue Organisation einzurichten.  Die Reihenfolge kann je nach den Anforderungen Ihrer Organisation variieren.
 
@@ -29,7 +29,7 @@ link:task-iam-manage-folders-projects.html["Erfahren Sie, wie Sie Ihre Ressource
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Ordnen Sie Mitglieder Ihrer Organisation zu
 [role="quick-margin-para"]
-Verknüpfen Sie Benutzerkonten mit Ihrer Organisation und weisen Sie Berechtigungen zu.  Sie haben auch die Möglichkeit, Ihrer Organisation Dienstkonten hinzuzufügen.
+Nachdem sich Benutzer bei NetApp Console registriert haben, müssen Sie sie explizit Ihrer Console-Organisation hinzufügen. Sie haben außerdem die Möglichkeit, Ihrer Organisation Servicekonten hinzuzufügen.
 
 [role="quick-margin-para"]
 link:task-iam-manage-members-permissions.html["Erfahren Sie, wie Sie Mitglieder und ihre Berechtigungen verwalten"] .

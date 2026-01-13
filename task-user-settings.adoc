@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-user-settings.html 
-keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode 
-summary: Innerhalb der Konsole verfügt jeder Benutzer über ein Profil, das Informationen über den Benutzer und seine Einstellungen enthält. Sie können Ihre Profileinstellungen anzeigen und bearbeiten. 
+keywords: user profile, mfa, change password, role, login, multi-factor, authentication, dark mode, read-only mode, contact admin 
+summary: 'Sie können Ihr Konsolenprofil ändern, einschließlich der Änderung Ihres Kennworts, die Aktivierung der Multi-Faktor-Authentifizierung (MFA) und sehen, wer Ihr Konsolenadministrator ist.' 
 ---
 = Verwalten Sie Ihre NetApp Console
 :hardbreaks:
@@ -22,7 +22,7 @@ Innerhalb der Konsole verfügt jeder Benutzer über ein Profil, das Informatione
 
 == Ändern Sie Ihren Anzeigenamen
 
-Sie können den Anzeigenamen Ihrer Konsole ändern, der zu Ihrer Identifizierung dient und für andere Benutzer sichtbar ist. Ihr Anzeigename ist nicht identisch mit Ihrem Benutzernamen oder Ihrer E-Mail-Adresse und kann nicht geändert werden.
+Sie können Ihren Konsolen-Anzeigenamen ändern, der Sie für andere Benutzer identifiziert. Sie können Ihren Benutzernamen oder Ihre E-Mail-Adresse nicht ändern.
 
 .Schritte
 . Wählen Sie das Profilsymbol in der oberen rechten Ecke der Konsole aus, um das Bedienfeld „Benutzereinstellungen“ anzuzeigen.
@@ -32,11 +32,29 @@ Sie können den Anzeigenamen Ihrer Konsole ändern, der zu Ihrer Identifizierung
 
 
 
+== Erhöhen Sie Ihre Rolle im Nur-Lese-Modus
+
+In einigen Fällen kann Ihr Organisationsadministrator Ihre Organisation in den Nur-Lese-Modus versetzen. Wenn Sie über Administratorrechte verfügen, müssen Sie Ihre Berechtigungen erweitern, um Änderungen vornehmen zu können. Dadurch wird sichergestellt, dass Änderungen beabsichtigt und autorisiert sind.
+
+Nach der Erhöhung Ihrer Rolle können Sie bis zum Ablauf Ihrer aktuellen Sitzung Änderungen in der Konsole vornehmen.
+
+Wenn Sie fertig sind, melden Sie sich entweder von der Konsole ab oder bewegen Sie den Schieberegler zurück, um in den Nur-Lese-Modus zurückzukehren. Das System entfernt Ihre erhöhten Berechtigungen, sobald Ihre Sitzung abläuft.
+
+.Schritte
+. Wählen Sie das Profilsymbol in der oberen rechten Ecke der Konsole aus, um das Bedienfeld „Benutzereinstellungen“ anzuzeigen.
+. Um den *Schreibgeschützten Modus* zu aktivieren, bewegen Sie den Schieberegler in die Position *Erhöht* und bestätigen Sie die Änderungen.
++
+image:screenshot-user-elevated.png["Ein Screenshot, der den Schieberegler für den Nur-Lese-Modus in der Position „Erhöht“ zeigt."]
+
+
+
+
+
 == Konfigurieren der mehrstufigen Authentifizierung
 
 Konfigurieren Sie die Multi-Faktor-Authentifizierung (MFA), um die Sicherheit durch die Anforderung einer zweiten Überprüfungsmethode zu verbessern.
 
-Benutzer, die Single Sign-On mit einem externen Identitätsanbieter oder der NetApp -Support-Site verwenden, können MFA nicht aktivieren.  Wenn einer dieser Punkte auf Sie zutrifft, wird die Option zum Aktivieren von MFA in Ihren Profileinstellungen nicht angezeigt.
+Benutzer, die Single Sign-On mit einem externen Identitätsanbieter oder der NetApp Support Site verwenden, können MFA nicht aktivieren. Wenn eine dieser beiden Bedingungen auf Sie zutrifft, wird Ihnen die Option zum Aktivieren der Multi-Faktor-Authentifizierung in Ihren Profileinstellungen nicht angezeigt.
 
 Aktivieren Sie MFA nicht, wenn Ihr Benutzerkonto für den API-Zugriff verwendet wird.  Die Multi-Faktor-Authentifizierung stoppt den API-Zugriff, wenn sie für ein Benutzerkonto aktiviert ist.  Verwenden Sie Dienstkonten für den gesamten API-Zugriff.
 
@@ -75,7 +93,7 @@ Sie können Wiederherstellungscodes nur einmal verwenden.  Wenn Sie Ihr Konto ve
 
 == Löschen Sie Ihre MFA-Konfiguration
 
-Um die Verwendung der Multi-Faktor-Authentifizierung (MFA) für Ihre Anmeldung zu beenden, löschen Sie Ihre MFA-Konfiguration.  Dadurch entfällt die Notwendigkeit, beim Anmelden einen Einmalcode aus Ihrer Authentifizierungs-App einzugeben.
+Wenn Sie fertig sind, melden Sie sich entweder von der Konsole ab oder bewegen Sie den Schieberegler zurück, um in den Nur-Lese-Modus zurückzukehren. Das System entfernt Ihre erhöhten Berechtigungen, sobald Ihre Sitzung abläuft.
 
 
 NOTE: Wenn Sie nicht auf Ihre Authentifizierungs-App oder Ihren Wiederherstellungscode zugreifen können, müssen Sie sich an Ihren Organisationsadministrator wenden, um Ihre MFA-Konfiguration zurückzusetzen.

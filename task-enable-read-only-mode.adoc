@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-sign-up-saas.html 
+permalink: task-enable-read-only-mode.html 
 keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
 summary: Um mit der Konsole zu beginnen, müssen Sie sich zunächst mit Ihren NetApp Support Site-Zugangsdaten registrieren oder anmelden bzw. ein NetApp Console -Login erstellen. Wenn Sie der erste Benutzer Ihres Unternehmens sind, der sich anmeldet, erstellen Sie in der Konsole als Organisationsadministrator eine neue Organisation. Falls Ihr Unternehmen bereits über eine solche Organisation verfügt, können Sie sich registrieren oder anmelden, um darauf zuzugreifen. 
 ---
-= Registrieren oder bei der NetApp Console anmelden
+= Aktivieren Sie den Nur-Lese-Modus für eine NetApp Console Organisation
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,35 @@ summary: Um mit der Konsole zu beginnen, müssen Sie sich zunächst mit Ihren Ne
 
 
 [role="lead"]
-Um die Konsole zu nutzen, registrieren Sie sich oder melden Sie sich mit Ihren NetApp Support Site-Zugangsdaten an oder erstellen Sie ein NetApp Console Login. Wenn Sie sich als Erster aus Ihrem Unternehmen anmelden, erstellen Sie als Administrator eine neue Organisation. Falls Ihr Unternehmen bereits über eine Organisation verfügt, registrieren Sie sich oder melden Sie sich mit Ihren bestehenden NetApp Support Site-Zugangsdaten oder Ihrem unternehmensinternen Single Sign-On (SSO) an.
+Als Sicherheitsmaßnahme können Sie den Nur-Lese-Modus für Ihre NetApp Console Organisation aktivieren. Im Nur-Lese-Modus können Benutzer Ressourcen und Einstellungen einsehen, aber keine Änderungen vornehmen.
+
+Im Nur-Lese-Modus müssen Benutzer mit Administratorrechten ihre Berechtigungen manuell erhöhen, um Änderungen vornehmen zu können. Dadurch wird sichergestellt, dass die Änderungen beabsichtigt sind.
+
+.Erforderliche Zugriffsrollen
+Super-Admin oder Organisationsadministrator.
+
+
+
+== Aktivieren Sie den schreibgeschützten Modus für Ihre Konsolenorganisation.
+
+Aktivieren Sie den Nur-Lese-Modus, um Änderungen an Ihrer Konsolenorganisation einzuschränken. Alle Benutzer können weiterhin auf die Ressourcen zugreifen. Benutzer mit Administratorrechten können in der Konsole keine Aktionen durchführen, ohne ihre Berechtigungen manuell zu erhöhen.
+
+Wenn der Nur-Lese-Modus aktiviert ist, sehen die Benutzer ein Banner, das sie darüber informiert, dass sich die Organisation im Nur-Lese-Modus befindet. Benutzer müssen in die Benutzereinstellungen gehen, um ihre Rolle zu erhöhen.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie auf der Registerkarte *Organisationen* die Option *Organisationseinstellungen bearbeiten* für die Organisation aus, die Sie in den Nur-Lese-Modus versetzen möchten.
+. Im Abschnitt *Schreibgeschützter Modus* aktivieren Sie den schreibgeschützten Modus, indem Sie den Schalter in die Position *Ein* bewegen und anschließend *Speichern* auswählen.
++
+image:screenshot-read-only-slider.png["Ein Screenshot, der den Schalter für den Nur-Lese-Modus in der Position „Ein“ zeigt."]
+
+
 
 
 
 == Registrieren Sie sich als erster Organisationsadministrator für die NetApp Console.
 
-Falls Ihr Unternehmen noch keine NetApp Console -Organisation besitzt, registrieren Sie sich, um eine zu erstellen. Der erste Benutzer wird zum Organisationsadministrator und verwaltet Benutzerkonten und Berechtigungen. Sie können die Rollen aktualisieren und später weitere Administratoren hinzufügen.
+Falls Ihr Unternehmen noch keine NetApp Console -Organisation besitzt, registrieren Sie sich, um eine zu erstellen. Der erste Benutzer ist der Administrator und verwaltet Konten und Berechtigungen. Sie können Rollen aktualisieren und Administratoren später hinzufügen.
 
 .Schritte
 . Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Console"^]
@@ -46,10 +68,10 @@ Bitte bestätigen Sie Ihre E-Mail-Adresse, um die Anmeldung abzuschließen.
 . Wählen Sie *Los geht's*.
 
 
-Als erstmaliger Benutzer und Organisationsadministrator folgen Sie einem geführten Prozess, um Speicherressourcen hinzuzufügen, einen Konsolenagenten zu erstellen und vieles mehr. link:task-console-assistant.html["Erfahren Sie mehr über die Verwendung des Konsolenassistenten."^]
++ Als erstmaliger Administrator folgen Sie dem geführten Prozess, um Speicher hinzuzufügen, einen Konsolenagenten zu erstellen und vieles mehr. link:task-console-assistant.html["Erfahren Sie mehr über die Verwendung des Konsolenassistenten."]
 
 .Nächste Schritte
-Als Administrator sollten Sie, nachdem Sie die im Konsolenassistenten enthaltenen Schritte abgeschlossen haben, Ihre Identitäts- und Zugriffsstrategie planen, Benutzer zu Ihrer Organisation hinzufügen und Rollen zuweisen. link:task-iam-get-started.html["Erfahren Sie mehr über Identitäts- und Zugriffsmanagement für die NetApp Console."^]
+Als Administrator sollten Sie, nachdem Sie die im Konsolenassistenten enthaltenen Schritte abgeschlossen haben, Ihre Identitäts- und Zugriffsstrategie planen, Benutzer zu Ihrer Organisation hinzufügen und Rollen zuweisen. link:task-iam-get-started.html["Erfahren Sie mehr über Identitäts- und Zugriffsmanagement für die NetApp Console."]
 
 
 
@@ -77,7 +99,7 @@ Bitte bestätigen Sie Ihre E-Mail-Adresse, um die Anmeldung abzuschließen.
 
 
 . Nachdem Sie sich angemeldet haben, lesen und akzeptieren Sie bitte die Endbenutzer-Lizenzvereinbarung.
-. Wenn Sie vom System aufgefordert werden, eine Organisation zu erstellen, schließen Sie das Dialogfeld und informieren Sie einen Konsolenadministrator, damit dieser Sie Ihrer Konsolenorganisation hinzufügen und Ihnen Zugriff gewähren kann. link:task-user-settings.html#contact-admin["Erfahren Sie, wie Sie einen Organisationsadministrator kontaktieren können."^]
+. Wenn Sie vom System aufgefordert werden, eine Organisation zu erstellen, schließen Sie das Dialogfeld und informieren Sie einen Konsolenadministrator, damit dieser Sie Ihrer Konsolenorganisation hinzufügen und Ihnen Zugriff gewähren kann. link:task-user-settings.html#contact-admin["Erfahren Sie, wie Sie einen Organisationsadministrator kontaktieren können."]
 
 
 .Nächste Schritte

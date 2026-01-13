@@ -17,9 +17,6 @@ summary: Die Wartung des Betriebssystems auf dem Agent-Host liegt in Ihrer Veran
 Die Wartung des Betriebssystems auf dem Konsolenagent-Host liegt in Ihrer (der Verantwortung des Kunden).  Beispielsweise sollten Sie (der Kunde) Sicherheitsupdates auf das Betriebssystem auf dem Agent-Host anwenden, indem Sie die Standardverfahren Ihres Unternehmens zur Betriebssystemverteilung befolgen.
 
 
-TIP: Wenn Sie bereits einen Agenten haben, sollten Sie Folgendes beachten:link:reference-agent-operating-system-changes.html["Änderungen an unterstützten Linux-Betriebssystemen"] .
-
-
 
 == Betriebssystem-Patches und der Agent
 

@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-iam-manage-members-permissions.html 
-keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management 
+keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management, federated groups, SSO, access roles, add members, grant permissions 
 summary: Verwalten Sie die Mitglieder Ihrer Organisation, um Berechtigungen auf verschiedenen Ebenen der Ressourcenhierarchie Ihrer Organisation bereitzustellen. 
 ---
-= Fügen Sie der NetApp Console Mitglieder und Dienstkonten hinzu
+= Fügen Sie Benutzer zu einer NetApp Console Organisation hinzu
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,47 +14,49 @@ summary: Verwalten Sie die Mitglieder Ihrer Organisation, um Berechtigungen auf 
 
 
 [role="lead"]
-In der Konsole können Sie Ihrer Organisation Benutzer und Dienstkonten hinzufügen und ihnen eine oder mehrere Rollen in Ihrer Ressourcenhierarchie zuweisen.  Eine _Rolle_ enthält eine Reihe von Berechtigungen, die es einem Mitglied (Benutzer- oder Dienstkonto) ermöglichen, bestimmte Aktionen auf einer bestimmten Ebene der Ressourcenhierarchie auszuführen.
+Innerhalb der Konsole gewähren Sie Benutzern Zugriff auf Projekte oder Ordner entsprechend einer Zugriffsrolle. Eine Zugriffsrolle enthält eine Reihe von Berechtigungen, die es einem Mitglied (Benutzer oder Dienstkonto) ermöglichen, bestimmte Aktionen auf der zugewiesenen Ebene der Ressourcenhierarchie durchzuführen.
 
-Zum Verwalten von Benutzern und Berechtigungen benötigen Sie eine der folgenden Rollen:
+.Erforderliche Zugriffsrollen
+Super-Admin, Organisations-Admin oder Ordner- bzw. Projekt-Admin (für die von ihnen verwalteten Ordner und Projekte). link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"]Die
 
-* Organisationsadministrator
-+
-Benutzer mit dieser Rolle können alle Mitglieder verwalten
 
-* Ordner- oder Projektadministrator
-+
-Benutzer mit dieser Rolle können nur Mitglieder eines bestimmten Ordners oder Projekts verwalten.
 
-+
-_Ordner- oder Projektadministratoren_ können alle Mitglieder auf der Seite *Mitglieder* anzeigen, aber nur die Berechtigungen für Ordner und Projekte verwalten, auf die sie Zugriff haben. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Aktionen, die ein Ordner- oder Projektadministrator ausführen kann."] .
+== Verstehen Sie, wie der Zugriff in der NetApp Console gewährt wird.
 
+Die NetApp Console verwendet rollenbasierte Zugriffskontrolle (RBAC) zur Verwaltung von Berechtigungen. Weisen Sie Benutzern Rollen einzeln oder über föderierte Gruppen zu. Jede Rolle definiert die zulässigen Aktionen für bestimmte Ressourcen.
+
+Beachten Sie Folgendes bezüglich der Zugriffsgewährung in der NetApp Console:
+
+* Alle Benutzer müssen sich zunächst bei der NetApp Console registrieren, bevor ihnen Zugriff auf Ressourcen gewährt werden kann.
+* Sie müssen jedem Benutzer in der Konsole explizit eine Rolle zuweisen, bevor er auf Ressourcen zugreifen kann, selbst wenn er Mitglied einer Verbundgruppe ist, der eine Rolle zugewiesen wurde.
+* Sie können Dienstkonten direkt über die Konsole hinzufügen und ihnen Rollen zuweisen.
 
 
 
 
 == Fügen Sie Ihrer Organisation Mitglieder hinzu
 
-Sie können Ihrer Organisation zwei Arten von Mitgliedern hinzufügen: ein Benutzerkonto und ein Dienstkonto. Anwendungen nutzen Dienstkonten, um API-Aufgaben automatisch auszuführen.  Benutzerkonten werden verwendet, um sich anzumelden und Ressourcen zu verwalten.
+Die NetApp Console unterstützt drei Arten von Mitgliedern: Benutzerkonten, Dienstkonten und Verbundgruppen.
 
-Benutzer müssen sich für die NetApp Console anmelden, bevor Sie sie zu einer Organisation hinzufügen oder ihnen eine Rolle zuweisen können.  Sie erstellen Dienstkonten direkt von der Konsole aus.
+Benutzer müssen sich bei der NetApp Console registrieren, bevor Sie sie hinzufügen und ihnen eine Rolle zuweisen können, selbst wenn sie Mitglied einer Verbundgruppe sind. Dienstkonten können direkt in der Konsole erstellt werden.
 
-Um Benutzer und ihre Berechtigungen zu verwalten, müssen Sie über die Rolle *Organisationsadministrator* oder die Rolle *Ordner- oder Projektadministrator* verfügen.  Denken Sie daran, dass Benutzer mit der Rolle *Ordner- oder Projektadministrator* nur Mitglieder für die Ordner oder Projekte verwalten können, für die sie über Administratorberechtigungen verfügen.
+Alle Mitglieder müssen mindestens eine Rolle explizit zugewiesen bekommen haben, um auf Ressourcen zugreifen zu können.
+
+Beim Hinzufügen eines Mitglieds wählen Sie die Ressourcenebene (Organisation, Ordner oder Projekt) und weisen Sie eine oder mehrere Rollen mit den erforderlichen Berechtigungen zu.
 
 
 
-=== Hinzufügen eines Benutzerkontos
+=== Einen Benutzer hinzufügen
 
-Obwohl sich Benutzer selbst für die NetApp Console anmelden, müssen sie explizit einer Organisation oder bestimmten Ordnern oder Projekten hinzugefügt werden, um auf Ressourcen in der Konsole zugreifen zu können.
+Benutzer registrieren sich für die NetApp Console, aber ein Organisationsadministrator, Ordner- oder Projektadministrator muss sie einer Organisation, einem Ordner oder einem Projekt hinzufügen, damit sie auf Ressourcen zugreifen können.
+
+.Bevor Sie beginnen:
+Der Benutzer muss sich bereits für die NetApp Console registriert haben. Falls sie sich noch nicht angemeldet haben, leiten Sie sie bitte weiter zu link:task-sign-up-saas.html["Registrieren Sie sich für die NetApp Console."]
+
+
+NOTE: Wenn Sie einen Benutzer hinzufügen, der Teil einer Verbundgruppe ist, stellen Sie sicher, dass sich der Benutzer bereits bei der NetApp Console registriert hat und ihm explizit eine Rolle in der Console zugewiesen wurde. NetApp empfiehlt, eine minimale Zugriffsrolle wie z. B. „Organisationsbetrachter“ zuzuweisen.
 
 .Schritte
-. Leiten Sie den Benutzer zum Besuch weiter https://console.netapp.com/["NetApp Console"^] um sich anzumelden.
-+
-Sobald sich Benutzer angemeldet haben, füllen sie die Seite *Anmelden* aus, überprüfen ihre E-Mails und melden sich an. Wenn die Konsole Benutzer auffordert, eine Organisation zu erstellen, schließen sie diese und benachrichtigen Sie über die Erstellung ihres Kontos.  Anschließend können Sie den Benutzer zu Ihrer bestehenden Organisation hinzufügen.
-
-+
-link:task-sign-up-saas.html["Erfahren Sie, wie Sie sich für die NetApp Console anmelden"] .
-
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Mitglieder* aus.
 . Wählen Sie *Mitglied hinzufügen*.
@@ -65,8 +67,8 @@ link:task-sign-up-saas.html["Erfahren Sie, wie Sie sich für die NetApp Console 
 Beachten Sie Folgendes:
 
 +
-** Sie können nur aus den Ordnern und Projekten auswählen, für die Sie Berechtigungen haben.
-** Durch die Auswahl einer Organisation oder eines Ordners erhält das Mitglied Zugriff auf alle Inhalte.
+** Sie können nur die Ordner und Projekte auswählen, für die Sie die entsprechenden Berechtigungen besitzen.
+** Wenn Sie eine Organisation oder einen Ordner auswählen, erteilen Sie dem Mitglied Berechtigungen für alle darin enthaltenen Inhalte.
 ** Sie können die Rolle *Organisationsadministrator* nur auf Organisationsebene zuweisen.
 
 
@@ -74,7 +76,7 @@ Beachten Sie Folgendes:
 +
 link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
 
-. Optional: Wählen Sie eine zusätzliche Rolle oder ein zusätzliches Projekt aus.  Wenn Sie Zugriff auf weitere Ordner oder Projekte innerhalb Ihrer Organisation gewähren oder dem Benutzer zusätzliche Rollen im ausgewählten Bereich zuweisen möchten, wählen Sie *Rolle hinzufügen*, geben Sie einen anderen Ordner oder ein anderes Projekt oder eine andere Rollenkategorie an und wählen Sie dann eine Rolle aus.
+. Um Zugriff auf weitere Ordner, Projekte oder Rollen zu gewähren, wählen Sie *Rolle hinzufügen*, wählen Sie die Ordner-, Projekt- oder Rollenkategorie und anschließend eine Rolle aus.
 . Wählen Sie *Hinzufügen*.
 +
 Die Konsole sendet dem Benutzer eine E-Mail mit Anweisungen.
@@ -85,9 +87,10 @@ Die Konsole sendet dem Benutzer eine E-Mail mit Anweisungen.
 
 === Hinzufügen eines Dienstkontos
 
-Sie können Aufgaben automatisieren und eine sichere Integration mit Konsolen-APIs über Dienstkonten durchführen.  Wenn Sie ein Dienstkonto erstellen, wählen Sie zwischen zwei Authentifizierungsmethoden: mithilfe einer Client-ID und eines Geheimnisses oder mithilfe der JWT-Authentifizierung (JSON Web Token).  Die Client-ID und die geheime Methode eignen sich für einfache Setups, während die JWT-Authentifizierung eine stärkere Sicherheit für automatisierte oder Cloud-native Umgebungen bietet.  Wählen Sie die Option, die Ihren Sicherheitsanforderungen und der geplanten Verwendung der Konsole am besten entspricht.
+Dienstkonten ermöglichen die Automatisierung von Aufgaben und die sichere Verbindung mit Console-APIs. Wählen Sie eine Client-ID und ein Client-Geheimnis für einfache Setups oder JWT (JSON Web Token) für eine höhere Sicherheit in automatisierten oder Cloud-nativen Umgebungen. Wählen Sie die Methode, die Ihren Sicherheitsanforderungen entspricht.
 
-Wenn Sie die JWT-Authentifizierung verwenden möchten, halten Sie Ihren öffentlichen Schlüssel oder Ihr Zertifikat einsatzbereit.
+.Bevor Sie beginnen:
+Bereiten Sie für die JWT-Authentifizierung Ihren öffentlichen Schlüssel oder Ihr Zertifikat vor.
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
@@ -95,7 +98,7 @@ Wenn Sie die JWT-Authentifizierung verwenden möchten, halten Sie Ihren öffentl
 . Wählen Sie *Mitglied hinzufügen*.
 . Wählen Sie für *Mitgliedstyp* *Dienstkonto* aus.
 . Geben Sie einen Namen für das Dienstkonto ein.
-. Wenn Sie die JWT-Authentifizierung verwenden möchten, wählen Sie *JWT-Authentifizierung mit privatem Schlüssel verwenden* und laden Sie Ihren öffentlichen RSA-Schlüssel oder Ihr Zertifikat hoch.  Überspringen Sie diesen Schritt, wenn Sie stattdessen eine Client-ID und ein Geheimnis verwenden möchten.
+. Um die JWT-Authentifizierung zu verwenden, wählen Sie *Private-Key-JWT-Authentifizierung verwenden* und laden Sie Ihren öffentlichen RSA-Schlüssel oder Ihr Zertifikat hoch. Überspringen, falls Client-ID und Client-Geheimnis verwendet werden.
 +
 Ihr X.509-Zertifikat. Es muss im PEM-, CRT- oder CER-Format vorliegen.
 
@@ -113,84 +116,58 @@ Beachten Sie Folgendes:
 ** Sie können die Rolle *Organisationsadministrator* nur auf Organisationsebene zuweisen.
 
 
-. Wählen Sie eine *Kategorie* und dann eine *Rolle* aus, die dem Mitglied Berechtigungen für die Ressourcen erteilt, die mit der von Ihnen ausgewählten Organisation, dem Ordner oder dem Projekt verknüpft sind.
+. Wählen Sie eine *Kategorie* und anschließend eine *Rolle* aus, die dem Mitglied Berechtigungen für die Ressourcen in der von Ihnen ausgewählten Organisation, dem Ordner oder dem Projekt erteilt.
 +
 link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
 
-. Optional: Wählen Sie eine zusätzliche Rolle oder ein zusätzliches Projekt aus.  Wenn Sie Zugriff auf weitere Ordner oder Projekte innerhalb Ihrer Organisation gewähren oder dem Benutzer zusätzliche Rollen im ausgewählten Bereich zuweisen möchten, wählen Sie *Rolle hinzufügen*, geben Sie einen anderen Ordner oder ein anderes Projekt oder eine andere Rollenkategorie an und wählen Sie dann eine Rolle aus.
-. Wenn Sie sich nicht für die Verwendung der JWT-Authentifizierung entschieden haben, laden Sie die Client-ID und das Client-Geheimnis herunter oder kopieren Sie sie.  + Die Konsole zeigt das Client-Geheimnis nur einmal an.  Kopieren Sie es sicher. Sie können es später bei Bedarf neu erstellen.
-. Wenn Sie die JWT-Authentifizierung gewählt haben, laden Sie die Client-ID und die JWT-Zielgruppe herunter oder kopieren Sie sie.  Diese Informationen werden nur einmal angezeigt und können später nicht mehr abgerufen werden.
+. Um Zugriff auf weitere Ordner, Projekte oder Rollen zu gewähren, wählen Sie *Rolle hinzufügen*, wählen Sie die Ordner-, Projekt- oder Rollenkategorie und anschließend eine Rolle aus.
+. Wenn Sie sich nicht für die Verwendung der JWT-Authentifizierung entschieden haben, laden Sie die Client-ID und das Client-Geheimnis herunter oder kopieren Sie sie.
++
+Die Konsole zeigt das Client-Geheimnis nur einmal an. Sicher kopieren; falls Sie es verlieren, können Sie es später wiederherstellen.
+
+. Wenn Sie die JWT-Authentifizierung gewählt haben, laden Sie die Client-ID und die JWT-Zielgruppe herunter oder kopieren Sie sie. Die Konsole zeigt diese Informationen nur einmal an und erlaubt es Ihnen nicht, sie später abzurufen.
 . Wählen Sie *Schließen*.
 
 
 
 
-== Organisationsmitglieder anzeigen
+== Fügen Sie Ihrer Organisation eine föderierte Gruppe hinzu.
 
-Um zu verstehen, welche Ressourcen und Berechtigungen einem Mitglied zur Verfügung stehen, können Sie die dem Mitglied auf verschiedenen Ebenen der Ressourcenhierarchie Ihrer Organisation zugewiesenen Rollen anzeigen.link:task-iam-manage-roles.html["Erfahren Sie, wie Sie mithilfe von Rollen den Zugriff auf Konsolenressourcen steuern."^]
+Sie können eine föderierte Gruppe von Ihrem Identitätsanbieter (IdP) zu Ihrer Organisation hinzufügen. Die Mitglieder der föderierten Gruppe erben die Rollen, die Sie der Gruppe in der Konsole zuweisen.
 
-Sie können sowohl Benutzerkonten als auch Dienstkonten auf der Seite *Mitglieder* anzeigen.
-
-
-NOTE: Sie können auch alle Mitglieder anzeigen, die einem bestimmten Ordner oder Projekt zugeordnet sind. link:task-iam-manage-folders-projects.html#view-associated-resources-members["Mehr erfahren"] .
+.Bevor Sie beginnen:
+Stellen Sie vor dem Hinzufügen einer föderierten Gruppe Folgendes sicher: * Sie müssen bereits eine Föderation zwischen Ihrem IdP und der Konsole eingerichtet haben. link:concept-federation.html["Erfahren Sie, wie Sie eine Föderation einrichten."] * Die Gruppe muss bereits in Ihrem IdP existieren. * Sie müssen den genauen Namen der Gruppe in Ihrem IdP kennen. * Benutzer, die dieser Gruppe angehören, müssen sich bereits für die NetApp Console registriert haben und ihnen muss explizit eine Rolle in der Console zugewiesen worden sein.
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Mitglieder* aus.
+. Wählen Sie *Mitglied hinzufügen*.
+. Wählen Sie unter *Mitgliedstyp* die Option *Verbundgruppe*.
+. Wählen Sie den Verband aus, dem die Gruppe angehört.
+. Geben Sie unter *Gruppenname* den genauen Namen der Gruppe in Ihrem IdP ein.
+. Verwenden Sie den Abschnitt *Wählen Sie eine Organisation, einen Ordner oder ein Projekt aus*, um die Ebene Ihrer Ressourcenhierarchie auszuwählen, für die das Mitglied Berechtigungen haben soll.
 +
-In der Tabelle *Mitglieder* sind die Mitglieder Ihrer Organisation aufgelistet.
+Beachten Sie Folgendes:
 
-. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Details anzeigen*.
-
-
-
-
-== Entfernen eines Mitglieds aus Ihrer Organisation
-
-Möglicherweise müssen Sie ein Mitglied aus Ihrer Organisation entfernen, beispielsweise wenn es Ihr Unternehmen verlässt.
-
-Wenn Sie ein Mitglied entfernen, entzieht das System ihm die Berechtigungen, behält aber seine Console- und NetApp -Support-Site-Konten bei.
-
-.Schritte
-. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] Wählen Sie dann *Benutzer löschen*.
-. Bestätigen Sie, dass Sie das Mitglied aus Ihrer Organisation entfernen möchten.
-
-
-
-
-== Erstellen Sie die Anmeldeinformationen für ein Dienstkonto neu
-
-Erstellen Sie neue Anmeldeinformationen, wenn Sie sie verlieren oder aktualisieren müssen.
-
-Wenn Sie die Anmeldeinformationen neu erstellen, löschen Sie die vorhandenen Anmeldeinformationen für das Dienstkonto und erstellen neue. Sie können die vorherigen Anmeldeinformationen nicht verwenden.
-
-.Schritte
-. Wählen Sie *Verwaltung > Identität und Zugriff*.
-. Wählen Sie *Mitglieder* aus.
-. Navigieren Sie in der Tabelle *Mitglieder* zu einem Dienstkonto, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Geheimnisse neu erstellen*.
-. Wählen Sie *Neu erstellen*.
-. Laden Sie die Client-ID und das Client-Geheimnis herunter oder kopieren Sie sie. + Die Konsole zeigt das Client-Geheimnis nur einmal an. Kopieren oder laden Sie es herunter und speichern Sie es sicher.
-
-
-
-
-== Verwalten der Multi-Faktor-Authentifizierung (MFA) eines Benutzers
-
-Wenn ein Benutzer den Zugriff auf sein MFA-Gerät verliert, können Sie seine MFA-Konfiguration entweder entfernen oder deaktivieren.
-
-Nach der Deaktivierung müssen die Nutzer die Multi-Faktor-Authentifizierung (MFA) bei der nächsten Anmeldung erneut einrichten. Wenn der Benutzer den Zugriff auf sein MFA-Gerät nur vorübergehend verloren hat, kann er zur Anmeldung den Wiederherstellungscode verwenden, den er beim Einrichten von MFA gespeichert hat.
-
-Wenn sie ihren Wiederherstellungscode nicht haben, deaktivieren Sie MFA vorübergehend, um die Anmeldung zu ermöglichen. Wenn Sie MFA für einen Benutzer deaktivieren, wird es nur für acht Stunden deaktiviert und dann automatisch wieder aktiviert. Dem Benutzer ist während dieser Zeit eine Anmeldung ohne MFA gestattet. Nach Ablauf der acht Stunden muss der Benutzer MFA verwenden, um sich anzumelden.
-
-
-NOTE: Um die Multi-Faktor-Authentifizierung eines Benutzers zu verwalten, müssen Sie über eine E-Mail-Adresse in derselben Domäne wie der betroffene Benutzer verfügen.
-
-.Schritte
-. Wählen Sie *Verwaltung > Identität und Zugriff*.
-. Wählen Sie *Mitglieder* aus.
 +
-In der Tabelle *Mitglieder* sind die Mitglieder Ihrer Organisation aufgelistet.
+** Sie können nur aus den Ordnern und Projekten auswählen, für die Sie Berechtigungen haben.
+** Durch die Auswahl einer Organisation oder eines Ordners erhält das Mitglied Zugriff auf alle Inhalte.
+** Sie können die Rolle *Organisationsadministrator* nur auf Organisationsebene zuweisen.
 
-. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Multi-Faktor-Authentifizierung verwalten*.
-. Wählen Sie, ob die MFA-Konfiguration des Benutzers entfernt oder deaktiviert werden soll.
+
+. Wählen Sie eine *Kategorie* und anschließend eine *Rolle* aus, die dem Mitglied Berechtigungen für die Ressourcen in der von Ihnen ausgewählten Organisation, dem Ordner oder dem Projekt erteilt.
++
+link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
+
+. Um Zugriff auf weitere Ordner, Projekte oder Rollen zu gewähren, wählen Sie *Rolle hinzufügen*, wählen Sie die Ordner-, Projekt- oder Rollenkategorie und anschließend eine Rolle aus.
+
+
+
+
+== Ähnliche Informationen
+
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identitäts- und Zugriffsmanagement in der NetApp Console"]
+* link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff"]
+* link:reference-iam-predefined-roles.html["NetApp Console"]
+* https://docs.netapp.com/us-en/console-automation/tenancyv4/overview.html["Erfahren Sie mehr über die API für Identität und Zugriff"^]
 

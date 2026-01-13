@@ -14,13 +14,9 @@ summary: Wenn Mitglieder Ihrer Organisation einen Konsolenagenten in einem ander
 
 
 [role="lead"]
-Wenn ein _Organisationsadministrator_ einen Konsolenagenten erstellt, wird der Konsolenagent automatisch mit dem aktuell ausgewählten Projekt innerhalb der Organisation verknüpft.  Allerdings kann jemand mit der Rolle „Organisationsadministrator“ von überall in der Organisation auf diesen Konsolenagenten zugreifen.  Andere Mitglieder Ihrer Organisation können auf diesen Konsolenagenten nur über das Projekt zugreifen, in dem er erstellt wurde, es sei denn, Sie verknüpfen diesen Konsolenagenten mit anderen Projekten.
+Ordnen Sie Console-Agenten spezifischen Projekten zu, um Ressourcenmanagement und Datenzugriff zu ermöglichen. Für Ressourcen, die über einen Console-Agenten gefunden werden, müssen sowohl die Ressource als auch der Agent den gleichen Projekten zugeordnet sein, damit das Team darauf zugreifen kann.
 
-.Bevor Sie beginnen
-Überprüfen Sie, wie die Zuordnung von Konsolenagenten funktioniert. link:concept-identity-and-access-management.html#associate-agents["Erfahren Sie mehr über die Verwendung des Konsolenagenten mit Identity and Access"] .
-
-.Informationen zu diesem Vorgang
-Ein _Ordner- oder Projektadministrator_ kann alle Konsolenagenten auf der *Agenten*-Seite anzeigen, kann Konsolenagenten jedoch nur mit Ordnern und Projekten verknüpfen, für die er über Berechtigungen verfügt. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Aktionen, die ein Ordner- oder Projektadministrator ausführen kann."] .
+Super-Administratoren und Organisationsadministratoren können Agenten erstellen und jeden Agenten einem beliebigen Projekt oder Ordner zuordnen. Ordner- oder Projektadministratoren können nur vorhandene Agenten Ordnern und Projekten zuordnen, für die sie die entsprechenden Berechtigungen besitzen. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Aktionen, die ein Ordner- oder Projektadministrator ausführen kann."]Die
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff* > *Agenten*.

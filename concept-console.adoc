@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: concept-modes.html 
+permalink: concept-console.html 
 keywords: dark site, internet, on prem, no internet, supported deployments, govcloud, government access, environments, supported environments, deployment modes, modes, private mode, restricted mode, il6, sc2s, c2s, dark site, sovereign region, saas, government region, secret region, top secret, aws secret, aws top secret, private 
-summary: 'Die NetApp Console bietet mehrere Bereitstellungsmodi, mit denen Sie Ihre Geschäfts- und Sicherheitsanforderungen erfüllen können. Der _Standardmodus_ nutzt eine Software-as-a-Service-Schicht (SaaS), um die volle Funktionalität bereitzustellen, während der _eingeschränkte Modus_ und der _private Modus_ für Organisationen mit Konnektivitätsbeschränkungen verfügbar sind.' 
+summary: Die NetApp Console bietet eine SaaS-Lösung für den vollen Funktionsumfang oder eine selbstgehostete Option für Organisationen mit eingeschränkter Konnektivität. 
 ---
-= Erfahren Sie mehr über die Bereitstellungsmodi der NetApp Console
+= Erfahren Sie mehr über die NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,14 +14,13 @@ summary: 'Die NetApp Console bietet mehrere Bereitstellungsmodi, mit denen Sie I
 
 
 [role="lead"]
-Die NetApp Console bietet mehrere Bereitstellungsmodi, mit denen Sie Ihre Geschäfts- und Sicherheitsanforderungen erfüllen können.
+Die NetApp Console bietet eine SaaS-Lösung für den vollen Funktionsumfang oder eine selbstgehostete Option für Organisationen mit eingeschränkter Konnektivität.
 
-* Der _Standardmodus_ nutzt eine Software-as-a-Service-Schicht (SaaS), um die volle Funktionalität bereitzustellen.  Benutzer greifen über eine webbasierte gehostete Schnittstelle auf die Konsole zu
-* Der _Eingeschränkte Modus_ ist für Organisationen mit Konnektivitätsbeschränkungen verfügbar, die die NetApp Console in ihrer eigenen öffentlichen Cloud installieren möchten.  Benutzer greifen über eine webbasierte Schnittstelle auf die Konsole zu, die auf einem Konsolenagenten in ihrer Cloud-Umgebung gehostet wird.
-+
-Die NetApp Console schränkt den Datenverkehr, die Kommunikation und die Daten im eingeschränkten Modus ein und Sie müssen sicherstellen, dass Ihre Umgebung (vor Ort und in der Cloud) den erforderlichen Vorschriften entspricht.
+Sie können die NetApp Console auf zwei Arten nutzen: als vollständig verwaltete SaaS-Lösung oder als selbstgehostete Lösung in Ihrer eigenen Cloud-Umgebung. Bei der SaaS-Option greifen Sie über console.netapp.com auf die Konsole zu, während NetApp die gesamte Infrastruktur, Authentifizierung und Aktualisierungen verwaltet. Sie erhalten direkten Zugriff auf alle Funktionen über Ihren Webbrowser. Wenn Sie sich für die selbstgehostete Option entscheiden, installieren Sie einen Console-Agenten in Ihrer AWS-, Azure- oder Google Cloud-Umgebung. Die Schnittstelle läuft lokal, und der Agent hält eine eingeschränkte ausgehende Verbindung zu NetApp für wichtige Aufgaben wie Authentifizierung und Aktualisierungen aufrecht.
 
+Wählen Sie die SaaS-Lösung, wenn Ihre Organisation über eine Standard-Internetverbindung verfügt. Sie profitieren von einfachster Einrichtung, automatischen Updates und vollem Zugriff auf alle NetApp -Speichersysteme, Datendienste und erweiterten Funktionen. Sie können Agenten direkt über die Konsole hinzufügen, und NetApp übernimmt die gesamte Wartung.
 
+Wählen Sie die Option „Selbstgehostet“, wenn Ihre Organisation strenge Anforderungen an Konnektivität, Sicherheit oder Compliance stellt, beispielsweise in der öffentlichen Verwaltung oder in regulierten Branchen. Sie erhalten mehr Kontrolle und Netzwerkisolation, können aber nur ausgewählte NetApp -Speichersysteme verwalten und nur eingeschränkte Datendienste nutzen, wobei einige Funktionen nicht verfügbar sind. Sie installieren einen Konsolenagenten manuell und greifen direkt über die lokale Agentenschnittstelle auf die Konsole zu. Installieren Sie Ihren Agenten über Ihren Cloud-Marktplatz oder per manueller Installation. Der Agent kommuniziert ausschließlich ausgehend mit NetApp, um sicherzustellen, dass keine eingehenden Internetverbindungen eingehen.
 
 
 

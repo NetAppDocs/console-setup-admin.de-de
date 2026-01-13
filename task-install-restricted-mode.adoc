@@ -22,6 +22,8 @@ Stellen Sie den Konsolenagenten im eingeschränkten Modus bereit, damit Sie die 
 
 Installieren Sie den Konsolenagenten vom Marktplatz Ihres Cloud-Anbieters oder manuell auf einem Linux-Host.
 
+Sie müssen Ihre Umgebung vorbereitet haben, bevor Sie den Console-Agenten installieren. Sie können die Software über den AWS Marketplace, den Azure Marketplace oder manuell auf Ihrem eigenen Linux-Host installieren, der in AWS, Azure oder Google Cloud ausgeführt wird.
+
 [role="tabbed-block"]
 ====
 .AWS Commercial Marketplace
@@ -205,8 +207,10 @@ Azure stellt die virtuelle Maschine mit den angegebenen Einstellungen bereit.  D
 Richten Sie die NetApp Console ein.
 
 --
-.Manuelle Installation
+.Manuelle Installation (muss für Google Cloud verwendet werden)
 --
+Sie können den Console-Agenten manuell auf Ihrem eigenen Linux-Host installieren, der in AWS, Azure oder Google Cloud ausgeführt wird.
+
 .Bevor Sie beginnen
 Folgendes sollten Sie haben:
 

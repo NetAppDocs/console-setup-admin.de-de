@@ -14,7 +14,7 @@ summary: Um die Funktionen und Dienste der NetApp Console nutzen zu können, mü
 
 
 [role="lead"]
-Um die Funktionen und Dienste der NetApp Console nutzen zu können, müssen Sie Berechtigungen erteilen, damit der Konsolenagent Vorgänge in Ihrer Cloud-Umgebung ausführen kann. Verwenden Sie die Links auf dieser Seite, um schnell auf die Berechtigungen zuzugreifen, die Sie je nach Ihrem Ziel benötigen.
+Sie müssen dem Konsolenagenten die entsprechenden Berechtigungen erteilen, damit er Operationen in Ihrer Cloud-Umgebung durchführen kann. Über die Links auf dieser Seite erhalten Sie schnell Zugriff auf die Berechtigungen, die Sie je nach Ihrem Ziel benötigen.
 
 
 
@@ -31,10 +31,7 @@ Die NetApp Console erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 | Ziel | Beschreibung | Link 
 
 
-| Bereitstellen eines Konsolenagenten über die Konsole | Der Benutzer, der einen Konsolenagenten aus der Konsole erstellt, benötigt bestimmte Berechtigungen, um den Agenten in AWS bereitzustellen. | link:task-install-agent-aws-console.html#aws-permissions-agent["AWS-Berechtigungen einrichten"] 
-
-
-| Berechtigungen für einen Konsolenagenten bereitstellen | Wenn die Konsole einen Konsolenagenten bereitstellt, fügt sie dem Agenten eine Richtlinie hinzu, die die erforderlichen Berechtigungen zum Verwalten von Ressourcen und Prozessen in Ihrem AWS-Konto bereitstellt.  Sie müssen die Richtlinie selbst einrichten, wenn Sie einen Konsolen-Agenten vom AWS Marketplace bereitstellen, wenn Sie einen Konsolen-Agenten manuell installieren oder wenn Sielink:task-adding-aws-accounts.html#add-credentials-agent-aws["Fügen Sie einem Konsolenagenten weitere AWS-Anmeldeinformationen hinzu"] . Sie müssen außerdem sicherstellen, dass die Richtlinie auf dem neuesten Stand ist, da in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden. | link:reference-permissions-aws.html["AWS-Berechtigungen für einen Konsolenagenten"] 
+| Einen Konsolenagenten über die Konsole bereitstellen Um einen Konsolenagenten in AWS bereitzustellen, benötigt der Benutzer bestimmte Berechtigungen. | link:task-install-agent-aws-console.html#aws-permissions-agent["AWS-Berechtigungen einrichten"] | Berechtigungen für einen Konsolenagenten bereitstellen 
 |===
 
 
@@ -67,7 +64,7 @@ Die NetApp Console erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 | Ziel | Beschreibung | Link 
 
 
-| Bereitstellen des Datenbrokers in AWS | Das AWS-Benutzerkonto, das Sie zum Bereitstellen des Datenbrokers verwenden, muss über bestimmte Berechtigungen verfügen. | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws["Erforderliche Berechtigungen zum Bereitstellen des Datenbrokers in AWS"^] 
+| Bereitstellen des Datenbrokers in AWS | Das AWS-Benutzerkonto, das Sie zum Bereitstellen des Datenbrokers verwenden, muss über die erforderlichen Berechtigungen verfügen. | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#permissions-required-to-deploy-the-data-broker-in-aws["Erforderliche Berechtigungen zum Bereitstellen des Datenbrokers in AWS"^] 
 
 
 | Berechtigungen für den Datenbroker bereitstellen | Wenn NetApp Copy and Sync den Datenbroker bereitstellt, wird eine IAM-Rolle für die Datenbrokerinstanz erstellt.  Sie können den Datenbroker bei Bedarf mit Ihrer eigenen IAM-Rolle bereitstellen. | https://docs.netapp.com/us-en/data-services-copy-sync/task-installing-aws.html#requirements-to-use-your-own-iam-role-with-the-aws-data-broker["Voraussetzungen für die Nutzung einer eigenen IAM-Rolle beim AWS-Datenbroker"^] 
@@ -95,7 +92,7 @@ Die NetApp Console erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 | Ziel | Beschreibung | Link 
 
 
-| Tiering von lokalen ONTAP -Clustern auf Amazon S3 | Wenn Sie NetApp Cloud Tiering für AWS aktivieren, fordert Sie der Assistent auf, einen Zugriffsschlüssel und einen geheimen Schlüssel einzugeben.  Diese Anmeldeinformationen werden an den ONTAP Cluster weitergegeben, damit ONTAP Daten in den S3-Bucket einstufen kann. | https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#set-up-s3-permissions["Einrichten von S3-Berechtigungen für das Tiering"^] 
+| Tiering von lokalen ONTAP -Clustern auf Amazon S3 | Wenn Sie NetApp Cloud Tiering für AWS aktivieren, geben Sie einen Zugriffsschlüssel und einen geheimen Schlüssel ein. Diese Zugangsdaten werden an den ONTAP Cluster übergeben, damit ONTAP Daten in den S3-Bucket verschieben kann. | https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html#set-up-s3-permissions["Einrichten von S3-Berechtigungen für das Tiering"^] 
 |===
 
 
@@ -120,7 +117,7 @@ Wenn die Konsole eine Konsolen-Agent-VM in Azure bereitstellt, erstellt sie eine
 
 Sie müssen die benutzerdefinierte Rolle selbst einrichten, wenn Sie einen Konsolen-Agenten vom Marktplatz aus starten, wenn Sie einen Konsolen-Agenten manuell installieren oder wenn Sielink:task-adding-azure-accounts.html#add-credentials-azure["Fügen Sie einem Konsolen-Agenten weitere Azure-Anmeldeinformationen hinzu"] .
 
-Sie müssen außerdem sicherstellen, dass die Richtlinie auf dem neuesten Stand ist, da in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden.
+Halten Sie die Richtlinie auf dem neuesten Stand, da in späteren Versionen neue Berechtigungen hinzugefügt werden.
  a| 
 link:reference-permissions-azure.html["Azure-Berechtigungen für einen Konsolen-Agent"]
 
@@ -146,7 +143,7 @@ Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwende
 
 
 
-| Sichern Sie lokale ONTAP -Cluster im Azure Blob Storage | Wenn Sie NetApp Backup and Recovery zum Sichern von ONTAP-Clustern vor Ort verwenden, müssen Sie einem Konsolenagenten Berechtigungen hinzufügen, um die Funktion „Suchen und Wiederherstellen“ verwenden zu können. | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-azure.html["Sichern Sie lokale ONTAP -Daten mit Backup und Recovery im Azure Blob-Speicher"^] 
+| Sichern Sie lokale ONTAP -Cluster im Azure Blob Storage | Wenn Sie NetApp Backup and Recovery zum Sichern von On-Premises ONTAP Clustern verwenden, müssen Sie einem Console-Agenten Berechtigungen hinzufügen, um die Funktion „Suchen & Wiederherstellen“ nutzen zu können. | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-azure.html["Sichern Sie lokale ONTAP -Daten mit Backup und Recovery im Azure Blob-Speicher"^] 
 |===
 
 
@@ -177,7 +174,7 @@ Die Konsole erfordert Google Cloud-Berechtigungen für einen Konsolenagenten und
 | Bereitstellen eines Konsolenagenten über die Konsole | Der Google Cloud-Benutzer, der einen Konsolen-Agenten von der Konsole aus bereitstellt, benötigt bestimmte Berechtigungen, um einen Konsolen-Agenten in Google Cloud bereitzustellen. | link:task-install-agent-google-console-gcloud.html#console-permissions-google["Richten Sie Berechtigungen zum Erstellen eines Konsolenagenten ein"] 
 
 
-| Berechtigungen für einen Konsolenagenten bereitstellen | Das Dienstkonto für einen Konsolenagenten muss über bestimmte Berechtigungen für den täglichen Betrieb verfügen. Sie müssen das Dienstkonto während der Bereitstellung mit einem Konsolenagenten verknüpfen. Sie müssen außerdem sicherstellen, dass die Richtlinie auf dem neuesten Stand ist, da in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden. | link:task-install-agent-google-console-gcloud.html#console-permissions-google["Einrichten von Berechtigungen für einen Konsolenagenten"] 
+| Berechtigungen für einen Konsolenagenten bereitstellen | Das Dienstkonto eines Konsolenagenten muss für den täglichen Betrieb über spezifische Berechtigungen verfügen. Sie müssen das Dienstkonto während der Bereitstellung mit einem Konsolenagenten verknüpfen. Halten Sie die Richtlinie auf dem neuesten Stand, da in späteren Versionen neue Berechtigungen hinzugefügt werden. | link:task-install-agent-google-console-gcloud.html#console-permissions-google["Einrichten von Berechtigungen für einen Konsolenagenten"] 
 |===
 
 
@@ -201,7 +198,7 @@ Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwende
 
 
 
-| Sichern Sie lokale ONTAP -Cluster in der Google Cloud | Wenn Sie NetApp Backup and Recovery zum Sichern von ONTAP-Clustern vor Ort verwenden, müssen Sie einem Konsolenagenten Berechtigungen hinzufügen, um die Funktion „Suchen und Wiederherstellen“ verwenden zu können. | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-gcp.html["Sichern Sie lokale ONTAP -Daten mit Backup und Recovery in Google Cloud Storage"^] 
+| Sichern Sie lokale ONTAP -Cluster in der Google Cloud | Wenn Sie NetApp Backup and Recovery zum Sichern von On-Premises ONTAP Clustern verwenden, müssen Sie einem Console-Agenten Berechtigungen hinzufügen, um die Funktion „Suchen & Wiederherstellen“ nutzen zu können. | https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-backup-onprem-gcp.html["Sichern Sie lokale ONTAP -Daten mit Backup und Recovery in Google Cloud Storage"^] 
 |===
 
 

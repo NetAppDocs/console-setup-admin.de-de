@@ -34,8 +34,8 @@ Sie können Benutzern die Rolle des Operational Support Analyst zuweisen, um ihn
 | Registrieren Sie sich für den Support und reichen Sie Fälle über die Konsole ein | Ja 
 
 
-| Ja | Anzeigen der Audit-Seite und Benachrichtigungen 
+| Anzeigen der Audit-Seite und Benachrichtigungen | Ja 
 
 
-| Ja | Anzeigen, Herunterladen und Konfigurieren von Warnungen 
+| Anzeigen, Herunterladen und Konfigurieren von Warnungen | Ja 
 |===

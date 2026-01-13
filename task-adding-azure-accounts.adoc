@@ -83,7 +83,7 @@ Die Konsole benötigt Berechtigungen, um Aktionen in Azure auszuführen.  Sie k�
 .Informationen zu diesem Vorgang
 Das folgende Bild zeigt, wie die Konsole Berechtigungen zum Ausführen von Vorgängen in Azure erhält.  Ein Dienstprinzipalobjekt, das an ein oder mehrere Azure-Abonnements gebunden ist, stellt die Konsole in der Microsoft Entra ID dar und ist einer benutzerdefinierten Rolle zugewiesen, die die erforderlichen Berechtigungen gewährt.
 
-image:diagram_azure_authentication.png["Konzeptbild, das zeigt, wie die Konsole eine Authentifizierung und Autorisierung von der Microsoft Entra ID erhält, bevor sie einen API-Aufruf tätigen kann.  In Active Directory definiert die Konsolenrolle die Berechtigungen.  Es ist an ein oder mehrere Azure-Abonnements und ein Dienstprinzipalobjekt gebunden, das die Cloud Manager-Anwendung darstellt."]
+image:diagram_azure_authentication.png["Konzeptbild, das zeigt, wie die Konsole Authentifizierung und Autorisierung von Microsoft Entra ID erhält, bevor sie einen API-Aufruf durchführen kann. Die Konsolenrolle definiert Berechtigungen in Active Directory. Es ist an ein oder mehrere Azure-Abonnements und ein Dienstprinzipalobjekt gebunden, das die Konsolenanwendung repräsentiert."]
 
 .Schritte
 . <<Erstellen einer Microsoft Entra-Anwendung>> .

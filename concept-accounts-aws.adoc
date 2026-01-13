@@ -24,7 +24,7 @@ Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, müssen Sie die 
 
 Wenn die Konsole den Konsolenagenten in AWS startet, erstellt sie eine IAM-Rolle und ein Profil für den Agenten. Außerdem wird eine Richtlinie angehängt, die dem Konsolenagenten die Berechtigung erteilt, Ressourcen und Prozesse innerhalb dieses AWS-Kontos zu verwalten. link:reference-permissions-aws.html["Überprüfen Sie, wie der Agent die Berechtigungen verwendet"].
 
-image:diagram_permissions_initial_aws.png["Ein konzeptionelles Bild, das die Konsole zeigt, die den Konsolenagenten in einem AWS-Konto bereitstellt. Einer IAM-Rolle wird eine IAM-Richtlinie zugewiesen, die an die Konsole angehängt ist."]
+image:diagram_permissions_initial_aws.png["Ein konzeptionelles Bild, das die Konsole zeigt, die den Konsolenagenten in einem AWS-Konto bereitstellt."]
 
 Wenn Sie ein neues Cloud Volumes ONTAP -System hinzufügen, wählt die Konsole standardmäßig diese AWS-Anmeldeinformationen aus:
 
@@ -51,7 +51,7 @@ Weitere Einzelheiten finden Sie in den folgenden Abschnitten.
 
 Um die Konsole mit zusätzlichen AWS-Konten zu verwenden, geben Sie AWS-Schlüssel oder den ARN einer Rolle in einem vertrauenswürdigen Konto an. Das folgende Bild zeigt zwei zusätzliche Konten, eines, das Berechtigungen über eine IAM-Rolle in einem vertrauenswürdigen Konto bereitstellt, und ein anderes über die AWS-Schlüssel eines IAM-Benutzers:
 
-image:diagram_permissions_multiple_aws.png["Ein konzeptionelles Bild, das zwei zusätzliche Konten zeigt.  Jeder hat eine IAM-Richtlinie, eine ist an einen IAM-Benutzer und die andere an eine IAM-Rolle angehängt."]
+image:diagram_permissions_multiple_aws.png["Eine konzeptionelle Abbildung, die zwei weitere Konten zeigt. Jeder hat eine IAM-Richtlinie. Eine ist einem IAM-Benutzer zugeordnet, die andere einer IAM-Rolle."]
 
 Sie fügen der Konsole Kontoanmeldeinformationen hinzu, indem Sie den Amazon Resource Name (ARN) der IAM-Rolle oder die AWS-Schlüssel für den IAM-Benutzer angeben.
 

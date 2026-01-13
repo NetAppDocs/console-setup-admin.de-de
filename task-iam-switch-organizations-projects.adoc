@@ -31,14 +31,14 @@ Wenn Sie Mitglied in mehreren Organisationen sind, können Sie jederzeit zwische
 image:screenshot-iam-switch-organizations.png["Ein Screenshot des oberen Banners, in dem Sie das Dropdown-Menü „Organisation“ auswählen und dann eine andere Organisation auswählen können."]
 
 . Wenn Sie Partnerorganisationen haben, wählen Sie die Registerkarte *Partnerschaft* aus, um die verfügbaren Partnerorganisationen anzuzeigen.
-
-
-+ Die Registerkarte *Partnerschaft* wird nicht angezeigt, wenn Sie keine Partnerorganisationen haben.
++
+Die Registerkarte *Partnerschaft* wird nicht angezeigt, wenn Sie keine Partnerorganisationen haben.
 
 . Wählen Sie eine andere Organisation aus und wählen Sie dann *Wechseln*.
++
+Wenn Sie Partnerorganisationen haben, wählen Sie die Registerkarte *Partnerschaft* aus, um die verfügbaren Partnerorganisationen anzuzeigen.
 
 
-+ Wenn Sie Partnerorganisationen haben, wählen Sie die Registerkarte *Partnerschaft* aus, um die verfügbaren Partnerorganisationen anzuzeigen.
 
 
 

@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-iam-user-security.html 
+keywords: user, service account, member, role, permissions, organization, project, folder, iam, identity and access management 
+summary: Verwalten Sie die Mitglieder Ihrer Organisation, um Berechtigungen auf verschiedenen Ebenen der Ressourcenhierarchie Ihrer Organisation bereitzustellen. 
+---
+= Benutzersicherheit
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Sichern Sie den Benutzerzugriff auf Ihre NetApp Console -Organisation durch die Verwaltung der Sicherheitseinstellungen der Mitglieder. Sie können Benutzerpasswörter zurücksetzen, die Multi-Faktor-Authentifizierung (MFA) verwalten und die Anmeldeinformationen für Dienstkonten neu erstellen.
+
+.Erforderliche Zugriffsrollen
+Super-Admin, Organisations-Admin oder Ordner- bzw. Projekt-Admin (für die von ihnen verwalteten Ordner und Projekte). Link:reference-iam-predefined-roles.html[Erfahren Sie mehr über Zugriffsrollen].
+
+
+
+== Benutzerpasswörter zurücksetzen (nur für lokale Benutzer)
+
+Organisationsadministratoren können die Passwörter lokaler Benutzer nicht zurücksetzen. Sie können die Benutzer jedoch anweisen, ihre Passwörter selbst zurückzusetzen.
+
+Weisen Sie den Benutzer an, sein Passwort auf der Anmeldeseite der Konsole zurückzusetzen, indem er *Passwort vergessen?* auswählt.
+
+
+NOTE: Diese Option steht Benutzern in einer föderierten Organisation nicht zur Verfügung.
+
+
+
+== Verwalten der Multi-Faktor-Authentifizierung (MFA) eines Benutzers
+
+Wenn ein Benutzer den Zugriff auf sein MFA-Gerät verliert, können Sie seine MFA-Konfiguration entweder entfernen oder deaktivieren.
+
+
+NOTE: Die Multi-Faktor-Authentifizierung ist nur für lokale Benutzer verfügbar. Verbundbenutzer können MFA nicht aktivieren.
+
+Nach der Deaktivierung müssen die Nutzer die Multi-Faktor-Authentifizierung (MFA) bei der nächsten Anmeldung erneut einrichten. Wenn der Benutzer vorübergehend den Zugriff auf sein MFA-Gerät verliert, kann er sich mit seinem gespeicherten Wiederherstellungscode anmelden.
+
+Wenn sie ihren Wiederherstellungscode nicht haben, deaktivieren Sie MFA vorübergehend, um die Anmeldung zu ermöglichen. Wenn Sie MFA für einen Benutzer deaktivieren, wird es nur für acht Stunden deaktiviert und dann automatisch wieder aktiviert. Dem Benutzer ist während dieser Zeit eine Anmeldung ohne MFA gestattet. Nach Ablauf der acht Stunden muss der Benutzer MFA verwenden, um sich anzumelden.
+
+
+NOTE: Um die Multi-Faktor-Authentifizierung eines Benutzers zu verwalten, müssen Sie über eine E-Mail-Adresse in derselben Domäne wie der betroffene Benutzer verfügen.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Mitglieder* aus.
++
+In der Tabelle *Mitglieder* sind die Mitglieder Ihrer Organisation aufgelistet.
+
+. Navigieren Sie auf der Seite *Mitglieder* zu einem Mitglied in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Multi-Faktor-Authentifizierung verwalten*.
+. Wählen Sie, ob die MFA-Konfiguration des Benutzers entfernt oder deaktiviert werden soll.
+
+
+
+
+== Erstellen Sie die Anmeldeinformationen für ein Dienstkonto neu
+
+Sie können neue Zugangsdaten für einen Dienst erstellen, falls Sie diese verlieren oder aktualisieren müssen.
+
+Durch das Erstellen neuer Anmeldeinformationen werden die alten gelöscht. Die alten Zugangsdaten können nicht verwendet werden.
+
+.Schritte
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
+. Wählen Sie *Mitglieder* aus.
+. Navigieren Sie in der Tabelle *Mitglieder* zu einem Dienstkonto, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Geheimnisse neu erstellen*.
+. Wählen Sie *Neu erstellen*.
+. Laden Sie die Client-ID und das Client-Geheimnis herunter oder kopieren Sie sie.
++
+Die Konsole zeigt das Client-Geheimnis nur einmal an. Stellen Sie sicher, dass Sie die Datei kopieren oder herunterladen und sicher aufbewahren.
+
+
