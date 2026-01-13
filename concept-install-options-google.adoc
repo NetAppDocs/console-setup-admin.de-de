@@ -14,7 +14,7 @@ summary: Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cl
 
 
 [role="lead"]
-Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console .  ---
+Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console .
 
 Folgende Installationsoptionen stehen zur Verfügung:
 
