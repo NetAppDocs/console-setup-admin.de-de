@@ -189,7 +189,6 @@ includedPermissions:
 - compute.firewalls.list
 - compute.forwardingRules.create
 - compute.forwardingRules.delete
-- compute.forwardingRules.update
 - compute.forwardingRules.get
 - compute.forwardingRules.setLabels
 - compute.globalOperations.get
@@ -291,6 +290,7 @@ includedPermissions:
 - iam.serviceAccounts.list
 - iam.serviceAccountKeys.create
 - storage.objects.get
+- storage.objects.list
 - storage.buckets.getIamPolicy
 
 
@@ -402,9 +402,6 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 
 
 | compute.forwardingRules.get | Details zu bestehenden Weiterleitungsregeln abrufen. | Nein | Ja | Nein 
-
-
-| compute.forwardingRules.update | Bestehende Weiterleitungsregeln für das Verkehrsmanagement aktualisieren. | Nein | Ja | Nein 
 
 
 | compute.forwardingRules.setLabels | Labels für Weiterleitungsregeln der Organisation festlegen oder aktualisieren. | Nein | Ja | Nein 
