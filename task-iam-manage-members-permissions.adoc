@@ -133,10 +133,14 @@ Die Konsole zeigt das Client-Geheimnis nur einmal an. Sicher kopieren; falls Sie
 
 == Fügen Sie Ihrer Organisation eine föderierte Gruppe hinzu.
 
-Sie können eine föderierte Gruppe von Ihrem Identitätsanbieter (IdP) zu Ihrer Organisation hinzufügen. Die Mitglieder der föderierten Gruppe erben die Rollen, die Sie der Gruppe in der Konsole zuweisen.
+Sie können eine föderierte Gruppe von Ihrem Identitätsanbieter (IdP) zu Ihrer Organisation hinzufügen und ihr eine oder mehrere Rollen zuweisen. Die Mitglieder der föderierten Gruppe erben die Rollen, die Sie der Gruppe in der Konsole zuweisen.
 
-.Bevor Sie beginnen:
-Stellen Sie vor dem Hinzufügen einer föderierten Gruppe Folgendes sicher: * Sie müssen bereits eine Föderation zwischen Ihrem IdP und der Konsole eingerichtet haben. link:concept-federation.html["Erfahren Sie, wie Sie eine Föderation einrichten."] * Die Gruppe muss bereits in Ihrem IdP existieren. * Sie müssen den genauen Namen der Gruppe in Ihrem IdP kennen. * Benutzer, die dieser Gruppe angehören, müssen sich bereits für die NetApp Console registriert haben und ihnen muss explizit eine Rolle in der Console zugewiesen worden sein.
+Bevor Sie einer föderierten Gruppe eine Rolle zuweisen können, stellen Sie Folgendes sicher:
+
+* Richten Sie eine Föderation zwischen Ihrem IdP und der Konsole ein. link:concept-federation.html["Erfahren Sie, wie Sie eine Föderation einrichten."]
+* Die Gruppe muss bereits in Ihrem Identitätsanbieter existieren und über App-Zugriff auf die Konsole verfügen.
+* Benutzer, die dieser Gruppe angehören, müssen sich bereits für die NetApp Console registriert haben und ihnen muss explizit eine Rolle in der Console zugewiesen worden sein. NetApp empfiehlt, eine minimale Zugriffsrolle wie z. B. „Organisationsbetrachter“ zuzuweisen.
+
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.

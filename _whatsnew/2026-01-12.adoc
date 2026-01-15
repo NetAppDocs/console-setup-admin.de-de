@@ -21,6 +21,11 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.h
 
 Diese Version enthält Folgendes:
 
+.Rollenbasierter Zugriff für Verbundgruppen in der NetApp Console
+Die NetApp Console unterstützt die Zuweisung von Rollen zu föderierten Gruppen (z. B. Active Directory-Gruppen) und ermöglicht es Administratoren, das Onboarding und Offboarding von Benutzern auf der Grundlage der Gruppenzugehörigkeit im Identitätsanbieter (IdP) der Organisation zu automatisieren. Diese Funktion reduziert den Verwaltungsaufwand und gewährleistet einen sicheren und konsistenten Zugriff, indem der Konsolenzugriff bei Änderungen der Gruppenzugehörigkeiten sofort aktualisiert wird.
+
+link:https://docs.netapp.com/us-en/console-setup-admin/task-iam-manage-members-permissions.html#add-a-federated-group-to-your-organization["Erfahren Sie, wie Sie Ihrer Organisation Zugriff auf eine föderierte Gruppe gewähren."]
+
 .Unterstützung für die Föderation, wenn sich die NetApp Console im eingeschränkten Modus befindet
 Sie können jetzt die Föderation für eine NetApp Console -Organisation aktivieren, die sich im eingeschränkten Modus befindet. Dies ermöglicht es Benutzern, sich mit ihren Unternehmensanmeldeinformationen an der Konsole anzumelden und gleichzeitig die Sicherheitsvorteile des eingeschränkten Modus beizubehalten.
 

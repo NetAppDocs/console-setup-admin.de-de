@@ -5744,9 +5744,7 @@
   <block id="1065e278b83db0baa7239d1c2c89e558" category="paragraph">Die Konsole zeigt das Client-Geheimnis nur einmal an. Sicher kopieren; falls Sie es verlieren, können Sie es später wiederherstellen.</block>
   <block id="6c07155a6c5b387b3649e57518b2acbf" category="list-text">Wenn Sie die JWT-Authentifizierung gewählt haben, laden Sie die Client-ID und die JWT-Zielgruppe herunter oder kopieren Sie sie. Die Konsole zeigt diese Informationen nur einmal an und erlaubt es Ihnen nicht, sie später abzurufen.</block>
   <block id="1e5bd0e3b2f8efdd44ff92b7d355c374" category="section-title">Fügen Sie Ihrer Organisation eine föderierte Gruppe hinzu.</block>
-  <block id="c4d8a0f38fcfd51b64b45642a963ccd2" category="paragraph">Sie können eine föderierte Gruppe von Ihrem Identitätsanbieter (IdP) zu Ihrer Organisation hinzufügen. Die Mitglieder der föderierten Gruppe erben die Rollen, die Sie der Gruppe in der Konsole zuweisen.</block>
   <block id="1f87469083830ec60b59de86a65908a9" category="inline-link-macro">Erfahren Sie, wie Sie eine Föderation einrichten.</block>
-  <block id="44c50d77ce337726b2c52859655871e2" category="paragraph">Stellen Sie vor dem Hinzufügen einer föderierten Gruppe Folgendes sicher: * Sie müssen bereits eine Föderation zwischen Ihrem IdP und der Konsole eingerichtet haben. <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block> * Die Gruppe muss bereits in Ihrem IdP existieren. * Sie müssen den genauen Namen der Gruppe in Ihrem IdP kennen. * Benutzer, die dieser Gruppe angehören, müssen sich bereits für die NetApp Console registriert haben und ihnen muss explizit eine Rolle in der Console zugewiesen worden sein.</block>
   <block id="16a2c505069eacd418dca553f5b68d99" category="list-text">Wählen Sie unter *Mitgliedstyp* die Option *Verbundgruppe*.</block>
   <block id="00cfd65508d24955faa8b609b29efc15" category="list-text">Wählen Sie den Verband aus, dem die Gruppe angehört.</block>
   <block id="be1ae879869c7f401beda2410fc2ef42" category="list-text">Geben Sie unter *Gruppenname* den genauen Namen der Gruppe in Ihrem IdP ein.</block>
@@ -5903,9 +5901,13 @@
   <block id="4c61619ce49044f354b1f5cc38707fd2" category="sidebar">AWS-Agentenberechtigungen und Sicherheitsregeln</block>
   <block id="20ec4216ad7aef42619add3b96b89c33" category="sidebar">Azure-Berechtigungen und erforderliche Sicherheitsregeln</block>
   <block id="347863a199ea8f4c7e1e9540d041ca12" category="sidebar">Google Cloud-Berechtigungen und erforderliche Firewall-Regeln</block>
-  <block id="772b95b1a689cd9ca0f7d8935114e25c" category="paragraph-title">Zusätzliche Google Cloud-Berechtigungen für Cloud Volumes ONTAP</block>
-  <block id="335ea2f40a7e49b48a24b0867a975d2b" category="paragraph">Zur Unterstützung der Cloud Volumes ONTAP -Verwaltung in Google Cloud benötigt der Console-Agent nun eine zusätzliche Berechtigung. Dem vom Console-Agenten verwendeten Dienstkonto wurde die folgende Berechtigung hinzugefügt: compute.forwardingRules.update</block>
-  <block id="b4c9682d1423fe286221a4951d5900b8" category="paragraph"><block ref="b4c9682d1423fe286221a4951d5900b8" category="inline-link-macro-rx"></block></block>
-  <block id="b18fad63d8ccb120bf7c88b5cde19431" category="cell">compute.forwardingRules.update</block>
-  <block id="d82499f632494fadd7c3cb95a45cdd03" category="cell">Bestehende Weiterleitungsregeln für das Verkehrsmanagement aktualisieren.</block>
+  <block id="9f3261123c8a658e7b62dee5c17371f4" category="paragraph-title">Rollenbasierter Zugriff für Verbundgruppen in der NetApp Console</block>
+  <block id="c4d7a3f544d6f76c7c70bcb232209dbf" category="paragraph">Die NetApp Console unterstützt die Zuweisung von Rollen zu föderierten Gruppen (z. B. Active Directory-Gruppen) und ermöglicht es Administratoren, das Onboarding und Offboarding von Benutzern auf der Grundlage der Gruppenzugehörigkeit im Identitätsanbieter (IdP) der Organisation zu automatisieren. Diese Funktion reduziert den Verwaltungsaufwand und gewährleistet einen sicheren und konsistenten Zugriff, indem der Konsolenzugriff bei Änderungen der Gruppenzugehörigkeiten sofort aktualisiert wird.</block>
+  <block id="ac4ebbe533b328180ba7587ac3ed17ea" category="inline-link-macro">Erfahren Sie, wie Sie Ihrer Organisation Zugriff auf eine föderierte Gruppe gewähren.</block>
+  <block id="bd8d483345dcb63c75668983c3887b87" category="paragraph"><block ref="bd8d483345dcb63c75668983c3887b87" category="inline-link-macro-rx"></block></block>
+  <block id="8e21188f4a561525a629d0158af709a2" category="paragraph">Sie können eine föderierte Gruppe von Ihrem Identitätsanbieter (IdP) zu Ihrer Organisation hinzufügen und ihr eine oder mehrere Rollen zuweisen. Die Mitglieder der föderierten Gruppe erben die Rollen, die Sie der Gruppe in der Konsole zuweisen.</block>
+  <block id="74339c243d7e2c57c81d3b6eeb492598" category="paragraph">Bevor Sie einer föderierten Gruppe eine Rolle zuweisen können, stellen Sie Folgendes sicher:</block>
+  <block id="99673e10ad28f12bcaf375fb16592097" category="list-text">Richten Sie eine Föderation zwischen Ihrem IdP und der Konsole ein. <block ref="562353f9c9a6ec120d22140ce361907b" category="inline-link-macro-rx"></block></block>
+  <block id="2e2db2e64333e9c722068fbbc6cceb8e" category="list-text">Die Gruppe muss bereits in Ihrem Identitätsanbieter existieren und über App-Zugriff auf die Konsole verfügen.</block>
+  <block id="06d5b18e5be0feb68eea2f9f0a2102d0" category="list-text">Benutzer, die dieser Gruppe angehören, müssen sich bereits für die NetApp Console registriert haben und ihnen muss explizit eine Rolle in der Console zugewiesen worden sein. NetApp empfiehlt, eine minimale Zugriffsrolle wie z. B. „Organisationsbetrachter“ zuzuweisen.</block>
 </blocks>
