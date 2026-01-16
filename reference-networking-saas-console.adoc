@@ -90,3 +90,21 @@ Einige NetApp -Datendienste sowie Cloud Volumes ONTAP erfordern, dass der Agent 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-azure.html["Endpunkte für Cloud Volumes ONTAP in Azure"]
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-gcp.html#outbound-internet-access["Endpunkte für Cloud Volumes ONTAP in Google Cloud"]
 
+
+
+
+=== Endpunkte für Workloads
+
+Der Console-Agent muss für NetApp -Workloads auf den folgenden Endpunkt zugreifen können.
+
+[cols="2*"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+\https://api.workloads.netapp.com
+ a| 
+Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und FSx for ONTAP-basierte Workloads zu verwalten und zu betreiben.
+
+|===
