@@ -34,4 +34,4 @@ Sie können eine NetApp Console Organisation in den Nur-Lese-Modus versetzen. Im
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-enable-read-only-mode.html["Erfahren Sie, wie Sie den Nur-Lese-Modus für eine Konsolenorganisation aktivieren."]
 
-link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings["Erfahren Sie, wie Sie Ihre Rolle aufwerten können, wenn sich Ihre Organisation im Nur-Lese-Modus befindet."]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-user-settings.html["Erfahren Sie, wie Sie Ihre Rolle aufwerten können, wenn sich Ihre Organisation im Nur-Lese-Modus befindet."]
