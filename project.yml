@@ -263,7 +263,7 @@ sidebar:
     - title: Agenten-Wartungskonsole
       entries:
       - title: Konfigurationsprüfungen
-        url: "/reference-agent-maint-console.html"
+        url: "/reference-agent-maint-console-config-checker.html"
       - title: Transparenter Proxy
         url: "/reference-agent-maint-console-proxy.html"
     - title: Berechtigungen und Netzwerkanforderungen des Cloud-Anbieters

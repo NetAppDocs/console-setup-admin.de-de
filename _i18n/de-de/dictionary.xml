@@ -5461,8 +5461,6 @@
   <block id="79af92d05f2b214eab2c765e215beb6b" category="doc">Konsolenagent 4.3.0</block>
   <block id="6f1b51eea64496510e6cf5a5a2d57d29" category="paragraph">Die Version 4.3.0 unterstützt sowohl den Standardmodus als auch den eingeschränkten Modus.</block>
   <block id="664a9e1da962d9131b0a035da50bbcc7" category="paragraph-title">Fähigkeit zur Validierung der Netzwerkverbindungen von Konsolenagenten</block>
-  <block id="81cc16a2354d8ec80802e2e4ac22f15a" category="paragraph">Sie können jetzt die Netzwerkverbindungen verbundener Console-Agenten direkt über die NetApp Console überprüfen. Diese Funktion hilft bei der Überprüfung der Konnektivität und der Fehlerbehebung bei Problemen mit Console-Agenten.</block>
-  <block id="65ce32eae3a28c0b24f8cc33c345ab84" category="paragraph"><block ref="65ce32eae3a28c0b24f8cc33c345ab84" category="inline-link-macro-rx"></block></block>
   <block id="8b71edf4fd7d99d72da1d37de5e154b7" category="paragraph-title">Unterstützung für die Föderation, wenn sich die NetApp Console im eingeschränkten Modus befindet</block>
   <block id="58bbe2cc0931c12594be1bafb70597fb" category="paragraph">Sie können jetzt die Föderation für eine NetApp Console -Organisation aktivieren, die sich im eingeschränkten Modus befindet. Dies ermöglicht es Benutzern, sich mit ihren Unternehmensanmeldeinformationen an der Konsole anzumelden und gleichzeitig die Sicherheitsvorteile des eingeschränkten Modus beizubehalten.</block>
   <block id="ac811c471ef716f9c8a3865d7f14caa3" category="paragraph-title">Nur-Lese-Modus</block>
@@ -5914,4 +5912,7 @@
   <block id="0eda8bbe61d2248f5418aba76b8dc5b1" category="paragraph">\https://api.workloads.netapp.com</block>
   <block id="a2d795d1d62d99052325545b09f9236f" category="paragraph">Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und FSx for ONTAP-basierte Workloads zu verwalten und zu betreiben.</block>
   <block id="1f48aa3b8a17cda9bff69e07d29acd50" category="paragraph"><block ref="1f48aa3b8a17cda9bff69e07d29acd50" category="inline-link-macro-rx"></block></block>
+  <block id="3a78a8ea0b02debae5e6b16cc1929cb5" category="paragraph">Sie können nun die Netzwerkverbindungen verbundener Console-Agenten direkt von der NetApp Console aus validieren. Diese Funktion hilft, die Konnektivität zu überprüfen und Probleme mit Console-Agenten zu beheben. Dies ist zusätzlich zur bestehenden Möglichkeit, Netzwerkanalysen über die Befehlszeile (CLI) der Console-Agent-Wartungskonsole auszuführen.</block>
+  <block id="16e0d5a8229f3c0136c12aa9def60bb1" category="inline-link-macro">Erfahren Sie, wie Sie die Konfiguration aus der NetApp Console ausführen.</block>
+  <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
 </blocks>

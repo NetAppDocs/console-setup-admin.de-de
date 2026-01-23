@@ -11,9 +11,9 @@ Die Version 4.3.0 unterstützt sowohl den Standardmodus als auch den eingeschrä
 Diese Version des Konsolenagenten enthält Sicherheitsverbesserungen, Fehlerbehebungen und die folgenden Funktionen:
 
 .Fähigkeit zur Validierung der Netzwerkverbindungen von Konsolenagenten
-Sie können jetzt die Netzwerkverbindungen verbundener Console-Agenten direkt über die NetApp Console überprüfen. Diese Funktion hilft bei der Überprüfung der Konnektivität und der Fehlerbehebung bei Problemen mit Console-Agenten.
+Sie können nun die Netzwerkverbindungen verbundener Console-Agenten direkt von der NetApp Console aus validieren. Diese Funktion hilft, die Konnektivität zu überprüfen und Probleme mit Console-Agenten zu beheben. Dies ist zusätzlich zur bestehenden Möglichkeit, Netzwerkanalysen über die Befehlszeile (CLI) der Console-Agent-Wartungskonsole auszuführen.
 
-link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["Erfahren Sie, wie Sie Konfigurationsprüfungen auf Console-Agenten durchführen."]
+link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html#verify-network-access["Erfahren Sie, wie Sie die Konfiguration aus der NetApp Console ausführen."]
 
 
 
