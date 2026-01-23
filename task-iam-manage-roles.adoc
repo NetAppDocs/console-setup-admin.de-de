@@ -109,9 +109,6 @@ Mitglieder können innerhalb desselben Projekts und in verschiedenen Projekten m
 
 Ihre Zugriffsrollenstrategie sollte mit der Art und Weise übereinstimmen, wie Sie Ihre NetApp -Ressourcen organisiert haben.
 
-
-TIP: Ein Mitglied, dem die Rolle des Organisationsadministrators zugewiesen ist, kann keine weiteren Rollen erhalten. Sie verfügen bereits über Berechtigungen für die gesamte Organisation. Einem Mitglied mit der Rolle „Ordner- oder Projektadministrator“ können innerhalb des Ordners oder Projekts, in dem es diese Rolle bereits innehat, keine weiteren Rollen zugewiesen werden. Beide Rollen gewähren Zugriff auf alle Dienste innerhalb des ihnen zugewiesenen Aufgabenbereichs.
-
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Mitglieder* aus.

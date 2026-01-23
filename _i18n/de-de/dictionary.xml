@@ -4838,7 +4838,6 @@
   <block id="70328d3965555bdfe7c71386e9e25887" category="sidebar">Installieren Sie ein CA-signiertes Zertifikat für den Zugriff auf die Webkonsole</block>
   <block id="417a7f2f69f19fbcd309a4694944397e" category="sidebar">Erfordert die Verwendung von IMDSv2 auf EC2-Instanzen</block>
   <block id="e5c32965ed32649bcfd48bc8b138f3d2" category="sidebar">Deinstallieren und entfernen Sie den Konsolenagenten</block>
-  <block id="7c584a16cbf4210dc0a344179e274e09" category="sidebar">Standardkonfiguration</block>
   <block id="8f235a758f8b25f9b4ff4eddf53e6c5e" category="sidebar">Erzwingen Sie ONTAP -Berechtigungen in der NetApp Console</block>
   <block id="cbaee96b9499da2c5c6d3b23090382c6" category="sidebar">Erfahren Sie mehr über Anmeldeinformationen und Berechtigungen</block>
   <block id="9d812302dfdd0fdbf4faa0fe53b9ed24" category="sidebar">Erfahren Sie mehr über Projekte und Berechtigungen</block>
@@ -5778,7 +5777,6 @@
   <block id="cc58a3864ec91bd4d491cafcb895e671" category="paragraph">Nach der Registrierung eines Benutzers bei der NetApp Console können Sie ihn Ihrer Organisation hinzufügen und ihm eine Rolle zuweisen, um ihm Zugriff auf Ressourcen zu gewähren. <block ref="43b297cbb0e75204baf387be01022755" category="inline-link-macro-rx"></block></block>
   <block id="729d1ca3c10203fc503fd9f53e1e1025" category="paragraph">Sie können die Zugriffsrechte eines Mitglieds anpassen, indem Sie nach Bedarf Rollen hinzufügen oder entfernen.</block>
   <block id="385f92ada47188b8c301664b007e6ca3" category="paragraph">Mitglieder können innerhalb desselben Projekts und in verschiedenen Projekten mehrere Rollen innehaben. Kleinere Organisationen weisen beispielsweise alle verfügbaren Zugriffsrollen demselben Benutzer zu, während größere Organisationen ihre Benutzer mit spezialisierteren Aufgaben betrauen. Alternativ könnten Sie auch einem Benutzer die Administratorrolle für Ransomware-Resilienz auf Organisationsebene zuweisen. In diesem Beispiel könnte der Benutzer Ransomware-Resilienzmaßnahmen für alle Projekte innerhalb seiner Organisation durchführen.</block>
-  <block id="185fff519c8fc661f991bd10bba243ab" category="admonition">Ein Mitglied, dem die Rolle des Organisationsadministrators zugewiesen ist, kann keine weiteren Rollen erhalten. Sie verfügen bereits über Berechtigungen für die gesamte Organisation. Einem Mitglied mit der Rolle „Ordner- oder Projektadministrator“ können innerhalb des Ordners oder Projekts, in dem es diese Rolle bereits innehat, keine weiteren Rollen zugewiesen werden. Beide Rollen gewähren Zugriff auf alle Dienste innerhalb des ihnen zugewiesenen Aufgabenbereichs.</block>
   <block id="ebeb67c2ab58cfe7b88d1a1bc054c1a8" category="list-text">Wählen Sie einen der Mitglieder-Tabs aus: *Benutzer*, *Dienstkonten* oder *Verbundgruppen*.</block>
   <block id="a62c20a6e8e006e17ebdbe37484ef3e8" category="paragraph">Entfernen Sie ein Mitglied, wenn es Ihre Organisation verlässt.</block>
   <block id="b28aef4c16ab3aa23caf8777e9998b0c" category="paragraph">Wenn Sie ein Mitglied entfernen, entzieht das System ihm die Konsolenberechtigungen, behält aber seine Konsolen- und NetApp -Support-Site-Konten bei.</block>
@@ -5915,4 +5913,7 @@
   <block id="3a78a8ea0b02debae5e6b16cc1929cb5" category="paragraph">Sie können nun die Netzwerkverbindungen verbundener Console-Agenten direkt von der NetApp Console aus validieren. Diese Funktion hilft, die Konnektivität zu überprüfen und Probleme mit Console-Agenten zu beheben. Dies ist zusätzlich zur bestehenden Möglichkeit, Netzwerkanalysen über die Befehlszeile (CLI) der Console-Agent-Wartungskonsole auszuführen.</block>
   <block id="16e0d5a8229f3c0136c12aa9def60bb1" category="inline-link-macro">Erfahren Sie, wie Sie die Konfiguration aus der NetApp Console ausführen.</block>
   <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
+  <block id="ee856bddd35f8f0d8d6a5e0b5017b7dd" category="sidebar">Console-Agenten verstehen</block>
+  <block id="10895cced39195f7b9456b154a2c8530" category="sidebar">Beginnen Sie mit dem privaten Modus</block>
+  <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">Standardagentenkonfiguration</block>
 </blocks>
