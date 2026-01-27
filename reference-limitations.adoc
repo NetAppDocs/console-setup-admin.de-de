@@ -34,9 +34,9 @@ Siehe Knowledge Base-Artikellink:https://kb.netapp.com/Advice_and_Troubleshootin
 
 
 
-=== SSL-Entschlüsselung wird nicht unterstützt
+=== SSL-Entschlüsselung wird nur für Cloud Volumes ONTAP unterstützt
 
-Die Konsole unterstützt keine Firewall-Konfigurationen mit aktivierter SSL-Entschlüsselung. Wenn die SSL-Entschlüsselung aktiviert ist, werden Fehlermeldungen in der Konsole angezeigt und die Agenteninstanz wird als *Getrennt* angezeigt.
+Transparente Proxyserver werden nur für Agenten unterstützt, die mit Cloud Volumes ONTAP verknüpft sind. Sie können keinen transparenten Proxy für einen Agenten verwenden, wenn er mit anderen NetApp Datenservices verwendet wird. Wenn Sie NetApp Datenservices mit Cloud Volumes ONTAP verwenden, erstellen Sie einen dedizierten Agenten für Cloud Volumes ONTAP, bei dem Sie einen transparenten Proxyserver verwenden können.
 
 Für mehr Sicherheit haben Sie die Möglichkeit,link:task-installing-https-cert.html["Installieren Sie ein von einer Zertifizierungsstelle (CA) signiertes HTTPS-Zertifikat."] .
 
