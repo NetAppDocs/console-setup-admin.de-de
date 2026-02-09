@@ -21,7 +21,7 @@ Organisationsadministrator, Föderationsadministrator, Föderationsbetrachter.li
 
 
 
-== Identitätsföderation mit der NetApp -Support-Site
+== Einmaliges Anmelden mit NetApp Support Site
 
 Durch die Verbindung mit der NetApp -Support-Site können sich Benutzer mit denselben Anmeldeinformationen bei der Konsole, Active IQ Digital Advisor und anderen zugehörigen Apps anmelden.
 
@@ -38,7 +38,7 @@ Das NetApp Supportteam prüft und bearbeitet Ihre Anfrage.
 
 
 
-== Richten Sie eine Verbundverbindung mit Ihrem Identitätsanbieter ein
+== Einmaliges Anmelden mit Ihrem Identitätsanbieter
 
 Sie können eine Verbundverbindung mit Ihrem Identitätsanbieter einrichten, um Single Sign-On (SSO) für die Konsole zu aktivieren.  Der Vorgang umfasst die Konfiguration Ihres Identitätsanbieters, sodass dieser NetApp als Dienstanbieter vertraut, und die anschließende Herstellung der Verbindung in der Konsole.
 

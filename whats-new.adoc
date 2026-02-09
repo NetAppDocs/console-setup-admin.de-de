@@ -18,6 +18,12 @@ Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetA
 
 
 
+== 09. Februar 2026
+
+includes::_whatsnew/2026-02-09.adoc[]
+
+
+
 == 13. Januar 2026
 
 

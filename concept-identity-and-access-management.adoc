@@ -18,7 +18,7 @@ Mit der Identitäts- und Zugriffsverwaltung (IAM) der NetApp Console können Sie
 
 Die Ressourcen sind hierarchisch angeordnet: An oberster Stelle steht die Organisation, gefolgt von Ordnern (die weitere Ordner oder Projekte enthalten können) und dann Projekten, die Speichersysteme, Workloads und Agenten enthalten.
 
-Weisen Sie Mitgliedern auf Organisations-, Ordner- oder Projektebene rollenbasierte Zugriffskontrollberechtigungen (RBAC) zu, um sicherzustellen, dass die Benutzer den entsprechenden Zugriff auf Ressourcen haben.
+Weisen Sie Zugriffsrollen auf Organisations-, Ordner- oder Projektebene zu, damit Benutzer den richtigen Zugriff auf Ressourcen haben.
 
 
 NOTE: Sie benötigen die Rollen _Super admin_, _Organization admin_ oder _Folder or project admin_, um IAM in der NetApp Console zu verwalten.
@@ -57,7 +57,7 @@ link:task-iam-manage-folders-projects.html["Erfahren Sie, wie Sie Ordner zu Ihre
 
 === Ressourcen
 
-Zu den Ressourcen gehören Speichersysteme, Keystone Abonnements sowie Console-Agenten.
+Eine _Ressource_ ist eine Entität, die der Console bekannt ist und die einem Projekt zugewiesen werden kann. _Ressourcen_ umfassen Speichersysteme, Keystone-Abonnements, einige NetApp Backup and Recovery-Workloads sowie Console-Agenten.
 
 + Eine Ressource muss einem Projekt zugeordnet werden, bevor jemand darauf zugreifen kann.
 
@@ -69,14 +69,10 @@ Beispielsweise können Sie ein Cloud Volumes ONTAP -System einem einzelnen Proje
 
 link:task-iam-manage-resources.html["Erfahren Sie, wie Sie Ressourcen Projekten zuordnen."]
 
-Speichersysteme und Keystone -Abonnements:: Speichersysteme sind die primären Ressourcen, die Sie in der NetApp Console verwalten. Die NetApp Console unterstützt die Verwaltung von sowohl lokalen als auch Cloud-Speichersystemen. Bevor jemand auf ein Projekt zugreifen kann, muss diesem ein Speichersystem hinzugefügt werden.
-+
---
-Speichersysteme werden automatisch dem Projekt zugeordnet, in dem sie hinzugefügt werden. Sie können sie aber auch über die Seite *Ressourcen* mit anderen Projekten oder Ordnern verknüpfen.
-
-Keystone -Abonnements sind außerdem Ressourcen, die Sie Projekten zuordnen können, um Benutzern Zugriff auf das Abonnement in der NetApp Console zu gewähren.
-
---
+Speichersysteme und Keystone -Abonnements:: Speichersysteme sind die primären Ressourcen, die Sie in NetApp Console verwalten. NetApp Console unterstützt die Verwaltung sowohl lokaler als auch Cloud-Speichersysteme. Sie müssen einem Projekt ein Speichersystem hinzufügen, damit die dem Projekt zugewiesenen Personen darauf zugreifen können.
+Speichersysteme:: Speichersysteme werden automatisch dem Projekt zugeordnet, in dem sie hinzugefügt werden, aber Sie können sie auf der Seite *Ressourcen* auch anderen Projekten oder Ordnern zuordnen. Sie können FSx for NetApp ONTAP-Speichersysteme nicht Projekten oder Ordnern zuordnen, aber Sie können sie auf der Seite *Systeme* oder unter Workloads einsehen.
+Keystone -Abonnements:: Keystone -Abonnements sind außerdem Ressourcen, die Sie Projekten zuordnen können, um Benutzern Zugriff auf das Abonnement in der NetApp Console zu gewähren.
+Backup and Recovery-Workloads (Oracle und Microsoft SQL Server):: Einige Backup und Recovery Workloads werden ebenfalls als Ressourcen betrachtet. Sie können Benutzern Berechtigungen für den Zugriff auf Backup und
 
 
 [[associate-agents]]

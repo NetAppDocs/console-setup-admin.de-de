@@ -1,0 +1,22 @@
+= Console Agent 4.4.0
+:allow-uri-read: 
+
+
+
+
+=== Console Agent 4.4.0
+
+Die Version 4.4.0 unterstützt sowohl den Standardmodus als auch den eingeschränkten Modus.
+
+Diese Version des Console-Agenten enthält Sicherheitsverbesserungen und Fehlerbehebungen.
+
+
+
+=== NetApp Console
+
+Diese Version enthält Folgendes:
+
+.Unterstützung für rollenbasierte Zugriffssteuerung für NetApp Backup and Recovery-Workloads (Oracle und Microsoft SQL Server)
+Sie können Backup- und Wiederherstellungs-Workloads (Oracle und Microsoft SQL Server) Projekten zuordnen. Nach der Zuordnung zu einem Projekt können Benutzer, die für das Projekt eine Backup- und Wiederherstellungsrolle zugewiesen bekommen haben, mit den Workloads arbeiten. Andere Workloads werden derzeit nicht mit rollenbasiertem Zugriff unterstützt.
+
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-rbac-setup.html["Erfahren Sie mehr über die Einrichtung von rollenbasiertem Zugriff für Backup- und Recovery-Workloads."^]

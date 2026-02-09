@@ -4,7 +4,7 @@ permalink: concept-org-partnerships.html
 keywords: identity federation, single sign-on, SSO, identity provider, IdP, SAML, Microsoft Entra ID, AD FS, PingFederate, ACS URL, Entity ID, user access, security, productivity, compliance, authentication, business continuity, account management, user experience, access control, workflow automation, credential management, login process, organization admin, bluexp, BlueXP 
 summary: Durch die Einrichtung von Partnerschaften zwischen Organisationen in der NetApp Console können Organisationspartner NetApp -Ressourcen über Organisationsgrenzen hinweg sicher verwalten, die Zusammenarbeit optimieren und die Sicherheit verbessern. 
 ---
-= Partnerschaften in der NetApp Console
+= Organisationspartnerschaften in NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -26,7 +26,7 @@ Kunden können MSPs oder Wiederverkäufer zur Verwaltung von NetApp -Umgebungen 
 Als Partner erhalten Sie zentrale Transparenz und Kontrolle über alle Kundenumgebungen.  Sie können problemlos zur Organisation eines Kunden wechseln, um Ressourcen zu verwalten, Datendienste auszuführen und den Zustand innerhalb definierter Grenzen zu überwachen. Dadurch wird der Bedarf an benutzerdefinierten Tools reduziert und die Übereinstimmung mit den Richtlinien jedes Kunden sichergestellt.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"]Weisen Sie einem oder mehreren Benutzern die Rolle „Partnerschaftsadministrator“ zu.
-Weisen Sie einem oder mehreren Benutzern in der initiierenden und der empfangenden Organisation die Rolle „Partnerschaftsadministrator“ zu, um Partnerschaften zu erstellen und zu verwalten. Sie können die Rolle „Partnerschaftsbetrachter“ Benutzern zuweisen, die Partnerschaften nur anzeigen, aber nicht verwalten müssen.
+Weisen Sie einem oder mehreren Benutzern in der initiierenden und der empfangenden Organisation die Rolle Partnership admin zu, damit sie Partnerschaften erstellen und verwalten können. Sie können Benutzern, die Partnerschaften lediglich einsehen, aber nicht verwalten müssen, die Rolle Partnership viewer zuweisen.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Teilen Sie Ihre Organisations-ID mit der initiierenden Organisation
 [role="quick-margin-para"]

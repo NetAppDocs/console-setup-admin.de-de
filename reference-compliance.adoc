@@ -16,4 +16,4 @@ summary: Innerhalb der Konsole verfügt jeder Benutzer über ein Profil, das Inf
 [role="lead"]
 Die NetApp Console ist SOC 2 Typ II-konform.
 
-link:https://www.netapp.com/responsibility/trust-center/compliance/soc-2/["Erfahren Sie mehr über die SOC-2-Konformität von NetApp."]
+link:https://www.netapp.com/responsibility/trust-center/compliance/soc-2/["Erfahren Sie mehr über die SOC-2-Konformität von NetApp."^]

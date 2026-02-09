@@ -191,6 +191,7 @@ includedPermissions:
 - compute.forwardingRules.delete
 - compute.forwardingRules.get
 - compute.forwardingRules.setLabels
+- compute.forwardingRules.update
 - compute.globalOperations.get
 - compute.healthChecks.create
 - compute.healthChecks.delete
@@ -406,6 +407,9 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 
 
 | compute.forwardingRules.setLabels | Labels für Weiterleitungsregeln der Organisation festlegen oder aktualisieren. | Nein | Ja | Nein 
+
+
+| compute.forwardingRules.update | Aktualisieren Sie bestehende Weiterleitungsregeln für das Verkehrsmanagement. | Nein | Ja | Nein 
 
 
 | compute.globalOperations.get | Um den Status von Vorgängen abzurufen. | Ja | Ja | Nein 
@@ -790,6 +794,12 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 == Änderungsprotokoll
 
 Die hinzugefügten und entfernten Berechtigungen sind unten aufgeführt.
+
+
+
+=== 09. Februar 2026
+
+Die  `compute.forwardingRules.update`Berechtigung wurde hinzugefügt, um Infrastructure Manager in Cloud Volumes ONTAP-Bereitstellungen in Google Cloud zu unterstützen.
 
 
 
