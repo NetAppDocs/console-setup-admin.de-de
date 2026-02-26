@@ -2613,8 +2613,6 @@
   <block id="9964d0b6e519677dfa6bcd4597b081a2" category="list-text"><block ref="9964d0b6e519677dfa6bcd4597b081a2" category="inline-link-rx"></block></block>
   <block id="2971acb1ab572cfb61b7c86d49e2b300" category="inline-link">Cloud Volumes ONTAP Dokumente</block>
   <block id="8c1b893f08cfaa147e0cf92bf09039b9" category="list-text"><block ref="8c1b893f08cfaa147e0cf92bf09039b9" category="inline-link-rx"></block></block>
-  <block id="32bf39c0f4f8e0ff3b8343a1c55eccc0" category="inline-link">Dokumente zur digitalen Geldbörse</block>
-  <block id="07cad670347ede0ff6ee0e3fb79a5e7b" category="list-text"><block ref="07cad670347ede0ff6ee0e3fb79a5e7b" category="inline-link-rx"></block></block>
   <block id="3014dc2d87cf02248e7abe6b8ac89106" category="inline-link">On-Premises- ONTAP -Cluster-Dokumente</block>
   <block id="e05b0721a950cb94ec4d815fb2fcb330" category="list-text"><block ref="e05b0721a950cb94ec4d815fb2fcb330" category="inline-link-rx"></block></block>
   <block id="7596270426e8c5f92be308ff330e0e64" category="inline-link">Replikationsdokumente</block>
@@ -5365,8 +5363,6 @@
   <block id="33fb61c4c752d541a30c9ba8194091da" category="section-title">26. November 2025</block>
   <block id="90e7692e452d555a08bc34e6a38ecd0c" category="section-title">06. Februar 2023</block>
   <block id="47d455f427b4674cc00157a8a2934409" category="paragraph">Folgende Berechtigungen wurden dieser Richtlinie hinzugefügt:</block>
-  <block id="e97ae785ddbd746339946844f92175e6" category="inline-link">Klassifizierungsdokumente</block>
-  <block id="6847efe16c9bfc0feacaef65fc05b7b9" category="list-text"><block ref="6847efe16c9bfc0feacaef65fc05b7b9" category="inline-link-rx"></block></block>
   <block id="16d62d361fbd1153b9fe75b035aa7c51" category="paragraph">Sie können den vorhandenen transparenten Proxy-Server eines Console-Agenten aktualisieren, indem Sie die folgende Funktion verwenden:<block ref="091092579ca8cede1b760e7c5a90a003" prefix=" " category="inline-code"></block> Befehl oder entfernen Sie den transparenten Proxy-Server mithilfe des Befehls<block ref="ef5ebb9e0c08ee0463e7503ff1111f4c" prefix=" " category="inline-code"></block> Befehl.  Weitere Informationen finden Sie in der Dokumentation zu<block ref="1b2f5cd7e64b458e431e40fa20571324" category="inline-link-macro-rx"></block> Die</block>
   <block id="e403ae80ee5407293bf60157033759c8" category="list-text">Ordner- oder Projektdetails eingeben:</block>
   <block id="70fdeef63f056c10a8cdcc5f3fbc8eb3" category="inline-xref">Erfahren Sie, wie Sie Ressourcen entfernen</block>
@@ -5594,7 +5590,6 @@
   <block id="eedfa09a5feb67c791cc20a479679c67" category="paragraph">Die NetApp Console ist SOC 2 Typ II-konform.</block>
   <block id="051ae024df3188ffe4e3ac43a493c874" category="inline-link-macro">Erfahren Sie mehr über die SOC-2-Konformität von NetApp.</block>
   <block id="a7cbfcc3f40f9b759d21b6e0bfb565ec" category="cell">Ermöglicht einem Benutzer uneingeschränkten Zugriff auf zugewiesene Projekte und Ordner. Kann Mitglieder zu Ordnern oder Projekten hinzufügen, die sie verwalten, sowie beliebige Aufgaben ausführen und beliebige Datendienste oder Anwendungen auf Ressourcen innerhalb des ihnen zugewiesenen Ordners oder Projekts verwenden. Ordner- oder Projektadministratoren können keine Konsolenagenten erstellen.</block>
-  <block id="143bd02c953bba9b731282024d3a9f3d" category="cell">Ermöglicht Benutzern das Anzeigen der Scanergebnisse der NetApp Data Classification . Benutzer mit dieser Rolle können Compliance-Informationen anzeigen und Berichte für Ressourcen erstellen, auf die sie Zugriffsberechtigung haben. Diese Benutzer können das Scannen von Volumes, Buckets oder Datenbankschemata weder aktivieren noch deaktivieren. Die Klassifizierung hat keine Administratorrolle.</block>
   <block id="1282f90034162aa1eb616797e0379691" category="paragraph">Sie müssen dem Konsolenagenten die entsprechenden Berechtigungen erteilen, damit er Operationen in Ihrer Cloud-Umgebung durchführen kann. Über die Links auf dieser Seite erhalten Sie schnell Zugriff auf die Berechtigungen, die Sie je nach Ihrem Ziel benötigen.</block>
   <block id="0429753823dd56c6321879ac91c61377" category="cell">Einen Konsolenagenten über die Konsole bereitstellen Um einen Konsolenagenten in AWS bereitzustellen, benötigt der Benutzer bestimmte Berechtigungen.</block>
   <block id="6a576eacbcc0768a7faf1facae7a80dd" category="cell">Das AWS-Benutzerkonto, das Sie zum Bereitstellen des Datenbrokers verwenden, muss über die erforderlichen Berechtigungen verfügen.</block>
@@ -5951,4 +5946,9 @@
   <block id="1bad3fa525f7b2c60b554cc8a36a911c" category="list-text">cloudformation:ListStacks</block>
   <block id="a09b37992441a5c2061c0ef135b80024" category="section-title">24. Februar 2026</block>
   <block id="51b31e1901c03d4b274f371dd730c779" category="paragraph">Für die Data Classification ist nun folgende Berechtigung erforderlich:</block>
+  <block id="9ba1f0e426e643179b44f5146f795c55" category="cell">Ermöglicht Benutzern, NetApp Data Classification-Scanergebnisse anzuzeigen. Benutzer mit dieser Rolle können Compliance-Informationen anzeigen und Berichte für Ressourcen generieren, auf die sie Zugriff haben. Diese Benutzer können das Scannen von Volumes, Buckets oder Datenbank-Schemas nicht aktivieren oder deaktivieren. Data Classification hat keine Admin-Rolle.</block>
+  <block id="9320804217d782369dccfe3cfe90fd29" category="inline-link">Data Classification-Dokumentation</block>
+  <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
+  <block id="c19e034a7ae60fb90287c5050a076d5a" category="inline-link">Licenses and subscriptions Dokumentation</block>
+  <block id="3dc73d95873fb59ed12df54318d70e6a" category="list-text"><block ref="3dc73d95873fb59ed12df54318d70e6a" category="inline-link-rx"></block></block>
 </blocks>
