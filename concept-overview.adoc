@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: concept-overview.html 
-keywords: overview, concepts, features, use case, cloud manager, bluexp, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
-summary: Die Konsole vereinheitlicht Speicherverwaltung und -schutz über eine hybride Multi-Cloud mit integrierten Datendiensten zum Schutz und zur Optimierung von Daten. 
+keywords: overview, concepts, features, use case, cloud manager, netapp console, how bluexp works, supported cloud providers, cloud providers, hyperscalers, aws, google, how NetApp Console works 
+summary: Die NetApp Console hilft Ihnen, Ihre Daten in all Ihren Cloud- und On-Premises-Systemen zu verwalten und zu schützen. Sie enthält Tools, um Ihre Daten sicher und funktionsfähig zu halten. 
 ---
-= Erfahren Sie mehr über die NetApp Console
+= NetApp Console für einheitliches Speichermanagement
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,63 @@ summary: Die Konsole vereinheitlicht Speicherverwaltung und -schutz über eine h
 
 
 [role="lead"]
-Die Konsole vereinheitlicht Speicherverwaltung und -schutz über eine hybride Multi-Cloud mit integrierten Datendiensten zum Schutz und zur Optimierung von Daten.
+Die NetApp Console hilft Ihnen, Ihre Daten in all Ihren Cloud- und On-Premises-Systemen zu verwalten und zu schützen. Sie enthält Tools, um Ihre Daten sicher und funktionsfähig zu halten.
 
-Es ist als Service-Plattform (SaaS) oder als selbstgehostete Option verfügbar, die Sie in Ihrer eigenen Cloud installieren können. Es bietet Speichermanagement, Datenmobilität, Datenschutz sowie Datenanalyse und -kontrolle. Die Managementfunktionen werden über eine webbasierte Konsole und APIs bereitgestellt.
+Nutzen Sie die Console als Software-as-a-Service (SaaS)-Anwendung oder installieren Sie sie in Ihrer Cloud- oder On-Premises-Umgebung (eingeschränkter oder privater Modus). Jeder Modus unterstützt unterschiedliche Funktionsumfänge und Sicherheitsanforderungen.
 
-
-
-== Zentralisierte Speicherverwaltung
-
-Entdecken, implementieren und verwalten Sie Cloud- und lokalen Speicher mit der Konsole.
+Die Console arbeitet mit Console-Agenten zusammen, die Sie in Ihrer Umgebung einsetzen, um Ressourcen zu verwalten und Prozesse in Ihren lokalen und Cloud-Umgebungen zu orchestrieren.
 
 
 
-=== Unterstützter Cloud- und On-Premises-Speicher
+== Wählen Sie aus, wie Sie auf NetApp Console zugreifen möchten.
 
-Sie können die folgenden Speichertypen über die Konsole verwalten:
+Starten Sie mit der Nutzung der NetApp Console, indem Sie sich für die SaaS-Anwendung (Standardmodus) registrieren, sie in Ihrer Cloud (eingeschränkter Modus) oder auf Ihren eigenen Systemen (privater Modus) installieren. Einige Funktionen sind im eingeschränkten oder privaten Modus nicht verfügbar.
+
+link:concept-modes.html["Weitere Informationen zu Bereitstellungsmodi"] .
+
+
+
+== Erweitern Sie die Funktionen der Console mit Console Agents
+
+Console-Agenten sind schlanke Softwarekomponenten, die die Verbindung zur NetApp Console-SaaS-Anwendung und zu Cloud-basierten APIs herstellen und so erweiterte Funktionen und Datendienste ermöglichen.
+
+Im eingeschränkten oder privaten Modus installieren Sie einen Console-Agenten in Ihrer Cloud- oder On-Premises-Umgebung, um auf die NetApp Console-Anwendung zuzugreifen. Sie müssen zusätzliche Agenten bereitstellen, um Funktionen zu unterstützen, die eine direkte Verbindung zu NetApp Console und deren APIs erfordern.
+
+link:concept-agents.html["Erfahren Sie mehr über Konsolenagenten"] .
+
+
+
+== Benutzerzugriff und Berechtigungen in der NetApp Console verwalten
+
+Die Konsole bietet Identitäts- und Zugriffsmanagement (IAM), um die Sicherheit und Kontrolle über Ihre Dateninfrastruktur zu verbessern. Organisieren Sie Ihre Speicher- und Datendienste anhand von Organisationsrollen und -verantwortlichkeiten, um das Risiko unberechtigten Zugriffs zu reduzieren und gleichzeitig die betriebliche Effizienz aufrechtzuerhalten.
+
+* Eine übergeordnete _organization_ ermöglicht es Ihnen, den Zugriff auf Speichersysteme und Projekte in Ihrer gesamten Infrastruktur zu gewähren und zu entziehen
+* _Ordner_ ermöglichen es Ihnen, Speicherressourcen und Projekte basierend auf Geschäftsfunktion oder Compliance-Anforderungen zusammenzufassen.
+* _Projekte_ ermöglichen es Ihnen, zu steuern, welche Teams auf bestimmte Speichersysteme, Volumes und Datendienste zugreifen
+* _Rollenbasierte Zugriffskontrolle (RBAC)_ ermöglicht es Ihnen, Teammitgliedern auf verschiedenen Ebenen Berechtigungen für die Speicherverwaltung zu erteilen, sodass Sie Aufgaben delegieren können, ohne zu viel Zugriff zu gewähren
+
+
+link:concept-identity-and-access-management.html["Erfahren Sie mehr über IAM in der NetApp Console"]
+
+
+
+== Sicherheit und Compliance in NetApp Console
+
+Aktivieren Sie Sicherheits- und Compliance-Funktionen wie Single Sign-On (SSO), um den Zugriff auf Ihre Speicher- und Datendienste zu steuern. Benutzer mit der Rolle Organisation-Administrator können den Nur-Lesen-Modus standardmäßig festlegen, sodass Benutzer erhöhte Berechtigungen anfordern müssen, um Änderungen an Speichersystemen vorzunehmen und Datendienste zu nutzen. Sie können auch die NetApp Console verwenden, um die Speicherverwaltung und Benutzeraktivitäten zu überwachen. Die NetApp Console ist SOC 2 Typ 2-zertifiziert, und NetApp stellt SOC 2-Berichte für Kunden bereit.
+
+https://www.netapp.com/company/trust-center/compliance/soc-2/["Sehen Sie sich die SOC 2-Berichte von NetApp an"^]
+
+
+
+== NetApp Console-Funktionen und unterstützter Speicher
+
+NetApp Console unterstützt eine Vielzahl von Speichertypen, Funktionen und Datendiensten in Ihren lokalen und Cloud-Umgebungen. Verwenden Sie die Console, um Ihre Speichersysteme zu verwalten, deren Zustand und Leistung zu überwachen und Datendienste zu aktivieren, um Ihre Daten zu schützen und zu optimieren.
+
+
+
+=== Unterstützte Cloud- und lokale Speicher in NetApp Console
+
+Verwalten Sie diese Speichertypen über die Console:
 
 Cloud-Speicherlösungen::
 +
@@ -62,97 +104,54 @@ Cloud-Objektspeicher::
 
 
 
-=== Speicherverwaltung
+=== Speicherverwaltung und Gesundheitsdienste in NetApp Console
 
-Innerhalb der Konsole stellen _Systeme_ erkannten oder bereitgestellten Speicher dar.  Sie können ein _System_ auswählen, um es in NetApp -Datendienste zu integrieren oder den Speicher zu verwalten, beispielsweise durch Hinzufügen von Volumes.
+NetApp Console bietet eine einheitliche Verwaltung Ihrer NetApp Speicherinfrastruktur über eine einzige Schnittstelle.
+
+In der Console repräsentieren _Systeme_ Ihre erkannten oder bereitgestellten Speicher. Verwalten Sie Speichervolumes direkt in der Console oder öffnen Sie die Managementoberfläche des Systems für weitere Optionen.
 
 image:screenshot-canvas.png["Ein Screenshot der Konsole, der mehrere Systeme zeigt. Eine Option wird ausgewählt und zeigt die Möglichkeit, NetApp -Datendienste zu aktivieren oder *System eingeben* auszuwählen, um den Speicher zu verwalten."]
 
+Nutzen Sie neben der Speicherverwaltung auch Infrastrukturdienste, um Ihre Dateninfrastruktur in all Ihren Umgebungen zu überwachen und zu verwalten.
 
-
-== Integrierte Datendienste und Speicherverwaltung zum Schutz, zur Sicherung und zur Optimierung von Daten
-
-Die Konsole bietet Datendienste zur Sicherung und Aufrechterhaltung der Speicherverfügbarkeit.
-
-Speicherwarnungen:: Zeigen Sie Probleme im Zusammenhang mit Kapazität, Verfügbarkeit, Leistung, Schutz und Sicherheit in Ihrer ONTAP Umgebung an.
-Automatisierungszentrum:: Verwenden Sie skriptbasierte Lösungen, um die Bereitstellung und Integration von NetApp -Produkten und -Services zu automatisieren.
-NetApp Backup and Recovery:: Sichern und Wiederherstellen von Cloud- und lokalen Daten.
-NetApp Data Classification:: Machen Sie Ihre Anwendungsdaten und Cloud-Umgebungen datenschutzbereit.
-NetApp Copy and Sync:: Synchronisieren Sie Daten zwischen lokalen und Cloud-Datenspeichern.
-NetApp Digital Advisor (Active IQ):: Nutzen Sie prädiktive Analysen und proaktiven Support, um Ihre Dateninfrastruktur zu optimieren.
+Gesundheits- und Leistungsüberwachung:: Sehen Sie sich ein Dashboard zum Zustand und zur Leistung Ihrer Speichersysteme an und erhalten Sie Benachrichtigungen, um Probleme zu beheben, bevor sie zu Schwierigkeiten führen.
 Licenses and subscriptions:: Verwalten und überwachen Sie Ihre Lizenzen und Abonnements.
-NetApp Disaster Recovery:: Schützen Sie lokale VMware-Workloads mithilfe von VMware Cloud auf Amazon FSx für ONTAP als Disaster Recovery-Site.
-Lebenszyklusplanung:: Identifizieren Sie Cluster mit aktueller oder prognostizierter geringer Kapazität und implementieren Sie Empfehlungen zur Datenschichtung oder zusätzlichen Kapazität.
-NetApp Ransomware Resilience:: Erkennen Sie Anomalien, die zu Ransomware-Angriffen führen könnten.  Schützen und stellen Sie Workloads wieder her.
-NetApp Replication:: Replizieren Sie Daten zwischen Speichersystemen, um Backup und Notfallwiederherstellung zu unterstützen.
-Software-Updates:: Automatisieren Sie die Bewertung, Planung und Ausführung von ONTAP -Upgrades.
+Lebenszyklusplanung:: Identifizieren Sie Cluster mit geringem Speicherplatz und fügen Sie Kapazität hinzu oder verschieben Sie Daten nach Bedarf.
+NetApp Digital Advisor (Active IQ):: Nutzen Sie prädiktive Analysen und proaktiven Support, um Ihre Dateninfrastruktur zu optimieren.
+Software-Updates:: Automatisieren Sie die Bewertung, Planung und Durchführung von ONTAP Upgrades.
+Speicherwarnungen:: Zeigen Sie Probleme im Zusammenhang mit Kapazität, Verfügbarkeit, Leistung, Schutz und Sicherheit in Ihrer ONTAP Umgebung an.
+Systemseite:: Alle Ihre Speichersysteme sind an einem Ort dargestellt und Sie können schnell auf deren Managementoberflächen zugreifen. Per Drag-and-drop können Sie Datenservices direkt von der Systems-Seite aus aktivieren.
 Nachhaltigkeits-Dashboard:: Analysieren Sie die Nachhaltigkeit Ihrer Speichersysteme.
-NetApp Cloud Tiering:: Erweitern Sie Ihren lokalen ONTAP -Speicher auf die Cloud.
-NetApp Volume Caching:: Erstellen Sie ein beschreibbares Cache-Volume, um den Datenzugriff zu beschleunigen oder den Datenverkehr von stark beanspruchten Volumes zu entlasten.
-NetApp Workloads:: Entwerfen, einrichten und betreiben Sie wichtige Workloads mit Amazon FSx for NetApp ONTAP.
-
-
-https://www.netapp.com/bluexp/["Erfahren Sie mehr über die NetApp Console und die verfügbaren Datendienste"^]
-
-
-
-== Unterstützte Cloud-Anbieter
-
-Mit der Konsole können Sie Cloud-Speicher verwalten und Cloud-Dienste in Amazon Web Services, Microsoft Azure und Google Cloud nutzen.
-
-
-
-== Kosten
-
-Für die NetApp Console fallen keine Gebühren an.  Wenn Sie Konsolenagenten in der Cloud bereitstellen oder den in der Cloud bereitgestellten eingeschränkten Modus verwenden, entstehen Ihnen Kosten.  Mit einigen NetApp -Datendiensten sind Kosten verbunden.https://bluexp.netapp.com/pricing["Informieren Sie sich über die Preise für NetApp Datenservices"^]
-
-
-
-== So funktioniert die NetApp Console
-
-Die NetApp Console ist eine webbasierte Konsole, die über die SaaS-Schicht, ein Ressourcen- und Zugriffsverwaltungssystem, Konsolenagenten, die Speichersysteme verwalten und NetApp Datendienste aktivieren, sowie verschiedene Bereitstellungsmodi bereitgestellt wird, um Ihren Geschäftsanforderungen gerecht zu werden.
-
-
-
-=== Software-as-a-Service
-
-Sie greifen auf die Konsole zu über eine https://console.netapp.com["webbasierte Schnittstelle"^] und APIs.  Mit dieser SaaS-Erfahrung können Sie automatisch auf die neuesten Funktionen zugreifen, sobald diese veröffentlicht werden.
-
-
-
-=== Identitäts- und Zugriffsverwaltung (IAM)
-
-Die Konsole bietet Identitäts- und Zugriffsverwaltung (IAM) für die Ressourcen- und Zugriffsverwaltung.  Dieses IAM-Modell ermöglicht eine detaillierte Verwaltung von Ressourcen und Berechtigungen:
-
-* Eine Top-Level-Organisation ermöglicht Ihnen die Verwaltung des Zugriffs über Ihre verschiedenen Projekte hinweg.
-* _Ordner_ ermöglichen es Ihnen, verwandte Projekte zusammenzufassen
-* Mit der Ressourcenverwaltung können Sie eine Ressource einem oder mehreren Ordnern oder Projekten zuordnen
-* Mit der Zugriffsverwaltung können Sie Mitgliedern auf verschiedenen Ebenen der Organisationshierarchie eine Rolle zuweisen
-* link:concept-identity-and-access-management.html["Erfahren Sie mehr über IAM in der NetApp Console"]
 
 
 
 
-=== Konsolenagenten
+=== Datensicherheits- und Schutzdienste in NetApp Console
 
-Für einige zusätzliche Funktionen und Datendienste wird ein Konsolenagent benötigt.  Es ermöglicht Ihnen, Ressourcen und Prozesse in Ihren lokalen und Cloud-Umgebungen zu verwalten.  Sie benötigen es, um einige Systeme zu verwalten (z. B. Cloud Volumes ONTAP) und um einige NetApp -Datendienste zu verwenden.
+Nutzen Sie integrierte Datenservices, um kritische Daten zu schützen und die Speichereffizienz zu optimieren.
 
-link:concept-agents.html["Erfahren Sie mehr über Konsolenagenten"] .
-
-
-
-=== SaaS versus souveräne Cloud-Bereitstellung
-
-Sie können die NetApp Console nutzen, indem Sie sich für das SaaS-Angebot anmelden oder es in Ihrer eigenen Cloud bereitstellen. Wenn Sie die NetApp Console in einer souveränen Cloud einsetzen, beschränkt NetApp die ausgehende Konnektivität, um die Sicherheits- und Compliance-Anforderungen Ihrer Organisation zu erfüllen. Nicht alle Funktionen und Dienste sind verfügbar, wenn die Konsole in einer souveränen Cloud bereitgestellt wird.
-
-NetApp bietet BlueXP weiterhin für Standorte an, die keine ausgehende Konnektivität benötigen. BlueXP kann in Ihrem Netzwerk ohne ausgehende Verbindungen installiert werden. link:task-quick-start-private-mode.html["Informieren Sie sich über BlueXP (privater Modus) für Websites ohne Internetverbindung."]
-
-link:concept-modes.html["Weitere Informationen zu Bereitstellungsmodi"] .
+NetApp Backup and Recovery:: Sichern und Wiederherstellen von Cloud- und lokalen Daten. Abonnement erforderlich.
+NetApp Copy and Sync:: Daten zwischen lokalen und Cloud-Datenspeichern synchronisieren.
+NetApp Disaster Recovery:: Schützen Sie lokale VMware-Workloads mit VMware Cloud on Amazon FSx for ONTAP als Disaster-Recovery-Standort. Erfordert Abonnement.
+NetApp Ransomware Resilience:: Erkennen Sie Anomalien, die zu Ransomware-Angriffen führen könnten. Schützen und stellen Sie Workloads wieder her. Abonnement erforderlich.
+NetApp Replication:: Replizieren Sie Daten zwischen Speichersystemen, um Backup und Notfallwiederherstellung zu unterstützen.
 
 
 
-== SOC 2 Typ 2-Zertifizierung
 
-Eine unabhängige Wirtschaftsprüfungsgesellschaft und ein Wirtschaftsprüfer haben die Konsole geprüft und bestätigt, dass sie SOC 2 Typ 2-Berichte auf Grundlage der geltenden Trust Services-Kriterien erreicht hat.
+=== Kosten- und Compliance-Management-Services in NetApp Console
 
-https://www.netapp.com/company/trust-center/compliance/soc-2/["Sehen Sie sich die SOC 2-Berichte von NetApp an"^]
+Verfolgen Sie den Vertragsstatus in allen Systemen, um Kostenmanagement, Compliance und Kaufentscheidungen zu verbessern.
+
+Automatisierungszentrum:: Nutzen Sie skriptbasierte Lösungen, um die Einrichtung und Verbindung von NetApp Produkten und Services zu automatisieren, um einen reibungsloseren und konsistenteren Betrieb zu ermöglichen.
+NetApp Cloud Tiering:: Erweitern Sie Ihren On-Premises ONTAP Storage in die Cloud, um Kosten zu optimieren und das Datenlebenszyklus-Management zu ermöglichen.
+NetApp Data Classification:: Bereiten Sie Ihre Anwendungsdaten und Cloud-Umgebungen auf die Einhaltung der Datenschutzbestimmungen vor. Kostenlos mit Abonnement.
+NetApp Volume Caching:: Erstellen Sie ein beschreibbares Cache-Volume, um den Zugriff auf Daten zu beschleunigen oder den Datenverkehr von stark frequentierten Volumes auszulagern, um die Leistung und Kosteneffizienz zu erhöhen.
+NetApp Workloads:: Entwerfen, richten Sie ein und betreiben Sie wichtige Workloads mit Amazon FSx für NetApp ONTAP, um Leistung und Kosten für spezifische Anwendungen zu optimieren.
+
+
+
+
+=== NetApp Console-Kosten
+
+NetApp erhebt keine Gebühren für die Console. Es entstehen Kosten, wenn Sie Console-Agenten bereitstellen oder den Restricted-Modus in der Cloud verwenden. Einige NetApp Datenservices haben ebenfalls zugehörige Kosten. https://bluexp.netapp.com/pricing["Informieren Sie sich über die Preise für NetApp Datenservices"^]

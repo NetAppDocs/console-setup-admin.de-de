@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-upgrade-agent.html 
 keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
-summary: Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden, aktualisiert die NetApp Console Ihren Konsolenagenten automatisch auf die neueste Version, sofern der Konsolenagent über ausgehenden Internetzugang verfügt, um das Softwareupdate abzurufen. 
+summary: 'Der Konsolenagent wird automatisch aktualisiert, wenn er über eine ausgehende Verbindung verfügt. Wenn Ihr Konsolenagent keine ausgehende Verbindung hat, können Sie ihn manuell aktualisieren (zum Beispiel im privaten Modus).' 
 ---
 = Upgrades des Konsolenagenten verwalten
 :hardbreaks:
@@ -14,76 +14,7 @@ summary: Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden, a
 
 
 [role="lead"]
-Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden, aktualisiert die NetApp Console Ihren Konsolenagenten automatisch auf die neueste Version, sofern der Konsolenagent über ausgehenden Internetzugang verfügt, um das Softwareupdate abzurufen.
-
-Wenn Sie manuell verwalten müssen, wann der Konsolenagent aktualisiert wird, können Sie automatische Upgrades für den Standardmodus oder den eingeschränkten Modus deaktivieren.
-
-
-
-== Automatische Upgrades deaktivieren
-
-Das Deaktivieren des automatischen Upgrades für Ihren Konsolenagenten umfasst zwei Schritte.  Zuerst müssen Sie sicherstellen, dass Ihr Konsolenagent fehlerfrei und auf dem neuesten Stand ist.  Anschließend bearbeiten Sie eine Konfigurationsdatei, um automatische Upgrades zu deaktivieren.
-
-
-NOTE: Sie können automatische Upgrades nur deaktivieren, wenn Sie über einen Konsolenagenten der Version 3.9.48 oder höher verfügen.
-
-
-
-=== Überprüfen Sie den Zustand Ihres Agenten
-
-Sie sollten überprüfen, ob Ihr Agent stabil ist und alle auf Ihrer Agent-VM ausgeführten Container fehlerfrei und funktionsfähig sind.  Nachdem Sie automatische Upgrades deaktiviert haben, sucht Ihre Agent-VM nicht mehr nach neuen Diensten oder Upgrade-Paketen.
-
-Verwenden Sie einen der folgenden Befehle, um Ihren Konsolenagenten zu überprüfen.  Alle Dienste sollten den Status „Wird ausgeführt“ haben.  Wenn dies nicht der Fall ist, wenden Sie sich an den NetApp -Support, bevor Sie das automatische Upgrade deaktivieren.
-
-Docker (für Ubuntu- und VCenter-Bereitstellungen)::
-+
---
-[source, cli]
-----
-docker ps -a
-----
---
-Podman::
-+
---
-[source, cli]
-----
-podman ps -a
-----
---
-
-
-
-
-=== Automatisches Upgrade für den Agenten deaktivieren
-
-Sie deaktivieren automatische Upgrades, indem Sie das Flag _isUpgradeDisabled_ in der Datei _com/opt/application/netapp/service-manager-2/config.json_ setzen.  Standardmäßig ist dieses Flag auf „Falsch“ gesetzt und Ihr Agent wird automatisch aktualisiert.  Sie können dieses Flag auf „true“ setzen, um automatische Upgrades zu deaktivieren.  Sie sollten mit der JSON-Syntax vertraut sein, bevor Sie diesen Schritt abschließen.
-
-Um das automatische Upgrade wieder zu aktivieren, führen Sie diese Schritte aus und setzen Sie das Flag _isUpgradeDisabled_ auf „false“.
-
-.Schritte
-. Stellen Sie sicher, dass Sie überprüft haben, dass Ihr Agent auf dem neuesten Stand und fehlerfrei ist.
-. Erstellen Sie eine Sicherungskopie der Datei _/opt/application/netapp/service-manager-2/config.json_, um sicherzustellen, dass Sie Ihre Änderungen rückgängig machen können.
-. Bearbeiten Sie die Datei _/opt/application/netapp/service-manager-2/config.json_ und ändern Sie den Wert des Flags _isUpgradeDisabled_ in „true“.
-+
-[source, json]
-----
-  "isUpgradeDisabled": true
-----
-. Speichern Sie Ihre Datei.
-. Starten Sie den Dienst Service Manager 2 neu, indem Sie den folgenden Befehl ausführen:
-+
-[source, cli]
-----
-systemctl restart netapp-service-manager.service
-----
-. Führen Sie den folgenden Befehl aus und überprüfen Sie, ob der Status des Agenten als _aktiv (läuft)_ angezeigt wird:
-+
-[source, cli]
-----
-systemctl status netapp-service-manager.service
-----
-
+Der Konsolenagent wird automatisch aktualisiert, wenn er über eine ausgehende Verbindung verfügt. Wenn Ihr Konsolenagent keine ausgehende Verbindung hat, können Sie ihn manuell aktualisieren (zum Beispiel im privaten Modus).
 
 
 

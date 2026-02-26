@@ -1,0 +1,195 @@
+---
+sidebar: sidebar 
+permalink: task-install-private-mode.html 
+keywords: install dark site, deploy dark site, install private mode, deploy private mode, install agent dark site, agent dark site, dark site, private mode, no internet 
+summary: Stellen Sie die NetApp Console im privaten Modus bereit, damit Sie sie ohne ausgehende Verbindungen nutzen können. Um zu beginnen, installieren Sie einen Console-Agenten, richten Sie die NetApp Console ein, indem Sie auf die Benutzeroberfläche zugreifen, die auf dem Console-Agenten läuft, und geben Sie dann die zuvor eingerichteten Cloud-Berechtigungen an. 
+---
+= Stellen Sie den Console-Agent im privaten Modus bereit
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Stellen Sie die NetApp Console im privaten Modus bereit, damit Sie sie ohne ausgehende Verbindungen nutzen können. Um zu beginnen, installieren Sie einen Console-Agenten, richten Sie die NetApp Console ein, indem Sie auf die Benutzeroberfläche zugreifen, die auf dem Console-Agenten läuft, und geben Sie dann die zuvor eingerichteten Cloud-Berechtigungen an.
+
+
+
+== Schritt 1: Installieren des Konsolenagenten
+
+Laden Sie das Produktinstallationsprogramm von der NetApp Support Site herunter und installieren Sie anschließend die Console manuell auf Ihrem eigenen Linux-Host.
+
+Um die NetApp Console in der https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^] oder der https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^] zu verwenden, sollten Sie separate Anweisungen befolgen, um in diesen Umgebungen loszulegen. https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-getting-started-aws-c2s.html["Erfahren Sie, wie Sie mit Cloud Volumes ONTAP in der AWS Secret Cloud oder Top Secret Cloud loslegen können."^]
+
+.Bevor Sie beginnen
+* Für die Installation des Console-Agenten sind Root-Rechte erforderlich.
+* Abhängig von Ihrem Betriebssystem ist entweder Podman oder Docker Engine erforderlich, bevor Sie den Konsolenagenten installieren.
+
+
+.Schritte
+. Laden Sie die Console-Agent-Software von der https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp Support Site"^]
++
+Laden Sie unbedingt das Offline-Installationsprogramm für private Netzwerke ohne Internetzugang herunter.
+
+. Kopieren Sie das Installationsprogramm auf den Linux-Host.
+. Weisen Sie Berechtigungen zum Ausführen des Skripts zu.
++
+[source, cli]
+----
+chmod +x /path/NetApp-Console-Private-Mode-<version>
+----
++
+Dabei ist <Version> die Version des Konsolenagenten, die Sie heruntergeladen haben.
+
+. Führen Sie das Installationsskript aus:
++
+[source, cli]
+----
+sudo /path/NetApp-Console-Private-Mode-<version>
+----
++
+Dabei ist <Version> die Version des Konsolenagenten, die Sie heruntergeladen haben.
+
+
+
+.Ergebnis
+Der Konsolenagent ist installiert. Sie können jetzt die NetApp Console einrichten.
+
+
+
+== Schritt 2: NetApp Console einrichten
+
+Wenn Sie zum ersten Mal auf die NetApp Console zugreifen, werden Sie aufgefordert, die NetApp Console einzurichten.
+
+.Schritte
+. Öffnen Sie einen Webbrowser und geben Sie die IP-Adresse des Linux-Hosts ein, auf dem Sie den Console agent installiert haben.
+. Wählen Sie *Set Up New Console agent* und folgen Sie den Anweisungen, um das System einzurichten.
++
+** *System Details*: Geben Sie einen Namen für den Console-Agenten und Ihren Firmennamen ein.
+** *Administratorbenutzer erstellen*: Erstellen Sie den Administratorbenutzer für das System.
+** *Review*: Überprüfen Sie die Details, akzeptieren Sie die Lizenzvereinbarung und wählen Sie dann *Set Up*.
+
+
+. Melden Sie sich bei der NetApp Console mit dem soeben erstellten Admin-Benutzer an.
+
+
+.Ergebnis
+Der Konsolenagent ist nun installiert. Greifen Sie über die IP-Adresse in einem Webbrowser auf die NetApp Console im privaten Modus zu.
+
+Wenn neue Versionen der Console-Software verfügbar sind, werden sie auf der NetApp Support Site veröffentlicht. link:task-upgrade-agent.html["Erfahren Sie, wie Sie den Console-Agent aktualisieren."].
+
+.Wie geht es weiter?
+Weisen Sie dem Console-Agenten die Cloud-Provider-Berechtigungen zu, die Sie zuvor eingerichtet haben.
+
+
+
+== Schritt 3: Berechtigungen für den Console-Agenten erteilen
+
+Wenn Sie Cloud Volumes ONTAP Arbeitsumgebungen erstellen möchten, müssen Sie dem Console agent die Cloud-Provider-Berechtigungen bereitstellen, die Sie zuvor eingerichtet haben.
+
+link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["Erfahren Sie, wie Sie Cloud-Berechtigungen vorbereiten"].
+
+[role="tabbed-block"]
+====
+.AWS IAM-Rolle
+--
+Hängen Sie die zuvor erstellte IAM-Rolle an die Console-Agent-EC2-Instanz an.
+
+.Schritte
+. Gehen Sie zur Amazon EC2-Konsole.
+. Wählen Sie *Instanzen* aus.
+. Wählen Sie die Konsolen-Agentinstanz aus.
+. Wählen Sie *Aktionen > Sicherheit > IAM-Rolle ändern*.
+. Wählen Sie die IAM-Rolle und dann *IAM-Rolle aktualisieren* aus.
+
+
+--
+.AWS-Zugriffsschlüssel
+--
+Stellen Sie dem Console Agent den AWS-Zugriffsschlüssel für einen IAM-Benutzer bereit, der über die erforderlichen Berechtigungen verfügt.
+
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen der Organisation* aus.
+. Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
++
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > Agent.
+.. *Anmeldeinformationen definieren*: Geben Sie einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel ein.
+.. *Marketplace-Abonnement*: Verknüpfen Sie ein Marketplace-Abonnement mit diesen Anmeldeinformationen, indem Sie sich jetzt anmelden oder ein vorhandenes Abonnement auswählen.
+.. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
+
+
+
+
+--
+.Azure-Rolle
+--
+Gehen Sie zum Azure-Portal und weisen Sie der virtuellen Maschine des Konsolen-Agents für ein oder mehrere Abonnements die benutzerdefinierte Azure-Rolle zu.
+
+.Schritte
+. Öffnen Sie im Azure-Portal den Dienst *Abonnements* und wählen Sie Ihr Abonnement aus.
++
+Es ist wichtig, die Rolle vom Dienst *Abonnements* zuzuweisen, da dies den Umfang der Rollenzuweisung auf Abonnementebene angibt.  Der _Bereich_ definiert die Menge der Ressourcen, auf die der Zugriff angewendet wird.  Wenn Sie einen Bereich auf einer anderen Ebene angeben (z. B. auf der Ebene der virtuellen Maschine), wird Ihre Fähigkeit, Aktionen innerhalb der NetApp Console auszuführen, beeinträchtigt.
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure-Dokumentation: Umfang von Azure RBAC verstehen"^]
+
+. Wählen Sie *Zugriffskontrolle (IAM)* > *Hinzufügen* > *Rollenzuweisung hinzufügen*.
+. Wählen Sie auf der Registerkarte *Rolle* die Rolle *Konsolenbediener* aus und klicken Sie auf *Weiter*.
++
+
+NOTE: „Konsolenoperator“ ist der in der Richtlinie angegebene Standardname.  Wenn Sie einen anderen Namen für die Rolle gewählt haben, wählen Sie stattdessen diesen Namen aus.
+
+. Führen Sie auf der Registerkarte *Mitglieder* die folgenden Schritte aus:
++
+.. Weisen Sie einer *verwalteten Identität* Zugriff zu.
+.. Wählen Sie *Mitglieder auswählen*, wählen Sie das Abonnement aus, in dem die virtuelle Maschine des Konsolen-Agents erstellt wurde, wählen Sie unter *Verwaltete Identität* *Virtuelle Maschine* und wählen Sie dann die virtuelle Maschine des Konsolen-Agents aus.
+.. Wählen Sie *Auswählen*.
+.. Wählen Sie *Weiter*.
+.. Wählen Sie *Überprüfen + zuweisen*.
+.. Wenn Sie Ressourcen in zusätzlichen Azure-Abonnements verwalten möchten, wechseln Sie zu diesem Abonnement und wiederholen Sie diese Schritte.
+
+
+
+
+--
+.Azure-Dienstprinzipal
+--
+Übergeben Sie dem Console-Agenten die Anmeldeinformationen für den Azure Service Principal, den Sie zuvor eingerichtet haben.
+
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
++
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Microsoft Azure > Agent*.
+.. *Anmeldeinformationen definieren*: Geben Sie Informationen zum Microsoft Entra-Dienstprinzipal ein, der die erforderlichen Berechtigungen erteilt:
++
+*** Anwendungs-ID (Client-ID)
+*** Verzeichnis-ID (Mandant)
+*** Client-Geheimnis
+
+
+.. *Marketplace-Abonnement*: Verknüpfen Sie ein Marketplace-Abonnement mit diesen Anmeldeinformationen, indem Sie sich jetzt anmelden oder ein vorhandenes Abonnement auswählen.
+.. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
+
+
+
+
+--
+.Google Cloud-Dienstkonto
+--
+Verknüpfen Sie das Dienstkonto mit der Konsolen-Agent-VM.
+
+.Schritte
+. Gehen Sie zum Google Cloud-Portal und weisen Sie das Dienstkonto der VM-Instanz des Console-Agenten zu.
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud-Dokumentation: Ändern des Dienstkontos und der Zugriffsbereiche für eine Instanz"^]
+
+. Wenn Sie Ressourcen in anderen Projekten verwalten möchten, gewähren Sie Zugriff, indem Sie das Dienstkonto mit der Rolle „Konsolenagent“ zu diesem Projekt hinzufügen.  Sie müssen diesen Schritt für jedes Projekt wiederholen.
+
+
+--
+====

@@ -140,6 +140,8 @@ includedPermissions:
 - cloudbuild.connections.list
 - cloudbuild.repositories.accessReadToken
 - cloudbuild.repositories.list
+- cloudbuild.workerpools.list
+- cloudbuild.workerpools.get
 - cloudquotas.quotas.get
 - cloudkms.cryptoKeys.getIamPolicy
 - cloudkms.cryptoKeys.setIamPolicy
@@ -640,6 +642,12 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 | cloudbuild.builds.get | Ja | Nein | Nein 
 
 
+| cloudbuild.workerpools.get | Zugriff auf Worker-Pool-Informationen während der Bereitstellung im privaten Modus und der Konvertierung von Cloud Volumes ONTAP-Systemen mithilfe von Infrastructure Manager. | Ja | Ja | Ja 
+
+
+| cloudbuild.workerpools.list | Informationen zum Worker-Pool während der Bereitstellung von Cloud Volumes ONTAP-Systemen im privaten Modus mithilfe von Infrastructure Manager auflisten. | Ja | Nein | Nein 
+
+
 | compute.instances.setServiceAccount .6+| So richten Sie ein Dienstkonto auf der Cloud Volumes ONTAP -Instanz ein.  Dieses Dienstkonto bietet Berechtigungen für die Datenschichtung in einem Google Cloud Storage-Bucket. | Ja | Ja | Nein 
 
 
@@ -794,6 +802,12 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 == Änderungsprotokoll
 
 Die hinzugefügten und entfernten Berechtigungen sind unten aufgeführt.
+
+
+
+=== 26. Februar 2026
+
+Die  `cloudbuild.workerpools.get` und  `cloudbuild.workerpools.list` Berechtigungen wurden hinzugefügt, um Infrastructure Manager bei privaten Bereitstellungen von Cloud Volumes ONTAP in Google Cloud zu unterstützen.
 
 
 

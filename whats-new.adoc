@@ -18,6 +18,41 @@ Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetA
 
 
 
+== 26. Februar 2026
+
+
+
+=== Veröffentlichung im privaten Modus (4.4.0)
+
+Eine neue Version des privaten Modus steht jetzt zum Download bereit von der https://mysupport.netapp.com/site/downloads["NetApp Support Site"^]
+
+
+
+==== BlueXP Private-Modus ist jetzt NetApp Console Private-Modus
+
+NetApp Console 4.4.0 ist die erste Version von NetApp Console im privaten Modus.
+
+Die NetApp Console basiert auf der verbesserten und neu strukturierten BlueXP -Grundlage und ermöglicht die zentrale Verwaltung von NetApp Storage und NetApp Data Services in On-Premises- und Cloud-Umgebungen auf Unternehmensniveau. Sie liefert Einblicke in Echtzeit, schnellere Workflows und eine vereinfachte Administration, die äußerst sicher und konform ist.
+
+Erfahren Sie mehr über die neue NetApp Console in der https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2025-10-06.html["Was ist neu auf der NetApp Console-Seite"^].
+
+Die Version 4.4.0 enthält Aktualisierungen der folgenden NetApp Console-Komponenten und -Dienste.
+
+[cols="3*"]
+|===
+| Komponente oder Dienst | In dieser Version enthaltene Version | Änderungen seit der letzten Version des privaten Modus 
+
+
+| Konsolenagent | 4.4.0 | Gehen Sie zu  https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-02-09.html["Was ist neu auf der NetApp Console-Seite"^] und informieren Sie sich über die Änderungen in Version 4.4.0. 
+
+
+| Sicherung und Wiederherstellung | 5.0.2 (9. Februar 2026) | Gehe zu https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["Was ist neu auf der Seite NetApp Backup and Recovery"^]. 
+
+
+| Einstufung | 1.5.1 (9. Februar 2026) | Gehe zu https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["Was ist neu auf der Seite NetApp Klassifizierung"^]. 
+|===
+
+
 == 09. Februar 2026
 
 

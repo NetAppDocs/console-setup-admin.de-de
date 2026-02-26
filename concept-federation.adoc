@@ -16,6 +16,9 @@ summary: Die Identitätsföderation ermöglicht Single Sign-On mit der NetApp Co
 [role="lead"]
 Single-Sign-On (Föderation) vereinfacht den Anmeldevorgang und erhöht die Sicherheit, indem Benutzer sich mit ihren Unternehmensanmeldeinformationen bei der NetApp Console anmelden können.  Sie können Single Sign-On (SSO) bei Ihrem Identitätsanbieter (IdP) oder über die NetApp Support-Site aktivieren.
 
+
+NOTE: Die Föderation ist nicht verfügbar, wenn sich die NetApp Console im privaten Modus befindet. link:concept-modes.html["Erfahren Sie mehr über NetApp Console-Modi"^].
+
 .Erforderliche Rolle
 Organisationsadministrator, Föderationsadministrator, Föderationsbetrachter.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
 

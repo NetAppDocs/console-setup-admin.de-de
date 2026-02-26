@@ -16,11 +16,9 @@ summary: Deinstallieren Sie einen Konsolenagenten, um Probleme zu beheben oder i
 [role="lead"]
 Deinstallieren Sie einen Konsolenagenten, um Probleme zu beheben oder ihn dauerhaft vom Host zu entfernen.  Die erforderlichen Schritte hängen vom verwendeten Bereitstellungsmodus ab.  Nachdem Sie einen Konsolenagenten aus Ihrer Umgebung entfernt haben, können Sie ihn aus der Konsole entfernen.
 
-link:concept-modes.html["Erfahren Sie mehr über die Bereitstellungsmodi der NetApp Console"] .
 
 
-
-== Deinstallieren Sie den Agenten, wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden
+== Deinstallieren Sie den Agenten, wenn er über ausgehende Konnektivität verfügt
 
 Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden (mit anderen Worten, der Agent-Host verfügt über eine ausgehende Konnektivität), sollten Sie die folgenden Schritte ausführen, um den Agenten zu deinstallieren.
 
@@ -33,6 +31,42 @@ Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden (mit andere
 +
 _silent_ führt das Skript aus, ohne Sie zur Bestätigung aufzufordern.
 
+
+
+
+
+== Deinstallieren Sie den Agenten, wenn er keine ausgehende Verbindung hat
+
+Wenn Ihr Agent keine ausgehende Verbindung hat (zum Beispiel im privaten Modus), müssen Sie die Agentensoftware manuell vom Host entfernen.
+
+.Schritt
+. Stellen Sie eine Verbindung zur Linux-VM für den Konsolen-Agenten her.
+. Führen Sie auf dem Linux-Host die folgenden Befehle aus:
++
+[source, cli]
+----
+/opt/application/netapp/ds/cleanup.sh
+rm -rf /opt/application/netapp/
+----
+. Löschen Sie auf dem Linux-Host alte, nicht verwendete Container-Image-Dateien, um Speicherplatz im Verzeichnis /var für die Re-Installation freizugeben.
++
+[role="tabbed-block"]
+====
+.Podman
+--
+[source, cli]
+----
+podman system prune --all
+----
+--
+.Docker
+--
+[source, cli]
+----
+docker system prune -a
+----
+--
+====
 
 
 

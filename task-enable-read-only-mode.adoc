@@ -18,6 +18,9 @@ Als Sicherheitsmaßnahme können Sie den Nur-Lese-Modus für Ihre NetApp Console
 
 Im Nur-Lese-Modus müssen Benutzer mit Administratorrechten ihre Berechtigungen manuell erhöhen, um Änderungen vornehmen zu können. Dadurch wird sichergestellt, dass die Änderungen beabsichtigt sind.
 
+
+NOTE: Der Nur-Lese-Modus ist nicht verfügbar, wenn sich die NetApp Console im privaten Modus befindet. link:concept-modes.html["Erfahren Sie mehr über NetApp Console-Modi"].
+
 .Erforderliche Zugriffsrollen
 Super-Admin oder Organisationsadministrator.
 

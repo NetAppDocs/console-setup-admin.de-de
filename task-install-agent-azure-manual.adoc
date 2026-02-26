@@ -408,7 +408,7 @@ Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Su
 
 
  a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
  a| 
 Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
 
@@ -481,7 +481,7 @@ Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle mithilfe des Azure-Po
 +
 https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm["Microsoft Azure-Dokumentation: Konfigurieren verwalteter Identitäten für Azure-Ressourcen auf einer VM mithilfe des Azure-Portals"^]
 
-. Kopieren Sie den Inhalt derlink:reference-permissions-azure.html["benutzerdefinierte Rollenberechtigungen für den Connector"] und speichern Sie sie in einer JSON-Datei.
+. Kopieren Sie den Inhalt derlink:reference-permissions-azure.html["benutzerdefinierte Rollenberechtigungen für den Konsolenagenten"] und speichern Sie sie in einer JSON-Datei.
 . Ändern Sie die JSON-Datei, indem Sie dem zuweisbaren Bereich Azure-Abonnement-IDs hinzufügen.
 +
 Sie sollten die ID für jedes Azure-Abonnement hinzufügen, das Sie mit der NetApp Console verwenden möchten.
@@ -715,6 +715,13 @@ Wenn Sie diese Systemvariablen nicht entfernen, schlägt die Installation fehl.
 +
 Wählen Sie entweder die Agenteninstallationsdateien oder eine URL zu den Dateien zum Herunterladen.
 
+
+
++
+
+NOTE: Laden Sie den "online"-Agenten-Installer herunter, der für die Verwendung in Ihrem Netzwerk oder in der Cloud vorgesehen ist. Ein separater "offline"-Installer ist für den Console-Agenten verfügbar, aber er wird nur bei Bereitstellungen im privaten Modus unterstützt.
+
++
 ** NetApp Supportseite (erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^] ,
 
 

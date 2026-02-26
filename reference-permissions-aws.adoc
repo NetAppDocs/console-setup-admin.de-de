@@ -33,6 +33,7 @@ Beachten Sie Folgendes:
 ** link:task-install-agent-aws-marketplace.html#step-2-set-up-aws-permissions["Einrichten von Berechtigungen für eine AWS Marketplace-Bereitstellung"]
 ** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Einrichten von Berechtigungen für lokale Bereitstellungen"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den eingeschränkten Modus einrichten"]
+** link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den privaten Modus einrichten"]
 
 
 

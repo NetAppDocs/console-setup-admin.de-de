@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-quick-start-private-mode.html 
-keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp 
-summary: 'Der private Modus wird normalerweise in lokalen Umgebungen ohne Internetverbindung und mit sicheren Cloud-Regionen verwendet, darunter AWS Secret Cloud, AWS Top Secret Cloud und Azure IL6.  Der private Modus ist mit der NetApp Console noch nicht verfügbar.  NetApp unterstützt diese Umgebungen weiterhin mit der BlueXP -Legacy-Schnittstelle. Link:<doc link to PDF>' 
+keywords: private mode quick start, quick start, aws top secret cloud, aws secret cloud, secret cloud, top secret cloud, bluexp legacy, bluexp, netapp console private mode 
+summary: Der private Modus wird typischerweise in lokalen Umgebungen ohne Internetverbindung und in sicheren Cloud-Regionen verwendet, zu denen AWS Secret Cloud, AWS Top Secret Cloud und Azure IL6 gehören. 
 ---
-= Erste Schritte mit dem Workflow (BlueXP -Privatmodus)
+= Erste Schritte Arbeitsablauf für die NetApp Console im privaten Modus
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,118 +14,165 @@ summary: 'Der private Modus wird normalerweise in lokalen Umgebungen ohne Intern
 
 
 [role="lead"]
-Der private BlueXP Modus (alte BlueXP -Schnittstelle) wird normalerweise in lokalen Umgebungen ohne Internetverbindung und mit sicheren Cloud-Regionen verwendet, darunter AWS Secret Cloud, AWS Top Secret Cloud und Azure IL6.  NetApp unterstützt diese Umgebungen weiterhin mit der alten BlueXP Schnittstelle.
+Sie können NetApp Console lokal oder in einer sicheren Cloud-Umgebung installieren. Der private Modus wird typischerweise in lokalen Umgebungen ohne Internetverbindung und in sicheren Cloud-Regionen verwendet, was  https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^], https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^] und  https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6["Azure IL6"^] umfasst.
 
-link:media/BlueXP-Private-Mode-legacy-interface.pdf["PDF-Dokumentation für den privaten Modus von BlueXP"^]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:task-prepare-private-mode.html["Vorbereiten der Bereitstellung"]
+[role="quick-margin-list"]
+. Bereiten Sie einen dedizierten Linux-Host vor, der die Anforderungen hinsichtlich CPU, RAM, Speicherplatz, Container-Orchestrierungstool und mehr erfüllt.
+. Richten Sie das Netzwerk so ein, dass es den Zugriff auf die Zielnetzwerke ermöglicht.
+. Für Cloud-Bereitstellungen richten Sie Berechtigungen bei Ihrem Cloud-Anbieter ein, damit Sie diese Berechtigungen nach der Installation der Software dem Console-Agenten zuordnen können.
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] link:task-install-private-mode.html["Bereitstellen des Konsolenagenten"]
+[role="quick-margin-list"]
+. Installieren Sie den Console Agent auf Ihrem eigenen Linux-Host.
+. Richten Sie die NetApp Console ein, indem Sie einen Webbrowser öffnen und die IP-Adresse des Linux-Hosts eingeben.
+. Für Cloud-Bereitstellungen stellen Sie der NetApp Console die Berechtigungen bereit, die Sie zuvor eingerichtet haben.
 
 
 
-== Im privaten Modus unterstützte Funktionen und Datendienste
 
-Mithilfe der folgenden Tabelle können Sie schnell erkennen, welche BlueXP -Dienste und -Funktionen im privaten Modus unterstützt werden.
+== Unterstützte Funktionen und Dienste für NetApp Console im privaten Modus
 
-Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstützt werden.
+Die folgende Tabelle listet die Speicherverwaltungsfunktionen, Datendienste und administrativen Funktionen auf, die in der NetApp Console bei der Installation im privaten Modus verfügbar sind. Die Funktionen unterscheiden sich, je nachdem, ob Sie die NetApp Console in der Cloud oder vor Ort installieren.
 
-[cols="19,27,27"]
+
+
+=== Privater Modus in der Cloud installiert
+
+[cols="3*"]
 |===
-| Produktbereich | BlueXP -Dienst oder -Funktion | Privatmodus 
+| Produktbereich | NetApp service oder Funktion | Konsolenagent erforderlich 
 
 
-.10+| *Arbeitsumgebungen* Dieser Teil der Tabelle listet die Unterstützung für die Verwaltung von Arbeitsumgebungen aus dem BlueXP Canvas auf.  Es werden keine unterstützten Sicherungsziele für die BlueXP backup and recovery angezeigt. | Amazon FSx für ONTAP | Nein 
+.2+| *Verwaltung von Speichersystemen* Dieser Abschnitt der Tabelle listet die Unterstützung für die Verwaltung von Speichersystemen von der NetApp Console auf. Er gibt nicht die unterstützten Sicherungsziele für NetApp Backup and Recovery an. | Cloud Volumes ONTAP | Ja, aber da kein Internetzugang besteht, sind die folgenden Funktionen nicht verfügbar: automatisierte Software-Upgrades und AutoSupport. 
 
 
-| Amazon S3 | Nein 
+ a| 
+On-Premises- ONTAP -Cluster
+
+* Erfordert Konnektivität von der Cloud (wo der Console-Agent installiert ist) zur lokalen Umgebung.
++
+Sie müssen einen installierten Console-Agenten haben, um lokale ONTAP Cluster zu erkennen.
 
 
-| Azure-Blob | Nein 
+| Sie können die direkte Erkennung ohne einen Console-Agent verwenden, aber Sie benötigen einen Agenten, um Verwaltungsfunktionen zu nutzen. 
 
 
-| Azure NetApp Files | Nein 
+.3+| *Datendienste*  a| 
+Backup and Recovery
+
+* Im privaten Modus unterstützt NetApp Backup and Recovery nur die Sicherung und Wiederherstellung von ONTAP-Volume-Daten. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Sehen Sie sich die Liste der unterstützten Backup-Ziele für ONTAP -Daten an"^] Die Sicherung und Wiederherstellung von Anwendungsdaten und virtuellen Maschinendaten wird nicht unterstützt.
+* Wird in Google Cloud oder in https://aws.amazon.com/federal/secret-cloud/["AWS Secret Cloud"^], https://aws.amazon.com/federal/top-secret-cloud/["AWS Top Secret Cloud"^] oder https://learn.microsoft.com/en-us/azure/compliance/offerings/offering-dod-il6["Azure IL6"^] nicht unterstützt
+
+| Ja 
 
 
-| Cloud Volumes ONTAP | Ja 
+ a| 
+NetApp Klassifizierung
+
+* Die einzigen unterstützten Datenquellen sind diejenigen, die Sie lokal ermitteln können. https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#supported-data-sources["Zeigen Sie die Quellen an, die Sie lokal entdecken können"^]
+* Funktionen, die einen ausgehenden Internetzugang erfordern, werden nicht unterstützt. https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#limitations["Funktionsbeschränkungen anzeigen"^]
+
+| Ja 
 
 
-| Google Cloud NetApp Volumes | Nein 
+| NetApp Replication | Ja* (nicht erforderlich, wenn von ONTAP on-premises zu ONTAP on-premises repliziert wird) 
 
 
-| Google Cloud-Speicher | Nein 
+| *NetApp Supportvertragsfunktionen* | Keine | -- 
 
 
-| On-Premises- ONTAP -Cluster | Ja 
+.6+| *Administrative Merkmale* | Prüfung | Nein 
 
 
-| E-Series | Nein 
+ a| 
+Licenses and subscriptions-Verwaltung
+
+* Nur BYOL wird im privaten Modus unterstützt.
++
+Für Cloud Volumes ONTAP BYOL wird ausschließlich node-basierte Lizenzierung unterstützt. Capacity-basierte Lizenzierung wird nicht unterstützt. Da keine ausgehende Internetverbindung verfügbar ist, müssen Sie Ihre Cloud Volumes ONTAP Licensing-Datei manuell in der NetApp Console hochladen.
 
 
-| StorageGRID | Nein 
+
+https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage-node-licenses.html#add-unassigned-licenses["Erfahren Sie, wie Sie Lizenzen hinzufügen"^]
+| Nein 
 
 
-.15+| *Dienstleistungen* | Warnungen | Nein 
+| Identitäts- und Zugriffsverwaltung | Nein 
 
 
-| Sicherung und Wiederherstellung | Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] 
+| Cloud-Anbieter-Zugangsdaten verwalten | Nein 
 
 
-| Datenklassifizierung | Ja 
-
-
-| Kopieren und synchronisieren | Nein 
-
-
-| Digitaler Berater | Nein 
-
-
-| Digitale Geldbörse | Ja 
-
-
-| Notfallwiederherstellung | Nein 
-
-
-| Wirtschaftlichkeit | Nein 
-
-
-| Ransomware-Resilienz | Nein 
-
-
-| Replikation | Ja 
-
-
-| Software-Updates | Nein 
-
-
-| Nachhaltigkeit | Nein 
-
-
-| Abstufung | Nein 
-
-
-| Volume-Caching | Nein 
-
-
-| Workload-Factory | Nein 
-
-
-.8+| *Merkmale* | Identitäts- und Zugriffsverwaltung | Ja 
-
-
-| Anmeldeinformationen | Ja 
-
-
-| Föderation | Nein 
-
-
-| Multi-Faktor-Authentifizierung | Nein 
-
-
-| NSS-Konten | Nein 
+| Nur-Lese-Modus | Nein 
 
 
 | Benachrichtigungen | Nein 
+|===
 
 
-| Suche | Nein 
+=== Privater Modus lokal installiert
+
+[cols="3*"]
+|===
+| Produktbereich | NetApp service oder Funktion | Konsolenagent erforderlich 
 
 
-| Zeitleiste | Ja 
+| *Verwaltung von Speichersystemen* Dieser Abschnitt der Tabelle listet die Unterstützung für die Verwaltung von Speichersystemen von der NetApp Console auf. Er gibt nicht die unterstützten Sicherungsziele für NetApp Backup and Recovery an.  a| 
+On-Premises- ONTAP -Cluster
+
+* Erfordert Konnektivität von der Cloud (wo der Console-Agent installiert ist) zur lokalen Umgebung.
++
+Sie müssen einen installierten Console-Agenten haben, um lokale ONTAP Cluster zu erkennen.
+
+
+| Sie können die direkte Erkennung ohne einen Console-Agent verwenden, aber Sie benötigen einen Agenten, um Verwaltungsfunktionen zu nutzen. 
+
+
+.3+| *Datendienste*  a| 
+Backup and Recovery
+
+* Im privaten Modus unterstützt NetApp Backup and Recovery nur die Sicherung und Wiederherstellung von ONTAP-Volume-Daten. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Sehen Sie sich die Liste der unterstützten Backup-Ziele für ONTAP -Daten an"^]
+* Das Sichern und Wiederherstellen von Anwendungsdaten und virtuellen Maschinendaten wird nicht unterstützt.
+
+| Ja 
+
+
+ a| 
+NetApp Klassifizierung
+
+* Die einzigen unterstützten Datenquellen sind diejenigen, die Sie lokal ermitteln können. https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#supported-data-sources["Zeigen Sie die Quellen an, die Sie lokal entdecken können"^]
+* Funktionen, die einen ausgehenden Internetzugang erfordern, werden nicht unterstützt. https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html#limitations["Funktionsbeschränkungen anzeigen"^]
+
+| Ja 
+
+
+| NetApp Replication | Ja* (nicht erforderlich, wenn von ONTAP on-premises zu ONTAP on-premises repliziert wird) 
+
+
+| *NetApp Supportvertragsfunktionen* | Keine | k. A. 
+
+
+.6+| *Administrative Merkmale* | Prüfung | Nein 
+
+
+ a| 
+Licenses and subscriptions-Verwaltung
+
+* Nur BYOL wird im privaten Modus unterstützt.
+
+| Nein 
+
+
+| Identitäts- und Zugriffsverwaltung | Nein 
+
+
+| Cloud-Anbieter-Zugangsdaten verwalten | Nein 
+
+
+| Nur-Lese-Modus | Nein 
+
+
+| Benachrichtigungen | Nein 
 |===

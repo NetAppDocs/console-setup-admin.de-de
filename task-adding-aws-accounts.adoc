@@ -156,7 +156,7 @@ Fügen Sie AWS-Anmeldeinformationen hinzu, indem Sie die ARN einer IAM-Rolle ang
 
 === Einrichten der IAM-Rolle
 
-Richten Sie eine IAM-Rolle ein, die es der NetApp Console -Software als Serviceebene (SaaS) ermöglicht, die Rolle zu übernehmen.
+Richten Sie eine IAM-Rolle ein, die es der NetApp Console Software-as-a-Service (SaaS)-Anwendung ermöglicht, die Rolle zu übernehmen.
 
 .Schritte
 . Gehen Sie zur IAM-Konsole im Zielkonto.

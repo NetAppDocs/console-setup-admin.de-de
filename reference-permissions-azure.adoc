@@ -31,6 +31,7 @@ Sie müssen sicherstellen, dass die Rolle auf dem neuesten Stand ist, da in nach
 ** link:task-install-agent-azure-marketplace.html#step-3-set-up-permissions["Einrichten von Berechtigungen für eine Azure Marketplace-Bereitstellung"]
 ** link:task-install-agent-on-prem.html#agent-permission-aws-azure["Einrichten von Berechtigungen für lokale Bereitstellungen"]
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den eingeschränkten Modus einrichten"]
+** link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den privaten Modus einrichten"]
 
 
 

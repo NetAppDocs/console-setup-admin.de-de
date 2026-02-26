@@ -14,7 +14,7 @@ summary: Installieren Sie ein von einer Zertifizierungsstelle signiertes Zertifi
 
 
 [role="lead"]
-Wenn Sie die NetApp Console im eingeschränkten Modus verwenden, ist die Benutzeroberfläche über die virtuelle Maschine des Konsolenagenten zugänglich, die in Ihrer Cloud-Region oder vor Ort bereitgestellt wird.  Standardmäßig verwendet die Konsole ein selbstsigniertes SSL-Zertifikat, um sicheren HTTPS-Zugriff auf die webbasierte Konsole bereitzustellen, die auf dem Konsolenagenten ausgeführt wird.
+Wenn Sie die NetApp Console im eingeschränkten Modus oder im privaten Modus verwenden, ist die Benutzeroberfläche von der Console-Agent-VM aus zugänglich, die in Ihrer Cloud-Region oder vor Ort bereitgestellt wird. Standardmäßig verwendet die Console ein selbstsigniertes SSL-Zertifikat, um einen sicheren HTTPS-Zugriff auf die webbasierte Console zu ermöglichen, die auf dem Console-Agent ausgeführt wird.
 
 Falls Ihr Unternehmen dies erfordert, können Sie ein von einer Zertifizierungsstelle (CA) signiertes Zertifikat installieren, das einen besseren Sicherheitsschutz bietet als ein selbstsigniertes Zertifikat.  Nachdem Sie das Zertifikat installiert haben, verwendet die Konsole das von der Zertifizierungsstelle signierte Zertifikat, wenn Benutzer auf die webbasierte Konsole zugreifen.
 

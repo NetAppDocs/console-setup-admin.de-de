@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-logging-in.html 
 keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account, federated, federation, federated login, federation login, login with netapp, log in with netapp, sign up, create account 
-summary: Wie Sie sich bei der NetApp Console anmelden, hängt davon ab, welchen Bereitstellungsmodus Sie verwenden. 
+summary: Nachdem Sie sich bei der NetApp Console angemeldet haben, können Sie sich von der webbasierten Konsole aus anmelden, um mit der Verwaltung Ihrer Daten- und Speicherinfrastruktur zu beginnen. 
 ---
 = Melden Sie sich bei der NetApp Console an
 :hardbreaks:
@@ -14,63 +14,23 @@ summary: Wie Sie sich bei der NetApp Console anmelden, hängt davon ab, welchen 
 
 
 [role="lead"]
-Wie Sie sich bei der NetApp Console anmelden, hängt davon ab, welchen Bereitstellungsmodus Sie verwenden.
-
-Sie werden nach 24 Stunden oder beim Schließen Ihres Browsers automatisch abgemeldet.
-
-link:concept-modes.html["Informationen zu den Bereitstellungsmodi der Konsole"] .
-
-[role="tabbed-block"]
-====
-.Standardmodus
---
 Nachdem Sie sich bei der NetApp Console angemeldet haben, können Sie sich von der webbasierten Konsole aus anmelden, um mit der Verwaltung Ihrer Daten- und Speicherinfrastruktur zu beginnen.
 
-.Informationen zu diesem Vorgang
-Sie können sich mit einer der folgenden Optionen bei der NetApp Console anmelden:
-
-* Ihre vorhandenen Anmeldeinformationen für die NetApp Support Site (NSS)
-* Ein NetApp Console mit Ihrer E-Mail-Adresse und einem Passwort
-* Eine Verbundverbindung
-+
-Sie können Single Sign-On verwenden, um sich mit den Anmeldeinformationen aus Ihrem Unternehmensverzeichnis anzumelden (föderierte Identität). link:concept-federation.html["Erfahren Sie, wie Sie eine Identitätsföderation einrichten"] .
-
-
+Nachdem Sie sich angemeldet haben, muss Ihr Console-Organisationsadministrator Ihr Benutzerkonto zu einer Organisation hinzufügen, bevor Sie auf Ressourcen zugreifen können. Wenn Sie sich anmelden, aber keine Ressourcen sehen, wenden Sie sich an Ihren Organisationsadministrator. link:task-user-settings.html#contact-admin["Wenden Sie sich an Ihren Organisationsadministrator"].
 
 .Schritte
-. Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Console"]
+. Navigieren Sie zur NetApp Console-URL. Die URL hängt davon ab, welchen Modus der Console Ihre Organisation verwendet:
++
+** **Standardmodus*: Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Console"]
+** **Eingeschränkter Modus oder Privater Modus**: Öffnen Sie einen Webbrowser und gehen Sie zu der IP-Adresse, auf der der Console agent installiert ist.
+
+
 . Geben Sie auf der Seite *Anmelden* die E-Mail-Adresse ein, die mit Ihrem Login verknüpft ist.
-. Abhängig von der mit Ihrer Anmeldung verknüpften Authentifizierungsmethode werden Sie aufgefordert, Ihre Anmeldeinformationen einzugeben:
+. Je nach dem mit Ihrer Anmeldung verknüpften Authentifizierungsverfahren werden Sie zur Eingabe Ihrer Anmeldedaten aufgefordert.
 +
-** NetApp Cloud-Anmeldeinformationen: Geben Sie Ihr Passwort ein
-** Verbundbenutzer: Geben Sie Ihre Verbundidentitäts-Anmeldeinformationen ein
-** NetApp Support Site-Konto: Geben Sie Ihre NetApp Support Site-Anmeldeinformationen ein
+** Ihre vorhandenen Anmeldeinformationen für die NetApp Support Site (NSS)
+** Ein NetApp Console mit Ihrer E-Mail-Adresse und einem Passwort
+** Eine föderierte Verbindung, wenn Ihr Administrator die Identitätsföderation für Ihre Organisation eingerichtet hat
 
 
 
-
-.Ergebnis
-Sie sind jetzt angemeldet und können mit der Verwaltung Ihrer hybriden Multi-Cloud-Infrastruktur beginnen.
-
---
-.Eingeschränkter Modus
---
-Wenn Sie die Konsole im eingeschränkten Modus verwenden, müssen Sie sich über die Benutzeroberfläche, die lokal auf dem Agenten ausgeführt wird, bei der Konsole anmelden.
-
-.Informationen zu diesem Vorgang
-Die Konsole unterstützt im eingeschränkten Modus die Anmeldung mit einer der folgenden Optionen:
-
-* Eine NetApp Console mit Ihrer E-Mail-Adresse und einem Passwort
-* Eine Verbundverbindung
-+
-Sie können Single Sign-On verwenden, um sich mit den Anmeldeinformationen aus Ihrem Unternehmensverzeichnis anzumelden (föderierte Identität). link:concept-federation.html["Erfahren Sie, wie Sie die Identitätsföderation nutzen"] .
-
-
-
-.Schritte
-. Öffnen Sie einen Webbrowser und geben Sie die IP-Adresse ein, unter der der Agent installiert ist.
-. Geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich anzumelden.
-
-
---
-====

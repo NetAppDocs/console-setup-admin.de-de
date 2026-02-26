@@ -117,4 +117,5 @@ Informationen zum Einrichten von Berechtigungen finden Sie auf den folgenden Sei
 ** link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den eingeschränkten Modus einrichten"]
 
 
+* link:task-prepare-private-mode.html#step-6-prepare-cloud-permissions["Berechtigungen für den privaten Modus einrichten"]
 

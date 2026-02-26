@@ -4,7 +4,7 @@ permalink: task-quick-start-restricted-mode.html
 keywords: quick start, restricted mode quick start, govcloud, government, aws gov, azure gov 
 summary: Beginnen Sie mit der NetApp Console im eingeschränkten Modus, indem Sie Ihre Umgebung vorbereiten und den Konsolen-Agenten bereitstellen. 
 ---
-= Workflow „Erste Schritte“ (eingeschränkter Modus)
+= Erste Schritte Workflow für NetApp Console im eingeschränkten Modus
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -35,3 +35,103 @@ Der eingeschränkte Modus wird normalerweise von staatlichen und lokalen Behörd
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"] link:task-subscribe-restricted-mode.html["Abonnieren Sie NetApp Intelligent Services (optional)"]
 [role="quick-margin-para"]
 Optional: Abonnieren Sie NetApp Intelligent Services über den Marktplatz Ihres Cloud-Anbieters, um Datendienste zu einem Stundensatz (PAYGO) oder über einen Jahresvertrag zu bezahlen.  Zu den NetApp Intelligent Services gehören NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience und NetApp Disaster Recovery.  Die NetApp Data Classification ist ohne zusätzliche Kosten in Ihrem Abonnement enthalten.
+
+
+
+== Unterstützte Funktionen und Dienste für die NetApp Console im eingeschränkten Modus
+
+Die folgende Tabelle listet die Speicherverwaltungsfunktionen, Datendienste und administrativen Funktionen auf, die in NetApp Console verfügbar sind, wenn Sie es im eingeschränkten Modus installieren.
+
+[cols="3*"]
+|===
+| Produktbereich | NetApp service oder Funktion | Konsolenagent erforderlich 
+
+
+.3+| *Verwaltung von Speichersystemen* Diese Tabelle zeigt, welche Speichersysteme Sie über die NetApp Console verwalten können. Es werden keine Sicherungsziele für NetApp Backup and Recovery aufgeführt. | Azure NetApp Files | Nein 
+
+
+| Cloud Volumes ONTAP | Ja 
+
+
+| On-Premises- ONTAP -Cluster | Für die Erkennung und Verwaltung erforderlich. Sie können die direkte Erkennung ohne einen Console-Agent verwenden, aber für die Nutzung der Verwaltungsfunktionen benötigen Sie einen Agent. 
+
+
+.3+| *Datendienste* (Der eingeschränkte Modus unterstützt weniger Datendienste als der Standardmodus)  a| 
+Backup and Recovery
+
+* Unterstützt in Regierungsregionen und Handelsregionen mit eingeschränktem Modus. Nicht unterstützt in souveränen Regionen mit eingeschränktem Modus.
+* Im eingeschränkten Modus unterstützt NetApp Backup and Recovery nur die Sicherung und Wiederherstellung von ONTAP-Volume-Daten. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Sehen Sie sich die Liste der unterstützten Backup-Ziele für ONTAP -Daten an"^]
+
+| Unterstützt in Regierungs- und kommerziellen Regionen im eingeschränkten Modus. Nicht unterstützt in souveränen Regionen im eingeschränkten Modus. Im eingeschränkten Modus unterstützt NetApp Backup and Recovery ausschließlich die Sicherung und Wiederherstellung von ONTAP-Volume-Daten. https://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Sehen Sie sich die Liste der unterstützten Backup-Ziele für ONTAP -Daten an"^] 
+
+
+ a| 
+NetApp Data Classification
+
+* Wird in Regierungsregionen mit eingeschränktem Modus unterstützt.  Wird in kommerziellen Regionen oder in souveränen Regionen mit eingeschränktem Modus nicht unterstützt.
+
+| Ja 
+
+
+ a| 
+NetApp Replication
+
+* Wird in Regierungsregionen mit eingeschränktem Modus unterstützt.  Wird in kommerziellen Regionen oder in souveränen Regionen mit eingeschränktem Modus nicht unterstützt.
+
+| Ja*, (nicht erforderlich, wenn von ONTAP on-premises zu ONTAP on-premises repliziert wird) 
+
+
+| *NetApp Supportvertragsfunktionen* | Keine | k. A. 
+
+
+.12+| *Administrative Merkmale* | Prüfung | Nein 
+
+
+| Automatisierungszentrum | Nein 
+
+
+| Föderation | Nein 
+
+
+| Identitäts- und Zugriffsverwaltung | Nein 
+
+
+ a| 
+Licenses and subscriptions-Verwaltung
+
+Beachten Sie Folgendes:
+
+* Marktplatz-Abonnements (Stunden- und Jahresverträge)
++
+** Für Cloud Volumes ONTAP wird nur die kapazitätsbasierte Lizenzierung unterstützt.
+** In Azure werden Jahresverträge mit Regierungsregionen nicht unterstützt.
+
+
+* BYOL
++
+Für Cloud Volumes ONTAP werden mit BYOL sowohl kapazitätsbasierte als auch knotenbasierte Lizenzierungen unterstützt.
+
+
+| Nein 
+
+
+| Cloud-Anbieter-Zugangsdaten verwalten | Nein 
+
+
+| Multifaktor-Authentifizierung (lokale Benutzer) | Nein 
+
+
+| Benachrichtigungen | Nein 
+
+
+| NSS-Konten | Nein 
+
+
+| Organisationspartnerschaften | Nein 
+
+
+| Nur-Lese-Modus | Nein 
+
+
+| Benachrichtigungen | Nein 
+|===

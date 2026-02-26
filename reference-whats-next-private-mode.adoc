@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: reference-whats-next-private-mode.html 
+keywords: private mode, supported features for private mode 
+summary: Nachdem Sie die NetApp Console im privaten Modus eingerichtet und in Betrieb genommen haben, können Sie die Dienste nutzen, die im privaten Modus unterstützt werden. 
+---
+= Was Sie als Nächstes tun können (privater Modus)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nachdem Sie die NetApp Console im privaten Modus eingerichtet und in Betrieb genommen haben, können Sie die Dienste nutzen, die im privaten Modus unterstützt werden.
+
+Weitere Hilfe finden Sie in der folgenden Dokumentation:
+
+* https://docs.netapp.com/us-en/storage-management-ontap-onprem/index.html["Entdecken Sie lokale ONTAP -Cluster"^]
+* https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html["Scannen Sie lokale ONTAP Volumedaten mit NetApp Classification"^]
+* https://docs.netapp.com/us-en/console-licenses-subscriptions/task-manage-on-prem-clusters.html["Lizenznutzung überwachen"^]
+

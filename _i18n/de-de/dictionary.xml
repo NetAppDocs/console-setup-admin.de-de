@@ -84,8 +84,6 @@
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Wählen Sie *Weiter*.</block>
   <block id="85b8cec39bdb05ec73cd076b2359cfd1" category="list-text">Wählen Sie *Überprüfen + zuweisen*.</block>
   <block id="ddc3be173496396ad174fa34013f6165" category="list-text">Wenn Sie Ressourcen in zusätzlichen Azure-Abonnements verwalten möchten, wechseln Sie zu diesem Abonnement und wiederholen Sie diese Schritte.</block>
-  <block id="94e19270110a66c15c7d6d1718fb017f" category="inline-link-macro">benutzerdefinierte Rollenberechtigungen für den Connector</block>
-  <block id="3e75f6bb25578c951967e7bdcb93a618" category="list-text">Kopieren Sie den Inhalt der<block ref="e41800fb708ad5eec4d221bf716e5746" category="inline-link-macro-rx"></block> und speichern Sie sie in einer JSON-Datei.</block>
   <block id="69d64492530dd5ee6b0c49b4e7b88a54" category="list-text">Ändern Sie die JSON-Datei, indem Sie dem zuweisbaren Bereich Azure-Abonnement-IDs hinzufügen.</block>
   <block id="ed98f96183c63be41f6b1d0d1c72e905" category="paragraph">Sie sollten die ID für jedes Azure-Abonnement hinzufügen, das Sie mit der NetApp Console verwenden möchten.</block>
   <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">*Beispiel*</block>
@@ -174,7 +172,6 @@
   <block id="2b7f6d951b3a705af72cb63a7d0788dd" category="paragraph">| \https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn</block>
   <block id="6fc418bd4d8d26d716d678ffb2c516e9" category="paragraph">| Zum Verwalten von Ressourcen in Azure China-Regionen.</block>
   <block id="641d1f191c2b819061a8e9b6046fdbeb" category="paragraph">| Zum Verwalten von Ressourcen in Google Cloud.</block>
-  <block id="c642b24062280a73e940087788371986" category="paragraph">| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | Zur Bereitstellung von Funktionen und Diensten innerhalb der NetApp Console.</block>
   <block id="4600c0d23dfe95b8db6f735a4b192742" category="paragraph">a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| Um Bilder für Upgrades des Konsolenagenten zu erhalten.</block>
   <block id="4691a33bfa50c006ca907ff0f1c2ff22" category="inline-link-macro">Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren</block>
   <block id="6e9c9d81baee7aa9e962024fc724b7ca" category="paragraph">Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. <block ref="b264fb455cda46e4971383987c8dce4c" category="inline-link-macro-rx"></block> .</block>
@@ -396,7 +393,6 @@
   <block id="c8f224037ea295aeec347c94779d9932" category="list-text">Ausgehender Internetzugang</block>
   <block id="6374ee6394bd0ee1403eb0cc1c149271" category="list-text">Der Netzwerkstandort, an dem Sie den Konsolenagenten bereitstellen, muss über eine ausgehende Internetverbindung verfügen, um bestimmte Endpunkte zu kontaktieren.</block>
   <block id="71c057c678de165bd2af317aa6fde95f" category="list-text">Von der NetApp Konsole kontaktierte Endpunkte</block>
-  <block id="2ccbbf39ec9141464ab0eac673b7faac" category="list-text">Wenn Sie die webbasierte NetApp Console verwenden, die über die SaaS-Schicht bereitgestellt wird, kontaktiert diese mehrere Endpunkte, um Datenverwaltungsaufgaben abzuschließen.  Dazu gehören Endpunkte, die kontaktiert werden, um den Konsolenagenten von der Konsole aus bereitzustellen.</block>
   <block id="80ec46c10c415af62929aebb3e38f314" category="inline-link-macro">Zeigen Sie die Liste der von der NetApp Konsole kontaktierten Endpunkte an</block>
   <block id="cee8cbd02fe08cef11f2053a6070e46a" category="paragraph"><block ref="6e8d554bd6200de94bf370643a432e28" category="inline-link-macro-rx"></block> .</block>
   <block id="0b21fb3864d43aad91ca35b2b5d2354d" category="list-text">Azure-Region</block>
@@ -1161,9 +1157,7 @@
   <block id="695e0a47c56539eb9bcf6290d1c797d8" category="list-text">Bei Ihnen vor Ort</block>
   <block id="6c42d9d3f2de2ec585181e975309fcf0" category="section-title">Kommunikation mit Cloud-Anbietern</block>
   <block id="728a253b9c538005983ee633823e71a8" category="paragraph">Der Agent verwendet TLS 1.3 für die gesamte Kommunikation mit AWS, Azure und Google Cloud.</block>
-  <block id="d5cdf20beb613f2572125d00566ec967" category="paragraph">Um die Konsole im eingeschränkten Modus zu verwenden, installieren Sie einen Konsolenagenten und greifen auf die Konsolenschnittstelle zu, die lokal auf dem Konsolenagenten ausgeführt wird.</block>
   <block id="09e422c729719f602773531e14c7fdcb" category="inline-link-macro">Erfahren Sie mehr über die Bereitstellungsmodi der NetApp Console</block>
-  <block id="0f99c6c066f1002e098cbdaa87427745" category="paragraph"><block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block> .</block>
   <block id="277baff1e6ebc32f068b4cb7de953e5e" category="section-title">So installieren Sie einen Konsolenagenten</block>
   <block id="d0fb4185dcdae7937ec99f5b30ad1a65" category="list-text"><block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block></block>
   <block id="22f7b8c9e3cec45bb0909cca22e4e862" category="inline-link-macro">Erste Schritte mit der NetApp Console im Standardmodus</block>
@@ -1247,7 +1241,6 @@
   <block id="3f2aa4bd073d2458603c46bc293f8ade" category="inline-link-macro">Einrichten einer Verbundverbindung mit einem SAML-Identitätsanbieter</block>
   <block id="00aef0f14c29d451cdbf8446ce6b0b8e" category="list-text"><block ref="00aef0f14c29d451cdbf8446ce6b0b8e" category="inline-link-macro-rx"></block></block>
   <block id="728d17e7146dcd6218a24c46a1de8943" category="doc">Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der NetApp Console</block>
-  <block id="557e5a677a2db55310052bc62fe96998" category="inline-link-macro">Informationen zu den Bereitstellungsmodi der Konsole</block>
   <block id="e5c1519cd8d7472771e0a519c54ccae1" category="paragraph">Eine _Organisation_ ist die oberste Ebene des Console IAM-Systems und repräsentiert normalerweise Ihr Unternehmen.  Ihre Organisation besteht aus Ordnern, Projekten, Mitgliedern, Rollen und Ressourcen.  Agenten sind bestimmten Projekten in der Organisation zugeordnet.</block>
   <block id="6c8d76b40d187de98318661a9cab7239" category="paragraph">Ein _Organisationsadministrator_ kann eine Ressource mit einem Ordner verknüpfen, sodass ein _Ordner- oder Projektadministrator_ sie mit den entsprechenden Projekten im Ordner verknüpfen kann.</block>
   <block id="13a6a98927a83ffb05bccef1ebf3e2a4" category="paragraph">Durch die Verknüpfung einer Ressource mit einem Ordner wird diese nicht für alle Projekte zugänglich; nur der Ordner- oder Projektadministrator kann sie sehen.  Der _Ordner- oder Projektadministrator_ entscheidet, welche Projekte darauf zugreifen können und ordnet die Ressource den entsprechenden Projekten zu.</block>
@@ -1295,24 +1288,8 @@
   <block id="9f0f4ef7b4fff87cc68ce1185ff944ce" category="paragraph">Diese Aktion startet auch eine VM-Instanz, auf der Linux und die Konsolen-Agent-Software ausgeführt werden, die Bereitstellung wird jedoch direkt von Google Cloud und nicht von der Konsole aus initiiert.</block>
   <block id="0eef87956979cf6724fcf06a20f2e4eb" category="list-text"><block ref="0eef87956979cf6724fcf06a20f2e4eb" category="inline-link-macro-rx"></block></block>
   <block id="6ca5ab84f54829f432e3fc9d65f06d1c" category="paragraph">Die von Ihnen gewählte Installationsoption wirkt sich darauf aus, wie Sie sich auf die Installation vorbereiten.  Dazu gehört, wie Sie der Konsole die erforderlichen Berechtigungen erteilen, die sie zum Authentifizieren und Verwalten von Ressourcen in Google Cloud benötigt.</block>
-  <block id="0899f83543ed0bdcc2e1e20f83558546" category="summary">Die NetApp Console bietet mehrere Bereitstellungsmodi, mit denen Sie Ihre Geschäfts- und Sicherheitsanforderungen erfüllen können. Der _Standardmodus_ nutzt eine Software-as-a-Service-Schicht (SaaS), um die volle Funktionalität bereitzustellen, während der _eingeschränkte Modus_ und der _private Modus_ für Organisationen mit Konnektivitätsbeschränkungen verfügbar sind.</block>
-  <block id="050bd8a4d093ad9b4ba1572b3fd77d0c" category="paragraph">Die NetApp Console bietet mehrere Bereitstellungsmodi, mit denen Sie Ihre Geschäfts- und Sicherheitsanforderungen erfüllen können.</block>
-  <block id="77b263f30defdfcf9832d77b90a644ba" category="list-text">Der _Standardmodus_ nutzt eine Software-as-a-Service-Schicht (SaaS), um die volle Funktionalität bereitzustellen.  Benutzer greifen über eine webbasierte gehostete Schnittstelle auf die Konsole zu</block>
-  <block id="f9960390ca43f76801330e407536ba64" category="list-text">Der _Eingeschränkte Modus_ ist für Organisationen mit Konnektivitätsbeschränkungen verfügbar, die die NetApp Console in ihrer eigenen öffentlichen Cloud installieren möchten.  Benutzer greifen über eine webbasierte Schnittstelle auf die Konsole zu, die auf einem Konsolenagenten in ihrer Cloud-Umgebung gehostet wird.</block>
-  <block id="41cf28e75f71c8f5feda4bd12c1c3df8" category="paragraph">Die NetApp Console schränkt den Datenverkehr, die Kommunikation und die Daten im eingeschränkten Modus ein und Sie müssen sicherstellen, dass Ihre Umgebung (vor Ort und in der Cloud) den erforderlichen Vorschriften entspricht.</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="section-title">Überblick</block>
   <block id="579f2ccfa8f6ecb1be46c191e6f51980" category="paragraph">Jeder Bereitstellungsmodus unterscheidet sich hinsichtlich ausgehender Konnektivität, Standort, Installation, Authentifizierung, Datendiensten und Abrechnungsmethoden.</block>
-  <block id="9b873a2764b972270e6c29da62125ed3" category="list-text">Sie nutzen einen SaaS-Dienst über die webbasierte Konsole.  Abhängig von den Datendiensten und Funktionen, die Sie verwenden möchten, erstellt ein Konsolenorganisationsadministrator einen oder mehrere Konsolenagenten, um die Daten in Ihrer Hybrid-Cloud-Umgebung zu verwalten.</block>
-  <block id="299192dda00d9cbb51cb176b72e6f464" category="paragraph">Dieser Modus verwendet eine verschlüsselte Datenübertragung über das öffentliche Internet.</block>
-  <block id="e9023ac403025935abaa6420f26c8115" category="list-text">Sie installieren einen Konsolenagenten in der Cloud (in einer Regierungs-, souveränen oder kommerziellen Region) und dieser verfügt über eine eingeschränkte ausgehende Konnektivität zur NetApp Console SaaS-Schicht.</block>
-  <block id="90fed451e3dab076e7f87c02c10b6e5d" category="paragraph">Dieser Modus wird normalerweise von staatlichen und lokalen Behörden sowie regulierten Unternehmen verwendet.</block>
-  <block id="5120a32615b91a5de80fd01e90d53677" category="inline-xref">Erfahren Sie mehr über die ausgehende Konnektivität zur SaaS-Schicht</block>
-  <block id="26791add2e44035ab424c178d3f4c61f" category="paragraph"><block ref="4a9f480c757559738dc0bf80da949e99" category="inline-xref-macro-rx"></block> .</block>
-  <block id="8bd43632194c45c9c11a5e2f3ba51e6b" category="list-text">BlueXP -Privatmodus (nur ältere BlueXP Schnittstelle)</block>
-  <block id="42e7ba7061f6a314504fc5939b6ee874" category="inline-link-macro">PDF-Dokumentation für den privaten Modus von BlueXP</block>
-  <block id="859648b0c19c2309a7c9a716478c3134" category="list-text">Der private BlueXP Modus (alte BlueXP -Schnittstelle) wird normalerweise in lokalen Umgebungen ohne Internetverbindung und mit sicheren Cloud-Regionen verwendet, darunter AWS Secret Cloud, AWS Top Secret Cloud und Azure IL6.  NetApp unterstützt diese Umgebungen weiterhin mit der alten BlueXP Schnittstelle.<block ref="f0d6401276844781c459c66448fa7d75" category="inline-link-macro-rx"></block></block>
-  <block id="cec6a96c926f8e3e1330f0a30b1fccba" category="paragraph">Die folgende Tabelle bietet einen Vergleich der NetApp Konsole.</block>
-  <block id="50219732ecf537399313d1449b7d56e3" category="cell">Verbindung zur NetApp Console SaaS-Schicht erforderlich?</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">Ja</block>
   <block id="6a4fdae8165172d715565269b5d6eb0b" category="cell">Nur ausgehend</block>
   <block id="9f0878ebdd84e18f3339212d75f533cf" category="cell">Verbindung zu Ihrem Cloud-Anbieter erforderlich?</block>
@@ -1321,13 +1298,9 @@
   <block id="a631ab6eb3812fe220118fcbe4d91005" category="cell">Über die Konsole, den Cloud-Marktplatz oder die manuelle Installation</block>
   <block id="d2ae7374ec062234e52b60d36c234ceb" category="cell">Cloud-Marktplatz oder manuelle Installation</block>
   <block id="75681029e6ece7282ebf0bf6650e3547" category="cell">Upgrades des Konsolenagenten</block>
-  <block id="747585a36be1e14a4dd3ff25c4bf1e48" category="cell">Automatische Upgrades</block>
   <block id="ef218d4aa510098fe87b34d0b8101374" category="cell">UI-Zugriff</block>
-  <block id="ff6a985fa99a12880332d941ca5c8188" category="cell">Von der Konsolen-SaaS-Ebene</block>
   <block id="03caf351f80fcc33a8220fb7ca5a2c54" category="cell">Lokal von einer Agent-VM</block>
   <block id="4f740b5a623e3d05345b90af620f4a72" category="cell">API-Endpunkt</block>
-  <block id="4284eaeed932613e70a0bcb244dadec9" category="cell">Die Konsolen-SaaS-Schicht</block>
-  <block id="e73e7287ad2b8e179dae88b6eebada6c" category="cell">Ein Konsolenagent</block>
   <block id="c75f7811d70d17dbcd88e9d03752cbed" category="cell">Authentifizierung</block>
   <block id="6401b9f8aef7ecb650cfb38495f171cd" category="cell">Über SaaS mit Auth0, NSS-Login oder Identitätsföderation</block>
   <block id="9e2c8b3879824561ac6969d746355a88" category="cell">Durch SaaS mit Auth0 oder Identitätsföderation</block>
@@ -1339,11 +1312,8 @@
   <block id="e889e1f5870712e661ee36541e6a3ad4" category="cell">Viele werden unterstützt</block>
   <block id="43edcdb6c00656305d8defca5b3b7be0" category="cell">Lizenzierungsoptionen für Datendienste</block>
   <block id="d96ba69951eb7ddb699d3c264ee7fa6e" category="cell">Marktplatzabonnements und BYOL</block>
-  <block id="49aa7067a1e5b4d8f3ea23a65bb94a2e" category="paragraph">Lesen Sie die folgenden Abschnitte, um mehr über diese Modi zu erfahren, einschließlich der Informationen darüber, welche Funktionen und Dienste der NetApp Console unterstützt werden.</block>
-  <block id="cc59a00ae083d792f922023c8850d35c" category="paragraph">Das folgende Bild ist ein Beispiel für eine Bereitstellung im Standardmodus.</block>
   <block id="ca136a9cca838ef5c3092290e511fb42" category="paragraph">Die Konsole funktioniert im Standardmodus wie folgt:</block>
   <block id="7b0c55f247d6f53c6782615b53af4619" category="list-text">Ausgehende Kommunikation</block>
-  <block id="c43c363ca98a3640bd064d1c0bd3a413" category="list-text">Für den täglichen Betrieb ist eine Konnektivität von einem Konsolenagenten zur SaaS-Ebene der Konsole, zu den öffentlich verfügbaren Ressourcen Ihres Cloud-Anbieters und zu anderen wichtigen Komponenten erforderlich.</block>
   <block id="9b5e57dc9b2aa6af73db773c627f993a" category="inline-link-macro">Endpunkte, die ein Agent in AWS kontaktiert</block>
   <block id="8339e7865f160190422328b59c08ee1e" category="list-text"><block ref="8339e7865f160190422328b59c08ee1e" category="inline-link-macro-rx"></block></block>
   <block id="4858f9548af45fc4af93b80950e02dbf" category="inline-link-macro">Endpunkte, die ein Agent in Azure kontaktiert</block>
@@ -1351,67 +1321,27 @@
   <block id="01e5b09b5730088f2de0030cdb3a7862" category="inline-link-macro">Endpunkte, die ein Agent in Google Cloud kontaktiert</block>
   <block id="982bddeed9f81544f50291e3d6a924ce" category="list-text"><block ref="982bddeed9f81544f50291e3d6a924ce" category="inline-link-macro-rx"></block></block>
   <block id="d6ec275d37a7d519496b7320d23bf53b" category="list-text">Unterstützter Standort für einen Agenten</block>
-  <block id="56818e4b6176dd9fb4526f26aabee766" category="list-text">Im Standardmodus wird ein Agent in der Cloud oder bei Ihnen vor Ort unterstützt.</block>
-  <block id="fbc27e60b0428f5d4d0abe0fcff4f75d" category="list-text">Sie können einen Agenten mit einer der folgenden Methoden installieren:</block>
-  <block id="275c98d72c06472c56e7cf3fb35f8862" category="list-text">Von der Konsole aus</block>
-  <block id="9ce0fa98acaf3b566d9d8c11cab41637" category="list-text">Vom AWS- oder Azure Marketplace</block>
-  <block id="c0f6aadcb6dff711df6e35c21177c7f5" category="list-text">Aus dem Google Cloud SDK</block>
-  <block id="b28b8dcea617598d450297afa2601590" category="list-text">Manuelle Verwendung eines Installationsprogramms auf einem Linux-Host in Ihrem Rechenzentrum oder Ihrer Cloud</block>
-  <block id="dd592c555c1a2d53cf042be871818dda" category="list-text">Verwenden Sie die bereitgestellte OVA in Ihrer VCenter-Umgebung.</block>
-  <block id="f5451a3d4cccc2611f9603ea615122d5" category="list-text">NetApp führt für Ihren Agenten automatisch monatliche Upgrades durch.p.</block>
   <block id="bd521aa973861d923b4649240bf09964" category="list-text">Zugriff auf die Benutzeroberfläche</block>
-  <block id="9ec70babf788035cb815ff42523734cc" category="list-text">Auf die Benutzeroberfläche kann über die webbasierte Konsole zugegriffen werden, die über die SaaS-Schicht bereitgestellt wird.</block>
   <block id="dfc681a401aa380af2d5dd63fa34b846" category="list-text">API-Aufrufe werden an den folgenden Endpunkt gesendet: \https://api.bluexp.netapp.com</block>
-  <block id="c480ed058aca97ebdd28df63b1e29a95" category="list-text">Authentifizierung mit Auth0- oder NetApp Support Site (NSS)-Anmeldungen.  Identitätsföderation ist verfügbar.</block>
-  <block id="7defcd0d2a51c4956b3db3f855d351bb" category="list-text">Unterstützte Datendienste</block>
-  <block id="83362b1201d07f13cdf730c349913c72" category="inline-link-macro">Erfahren Sie mehr über NetApp Datenservices</block>
-  <block id="5aee43fcaf38696d1d20542c4a3adc37" category="list-text">Alle NetApp -Datendienste werden unterstützt. <block ref="588eceeb17517c2c13aa1a4e054b144b" category="inline-link-macro-rx"></block> .</block>
-  <block id="fc2d718c7f8567e5cf68526eb82b0a9d" category="list-text">Unterstützte Lizenzierungsoptionen</block>
   <block id="b2ce5bd121d305ac0ecc172108bef162" category="list-text">Marketplace-Abonnements und BYOL werden im Standardmodus unterstützt. Die unterstützten Lizenzierungsoptionen hängen jedoch davon ab, welchen NetApp Datendienst Sie verwenden.  Lesen Sie die Dokumentation zu jedem Dienst, um mehr über die verfügbaren Lizenzierungsoptionen zu erfahren.</block>
   <block id="2933440e5a2b9f3dfe1286c45aa72fbf" category="list-text">Erste Schritte mit dem Standardmodus</block>
   <block id="caf8c4952c4000aefa6a8a822422c0b8" category="list-text">Gehen Sie zum<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block> und melden Sie sich an.</block>
   <block id="e9fd7484e38200d8baa6e573d1d7294a" category="inline-link-macro">Erfahren Sie, wie Sie mit dem Standardmodus beginnen</block>
-  <block id="52599219f6b08bb2ce3fc85743943c5e" category="paragraph"><block ref="d7d87d0a148c81603b40370c84cf5979" category="inline-link-macro-rx"></block> .</block>
   <block id="88f3c518a924b9747d81192ccc7eeaeb" category="paragraph">Das folgende Bild ist ein Beispiel für eine Bereitstellung im eingeschränkten Modus.</block>
   <block id="b8302c030e9a62244d45c84ad8ce6eb8" category="paragraph">Im eingeschränkten Modus funktioniert die Konsole wie folgt:</block>
-  <block id="12e0780cde42b76465d8a45194d8c0f2" category="list-text">Ein Agent benötigt eine ausgehende Verbindung zur SaaS-Ebene der Konsole für Datendienste, Software-Upgrades, Authentifizierung und Metadatenübertragung.</block>
-  <block id="a932bee9dfd2d4381168cfa68eca19a8" category="paragraph">Die SaaS-Ebene der Konsole initiiert keine Kommunikation mit einem Agenten.  Agenten initiieren die gesamte Kommunikation mit der SaaS-Ebene der Konsole und ziehen oder übertragen Daten nach Bedarf.</block>
   <block id="572a35a7a9ed649cca9ec1cf347c9b9a" category="paragraph">Außerdem ist eine Verbindung zu Cloud-Provider-Ressourcen innerhalb der Region erforderlich.</block>
-  <block id="7aa6714ad09622dfe578a3778dddf421" category="list-text">Im eingeschränkten Modus wird ein Agent in der Cloud unterstützt: in einer Regierungsregion, einer souveränen Region oder einer kommerziellen Region.</block>
-  <block id="6553f8001cc3b8d8095c30dc022a8f8e" category="list-text">Sie können die Installation vom AWS- oder Azure Marketplace oder manuell auf Ihrem eigenen Linux-Host durchführen oder eine herunterladbare OVA in Ihrer VCenter-Umgebung verwenden.</block>
-  <block id="af391b6c8a16d13203fce21fd2f30d9f" category="list-text">NetApp aktualisiert Ihre Agentensoftware automatisch mit monatlichen Updates.</block>
-  <block id="6e06d533266df086def4ac0b43413dce" category="list-text">Auf die Benutzeroberfläche kann von einer Agent-VM aus zugegriffen werden, die in Ihrer Cloud-Region bereitgestellt wird.</block>
-  <block id="bb5a35aceba9b3c83d331446e142e3fa" category="list-text">Es werden API-Aufrufe an die virtuelle Agentenmaschine gesendet.</block>
-  <block id="774e8db6d1dd36f320e4ebb5fd5f4a0b" category="list-text">Die Authentifizierung erfolgt über auth0.  Identitätsföderation ist ebenfalls verfügbar.</block>
-  <block id="204756b73a8d97b00f89d22893049d31" category="list-text">Unterstützte Speicherverwaltung und Datendienste</block>
-  <block id="8732a4c227800283f6c5678c1c6c5ce3" category="list-text">Die folgenden Speicher- und Datendienste mit eingeschränktem Modus:</block>
-  <block id="ea22f9957523103248d84695e98b17ba" category="cell">Unterstützte Dienste</block>
-  <block id="f4c6f851b00d5518bf888815de279aba" category="cell">Hinweise</block>
-  <block id="34678ee868eeabce720fc4a0fd60c17a" category="cell">Volle Unterstützung</block>
   <block id="34c6561859a3a97caa0248fbb4372124" category="inline-link">Sehen Sie sich die Liste der unterstützten Backup-Ziele für ONTAP -Daten an</block>
   <block id="91d5470ff0de1d64ddb0c8c3bef0b246" category="cell">NetApp Data Classification</block>
   <block id="0a44fe605745a017fde35750e5fae36a" category="paragraph">Wird in Regierungsregionen mit eingeschränktem Modus unterstützt.  Wird in kommerziellen Regionen oder in souveränen Regionen mit eingeschränktem Modus nicht unterstützt.</block>
-  <block id="63d604af1c7a5bfef29d50c6c2c2591f" category="cell">Sie können mit den unten aufgeführten unterstützten Lizenzierungsoptionen für den eingeschränkten Modus auf Lizenz- und Abonnementinformationen zugreifen.</block>
   <block id="6c253a8aff5dfa835a77545b3006abc8" category="cell">On-Premises- ONTAP -Cluster</block>
-  <block id="cf48a52090d6606e27770ad6a64dc153" category="cell">Sowohl die Erkennung mit einem Konsolenagenten als auch die Erkennung ohne Konsolenagenten (direkte Erkennung) werden unterstützt.  Wenn Sie einen lokalen Cluster ohne Konsolenagenten entdecken, wird die erweiterte Ansicht (System Manager) nicht unterstützt.</block>
-  <block id="c26e19b0ab82c81e1df83e4f6d44e6af" category="list-text">Die folgenden Lizenzierungsoptionen werden im eingeschränkten Modus unterstützt:</block>
   <block id="b012b5d8eb383d0a82055699469c06d6" category="list-text">Marktplatz-Abonnements (Stunden- und Jahresverträge)</block>
   <block id="7fe4c05710aa3ce341a005ab26b2dfdf" category="list-text">Für Cloud Volumes ONTAP wird nur die kapazitätsbasierte Lizenzierung unterstützt.</block>
   <block id="a5d9109cf2a557dd2c28d954ee774fd8" category="list-text">In Azure werden Jahresverträge mit Regierungsregionen nicht unterstützt.</block>
   <block id="b650b6a0e30782e5c59c3db6f2644347" category="list-text">BYOL</block>
   <block id="762e4ad93da7526b1209d0aed9dd1b9d" category="paragraph">Für Cloud Volumes ONTAP werden mit BYOL sowohl kapazitätsbasierte als auch knotenbasierte Lizenzierungen unterstützt.</block>
   <block id="838ac5ba738d283ecc822963f2f2d06a" category="list-text">Erste Schritte mit dem eingeschränkten Modus</block>
-  <block id="f4f2adbe9379e62fc1649e2bd42e8cb6" category="list-text">Sie müssen den eingeschränkten Modus aktivieren, wenn Sie Ihre NetApp Console Konsolenorganisation erstellen.</block>
-  <block id="3010fa9d791288d705979e5d70c7c143" category="paragraph">Wenn Sie noch keine Organisation haben, werden Sie aufgefordert, Ihre Organisation zu erstellen und den eingeschränkten Modus zu aktivieren, wenn Sie sich zum ersten Mal von einem Konsolenagenten aus bei der Konsole anmelden, den Sie manuell installiert oder im Marktplatz Ihres Cloud-Anbieters erstellt haben.</block>
-  <block id="b4bfb9cefa43eb3f7280f66f61caabb7" category="admonition">Sie können die Einstellung für den eingeschränkten Modus nach dem Erstellen der Organisation nicht mehr ändern.</block>
   <block id="999ae70b12514c648b606bf0f3afabcb" category="inline-link-macro">Erfahren Sie, wie Sie mit dem eingeschränkten Modus beginnen</block>
-  <block id="3adc000476556fe48061c952620b6394" category="paragraph"><block ref="b25261838e688763c403e651d058df29" category="inline-link-macro-rx"></block> .</block>
-  <block id="860f39a5e97bc595cbfcceecafdfb98e" category="section-title">Service- und Funktionsvergleich</block>
-  <block id="7275d75390baafb4c0ebe3ad0c47fb07" category="paragraph">Mithilfe der folgenden Tabelle können Sie schnell feststellen, welche Dienste und Funktionen im eingeschränkten Modus unterstützt werden.</block>
-  <block id="a38a9e2ffd289e7551fc92ed3e78f4af" category="paragraph">Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstützt werden.  Weitere Einzelheiten zur Unterstützung dieser Dienste im eingeschränkten Modus finden Sie in den obigen Abschnitten.</block>
   <block id="aa200c19289e5050e77edc0bccc67c2b" category="cell">Produktbereich</block>
-  <block id="c5d16d578bd4ea7f2202b75b6349dd74" category="cell">NetApp -Datendienst oder -Funktion</block>
-  <block id="1284e91bd7767daa975701f3e4d1582a" category="cell">*Speicher* Dieser Teil der Tabelle listet die Unterstützung für die Verwaltung von Speichersystemen über die Konsole auf.  Es werden nicht die unterstützten Sicherungsziele für NetApp Backup and Recovery angezeigt.</block>
   <block id="18cf072964a583150dd247485ba75b92" category="cell">Amazon FSx für ONTAP</block>
   <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="cell">Nein</block>
   <block id="270fcb785810d0206945029bb05f4e97" category="cell">Amazon S3</block>
@@ -1420,21 +1350,15 @@
   <block id="4a17f9505c41e2b9d2fdf8e21809e428" category="cell">E-Series</block>
   <block id="392d70ca39f31f10bd637936769788df" category="cell">StorageGRID</block>
   <block id="3cb695a43961514082b7be25eac12c0b" category="cell">*Datendienste*</block>
-  <block id="ede10582776ac743c114b051021cf0ca" category="cell">NetApp Backup und Recovery</block>
   <block id="b17e900e063883a32cc6ff0df77599bf" category="inline-link">Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen</block>
   <block id="91471b82e1f8cf03fbbf6a08da688679" category="cell">Ja<block ref="d965d840576f8451a10b0c221310a681" category="inline-link-rx"></block></block>
   <block id="9a0927d2ec4654dfab564a09f0cadbf9" category="cell">NetApp Ransomware Resilience</block>
   <block id="a5db9212acd617412153fca9cdf5d9d7" category="cell">NetApp Replication</block>
-  <block id="928b1dc588c907971c8b25ff6a14aee2" category="cell">NetApp Volume-Caching</block>
-  <block id="7001dfa06a016b8dd80f2476b04683a9" category="cell">NetApp Workload Factory</block>
-  <block id="86d0f8f9c44b93c040cb35a58ca2f2ff" category="cell">*Merkmale*</block>
-  <block id="f079f17b0940258743d34e7b771c715f" category="cell">Digital Advisor</block>
   <block id="5ed2a2f311f3d8e9c50e319b312ba7f6" category="cell">Lizenz- und Abonnementverwaltung</block>
   <block id="22bdd8c71cc34511ea88881e20f7ca21" category="cell">Identitäts- und Zugriffsverwaltung</block>
   <block id="6b0a74cb89aaf10fdf1c70bfd9bd78e2" category="cell">Lebenszyklusplanung</block>
   <block id="66aac1d75aef36714a42ae94b3624998" category="cell">NSS-Konten</block>
   <block id="a274f4d4670213a9045ce258c6c56b80" category="cell">Benachrichtigungen</block>
-  <block id="13348442cc6a27032d2b4aa28b75a5d3" category="cell">Suche</block>
   <block id="eda63b570db82e05c2fd7b5f0c3bb20f" category="cell">Prüfung</block>
   <block id="6c781c37150950b9639b1a88927fa671" category="summary">Durch die Einrichtung von Partnerschaften zwischen Organisationen in der NetApp Console können Organisationspartner NetApp -Ressourcen über Organisationsgrenzen hinweg sicher verwalten, die Zusammenarbeit optimieren und die Sicherheit verbessern.</block>
   <block id="8f032c748fc26fa9d1200f8efa6a0d8c" category="paragraph-title">Erforderliche Rollen</block>
@@ -1468,66 +1392,25 @@
   <block id="0f5725960c303f4472d3cc7550c2fd5a" category="inline-image-macro">Diagramm, das die gemeinsame Nutzung von Ressourcen zeigt</block>
   <block id="4830e6d5d6c968f2f2908ed6acc095af" category="paragraph"><block ref="4830e6d5d6c968f2f2908ed6acc095af" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b0be8ab9543f692468afd4189eda23e9" category="doc">Erfahren Sie mehr über die NetApp Console</block>
-  <block id="34af3a9c49c2c5c991ebfa2c64342ed6" category="paragraph">Die Konsole vereinheitlicht Speicherverwaltung und -schutz über eine hybride Multi-Cloud mit integrierten Datendiensten zum Schutz und zur Optimierung von Daten.</block>
-  <block id="7d55a867fdb967d9025d0801ef6eb458" category="section-title">Zentralisierte Speicherverwaltung</block>
-  <block id="6601d888a62f87cae78b273d4598403b" category="paragraph">Entdecken, implementieren und verwalten Sie Cloud- und lokalen Speicher mit der Konsole.</block>
-  <block id="a7a49fddbe3307c59d164dd83ddf376d" category="section-title">Unterstützter Cloud- und On-Premises-Speicher</block>
-  <block id="e8809da5bd4736a026ed9c3f0c94105a" category="paragraph">Sie können die folgenden Speichertypen über die Konsole verwalten:</block>
   <block id="165168c444979fab1fc4b5f5234e8edb" category="list-text">Cloud-Speicherlösungen</block>
   <block id="a77255c8473fd0c82b986bb6ce8b7d4d" category="list-text">Lokaler Flash- und Objektspeicher</block>
   <block id="3404cce75db90acf6a9d52860721a139" category="list-text">ONTAP -Cluster</block>
   <block id="b9c8cb06fa02abe70007fad1ae9d0b57" category="list-text">Cloud-Objektspeicher</block>
-  <block id="bfd15aa26ba0ced782240c4a8b7e517e" category="section-title">Speicherverwaltung</block>
-  <block id="0182e364824d96db33c54a813b67edca" category="paragraph">Innerhalb der Konsole stellen _Systeme_ erkannten oder bereitgestellten Speicher dar.  Sie können ein _System_ auswählen, um es in NetApp -Datendienste zu integrieren oder den Speicher zu verwalten, beispielsweise durch Hinzufügen von Volumes.</block>
-  <block id="3212175a9a38f1ace0526f2a09ce6c99" category="section-title">Integrierte Datendienste und Speicherverwaltung zum Schutz, zur Sicherung und zur Optimierung von Daten</block>
-  <block id="f9f008da2a17fe3a33a465a0c004c33e" category="paragraph">Die Konsole bietet Datendienste zur Sicherung und Aufrechterhaltung der Speicherverfügbarkeit.</block>
   <block id="a0409ef7729969662c91fdaee22bc933" category="list-text">Speicherwarnungen</block>
   <block id="2d5c8aeda2ab373d4a288e3bb0e951b0" category="list-text">Zeigen Sie Probleme im Zusammenhang mit Kapazität, Verfügbarkeit, Leistung, Schutz und Sicherheit in Ihrer ONTAP Umgebung an.</block>
-  <block id="5d880ed9e8bc81eec72f5edb5332637d" category="list-text">Verwenden Sie skriptbasierte Lösungen, um die Bereitstellung und Integration von NetApp -Produkten und -Services zu automatisieren.</block>
-  <block id="4102ee4dc04d405e046bf0c00b9f15a7" category="list-text">Sichern und Wiederherstellen von Cloud- und lokalen Daten.</block>
-  <block id="2090f2d846793f153b9266c648b079ef" category="list-text">Machen Sie Ihre Anwendungsdaten und Cloud-Umgebungen datenschutzbereit.</block>
-  <block id="ce77730dd6dbc743a3b153b41918d0fc" category="list-text">Synchronisieren Sie Daten zwischen lokalen und Cloud-Datenspeichern.</block>
   <block id="721fdbfdeaa13884256e96ff391b8f33" category="list-text">NetApp Digital Advisor (Active IQ)</block>
   <block id="6f46f51af0fa796b3853885705907e6f" category="list-text">Nutzen Sie prädiktive Analysen und proaktiven Support, um Ihre Dateninfrastruktur zu optimieren.</block>
   <block id="5928ade999566a2ca0d839d3c191b3f1" category="list-text">Verwalten und überwachen Sie Ihre Lizenzen und Abonnements.</block>
-  <block id="c7b1fe992423d57d0e492585ff631c02" category="list-text">Schützen Sie lokale VMware-Workloads mithilfe von VMware Cloud auf Amazon FSx für ONTAP als Disaster Recovery-Site.</block>
-  <block id="068ff21264880d35ad4153fad90e3828" category="list-text">Identifizieren Sie Cluster mit aktueller oder prognostizierter geringer Kapazität und implementieren Sie Empfehlungen zur Datenschichtung oder zusätzlichen Kapazität.</block>
-  <block id="a8dd42d088a97f32bf9a4c69abc2517a" category="list-text">Erkennen Sie Anomalien, die zu Ransomware-Angriffen führen könnten.  Schützen und stellen Sie Workloads wieder her.</block>
   <block id="852e5aa5bab2b81469e97f26b6e2b7f3" category="list-text">Replizieren Sie Daten zwischen Speichersystemen, um Backup und Notfallwiederherstellung zu unterstützen.</block>
-  <block id="e5f69c6478276f31149c942722646515" category="list-text">Automatisieren Sie die Bewertung, Planung und Ausführung von ONTAP -Upgrades.</block>
   <block id="072d1a387472fb47fdfa33e48ff08ffd" category="list-text">Nachhaltigkeits-Dashboard</block>
   <block id="b6ec628f73e9b33a6ae94b2c3ef2879b" category="list-text">Analysieren Sie die Nachhaltigkeit Ihrer Speichersysteme.</block>
-  <block id="5d98e2651207e09de1a3137b754bcdb6" category="list-text">Erweitern Sie Ihren lokalen ONTAP -Speicher auf die Cloud.</block>
-  <block id="d0e71bba7a9d538f008b05b19274bfe1" category="list-text">Erstellen Sie ein beschreibbares Cache-Volume, um den Datenzugriff zu beschleunigen oder den Datenverkehr von stark beanspruchten Volumes zu entlasten.</block>
-  <block id="c2f4c01ba651c0bc1e3f5840352d4723" category="list-text">Entwerfen, einrichten und betreiben Sie wichtige Workloads mit Amazon FSx for NetApp ONTAP.</block>
-  <block id="2272c41252ddb72cb1caa9df0427568c" category="inline-link">Erfahren Sie mehr über die NetApp Console und die verfügbaren Datendienste</block>
-  <block id="79b6d70c58423b416abcb7d7a9814f1d" category="paragraph"><block ref="79b6d70c58423b416abcb7d7a9814f1d" category="inline-link-rx"></block></block>
-  <block id="902e65d33784bd8924eb05e622aa2dda" category="section-title">Unterstützte Cloud-Anbieter</block>
-  <block id="93b72bf2601704968ba14dec9ae3cad7" category="paragraph">Mit der Konsole können Sie Cloud-Speicher verwalten und Cloud-Dienste in Amazon Web Services, Microsoft Azure und Google Cloud nutzen.</block>
-  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Kosten</block>
   <block id="4ac6e187eec85ffe9a62a3a56aec7d4b" category="inline-link">Informieren Sie sich über die Preise für NetApp Datenservices</block>
-  <block id="e5f7ad5f3b1c0d4a2f641adba7e1a91c" category="paragraph">Für die NetApp Console fallen keine Gebühren an.  Wenn Sie Konsolenagenten in der Cloud bereitstellen oder den in der Cloud bereitgestellten eingeschränkten Modus verwenden, entstehen Ihnen Kosten.  Mit einigen NetApp -Datendiensten sind Kosten verbunden.<block ref="737ad53c0691d6484be24092d035e183" category="inline-link-rx"></block></block>
-  <block id="c63c8e46f37281705ead3aa892215a97" category="section-title">So funktioniert die NetApp Console</block>
-  <block id="1500ff1129691008264fb3b5e6941d86" category="paragraph">Die NetApp Console ist eine webbasierte Konsole, die über die SaaS-Schicht, ein Ressourcen- und Zugriffsverwaltungssystem, Konsolenagenten, die Speichersysteme verwalten und NetApp Datendienste aktivieren, sowie verschiedene Bereitstellungsmodi bereitgestellt wird, um Ihren Geschäftsanforderungen gerecht zu werden.</block>
-  <block id="11cf550820ecd5e75ae1a9046f7f7f05" category="section-title">Software-as-a-Service</block>
-  <block id="1e92653fb3f4b1939c6f79d95638210a" category="inline-link">webbasierte Schnittstelle</block>
-  <block id="7321e98b103d173fd0369961ab032d4d" category="paragraph">Sie greifen auf die Konsole zu über eine<block ref="4bc71cfd2394cc21d883b4e614ec1af7" category="inline-link-rx"></block> und APIs.  Mit dieser SaaS-Erfahrung können Sie automatisch auf die neuesten Funktionen zugreifen, sobald diese veröffentlicht werden.</block>
-  <block id="60bd5de47e0653619aa34bc7a79dcb36" category="section-title">Identitäts- und Zugriffsverwaltung (IAM)</block>
-  <block id="0264deb235be5ecb06f9747b3af8c9c6" category="paragraph">Die Konsole bietet Identitäts- und Zugriffsverwaltung (IAM) für die Ressourcen- und Zugriffsverwaltung.  Dieses IAM-Modell ermöglicht eine detaillierte Verwaltung von Ressourcen und Berechtigungen:</block>
-  <block id="54298776910b74abb9c78a3f449702b3" category="list-text">Eine Top-Level-Organisation ermöglicht Ihnen die Verwaltung des Zugriffs über Ihre verschiedenen Projekte hinweg.</block>
-  <block id="29235ad952255adaa81cebf92ab3a0f0" category="list-text">_Ordner_ ermöglichen es Ihnen, verwandte Projekte zusammenzufassen</block>
-  <block id="666d088bb19b110a528d20b21622daa9" category="list-text">Mit der Ressourcenverwaltung können Sie eine Ressource einem oder mehreren Ordnern oder Projekten zuordnen</block>
-  <block id="4c57f63e49ef8479b418a16f7d776ed6" category="list-text">Mit der Zugriffsverwaltung können Sie Mitgliedern auf verschiedenen Ebenen der Organisationshierarchie eine Rolle zuweisen</block>
   <block id="37a3468698a20ce104d536a1abe45dff" category="inline-link-macro">Erfahren Sie mehr über IAM in der NetApp Console</block>
   <block id="e386f797f1278a41cbdf60290772a272" category="list-text"><block ref="e386f797f1278a41cbdf60290772a272" category="inline-link-macro-rx"></block></block>
-  <block id="b5d4f8f6ade5a4fbfeb3724b7bbc0b5e" category="paragraph">Für einige zusätzliche Funktionen und Datendienste wird ein Konsolenagent benötigt.  Es ermöglicht Ihnen, Ressourcen und Prozesse in Ihren lokalen und Cloud-Umgebungen zu verwalten.  Sie benötigen es, um einige Systeme zu verwalten (z. B. Cloud Volumes ONTAP) und um einige NetApp -Datendienste zu verwenden.</block>
   <block id="919907c49b488683fa1ddd5c9088c12b" category="inline-link-macro">Erfahren Sie mehr über Konsolenagenten</block>
   <block id="9e97ec538c2df79d1e5e48262f80e2f3" category="paragraph"><block ref="a0861367aee4f711e39ff50c5df170be" category="inline-link-macro-rx"></block> .</block>
-  <block id="93ed0ac1db1f6b5a46cfc5e5f9034f18" category="inline-link-macro">Informieren Sie sich über BlueXP (privater Modus) für Websites ohne Internetverbindung.</block>
   <block id="cf7a9a2cd5377e378f9b1405ec142a3b" category="inline-link-macro">Weitere Informationen zu Bereitstellungsmodi</block>
   <block id="e9dbe7d99d4ec8722dd3b33c7c526c3e" category="paragraph"><block ref="fb1800a80fb75441187032d2305f2c40" category="inline-link-macro-rx"></block> .</block>
-  <block id="0b43e955bb49e08923e9b43ee20ef2b3" category="section-title">SOC 2 Typ 2-Zertifizierung</block>
-  <block id="519febbb668c807564328303795f2a7a" category="paragraph">Eine unabhängige Wirtschaftsprüfungsgesellschaft und ein Wirtschaftsprüfer haben die Konsole geprüft und bestätigt, dass sie SOC 2 Typ 2-Berichte auf Grundlage der geltenden Trust Services-Kriterien erreicht hat.</block>
   <block id="582a36961cbdd6ca90f6672041cdab83" category="inline-link">Sehen Sie sich die SOC 2-Berichte von NetApp an</block>
   <block id="958c315a8c40765f65895091ecc83488" category="paragraph"><block ref="958c315a8c40765f65895091ecc83488" category="inline-link-rx"></block></block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Rechtliche Hinweise</block>
@@ -2017,7 +1900,6 @@
   <block id="8963387394e2ee3e2a5a9ba160566a58" category="cell">\https://support.netapp.com</block>
   <block id="fe0afb21d6cb9bc2fa6c390327246314" category="cell">So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.</block>
   <block id="f092dc53062418401abf8d7b17161fcb" category="cell">Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden sowie um Software-Updates für Cloud Volumes ONTAP zu erhalten.</block>
-  <block id="1daedeccee3ce9bebdac02815a88e596" category="cell">\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com</block>
   <block id="5eda3a7f9f9788e7beae44ca11c3fca1" category="inline-link-macro">Einrichten des AWS-Netzwerkzugriffs für einen Konsolenagenten</block>
   <block id="fe65e3a837dc9a3749e87481b67ff0fb" category="list-text"><block ref="fe65e3a837dc9a3749e87481b67ff0fb" category="inline-link-macro-rx"></block></block>
   <block id="413296dfc7c1face41e185f79c4f8f7a" category="inline-link-macro">Einrichten des Azure-Netzwerkzugriffs für einen Konsolen-Agent</block>
@@ -2681,7 +2563,6 @@
   <block id="2456df50f32587f6b78feb0da93a921f" category="section-title">Fügen Sie der Konsole Anmeldeinformationen zum Erstellen eines Konsolenagenten hinzu</block>
   <block id="eb544e044391f4665cb06461e7629e6b" category="paragraph">Fügen Sie AWS-Anmeldeinformationen hinzu, indem Sie die ARN einer IAM-Rolle angeben, die die zum Erstellen eines Konsolenagenten erforderlichen Berechtigungen erteilt.  Sie können diese Anmeldeinformationen beim Erstellen eines neuen Agenten auswählen.</block>
   <block id="d8a56d983b91f097e5ba55dd03a18509" category="section-title">Einrichten der IAM-Rolle</block>
-  <block id="83c191c1ded83c52aab82a0e9b9e1997" category="paragraph">Richten Sie eine IAM-Rolle ein, die es der NetApp Console -Software als Serviceebene (SaaS) ermöglicht, die Rolle zu übernehmen.</block>
   <block id="44030f19e52b4a03b050525f287bbc15" category="list-text">Gehen Sie zur IAM-Konsole im Zielkonto.</block>
   <block id="c0194bb9a8d34b181052f172b4a9a98f" category="list-text">Wählen Sie *Ein anderes AWS-Konto* und geben Sie die ID der NetApp Console SaaS ein: 952013314444</block>
   <block id="43fcb7c92b7808baf72f1cd9eecef7a5" category="list-text">Bearbeiten Sie speziell für Amazon FSx for NetApp ONTAP die Richtlinie *Vertrauensbeziehungen*, um "AWS": "arn:aws:iam::952013314444:root" einzuschließen.</block>
@@ -3911,7 +3792,6 @@
   <block id="58c83e5c8c5ef2ad291661bcec1c6a86" category="paragraph">Laden Sie die Konsolen-Agent-Software herunter und installieren Sie sie auf einem vorhandenen Linux-Host vor Ort.</block>
   <block id="3f297ef15cde0668e93b35f2752fd4fd" category="paragraph-title">Wie geht es weiter?</block>
   <block id="29a09891cc27036127b16eefb0357d87" category="paragraph">Sie müssen den Konsolenagenten in der NetApp Console registrieren.</block>
-  <block id="eba388b653df97f4ad393f9dec6af419" category="paragraph">Melden Sie sich bei der Konsole an und verknüpfen Sie den Konsolenagenten mit Ihrer Organisation.  Die Art der Anmeldung hängt vom Modus ab, in dem Sie die Konsole verwenden.  Wenn Sie die Konsole im Standardmodus verwenden, melden Sie sich über die SaaS-Website an.  Wenn Sie die Konsole im eingeschränkten Modus verwenden, melden Sie sich lokal vom Konsolen-Agent-Host aus an.</block>
   <block id="945a1013347d84bac0a2f13069240dcf" category="section-title">Geben Sie die Anmeldeinformationen des Cloud-Anbieters an die NetApp Console weiter</block>
   <block id="6f7b4a56a4b8f79564d165736a5096b0" category="paragraph">Der Konsolenagent verfügt jetzt über die erforderlichen Berechtigungen, um in Ihrem Namen Aktionen in Azure auszuführen.  Sie können jetzt zu<block ref="9fa63571706fcef6edc9d423212e6d10" category="inline-link-rx"></block> um mit der Verwendung des Konsolenagenten zu beginnen.</block>
   <block id="c04c3f6d982e47513e123d1910d6ae44" category="summary">Stellen Sie den Konsolenagenten im eingeschränkten Modus bereit, damit Sie die NetApp Console mit eingeschränkter ausgehender Konnektivität verwenden können.  Installieren Sie zunächst den Konsolen-Agenten, richten Sie die Konsole ein, indem Sie auf die Benutzeroberfläche zugreifen, die auf dem Konsolen-Agenten ausgeführt wird, und geben Sie dann die Cloud-Berechtigungen an, die Sie zuvor eingerichtet haben.</block>
@@ -3983,7 +3863,6 @@
   <block id="3612e0e7a44ec38da1e226c618526f91" category="open-title">Google Cloud-Dienstkonto</block>
   <block id="a87080733aad453c529e801cc597efff" category="summary">Installieren Sie ein von einer Zertifizierungsstelle signiertes Zertifikat für den Benutzerzugriff auf die webbasierte Konsole, wenn Sie die NetApp Console im eingeschränkten Modus verwenden.</block>
   <block id="76b215b1722d5e63e6379d518b352edf" category="doc">Installieren Sie ein CA-signiertes Zertifikat für den webbasierten Konsolenzugriff</block>
-  <block id="4ae83e38ca6797595d821c9263e67cd5" category="paragraph">Wenn Sie die NetApp Console im eingeschränkten Modus verwenden, ist die Benutzeroberfläche über die virtuelle Maschine des Konsolenagenten zugänglich, die in Ihrer Cloud-Region oder vor Ort bereitgestellt wird.  Standardmäßig verwendet die Konsole ein selbstsigniertes SSL-Zertifikat, um sicheren HTTPS-Zugriff auf die webbasierte Konsole bereitzustellen, die auf dem Konsolenagenten ausgeführt wird.</block>
   <block id="556126dcddabe484c3c96e299b816797" category="paragraph">Falls Ihr Unternehmen dies erfordert, können Sie ein von einer Zertifizierungsstelle (CA) signiertes Zertifikat installieren, das einen besseren Sicherheitsschutz bietet als ein selbstsigniertes Zertifikat.  Nachdem Sie das Zertifikat installiert haben, verwendet die Konsole das von der Zertifizierungsstelle signierte Zertifikat, wenn Benutzer auf die webbasierte Konsole zugreifen.</block>
   <block id="c49ff7d7009f9d4727b2b25afa496418" category="section-title">Installieren eines HTTPS-Zertifikats</block>
   <block id="9bcd9cfa6027fc6f3b81733b086a6895" category="paragraph">Installieren Sie ein von einer Zertifizierungsstelle signiertes Zertifikat für den sicheren Zugriff auf die webbasierte Konsole, die auf dem Konsolenagenten ausgeführt wird.</block>
@@ -4011,31 +3890,10 @@
   <block id="9eb4aa2328626aaf57b918eeb9042186" category="paragraph">Sie sollten das HTTPS-Zertifikat des Agenten vor Ablauf erneuern, um einen sicheren Zugriff zu gewährleisten.  Wenn Sie das Zertifikat nicht vor Ablauf erneuern, wird eine Warnung angezeigt, wenn Benutzer über HTTPS auf die Webkonsole zugreifen.</block>
   <block id="a41d7b1dc012bd6875858e000d121870" category="paragraph">Es werden Details zum Zertifikat angezeigt, einschließlich des Ablaufdatums.</block>
   <block id="56c47e4865091b4cf1fdfddb1fa57b51" category="list-text">Wählen Sie *Zertifikat ändern* und folgen Sie den Schritten zum Generieren einer CSR oder zum Installieren Ihres eigenen CA-signierten Zertifikats.</block>
-  <block id="844e77ced94ead57b6645511abd91a6e" category="summary">Wie Sie sich bei der NetApp Console anmelden, hängt davon ab, welchen Bereitstellungsmodus Sie verwenden.</block>
-  <block id="0aa8eee6dc5796fb05ecd4c09063d90a" category="doc">Melden Sie sich bei der NetApp Console an</block>
-  <block id="90219278773fc128ada8cf996872a22c" category="paragraph">Sie werden nach 24 Stunden oder beim Schließen Ihres Browsers automatisch abgemeldet.</block>
-  <block id="db4d7e6ddf356afa2fe0d34e9c255e0b" category="paragraph"><block ref="8405362106e8a6cec493f51b335fe282" category="inline-link-macro-rx"></block> .</block>
   <block id="6414722c7d448b33e2a69f6492ad6aee" category="paragraph">Nachdem Sie sich bei der NetApp Console angemeldet haben, können Sie sich von der webbasierten Konsole aus anmelden, um mit der Verwaltung Ihrer Daten- und Speicherinfrastruktur zu beginnen.</block>
-  <block id="177ac44e93b512595cfec78be6af82a4" category="paragraph">Sie können sich mit einer der folgenden Optionen bei der NetApp Console anmelden:</block>
   <block id="19df8bb4b5a805b23aeac731605bdf21" category="list-text">Ihre vorhandenen Anmeldeinformationen für die NetApp Support Site (NSS)</block>
   <block id="912ae110aa8df4a37c4331859a5e502a" category="list-text">Ein NetApp Console mit Ihrer E-Mail-Adresse und einem Passwort</block>
-  <block id="029351726760b5e014b1e49ec512b591" category="list-text">Eine Verbundverbindung</block>
-  <block id="9e92ac9129f85d6c526b60f7f97e0f59" category="inline-link-macro">Erfahren Sie, wie Sie eine Identitätsföderation einrichten</block>
-  <block id="db08cbb78e7b0e0b9a35148b636e862a" category="paragraph">Sie können Single Sign-On verwenden, um sich mit den Anmeldeinformationen aus Ihrem Unternehmensverzeichnis anzumelden (föderierte Identität). <block ref="70d63f5e971b99bfbf9e1ed8b7bb46b7" category="inline-link-macro-rx"></block> .</block>
-  <block id="4931d3b847a0aad3ad0dcd7e031c3213" category="list-text">Öffnen Sie einen Webbrowser und gehen Sie zu<block ref="d99e1eaf406503cf18504dce764c5135" category="inline-link-rx"></block></block>
   <block id="03eb7e8aedd1ad900f6996ff1a9cf8dd" category="list-text">Geben Sie auf der Seite *Anmelden* die E-Mail-Adresse ein, die mit Ihrem Login verknüpft ist.</block>
-  <block id="784d4eeca11deaf4ee3f37735e4d0334" category="list-text">Abhängig von der mit Ihrer Anmeldung verknüpften Authentifizierungsmethode werden Sie aufgefordert, Ihre Anmeldeinformationen einzugeben:</block>
-  <block id="8a7c8d2028930eaef2c3f44925994051" category="list-text">NetApp Cloud-Anmeldeinformationen: Geben Sie Ihr Passwort ein</block>
-  <block id="a02705346febd77df5680fe2f12343a9" category="list-text">Verbundbenutzer: Geben Sie Ihre Verbundidentitäts-Anmeldeinformationen ein</block>
-  <block id="24bdc2b22d38abff9ff97a9c5b5e7966" category="list-text">NetApp Support Site-Konto: Geben Sie Ihre NetApp Support Site-Anmeldeinformationen ein</block>
-  <block id="1708a1de9e761d8ac63dfcb9dc199331" category="paragraph">Sie sind jetzt angemeldet und können mit der Verwaltung Ihrer hybriden Multi-Cloud-Infrastruktur beginnen.</block>
-  <block id="a6c2d5a0e0b2dee406eeecc1aa0e094d" category="paragraph">Wenn Sie die Konsole im eingeschränkten Modus verwenden, müssen Sie sich über die Benutzeroberfläche, die lokal auf dem Agenten ausgeführt wird, bei der Konsole anmelden.</block>
-  <block id="d0ae1e0c24f09cd8e0fce13c820ec327" category="paragraph">Die Konsole unterstützt im eingeschränkten Modus die Anmeldung mit einer der folgenden Optionen:</block>
-  <block id="87923991b56fc85bad09da2eff622389" category="list-text">Eine NetApp Console mit Ihrer E-Mail-Adresse und einem Passwort</block>
-  <block id="2328b3ec29071f5c5870aa6610155460" category="inline-link-macro">Erfahren Sie, wie Sie die Identitätsföderation nutzen</block>
-  <block id="22228c7e291e3dc9ca8a3cbb52ac92d2" category="paragraph">Sie können Single Sign-On verwenden, um sich mit den Anmeldeinformationen aus Ihrem Unternehmensverzeichnis anzumelden (föderierte Identität). <block ref="10ff459ad3ab35740c58ec701e4bf6e3" category="inline-link-macro-rx"></block> .</block>
-  <block id="7bceec47cb2761c6c5e3edab7c7877f7" category="list-text">Öffnen Sie einen Webbrowser und geben Sie die IP-Adresse ein, unter der der Agent installiert ist.</block>
-  <block id="bf16d7909c891a5a760cab0ad77d53bc" category="list-text">Geben Sie Ihren Benutzernamen und Ihr Passwort ein, um sich anzumelden.</block>
   <block id="b3cb6ababbe01759cd13ec3fb3684c1a" category="summary">Die Wartung des Betriebssystems auf dem Agent-Host liegt in Ihrer Verantwortung.  Sie sollten beispielsweise Sicherheitsupdates auf das Betriebssystem auf dem Konsolenagent-Host anwenden, indem Sie die Standardverfahren Ihres Unternehmens zur Betriebssystemverteilung befolgen.</block>
   <block id="6148da760abfb5167327e2dbd67b1724" category="doc">Warten der Konsolen-Agent-VM und des Betriebssystems</block>
   <block id="5279ec16620bed638d689fb55a687bf8" category="paragraph">Die Wartung des Betriebssystems auf dem Konsolenagent-Host liegt in Ihrer (der Verantwortung des Kunden).  Beispielsweise sollten Sie (der Kunde) Sicherheitsupdates auf das Betriebssystem auf dem Agent-Host anwenden, indem Sie die Standardverfahren Ihres Unternehmens zur Betriebssystemverteilung befolgen.</block>
@@ -4291,7 +4149,6 @@
   <block id="ac92bf4ce3841c2f389d28ad3c07957f" category="summary">Bereiten Sie Ihre Umgebung vor, bevor Sie die NetApp Console im eingeschränkten Modus bereitstellen.  Sie müssen die Hostanforderungen überprüfen, das Netzwerk vorbereiten, Berechtigungen einrichten und vieles mehr.</block>
   <block id="755bdc98f2ba455bba23e5d86a671294" category="section-title">Schritt 1: Verstehen, wie der eingeschränkte Modus funktioniert</block>
   <block id="bc3474242fe772e6976f83425651a854" category="paragraph">Machen Sie sich vor dem Start mit der Funktionsweise der NetApp Console im eingeschränkten Modus vertraut.</block>
-  <block id="86376c61ae2ab89f055ee0c3f057d3a6" category="paragraph">Verwenden Sie die browserbasierte Schnittstelle, die lokal über den installierten NetApp Console Agenten verfügbar ist.  Sie können nicht über die webbasierte Konsole, die über die SaaS-Schicht bereitgestellt wird, auf die NetApp Console zugreifen.</block>
   <block id="b47bafef7d95f8c0631a546427b24bf3" category="paragraph">Darüber hinaus sind nicht alle Konsolenfunktionen und NetApp Datendienste verfügbar.</block>
   <block id="969e5e6dbdd922439410c5eb57bc3c2e" category="inline-link-macro">Erfahren Sie, wie der eingeschränkte Modus funktioniert</block>
   <block id="b2036e1cefe79fc164d2eaaa419935c9" category="paragraph"><block ref="f4da007470370a47030c086e797197e9" category="inline-link-macro-rx"></block> .</block>
@@ -4339,24 +4196,10 @@
   <block id="fd9a417717b20aa8358b766d0504d437" category="paragraph">Für die Bereitstellung von Cloud Volumes ONTAP in Google Cloud sind mehrere APIs erforderlich.</block>
   <block id="e478bf49f8034f2197e96520fa338da6" category="inline-link">Aktivieren Sie die folgenden Google Cloud APIs in Ihrem Projekt</block>
   <block id="dc5737502524148f78bf03ba18318700" category="list-text"><block ref="dc5737502524148f78bf03ba18318700" category="inline-link-rx"></block></block>
-  <block id="7593d6122eb13308ea80bb55fc41c505" category="summary">Der private Modus wird normalerweise in lokalen Umgebungen ohne Internetverbindung und mit sicheren Cloud-Regionen verwendet, darunter AWS Secret Cloud, AWS Top Secret Cloud und Azure IL6.  Der private Modus ist mit der NetApp Console noch nicht verfügbar.  NetApp unterstützt diese Umgebungen weiterhin mit der BlueXP -Legacy-Schnittstelle. Link:&lt;doc link to PDF&gt;</block>
-  <block id="c267a62001ea1e145c3d8683219f0d2f" category="doc">Erste Schritte mit dem Workflow (BlueXP -Privatmodus)</block>
-  <block id="400e27d53d740a5d15ff4c72adc4d291" category="paragraph">Der private BlueXP Modus (alte BlueXP -Schnittstelle) wird normalerweise in lokalen Umgebungen ohne Internetverbindung und mit sicheren Cloud-Regionen verwendet, darunter AWS Secret Cloud, AWS Top Secret Cloud und Azure IL6.  NetApp unterstützt diese Umgebungen weiterhin mit der alten BlueXP Schnittstelle.</block>
-  <block id="f0d6401276844781c459c66448fa7d75" category="paragraph"><block ref="f0d6401276844781c459c66448fa7d75" category="inline-link-macro-rx"></block></block>
-  <block id="6851236e5609144d70ff216d0bf7494f" category="section-title">Im privaten Modus unterstützte Funktionen und Datendienste</block>
-  <block id="a716d7434dbf98dd8b0108a3cbe434dc" category="paragraph">Mithilfe der folgenden Tabelle können Sie schnell erkennen, welche BlueXP -Dienste und -Funktionen im privaten Modus unterstützt werden.</block>
-  <block id="736d00958cf70f5a0bc7588ee2b86592" category="paragraph">Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstützt werden.</block>
-  <block id="7e4b1c5ec6c6adb1fa50f4ca17076845" category="cell">BlueXP -Dienst oder -Funktion</block>
-  <block id="d0622c7af7b2cc2435986b2d005d8fc3" category="cell">*Arbeitsumgebungen* Dieser Teil der Tabelle listet die Unterstützung für die Verwaltung von Arbeitsumgebungen aus dem BlueXP Canvas auf.  Es werden keine unterstützten Sicherungsziele für die BlueXP backup and recovery angezeigt.</block>
-  <block id="1376d64de9953f470f0708fc6e330334" category="cell">*Dienstleistungen*</block>
   <block id="99cee3b8f810202d675de978cef4f9da" category="cell">Ja<block ref="514d17d2eb0e043089e13542661abd63" category="inline-link-rx"></block></block>
   <block id="e216b7a924341f796bca310d1d812baf" category="cell">Kopieren und synchronisieren</block>
-  <block id="645a84975202e30700b572b49a5ee29d" category="cell">Notfallwiederherstellung</block>
-  <block id="ff45d71e69fb5930de79de7c94326d7b" category="cell">Volume-Caching</block>
   <block id="35ccbae2ce9b9594b9af9196a3bed361" category="cell">Workload-Factory</block>
-  <block id="3d1f92a565d3b1a61880236e33c49bf3" category="cell">Zeitleiste</block>
   <block id="920d0c5e78f6b6572b89d526a296d06b" category="summary">Beginnen Sie mit der NetApp Console im eingeschränkten Modus, indem Sie Ihre Umgebung vorbereiten und den Konsolen-Agenten bereitstellen.</block>
-  <block id="af2c4df7e8660cdabd8fc59a2aa0aaf1" category="doc">Workflow „Erste Schritte“ (eingeschränkter Modus)</block>
   <block id="c31816e89acef282910453c5620f26f4" category="inline-link-macro">Bereitstellungsmodi</block>
   <block id="73766a81edee1e1df062cc59ac68494e" category="paragraph">Der eingeschränkte Modus wird normalerweise von staatlichen und lokalen Behörden sowie regulierten Unternehmen verwendet, einschließlich Bereitstellungen in AWS GovCloud- und Azure Government-Regionen.  Bevor Sie beginnen, stellen Sie sicher, dass Sie Folgendes verstehen:<block ref="4beb4752043a55296423922b143dd023" category="inline-link-macro-rx"></block> Und<block ref="dd9572e43b86cdf1b1d508e121fd732e" category="inline-link-macro-rx"></block> .</block>
   <block id="27677c533249219197c5933410713055" category="inline-link-macro">Vorbereiten der Bereitstellung</block>
@@ -4588,7 +4431,6 @@
   <block id="50442864bbf7126b7b62b75cde676ded" category="paragraph"><block ref="bb2a765d0923866ecd647a5c8b0cc5e9" category="inline-link-rx"></block> .</block>
   <block id="ed87b6f79acebe813c13145433f4bce1" category="summary">Deinstallieren Sie einen Konsolenagenten, um Probleme zu beheben oder ihn dauerhaft vom Host zu entfernen.  Die erforderlichen Schritte hängen vom verwendeten Bereitstellungsmodus ab.  Nachdem Sie einen Konsolenagenten aus Ihrer Umgebung entfernt haben, können Sie ihn aus der Konsole entfernen.</block>
   <block id="afb829361695f0d21025a9396659859f" category="doc">Deinstallieren und Entfernen eines Konsolenagenten</block>
-  <block id="7cbc6d3477f7ec0769c0695bb3001c58" category="section-title">Deinstallieren Sie den Agenten, wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden</block>
   <block id="bfc66ba3b81dc2d9cc21215e84660492" category="paragraph">Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden (mit anderen Worten, der Agent-Host verfügt über eine ausgehende Konnektivität), sollten Sie die folgenden Schritte ausführen, um den Agenten zu deinstallieren.</block>
   <block id="0f698c82e2e9c5cd1c4ae5eca5c6d189" category="list-text">Stellen Sie eine Verbindung zur Linux-VM für den Agenten her.</block>
   <block id="6a5be3e06b444aea04beccda3bc9e1d6" category="list-text">Führen Sie vom Linux-Host aus das Deinstallationsskript aus:</block>
@@ -4599,20 +4441,7 @@
   <block id="41b9dde34c587a177c2f3827a8427dfd" category="list-text">Durch diese Aktion wird die virtuelle Maschine nicht gelöscht.</block>
   <block id="4d921e8b119cda6cf295382929919d43" category="list-text">Diese Aktion kann nicht rückgängig gemacht werden. Wenn Sie einen Konsolenagenten einmal entfernt haben, können Sie ihn nicht wieder hinzufügen.</block>
   <block id="592190ac81807f2097b7f4253f7b5646" category="list-text">Geben Sie zur Bestätigung den Namen des Agenten ein und wählen Sie dann *Entfernen*.</block>
-  <block id="2c474831a621d6f0b4bdd5da67196b84" category="summary">Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden, aktualisiert die NetApp Console Ihren Konsolenagenten automatisch auf die neueste Version, sofern der Konsolenagent über ausgehenden Internetzugang verfügt, um das Softwareupdate abzurufen.</block>
   <block id="ca901ca59322c0976d1191fbab40ddfb" category="doc">Upgrades des Konsolenagenten verwalten</block>
-  <block id="15b7b1a5e8e0215cb61de10f2526fce3" category="paragraph">Wenn Sie manuell verwalten müssen, wann der Konsolenagent aktualisiert wird, können Sie automatische Upgrades für den Standardmodus oder den eingeschränkten Modus deaktivieren.</block>
-  <block id="6c66e308926fc039cc9e20fe56d7abdf" category="section-title">Automatische Upgrades deaktivieren</block>
-  <block id="ff2f1f684147e337fcb37a8c2bb653ec" category="paragraph">Das Deaktivieren des automatischen Upgrades für Ihren Konsolenagenten umfasst zwei Schritte.  Zuerst müssen Sie sicherstellen, dass Ihr Konsolenagent fehlerfrei und auf dem neuesten Stand ist.  Anschließend bearbeiten Sie eine Konfigurationsdatei, um automatische Upgrades zu deaktivieren.</block>
-  <block id="8e0ce99ee35de975c5f7687d4affed0d" category="admonition">Sie können automatische Upgrades nur deaktivieren, wenn Sie über einen Konsolenagenten der Version 3.9.48 oder höher verfügen.</block>
-  <block id="face11afe90ede4a749be5a4157d8f2f" category="section-title">Überprüfen Sie den Zustand Ihres Agenten</block>
-  <block id="79cc06675d6785216b696a05c9871dcd" category="paragraph">Sie sollten überprüfen, ob Ihr Agent stabil ist und alle auf Ihrer Agent-VM ausgeführten Container fehlerfrei und funktionsfähig sind.  Nachdem Sie automatische Upgrades deaktiviert haben, sucht Ihre Agent-VM nicht mehr nach neuen Diensten oder Upgrade-Paketen.</block>
-  <block id="8e0cd5e91588c3ce6a1ddbd84471639a" category="paragraph">Verwenden Sie einen der folgenden Befehle, um Ihren Konsolenagenten zu überprüfen.  Alle Dienste sollten den Status „Wird ausgeführt“ haben.  Wenn dies nicht der Fall ist, wenden Sie sich an den NetApp -Support, bevor Sie das automatische Upgrade deaktivieren.</block>
-  <block id="0a5bd35f1d7dd7f86f8d992e4307d414" category="section-title">Automatisches Upgrade für den Agenten deaktivieren</block>
-  <block id="8cf2ff0255c785cd472f51ee0b04cb4f" category="paragraph">Sie deaktivieren automatische Upgrades, indem Sie das Flag _isUpgradeDisabled_ in der Datei _com/opt/application/netapp/service-manager-2/config.json_ setzen.  Standardmäßig ist dieses Flag auf „Falsch“ gesetzt und Ihr Agent wird automatisch aktualisiert.  Sie können dieses Flag auf „true“ setzen, um automatische Upgrades zu deaktivieren.  Sie sollten mit der JSON-Syntax vertraut sein, bevor Sie diesen Schritt abschließen.</block>
-  <block id="fda5aa414d851bf8018163c5fe4acb1a" category="paragraph">Um das automatische Upgrade wieder zu aktivieren, führen Sie diese Schritte aus und setzen Sie das Flag _isUpgradeDisabled_ auf „false“.</block>
-  <block id="87406664bbccf1c53e6478eba90e7126" category="list-text">Stellen Sie sicher, dass Sie überprüft haben, dass Ihr Agent auf dem neuesten Stand und fehlerfrei ist.</block>
-  <block id="b8000759daeb255b90b1845748aeb18e" category="list-text">Bearbeiten Sie die Datei _/opt/application/netapp/service-manager-2/config.json_ und ändern Sie den Wert des Flags _isUpgradeDisabled_ in „true“.</block>
   <block id="21b1315c6a8f0b6a7d49a8cd93ddf218" category="section-title">Aktualisieren Sie den Konsolenagenten</block>
   <block id="aecaf1740cb5930ac7d205159eff94bc" category="paragraph">Der Konsolenagent muss während des Upgradevorgangs neu gestartet werden, sodass die NetApp Console während des Upgrades nicht verfügbar ist.</block>
   <block id="b0f22bfeabc1c7f8e39437a374a3af0b" category="list-text">Laden Sie die Console-Agent-Software von der<block ref="99637e01fa8caa34a544049093cac68c" category="inline-link-rx"></block> .</block>
@@ -4837,11 +4666,9 @@
   <block id="e4c0002e4f9f19273bc004922899fb85" category="sidebar">Konsolennetzwerkzugriff (Legacy)</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Wissen und Unterstützung</block>
   <block id="253b718b7b0bb8f190e2ebe1c721295e" category="paragraph">Ransomware Resilience-Rollen bieten Benutzern Zugriff auf NetApp Ransomware Resilience. Ransomware Resilience unterstützt die folgenden Rollen:</block>
-  <block id="c36b12344113082dcf8a9786e36a3536" category="cell">Ransomware-Resilienz</block>
   <block id="16a7e3e925ade6eef4533f96172d423f" category="sidebar">Ransomware-Resilienzrollen</block>
   <block id="e40a74210464aa0305c3d66c083f2e23" category="paragraph">| \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport Nachrichten an den NetApp Support zu senden. | \https://signin.b2c.netapp.com | So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu. | \https://support.netapp.com | Zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport Nachrichten an den NetApp Support sowie zum Empfangen von Software-Updates für Cloud Volumes ONTAP.</block>
   <block id="4ed68ecf8e006d0fab7f06897731cf53" category="list-text">Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten. Wenn Sie<block ref="99a33b76fea6c3306005dfd630a43c9c" category="inline-link-macro-rx"></block> , schlägt die Validierungsprüfung fehl. Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.</block>
-  <block id="a0a50b50b6bb8edb1f818d3ca9526b4b" category="cell">Wird in Regierungsregionen und kommerziellen Regionen mit eingeschränktem Modus unterstützt. Wird in souveränen Regionen mit eingeschränktem Modus nicht unterstützt. Im eingeschränkten Modus unterstützt NetApp Backup and Recovery nur die Sicherung und Wiederherstellung von ONTAP Volume-Daten.<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block> Das Sichern und Wiederherstellen von Anwendungsdaten und Daten virtueller Maschinen wird nicht unterstützt.</block>
   <block id="a8b7063e167b83f7676ad4659510d5ea" category="sidebar">Sicherungs- und Wiederherstellungsrollen</block>
   <block id="ffce0d237e59f85993727b9607fade6c" category="sidebar">Disaster Recovery-Rollen</block>
   <block id="fffc92a6b6a3b44b650e6669aa797cac" category="summary">Ransomware Resilience bietet verschiedene Benutzerrollen zur Verwaltung des Zugriffs auf Einstellungen, Aktionen und Berichte.</block>
@@ -4953,10 +4780,7 @@
   <block id="115781a0043a85f8707c5c99fd02dc75" category="list-text">\https://cloudmanager.cloud.netapp.com</block>
   <block id="300f031c227ed1b4448a8bb51abec2bb" category="list-text">\https://netapp-cloud-account.auth0.com</block>
   <block id="14a739c7dd9ae7124076d6fca0a62a7e" category="list-text">\https://netapp-cloud-account.us.auth0.com</block>
-  <block id="03275fa7fd8487800900fe5ed21b50b4" category="list-text">\https://console.bluexp.netapp.com</block>
-  <block id="5802dd4b381723f6988464d2d6587cfa" category="list-text">\https://*.console.bluexp.netapp.com</block>
   <block id="be39dcb2fcc989bf18987169d1f8afc4" category="list-text">\https://console.netapp.com</block>
-  <block id="9ebf544c1d9c2833a9338e1e70ee31de" category="list-text">\https://components.console.bluexp.netapp.com</block>
   <block id="44c8f9fac8ac8a713dca77d34b7e902d" category="list-text">\https://cdn.auth0.com</block>
   <block id="30c4239755a3fa7fe7952fafec8297dd" category="paragraph">Für den täglichen Betrieb.</block>
   <block id="533560d1d92ef216fc2f7047b132da5b" category="list-text">Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt t3.2xlarge.</block>
@@ -5054,7 +4878,6 @@
   <block id="02eee31e5109fac37be42cd2ad631e0f" category="paragraph">Der Konsolenagent stellt die folgenden API-Anfragen für erweiterte Sicherungs- und Wiederherstellungsvorgänge sowie Such- und Wiederherstellungsfunktionen. Diese Berechtigungen ermöglichen die Verwaltung von Netzwerken, Schlüsseltresoren und verwalteten Identitäten:</block>
   <block id="73361bbe50a41bd2e76e59f453c19c62" category="paragraph">Die folgenden Berechtigungen werden für die Datensicherung und -wiederherstellung nicht mehr benötigt, es sei denn, Sie verwenden die Legacy-Indexierung:</block>
   <block id="c47b4df454cbc8c7bf8207225c8c507d" category="paragraph">Die folgenden Berechtigungen wurden in den Abschnitt „Zusätzliche Sicherungs- und Wiederherstellungsberechtigungen“ verschoben, da sie für eine minimale Konfiguration nicht erforderlich sind:</block>
-  <block id="862b252e960e9fce5bfb6811edec4eb5" category="list-text">Führen Sie den folgenden Befehl aus und überprüfen Sie, ob der Status des Agenten als _aktiv (läuft)_ angezeigt wird:</block>
   <block id="fd45d2e80d190b12659f895ff5aa6e01" category="summary">Mit der NetApp Console verwalten Sie AWS-Anmeldeinformationen und Marketplace-Abonnements für die sichere und kosteneffektive Bereitstellung von Cloud Volumes ONTAP und anderen Datendiensten. Dazu geben Sie während der Bereitstellung des Console-Agenten die entsprechenden IAM-Anmeldeinformationen an und verknüpfen diese mit AWS Marketplace-Abonnements zur Abrechnung über ein oder mehrere AWS-Konten hinweg.</block>
   <block id="1efd890aee5019c9dd6a5ca79812af47" category="paragraph">Sie verwalten AWS-Zugangsdaten und Marketplace-Abonnements direkt über die NetApp Console , um eine sichere Bereitstellung von Cloud Volumes ONTAP und anderen Datendiensten zu gewährleisten, indem Sie während der Bereitstellung des Console-Agenten die entsprechenden IAM-Zugangsdaten angeben und diese zur Abrechnung mit AWS Marketplace-Abonnements verknüpfen.</block>
   <block id="e2df328564731e7d9ccff77a0ccc21d0" category="inline-link-macro">Agentenbereitstellungsrichtlinie für AWS</block>
@@ -5458,8 +5281,6 @@
   <block id="4d7b2f840c5d1940c932ef5b68407d63" category="list-text">Orchestrieren Sie Speicherverwaltungsaufgaben über die NetApp Console , wie z. B. die Bereitstellung von Cloud Volumes ONTAP, das Einrichten von Speichervolumes, die Verwendung der Datenklassifizierung und vieles mehr.</block>
   <block id="63e5cc9026d02c060058ae369a9c3c72" category="list-text">Authentifizieren Sie sich mithilfe der IAM-Rollen Ihres Cloud-Anbieters für die Integration der Abonnementabrechnung.</block>
   <block id="b5442d822ef2fdf45dde0be1d98a8164" category="list-text">Nutzen Sie erweiterte Datendienste (NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience und NetApp Cloud Tiering).</block>
-  <block id="5588ef10eaf5928d5c2eef029dd121da" category="list-text">Verwenden Sie die Konsole im eingeschränkten Modus.</block>
-  <block id="308c01eb8a0ce7aa29641087670683cc" category="paragraph">Wenn Sie keine erweiterte Orchestrierung oder Datensicherung benötigen, können Sie lokale ONTAP Cluster und Cloud-native Speicherdienste zentral verwalten, ohne einen Agenten einzusetzen. Überwachungs- und Datenmobilitätstools sind ebenfalls verfügbar.</block>
   <block id="89d00b0e4cdc5ca22b542515e11cf7fb" category="paragraph">Die folgende Tabelle zeigt, welche Funktionen und Dienste Sie mit und ohne Console-Agent nutzen können.</block>
   <block id="3ec96dde9691a6afd519c61179d8bedd" category="cell">Beim Agenten erhältlich</block>
   <block id="1490f23e97090196f0b8e4be2d8742a2" category="cell">Ohne Makler erhältlich</block>
@@ -5470,7 +5291,6 @@
   <block id="38b3d6672c5cc9fcae4bb30e89781b0d" category="cell">On-Premises ONTAP Cluster (erweiterte Verwaltung und Erkennung)</block>
   <block id="bdec6a7498ca4d25566e3e23d2c62a76" category="paragraph">Ja (fortschrittliches Management und Entdeckung)</block>
   <block id="b60366a003b487aaa0f17f8db3163ecc" category="paragraph">Nein (nur grundlegende Entdeckung)</block>
-  <block id="a9ae3aa6d3b5385e5d21f5f7c9cbe066" category="cell">*Verfügbare Speichermanagementdienste*:</block>
   <block id="3b00545dfd90abf1453721e441754d3d" category="cell">Digital Advisor (Active IQ)</block>
   <block id="c3705e839d1a8df80ae158824bd08448" category="cell">Dashboard-Metriken der Startseite</block>
   <block id="d3e800228af9a7ced9cadbe31f21cf71" category="paragraph">Ja^2^</block>
@@ -5481,14 +5301,6 @@
   <block id="932e0f0da3df907fbda805c12b12abe5" category="paragraph">Sie können einen Konsolenagenten direkt von der Konsole, vom Marktplatz Ihres Cloud-Anbieters oder durch manuelle Installation der Software auf Ihrem eigenen Linux-Host oder in Ihrer VCenter-Umgebung installieren.</block>
   <block id="0d07862d67097acd517fe27c0de099d7" category="section-title">Cloud-Anbieter-Berechtigungen</block>
   <block id="3ba516db764b4c90d4973b3960d1d8d9" category="paragraph">Wenn Sie Ihren Agenten in der Cloud installieren, aktualisiert sich der Console-Agent automatisch, sofern er über einen Internetzugang verfügt.</block>
-  <block id="59b11244b7261ce8d669bb84f89d952d" category="summary">Die NetApp Console bietet eine SaaS-Lösung für den vollen Funktionsumfang oder eine selbstgehostete Option für Organisationen mit eingeschränkter Konnektivität.</block>
-  <block id="7d4e67c65d7806e0a44c126537175622" category="paragraph">Sie können die NetApp Console auf zwei Arten nutzen: als vollständig verwaltete SaaS-Lösung oder als selbstgehostete Lösung in Ihrer eigenen Cloud-Umgebung. Bei der SaaS-Option greifen Sie über console.netapp.com auf die Konsole zu, während NetApp die gesamte Infrastruktur, Authentifizierung und Aktualisierungen verwaltet. Sie erhalten direkten Zugriff auf alle Funktionen über Ihren Webbrowser. Wenn Sie sich für die selbstgehostete Option entscheiden, installieren Sie einen Console-Agenten in Ihrer AWS-, Azure- oder Google Cloud-Umgebung. Die Schnittstelle läuft lokal, und der Agent hält eine eingeschränkte ausgehende Verbindung zu NetApp für wichtige Aufgaben wie Authentifizierung und Aktualisierungen aufrecht.</block>
-  <block id="7639306c3c0ecef2fa65fc37fa553d1e" category="paragraph">Wählen Sie die SaaS-Lösung, wenn Ihre Organisation über eine Standard-Internetverbindung verfügt. Sie profitieren von einfachster Einrichtung, automatischen Updates und vollem Zugriff auf alle NetApp -Speichersysteme, Datendienste und erweiterten Funktionen. Sie können Agenten direkt über die Konsole hinzufügen, und NetApp übernimmt die gesamte Wartung.</block>
-  <block id="693597565a0abb445dd8c1378b547c8a" category="paragraph">Wählen Sie die Option „Selbstgehostet“, wenn Ihre Organisation strenge Anforderungen an Konnektivität, Sicherheit oder Compliance stellt, beispielsweise in der öffentlichen Verwaltung oder in regulierten Branchen. Sie erhalten mehr Kontrolle und Netzwerkisolation, können aber nur ausgewählte NetApp -Speichersysteme verwalten und nur eingeschränkte Datendienste nutzen, wobei einige Funktionen nicht verfügbar sind. Sie installieren einen Konsolenagenten manuell und greifen direkt über die lokale Agentenschnittstelle auf die Konsole zu. Installieren Sie Ihren Agenten über Ihren Cloud-Marktplatz oder per manueller Installation. Der Agent kommuniziert ausschließlich ausgehend mit NetApp, um sicherzustellen, dass keine eingehenden Internetverbindungen eingehen.</block>
-  <block id="79b1b35ef8f164c3d04934de4b4e0249" category="inline-image-macro">Eine konzeptionelle Abbildung, die die Architektur des Standardmodus mit dem öffentlichen Internet zeigt, in dem die SaaS-Schicht und die Auth0-Authentifizierung verfügbar sind.</block>
-  <block id="4c448565e3fd072b37daa94fa673661d" category="paragraph"><block ref="4c448565e3fd072b37daa94fa673661d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e875d2f82c83bb0d211e843f8273306f" category="inline-image-macro">Eine konzeptionelle Darstellung des eingeschränkten Modus.</block>
-  <block id="8eee0eea4e2ae93e083fb1f6a03a412e" category="paragraph"><block ref="8eee0eea4e2ae93e083fb1f6a03a412e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9ea7157b38fa199a8532fa65cd92d096" category="summary">Verwalten Sie den Benutzerzugriff auf die NetApp Console mit rollenbasierter Zugriffskontrolle (RBAC), indem Sie vordefinierte Rollen auf Organisations-, Ordner- oder Projektebene zuweisen. Jede Rolle gewährt spezifische Berechtigungen, die definieren, welche Aktionen Benutzer innerhalb ihres zugewiesenen Bereichs ausführen können.</block>
   <block id="6369e7866450cfbd1595f3b5f17a45ce" category="doc">Erfahren Sie mehr über die rollenbasierte Zugriffskontrolle (RBAC) der NetApp Console .</block>
   <block id="adb744c66714a9cd79eb46c484743e3a" category="paragraph">NetApp entwirft Konsolenrollen nach dem Prinzip der minimalen Berechtigungen, sodass jede Rolle nur die Berechtigungen enthält, die für ihre Aufgaben erforderlich sind. Dieser Ansatz erhöht die Sicherheit, indem der Zugriff auf das beschränkt wird, was jedes Mitglied benötigt.</block>
@@ -5580,12 +5392,8 @@
   <block id="ec09e08f0dad9967f815ea4a6150e06c" category="list-text">**Agentenstrategie:** Agenten werden basierend auf der Ressourcenverantwortung Abteilungsprojekten zugeordnet.</block>
   <block id="0ef5ca1d3a2b8ef1e24d12a2a867a4f6" category="list-text">**Vorteile:** Maßgeschneiderte Zugangskontrolle, verbesserte betriebliche Effizienz und klare Verantwortlichkeiten für spezialisierte Aufgaben</block>
   <block id="12e01bb1a747f9efa932e4290df47651" category="section-title">Nächste Schritte mit IAM in der NetApp Console</block>
-  <block id="317861835a558acc5da02a2d53e87e99" category="paragraph">Es ist als Service-Plattform (SaaS) oder als selbstgehostete Option verfügbar, die Sie in Ihrer eigenen Cloud installieren können. Es bietet Speichermanagement, Datenmobilität, Datenschutz sowie Datenanalyse und -kontrolle. Die Managementfunktionen werden über eine webbasierte Konsole und APIs bereitgestellt.</block>
   <block id="6f9220ecdca642b0359fd1d526b21090" category="inline-image-macro">Ein Screenshot der Konsole, der mehrere Systeme zeigt. Eine Option wird ausgewählt und zeigt die Möglichkeit, NetApp -Datendienste zu aktivieren oder *System eingeben* auszuwählen, um den Speicher zu verwalten.</block>
   <block id="011d3401e6ecd731f72c9e3afe1df058" category="paragraph"><block ref="011d3401e6ecd731f72c9e3afe1df058" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="87d57ea72cafc3aa3be259970e754f81" category="section-title">SaaS versus souveräne Cloud-Bereitstellung</block>
-  <block id="641ac543d6ed23ceda83d07e868515f8" category="paragraph">Sie können die NetApp Console nutzen, indem Sie sich für das SaaS-Angebot anmelden oder es in Ihrer eigenen Cloud bereitstellen. Wenn Sie die NetApp Console in einer souveränen Cloud einsetzen, beschränkt NetApp die ausgehende Konnektivität, um die Sicherheits- und Compliance-Anforderungen Ihrer Organisation zu erfüllen. Nicht alle Funktionen und Dienste sind verfügbar, wenn die Konsole in einer souveränen Cloud bereitgestellt wird.</block>
-  <block id="2c6c43d54a7dd74a06c155d08d7db4eb" category="paragraph">NetApp bietet BlueXP weiterhin für Standorte an, die keine ausgehende Konnektivität benötigen. BlueXP kann in Ihrem Netzwerk ohne ausgehende Verbindungen installiert werden. <block ref="f1018912945653d0f5d1d6c88d05acfe" category="inline-link-macro-rx"></block></block>
   <block id="950a35d7aced985e8ee1b6240f65a908" category="doc">Sicherheitskonformität für NetApp Console</block>
   <block id="eedfa09a5feb67c791cc20a479679c67" category="paragraph">Die NetApp Console ist SOC 2 Typ II-konform.</block>
   <block id="051ae024df3188ffe4e3ac43a493c874" category="inline-link-macro">Erfahren Sie mehr über die SOC-2-Konformität von NetApp.</block>
@@ -5775,7 +5583,6 @@
   <block id="8cec294d7bbf367168b102d1aed4952e" category="paragraph">Sie können den Console-Agenten manuell auf Ihrem eigenen Linux-Host installieren, der in AWS, Azure oder Google Cloud ausgeführt wird.</block>
   <block id="f1a5483ce6e0c38d7737152319fdfc85" category="paragraph">Sie können auch überprüfen, wer ein Mitglied zu einer Organisation hinzugefügt hat oder ob ein Projekt erfolgreich gelöscht wurde.</block>
   <block id="d80a62f674e4a96f69c2ddfcceed1b7a" category="summary">Beginnen Sie mit der NetApp Console (SaaS), indem Sie die Netzwerkkonfiguration für die Console vorbereiten, sich anmelden und ein Konto erstellen und den NetApp Assistenten verwenden, um die grundlegenden Funktionen einzurichten.</block>
-  <block id="3162c8efd4cce0d602638a86276c10b1" category="doc">Workflow für den Einstieg (SaaS)</block>
   <block id="e10c2ca7a3a40579fe4240028852ed47" category="paragraph">Beginnen Sie mit der NetApp Console (SaaS), indem Sie die Netzwerkkonfiguration für die Console vorbereiten, sich anmelden und ein Konto erstellen und mithilfe des Console-Assistenten die grundlegenden Funktionen einrichten.</block>
   <block id="f9fd7cc1e76e4519cd46daa993179867" category="paragraph">Sie greifen auf eine webbasierte Konsole zu, die als Software-as-a-Service (SaaS)-Produkt von NetApp gehostet wird. Mit der Konsole können Sie Ihre Hybrid-Cloud-Speicherumgebung verwalten und NetApp Datendienste nutzen.</block>
   <block id="5a7e12e086f90e07ae42b4c3c6b5121a" category="paragraph">Stellen Sie sicher, dass die Computer, die auf die NetApp Konsole zugreifen, über Netzwerkzugriff auf die erforderlichen Endpunkte verfügen.</block>
@@ -5816,8 +5623,6 @@
   <block id="8c31c8785f7463414c8f14dda741b437" category="paragraph">Benutzer, die Single Sign-On mit einem externen Identitätsanbieter oder der NetApp Support Site verwenden, können MFA nicht aktivieren. Wenn eine dieser beiden Bedingungen auf Sie zutrifft, wird Ihnen die Option zum Aktivieren der Multi-Faktor-Authentifizierung in Ihren Profileinstellungen nicht angezeigt.</block>
   <block id="174ae0d84f7c9dd712d41abcfa50ec20" category="section-title">13. Januar 2026</block>
   <block id="7a53865977eaa5b4d126b4bb38ab3d60" category="sidebar">Erste Schritte mit der NetApp Console (SaaS)</block>
-  <block id="d479c74127647ef19be1288e3c84ad58" category="sidebar">Nutzen Sie den NetApp Console Assistant (SaaS).</block>
-  <block id="a18e7b20a79ebd88fb9c7f1fc43e7133" category="sidebar">NetApp Console im eingeschränkten Modus bereitstellen (Sovereign Cloud-Bereitstellungen)</block>
   <block id="528d4bb0b865d3d1472bb85fda901a37" category="sidebar">Identitäts- und Zugriffsmanagement (IAM) implementieren</block>
   <block id="33b619b2a0b648b8042ae175a232cd61" category="sidebar">Planen Sie Ihre IAM-Strategie</block>
   <block id="6fe6f7f944917c7ec0941e2231b3b4e0" category="sidebar">Ordner und Projekte hinzufügen</block>
@@ -5836,9 +5641,7 @@
   <block id="650a6b9660e523c1a925feddd83c0c4d" category="sidebar">NetApp Console im eingeschränkten Modus bereitstellen (Sovereign Cloud-Bereitstellungen)</block>
   <block id="d71a2025aa5d19fc2c3bab8a7d5d1bc1" category="sidebar">SOC-2-Konformität</block>
   <block id="aa201c2db7dd29fb5926c96c4006fa2d" category="sidebar">Konsolenpartnerschaften</block>
-  <block id="dc6f0f429a5f3d39f01ef6f9ecb8cc24" category="sidebar">SaaS versus eingeschränkte Bereitstellungsmodi</block>
   <block id="c595922d1b033b7101399b8ddff46d28" category="sidebar">NetApp Supportkonten</block>
-  <block id="0aa0b8f431cf64b7d8c4369a301c64dd" category="sidebar">Erste Schritte mit der NetApp Console (SaaS)</block>
   <block id="b295192b816510df999050431291a13e" category="sidebar">Erste Schritte mit der NetApp Console (eingeschränkter Modus)</block>
   <block id="0f7804927cf75f0a017463717b53dd88" category="sidebar">Bereiten Sie sich auf eine eingeschränkte NetApp Console Bereitstellung vor.</block>
   <block id="e171a54350d0c0c8636e6db01c266344" category="sidebar">NetApp Console im eingeschränkten Modus bereitstellen</block>
@@ -5887,7 +5690,6 @@
   <block id="16e0d5a8229f3c0136c12aa9def60bb1" category="inline-link-macro">Erfahren Sie, wie Sie die Konfiguration aus der NetApp Console ausführen.</block>
   <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
   <block id="ee856bddd35f8f0d8d6a5e0b5017b7dd" category="sidebar">Console-Agenten verstehen</block>
-  <block id="10895cced39195f7b9456b154a2c8530" category="sidebar">Beginnen Sie mit dem privaten Modus</block>
   <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">Standardagentenkonfiguration</block>
   <block id="cf6adff661a596f01b211beffb99d879" category="paragraph">Sie müssen Proxy-Informationen hinzufügen, falls Ihr Netzwerk einen Proxy für den Internetzugang benötigt. Sie können während der Installation einen expliziten Proxy hinzufügen. Die<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> und<block ref="a2bb8d2428da5c2a723c47bd3b78308d" prefix=" " category="inline-code"></block> Parameter sind optional und Sie werden nicht dazu aufgefordert, sie hinzuzufügen. Wenn Sie einen expliziten Proxyserver haben, müssen Sie die Parameter wie gezeigt eingeben.</block>
   <block id="55ccbb5c67dea0ea25dc1703475c6f80" category="paragraph">+<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> konfiguriert den Konsolenagenten für die Verwendung eines HTTP- oder HTTPS-Proxyservers in einem der folgenden Formate:</block>
@@ -5951,4 +5753,379 @@
   <block id="81584a5aa440695d6dd39594311c7b2d" category="list-text"><block ref="81584a5aa440695d6dd39594311c7b2d" category="inline-link-rx"></block></block>
   <block id="c19e034a7ae60fb90287c5050a076d5a" category="inline-link">Licenses and subscriptions Dokumentation</block>
   <block id="3dc73d95873fb59ed12df54318d70e6a" category="list-text"><block ref="3dc73d95873fb59ed12df54318d70e6a" category="inline-link-rx"></block></block>
+  <block id="a68eedcba6dbed6fbce0d0156a08917b" category="paragraph">| https://api.bluexp.netapp.com https://netapp-cloud-account.auth0.com https://netapp-cloud-account.us.auth0.com https://console.netapp.com https://components.console.netapp.com https://cdn.auth0.com | Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.</block>
+  <block id="a143379fbf8aa8c70a83e2cc997686c2" category="list-text">\https://*.console.netapp.com</block>
+  <block id="d27d491b9a6f2946384b1068e83e3176" category="list-text">\https://components.console.netapp.com</block>
+  <block id="d83123cbb0ef00805b8ecdc02f91f2f6" category="list-text">Cloud Build API (erforderlich für Cloud Volumes ONTAP-Bereitstellungen im privaten Modus mit Infrastructure Manager)</block>
+  <block id="b103df8373177b93ba350f7123e02ddb" category="admonition">Laden Sie den "online"-Agenten-Installer herunter, der für die Verwendung in Ihrem Netzwerk oder in der Cloud vorgesehen ist. Ein separater "offline"-Installer ist für den Console-Agenten verfügbar, aber er wird nur bei Bereitstellungen im privaten Modus unterstützt.</block>
+  <block id="617db5c080680430f663377b51530e36" category="list-text">Wenn Sie die webbasierte NetApp Console SaaS-Anwendung verwenden, kontaktiert sie mehrere Endpunkte, um Datenverwaltungsaufgaben auszuführen. Dies umfasst Endpunkte, die kontaktiert werden, um den Console-Agenten aus der Console bereitzustellen.</block>
+  <block id="e2a0e249f352de2ea956157df300d5c0" category="paragraph">Die Version 4.4.1 unterstützt sowohl den Standardmodus als auch den eingeschränkten Modus.</block>
+  <block id="b7c3f162d94516a17d91ff328463e7b2" category="doc">Veröffentlichung im privaten Modus (4.4.0)</block>
+  <block id="81ce971f80b475d475c24a4e44ada4e1" category="section-title">BlueXP Private-Modus ist jetzt NetApp Console Private-Modus</block>
+  <block id="9c787f49c95453f81615500fc040c752" category="paragraph">NetApp Console 4.4.0 ist die erste Version von NetApp Console im privaten Modus.</block>
+  <block id="7aced523efa2e35884ba6dffbc655f83" category="inline-link">Was ist neu auf der NetApp Console-Seite</block>
+  <block id="214ce822f9505ec8f305259fe07864a2" category="paragraph">Erfahren Sie mehr über die neue NetApp Console in der<block ref="cad102c2112bf216811c7b6bb8f99baa" category="inline-link-rx"></block>.</block>
+  <block id="0dbaa5b0eedf75058865e2b0994d5a8f" category="paragraph">Die Version 4.4.0 enthält Aktualisierungen der folgenden NetApp Console-Komponenten und -Dienste.</block>
+  <block id="9b4bffa460105781f82b1d463bde8200" category="cell">4.4.0</block>
+  <block id="a0f66fdbde042599d314470228f3ca6d" category="inline-link">Was ist neu auf der NetApp Console-Seite</block>
+  <block id="d9546787b8341bfee8dbbe4f87c60436" category="cell">Gehen Sie zu <block ref="9edfdcbb835e82f6dae46ac911dcb157" category="inline-link-rx"></block> und informieren Sie sich über die Änderungen in Version 4.4.0.</block>
+  <block id="380c830a3c13f16e4d36530d1de2be47" category="cell">5.0.2 (9. Februar 2026)</block>
+  <block id="582b607a608891f3c15d7fc69b83ace3" category="inline-link">Was ist neu auf der Seite NetApp Backup and Recovery</block>
+  <block id="b14e5d1e5d257d38ef28ffaa5bff5da4" category="cell">Gehe zu<block ref="a02d6bb1505d3b564f4ec7078c34d1ba" category="inline-link-rx"></block>.</block>
+  <block id="0ab04d2bfcc6d88bde2adee5587eeb44" category="cell">1.5.1 (9. Februar 2026)</block>
+  <block id="1197f67ce4773f97d566627f2af97b74" category="inline-link">Was ist neu auf der Seite NetApp Klassifizierung</block>
+  <block id="c1c74cf0737facb2879b7e9d70e13707" category="cell">Gehe zu<block ref="f887ca45067fd52c2ee2854f67f70a25" category="inline-link-rx"></block>.</block>
+  <block id="fad45f664f0478b74c9485a0b1f6d781" category="inline-link-macro">Berechtigungen für den privaten Modus einrichten</block>
+  <block id="6c3a57872e006099844f13049e7b1891" category="list-text"><block ref="6c3a57872e006099844f13049e7b1891" category="inline-link-macro-rx"></block></block>
+  <block id="6ac740475336104c0a338afa7c968b92" category="summary">Sie aktivieren die NetApp Console-Funktionen, indem Sie Konsolenagenten bereitstellen – eine schlanke Softwarekomponente, die eine sichere Verbindung zwischen Ihren lokalen und Cloud-Speichersystemen und der NetApp Console herstellt und so eine erweiterte Speicherorchestrierung und Datendienste ermöglicht.</block>
+  <block id="8ac78ab8923692f88d46369bad02e649" category="paragraph">Sie aktivieren die NetApp Console-Funktionen, indem Sie Konsolenagenten bereitstellen – schlanke Softwarekomponenten, die eine sichere Verbindung zwischen Ihren lokalen und Cloud-Speichersystemen und der NetApp Console herstellen und so eine erweiterte Speicherorchestrierung und Datendienste ermöglichen.</block>
+  <block id="64de839c0c32e1a751d58d0ef8b0fdfb" category="section-title">Was ein Console-Agent tut</block>
+  <block id="19e6068a69e57ce5709e253adb1d4062" category="paragraph">Ein Console-Agent überbrückt die Netzwerklücke zwischen Ihren Speichersystemen und der NetApp Console. Er verbindet Ihre Infrastruktur sicher mit den NetApp APIs und der Console und ermöglicht Ihnen Folgendes:</block>
+  <block id="fdcdd0b06c236ebbe76d60efcc4cd7ec" category="list-text">Entdecken und überwachen Sie Speichersysteme in AWS-, Azure-, Google Cloud- und On-Premises-Umgebungen über die NetApp Console.</block>
+  <block id="c46631c16d2e1fcc35bf31842e6161f5" category="list-text">Orchestrieren Sie Speicherbereitstellungs- und Konfigurationsaufgaben auf Speichersystemen von der NetApp Console.</block>
+  <block id="785bc63c597dfac25b559538c8e96503" category="list-text">Aktivieren Sie erweiterte Datenschutz- und Optimierungsdienste.</block>
+  <block id="d20c1539205e6fd1b25947b81eddfd64" category="list-text">Verknüpfen Sie Ihre Cloud-Anbieter-Zugangsdaten mit einem Console-Agenten, um die Nutzung von Cloud-Diensten sicher zu verfolgen und Bereitstellungen mit dem richtigen Abonnement zu verbinden, damit eine genaue Abrechnung und Kostenverwaltung möglich ist.</block>
+  <block id="6a02c4b17140e3428ec94946b7d436e4" category="section-title">Agentenarchitektur</block>
+  <block id="a25e3c2f3dac5d7e6482dce310183cd5" category="paragraph">Agenten arbeiten mit schlanken Prozessen, die:</block>
+  <block id="768d6d76975488f4ba88ef017c4edd78" category="list-text">Daten zur und von der Console SaaS-Anwendung übertragen (Standard- und eingeschränkter Modus) oder ausschließlich lokal arbeiten (privater Modus)</block>
+  <block id="f70202345a6dfcbfe77d627d2ac58285" category="list-text">Initiieren Sie die gesamte Kommunikation – die Konsole initiiert niemals ausgehende Anrufe an Agenten</block>
+  <block id="93600a46170527ea578d26f1b7fde4e3" category="list-text">Stellen Sie über Standardverwaltungsprotokolle eine Verbindung zu Ihren Speichersystemen her</block>
+  <block id="972474bcb92581c6b930a7f04f6d8710" category="list-text">Verwenden Sie TLS 1.3 für die sichere Kommunikation mit Cloud-Anbietern und den NetApp Console-APIs</block>
+  <block id="e61e46b7de69fefd5d77bc17d028e3b6" category="section-title">Verfügbarkeit des Agenten und betriebliche Anforderungen</block>
+  <block id="e6b8da90c6635e88daf47711cf3785d0" category="paragraph">Console-Agenten sind eine kritische Infrastruktur für NetApp Console. NetApp Console kann kurze Ausfälle überbrücken, aber die Agenten müssen betriebsbereit und erreichbar bleiben, um einen unterbrechungsfreien Management- und Datenbetrieb zu gewährleisten. Sie sind dafür verantwortlich, Folgendes sicherzustellen:</block>
+  <block id="74c2f09d744d651cb5a4a662d2b18d1c" category="list-text">Agenten bleiben aktiv und laufen weiter</block>
+  <block id="fd15e45efbec8c5db31829777b77fcb0" category="list-text">Agenten haben Netzwerkverbindung zu den erforderlichen Endpunkten</block>
+  <block id="1fd9dbae51b571c6b97ab45c3154513f" category="list-text">Infrastrukturausfälle werden schnell behoben</block>
+  <block id="7b5156100172ee6fa1476bac765fd041" category="list-text">Die Agenten-VMs werden gemäß den Empfehlungen von NetApp gewartet und aktualisiert.</block>
+  <block id="d24ccb00f9e5803fe3257cfa648d21ce" category="section-title">Wenn Sie einen Console Agent benötigen</block>
+  <block id="9325edcf04c322305789f32f84c0cb59" category="paragraph">Sie müssen mindestens einen Console-Agenten bereitstellen, wenn Sie Folgendes tun möchten:</block>
+  <block id="223a9d9cbfb96107d7bd54234e33162a" category="list-text">Verwenden Sie eingeschränkte oder private Bereitstellungsmodi (Console in Ihrer eigenen Umgebung installiert). Für einige Dienste sind zusätzliche Agenten erforderlich.</block>
+  <block id="7f01ef620ffff2abf7f2610491ec035d" category="list-text">Greifen Sie auf erweiterte Datendienste zu (NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, NetApp Data Classification und mehr).</block>
+  <block id="ec9b2bc9b30484bfadf2945f19c86114" category="list-text">Cloud Volumes ONTAP Systeme verwalten.</block>
+  <block id="6fe86acb33af67fd58702973ee4ab94a" category="list-text">Führe fortgeschrittene Verwaltungsaufgaben auf lokalen ONTAP Clustern durch.</block>
+  <block id="e6598db96dd238a9c069d901b9e66445" category="list-text">Lizenzen nachverfolgen, Speicherzustand überwachen und Lebenszyklus-Upgrades planen.</block>
+  <block id="e63c89066090156259c756df70c96295" category="paragraph">Ohne Agenten können Sie grundlegende Speichererkennungsfunktionen nutzen und auf einen begrenzten Satz von Überwachungs- und Speicherverwaltungsfunktionen zugreifen. Die meisten Anwendungsfälle in Unternehmen erfordern jedoch einen oder mehrere operative Agenten.</block>
+  <block id="be1c134e082f5cbc30cc533514d95cf5" category="paragraph"><block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block> um zu verstehen, wann man einen Agenten benötigt und welche Funktionen Agenten ermöglichen.</block>
+  <block id="e4a025a18b1f8e62ad15ad270a21573d" category="section-title">Bereitstellungsoptionen für Console-Agenten</block>
+  <block id="5f4a870ffaecc8c4b3681d6ac88273fc" category="paragraph">Sie können Console-Agenten in bereitstellen:</block>
+  <block id="899d1bc9e05d1bc1959c42b13c2918a4" category="list-text">Amazon Web Services (standard, eingeschränkter oder privater Modus)</block>
+  <block id="2474cad8d741f2cd4c0890cf082af8db" category="list-text">Microsoft Azure (standard, eingeschränkter oder privater Modus)</block>
+  <block id="1d7cc8d3f6824854c5d2b12952fe2df1" category="list-text">Google Cloud (standard, eingeschränkter oder privater Modus)</block>
+  <block id="8a6bb6cb1b0238791d83a19a1046d664" category="list-text">Bei Ihnen vor Ort (Standard- oder Privatmodus)</block>
+  <block id="0d3e897c4a816e0c092c2daf64921fe7" category="paragraph">Ihr Console-Bereitstellungsmodus, Ihre Speicherumgebung und Ihre Anforderungen an die Datenhoheit bestimmen, wo Sie Agenten bereitstellen. Stellen Sie mehrere Agenten in verschiedenen Umgebungen bereit, um organisatorische Trennung oder geschäftliche Anforderungen zu erfüllen.</block>
+  <block id="fd7b5a05c342e2d52f6a8285038457eb" category="paragraph">Nach der Bereitstellung eines Agenten registrieren Sie diesen bei Ihrer NetApp Console-Organisation, um die Funktionen für diese Organisation zu aktivieren. Sie können mehrere Speichersysteme und Datendienste mit einem einzelnen Agenten verknüpfen oder mehrere Agenten in verschiedenen Umgebungen bereitstellen, um organisatorische Trennungen oder geschäftliche Anforderungen zu erfüllen.</block>
+  <block id="1d21faf6497a388f1c21c3018f517792" category="section-title">Agenten für die NetApp Console SaaS-Anwendung (Standardmodus)</block>
+  <block id="64bd2b23107c1554c9272fddbd63de33" category="paragraph">Setzen Sie Agenten in Ihrer Cloud oder lokal ein, um die Verbindung zur Cloud-gehosteten Console SaaS-Anwendung herzustellen. Agenten ermöglichen erweiterte Funktionen, während die Console-UI weiterhin von überall aus zugänglich bleibt.</block>
+  <block id="2d99f5ff70e4995a63fd979f218ffff6" category="paragraph">Sie können Agenten direkt von der Console installieren, wenn Sie die SaaS-Anwendung (Standardmodus) verwenden. Sie können in AWS, Azure oder Google Cloud installieren oder manuell vor Ort auf Ihrem eigenen Linux-Host oder in Ihrer VCenter-Umgebung.</block>
+  <block id="058e0a063d8fa981adaf3326cf1cb26b" category="paragraph">Wenn Sie einen Agenten in Ihren Räumlichkeiten installieren, können Sie die jeweiligen Cloud-Provider-Zugangsdaten verknüpfen, um die Abrechnungsintegration und Datendienste zu aktivieren.</block>
+  <block id="d352fb6abd2321079aa6ae4cf5ccffd8" category="section-title">Agenten für NetApp Console im eingeschränkten Modus</block>
+  <block id="bb86181d92786b27c5037b1e2052f318" category="paragraph">Sie müssen einen Agenten installieren, über den die Benutzer auf die NetApp Console zugreifen. Zusätzliche Agenten sind erforderlich, um Datendienste zu aktivieren und Speichersysteme zu verwalten.</block>
+  <block id="801101aa6060932ba30773f5b51fb2e1" category="paragraph">Wenn Sie die NetApp Console im eingeschränkten Modus verwenden, installieren Sie Agenten entweder über den Marktplatz Ihres Cloud-Anbieters oder indem Sie die Software manuell auf Ihrem eigenen Linux-Host in der Cloud, vor Ort oder in Ihrer VCenter-Umgebung installieren.</block>
+  <block id="cd9eaf17be6a58930ba21c8e25898ae0" category="paragraph">Sie müssen einen Agenten installieren, über den die Benutzer auf die NetApp Console zugreifen. Zusätzliche Agenten sind erforderlich, um Datendienste zu aktivieren und Speichersysteme zu verwalten.</block>
+  <block id="39f03287943ea9024a48114d1c813c9c" category="section-title">Agenten für NetApp Console im privaten Modus (lokal oder in der Cloud ohne ausgehende Konnektivität)</block>
+  <block id="58b57be8256f389aa03c4bd2a43e14c7" category="paragraph">Installieren Sie Agenten in Ihrem Rechenzentrum oder einer abgeschotteten Umgebung. Die Agenten haben keine Verbindung zu NetApp API-Endpunkten. Alle Vorgänge bleiben lokal, mit voller Datenhoheit und Kontrolle.</block>
+  <block id="174d20ad6124d3d071e1cf8db158cf81" category="section-title">Verwenden Sie mehrere Agenten, wenn nötig</block>
+  <block id="34844adab5cab548cd83a1bbdf5cf105" category="paragraph">Jeder Agent arbeitet unabhängig und kann mehrere Speichersysteme und Datendienste verwalten. Setzen Sie mehrere Agenten ein, wenn Sie Folgendes benötigen:</block>
+  <block id="da16884e7d880d3d379590aa3547eb5f" category="list-text">Isolation nach Speichertyp oder Organisationsfunktion</block>
+  <block id="48b5e113a80ee93a31fb523087a1228b" category="list-text">Erfüllen Sie geografische oder Netzwerksegmentierungsanforderungen</block>
+  <block id="51fdc08238f2b902c4ae72aa6f2170f9" category="paragraph">Erfahren Sie, wie Sie Console-Agenten bereitstellen:</block>
+  <block id="671c13c6a9ba7605dee99a36bb936c9b" category="inline-link-macro">Installieren Sie einen Agenten in AWS</block>
+  <block id="7731b95e61f103f4fcdc8c35c12c6a40" category="list-text"><block ref="e4c8ea5b65b48e6be5e2cc830b3a3126" category="inline-link-macro-rx"></block>.</block>
+  <block id="b3715f8647324203cdc79c6887601ee5" category="inline-link-macro">Installieren Sie einen Agenten in Azure</block>
+  <block id="3e45098b0d9c257b4627a17390ae1959" category="list-text"><block ref="a2c5157bc864eede4beff17cfa68d202" category="inline-link-macro-rx"></block>.</block>
+  <block id="c9d415f7120a9d16f9a9ab7755b6e8e4" category="inline-link-macro">Installieren Sie einen Agenten in Google Cloud</block>
+  <block id="5cc50e0700be2ae34f2fb511abc44d4f" category="list-text"><block ref="dd0c583ebdf9a13cbc10d1b593b7aad7" category="inline-link-macro-rx"></block>.</block>
+  <block id="3de032c3eca58d2f1334f31cbf9c1f97" category="list-text"><block ref="4d8249618f142f0b8f88894df46c9870" category="inline-link-macro-rx"></block>.</block>
+  <block id="9e2328a47449dbb247a94c88105affd8" category="paragraph">Wenn Sie keine erweiterten Orchestrierungs- oder Datenschutzdienste benötigen, können Sie lokale ONTAP-Cluster und Cloud-native Speicherdienste zentral verwalten, ohne einen Agenten bereitzustellen. Einige Überwachungs- und Datenmobilitätstools sind ebenfalls ohne Agenten verfügbar.</block>
+  <block id="b984ee282b5ae7bd8200b391985e0b7a" category="cell">*Storage-Management und Gesundheitsdienste*:</block>
+  <block id="3ff457654de1144b6139c52950ddf987" category="inline-link-macro">Erfahren Sie mehr über NetApp Console-Modi</block>
+  <block id="a0e82755b2273e9a4360c92766d25540" category="admonition">Die Föderation ist nicht verfügbar, wenn sich die NetApp Console im privaten Modus befindet. <block ref="c8f88c82d0a8784db4736bf5632657d2" category="inline-link-macro-rx"></block>.</block>
+  <block id="2d55d6fe297c12639d20a811bbbefc59" category="summary">Sie können NetApp Console über die SaaS-Anwendung nutzen oder sie selbst in Ihrer eigenen Umgebung (Cloud oder On-Premises) installieren.</block>
+  <block id="edeb431e14167b97a6b9bfb897be91b6" category="paragraph">NetApp bezeichnet diese Anwendungsfälle als _Bereitstellungsmodi_. Jeder Modus bietet unterschiedliche Konnektivität, Funktionen und Dienste für Ihre Geschäfts- und Sicherheitsanforderungen.</block>
+  <block id="039fece4b91879f57d8ce3e60cd91b72" category="list-text">Standardmodus (SaaS)</block>
+  <block id="4404088bcdbc148a12d9d54feaceaaa6" category="list-text">Die NetApp Console SaaS (Software-as-a-Service)-Anwendung ermöglicht den Zugriff auf alle NetApp Datenservices, automatisierte Updates und flexible Authentifizierungsoptionen wie Identitätsföderation und NetApp Support Site-Anmeldungen. Dieser Modus unterstützt Marketplace-Abonnements und BYOL-Lizenzierung. Dieser Modus ist ideal für die meisten Benutzer und Organisationen, insbesondere für diejenigen, die die meisten Funktionen und Services nutzen möchten, die mit der NetApp Console verfügbar sind.</block>
+  <block id="cbe7773bd2fa95a5751a5e831a6e8519" category="list-text">Eingeschränkter Modus (in Ihrer eigenen öffentlichen Cloud installiert)</block>
+  <block id="9b623b58bde4f03efa6364d08c8279df" category="list-text">Der eingeschränkte Modus ist für Organisationen mit erhöhtem Sicherheitsbedarf und begrenzter Konnektivität vorgesehen, beispielsweise Regierungen und regulierte Unternehmen. Sie installieren die NetApp Console in Ihrer eigenen öffentlichen Cloud (in einer Regierungs-, souveränen oder kommerziellen Region), und sie hat eine eingeschränkte ausgehende Konnektivität zu den NetApp Console API-Endpunkten (gehostet in der SaaS-Anwendung). Der eingeschränkte Modus bietet Zugriff auf wichtige Datendienste wie Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in Regierungs- und kommerziellen Regionen) sowie Datenklassifizierung, zusammen mit automatisierten Software-Upgrades und Identitätsföderation.</block>
+  <block id="58c169b907a09c154e92b586b03720ce" category="list-text">Privater Modus (installiert vor Ort oder in der Cloud)</block>
+  <block id="e728600836da4c211714325b06aff5ce" category="list-text">Der private Modus ist für Organisationen mit strengen Sicherheitsanforderungen geeignet, wie beispielsweise in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6 oder abgeschotteten Umgebungen. Er stellt keine Verbindung zur NetApp Console SaaS-Anwendung oder NetApp Cloud-basierten APIs her, wodurch Sie die volle Kontrolle haben und die externe Kommunikation blockiert wird. Unterstützte Datendienste umfassen NetApp Backup and Recovery, NetApp Data Classification, NetApp Replication und Cloud Volumes ONTAP. Alle Speicherung und Authentifizierung bleiben lokal, sodass die Daten innerhalb Ihrer Umgebung verbleiben. Verwenden Sie diesen Modus für Rüstungsunternehmen, Finanzinstitute mit strengen Datenresidenzregeln und Regierungsbehörden mit klassifizierten Systemen.</block>
+  <block id="9c1f6580e4f786a77412f0477deeb241" category="paragraph">Bei Installation in Ihren Räumlichkeiten werden ausschließlich ONTAP-Speichersysteme unterstützt.</block>
+  <block id="8f674ddec71fa3256a062bcac7a92856" category="admonition">NetApp Console beschränkt den Datenfluss in eingeschränkten und privaten Modi, aber Sie müssen sicherstellen, dass Ihre Umgebung Ihren Vorschriften entspricht.</block>
+  <block id="98dfed72c4da8ca5a25bdfa5d04c5824" category="paragraph">Die folgende Tabelle vergleicht diese Modi.</block>
+  <block id="ba5f081414532f0d5aaec9831e4784be" category="cell">Verbindung zur NetApp Console SaaS-Anwendung erforderlich?</block>
+  <block id="6f9887086903cbee8430984e88107b05" category="cell">Ja, innerhalb der Region (bei Verwendung Cloud Volumes ONTAP)</block>
+  <block id="8f40f6b9cda905fc9a83217435e6b940" category="cell">Manuelle Installation</block>
+  <block id="b24f6f4300b08c76317c704bedb082b6" category="cell">Automatische Upgrades der Console-Agent-Software</block>
+  <block id="e358a634785d3e2fff4c1217d03f407a" category="cell">Manuelle Aktualisierung erforderlich</block>
+  <block id="d69f745fe3dcf3077b8d5e27eafd2709" category="cell">Aus der Console SaaS-Anwendung</block>
+  <block id="ccfac6390a72ecff69edf91b3045c7c0" category="cell">Lokal von der Agent-VM</block>
+  <block id="587b25bbebb3a458f858a5d2ed9e104a" category="cell">Die Console SaaS-Anwendung</block>
+  <block id="f837d6fb5d0f781a54dbb27b30662546" category="cell">ein Agent</block>
+  <block id="9ad8f5b23e6ea86ce6f710e0bf3191ae" category="cell">Lokale Benutzerauthentifizierung</block>
+  <block id="8bc8a1f88203ed7f28840bd663e2b355" category="cell">Mehrere werden unterstützt</block>
+  <block id="91daea12159afbb582562b3dce17d996" category="cell">Bring-your-own-license (BYOL)</block>
+  <block id="5cf44de13bdfbb37425c02342d1bf02a" category="paragraph">Siehe die folgenden Abschnitte für Details zu den in den einzelnen Modi unterstützten Funktionen und Diensten.</block>
+  <block id="64f32336fdd35ab06025a25efa6f0377" category="section-title">NetApp Console im Standardmodus (Saas application)</block>
+  <block id="61a4390ad7ea17b4a56fcfbf9251b5ca" category="paragraph">Das folgende Bild zeigt eine Bereitstellung im Standardmodus.</block>
+  <block id="0aa5c2bee848099108fdcca010978146" category="inline-image-macro">Eine konzeptionelle Abbildung, die das öffentliche Internet zeigt, wo die webbasierte Konsole, die SaaS-Anwendung und die Auth0 Authentifizierung verfügbar sind, ein virtuelles Netzwerk in der Cloud, in dem ein Agent ausgeführt wird und Cloud Volumes ONTAP verwaltet, sowie einen AFF Cluster in einem lokalen Rechenzentrum.</block>
+  <block id="c15b8edfff82a556a96e76c9c2212ca0" category="paragraph"><block ref="c15b8edfff82a556a96e76c9c2212ca0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="65eb718fece70c4932491a8e1ed896ae" category="section-title">Unterstützte Funktionen und Dienste für NetApp Console im Standardmodus</block>
+  <block id="2a15b748c11b6d0edc4a930d52e95397" category="paragraph">Die folgende Tabelle listet die Speicherverwaltungsfunktionen, Datendienste und administrativen Funktionen auf, die in der NetApp Console SaaS-Anwendung (Standardmodus) verfügbar sind.</block>
+  <block id="227f38fb72944057249b3d35ec2d2ad3" category="cell">NetApp service oder Funktion</block>
+  <block id="ab73a743c1f5fee13984f7219394896a" category="cell">Konsolenagent erforderlich</block>
+  <block id="825846de36bd0d91117ef9c078e6de4e" category="cell">*Verwaltung von Speichersystemen* Diese Tabelle zeigt, welche Speichersysteme Sie über die NetApp Console verwalten können. Es werden keine Sicherungsziele für NetApp Backup and Recovery aufgeführt.</block>
+  <block id="c6abc2bc3f6322376797e84420db4fba" category="cell">Ja, für Discovery und Management. Sie können die direkte Discovery ohne einen Console-Agent verwenden, aber Sie benötigen einen Agenten, um Management-Funktionen zu nutzen.</block>
+  <block id="d00f4e3686c8067aa63d20326ba56529" category="cell">Für die Erkennung und Verwaltung erforderlich. Sie können die direkte Erkennung ohne einen Console-Agent verwenden, aber für die Nutzung der Verwaltungsfunktionen benötigen Sie einen Agent.</block>
+  <block id="f03c2be9572a6e7bfa92e94fd6438322" category="cell">NetApp Klassifizierung</block>
+  <block id="9889bea33cb340a0901dd911b722736f" category="cell">NetApp Ransomware Protection</block>
+  <block id="c93c9484c37313d13a6650717683186d" category="cell">*NetApp Supportvertragsfunktionen*</block>
+  <block id="fc5ae4b521ff6f2057073b4ce6c1fd65" category="cell">Lebenszyklusplanung</block>
+  <block id="6909951c7f061d5b54ce985daf4cef84" category="cell">*Administrative Merkmale*</block>
+  <block id="0d1c3c2e7e01241fb19ceb720549bec8" category="paragraph">Licenses and subscriptions-Verwaltung</block>
+  <block id="53a3be21a870370dce986e82b79657cb" category="cell">Multifaktor-Authentifizierung (lokale Benutzer)</block>
+  <block id="982b656ed07c7605489c1f8e610a6863" category="cell">Organisationspartnerschaften</block>
+  <block id="933def25802d2df8e8afab6c32f5b9a2" category="section-title">Funktionsweise der NetApp Console im Standardmodus</block>
+  <block id="bfbc2ae43ec63d9a8c9b0bf28d6e76ac" category="list-text">Für den täglichen Betrieb ist eine Verbindung von einem Agenten zur Console SaaS-Anwendung, zu den öffentlich verfügbaren Ressourcen Ihres Cloud-Anbieters und zu anderen wichtigen Komponenten erforderlich.</block>
+  <block id="874ddb7da15406c9e0c1216ea069d4ad" category="list-text">Unterstützter Standort für einen Console-Agenten</block>
+  <block id="5635ae08b48ccd09e89de740fc1eda35" category="list-text">Im Standardmodus können Sie einen Console-Agenten in der Cloud oder auf Ihren eigenen Systemen installieren.</block>
+  <block id="1c607ead61df7abafd03f74249135fed" category="admonition">Die Installation eines Agenten in der Cloud verursacht Cloud-Nutzungsgebühren.</block>
+  <block id="af6715a71d6494b4d95a731d8f2326c0" category="list-text">NetApp aktualisiert die Agentensoftware automatisch monatlich.</block>
+  <block id="4d5d1212bd0be52b0f06612ab0868e2b" category="list-text">Sie greifen über die Console SaaS-Anwendung auf die Benutzeroberfläche zu, die über das öffentliche Internet verfügbar ist.</block>
+  <block id="5981099db8f6a5f0ede8f01d1c46b020" category="list-text">NetApp Console bietet Authentifizierung mit auth0- oder NetApp Support Site (NSS) Logins. Identitätsföderation ist verfügbar.</block>
+  <block id="f7edecd71600ffc14fed18b4fac58cb4" category="paragraph">+ <block ref="d7d87d0a148c81603b40370c84cf5979" category="inline-link-macro-rx"></block>.</block>
+  <block id="18ce407df84b9b3b6a37f37949068013" category="section-title">NetApp Console im eingeschränkten Modus (installiert in Ihrer eigenen öffentlichen Cloud)</block>
+  <block id="1bab4d9f19f78d9293b2c57776f8b486" category="paragraph">Sie installieren einen Console-Agenten in der Cloud (in einer Regierungs-, Staats- oder kommerziellen Region), und er verfügt nur über eine eingeschränkte ausgehende Konnektivität zu den NetApp Console-API-Endpunkten (die in der SaaS-Anwendung gehostet werden).</block>
+  <block id="8aba565c1287faf0e1ca4932525d434a" category="paragraph">Benutzer greifen auf die lokale Benutzeroberfläche des Console-Agenten zu, nicht auf die SaaS-Anwendung.</block>
+  <block id="6db08dac0b67e028e51d8ac5e5a62432" category="paragraph">Je nach den Datendiensten und Funktionen, die Sie verwenden möchten, erstellt ein NetApp Console-Organisationsadministrator zusätzliche NetApp Console-Agenten, um Daten in Ihrer Hybrid-Cloud-Umgebung zu verwalten.</block>
+  <block id="074dab9c82d3474cf642c9f99e7d5a26" category="inline-xref">Erfahren Sie mehr über ausgehende Verbindungen zu den NetApp Console-APIs</block>
+  <block id="014c03d6e48ef20c47b3fd17154a6d54" category="paragraph"><block ref="a77e3fdf9a749a1e7ea79c8e4fb20767" category="inline-xref-macro-rx"></block>.</block>
+  <block id="56899b78a8e10c53c1560d7de57c34e8" category="inline-image-macro">Eine konzeptionelle Abbildung, die das öffentliche Internet zeigt, wo die SaaS-Anwendung und die auth0 Authentifizierung verfügbar sind, ein virtuelles Netzwerk in der Cloud, in dem ein Agent ausgeführt wird und Zugriff auf die webbasierte Konsole bietet, und Cloud Volumes ONTAP sowie einen AFF Cluster in einem lokalen Rechenzentrum verwaltet.</block>
+  <block id="785d30430f94fe799a20dd723658310c" category="paragraph"><block ref="785d30430f94fe799a20dd723658310c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d2a6f3b571c873d3d99d18749793c049" category="section-title">Unterstützte Funktionen und Dienste für die NetApp Console im eingeschränkten Modus</block>
+  <block id="2a093d970c05089d032d564085dbc98b" category="paragraph">Die folgende Tabelle listet die Speicherverwaltungsfunktionen, Datendienste und administrativen Funktionen auf, die in NetApp Console verfügbar sind, wenn Sie es im eingeschränkten Modus installieren.</block>
+  <block id="690d3adde6cb0f9f31856e15ceaf44e9" category="cell">*Datendienste* (Der eingeschränkte Modus unterstützt weniger Datendienste als der Standardmodus)</block>
+  <block id="f05ea9e0c9ccffc58a546b5b7a0d8608" category="paragraph">Backup and Recovery</block>
+  <block id="9fe116ba56bf2ac80436c5a339522871" category="list-text">Unterstützt in Regierungsregionen und Handelsregionen mit eingeschränktem Modus. Nicht unterstützt in souveränen Regionen mit eingeschränktem Modus.</block>
+  <block id="307c8361113294df5dea27399377c5ec" category="list-text">Im eingeschränkten Modus unterstützt NetApp Backup and Recovery nur die Sicherung und Wiederherstellung von ONTAP-Volume-Daten.<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block></block>
+  <block id="d906f88b77c5d5ad1fd6cd31a6080838" category="cell">Unterstützt in Regierungs- und kommerziellen Regionen im eingeschränkten Modus. Nicht unterstützt in souveränen Regionen im eingeschränkten Modus. Im eingeschränkten Modus unterstützt NetApp Backup and Recovery ausschließlich die Sicherung und Wiederherstellung von ONTAP-Volume-Daten.<block ref="99e4ad11b9403b4c917ec7ce872ad637" category="inline-link-rx"></block></block>
+  <block id="34191754e8bf4b7f42d07c34ca79f160" category="cell">Ja*, (nicht erforderlich, wenn von ONTAP on-premises zu ONTAP on-premises repliziert wird)</block>
+  <block id="6adf97f83acf6453d4a6a4b1070f3754" category="cell">Keine</block>
+  <block id="6e568e69f510482525f8b306b4f4130b" category="section-title">Funktionsweise der NetApp Console im eingeschränkten Modus</block>
+  <block id="f0f4f30b009784beed6ad8665e748e23" category="list-text">Ein Agent benötigt eine ausgehende Verbindung zu den NetApp Cloud-basierten APIs zur Unterstützung von Datendiensten, Software-Upgrades, Authentifizierung und Metadatenübertragung.</block>
+  <block id="b137ce70ef22b95981da53e7977843d8" category="paragraph">NetApp initiiert keine Kommunikation zu einem Agenten. Der Agent initiiert die gesamte Kommunikation und kann Daten je nach Bedarf von oder zu den NetApp APIs und Diensten abrufen oder senden.</block>
+  <block id="0f8c1692f179ddb4422735b08bed069d" category="list-text">Im eingeschränkten Modus installieren Sie Agenten in der Cloud: in einer Regierungsregion, einer souveränen Region oder einer kommerziellen Region.</block>
+  <block id="37e5310142487064fd2c4313a227660f" category="list-text">NetApp Console aktualisiert die Agentensoftware automatisch jeden Monat.</block>
+  <block id="a67dcbc15749d4a4d2b4eb5af47233d5" category="list-text">Benutzer greifen von einer Agenten-VM, die in Ihrer Cloud-Region bereitgestellt ist, auf die NetApp Console zu.</block>
+  <block id="d81dfde1db67fde267c1825410540e0c" category="list-text">API-Aufrufe werden an eine Agenten-VM gesendet.</block>
+  <block id="0bdbd15cbfe00797d5415f2b43305646" category="list-text">Die Authentifizierung erfolgt über den Cloud-Dienst der NetApp Console mittels auth0. Identitätsföderation ist ebenfalls verfügbar.</block>
+  <block id="c9c86222e5ef08d0838568088907a12e" category="paragraph">Sie müssen den eingeschränkten Modus aktivieren, wenn Sie Ihr NetApp Console-Konto erstellen. Wenn Sie keine Organisation haben, werden Sie beim ersten Anmelden an Ihrem installierten Console-Agenten aufgefordert, eine zu erstellen und den eingeschränkten Modus zu aktivieren.</block>
+  <block id="72356754db8d0ac42aba94854456a194" category="paragraph">Beachten Sie, dass die Einstellung für den eingeschränkten Modus nach der Erstellung der Organisation festgelegt ist. Sie können den eingeschränkten Modus später nicht aktivieren oder deaktivieren. <block ref="b25261838e688763c403e651d058df29" category="inline-link-macro-rx"></block>.</block>
+  <block id="1ce3e41dba1334b3ecce14931c6a9016" category="section-title">NetApp Console im privaten Modus</block>
+  <block id="d86b5ae8a602484f78e217845125c295" category="paragraph">Im privaten Modus installieren Sie einen Console-Agenten entweder lokal oder in der Cloud und verwenden NetApp Console, um Daten in Ihrer Hybrid-Cloud zu verwalten. Es besteht keine Verbindung zu den NetApp Console API-Endpunkten oder der NetApp Console SaaS-Anwendung, daher greifen Sie über die lokale Benutzeroberfläche des Console-Agenten auf die Console zu.</block>
+  <block id="79b5c939a45661e7f11d2bf37f2265fa" category="paragraph">Das folgende Bild zeigt ein Beispiel für eine Bereitstellung im privaten Modus, bei der der Console agent in der Cloud installiert ist und sowohl Cloud Volumes ONTAP als auch einen On-Premises ONTAP Cluster verwaltet.</block>
+  <block id="6c8a587ca24e2cebe1124fd36bc32fd3" category="inline-image-macro">Eine konzeptionelle Abbildung, die ein virtuelles Netzwerk in der Cloud zeigt, in dem ein Agent ausgeführt wird und Zugriff auf die webbasierte Konsole bietet und Cloud Volumes ONTAP sowie einen AFF Cluster in einem lokalen Rechenzentrum verwaltet.</block>
+  <block id="ae459a2fe167d8268a0d33ffbcbf2088" category="paragraph"><block ref="ae459a2fe167d8268a0d33ffbcbf2088" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1b63be9781d870bb5d3e04ff6a903a41" category="paragraph">Das zweite Bild zeigt ein Beispiel für eine Bereitstellung im privaten Modus, bei der der Agent lokal installiert ist, einen lokalen ONTAP Cluster verwaltet und Zugriff auf unterstützte NetApp Console Data Services bietet.</block>
+  <block id="e60b04a4ff5109442ae8a2152959f6cc" category="inline-image-macro">Eine konzeptionelle Abbildung, die ein lokales Rechenzentrum zeigt, in dem ein Agent ausgeführt wird und Zugriff auf die webbasierte Konsole, NetApp Console Data Services bietet und einen AFF Cluster in einem lokalen Rechenzentrum verwaltet.</block>
+  <block id="673835393699b71ee84e6cac05f8c8db" category="paragraph"><block ref="673835393699b71ee84e6cac05f8c8db" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a5247533386982ba03a1571b35c74f65" category="section-title">Unterstützte Funktionen und Dienste für NetApp Console im privaten Modus</block>
+  <block id="71599c8aa6b5affd8cb3869b51a7d795" category="paragraph">Die folgende Tabelle listet die Speicherverwaltungsfunktionen, Datendienste und administrativen Funktionen auf, die in der NetApp Console bei der Installation im privaten Modus verfügbar sind. Die Funktionen unterscheiden sich, je nachdem, ob Sie die NetApp Console in der Cloud oder vor Ort installieren.</block>
+  <block id="28354212b170f036a6bc0a05c7d019af" category="list-text">Privater Modus in der Cloud installiert</block>
+  <block id="18d2f67eac32ee714afae8e47c7818e7" category="cell">*Verwaltung von Speichersystemen* Dieser Abschnitt der Tabelle listet die Unterstützung für die Verwaltung von Speichersystemen von der NetApp Console auf. Er gibt nicht die unterstützten Sicherungsziele für NetApp Backup and Recovery an.</block>
+  <block id="31c2a68a3b481659f4273bf96abda078" category="cell">Ja, aber da kein Internetzugang besteht, sind die folgenden Funktionen nicht verfügbar: automatisierte Software-Upgrades und AutoSupport.</block>
+  <block id="b4d937a357e75e539e3b6d56c9ffef30" category="list-text">Erfordert Konnektivität von der Cloud (wo der Console-Agent installiert ist) zur lokalen Umgebung.</block>
+  <block id="1ae292dcccf82ec5392c5e656b16efff" category="paragraph">Sie müssen einen installierten Console-Agenten haben, um lokale ONTAP Cluster zu erkennen.</block>
+  <block id="76c7543861a836c3a38bbec7dd7368d9" category="cell">Sie können die direkte Erkennung ohne einen Console-Agent verwenden, aber Sie benötigen einen Agenten, um Verwaltungsfunktionen zu nutzen.</block>
+  <block id="db1d2cdbd7a7f0d91181f94b8ab5d39d" category="list-text">Im privaten Modus unterstützt NetApp Backup and Recovery nur die Sicherung und Wiederherstellung von ONTAP-Volume-Daten.<block ref="764b29f6c7a40f8d3e7ca63270cbd6c5" category="inline-link-rx"></block> Die Sicherung und Wiederherstellung von Anwendungsdaten und virtuellen Maschinendaten wird nicht unterstützt.</block>
+  <block id="ff2c9914d275ee17c3f22e89e7ca1ef7" category="inline-link">AWS Secret Cloud</block>
+  <block id="a864a931bf30f7ad758b78e4a2cb264c" category="inline-link">AWS Top Secret Cloud</block>
+  <block id="f7a5a85e5651d269f8be77a9a2e84792" category="inline-link">Azure IL6</block>
+  <block id="9bf62435b1c4f8fe29965ed3036a7077" category="list-text">Wird in Google Cloud oder in<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>,<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block> oder<block ref="360910fe60b5d1cf9b7056b9b6f46685" category="inline-link-rx"></block> nicht unterstützt</block>
+  <block id="ad85db404f0dfc2267b348299aa513b9" category="inline-link">Zeigen Sie die Quellen an, die Sie lokal entdecken können</block>
+  <block id="8b00e7d734d7f196487736a1bc2336ba" category="list-text">Die einzigen unterstützten Datenquellen sind diejenigen, die Sie lokal ermitteln können.<block ref="2cf36bd19ec29519995a77683228df53" category="inline-link-rx"></block></block>
+  <block id="dfe34e1a4e0a8333f70854479803cb1f" category="inline-link">Funktionsbeschränkungen anzeigen</block>
+  <block id="f8bd878735831f63dbc71f3562b744ec" category="list-text">Funktionen, die einen ausgehenden Internetzugang erfordern, werden nicht unterstützt.<block ref="96ba795820450a3d9e0dd0929eed2eff" category="inline-link-rx"></block></block>
+  <block id="a00e8da6f2ef49b19a8e29dabe72308c" category="cell">Ja* (nicht erforderlich, wenn von ONTAP on-premises zu ONTAP on-premises repliziert wird)</block>
+  <block id="cfab1ba8c67c7c838db98d666f02a132" category="cell">--</block>
+  <block id="f4c24ff9a6eed35a6103620418728351" category="list-text">Nur BYOL wird im privaten Modus unterstützt.</block>
+  <block id="060238ee46c683d291e5e6499562da94" category="paragraph">Für Cloud Volumes ONTAP BYOL wird ausschließlich node-basierte Lizenzierung unterstützt. Capacity-basierte Lizenzierung wird nicht unterstützt. Da keine ausgehende Internetverbindung verfügbar ist, müssen Sie Ihre Cloud Volumes ONTAP Licensing-Datei manuell in der NetApp Console hochladen.</block>
+  <block id="5f9f1c95fd759ee94e03d75b38ad2687" category="inline-link">Erfahren Sie, wie Sie Lizenzen hinzufügen</block>
+  <block id="2930700c460007635353231a13984ee4" category="paragraph"><block ref="2930700c460007635353231a13984ee4" category="inline-link-rx"></block></block>
+  <block id="c5aed2c864c903761bd0e24c92279350" category="list-text">Privater Modus lokal installiert</block>
+  <block id="1c6c64dc92029867c550924bc606f7a7" category="list-text">Im privaten Modus unterstützt NetApp Backup and Recovery nur die Sicherung und Wiederherstellung von ONTAP-Volume-Daten.<block ref="764b29f6c7a40f8d3e7ca63270cbd6c5" category="inline-link-rx"></block></block>
+  <block id="1b021f96102834ba370c95f2fe7f48a9" category="list-text">Das Sichern und Wiederherstellen von Anwendungsdaten und virtuellen Maschinendaten wird nicht unterstützt.</block>
+  <block id="c2073c89c0bf18095ae7bb2cd6cd1472" category="section-title">Wie die NetApp Console im privaten Modus funktioniert</block>
+  <block id="0a394a4770dec98dfd25080803a067db" category="paragraph">NetApp Console funktioniert im privaten Modus wie folgt:</block>
+  <block id="9c7cfb35faff152bffb99fb0ba8cf74a" category="list-text">Für die Console SaaS-Anwendung (wo zusätzliche API-Endpunkte vorhanden sind) ist keine ausgehende Verbindung erforderlich. Alle Pakete, Abhängigkeiten und wesentlichen Komponenten sind mit dem Console Agent gebündelt und werden vom lokalen Rechner bereitgestellt. Eine Verbindung zu den öffentlich verfügbaren Ressourcen Ihres Cloud-Anbieters ist nur erforderlich, wenn Sie Cloud Volumes ONTAP bereitstellen.</block>
+  <block id="9ff1093cd0da67b1395b66fd5242484c" category="list-text">Unterstützter Standort für den Console-Agenten</block>
+  <block id="5add885d77ee87f55818dffa3d608c51" category="list-text">Im privaten Modus wird der Console agent in der Cloud oder vor Ort unterstützt.</block>
+  <block id="c388bdb2ffaa2293412db42c53d3f2dd" category="list-text">Sie müssen die Console-Agent-Software manuell aktualisieren. NetApp veröffentlicht die Console-Agent-Software in undefinierten Abständen auf der NetApp Support-Website.</block>
+  <block id="d8196600413ef026673183fc8f1bf030" category="list-text">Benutzer greifen von dem Console-Agent, der in Ihrer Cloud-Region oder vor Ort bereitgestellt ist, auf die Console zu.</block>
+  <block id="f8e0b9284dfa1be07108b7eb019c54e7" category="list-text">API-Aufrufe werden an die virtuelle Maschine des Console-Agenten gesendet.</block>
+  <block id="399b8998b64adfece5b5559ed2b7332f" category="list-text">Die Authentifizierung erfolgt über die lokale Benutzerverwaltung und den lokalen Zugriff. Die Authentifizierung erfolgt nicht über den Cloud-Dienst der NetApp Console.</block>
+  <block id="83e5d949613547f552890cbaf97a52db" category="section-title">So starten Sie mit dem privaten Modus</block>
+  <block id="2ec8b0a0f85b8d5eb1e817dd692d490d" category="paragraph">Der private Modus ist verfügbar, indem Sie das „Offline“-Installationsprogramm von der NetApp Support Site herunterladen.</block>
+  <block id="fb45c34b4268797014451aa41c2ea38f" category="inline-link-macro">Erfahren Sie, wie Sie mit dem privaten Modus beginnen</block>
+  <block id="90dadad3719a53e4b2bc0f512e763bdb" category="paragraph">+ <block ref="fe22d90ac580c62f8eea5bbabb839850" category="inline-link-macro-rx"></block>.</block>
+  <block id="958949b356b2f90081cbb745321e2bf3" category="inline-link">Erfahren Sie, wie Sie mit Cloud Volumes ONTAP in der AWS Secret Cloud oder Top Secret Cloud loslegen können.</block>
+  <block id="b05f814989364c5de6ec94ebc8e3b44b" category="paragraph">+ HINWEIS: Wenn Sie die NetApp Console in der <block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block> oder der <block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block> verwenden möchten, sollten Sie separate Anweisungen befolgen, um in diesen Umgebungen zu beginnen.<block ref="7305ccb1d247c4e62b18170abee468ff" category="inline-link-rx"></block></block>
+  <block id="d1f73e853ae398a7dfb8e9ddb57c9920" category="section-title">NetApp Console Service- und Funktionsvergleich</block>
+  <block id="29266a44516a1695ec25e51464e6ce51" category="paragraph">Diese Tabelle zeigt, welche Dienste und Funktionen im eingeschränkten und privaten Modus unterstützt werden.</block>
+  <block id="aa0106ba900239b9b240117351fd31a1" category="admonition">Standardmodus (NetApp Console SaaS-Anwendung) unterstützt alle Funktionen.</block>
+  <block id="b04b058acf83e4616c9312ab2b951050" category="paragraph">Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstützt werden. Weitere Informationen darüber, wie diese Dienste im eingeschränkten Modus und im privaten Modus unterstützt werden, finden Sie in den obigen Abschnitten.</block>
+  <block id="caf4a30b20a11e01cd72ece077ed9e50" category="cell">On-premisesONTAP-Cluster</block>
+  <block id="68a27766c88e7a46b8cf75f317897c53" category="cell">Dashboard-Kennzahlen für Speicher- und Datendienste</block>
+  <block id="caa439279d19ace285e22f87f479e876" category="summary">Die NetApp Console hilft Ihnen, Ihre Daten in all Ihren Cloud- und On-Premises-Systemen zu verwalten und zu schützen. Sie enthält Tools, um Ihre Daten sicher und funktionsfähig zu halten.</block>
+  <block id="166d58641d71e8f7701618924f6e0230" category="doc">NetApp Console für einheitliches Speichermanagement</block>
+  <block id="aa14ca2be3c293532f200bf7d16ab2fa" category="paragraph">Nutzen Sie die Console als Software-as-a-Service (SaaS)-Anwendung oder installieren Sie sie in Ihrer Cloud- oder On-Premises-Umgebung (eingeschränkter oder privater Modus). Jeder Modus unterstützt unterschiedliche Funktionsumfänge und Sicherheitsanforderungen.</block>
+  <block id="45449898e6eb917b44e1e32f0b89ba76" category="paragraph">Die Console arbeitet mit Console-Agenten zusammen, die Sie in Ihrer Umgebung einsetzen, um Ressourcen zu verwalten und Prozesse in Ihren lokalen und Cloud-Umgebungen zu orchestrieren.</block>
+  <block id="272b65faa175970c4d03415b57d4f80f" category="section-title">Wählen Sie aus, wie Sie auf NetApp Console zugreifen möchten.</block>
+  <block id="6de063fe6e4e3ea3829e05df83035f0a" category="paragraph">Starten Sie mit der Nutzung der NetApp Console, indem Sie sich für die SaaS-Anwendung (Standardmodus) registrieren, sie in Ihrer Cloud (eingeschränkter Modus) oder auf Ihren eigenen Systemen (privater Modus) installieren. Einige Funktionen sind im eingeschränkten oder privaten Modus nicht verfügbar.</block>
+  <block id="a6b0b45cc13fb447320f502320ecb064" category="section-title">Erweitern Sie die Funktionen der Console mit Console Agents</block>
+  <block id="f1cc74e66f6f716e17c875f4f3823f41" category="paragraph">Console-Agenten sind schlanke Softwarekomponenten, die die Verbindung zur NetApp Console-SaaS-Anwendung und zu Cloud-basierten APIs herstellen und so erweiterte Funktionen und Datendienste ermöglichen.</block>
+  <block id="0fc8df5108ca276dc8dc2cbd229772b2" category="paragraph">Im eingeschränkten oder privaten Modus installieren Sie einen Console-Agenten in Ihrer Cloud- oder On-Premises-Umgebung, um auf die NetApp Console-Anwendung zuzugreifen. Sie müssen zusätzliche Agenten bereitstellen, um Funktionen zu unterstützen, die eine direkte Verbindung zu NetApp Console und deren APIs erfordern.</block>
+  <block id="b1f4f28fdcdf699f4e339ffc03c9e3f2" category="section-title">Benutzerzugriff und Berechtigungen in der NetApp Console verwalten</block>
+  <block id="30c6f0b04f939d82aaf90fc17990d7c1" category="paragraph">Die Konsole bietet Identitäts- und Zugriffsmanagement (IAM), um die Sicherheit und Kontrolle über Ihre Dateninfrastruktur zu verbessern. Organisieren Sie Ihre Speicher- und Datendienste anhand von Organisationsrollen und -verantwortlichkeiten, um das Risiko unberechtigten Zugriffs zu reduzieren und gleichzeitig die betriebliche Effizienz aufrechtzuerhalten.</block>
+  <block id="ef5b57cb4129d0853f1f04a6bbcec5c6" category="list-text">Eine übergeordnete _organization_ ermöglicht es Ihnen, den Zugriff auf Speichersysteme und Projekte in Ihrer gesamten Infrastruktur zu gewähren und zu entziehen</block>
+  <block id="3e2ec58bd2060958968548ff997bafcc" category="list-text">_Ordner_ ermöglichen es Ihnen, Speicherressourcen und Projekte basierend auf Geschäftsfunktion oder Compliance-Anforderungen zusammenzufassen.</block>
+  <block id="86769cb48e947ccfaf106e7b621cbf23" category="list-text">_Projekte_ ermöglichen es Ihnen, zu steuern, welche Teams auf bestimmte Speichersysteme, Volumes und Datendienste zugreifen</block>
+  <block id="42ba6b895ff1e33fc26744169998d7bd" category="list-text">_Rollenbasierte Zugriffskontrolle (RBAC)_ ermöglicht es Ihnen, Teammitgliedern auf verschiedenen Ebenen Berechtigungen für die Speicherverwaltung zu erteilen, sodass Sie Aufgaben delegieren können, ohne zu viel Zugriff zu gewähren</block>
+  <block id="81e6a6680fde9b218ec2b30bf48fb10f" category="section-title">Sicherheit und Compliance in NetApp Console</block>
+  <block id="d8aa662670c5f88592992cac4e0a7d21" category="paragraph">Aktivieren Sie Sicherheits- und Compliance-Funktionen wie Single Sign-On (SSO), um den Zugriff auf Ihre Speicher- und Datendienste zu steuern. Benutzer mit der Rolle Organisation-Administrator können den Nur-Lesen-Modus standardmäßig festlegen, sodass Benutzer erhöhte Berechtigungen anfordern müssen, um Änderungen an Speichersystemen vorzunehmen und Datendienste zu nutzen. Sie können auch die NetApp Console verwenden, um die Speicherverwaltung und Benutzeraktivitäten zu überwachen. Die NetApp Console ist SOC 2 Typ 2-zertifiziert, und NetApp stellt SOC 2-Berichte für Kunden bereit.</block>
+  <block id="a7b92eeb833ba143657bb996d0dd4259" category="section-title">NetApp Console-Funktionen und unterstützter Speicher</block>
+  <block id="a968d93cc8f884491263acfdca668b3a" category="paragraph">NetApp Console unterstützt eine Vielzahl von Speichertypen, Funktionen und Datendiensten in Ihren lokalen und Cloud-Umgebungen. Verwenden Sie die Console, um Ihre Speichersysteme zu verwalten, deren Zustand und Leistung zu überwachen und Datendienste zu aktivieren, um Ihre Daten zu schützen und zu optimieren.</block>
+  <block id="d3322aab3f0705d14f914efd90a4a2cf" category="section-title">Unterstützte Cloud- und lokale Speicher in NetApp Console</block>
+  <block id="626d7219d72c12a4afe62185189a2ab4" category="paragraph">Verwalten Sie diese Speichertypen über die Console:</block>
+  <block id="5d1366e64b723f275762f8e9327e76b0" category="section-title">Speicherverwaltung und Gesundheitsdienste in NetApp Console</block>
+  <block id="550bf389cd0fe031c04d99bc54bb516f" category="paragraph">NetApp Console bietet eine einheitliche Verwaltung Ihrer NetApp Speicherinfrastruktur über eine einzige Schnittstelle.</block>
+  <block id="e9c3019ce4f248695c7e505f41a1a43d" category="paragraph">In der Console repräsentieren _Systeme_ Ihre erkannten oder bereitgestellten Speicher. Verwalten Sie Speichervolumes direkt in der Console oder öffnen Sie die Managementoberfläche des Systems für weitere Optionen.</block>
+  <block id="d903912fdd9f544f19fa091d7e215516" category="paragraph">Nutzen Sie neben der Speicherverwaltung auch Infrastrukturdienste, um Ihre Dateninfrastruktur in all Ihren Umgebungen zu überwachen und zu verwalten.</block>
+  <block id="701b0bd0b0d43e4530884e72d6b3b8fd" category="list-text">Gesundheits- und Leistungsüberwachung</block>
+  <block id="0d14fbcd49ab2df1b56be33824b147fd" category="list-text">Sehen Sie sich ein Dashboard zum Zustand und zur Leistung Ihrer Speichersysteme an und erhalten Sie Benachrichtigungen, um Probleme zu beheben, bevor sie zu Schwierigkeiten führen.</block>
+  <block id="9c8411e30aa7139b6a46072c395fa3ee" category="list-text">Identifizieren Sie Cluster mit geringem Speicherplatz und fügen Sie Kapazität hinzu oder verschieben Sie Daten nach Bedarf.</block>
+  <block id="7f445e2c0021a5eba0478a1def2b8e1d" category="list-text">Automatisieren Sie die Bewertung, Planung und Durchführung von ONTAP Upgrades.</block>
+  <block id="2d18eec45e3c30f0d0c384cfce4fcec5" category="list-text">Systemseite</block>
+  <block id="f476c2914f85801caf7e4b46fffe7a62" category="list-text">Alle Ihre Speichersysteme sind an einem Ort dargestellt und Sie können schnell auf deren Managementoberflächen zugreifen. Per Drag-and-drop können Sie Datenservices direkt von der Systems-Seite aus aktivieren.</block>
+  <block id="0f33e874261b87c7b783ae0bfd6bc5cc" category="section-title">Datensicherheits- und Schutzdienste in NetApp Console</block>
+  <block id="34f3a30863c9ef055442797cbd2948f2" category="paragraph">Nutzen Sie integrierte Datenservices, um kritische Daten zu schützen und die Speichereffizienz zu optimieren.</block>
+  <block id="773c2d45d0b7ef2d7a4238c5474cfa86" category="list-text">Sichern und Wiederherstellen von Cloud- und lokalen Daten. Abonnement erforderlich.</block>
+  <block id="8491d61bd8fb27de0c2c3775c50e0147" category="list-text">Daten zwischen lokalen und Cloud-Datenspeichern synchronisieren.</block>
+  <block id="49331dc465add41e1ba6e92716614615" category="list-text">Schützen Sie lokale VMware-Workloads mit VMware Cloud on Amazon FSx for ONTAP als Disaster-Recovery-Standort. Erfordert Abonnement.</block>
+  <block id="0d9b7d7fbaa6ca7e5ac0f03195b425de" category="list-text">Erkennen Sie Anomalien, die zu Ransomware-Angriffen führen könnten. Schützen und stellen Sie Workloads wieder her. Abonnement erforderlich.</block>
+  <block id="bf2dd05fdc0bdbc8a0f1b7fb8c2afaa1" category="section-title">Kosten- und Compliance-Management-Services in NetApp Console</block>
+  <block id="1a9b5932db1134b67b21b3c238ec27e7" category="paragraph">Verfolgen Sie den Vertragsstatus in allen Systemen, um Kostenmanagement, Compliance und Kaufentscheidungen zu verbessern.</block>
+  <block id="58161bba30463b220b84e58cb97f5fd5" category="list-text">Nutzen Sie skriptbasierte Lösungen, um die Einrichtung und Verbindung von NetApp Produkten und Services zu automatisieren, um einen reibungsloseren und konsistenteren Betrieb zu ermöglichen.</block>
+  <block id="4832328d355560b55efa26c4c2c2d03c" category="list-text">Erweitern Sie Ihren On-Premises ONTAP Storage in die Cloud, um Kosten zu optimieren und das Datenlebenszyklus-Management zu ermöglichen.</block>
+  <block id="6db5d32b9455f53fb771511d47bb4646" category="list-text">Bereiten Sie Ihre Anwendungsdaten und Cloud-Umgebungen auf die Einhaltung der Datenschutzbestimmungen vor. Kostenlos mit Abonnement.</block>
+  <block id="26444e20535c400889cbd46fa71bcc4b" category="list-text">Erstellen Sie ein beschreibbares Cache-Volume, um den Zugriff auf Daten zu beschleunigen oder den Datenverkehr von stark frequentierten Volumes auszulagern, um die Leistung und Kosteneffizienz zu erhöhen.</block>
+  <block id="46152e594769d440fdd2271b8eef67cc" category="list-text">Entwerfen, richten Sie ein und betreiben Sie wichtige Workloads mit Amazon FSx für NetApp ONTAP, um Leistung und Kosten für spezifische Anwendungen zu optimieren.</block>
+  <block id="a84b7ef1efa1290691ba2982da6b70e2" category="section-title">NetApp Console-Kosten</block>
+  <block id="c61697a1a0ac5f10a9f125c5e79f83a1" category="paragraph">NetApp erhebt keine Gebühren für die Console. Es entstehen Kosten, wenn Sie Console-Agenten bereitstellen oder den Restricted-Modus in der Cloud verwenden. Einige NetApp Datenservices haben ebenfalls zugehörige Kosten. <block ref="737ad53c0691d6484be24092d035e183" category="inline-link-rx"></block></block>
+  <block id="2bfcaebb03e23620a28efcaf5c485bb5" category="cell">\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com</block>
+  <block id="b366c1901726ed94faabaca293b342ab" category="cell">cloudbuild.workerpools.get</block>
+  <block id="7b28e5df245493d70a91ad50a3ca876a" category="cell">Zugriff auf Worker-Pool-Informationen während der Bereitstellung im privaten Modus und der Konvertierung von Cloud Volumes ONTAP-Systemen mithilfe von Infrastructure Manager.</block>
+  <block id="a5bb5562c6a74b17ab2426705833048f" category="cell">cloudbuild.workerpools.list</block>
+  <block id="8001b115ad750f8f9713c8e64a5fc508" category="cell">Informationen zum Worker-Pool während der Bereitstellung von Cloud Volumes ONTAP-Systemen im privaten Modus mithilfe von Infrastructure Manager auflisten.</block>
+  <block id="56a5c925d77740ea69d50272863f3f75" category="section-title">26. Februar 2026</block>
+  <block id="ca76fb3a5c3254bbb60d8872e85c0dd2" category="paragraph">Die <block ref="b366c1901726ed94faabaca293b342ab" prefix=" " category="inline-code"></block> und <block ref="a5bb5562c6a74b17ab2426705833048f" prefix=" " category="inline-code"></block> Berechtigungen wurden hinzugefügt, um Infrastructure Manager bei privaten Bereitstellungen von Cloud Volumes ONTAP in Google Cloud zu unterstützen.</block>
+  <block id="822fb1292e00acb015eaeae98fa0d707" category="summary">Nachdem Sie die NetApp Console im privaten Modus eingerichtet und in Betrieb genommen haben, können Sie die Dienste nutzen, die im privaten Modus unterstützt werden.</block>
+  <block id="299e0f249c257857628a7f5786b1b039" category="doc">Was Sie als Nächstes tun können (privater Modus)</block>
+  <block id="fced466a309d5f02b614e19af9c50a3a" category="paragraph">Weitere Hilfe finden Sie in der folgenden Dokumentation:</block>
+  <block id="e2526549eb6efd40df917c2c161ca7e0" category="list-text"><block ref="e2526549eb6efd40df917c2c161ca7e0" category="inline-link-rx"></block></block>
+  <block id="69eb68d33ba0429abb5fa64f4944c13f" category="inline-link">Scannen Sie lokale ONTAP Volumedaten mit NetApp Classification</block>
+  <block id="b6d14a2d23ba7340a263fba8398f59a3" category="list-text"><block ref="b6d14a2d23ba7340a263fba8398f59a3" category="inline-link-rx"></block></block>
+  <block id="40001b0ba3bc2b3616726d6717821c11" category="inline-link">Lizenznutzung überwachen</block>
+  <block id="1fee15ed80afdbf61dee051273ed95fd" category="list-text"><block ref="1fee15ed80afdbf61dee051273ed95fd" category="inline-link-rx"></block></block>
+  <block id="2b4ee5a3ed1d0d51275a5e7bbd3c9ecf" category="paragraph">Richten Sie eine IAM-Rolle ein, die es der NetApp Console Software-as-a-Service (SaaS)-Anwendung ermöglicht, die Rolle zu übernehmen.</block>
+  <block id="3a18e641c4904b34adaf167885cce158" category="admonition">Der Nur-Lese-Modus ist nicht verfügbar, wenn sich die NetApp Console im privaten Modus befindet. <block ref="dfc550bfde7e455e24c09c75b6f9a3cd" category="inline-link-macro-rx"></block>.</block>
+  <block id="dbe35f69a98ad381d73f0e434193aaef" category="paragraph">Melden Sie sich an der Console an und verknüpfen Sie den Console-Agenten mit Ihrer Organisation. Wie Sie sich anmelden, hängt vom Modus ab, in dem Sie die Console verwenden. Wenn Sie die Console im Standardmodus verwenden, melden Sie sich über die SaaS-Website an. Wenn Sie die Console im eingeschränkten Modus oder im privaten Modus verwenden, melden Sie sich lokal vom Console-Agent-Host an.</block>
+  <block id="e6de9ba283a3b88438bc9364ca14a865" category="summary">Stellen Sie die NetApp Console im privaten Modus bereit, damit Sie sie ohne ausgehende Verbindungen nutzen können. Um zu beginnen, installieren Sie einen Console-Agenten, richten Sie die NetApp Console ein, indem Sie auf die Benutzeroberfläche zugreifen, die auf dem Console-Agenten läuft, und geben Sie dann die zuvor eingerichteten Cloud-Berechtigungen an.</block>
+  <block id="ed49d41012410c35755a665e704c51a3" category="doc">Stellen Sie den Console-Agent im privaten Modus bereit</block>
+  <block id="b3d73a3e909120ba0dfb51cbe2327967" category="paragraph">Laden Sie das Produktinstallationsprogramm von der NetApp Support Site herunter und installieren Sie anschließend die Console manuell auf Ihrem eigenen Linux-Host.</block>
+  <block id="c73db6dd4dc3a461773070693cc406c6" category="paragraph">Um die NetApp Console in der<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block> oder der<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block> zu verwenden, sollten Sie separate Anweisungen befolgen, um in diesen Umgebungen loszulegen.<block ref="7305ccb1d247c4e62b18170abee468ff" category="inline-link-rx"></block></block>
+  <block id="1c88387d9be2a13f9b45fd276e63cf80" category="list-text">Für die Installation des Console-Agenten sind Root-Rechte erforderlich.</block>
+  <block id="afbfe533a489b7d4102d31feb17a881a" category="list-text">Laden Sie die Console-Agent-Software von der<block ref="99637e01fa8caa34a544049093cac68c" category="inline-link-rx"></block></block>
+  <block id="a6c2003199e95310a83aa40a67058bd8" category="paragraph">Laden Sie unbedingt das Offline-Installationsprogramm für private Netzwerke ohne Internetzugang herunter.</block>
+  <block id="70c6033ed76dffb5d74ff7bb0402f4fa" category="paragraph">Der Konsolenagent ist installiert. Sie können jetzt die NetApp Console einrichten.</block>
+  <block id="4d50d200e5ecb85ea8908049caf1caab" category="paragraph">Wenn Sie zum ersten Mal auf die NetApp Console zugreifen, werden Sie aufgefordert, die NetApp Console einzurichten.</block>
+  <block id="d50d972bc008375c76a9eba41b5ce3e3" category="list-text">Öffnen Sie einen Webbrowser und geben Sie die IP-Adresse des Linux-Hosts ein, auf dem Sie den Console agent installiert haben.</block>
+  <block id="3483774c8e92dafa7899f7358ee7c2bf" category="list-text">Wählen Sie *Set Up New Console agent* und folgen Sie den Anweisungen, um das System einzurichten.</block>
+  <block id="45b96df4dab7930952e3c3b410841de7" category="list-text">*System Details*: Geben Sie einen Namen für den Console-Agenten und Ihren Firmennamen ein.</block>
+  <block id="1759129089da3c0c000cb4c2196a2fd0" category="list-text">*Administratorbenutzer erstellen*: Erstellen Sie den Administratorbenutzer für das System.</block>
+  <block id="22cb2add8f3bffef4e749ab0af395ded" category="list-text">*Review*: Überprüfen Sie die Details, akzeptieren Sie die Lizenzvereinbarung und wählen Sie dann *Set Up*.</block>
+  <block id="e5b06544d35df6b0563a6a5991ca745e" category="list-text">Melden Sie sich bei der NetApp Console mit dem soeben erstellten Admin-Benutzer an.</block>
+  <block id="3350183130c96d96cdb8d55a92bd2d0f" category="paragraph">Der Konsolenagent ist nun installiert. Greifen Sie über die IP-Adresse in einem Webbrowser auf die NetApp Console im privaten Modus zu.</block>
+  <block id="7f62baeae233557038f3ea1c39c1ecc5" category="inline-link-macro">Erfahren Sie, wie Sie den Console-Agent aktualisieren.</block>
+  <block id="bd4712dc3b2294959d607ff5d73e0d3c" category="paragraph">Wenn neue Versionen der Console-Software verfügbar sind, werden sie auf der NetApp Support Site veröffentlicht. <block ref="10b8ce94d276ad2c1931363e1a5e745a" category="inline-link-macro-rx"></block>.</block>
+  <block id="a673654ce3fe28d3d7290e4a5c813efb" category="paragraph">Weisen Sie dem Console-Agenten die Cloud-Provider-Berechtigungen zu, die Sie zuvor eingerichtet haben.</block>
+  <block id="76a66cd0418701ca824490a0a7bba6d0" category="section-title">Schritt 3: Berechtigungen für den Console-Agenten erteilen</block>
+  <block id="ea6ff95d70830b920617a227585e1b8b" category="paragraph">Wenn Sie Cloud Volumes ONTAP Arbeitsumgebungen erstellen möchten, müssen Sie dem Console agent die Cloud-Provider-Berechtigungen bereitstellen, die Sie zuvor eingerichtet haben.</block>
+  <block id="bce5cf056b28239df2bdb7b2083217ac" category="paragraph"><block ref="242e7f2f46e42a12308aa354a9159aef" category="inline-link-macro-rx"></block>.</block>
+  <block id="5a52914d8d01c8e84d9a721dbf01a42b" category="paragraph">Hängen Sie die zuvor erstellte IAM-Rolle an die Console-Agent-EC2-Instanz an.</block>
+  <block id="e5311097ebf5eea728485c7ccebc65fa" category="paragraph">Stellen Sie dem Console Agent den AWS-Zugriffsschlüssel für einen IAM-Benutzer bereit, der über die erforderlichen Berechtigungen verfügt.</block>
+  <block id="afb56c9ee95decb83d1800984ece9d5b" category="paragraph">Übergeben Sie dem Console-Agenten die Anmeldeinformationen für den Azure Service Principal, den Sie zuvor eingerichtet haben.</block>
+  <block id="1f179958933c93a4eaefeb75f54dd63e" category="paragraph">Wenn Sie die NetApp Console im eingeschränkten Modus oder im privaten Modus verwenden, ist die Benutzeroberfläche von der Console-Agent-VM aus zugänglich, die in Ihrer Cloud-Region oder vor Ort bereitgestellt wird. Standardmäßig verwendet die Console ein selbstsigniertes SSL-Zertifikat, um einen sicheren HTTPS-Zugriff auf die webbasierte Console zu ermöglichen, die auf dem Console-Agent ausgeführt wird.</block>
+  <block id="f75f04b8a387edfb2df7d3cd5fa974a8" category="inline-link-macro">Wenden Sie sich an Ihren Organisationsadministrator</block>
+  <block id="fdc0e0fca606cf54a0a897572707c368" category="paragraph">Nachdem Sie sich angemeldet haben, muss Ihr Console-Organisationsadministrator Ihr Benutzerkonto zu einer Organisation hinzufügen, bevor Sie auf Ressourcen zugreifen können. Wenn Sie sich anmelden, aber keine Ressourcen sehen, wenden Sie sich an Ihren Organisationsadministrator. <block ref="11d2ec2c56c0640477c61afee5dc1252" category="inline-link-macro-rx"></block>.</block>
+  <block id="750d8533e3422880e0f3745b61ace637" category="list-text">Navigieren Sie zur NetApp Console-URL. Die URL hängt davon ab, welchen Modus der Console Ihre Organisation verwendet:</block>
+  <block id="0ce20a4f9a2eaba138af185f99d4f8db" category="list-text">**Standardmodus*: Öffnen Sie einen Webbrowser und gehen Sie zu<block ref="d99e1eaf406503cf18504dce764c5135" category="inline-link-rx"></block></block>
+  <block id="dd8c68c1c1e70bd88296cfa55bc07484" category="list-text">**Eingeschränkter Modus oder Privater Modus**: Öffnen Sie einen Webbrowser und gehen Sie zu der IP-Adresse, auf der der Console agent installiert ist.</block>
+  <block id="ab4fc3f68e8f23b6d532eb446e1e0a46" category="list-text">Je nach dem mit Ihrer Anmeldung verknüpften Authentifizierungsverfahren werden Sie zur Eingabe Ihrer Anmeldedaten aufgefordert.</block>
+  <block id="3bcc313e589d80f58afe7da826230bf9" category="list-text">Eine föderierte Verbindung, wenn Ihr Administrator die Identitätsföderation für Ihre Organisation eingerichtet hat</block>
+  <block id="b4256d874b9eb9321ae2b4a02d8b30c0" category="summary">Bereiten Sie Ihre Umgebung vor, bevor Sie NetApp Console im privaten Modus bereitstellen. Sie müssen die Host-Anforderungen überprüfen, das Netzwerk vorbereiten, Berechtigungen einrichten und mehr.</block>
+  <block id="5f1067df496bfafd5eb793369b955e41" category="doc">Bereiten Sie die Bereitstellung im privaten Modus vor</block>
+  <block id="984490bee63453d441c7b37cdc6c3db7" category="admonition">Um die NetApp Console in der<block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block> oder der<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block> zu verwenden, befolgen Sie die spezifischen Anweisungen für diese Umgebungen.<block ref="4d25824b3e9e7473eac5e4c3e5c39cc3" category="inline-link-rx"></block></block>
+  <block id="7670b3e7fd0d9b5404a8ab86daf87444" category="section-title">Schritt 1: Verstehen Sie, wie der private Modus funktioniert</block>
+  <block id="0c154543ae4407489c65103d2af0bf29" category="paragraph">Im privaten Modus installieren Sie einen Console-Agenten entweder lokal oder in der Cloud und verwenden anschließend NetApp Console zur Verwaltung Ihrer Speichersysteme (ONTAP lokal und Cloud Volumes ONTAP). Es besteht keine Verbindung zu den NetApp Console API-Endpunkten oder der NetApp Console SaaS-Anwendung, sodass Sie auf die Console über die lokale Benutzeroberfläche des Console-Agenten zugreifen.</block>
+  <block id="b55621a1719dba9e40d841c865c267ac" category="inline-link-macro">Erfahren Sie, wie der private Modus funktioniert</block>
+  <block id="e7e043e1590b443c8520402279e7ac44" category="paragraph"><block ref="7d2115a84914cfa6792d7d3921dc8e33" category="inline-link-macro-rx"></block>.</block>
+  <block id="084adfaad6f683ed1019e0f76816032c" category="paragraph">Im privaten Modus können Sie den Console-Agent auf Ihrem eigenen Linux-Host lokal oder in der Cloud installieren, indem Sie den Agent manuell installieren.</block>
+  <block id="31d8a49ecc84b52a4d892c10ddad8ba2" category="paragraph">Der Installationsort des Console-Agenten bestimmt, welche NetApp Console-Services und -Funktionen im privaten Modus verfügbar sind. Der Console-Agent muss in der Cloud installiert werden, wenn Sie Cloud Volumes ONTAP bereitstellen und verwalten möchten.</block>
+  <block id="4d67e2c0dda438048efad6d422b5858d" category="paragraph">Der Host muss bestimmte Anforderungen an das Betriebssystem, den Arbeitsspeicher, die Ports usw. erfüllen, um den Console-Agent ausführen zu können.</block>
+  <block id="4bdd946e228e94af284882c74da6cffc" category="paragraph">Sie müssen den Host für den Console agent vorbereiten, indem Sie Podman oder Docker Engine installieren.</block>
+  <block id="788ad005554c124586a11cee3346ac9b" category="section-title">Schritt 5: Netzwerk vorbereiten</block>
+  <block id="c6fb1f3d8fa6104e059d82078e80caf7" category="paragraph">Richten Sie das Netzwerk für den Console Agent ein, damit Ressourcen in Ihrer Public Cloud verwaltet werden können. Abgesehen von einem virtuellen Netzwerk und Subnetz für den Console Agent stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind.</block>
+  <block id="3ca608f3f4b691bd6f8f0bb656603992" category="list-text">Der Console-Agent benötigt eine Netzwerkverbindung zu dem Standort, an dem Sie den Speicher verwalten möchten. Zum Beispiel die VPC oder das VNet, in dem Sie Cloud Volumes ONTAP bereitstellen möchten, oder das Rechenzentrum, in dem sich Ihre lokalen ONTAP Cluster befinden.</block>
+  <block id="c3d3f783d267d1bd41b2e7f8639a5865" category="list-text">Endpunkte für den täglichen Betrieb</block>
+  <block id="c9a43f7d176509a988903746b2cf38de" category="list-text">Wenn Sie planen, Cloud Volumes ONTAP Systeme zu erstellen, benötigt der Console-Agent eine Verbindung zu Endpunkten in den öffentlich verfügbaren Ressourcen Ihres Cloud-Anbieters.</block>
+  <block id="b2723147717f1c60a42e0b1cbdb0ad6c" category="paragraph">\https://management.azure.microsoft.scloud \https://login.microsoftonline.microsoft.scloud \https://blob.core.microsoft.scloud \https://core.microsoft.scloud</block>
+  <block id="8ec83edee8d0c8a3dd001c3d7e558479" category="paragraph">Zur Verwaltung von Ressourcen in der Azure IL6 region.</block>
+  <block id="3f0b08f17c8f7daca589267c384fa32a" category="paragraph">Im privaten Modus sendet die NetApp Console ausgehenden Datenverkehr nur an Ihren Cloud-Anbieter, um ein Cloud Volumes ONTAP System zu erstellen.</block>
+  <block id="fd9b6b5e37ac7c196ba7a3e572709fab" category="list-text">Es gibt keinen eingehenden Datenverkehr zum Console-Agenten, es sei denn, Sie initiieren ihn.</block>
+  <block id="5cfdbaa159b57f80c3129a66dcd7322d" category="paragraph">HTTP (80) und HTTPS (443) ermöglichen den Zugriff auf die NetApp Console. SSH (22) ist erforderlich, wenn Sie sich zur Fehlerbehebung mit dem Host verbinden müssen.</block>
+  <block id="afdfd56d4f16d6a02abb90ce36a88e3d" category="paragraph">Wenn der Console-Agent in der Cloud installiert ist und Sie planen, Cloud Volumes ONTAP-Systeme zu erstellen, benötigt die NetApp Console Berechtigungen Ihres Cloud-Anbieters. Sie müssen die Berechtigungen bei Ihrem Cloud-Anbieter einrichten und diese anschließend der Console-Agent-Instanz zuordnen, nachdem Sie sie installiert haben.</block>
+  <block id="0db5b81cf6db397c0165b2a6678ee87e" category="paragraph">Um die erforderlichen Schritte anzuzeigen, wählen Sie die Authentifizierungsoption aus, die Sie für Ihren Cloud-Anbieter verwenden möchten.</block>
+  <block id="54dd926042936944a27098b552f2b197" category="paragraph">Verwenden Sie eine IAM-Rolle, um dem Console-Agenten Berechtigungen zu erteilen. Sie müssen die Rolle manuell an die EC2-Instanz für den Console-Agenten anhängen.</block>
+  <block id="106a0de3116ee4c14aed3a5f62ce587c" category="paragraph">Richten Sie Berechtigungen und einen Zugriffsschlüssel für einen IAM-Benutzer ein. Stellen Sie der NetApp Console den AWS-Zugriffsschlüssel zur Verfügung, nachdem Sie den Console-Agent installiert und die NetApp Console eingerichtet haben.</block>
+  <block id="0c6a29a60cf078dae9359a3568ea55ba" category="paragraph">Je nachdem, welche NetApp Console-Services Sie nutzen möchten, müssen Sie möglicherweise eine zweite Richtlinie erstellen.</block>
+  <block id="5850d39c612d40f90f438e324ad5d585" category="paragraph">Das Konto verfügt nun über die erforderlichen Berechtigungen.</block>
+  <block id="5a8046aa3c1f3737b68bcddf970687cf" category="paragraph">Erstellen Sie eine benutzerdefinierte Azure-Rolle mit den erforderlichen Berechtigungen. Weisen Sie diese Rolle der Console-Agenten-VM zu.</block>
+  <block id="ee8e1b3e3a475e76f0dc83cafe4e83f0" category="list-text">Aktivieren Sie eine systemseitig zugewiesene verwaltete Identität auf der VM, auf der Sie den Console agent installieren möchten, damit Sie die erforderlichen Azure-Berechtigungen über eine benutzerdefinierte Rolle bereitstellen können.</block>
+  <block id="2b78da0be59ec8063edf260324bcf603" category="paragraph">Erstellen und konfigurieren Sie einen Dienstprinzipal in Microsoft Entra ID und beschaffen Sie die Azure-Anmeldeinformationen, die NetApp Console benötigt. Sie müssen NetApp Console diese Anmeldeinformationen nach der Installation des Console-Agenten und der Einrichtung von NetApp Console bereitstellen.</block>
+  <block id="743fe0cac503720ec73c3536a16bdbe7" category="paragraph">Ihr Dienstprinzipal ist nun eingerichtet und Sie sollten die Anwendungs-ID (Client-ID), die Verzeichnis-ID (Mandanten-ID) und den Wert des Clientgeheimnisses kopiert haben. Geben Sie diese Informationen in der NetApp Console ein, wenn Sie eine Azure-Anmeldeinformation hinzufügen.</block>
+  <block id="fb743a256e003636e11c6a09e6f9f45c" category="paragraph">Sie müssen mehrere APIs aktivieren, um Cloud Volumes ONTAP in Google Cloud bereitzustellen.</block>
+  <block id="c5b5e04334ad1c3a88fc36eb4c450924" category="paragraph">Nutzen Sie die browserbasierte Benutzeroberfläche, die lokal über den installierten NetApp Console-Agenten verfügbar ist. Sie können nicht auf die NetApp Console von der webbasierten Konsole zugreifen, die über die SaaS-Anwendung bereitgestellt wird.</block>
+  <block id="482b4f20ae8169fa9067887ee7c6f373" category="summary">Der private Modus wird typischerweise in lokalen Umgebungen ohne Internetverbindung und in sicheren Cloud-Regionen verwendet, zu denen AWS Secret Cloud, AWS Top Secret Cloud und Azure IL6 gehören.</block>
+  <block id="97159ba233bb02feaff6b3c2be05c879" category="doc">Erste Schritte Arbeitsablauf für die NetApp Console im privaten Modus</block>
+  <block id="98c53ba126696b94818d318df7c7246e" category="paragraph">Sie können NetApp Console lokal oder in einer sicheren Cloud-Umgebung installieren. Der private Modus wird typischerweise in lokalen Umgebungen ohne Internetverbindung und in sicheren Cloud-Regionen verwendet, was <block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block>,<block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block> und <block ref="360910fe60b5d1cf9b7056b9b6f46685" category="inline-link-rx"></block> umfasst.</block>
+  <block id="86324dc19986cf024d27996fe0699e06" category="list-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="0be36da6d7a1ea4d94468b72475c7e35" category="inline-link-macro-rx"></block></block>
+  <block id="8cb1247d6f1cd796c983b5b1cfbbd285" category="list-text">Richten Sie das Netzwerk so ein, dass es den Zugriff auf die Zielnetzwerke ermöglicht.</block>
+  <block id="8b08d043834b2ce6cdd1276030f09b82" category="list-text">Für Cloud-Bereitstellungen richten Sie Berechtigungen bei Ihrem Cloud-Anbieter ein, damit Sie diese Berechtigungen nach der Installation der Software dem Console-Agenten zuordnen können.</block>
+  <block id="0da0ea4ab36b3defa2512b061fcc0b5b" category="list-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> <block ref="581e7c0a76f2b84cc30c9196df85b9df" category="inline-link-macro-rx"></block></block>
+  <block id="43290dee15998094cd0591ca540849fc" category="list-text">Installieren Sie den Console Agent auf Ihrem eigenen Linux-Host.</block>
+  <block id="a5d18b4d32134c035ee19835845fb372" category="list-text">Richten Sie die NetApp Console ein, indem Sie einen Webbrowser öffnen und die IP-Adresse des Linux-Hosts eingeben.</block>
+  <block id="f5320dd227fd2915c76475559e91c231" category="list-text">Für Cloud-Bereitstellungen stellen Sie der NetApp Console die Berechtigungen bereit, die Sie zuvor eingerichtet haben.</block>
+  <block id="48c1fdc6148c4c5d5073b6e7a5d44800" category="doc">Erste Schritte Workflow für NetApp Console im eingeschränkten Modus</block>
+  <block id="91edb8869565e8b84d0bb89e65038d3a" category="doc">Einstiegsarbeitsablauf für die NetApp Console (SaaS-Anwendung)</block>
+  <block id="f98e75fe997bc0f9c22b78c53cbde10d" category="section-title">Deinstallieren Sie den Agenten, wenn er über ausgehende Konnektivität verfügt</block>
+  <block id="8df5c96bcf4a5bf3cdde9f1422196766" category="section-title">Deinstallieren Sie den Agenten, wenn er keine ausgehende Verbindung hat</block>
+  <block id="37ad32ae84be5d4772583f6e7502b281" category="paragraph">Wenn Ihr Agent keine ausgehende Verbindung hat (zum Beispiel im privaten Modus), müssen Sie die Agentensoftware manuell vom Host entfernen.</block>
+  <block id="c89064bda3f1ae133a231f5b1f44c3b0" category="list-text">Führen Sie auf dem Linux-Host die folgenden Befehle aus:</block>
+  <block id="1b2b35b59eb889c82041c85d020846da" category="list-text">Löschen Sie auf dem Linux-Host alte, nicht verwendete Container-Image-Dateien, um Speicherplatz im Verzeichnis /var für die Re-Installation freizugeben.</block>
+  <block id="c5fd214cdd0d2b3b4272e73b022ba5c2" category="open-title">Docker</block>
+  <block id="485b9a6d9e38df00661f2dd32a3f0746" category="summary">Der Konsolenagent wird automatisch aktualisiert, wenn er über eine ausgehende Verbindung verfügt. Wenn Ihr Konsolenagent keine ausgehende Verbindung hat, können Sie ihn manuell aktualisieren (zum Beispiel im privaten Modus).</block>
+  <block id="3b240599579798c1fd8c4e7b4aa36e0e" category="sidebar">Stellen Sie die NetApp Console im privaten Modus bereit</block>
+  <block id="754dab26f37da0666d18d084eeb9cac1" category="sidebar">Erste Schritte mit NetApp Console (SaaS)</block>
+  <block id="fc2bd25c4501ebc9670b599a0996c243" category="sidebar">Arbeitsablauf für den Einstieg in den eingeschränkten Modus</block>
+  <block id="d9f6b701b4e6e8fa39df2310070b5bad" category="sidebar">Erste Schritte mit der NetApp Console (privater Modus)</block>
+  <block id="cc1e97b9fe18a374eacd6937d0fd1f20" category="sidebar">Erste Schritte Arbeitsablauf für den privaten Modus</block>
 </blocks>
