@@ -906,6 +906,7 @@ Der Agent stellt die folgenden API-Anfragen, um NetApp Data Classification berei
 * Cloudformation:DeleteStack
 * Cloudformation:DescribeStacks
 * Cloudformation:DescribeStackEvents
+* cloudformation:ListStacks
 * iam:AddRoleToInstanceProfile
 * ec2:AssociateIamInstanceProfile
 * ec2:DescribeIamInstanceProfileAssociations
@@ -1195,6 +1196,14 @@ Der Agent stellt die folgenden API-Anfragen, um Cloud Volumes ONTAP in AWS berei
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt oder entfernt werden, vermerken wir dies in den folgenden Abschnitten.
+
+
+
+=== 24. Februar 2026
+
+Für die Data Classification ist nun folgende Berechtigung erforderlich:
+
+cloudformation:ListStacks
 
 
 
