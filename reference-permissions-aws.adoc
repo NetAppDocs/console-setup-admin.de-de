@@ -108,6 +108,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
         "cloudformation:CreateStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "cloudformation:DeleteStack",
         "iam:PassRole",
@@ -405,6 +406,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "s3:GetObject",
         "s3:ListBucket",
@@ -549,6 +551,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "iam:PassRole",
         "iam:CreateRole",
@@ -668,6 +671,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
         "cloudformation:DeleteStack",
         "cloudformation:DescribeStacks",
         "cloudformation:DescribeStackEvents",
+        "cloudformation:ListStacks",
         "cloudformation:ValidateTemplate",
         "iam:PassRole",
         "iam:CreateRole",
@@ -882,7 +886,7 @@ Die folgenden Berechtigungen benötigen Sie nur, wenn Sie vor der Veröffentlich
 
 
 
-=== Datenklassifizierung
+=== NetApp Data Classification
 
 Der Agent stellt die folgenden API-Anfragen, um NetApp Data Classification bereitzustellen:
 
