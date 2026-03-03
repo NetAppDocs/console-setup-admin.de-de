@@ -328,7 +328,7 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 | config.deployments.deleteState | Nein | Nein | Ja 
 
 
-| config.deployments.get | Nein | Ja | Nein 
+| config.deployments.get | Nein | Ja | Ja 
 
 
 | config.deployments.getLock | Nein | Ja | Nein 
