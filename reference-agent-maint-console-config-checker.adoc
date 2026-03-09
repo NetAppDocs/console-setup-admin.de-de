@@ -39,7 +39,7 @@ Der `config-checker validate` Mit diesem Befehl können Sie die Konfiguration ei
 `--services <comma-separated list of services to validate>`--*ERFORDERLICH*--
 
 [role="quick-margin-para"]
-Wählen Sie einen oder mehrere Dienste zur Validierung aus.  Gültige Dienstnamen sind:*`PLATFORM` wodurch die Netzwerkverbindung zu den erforderlichen Konsolenendpunkten überprüft wird.
+Wählen Sie einen oder mehrere Dienste zur Validierung aus. Gültige Dienstnamen sind: *`PLATFORM` wodurch die Netzwerkverbindung zu den erforderlichen Console-Endpunkten sowie die Öffnung der erforderlichen Ports für den Console-Agenten überprüft wird.
 
 `--validationTypes <comma-separated list validation types to run>`--*ERFORDERLICH*-- Wählen Sie einen oder mehrere Validierungstypen aus, die ausgeführt werden sollen.  Gültige Validierungstypen sind: * `NETWORK` wodurch die Netzwerkverbindung zu den erforderlichen Konsolenendpunkten überprüft wird.
 

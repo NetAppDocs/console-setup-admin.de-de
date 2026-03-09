@@ -4392,7 +4392,6 @@
   <block id="23fc9bc00056f19d24e4c3ab8b5ca0c6" category="paragraph">Zeigen Sie die Version des Konsolenagenten an, um das Upgrade zu bestätigen, oder teilen Sie sie Ihrem NetApp -Vertreter mit.</block>
   <block id="b9b50a4a67814c748f85c0dd361e7931" category="list-text">Wählen Sie *Administration &gt; Support &gt; Agenten*.</block>
   <block id="b8833ad6a19536ecd8aef7620db4ddce" category="paragraph">Die Konsole zeigt die Version oben auf der Seite an.</block>
-  <block id="fb2564b7b05cf68b7b51fea5098120fd" category="section-title">Überprüfen des Netzwerkzugriffs</block>
   <block id="021662795bfc95f525aded11ea0f47b7" category="inline-link-macro">Erfahren Sie mehr über die erforderlichen Netzwerkzugriffspunkte.</block>
   <block id="532483dbc5894a7da7a4dd2c7f9b4e0e" category="paragraph">Stellen Sie sicher, dass der Konsolenagent über den erforderlichen Netzwerkzugriff verfügt.<block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block></block>
   <block id="3b2256fce45383ccea4ebfc8f456dcf9" category="section-title">Probleme bei der Installation des Konsolenagenten</block>
@@ -5053,7 +5052,6 @@
   <block id="11d2b70f92f5671a073ee7f95edbc568" category="paragraph">Der<block ref="2df2419e3b3e4992394516227a5f4a71" prefix=" " category="inline-code"></block> Mit diesem Befehl können Sie die Konfiguration eines Konsolenagenten überprüfen.</block>
   <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">Parameter</block>
   <block id="bb9f0d8e73ffa6630952dc1ecc6cd9de" category="paragraph"><block ref="6a11199e55b0cb53d751c5170e5f74f9" prefix="" category="inline-code"></block>--*ERFORDERLICH*--</block>
-  <block id="69dfddf838a2ddd2939ee5adc69cb83c" category="paragraph">Wählen Sie einen oder mehrere Dienste zur Validierung aus.  Gültige Dienstnamen sind:<block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block> wodurch die Netzwerkverbindung zu den erforderlichen Konsolenendpunkten überprüft wird.</block>
   <block id="1fde504b28ae1c1b6dbb99c104b00a85" category="paragraph"><block ref="693f786102104e01b7396235926fc506" prefix="" category="inline-code"></block>--*ERFORDERLICH*-- Wählen Sie einen oder mehrere Validierungstypen aus, die ausgeführt werden sollen.  Gültige Validierungstypen sind: *<block ref="25835188a2355e9530d3a10fcbe4c65b" prefix=" " category="inline-code"></block> wodurch die Netzwerkverbindung zu den erforderlichen Konsolenendpunkten überprüft wird.</block>
   <block id="b3c3244f084b65704359870cc6488d93" category="paragraph"><block ref="f2d537814e28e44e0e35d5b4ce13cadb" prefix="" category="inline-code"></block>--*OPTIONAL*--</block>
   <block id="d076e244720434cf026cb278c7f19d8e" category="paragraph">Gibt die URL des Proxy-Servers an, der für die Validierung verwendet werden soll.  Erforderlich, wenn Ihr Agent für die Verwendung eines Proxy-Servers konfiguriert ist.</block>
@@ -5231,7 +5229,6 @@
   <block id="5d3a908b240fe98ac0740455635b4cc0" category="list-text">Sollten weiterhin Probleme auftreten, wenden Sie sich bitte an den Support.</block>
   <block id="13ab9425db1c4ad9c7ca529999f6de24" category="list-text">Prüfen Sie, ob der Agent ausgehenden Zugriff auf die erforderlichen Endpunkte hat.<block ref="c7fe41b97889c23a57defbbf2129845e" category="inline-link-macro-rx"></block></block>
   <block id="61af83c0a45998dc351428765c46fa2e" category="section-title">Führen Sie Konfigurationsprüfungen auf dem Konsolenagenten durch.</block>
-  <block id="764bd6d2ae27e2401a34b6a482fc62d3" category="paragraph">Führen Sie Konfigurationsprüfungen an den Konsolenagenten über die Konsole oder die Agentenwartungskonsole durch, um sicherzustellen, dass sie verbunden sind.</block>
   <block id="cb4e992a592d7b26e6c218cdde9ee1b5" category="inline-link-macro">Erfahren Sie mehr über die Verwendung des Befehls config-checker validate.</block>
   <block id="adbf5b321ab6472093079a96d92216c2" category="paragraph">Sie können Konfigurationsprüfungen auch über die Agentenwartungskonsole durchführen.<block ref="714b5c6de8ffee7e082263b89290e9dc" category="inline-link-macro-rx"></block></block>
   <block id="2c8b526b02d94d86279aebb87311c90d" category="admonition">Sie können nur Agenten validieren, die den Status *Verbunden* haben.</block>
@@ -6128,4 +6125,16 @@
   <block id="d9f6b701b4e6e8fa39df2310070b5bad" category="sidebar">Erste Schritte mit der NetApp Console (privater Modus)</block>
   <block id="cc1e97b9fe18a374eacd6937d0fd1f20" category="sidebar">Erste Schritte Arbeitsablauf für den privaten Modus</block>
   <block id="68874f436c529f1931417d4bdfb1c183" category="cell">5.0.3 (2. März 2026)</block>
+  <block id="dd340069cb16665edf781618805f1165" category="doc">Console Agent 4.5.0</block>
+  <block id="de3b44fa9f294325dd837b3f15773cd6" category="paragraph">Die Version 4.5.0 unterstützt sowohl den Standardmodus als auch den eingeschränkten Modus.</block>
+  <block id="8d40f2642d0505b33483f580f9515a11" category="paragraph">Diese Version des Console-Agenten enthält Sicherheitsverbesserungen und Fehlerbehebungen sowie die folgende neue Funktion.</block>
+  <block id="b8ea9a14287592fd39444f5f11f22b28" category="paragraph-title">Unterstützung für Konfigurationsprüfungen für erforderliche Ports</block>
+  <block id="e6aa0876ac72372fe4102974fad02f9e" category="inline-link-macro">Erfahren Sie mehr über die Durchführung von Konfigurationsprüfungen auf dem Console agent.</block>
+  <block id="8fab8f63a86cd4593eb84501e6b42574" category="paragraph">Sie können mithilfe von Konfigurationsprüfungen überprüfen, ob die erforderlichen Ports für den Console Agent geöffnet sind. Sie können Konfigurationsprüfungen entweder von der Console oder der Agent Maintenance Console aus durchführen. <block ref="b6bcdf4dfaf7604bd81efc4009e39859" category="inline-link-macro-rx"></block></block>
+  <block id="2de08c251ba5c647be79f6b565692ba4" category="section-title">Konsolenverwaltung</block>
+  <block id="2bdd9842a1d8845c8d1b9f13695c4ac5" category="inline-link-macro">Erfahren Sie mehr über die Zuweisung von Keystone-Rollen an Partnerbenutzer.</block>
+  <block id="f932e5731af0b28e3d04131c77f23704" category="paragraph">Sie können Keystone-Rollen Partnerbenutzern zuweisen, um diesen Benutzern die Verwaltung von Keystone-Ressourcen in einer Partnerorganisation zu ermöglichen. <block ref="37c7e4a6dbebd9961095310c537fa832" category="inline-link-macro-rx"></block></block>
+  <block id="89c004a6a6a30c4e3297ce59ad9244fe" category="paragraph">Wählen Sie einen oder mehrere Dienste zur Validierung aus. Gültige Dienstnamen sind: <block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block> wodurch die Netzwerkverbindung zu den erforderlichen Console-Endpunkten sowie die Öffnung der erforderlichen Ports für den Console-Agenten überprüft wird.</block>
+  <block id="81e25f5172548cbe6ade4ab58b86b791" category="section-title">Überprüfen Sie den Netzwerk- und Portzugriff für den Console-Agenten</block>
+  <block id="79809c4a6f04cdeb09f4ec1df49c2f33" category="paragraph">Führen Sie Konfigurationsprüfungen an den Console Agents über die Console oder die Agent Maintenance Console durch, um sicherzustellen, dass sie auf die erforderlichen Endpunkte zugreifen können und die erforderlichen Ports geöffnet sind.</block>
 </blocks>

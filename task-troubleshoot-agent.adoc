@@ -122,7 +122,7 @@ Die Konsole zeigt die Version oben auf der Seite an.
 
 
 
-== Überprüfen des Netzwerkzugriffs
+== Überprüfen Sie den Netzwerk- und Portzugriff für den Console-Agenten
 
 Stellen Sie sicher, dass der Konsolenagent über den erforderlichen Netzwerkzugriff verfügt.link:reference-networking-saas-console.html["Erfahren Sie mehr über die erforderlichen Netzwerkzugriffspunkte."]
 
@@ -130,7 +130,7 @@ Stellen Sie sicher, dass der Konsolenagent über den erforderlichen Netzwerkzugr
 
 === Führen Sie Konfigurationsprüfungen auf dem Konsolenagenten durch.
 
-Führen Sie Konfigurationsprüfungen an den Konsolenagenten über die Konsole oder die Agentenwartungskonsole durch, um sicherzustellen, dass sie verbunden sind.
+Führen Sie Konfigurationsprüfungen an den Console Agents über die Console oder die Agent Maintenance Console durch, um sicherzustellen, dass sie auf die erforderlichen Endpunkte zugreifen können und die erforderlichen Ports geöffnet sind.
 
 Sie können Konfigurationsprüfungen auch über die Agentenwartungskonsole durchführen.link:reference-agent-maint-console-config-checker.html["Erfahren Sie mehr über die Verwendung des Befehls config-checker validate."]
 

@@ -43,6 +43,8 @@ Sie können Partnerbenutzern folgende Rollen zuweisen:
 * link:reference-iam-disaster-rec-roles.html["Disaster Recovery-Viewer"]
 * link:reference-iam-storage-roles.html["Betriebsunterstützungsanalyst"]
 * link:reference-iam-predefined-roles.html["Klassifizierungsanzeige"]
+* link:reference-iam-keystone-roles.html["Keystone -Administrator"]
+* link:reference-iam-keystone-roles.html["Keystone -Viewer"]
 
 
 link:reference-iam-predefined-roles.html["Erfahren Sie mehr über vordefinierte Rollen"]
