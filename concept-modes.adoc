@@ -347,7 +347,7 @@ Für Cloud Volumes ONTAP werden mit BYOL sowohl kapazitätsbasierte als auch kno
 | Organisationspartnerschaften | Nein 
 
 
-| Nur-Lese-Modus | Nein 
+| Nur-Lese-Modus | Ja 
 
 
 | Benachrichtigungen | Nein 
@@ -579,7 +579,7 @@ Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstütz
 | Produktbereich | NetApp service oder Funktion | Eingeschränkter Modus | Privatmodus 
 
 
-.10+| *Verwaltung von Speichersystemen* Diese Tabelle zeigt, welche Speichersysteme Sie über die NetApp Console verwalten können. Es werden keine Sicherungsziele für NetApp Backup and Recovery aufgeführt. | Warnungen | Nein | Nein 
+.12+| *Verwaltung von Speichersystemen* Diese Tabelle zeigt, welche Speichersysteme Sie über die NetApp Console verwalten können. Es werden keine Sicherungsziele für NetApp Backup and Recovery aufgeführt. | Warnungen | Nein | Nein 
 
 
 | Amazon FSx für ONTAP | Nein | Nein 
@@ -609,74 +609,74 @@ Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstütz
 | E-Series | Nein | Nein 
 
 
-| StorageGRID | Nein | Nein | Workload-Factory 
+| StorageGRID | Nein | Nein 
 
 
-| Nein | Nein .8+| *Datendienste* | Backup and Recovery 
+| Workload-Factory | Nein | Nein 
 
 
-| Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] | Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] | NetApp Klassifizierung 
+.8+| *Datendienste* | Backup and Recovery | Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] | Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] 
 
 
-| Ja | Ja | Kopieren und synchronisieren 
+| NetApp Klassifizierung | Ja | Ja 
 
 
-| Nein | Nein | NetApp Disaster Recovery 
+| Kopieren und synchronisieren | Nein | Nein 
 
 
-| Nein | Nein | NetApp Ransomware Protection 
+| NetApp Disaster Recovery | Nein | Nein 
 
 
-| Nein | Nein | NetApp Replication 
+| NetApp Ransomware Protection | Nein | Nein 
 
 
-| Ja | Ja | NetApp Cloud Tiering 
+| NetApp Replication | Ja | Ja 
 
 
-| Nein | Nein | NetApp Volume Caching 
+| NetApp Cloud Tiering | Nein | Nein 
 
 
-| Nein | Nein .4+| *NetApp Supportvertragsfunktionen* | Digitaler Berater 
+| NetApp Volume Caching | Nein | Nein 
 
 
-| Nein | Nein | Lebenszyklusplanung 
+.4+| *NetApp Supportvertragsfunktionen* | Digitaler Berater | Nein | Nein 
 
 
-| Nein | Nein | Software-Updates 
+| Lebenszyklusplanung | Nein | Nein 
 
 
-| Nein | Nein | Nachhaltigkeit 
+| Software-Updates | Nein | Nein 
 
 
-| Nein | Nein .9+| *Administrative Merkmale* | Dashboard-Kennzahlen für Speicher- und Datendienste 
+| Nachhaltigkeit | Nein | Nein 
 
 
-| Nein | Nein | Identitäts- und Zugriffsverwaltung 
+.9+| *Administrative Merkmale* | Dashboard-Kennzahlen für Speicher- und Datendienste | Nein | Nein 
 
 
-| Ja | Ja | Cloud-Anbieter-Zugangsdaten verwalten 
+| Identitäts- und Zugriffsverwaltung | Ja | Ja 
 
 
-| Ja | Ja | Föderation 
+| Cloud-Anbieter-Zugangsdaten verwalten | Ja | Ja 
 
 
-| Ja | Nein | Licenses and subscriptions 
+| Föderation | Ja | Nein 
 
 
-| Ja | Ja | Multi-Faktor-Authentifizierung 
+| Licenses and subscriptions | Ja | Ja 
 
 
-| Ja | Nein | NSS-Konten 
+| Multi-Faktor-Authentifizierung | Ja | Nein 
 
 
-| Ja | Nein | Organisationspartnerschaften 
+| NSS-Konten | Ja | Nein 
 
 
-| Ja | Nein | Nur-Lese-Modus 
+| Organisationspartnerschaften | Ja | Nein 
 
 
-| Nein | Nein | Benachrichtigungen | Ja 
+| Nur-Lese-Modus | Ja | Nein 
 
 
-| Nein | Prüfung | Ja | Ja 
+| Benachrichtigungen | Ja | Nein | Prüfung 
 |===
