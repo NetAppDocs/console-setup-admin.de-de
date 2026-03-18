@@ -27,7 +27,7 @@ Die NetApp Console verwendet rollenbasierte Zugriffskontrolle (RBAC) zur Verwalt
 
 Beachten Sie Folgendes bezüglich der Zugriffsgewährung in der NetApp Console:
 
-* Alle Benutzer müssen sich zunächst bei der NetApp Console registrieren, bevor ihnen Zugriff auf Ressourcen gewährt werden kann.
+* Alle Benutzer müssen sich zunächst für die NetApp Console registrieren, bevor ihnen Zugriff auf Ressourcen gewährt werden kann, auch wenn sie Teil einer föderierten Gruppe sind.
 * Sie müssen jedem Benutzer in der Konsole explizit eine Rolle zuweisen, bevor er auf Ressourcen zugreifen kann, selbst wenn er Mitglied einer Verbundgruppe ist, der eine Rolle zugewiesen wurde.
 * Sie können Dienstkonten direkt über die Konsole hinzufügen und ihnen Rollen zuweisen.
 

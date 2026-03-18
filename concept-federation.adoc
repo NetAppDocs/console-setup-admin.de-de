@@ -56,7 +56,6 @@ NetApp unterstützt die folgenden Protokolle und Identitätsanbieter für die F�
 
 .Protokolle
 * link:task-federation-adfs.html["Active Directory-Verbunddienste (AD FS)"]
-* link:task-federation-entra-id.html["Microsoft Entra ID"]
 * link:link:task-federation-saml.html["Security Assertion Markup Language (SAML)-Identitätsanbieter"]
 
 
