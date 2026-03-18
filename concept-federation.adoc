@@ -55,13 +55,14 @@ NOTE: Wenn Sie die Föderation zuvor mit NetApp Cloud Central (einer externen An
 NetApp unterstützt die folgenden Protokolle und Identitätsanbieter für die Föderation:
 
 .Protokolle
-* Security Assertion Markup Language (SAML)-Identitätsanbieter
-* Active Directory-Verbunddienste (AD FS)
+* link:task-federation-adfs.html["Active Directory-Verbunddienste (AD FS)"]
+* link:task-federation-entra-id.html["Microsoft Entra ID"]
+* link:link:task-federation-saml.html["Security Assertion Markup Language (SAML)-Identitätsanbieter"]
 
 
 .Identitätsanbieter
-* Microsoft Entra ID
-* PingFederate
+* link:task-federation-entra-id.html["Microsoft Entra ID"]
+* link:task-federation-ping.html["PingFederate"]
 
 
 
@@ -91,11 +92,3 @@ Testen Sie Ihre Verbundverbindung, bevor Sie sie aktivieren. Verwenden Sie die T
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Drei"]Aktivieren Sie Ihre Verbindung in der Konsole
 [role="quick-margin-para"]
 Nachdem Sie die Verbindung aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.
-
-Lesen Sie zunächst das Thema für Ihr jeweiliges Protokoll oder Ihren IdP:
-
-* link:task-federation-adfs.html["Einrichten einer Verbundverbindung mit AD FS"]
-* link:task-federation-entra-id.html["Einrichten einer Verbundverbindung mit der Microsoft Entra ID"]
-* link:task-federation-ping.html["Einrichten einer Verbundverbindung mit PingFederate"]
-* link:task-federation-saml.html["Einrichten einer Verbundverbindung mit einem SAML-Identitätsanbieter"]
-
