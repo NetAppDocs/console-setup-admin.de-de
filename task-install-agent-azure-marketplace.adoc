@@ -16,6 +16,11 @@ summary: Um einen Konsolen-Agenten aus dem Azure Marketplace zu erstellen, müss
 [role="lead"]
 Sie können einen Konsolen-Agent in Azure direkt vom Azure Marketplace aus erstellen.  Um einen Konsolen-Agenten aus dem Azure Marketplace zu erstellen, müssen Sie Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten, die Instanzanforderungen überprüfen und dann den Konsolen-Agenten erstellen.
 
+Durch die Bereitstellung eines Agenten in Azure wird eine VM gestartet, auf der Linux und die Console-Agent-Software in einem VNet Ihrer Wahl ausgeführt werden.
+
+
+NOTE: Stellen Sie einen Konsolenagenten in derselben Azure-Region wie die Cloud Volumes ONTAP-Systeme, die er verwaltet, oder in der  https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure-Regionenpaar"^] bereit. Dadurch wird sichergestellt, dass eine Azure Private Link-Verbindung zwischen Cloud Volumes ONTAP und den zugehörigen Speicherkonten verwendet wird.
+
 .Bevor Sie beginnen
 * Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
 * Rezensionlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .

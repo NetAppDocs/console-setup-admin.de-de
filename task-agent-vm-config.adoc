@@ -25,7 +25,7 @@ Führen Sie diese Wartungsaufgaben mithilfe der VM-Webkonsole durch:
 
 
 .Einschränkungen
-Das Upgrade des Agenten über die Konsole wird noch nicht unterstützt.  Darüber hinaus können Sie nur Informationen zur IP-Adresse, zum DNS und zu Gateways anzeigen.
+Über die Wartungskonsole können Sie lediglich Informationen zur IP-Adresse, zum DNS und zu den Gateways anzeigen (nicht aktualisieren).
 
 
 

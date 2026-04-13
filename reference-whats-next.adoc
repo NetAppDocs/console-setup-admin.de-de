@@ -4,7 +4,7 @@ permalink: reference-whats-next.html
 keywords: standard mode, what you can do 
 summary: Nachdem Sie sich angemeldet und die NetApp Console im Standardmodus eingerichtet haben, können Benutzer Speichersysteme erstellen und erkennen sowie NetApp -Datendienste verwenden. 
 ---
-= Was Sie als Nächstes tun können (Standardmodus)
+= Nächste Schritte für NetApp Console im Standardmodus
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

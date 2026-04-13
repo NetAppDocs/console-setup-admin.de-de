@@ -1,0 +1,171 @@
+---
+sidebar: sidebar 
+permalink: concept-agent-install-options.html 
+keywords: install agent, deployment method, console install, marketplace install, manual install, ova install, vcenter install, installation options, 
+summary: Stellen Sie einen Konsolenagenten über die NetApp Console, den Marktplatz Ihres Cloud-Anbieters oder durch manuelle Softwareinstallation auf einem Linux-Host bereit. Die gewählte Bereitstellungsmethode bestimmt Ihre Kontrolle über den Host und wie schnell Sie starten können. 
+---
+= Wählen Sie eine Bereitstellungsmethode für den Console-Agenten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Stellen Sie einen Konsolenagenten über die NetApp Console, den Marktplatz Ihres Cloud-Anbieters oder durch manuelle Softwareinstallation auf einem Linux-Host bereit. Die gewählte Bereitstellungsmethode bestimmt Ihre Kontrolle über den Host und wie schnell Sie starten können.
+
+Für Cloud-Bereitstellungen können Sie einen Agenten in Amazon Web Services (AWS), Microsoft Azure oder Google Cloud bereitstellen.
+
+
+
+== Bereitstellung über die NetApp Console
+
+NetApp empfiehlt die Bereitstellung über die NetApp Console, wenn Sie den Standardmodus verwenden. Die NetApp Console führt Sie durch die Netzwerk- und Berechtigungskonfiguration und startet dann automatisch die VM oder Instanz bei Ihrem Cloud-Anbieter. Die Console führt Sie durch die Netzwerk- und Berechtigungskonfiguration und startet dann die VM oder Instanz bei Ihrem Cloud-Anbieter automatisch.
+
+Wählen Sie diese Methode, wenn:
+
+* Sie setzen die Software in einer Standard-Cloud-Umgebung mit ausgehendem Internetzugang ein.
+* Sie möchten den schnellsten Weg zu einem laufenden Agenten mit dem geringsten manuellen Einrichtungsaufwand.
+
+
+[cols="47,47"]
+|===
+| Vorteile | Nachteile 
+
+
+ a| 
+* Geführte Einrichtung – die Konsole übernimmt die VM-Erstellung, die Softwareinstallation und die Erstregistrierung in einem einzigen Arbeitsablauf
+* Wendet automatisch das richtige VM-Image und die richtige Konfiguration an
+* Die wenigsten manuellen Schritte aller Cloud-Bereitstellungsmethoden
+
+ a| 
+* Nicht verfügbar für lokale, eingeschränkte oder abgeschottete Umgebungen
+
+
+|===
+link:task-install-agent-aws-console.html["Stellen Sie einen Console-Agenten in AWS über die Console bereit."] link:task-install-agent-azure-console.html["Stellen Sie einen Console-Agenten in Azure über die Console bereit."] link:task-install-agent-google-console-gcloud.html["Stellen Sie einen Console-Agenten in Google Cloud über die Console bereit."]
+
+
+
+== Bereitstellung über einen Cloud-Anbieter-Marktplatz
+
+Bei der Bereitstellung über den AWS Marketplace oder den Azure Marketplace wird die Agenteninstallation direkt vom Marketplace aus initiiert, nicht von der NetApp Console.
+
+
+NOTE: Eine dem Marktplatz gleichwertige Option ist in Google Cloud mithilfe von Google Cloud Tools (gcloud CLI oder Google Cloud console) anstelle eines herkömmlichen Marktplatzeintrags verfügbar.
+
+Wählen Sie diese Methode, wenn:
+
+* Ihre Organisation verlangt, dass sämtliche Cloud-Software über den Marktplatz beschafft wird.
+* Sie ziehen es vor, Bereitstellungen über die Benutzeroberfläche Ihres Cloud-Anbieters anstatt über die NetApp Console zu initiieren.
+
+
+[cols="47,47"]
+|===
+| Vorteile | Nachteile 
+
+
+ a| 
+* Vertraute Bereitstellungsschnittstelle für Teams, die bereits mit der Konsole des Cloud-Anbieters arbeiten
+
+ a| 
+* Die Bereitstellung wird außerhalb der NetApp Console initiiert, daher steht der geführte Workflow nicht zur Verfügung
+
+
+|===
+link:task-install-agent-aws-marketplace.html["Stellen Sie einen Console-Agenten in AWS über den Marketplace bereit."] link:task-install-agent-azure-marketplace.html["Stellen Sie einen Konsolenagenten in Azure über den Marketplace bereit."] link:task-install-agent-google-gcloud.html["Stellen Sie einen Console-Agenten in Google Cloud mithilfe der Google Cloud-Tools bereit."]
+
+
+
+== Manuelle Installation auf einem Linux-Host in der Cloud
+
+Die manuelle Installation ermöglicht es Ihnen, die Console-Agent-Software direkt auf einem Linux-Host zu installieren, den Sie in AWS, Azure, Google Cloud oder lokal bereitstellen und verwalten.
+
+Wählen Sie diese Methode, wenn:
+
+* Sie müssen in einer eingeschränkten oder privaten Umgebung ohne ausgehenden Internetzugang bereitstellen.
+* Ihre Organisation verlangt, dass die gesamte Software auf vorab genehmigten, intern verwalteten Hosts installiert wird.
+
+
+[cols="47,47"]
+|===
+| Vorteile | Nachteile 
+
+
+ a| 
+* Unterstützt Umgebungen mit eingeschränktem ausgehendem Internetzugang (eingeschränkter Modus oder privater Modus)
+* Aktualisierungen werden automatisch durchgeführt, wenn der Konsolenagent über Internetzugang verfügt
+
+ a| 
+* Die meisten Schritte jeder Bereitstellungsmethode. Sie müssen den Host vorbereiten, Podman oder Docker installieren, das Netzwerk konfigurieren, die Software installieren und Berechtigungen manuell vergeben.
+* * Die Bereitstellung wird außerhalb der NetApp Console initiiert, daher steht der geführte Workflow nicht zur Verfügung
+
+
+|===
+link:task-install-agent-aws-manual.html["Manuelle Installation eines Console-Agenten in AWS"] link:task-install-agent-azure-manual.html["Manuelle Installation eines Console-Agenten in Azure"] link:task-install-agent-google-manual.html["Manuelle Installation eines Console-Agenten in Google Cloud"]
+
+
+
+== Manuelle Installation lokal mit VCenter (OVA)
+
+Bei Verwendung von VMware VCenter können Sie den Konsolenagenten durch Importieren einer OVA-Datei (Open Virtual Appliance) bereitstellen. Die OVA ist ein vorkonfiguriertes VM-Image, das Sie mit dem vSphere-Client bereitstellen, ohne Linux zu installieren oder eine Container-Laufzeitumgebung zu konfigurieren.
+
+Wählen Sie diese Methode, wenn:
+
+* Sie führen eine lokale Bereitstellung in einer VMware-Umgebung durch.
+* Sie wünschen sich eine einfachere Installation vor Ort, die weniger Wartung und Linux-Einrichtung erfordert.
+
+
+
+NOTE: Google Cloud-Ressourcen können nicht über einen lokalen Console-Agenten verwaltet werden. Um Google Cloud-Ressourcen zu verwalten, installieren Sie den Agenten in Google Cloud.
+
+[cols="47,47"]
+|===
+| Vorteile | Nachteile 
+
+
+ a| 
+* Einfachere Installation vor Ort, keine Einrichtung von Linux oder einer Container-Laufzeitumgebung erforderlich
+* Nur für lokale Installationen verfügbar; nicht für Cloud-Bereitstellungen verfügbar
+* Beinhaltet eine menügesteuerte Wartungskonsole für Agentenwartungsaufgaben
+* Vertrauter Bereitstellungsworkflow für VMware-Administratoren
+* * Ein vorkonfiguriertes VM-Image hilft, Fehler zu vermeiden und die Wartung zu erleichtern
+
+ a| 
+* Erfordert vCenter; kann nicht direkt auf einem Bare-ESXi-Host installiert werden
+
+
+|===
+link:task-install-agent-on-prem-ova.html["Lokale Bereitstellung mit VCenter"]
+
+
+
+== Manuelle Installation vor Ort (ohne VCenter)
+
+Sie können den Console-Agenten manuell auf jedem lokalen Linux-Host installieren. Sie müssen den Linux-Host und die Container-Laufzeitumgebung (Docker oder Podman) einrichten und anschließend den Console-Agenten installieren.
+
+Wählen Sie diese Methode, wenn:
+
+* Sie führen die Bereitstellung lokal durch und verfügen nicht über eine VMware VCenter-Umgebung.
+* Sie sind mit der Linux-Administration vertraut und möchten den zugrunde liegenden Host selbst verwalten.
+* Sie möchten steuern, wann der Console-Agent aktualisiert wird.
+
+
+[cols="47,47"]
+|===
+| Vorteile | Nachteile 
+
+
+ a| 
+* Funktioniert auf jeder Linux-kompatiblen lokalen Hardware oder VM-Plattform – VMware ist nicht erforderlich
+* Unterstützt private (Air-Gap-)Bereitstellungen ohne ausgehenden Internetzugang
+
+ a| 
+* Sie müssen wissen, wie Sie Linux verwenden und Docker oder Podman selbst einrichten
+* Sie sind dafür verantwortlich, Aktualisierungen des Console-Agenten manuell anzuwenden, wenn neue Versionen veröffentlicht werden
+
+
+|===
+link:task-install-agent-on-prem.html["Manuelle Installation vor Ort"]

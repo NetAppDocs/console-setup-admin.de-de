@@ -4,7 +4,7 @@ permalink: task-install-agent-azure-console.html
 keywords: install connector, azure connector installation, azure connector, install connector in azure, bluexp, create connector 
 summary: Um einen Konsolenagenten in Azure aus der NetApp Console zu erstellen, müssen Sie Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten und dann den Konsolenagenten erstellen. 
 ---
-= Erstellen Sie einen Konsolen-Agenten in Azure über die NetApp Console
+= Bereitstellen eines Konsolenagenten in Azure über die NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,12 @@ summary: Um einen Konsolenagenten in Azure aus der NetApp Console zu erstellen, 
 
 
 [role="lead"]
-Um einen Konsolenagenten in Azure aus der NetApp Console zu erstellen, müssen Sie Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten und dann den Konsolenagenten erstellen.
+Um einen Console-Agenten in Azure von der NetApp Console bereitzustellen, müssen Sie Ihr Netzwerk einrichten, die Azure-Berechtigungen vorbereiten und dann den Console-Agenten bereitstellen.
+
+Durch die Bereitstellung eines Agenten in Azure wird eine VM gestartet, auf der Linux und die Console-Agent-Software in einem VNet Ihrer Wahl ausgeführt werden.
+
+
+NOTE: Stellen Sie einen Konsolenagenten in derselben Azure-Region wie die Cloud Volumes ONTAP-Systeme, die er verwaltet, oder in der  https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure-Regionenpaar"^] bereit. Dadurch wird sichergestellt, dass eine Azure Private Link-Verbindung zwischen Cloud Volumes ONTAP und den zugehörigen Speicherkonten verwendet wird.
 
 .Bevor Sie beginnen
 * Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
@@ -501,7 +506,9 @@ link:reference-ports-azure.html["Anzeigen von Sicherheitsgruppenregeln für Azur
 +
 []
 ====
-Wenn Sie immer noch dielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] für Agent-Upgrades verwendet wird, schlägt die Validierung mit einem Fehler fehl.  Um dies zu vermeiden, deaktivieren Sie das Kontrollkästchen, um die Validierungsprüfung zu überspringen.
+** Wenn Sie immer noch dielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] für Agent-Upgrades verwendet wird, schlägt die Validierung mit einem Fehler fehl.  Um dies zu vermeiden, deaktivieren Sie das Kontrollkästchen, um die Validierungsprüfung zu überspringen.
+** Während der Installation prüft NetApp, ob auf dem Agent-Host mindestens 80 % des gesamten Festplattenspeichers verfügbar sind, einschließlich 48 GB in `/opt` und 32 GB in `/var` (insgesamt 80 GB). Nach der Installation müssen mindestens 20 % des gesamten Festplattenspeichers verfügbar bleiben, einschließlich 12 GB in `/opt` und 8 GB in `/var` (insgesamt 20 GB).
+
 
 ====
 . Wählen Sie *Hinzufügen*.

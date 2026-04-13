@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-install-agent-on-prem.html 
-keywords: install connector, on prem connector installation, on prem connector, install connector on prem, manual install 
-summary: Installieren Sie einen Konsolenagenten vor Ort, melden Sie sich dann an und richten Sie ihn für die Arbeit mit Ihrer Konsolenorganisation ein. 
+keywords: deploy agent, on prem agent deployment, on prem agent, deploy connector on prem, manual deployment 
+summary: Installieren Sie einen Console-Agenten lokal, melden Sie sich anschließend an und richten Sie ihn für die Zusammenarbeit mit Ihrer Console-Organisation ein. 
 ---
-= Manuelle Installation eines Konsolen-Agenten vor Ort
+= Manuelle Bereitstellung eines Console-Agenten vor Ort
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,10 +14,10 @@ summary: Installieren Sie einen Konsolenagenten vor Ort, melden Sie sich dann an
 
 
 [role="lead"]
-Installieren Sie einen Konsolenagenten vor Ort, melden Sie sich dann an und richten Sie ihn für die Arbeit mit Ihrer Konsolenorganisation ein.
+Installieren Sie einen Console-Agenten lokal, melden Sie sich anschließend an und richten Sie ihn für die Zusammenarbeit mit Ihrer Console-Organisation ein.
 
 
-NOTE: Wenn Sie ein VMWare-Benutzer sind, können Sie eine OVA verwenden, um einen Konsolenagenten in Ihrem VCenter zu installieren.link:task-install-agent-on-prem-ova.html["Erfahren Sie mehr über die Installation eines Agenten in einem VCenter."]
+NOTE: Als VMware-Benutzer können Sie eine OVA verwenden, um einen Console-Agenten in Ihrem vCenter bereitzustellen. link:task-install-agent-on-prem-ova.html["Erfahren Sie mehr über die Bereitstellung eines Agenten in einem vCenter."]
 
 Vor der Installation müssen Sie sicherstellen, dass Ihr Host (VM oder Linux-Host) die Anforderungen erfüllt und dass der Konsolenagent ausgehenden Zugriff auf das Internet sowie auf Zielnetzwerke hat.  Wenn Sie NetApp -Datendienste oder Cloud-Speicheroptionen wie Cloud Volumes ONTAP nutzen möchten, müssen Sie bei Ihrem Cloud-Anbieter Anmeldeinformationen erstellen, die Sie der Konsole hinzufügen, damit der Konsolenagent in Ihrem Namen Aktionen in der Cloud ausführen kann.
 

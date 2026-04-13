@@ -28,7 +28,12 @@ Sie können Benutzern je nach ihren Verantwortlichkeiten mehrere Rollen für den
 
 == Arten von Konsolenorganisationsmitgliedern
 
-In einer NetApp Console Organisation gibt es drei Arten von Mitgliedern: * _Benutzerkonten_: Einzelne Benutzer, die sich bei der NetApp Console anmelden, um Ressourcen zu verwalten. Benutzer müssen sich bei der NetApp Console registrieren, bevor sie einer Organisation hinzugefügt werden können. * _Servicekonten_: Nicht-menschliche Konten, die von Anwendungen oder Diensten verwendet werden, um über APIs mit der NetApp Console zu interagieren. Sie können Dienstkonten direkt zu Ihrer Konsolenorganisation hinzufügen. * _Verbundene Gruppen_: Gruppen, die von Ihrem Identitätsanbieter (IdP) synchronisiert werden und es Ihnen ermöglichen, den Zugriff für mehrere Benutzer gemeinsam zu verwalten. Jeder Benutzer innerhalb einer föderierten Gruppe muss sich bei der NetApp Console registriert haben und Ihrer Organisation mit einer Zugriffsrolle hinzugefügt worden sein, bevor er auf die der Gruppe zugewiesenen Ressourcen zugreifen kann.
+Es gibt drei Arten von Mitgliedern in einer NetApp Console-Organisation:
+
+* _Benutzerkonten_: Einzelne Benutzer, die sich in der NetApp Console anmelden, um Ressourcen zu verwalten. Benutzer müssen sich für die NetApp Console registrieren, bevor sie einer Organisation hinzugefügt werden können.
+* _Dienstkonten_: Nicht-menschliche Konten, die von Anwendungen oder Diensten zur Interaktion mit der NetApp Console über APIs verwendet werden. Sie können Dienstkonten direkt zu Ihrer Console-Organisation hinzufügen.
+* _Verbundene Gruppen_: Gruppen, die von Ihrem Identitätsanbieter (IdP) synchronisiert werden und Ihnen die gemeinsame Verwaltung des Zugriffs mehrerer Benutzer ermöglichen. Jeder Benutzer innerhalb einer verbundenen Gruppe muss sich für die NetApp Console registriert und Ihrer Organisation mit einer Zugriffsrolle hinzugefügt worden sein, bevor er auf die der Gruppe zugewiesenen Ressourcen zugreifen kann.
+
 
 link:task-iam-manage-members-permissions.html#add-members["Erfahren Sie, wie Sie Mitglieder zu Ihrer Organisation hinzufügen."]
 

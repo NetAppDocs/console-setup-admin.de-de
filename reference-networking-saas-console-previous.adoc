@@ -4,7 +4,7 @@ permalink: reference-networking-saas-console-previous.html
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, netapp console 
 summary: Sie müssen sicherstellen, dass die Konsole und alle von Ihnen installierten Agenten über den richtigen Netzwerkzugriff verfügen, um ordnungsgemäß zu funktionieren. 
 ---
-= Erforderlicher Netzwerkzugriff für 3.9.55 und darunter
+= Netzwerkzugriff für NetApp Console 3.9.55 und früher
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: reference-permissions-azure.html
 keywords: permissions, azure, azure permissions, bluexp 
 summary: Wenn die NetApp Console einen Konsolenagenten in Azure startet, weist sie der VM eine benutzerdefinierte Rolle zu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses Azure-Abonnements erteilt.  Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere Azure-Dienste zu tätigen. 
 ---
-= Azure-Berechtigungen für den Konsolen-Agent
+= Azure-Berechtigungen für den NetApp Console-Agenten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

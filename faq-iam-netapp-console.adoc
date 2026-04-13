@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: faq-iam-netapp-console.html 
+keywords: faq, frequently asked questions, frequently asked questions about netapp console iam, identity and access management, role-based access control, rbac, iam, roles, permissions, organization, folders, projects, members, agents, service accounts, federated groups 
+summary: Häufig gestellte Fragen zu Identitäts- und Zugriffsmanagement sowie rollenbasierter Zugriffssteuerung in NetApp Console. 
+---
+= Häufig gestellte Fragen zur Identitäts- und Zugriffsverwaltung für die NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Diese FAQ beantwortet häufig gestellte Fragen zum Identitäts- und Zugriffsmanagement (IAM) in der NetApp Console. Sie konzentriert sich auf rollenbasierte Zugriffssteuerung, Hierarchieverhalten und Mitgliederverwaltung, die bei der Planung und Implementierung des Zugriffs für Ihre Organisation hilfreich sind.
+
+
+
+== Erste Schritte
+
+.Was sind die ersten Schritte zur Einrichtung von IAM nach der Erstellung einer neuen NetApp Console-Organisation?
+Bei der Anmeldung erstellt die Console eine Organisation mit einem Organization admin und einem Standardprojekt. Die empfohlenen Einrichtungsschritte sind anschließend:
+
+. Bearbeiten Sie das Standardprojekt oder erstellen Sie zusätzliche Projekte und Ordner, die Ihrer Unternehmenshierarchie entsprechen.
+. Füge Mitglieder zu deiner Organisation hinzu.
+. Ressourcen hinzufügen oder entdecken.
+. Weisen Sie Ressourcen bei Bedarf zusätzlichen Projekten zu.
+
+
+
+
+== Ressourcenhierarchie: Organisationen, Ordner und Projekte
+
+.Worin besteht der Unterschied zwischen einem Ordner und einem Projekt in NetApp Console IAM?
+Ordner gruppieren zusammengehörige Projekte zur Organisationsstruktur und Rollenverteilung. Projekte enthalten Ressourcen und sind der Ort, an dem Mitglieder auf diese Ressourcen zugreifen. Ressourcen können nicht direkt Ordnern zugeordnet werden – sie müssen Projekten zugeordnet sein. Durch die Zuweisung einer Rolle auf Ordnerebene erhält das entsprechende Mitglied automatisch Zugriff auf alle untergeordneten Projekte und Ordner.
+
+.Sind die Ordner für alle Mitglieder meiner Organisation sichtbar?
+Nein. Ordner sind nur für Mitglieder mit IAM-Berechtigungen sichtbar: Organisationsadministrator, Ordner- oder Projektadministrator oder Superadministrator. Normale Mitglieder greifen direkt auf Projekte zu und sehen keine Ordner.
+
+.Kann ich eine Ressource direkt einem Ordner zuordnen?
+Nein. Ressourcen müssen Projekten und nicht Ordnern zugeordnet werden. Ein Organisationsadministrator kann jedoch eine Ressource einem Ordner zuordnen, sodass ein Ordner- oder Projektadministrator sie anschließend mit den entsprechenden Projekten innerhalb dieses Ordners verknüpfen kann.
+
+.Wie tief kann ich Ordner und Projekte in der Hierarchie meiner Organisation verschachteln?
+Sie können bis zu sieben Ebenen von Ordnern und Projekten in der Ressourcenstruktur Ihrer Organisation erstellen.
+
+.Welche Ressourcentypen können Projekten in NetApp Console zugeordnet werden?
+Zu den Ressourcen, die Projekten zugeordnet werden können, gehören:
+
+* Speichersysteme
+* Keystone -Abonnements
+* Einige Backup- und Wiederherstellungs-Workloads
+* Konsolenagenten
+
+
+
+
+== Rollen und Berechtigungen
+
+.Worin besteht der Unterschied zwischen einem Organisationsadministrator und einem Ordner- oder Projektadministrator?
+Ein Organisationsadministrator hat uneingeschränkten Zugriff auf alle Projekte und Ordner der gesamten Organisation und ist die einzige Rolle, die Console Agents erstellen kann. Ein Ordner- oder Projektadministrator kann nur die ihm zugewiesenen Ordner und Projekte verwalten und keine Console Agents erstellen.
+
+.Wer kann Console-Agenten in NetApp Console erstellen?
+Nur Benutzer mit der Administratorrolle der Organisation können Konsolenagenten erstellen. Ordner- oder Projektadministratoren können keine Konsolenagenten erstellen.
+
+.Welche Rolle sollte ich einem Benutzer zuweisen, der lediglich den Zustand des Speichers überwachen und Supportfälle verwalten muss?
+Weisen Sie die Rolle des *Operation support analyst* zu, die Zugriff auf Warnmeldungen und Überwachungstools sowie die Möglichkeit zur Eingabe und Verwaltung von Supportfällen bietet.
+
+.Kann ich die Rolle eines Mitglieds auf Projektebene ändern, wenn dieser Zugriff von einem Ordner geerbt wurde?
+Nein. Sie können den Zugriff von Mitgliedern auf einer niedrigeren Ebene nicht ändern, wenn er von einer höheren Ebene vererbt wurde. Um den Zugriff zu ändern, müssen Sie die Berechtigung des Mitglieds auf der höheren Hierarchieebene (Ordner oder Organisation) ändern, auf der sie ursprünglich zugewiesen wurde.
+
+
+
+== Mitgliederverwaltung und Zugriff verwalten
+
+.Was muss geschehen, bevor ich einen Benutzer zu meiner NetApp Console-Organisation hinzufügen kann?
+Der Benutzer muss sich bereits für die NetApp Console registriert haben, bevor Sie ihn Ihrer Organisation, Ihrem Ordner oder Ihrem Projekt hinzufügen können. Diese Anforderung gilt auch für Benutzer, die Mitglieder einer Verbundgruppe sind.
+
+.Erhalten Verbundbenutzer automatisch Zugriff auf Ressourcen, wenn ich ihre Gruppe zur Console hinzufüge?
+Nein. Selbst wenn einer föderierten Gruppe eine Rolle zugewiesen wird, müssen einzelne Benutzer zwei Voraussetzungen erfüllen, bevor sie auf Ressourcen zugreifen können:
+
+. Der Benutzer muss sich bereits für die NetApp Console registriert haben.
+. Dem Benutzer muss in der Console explizit eine Rolle zugewiesen werden.
+
+
+NetApp empfiehlt, diesen Benutzern eine minimale Zugriffsrolle wie z. B. Organization viewer zuzuweisen.
+
+
+
+== Konsolenagenten
+
+.Was geschieht mit einem Console-Agenten nach seiner Erstellung, und kann er in anderen Projekten verwendet werden?
+Konsolenagenten sind zunächst an das Projekt gebunden, in dem sie erstellt wurden. Nach der Erstellung können Administratoren Agenten anderen Projekten hinzufügen oder sie auf der Seite „Agenten“ einem Ordner zuordnen.
+
+
+
+== Ähnliche Informationen
+
+* link:concept-identity-and-access-management.html["Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der NetApp Console"]
+* link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Zugriffsrollen der NetApp Console"]
+* link:task-iam-get-started.html["Erste Schritte mit Identität und Zugriff in der NetApp Console"]
+* link:task-iam-manage-folders-projects.html["Fügen Sie Ihrer NetApp Console Organisation Ordner und Projekte hinzu."]
+* link:task-iam-manage-members-permissions.html["Fügen Sie Benutzer zu einer NetApp Console Organisation hinzu"]
+

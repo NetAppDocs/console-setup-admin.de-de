@@ -56,7 +56,7 @@ NetApp unterst체tzt die folgenden Protokolle und Identit채tsanbieter f체r die F�
 
 .Protokolle
 * link:task-federation-adfs.html["Active Directory-Verbunddienste (AD FS)"]
-* link:link:task-federation-saml.html["Security Assertion Markup Language (SAML)-Identit채tsanbieter"]
+* link:task-federation-saml.html["Security Assertion Markup Language (SAML)-Identit채tsanbieter"]
 
 
 .Identit채tsanbieter

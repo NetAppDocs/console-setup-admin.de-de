@@ -10,11 +10,11 @@ Die Version 4.5.0 unterstützt sowohl den Standardmodus als auch den eingeschrä
 
 Diese Version des Console-Agenten enthält Sicherheitsverbesserungen und Fehlerbehebungen sowie die folgende neue Funktion.
 
-.Unterstützung für Konfigurationsprüfungen für erforderliche Ports
-Sie können mithilfe von Konfigurationsprüfungen überprüfen, ob die erforderlichen Ports für den Console Agent geöffnet sind. Sie können Konfigurationsprüfungen entweder von der Console oder der Agent Maintenance Console aus durchführen. link:https://docs.netapp.com/console-setup-admin/task-troubleshoot-agent.html["Erfahren Sie mehr über die Durchführung von Konfigurationsprüfungen auf dem Console agent."]
+.Unterstützung für Konfigurationsprüfungen der erforderlichen Ports
+Sie können mithilfe von Konfigurationsprüfungen überprüfen, ob die erforderlichen Ports für den Console Agent geöffnet sind. Sie können Konfigurationsprüfungen entweder von der Console oder der Agent Maintenance Console aus durchführen. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Erfahren Sie mehr über die Durchführung von Konfigurationsprüfungen auf dem Console agent."]
 
 
 
 === Konsolenverwaltung
 
-Sie können Keystone-Rollen Partnerbenutzern zuweisen, um diesen Benutzern die Verwaltung von Keystone-Ressourcen in einer Partnerorganisation zu ermöglichen. link:https://docs.netapp.com/console-setup-admin/console-administration/task-partnerships-assign-users.html["Erfahren Sie mehr über die Zuweisung von Keystone-Rollen an Partnerbenutzer."]
+Sie können Keystone-Rollen Partnerbenutzern zuweisen, um diesen Benutzern die Verwaltung von Keystone-Ressourcen in einer Partnerorganisation zu ermöglichen. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["Erfahren Sie mehr über die Zuweisung von Keystone-Rollen an Partnerbenutzer."]

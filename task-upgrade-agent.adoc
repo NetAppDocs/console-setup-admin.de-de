@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: task-upgrade-agent.html 
-keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade 
-summary: 'Der Konsolenagent wird automatisch aktualisiert, wenn er über eine ausgehende Verbindung verfügt. Wenn Ihr Konsolenagent keine ausgehende Verbindung hat, können Sie ihn manuell aktualisieren (zum Beispiel im privaten Modus).' 
+keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade, vcenter upgrade, OVA upgrade, ISO upgrade, vsphere upgrade 
+summary: Der Konsolenagent wird automatisch aktualisiert, wenn er über eine ausgehende Verbindung verfügt. Wenn Ihr Konsolenagent keine ausgehende Verbindung hat, können Sie ihn manuell aktualisieren. Wenn Ihr Agent in vCenter bereitgestellt wurde, können Sie ihn mit einer ISO aktualisieren. 
 ---
-= Upgrades des Konsolenagenten verwalten
+= Aktualisieren Sie den Konsolenagenten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Der Konsolenagent wird automatisch aktualisiert, wenn er über eine au
 
 
 [role="lead"]
-Der Konsolenagent wird automatisch aktualisiert, wenn er über eine ausgehende Verbindung verfügt. Wenn Ihr Konsolenagent keine ausgehende Verbindung hat, können Sie ihn manuell aktualisieren (zum Beispiel im privaten Modus).
+Der Konsolenagent wird automatisch aktualisiert, sobald eine ausgehende Verbindung besteht. Falls Ihr Konsolenagent keine ausgehende Verbindung hat, können Sie ihn manuell aktualisieren. Wenn Ihr Agent in vCenter mithilfe einer OVA bereitgestellt wurde, können Sie ihn durch Einbinden einer ISO in die VM auf eine neue Version aktualisieren.
 
 
 
@@ -44,4 +44,47 @@ sudo /path/NetApp-Console-Agent-Offline-<version>
 Dabei ist <Version> die Version des Agenten, die Sie heruntergeladen haben.
 
 . Nachdem das Upgrade abgeschlossen ist, können Sie die Version des Agenten überprüfen, indem Sie zu *Administration > Support > Agenten* gehen.
+
+
+
+
+== Aktualisieren Sie einen vCenter-bereitgestellten Console-Agenten mithilfe einer ISO
+
+Wenn Ihr Konsolenagent in vCenter mithilfe einer OVA bereitgestellt wurde, können Sie ihn auf eine neue Version aktualisieren, indem Sie eine ISO an die VM anhängen und das Upgrade von der Wartungskonsole der VM aus durchführen.
+
+Bevor Sie beginnen, erstellen Sie einen Snapshot der VM, falls Sie einen Rollback durchführen müssen.
+
+.Schritte
+. Laden Sie die ISO-Datei des Console-Agenten von der  https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp Support Site"^].
+. Laden Sie die ISO-Datei in einen Datenspeicher hoch, der von vCenter aus zugänglich ist.
+. Melden Sie sich im vSphere-Client bei Ihrem vCenter an und wählen Sie die VM-Instanz aus, die den Console-Agenten hostet.
+. ISO-Datei in die VM einbinden:
++
+.. Klicken Sie mit der rechten Maustaste auf die VM und wählen Sie *Einstellungen bearbeiten*.
+.. Wählen Sie das CD/DVD-Laufwerk und anschließend *Datastore ISO File*.
+.. Navigieren Sie zur ISO-Datei des Console-Agenten und wählen Sie diese aus.
+.. Stellen Sie sicher, dass *Connect* aktiviert ist.
+.. Wählen Sie *OK*.
+
+
+. Wählen Sie bei ausgewählter VM die Option *Web Console starten*.
+. Melden Sie sich an der Wartungskonsole mit dem Benutzernamen  `maint` und dem Wartungspasswort an, das Sie bei der Bereitstellung der OVA angegeben haben.
+. Drücken Sie  `1`, um das Menü *System Configuration* zu öffnen.
+. Drücken Sie die Eingabetaste  `3`, um *Upgrade* auszuwählen, und folgen Sie den Anweisungen auf dem Bildschirm.
++
+Das Upgrade installiert das aktualisierte Betriebssystem, die Docker-Laufzeitumgebung und die Konsolenagentendienste an Ort und Stelle. Wenn der Kernel aktualisiert wird, startet die VM automatisch neu.
+
+. Nach Abschluss des Upgrades überprüfen Sie, ob der Console Agent ordnungsgemäß ausgeführt wird:
++
+.. Im vSphere-Client bestätigen Sie, dass die VM eingeschaltet ist und die Webkonsole zugänglich ist.
+.. Gehen Sie in der NetApp Console zu *Administration > Support > Agents* und überprüfen Sie, ob die Agentenversion der neuen Version entspricht.
+
+
+. ISO-Datei aus der VM aushängen:
++
+.. Klicken Sie im vSphere Client mit der rechten Maustaste auf die VM und wählen Sie *Einstellungen bearbeiten*.
+.. Wählen Sie das CD/DVD-Laufwerk aus und wählen Sie *Client Device* oder trennen Sie die Datastore-ISO.
+.. Wählen Sie *OK*.
+
+
 

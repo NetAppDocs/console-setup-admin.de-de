@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases, console' 
-summary: 'Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetApp Console : IAM, Konsolenagenten, Anmeldeinformationen für Cloud-Anbieter und mehr.' 
+summary: Erfahren Sie, was es Neues bei der NetApp Console-Administration gibt. 
 ---
 = Was ist neu
 :hardbreaks:
@@ -18,6 +18,24 @@ Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetA
 
 
 
+== 13. April 2026
+
+
+
+=== Console Agent 4.6.0
+
+Die Version 4.6.0 unterstützt sowohl den Standardmodus als auch den eingeschränkten Modus.
+
+Diese Version des Console-Agenten enthält Sicherheitsverbesserungen und Fehlerbehebungen sowie die folgende neue Funktion.
+
+.Unterstützung für Konfigurationsprüfungen des benötigten Speicherplatzes
+Sie können mithilfe von Konfigurationsprüfungen sicherstellen, dass der für den Konsolenagenten erforderliche Speicherplatz verfügbar ist. Sie können Konfigurationsprüfungen entweder über die Konsole oder die Wartungskonsole des Agenten durchführen. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Erfahren Sie mehr über die Durchführung von Konfigurationsprüfungen auf dem Konsolenagent."^]
+
+.Aktualisieren Sie einen vCenter-bereitgestellten Console-Agenten mithilfe einer ISO
+Wenn Sie einen Console-Agenten in vCenter mithilfe einer OVA bereitgestellt haben, können Sie ihn jetzt auf eine neue Version aktualisieren, indem Sie eine ISO an die VM anhängen und das Upgrade von der VM-Wartungskonsole ausführen. link:https://docs.netapp.com/us-en/console-setup-admin/task-upgrade-agent.html["Erfahren Sie, wie Sie einen vCenter-bereitgestellten Konsolenagenten aktualisieren"^]
+
+
+
 == 10. März 2026
 
 
@@ -28,14 +46,14 @@ Die Version 4.5.0 unterstützt sowohl den Standardmodus als auch den eingeschrä
 
 Diese Version des Console-Agenten enthält Sicherheitsverbesserungen und Fehlerbehebungen sowie die folgende neue Funktion.
 
-.Unterstützung für Konfigurationsprüfungen für erforderliche Ports
-Sie können mithilfe von Konfigurationsprüfungen überprüfen, ob die erforderlichen Ports für den Console Agent geöffnet sind. Sie können Konfigurationsprüfungen entweder von der Console oder der Agent Maintenance Console aus durchführen. link:https://docs.netapp.com/console-setup-admin/task-troubleshoot-agent.html["Erfahren Sie mehr über die Durchführung von Konfigurationsprüfungen auf dem Console agent."]
+.Unterstützung für Konfigurationsprüfungen der erforderlichen Ports
+Sie können mithilfe von Konfigurationsprüfungen überprüfen, ob die erforderlichen Ports für den Console Agent geöffnet sind. Sie können Konfigurationsprüfungen entweder von der Console oder der Agent Maintenance Console aus durchführen. link:https://docs.netapp.com/us-en/console-setup-admin/task-troubleshoot-agent.html["Erfahren Sie mehr über die Durchführung von Konfigurationsprüfungen auf dem Console agent."]
 
 
 
 === Konsolenverwaltung
 
-Sie können Keystone-Rollen Partnerbenutzern zuweisen, um diesen Benutzern die Verwaltung von Keystone-Ressourcen in einer Partnerorganisation zu ermöglichen. link:https://docs.netapp.com/console-setup-admin/console-administration/task-partnerships-assign-users.html["Erfahren Sie mehr über die Zuweisung von Keystone-Rollen an Partnerbenutzer."]
+Sie können Keystone-Rollen Partnerbenutzern zuweisen, um diesen Benutzern die Verwaltung von Keystone-Ressourcen in einer Partnerorganisation zu ermöglichen. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["Erfahren Sie mehr über die Zuweisung von Keystone-Rollen an Partnerbenutzer."]
 
 
 

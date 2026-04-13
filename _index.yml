@@ -44,8 +44,8 @@ indexpage:
       url: task-iam-manage-members-permissions.html
   - title: Deploy Console-Agenten
     links:
-    - title: Erfahren Sie mehr über Konsolenagenten
-      url: concept-agents.html
+    - title: Wählen Sie eine Bereitstellungsmethode für den Console-Agenten
+      url: "/concept-agent-install-options.html"
     - title: Einen Agenten lokal bereitstellen
       url: "/task-install-agent-on-prem.html"
     - title: Einen Agenten in AWS bereitstellen
@@ -55,7 +55,7 @@ indexpage:
     - title: Einen Agenten in Google Cloud bereitstellen
       url: "/task-install-agent-google-console-gcloud.html"
     - title: Konsolenagenten verwalten
-      url: task-maintain-agents.html
+      url: "/task-maintain-agents.html"
   - title: Sicherheit und Compliance
     links:
     - title: Verbinden Sie sich mit Ihrem Identitätsanbieter.

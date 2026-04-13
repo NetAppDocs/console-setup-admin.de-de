@@ -321,11 +321,9 @@
   <block id="a9f9e821b8a8692181584ef4520bb0f5" category="list-text">Ein von einer Zertifizierungsstelle signiertes Zertifikat, wenn der Proxyserver HTTPS verwendet oder wenn es sich bei dem Proxy um einen abfangenden Proxy handelt.</block>
   <block id="f055093e2366ca02aea03df7cfb1248e" category="inline-link-macro">Agenten-Wartungskonsole</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Informationen zu diesem Vorgang</block>
-  <block id="659f0b9a6a18db69662f4738cacedeb4" category="paragraph">Das auf der NetApp Support-Site verfügbare Installationsprogramm ist möglicherweise eine frühere Version.  Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.</block>
   <block id="16c184ab0a5376cef0ecef7f0da93ac2" category="list-text">Wenn die Systemvariablen _http_proxy_ oder _https_proxy_ auf dem Host festgelegt sind, entfernen Sie sie:</block>
   <block id="1332290daae1a5867df8e665af00f41c" category="paragraph">Wenn Sie diese Systemvariablen nicht entfernen, schlägt die Installation fehl.</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">NetApp Support Site</block>
-  <block id="1f780b0e97715487c194e6973733dc5f" category="list-text">Laden Sie die Console-Agent-Software von der<block ref="99637e01fa8caa34a544049093cac68c" category="inline-link-rx"></block> , und kopieren Sie es dann auf den Linux-Host.</block>
   <block id="056d4c6cb9ede5ed0adcc98e18bfe8b9" category="paragraph">Sie sollten das „Online“-Agent-Installationsprogramm herunterladen, das für die Verwendung in Ihrem Netzwerk oder in der Cloud vorgesehen ist.</block>
   <block id="e9b5bbe1e4c19139761534abb688155a" category="list-text">Weisen Sie Berechtigungen zum Ausführen des Skripts zu.</block>
   <block id="096edbdd03f35ea016cfaab3b88a91ae" category="paragraph">Dabei ist &lt;Version&gt; die Version des Konsolenagenten, die Sie heruntergeladen haben.</block>
@@ -342,7 +340,6 @@
   <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">Beachten Sie Folgendes:</block>
   <block id="9c959780e1c60d211b8e7acdef1e4650" category="list-text">Der Benutzer kann ein lokaler Benutzer oder ein Domänenbenutzer sein.</block>
   <block id="f4eaf8d1522d08453ae8e8cb159f7355" category="list-text">Für einen Domänenbenutzer müssen Sie den ASCII-Code für ein \ verwenden, wie oben gezeigt.</block>
-  <block id="63e61b342d17ed1b9128b82afdcaa55e" category="list-text">Der Konsolenagent unterstützt keine Benutzernamen oder Passwörter, die das @-Zeichen enthalten.</block>
   <block id="e115a77efdd4b6a7256261431461cb96" category="list-text">Wenn das Kennwort eines der folgenden Sonderzeichen enthält, müssen Sie dieses Sonderzeichen durch Voranstellen eines Backslashs maskieren: &amp; oder !</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">Beispiel:</block>
   <block id="9a8e93f292200e4d86cfd716262b53cc" category="paragraph">\http://bxpproxyuser:netapp1\!@Adresse:3128</block>
@@ -600,7 +597,6 @@
   <block id="796a270bf063faafbf314a64bc6d45dc" category="paragraph">Sie müssen den gesamten Vorgang erneut starten, wenn Sie versuchen möchten, den Agenten erneut bereitzustellen.</block>
   <block id="1f40a959293314118eb6cd9e626b48d6" category="paragraph">Zugriff auf den Bericht und die Protokolle vom Konsolen-Agent-Host</block>
   <block id="3dcf5c663cbfb598f8a710902a7eb120" category="paragraph">Die Wartung des Betriebssystems auf dem Konsolenagent-Host liegt in Ihrer (Kunden-)Verantwortung.  Beispielsweise sollten Sie (der Kunde) Sicherheitsupdates auf das Betriebssystem auf dem Konsolenagent-Host anwenden, indem Sie die Standardverfahren Ihres Unternehmens zur Betriebssystemverteilung befolgen.</block>
-  <block id="32971ba633e5314d995d64a9dc5ac47e" category="paragraph">Beachten Sie, dass Sie (der Kunde) beim Anwenden kleinerer Sicherheitsupdates keine Dienste auf dem Console Gent-Host stoppen müssen.</block>
   <block id="1727dc0bbb7fbac9af669b5ee698c1ac" category="paragraph">Wenn Sie (der Kunde) die Konsolen-Agent-VM stoppen und dann starten müssen, sollten Sie dies über die Konsole Ihres Cloud-Anbieters oder mithilfe der Standardverfahren für die lokale Verwaltung tun.</block>
   <block id="0beb94109608ff82d313b33947162f96" category="doc">Freigabe des Privatmodus (3.9.44)</block>
   <block id="5d515ef1c3774ed67ad6115621a1ca59" category="paragraph">Eine neue Version des privaten Modus steht jetzt zum Download von der NetApp Support-Site bereit.</block>
@@ -1145,54 +1141,9 @@
   <block id="19cbafc0246850c97323cac4fb786794" category="list-text">NetApp Disaster Recovery</block>
   <block id="a94a2dfcff08cd86c973716edaf32722" category="list-text">NetApp Cloud Tiering</block>
   <block id="6f267103f7f652e22e0ead9f66014cd4" category="list-text">NetApp Volume Caching</block>
-  <block id="9e70ee0a0c0f8a306b9fcce2746cc5c8" category="section-title">Konsolenagenten müssen jederzeit betriebsbereit sein</block>
-  <block id="d8df9e40feabe0bd65e73cc9203b2219" category="paragraph">Konsolenagenten sind ein grundlegender Bestandteil der NetApp Console.  Es liegt in Ihrer Verantwortung (des Kunden), sicherzustellen, dass die relevanten Agenten jederzeit aktiv, betriebsbereit und erreichbar sind.  Die Konsole kann kurze Agentenausfälle bewältigen, Infrastrukturfehler müssen Sie jedoch schnell beheben.</block>
-  <block id="2834a9b643366c558b54d8d3426db386" category="paragraph">Diese Dokumentation unterliegt der EULA.  Der Betrieb des Produkts außerhalb der Dokumentation kann seine Funktionalität und Ihre EULA-Rechte beeinträchtigen.</block>
-  <block id="ff0e00d64f60db5d99e55c6d706306cc" category="section-title">Unterstützte Standorte</block>
-  <block id="2259d207d9b4ddbc18f89752f01f5e84" category="paragraph">Sie können Agenten an den folgenden Orten installieren:</block>
   <block id="6beccc67ff905f7da0b29dece26b0485" category="list-text">Amazon Web Services</block>
   <block id="1668ca1bd914c1d847f23b491319ac91" category="list-text">Microsoft Azure</block>
-  <block id="368237704bc4eedc09cc71283d355545" category="paragraph">Stellen Sie einen Konsolenagenten in Azure in derselben Region bereit wie die von ihm verwalteten Cloud Volumes ONTAP -Systeme.  Alternativ können Sie es in der<block ref="71e0e9a7366955554f0600c5ea8cfc7f" category="inline-link-rx"></block> .  Dadurch wird sichergestellt, dass zwischen Cloud Volumes ONTAP und den zugehörigen Speicherkonten eine Azure Private Link-Verbindung verwendet wird.<block ref="5c21278428c52425407c3d731c18f2c0" category="inline-link-rx"></block></block>
-  <block id="d13cabcf02c7a4038fae930fb7b7ff0f" category="paragraph">Um die Konsole und Datendienste mit Google Cloud zu verwenden, stellen Sie Ihren Agenten in Google Cloud bereit.</block>
-  <block id="695e0a47c56539eb9bcf6290d1c797d8" category="list-text">Bei Ihnen vor Ort</block>
-  <block id="6c42d9d3f2de2ec585181e975309fcf0" category="section-title">Kommunikation mit Cloud-Anbietern</block>
-  <block id="728a253b9c538005983ee633823e71a8" category="paragraph">Der Agent verwendet TLS 1.3 für die gesamte Kommunikation mit AWS, Azure und Google Cloud.</block>
   <block id="09e422c729719f602773531e14c7fdcb" category="inline-link-macro">Erfahren Sie mehr über die Bereitstellungsmodi der NetApp Console</block>
-  <block id="277baff1e6ebc32f068b4cb7de953e5e" category="section-title">So installieren Sie einen Konsolenagenten</block>
-  <block id="d0fb4185dcdae7937ec99f5b30ad1a65" category="list-text"><block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block></block>
-  <block id="22f7b8c9e3cec45bb0909cca22e4e862" category="inline-link-macro">Erste Schritte mit der NetApp Console im Standardmodus</block>
-  <block id="1b04b04eae157b7a2e94f5fe3a41ed68" category="list-text"><block ref="1b04b04eae157b7a2e94f5fe3a41ed68" category="inline-link-macro-rx"></block></block>
-  <block id="bb052ff727ad3405f9e377f005178fd8" category="inline-link-macro">Erste Schritte mit der NetApp Console im eingeschränkten Modus</block>
-  <block id="07a84f2a895ff5384ba250bbd0694216" category="list-text"><block ref="07a84f2a895ff5384ba250bbd0694216" category="inline-link-macro-rx"></block></block>
-  <block id="cc8f36711f6212dccee4062562263a83" category="paragraph">Wenn Sie die Konsole im Standardmodus verwenden, hängt die Art und Weise, wie Sie Berechtigungen erteilen, davon ab, wie Sie den Konsolenagenten erstellen möchten.</block>
-  <block id="235df19fd66aa61dd8174f1a6480f822" category="paragraph">Informationen zum Einrichten von Berechtigungen finden Sie hier:</block>
-  <block id="961f8ee244937e243425632b39f7defe" category="inline-link-macro">Agent-Installationsoptionen in AWS</block>
-  <block id="4df9252d002e594dae3d45c8f96239d6" category="list-text"><block ref="4df9252d002e594dae3d45c8f96239d6" category="inline-link-macro-rx"></block></block>
-  <block id="f90eca9a5d0606ab577e2cdae0c434c8" category="inline-link-macro">Agent-Installationsoptionen in Azure</block>
-  <block id="394e44e895a430b95c5940d26e1a30ac" category="list-text"><block ref="394e44e895a430b95c5940d26e1a30ac" category="inline-link-macro-rx"></block></block>
-  <block id="2c816b9bf7b9b3b6fa614eed25c47bad" category="inline-link-macro">Agent-Installationsoptionen in Google Cloud</block>
-  <block id="c25970a47753b09b5f368b1a825af136" category="list-text"><block ref="c25970a47753b09b5f368b1a825af136" category="inline-link-macro-rx"></block></block>
-  <block id="57d93d5e81bafd40970707a32bf098e7" category="inline-link-macro">Einrichten von Cloudberechtigungen für lokale Bereitstellungen</block>
-  <block id="2dabf3ef50b23a394a532c8641ffbc97" category="list-text"><block ref="2dabf3ef50b23a394a532c8641ffbc97" category="inline-link-macro-rx"></block></block>
-  <block id="4b793f4b507e17e1b9daee24a7d317fe" category="paragraph">Informationen zu den genauen Berechtigungen, die der Konsolenagent für den täglichen Betrieb benötigt, finden Sie auf den folgenden Seiten:</block>
-  <block id="6f78686bae0992fab2bb708dad824db4" category="inline-link-macro">Erfahren Sie, wie der Konsolenagent AWS-Berechtigungen verwendet</block>
-  <block id="6800cfbf3754d2e1b8c68543cde59cb1" category="list-text"><block ref="6800cfbf3754d2e1b8c68543cde59cb1" category="inline-link-macro-rx"></block></block>
-  <block id="23e6052aa724fd3a5cdf2520aff0fe38" category="inline-link-macro">Erfahren Sie, wie der Konsolen-Agent Azure-Berechtigungen verwendet.</block>
-  <block id="238d40f0825c1d92b8b8f26df667b043" category="list-text"><block ref="238d40f0825c1d92b8b8f26df667b043" category="inline-link-macro-rx"></block></block>
-  <block id="645886e8fa5f3b82c0104c5e5d960dca" category="inline-link-macro">Erfahren Sie, wie der Konsolenagent Google Cloud-Berechtigungen verwendet</block>
-  <block id="19987f48c40661864172d7f101856b5c" category="list-text"><block ref="19987f48c40661864172d7f101856b5c" category="inline-link-macro-rx"></block></block>
-  <block id="108ad88d40691c0e1197ab3eba5b6fd5" category="paragraph">Es liegt in Ihrer Verantwortung, die Richtlinien des Konsolenagenten zu aktualisieren, wenn in nachfolgenden Versionen neue Berechtigungen hinzugefügt werden.  In den Versionshinweisen sind neue Berechtigungen aufgeführt.</block>
-  <block id="6b5f02c0e240003ab735d340f52a7333" category="section-title">Agent-Upgrades</block>
-  <block id="7c1aeb8999deeb4f5ccaa49b7d44e424" category="paragraph">NetApp aktualisiert die Agentensoftware monatlich, um Funktionen hinzuzufügen und die Stabilität zu verbessern.  Einige Konsolenfunktionen, wie Cloud Volumes ONTAP und die lokale ONTAP Clusterverwaltung, basieren auf der Version und den Einstellungen des Konsolenagenten.</block>
-  <block id="28d40d49edc5d8557dfa8624f4921f55" category="section-title">Betriebssystem- und VM-Wartung</block>
-  <block id="09ecb112c1af6628255a4b08c6a7cbed" category="inline-xref">Der Konsolenagent muss jederzeit betriebsbereit sein</block>
-  <block id="2686a2ef3c47d0e0eafe183d768a5487" category="paragraph"><block ref="f653f7d16df54a3c9e88f23235c315ba" category="inline-xref-macro-rx"></block> .</block>
-  <block id="7fcdcdc0f0f8f0d864eab57a6734f577" category="section-title">Mehrere Systeme und Agenten</block>
-  <block id="87e19ab0e91dd93d18077c642263f2d7" category="paragraph">Ein Agent kann mehrere Systeme verwalten und Datendienste in der Konsole unterstützen.  Sie können einen einzelnen Agenten verwenden, um mehrere Systeme basierend auf der Bereitstellungsgröße und den von Ihnen verwendeten Datendiensten zu verwalten.</block>
-  <block id="d8466ae7920d413f334ecbe2662940d7" category="paragraph">Arbeiten Sie bei groß angelegten Bereitstellungen mit Ihrem NetApp -Vertreter zusammen, um die Größe Ihrer Umgebung festzulegen.  Wenden Sie sich bei Problemen an den NetApp -Support.</block>
-  <block id="d16d45525551e8eabba058232a3654cf" category="paragraph">Hier sind einige Beispiele für Agentenbereitstellungen:</block>
-  <block id="1691c5a3ce16b13a540bde5d166f533b" category="list-text">Sie verfügen über eine Multicloud-Umgebung (z. B. AWS und Azure) und möchten lieber einen Agenten in AWS und einen anderen in Azure haben.  Jedes verwaltet die in diesen Umgebungen ausgeführten Cloud Volumes ONTAP -Systeme.</block>
-  <block id="3a3798a4b58d05dbd95df41bdc6f1d45" category="list-text">Ein Dienstanbieter könnte eine Konsolenorganisation nutzen, um seinen Kunden Dienste bereitzustellen, während er eine andere Organisation für die Notfallwiederherstellung einer seiner Geschäftseinheiten nutzt.  Jede Organisation benötigt ihren eigenen Agenten.</block>
   <block id="84d8c031ecac07457c33d38260f22d91" category="summary">Die Identitätsföderation ermöglicht Single Sign-On mit der NetApp Console , sodass sich Benutzer mit den Anmeldeinformationen Ihrer Unternehmensidentität anmelden können.  Sehen Sie sich zunächst den Einrichtungsprozess an.</block>
   <block id="85e8937e28c11ae3f77c65c98e77836f" category="doc">Aktivieren Sie Single Sign-On durch die Verwendung der Identitätsföderation mit der NetApp Console</block>
   <block id="3799cba2b024e60d963d2e86eaf51655" category="paragraph">Single-Sign-On (Föderation) vereinfacht den Anmeldevorgang und erhöht die Sicherheit, indem Benutzer sich mit ihren Unternehmensanmeldeinformationen bei der NetApp Console anmelden können.  Sie können Single Sign-On (SSO) bei Ihrem Identitätsanbieter (IdP) oder über die NetApp Support-Site aktivieren.</block>
@@ -1232,7 +1183,6 @@
   <block id="6350c75317bf3a6a382ca51f7f21d612" category="paragraph-title"><block ref="3fb1f11a25837416d87a2007da1d76e6" category="inline-image-macro-rx" type="image"></block>Aktivieren Sie Ihre Verbindung in der Konsole</block>
   <block id="de1943b4a42a516fe3f0157be7b5952f" category="paragraph">Nachdem Sie die Verbindung aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.</block>
   <block id="728d17e7146dcd6218a24c46a1de8943" category="doc">Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der NetApp Console</block>
-  <block id="e5c1519cd8d7472771e0a519c54ccae1" category="paragraph">Eine _Organisation_ ist die oberste Ebene des Console IAM-Systems und repräsentiert normalerweise Ihr Unternehmen.  Ihre Organisation besteht aus Ordnern, Projekten, Mitgliedern, Rollen und Ressourcen.  Agenten sind bestimmten Projekten in der Organisation zugeordnet.</block>
   <block id="6c8d76b40d187de98318661a9cab7239" category="paragraph">Ein _Organisationsadministrator_ kann eine Ressource mit einem Ordner verknüpfen, sodass ein _Ordner- oder Projektadministrator_ sie mit den entsprechenden Projekten im Ordner verknüpfen kann.</block>
   <block id="13a6a98927a83ffb05bccef1ebf3e2a4" category="paragraph">Durch die Verknüpfung einer Ressource mit einem Ordner wird diese nicht für alle Projekte zugänglich; nur der Ordner- oder Projektadministrator kann sie sehen.  Der _Ordner- oder Projektadministrator_ entscheidet, welche Projekte darauf zugreifen können und ordnet die Ressource den entsprechenden Projekten zu.</block>
   <block id="2c2e7be4268cd14a5e106bbdd7de7669" category="section-title">Zugriffsrollen</block>
@@ -1424,7 +1374,6 @@
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Hinweisdateien enthalten Informationen zu Urheberrechten und Lizenzen Dritter, die in der NetApp -Software verwendet werden.</block>
   <block id="50dbf63cd0ab8144a287e5cd6a0f1de2" category="inline-link-macro">Hinweis zur NetApp Console</block>
   <block id="2fdb3c88062031f1ec65eef60690cee3" category="paragraph"><block ref="2fdb3c88062031f1ec65eef60690cee3" category="inline-link-macro-rx"></block></block>
-  <block id="40ee256581d30fba4f74b0c1e02c7709" category="doc">Standardkonfiguration für den Konsolenagenten</block>
   <block id="87047facc49847cec237f6d055d56b31" category="section-title">Standardkonfiguration mit Internetzugang</block>
   <block id="ee67bef980f9156a14c8bfbb2de4f437" category="paragraph">Die folgenden Konfigurationsdetails gelten, wenn Sie einen Konsolenagenten von der NetApp Console oder vom Marktplatz Ihres Cloud-Anbieters bereitgestellt haben oder wenn Sie einen Konsolenagenten manuell auf einem lokalen Linux-Host mit Internetzugang installiert haben.</block>
   <block id="716a3a2cd4a75b8f8b3cee509c10b300" category="paragraph">Wenn Sie einen Konsolenagenten über die Konsole oder den Marktplatz des Cloud-Anbieters bereitgestellt haben, beachten Sie Folgendes:</block>
@@ -1445,9 +1394,6 @@
   <block id="e414095fd4f025b97d685f64e5c1c7af" category="paragraph">Die Protokolle in diesen Ordnern enthalten Details zum Konsolenagenten.</block>
   <block id="d1a35865336c23dad37aac219ce9f1eb" category="paragraph">Die Protokolle in diesem Ordner enthalten Details zu Cloud-Diensten und dem Konsolendienst, der auf dem Konsolenagenten ausgeführt wird.</block>
   <block id="aa72bf3f5aa3c9bc5daf446b3f9fdc56" category="section-title">Konsolenagentdienst</block>
-  <block id="f7a5a4e55ec5894123bb84b3d77ad464" category="list-text">Der Konsolenagentdienst heißt occm.</block>
-  <block id="99479a37072ffa90a7b1b8b6c6eb156b" category="list-text">Der OCCM-Dienst ist vom MySQL-Dienst abhängig.</block>
-  <block id="7681f9932e27b70d263e349bf8e45ccb" category="paragraph">Wenn der MySQL-Dienst ausfällt, fällt auch der OCCM-Dienst aus.</block>
   <block id="a1aab9ce730752837d9c9ee7f2cf70b6" category="paragraph">Der Agent verwendet die folgenden Ports auf dem Linux-Host:</block>
   <block id="f99405255f2e0275d201caf689380ada" category="list-text">80 für HTTP-Zugriff</block>
   <block id="95376c13fd8813cbd5336d84e0207ed1" category="list-text">443 für HTTPS-Zugriff</block>
@@ -1460,7 +1406,6 @@
   <block id="846c386cf81542225b98b6f2bb22ac66" category="summary">Sie können die Wartungskonsole des Konsolenagenten verwenden, um einen Konsolenagenten für die Verwendung eines transparenten Proxyservers zu konfigurieren.</block>
   <block id="64a20b3b93e3313beb44e4cdfaa3fc62" category="section-title">Zugriff auf die Agenten-Wartungskonsole</block>
   <block id="54b21d666b59ebab4d006b20d3923a8a" category="paragraph">Sie können vom Konsolenagent-Host aus auf die Wartungskonsole zugreifen.  Navigieren Sie zum folgenden Verzeichnis:</block>
-  <block id="38c16b07265a0ea453b6c31b87484378" category="section-title">Transparente Proxy-Befehle</block>
   <block id="d55c6a8d11c5ba3e1a749110d08d13a0" category="paragraph">Um einen transparenten Proxyserver hinzuzufügen, verwenden Sie den folgenden Befehl, wobei<block ref="b2ade5ab23fdcff48ad66c933b8c0a7a" prefix=" " category="inline-code"></block> ist der Pfad zur Zertifikatsdatei für den Proxyserver.  Die Zertifikatsdatei muss im PEM-Format vorliegen:</block>
   <block id="2dfbed833348a18ef6acd6126802e582" category="paragraph">Stellen Sie sicher, dass sich die Zertifikatsdatei im selben Verzeichnis wie der Befehl befindet, oder geben Sie den vollständigen Pfad zur Zertifikatsdatei an.</block>
   <block id="7e3520831eb4f49402b5e66b7de0cf9b" category="paragraph">Um das Zertifikat für einen transparenten Proxyserver zu aktualisieren, verwenden Sie den folgenden Befehl, wobei<block ref="b2ade5ab23fdcff48ad66c933b8c0a7a" prefix=" " category="inline-code"></block> ist der Pfad zur neuen Zertifikatsdatei für den Proxyserver.  Die Zertifikatsdatei muss im PEM-Format vorliegen:</block>
@@ -1478,9 +1423,7 @@
   <block id="0f50cd1079cb24de2b4571c09546a2e1" category="list-text">Richten Sie einen RHEL 8- oder 9-Host ein.</block>
   <block id="8c9215e1b963f63a463d468347c9cc12" category="list-text">Installieren Sie einen _neuen_ Agenten.</block>
   <block id="b8bb8aa40b62692dd726a6effbbb7c2a" category="list-text">Konfigurieren Sie den Agenten so, dass er die Systeme erkennt, die der vorherige Agent verwaltet hat.</block>
-  <block id="a64fe2903c7070d5b81ce6dce3b03548" category="inline-link">Manuelle Installation des Konsolenagenten in AWS</block>
   <block id="49b6ed50435718c0a1e9c1c394702ab8" category="inline-link">Manuelles Installieren des Konsolen-Agents in Azure</block>
-  <block id="eccadaf4d74bf176f32c91d78a6673c8" category="inline-link">Installieren Sie den Konsolenagenten manuell in Google Cloud</block>
   <block id="6df5369b59a40f64ce1869a0d4d405ea" category="inline-link">Vorbereiten der Bereitstellung im eingeschränkten Modus</block>
   <block id="cdb83aacf48e960662fcf2d6745e5b60" category="paragraph">Auf den folgenden Seiten erfahren Sie, wie Sie Ihre Systeme nach der Bereitstellung eines neuen Konsolenagenten neu erkennen.</block>
   <block id="6c0fb6078ec778ca2319e375a19e994b" category="inline-link">Hinzufügen vorhandener Cloud Volumes ONTAP -Systeme</block>
@@ -1494,7 +1437,6 @@
   <block id="8f4f872a5a91b4fda0f95e21e0b83fb1" category="list-text"><block ref="8f4f872a5a91b4fda0f95e21e0b83fb1" category="inline-link-rx"></block></block>
   <block id="d85b01f001ee16ebd8eb1917c739d824" category="inline-link">Entdecken Sie StorageGRID -Systeme</block>
   <block id="6dd67f54d38094b3a7d65e4eeed06755" category="list-text"><block ref="6dd67f54d38094b3a7d65e4eeed06755" category="inline-link-rx"></block></block>
-  <block id="bd35c1f622cddab38a157ba7ccffd7a0" category="doc">Zugriffsrolle „Operational Support Analyst“ für die NetApp Console</block>
   <block id="a9c987c5ba386ab7cea1039db6dab527" category="section-title">Analyst für operative Unterstützung</block>
   <block id="eaeb30f9f18e0c50b178676f3eaef45f" category="cell">Aufgabe</block>
   <block id="6b67f7084bd7c23cc1a6915c07f7db8a" category="cell">Kann durchführen</block>
@@ -2281,7 +2223,6 @@
   <block id="6b45b097205607d8631a7d487a76da98" category="section-title">Dienstkontoberechtigungen</block>
   <block id="823b2e7894c2b52c1e9adc9ea10b9be5" category="section-title">So werden Google Cloud-Berechtigungen verwendet</block>
   <block id="06df33001c1d7187fdd81ea1f5b277aa" category="cell">Aktionen</block>
-  <block id="f66d598893a55fa43b7676b10c66160f" category="cell">Zum Erstellen und Verwalten von Festplatten für Cloud Volumes ONTAP.</block>
   <block id="e9047288d907d41dac5645fd341a761c" category="cell">So erstellen Sie Firewall-Regeln für Cloud Volumes ONTAP.</block>
   <block id="faa1fe708bc3d152e176473382740f3a" category="cell">Um den Status von Vorgängen abzurufen.</block>
   <block id="5744b1408aa12d37a882e036fd0b5b0c" category="cell">Um Bilder für VM-Instanzen zu erhalten.</block>
@@ -2468,7 +2409,6 @@
   <block id="b328da3e839d02fc907b65467b5e31ea" category="paragraph">Wenn Sie strenge Regeln für den ausgehenden Datenverkehr benötigen, können Sie die folgenden Informationen verwenden, um nur die Ports zu öffnen, die für die ausgehende Kommunikation durch den Agenten erforderlich sind.</block>
   <block id="97cd847069f6f4b5f1e2bd1c8341ab6c" category="cell">API-Aufrufe an Azure, an ONTAP, an NetApp Data Classification und Senden von AutoSupport -Nachrichten an NetApp</block>
   <block id="74794c3be947278b7172132c8ec473f8" category="summary">Die Google Cloud-Firewallregeln für den Agenten erfordern sowohl eingehende als auch ausgehende Regeln.  Die NetApp Console erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten aus der Konsole erstellen. Für andere Installationsoptionen müssen Sie diese Sicherheitsgruppe manuell einrichten.</block>
-  <block id="fe5b5e7e210deac76b10324014f58cb1" category="doc">Agent-Firewallregeln in Google Cloud</block>
   <block id="2f0c197eb73a7c6da10b03384f241025" category="cell">Bietet HTTPS-Zugriff von Client-Webbrowsern auf die lokale Benutzeroberfläche</block>
   <block id="999a4d43e45cddcf211e4621da569ade" category="paragraph">Die vordefinierten Firewall-Regeln des Agenten öffnen den gesamten ausgehenden Datenverkehr.  Befolgen Sie die grundlegenden Ausgangsregeln, sofern dies akzeptabel ist, oder verwenden Sie erweiterte Ausgangsregeln für strengere Anforderungen.</block>
   <block id="60e74e3403a89043a113d8d28aa695a9" category="paragraph">Die vordefinierten Firewall-Regeln für den Agenten umfassen die folgenden ausgehenden Regeln.</block>
@@ -2478,7 +2418,6 @@
   <block id="0aa9b214cf7d679d06bdec6fba9767b7" category="doc">Ports für den lokalen Konsolenagenten</block>
   <block id="186772c5d8658de6d80f0ce647f8b68c" category="paragraph">Diese eingehenden Regeln gelten für alle Bereitstellungsmodi der NetApp Console .</block>
   <block id="2f5e06646c7cdb08b5e306acc621eee9" category="summary">Nachdem Sie die NetApp Console im eingeschränkten Modus eingerichtet und ausgeführt haben, können Sie mit der Verwendung der im eingeschränkten Modus unterstützten Dienste beginnen.</block>
-  <block id="d279ef9d3fa427882e45e653bc7b1949" category="doc">Was Sie als Nächstes tun können (eingeschränkter Modus)</block>
   <block id="9ed3d93e6149b9255047c4f345ace3ed" category="paragraph">Hilfe finden Sie in der Dokumentation zu diesen Diensten:</block>
   <block id="d75d347ae1d51e933d39fea688b0abf1" category="inline-link">Azure NetApp Files Dokumentation</block>
   <block id="babc7ae953e58c8202e366520ae9baf4" category="list-text"><block ref="babc7ae953e58c8202e366520ae9baf4" category="inline-link-rx"></block></block>
@@ -2493,7 +2432,6 @@
   <block id="2a9ab4f690bade887dade42f4a0f412b" category="inline-link-macro">Bereitstellungsmodi der NetApp Console</block>
   <block id="d207a80d28ecc0fdd948737abee4ead7" category="paragraph"><block ref="d207a80d28ecc0fdd948737abee4ead7" category="inline-link-macro-rx"></block></block>
   <block id="b0fff5137090a82065e80b458cc6b247" category="summary">Nachdem Sie sich angemeldet und die NetApp Console im Standardmodus eingerichtet haben, können Benutzer Speichersysteme erstellen und erkennen sowie NetApp -Datendienste verwenden.</block>
-  <block id="ca83ece344c546b0ad90a9cad77da291" category="doc">Was Sie als Nächstes tun können (Standardmodus)</block>
   <block id="1631307de579ca654518e4c823f3a805" category="paragraph">Nachdem Sie sich angemeldet und die NetApp Console im Standardmodus eingerichtet haben, können Benutzer Speichersysteme erstellen und erkennen sowie NetApp -Datendienste verwenden.</block>
   <block id="d5ac47786c5ecc4bccfda87432027f10" category="admonition">Wenn Sie einen Konsolenagenten in AWS, Microsoft Azure oder Google Cloud installiert haben, erkennt die Konsole automatisch Informationen zu den Amazon S3-Buckets, Azure Blob Storage oder Google Cloud Storage-Buckets am Standort, an dem der Agent installiert ist.  Diese Systeme werden automatisch zur Seite *Systeme* hinzugefügt.</block>
   <block id="c1c3022dcc260fbaf1dede24f4963496" category="inline-link">Homepage für die NetApp Console Dokumentation</block>
@@ -2581,7 +2519,6 @@
   <block id="1fa2cd673301895c14fbffad8568f063" category="list-text">Sie möchten das AWS Marketplace-Abonnement ändern, das für die AWS-Anmeldeinformationen konfiguriert ist.</block>
   <block id="891c56b3793d8bb2d83dc9db21c81e12" category="paragraph">Durch das Ersetzen des aktuellen Marktplatzabonnements durch ein neues Abonnement wird das Marktplatzabonnement für alle vorhandenen Cloud Volumes ONTAP Systeme und alle neuen Systeme geändert.</block>
   <block id="17e922bee62498071d0b520a708ce7bc" category="inline-link-macro">Erfahren Sie, wie Sie einen Konsolenagenten erstellen</block>
-  <block id="261ff42fc8f9c0d862eeaad9e733fb30" category="paragraph">Sie müssen einen Konsolenagenten erstellen, bevor Sie ein Abonnement konfigurieren können. <block ref="5464fa3cf6630a16780c24b91f4e9a76" category="inline-link-macro-rx"></block> .</block>
   <block id="de889eba177db53c06a02269626fde94" category="inline-link-macro">Erfahren Sie mehr über die Bereitstellungsmodi der Konsole</block>
   <block id="ad4b043010cfe36d97b2129f9c6bdfe5" category="list-text"><block ref="ad4b043010cfe36d97b2129f9c6bdfe5" category="inline-link-macro-rx"></block></block>
   <block id="5cfcb005e90f812bdbec7628cc5e3a28" category="inline-link-macro">Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der Konsole</block>
@@ -2665,7 +2602,6 @@
   <block id="dd713f3b590ab5bec2d22f7058e33ab6" category="section-title">Fügen Sie die Anmeldeinformationen zur Konsole hinzu</block>
   <block id="55a1f4f70021eba45bccf8433f293097" category="paragraph">Nachdem Sie ein Azure-Konto mit den erforderlichen Berechtigungen bereitgestellt haben, können Sie die Anmeldeinformationen für dieses Konto zur Konsole hinzufügen.  Wenn Sie diesen Schritt abschließen, können Sie Cloud Volumes ONTAP mit anderen Azure-Anmeldeinformationen starten.</block>
   <block id="2b2280c2ccd1fc263667012c605a13ff" category="paragraph">Wenn Sie diese Anmeldeinformationen gerade bei Ihrem Cloud-Anbieter erstellt haben, kann es einige Minuten dauern, bis sie zur Verwendung verfügbar sind.  Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen zur Konsole hinzufügen.</block>
-  <block id="87cbeaae871cc7df1e298bd3bfa87377" category="paragraph">Sie müssen einen Konsolenagenten erstellen, bevor Sie die Konsoleneinstellungen ändern können. <block ref="5464fa3cf6630a16780c24b91f4e9a76" category="inline-link-macro-rx"></block> .</block>
   <block id="973a970f1b0256e7e155b0658f96de09" category="inline-link">beim Hinzufügen eines Systems zur Konsole</block>
   <block id="dc626c8f4884c60a8a8e3e1710f896e4" category="paragraph">Sie können auf der Seite „Details und Anmeldeinformationen“ zu einem anderen Satz von Anmeldeinformationen wechseln.<block ref="e81400213d37156540a01916c36ea9d7" category="inline-link-rx"></block></block>
   <block id="66f9b6c415f38768cbdd702260d9c7a4" category="inline-image-macro">Ein Screenshot, der die Auswahl zwischen Anmeldeinformationen zeigt, nachdem Sie auf der Seite „Details und Anmeldeinformationen“ die Option „Anmeldeinformationen bearbeiten“ ausgewählt haben.</block>
@@ -2754,7 +2690,6 @@
   <block id="d556914c5d0c00a98f53b0e0d8c0dc9c" category="list-text">Starten Sie den Agenten neu</block>
   <block id="eaa97a74be674590f501aafbddcdc12b" category="list-text">Aktualisieren statischer Routen</block>
   <block id="4f366b69ce0f39237eb284d461ee957a" category="list-text">Suchdomänen aktualisieren</block>
-  <block id="3cf35d451dff309d3f8c5e4f233f985b" category="paragraph">Das Upgrade des Agenten über die Konsole wird noch nicht unterstützt.  Darüber hinaus können Sie nur Informationen zur IP-Adresse, zum DNS und zu Gateways anzeigen.</block>
   <block id="3daaf6c61d0dfc25a3c29717c6dfc9ef" category="section-title">Zugriff auf die VM-Wartungskonsole</block>
   <block id="a148766c33a8f0d6579283c746921074" category="paragraph">Sie können vom VSphere-Client aus auf die Wartungskonsole zugreifen.</block>
   <block id="b215a73577f4089bdd3d6f9207da54c6" category="list-text">Öffnen Sie den VSphere-Client und melden Sie sich bei Ihrem VCenter an.</block>
@@ -3364,7 +3299,6 @@
   <block id="cf1ee1ecf7dc1f5756e2468d5b602933" category="list-text">Wählen Sie in der oberen Kopfzeile der Konsole das Agentensymbol aus.</block>
   <block id="798a2a9b64140e0f8f05fa5695aa1faf" category="list-text">Wählen Sie einen anderen Agenten und dann *Wechseln*.</block>
   <block id="52b5b2b5dbfa5254101b42416d1a8773" category="paragraph"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block> .</block>
-  <block id="3812e8779179a58315ca409176c5ff21" category="summary">Sie können einen Konsolenagenten in AWS direkt von der NetApp Console aus erstellen.  Bevor Sie über die Konsole einen Konsolenagenten in AWS erstellen, müssen Sie Ihr Netzwerk einrichten und AWS-Berechtigungen vorbereiten.</block>
   <block id="59451d5b1be51c2e522deb585360baaf" category="doc">Erstellen Sie einen Konsolenagenten in AWS über die NetApp Console</block>
   <block id="29c7d79b8474c98bbf8600f925dfb317" category="inline-link-macro">Verständnis von Konsolenagenten</block>
   <block id="5f551ddf859b1d7525a5d87169b1c520" category="list-text">Sie sollten über eine<block ref="d16111ab8ba33a1610fbb17fe340b992" category="inline-link-macro-rx"></block> .</block>
@@ -3451,7 +3385,6 @@
   <block id="478934e77aeec11eff664bb1d6c547a8" category="paragraph">Stellen Sie der Konsole den AWS-Zugriffsschlüssel für einen IAM-Benutzer bereit, der über die erforderlichen Berechtigungen verfügt.</block>
   <block id="0950c5af4754899d3da4c72fa2993986" category="list-text">Stellen Sie sicher, dass in der Konsole derzeit der richtige Konsolenagent ausgewählt ist.</block>
   <block id="2f0560e6d27f9ab53a03f99ff0705273" category="summary">Um einen Konsolenagenten aus dem AWS Marketplace zu erstellen, müssen Sie Ihr Netzwerk einrichten, AWS-Berechtigungen vorbereiten, die Instanzanforderungen überprüfen und dann den Konsolenagenten erstellen.</block>
-  <block id="5c8da2e5ec5785e25efccd4a32e4fa8b" category="paragraph">Sie erstellen einen Konsolenagenten in AWS direkt vom AWS Marketplace.  Um einen Konsolenagenten aus dem AWS Marketplace zu erstellen, müssen Sie Ihr Netzwerk einrichten, AWS-Berechtigungen vorbereiten, die Instanzanforderungen überprüfen und dann den Konsolenagenten erstellen.</block>
   <block id="70d8bd725ea77c6a4b800edb3d5b9f5f" category="section-title">Schritt 1: Einrichten des Netzwerks</block>
   <block id="8d12fa92f5022a4f8ca6b93384f7b6de" category="paragraph">Stellen Sie sicher, dass der Netzwerkstandort für den Konsolenagenten die folgenden Anforderungen erfüllt, um Hybrid Cloud-Ressourcen zu verwalten.</block>
   <block id="5d54d0fb176561b822ebd628d8d4f108" category="paragraph">Implementieren Sie diesen Netzwerkzugriff, nachdem Sie den Konsolenagenten erstellt haben.</block>
@@ -3598,7 +3531,6 @@
   <block id="ea3c56aef0a9007d0d56003998b5b840" category="paragraph">Die Konsole verfügt jetzt über die erforderlichen Berechtigungen, um in Ihrem Namen Aktionen in Azure auszuführen.</block>
   <block id="7f8bd52da3d2fb0e23caaadaa19ce40a" category="summary">Um einen Konsolenagenten in Google Cloud über die NetApp -Konsole oder mithilfe von Google Cloud zu erstellen, müssen Sie Ihr Netzwerk einrichten, Google Cloud-Berechtigungen vorbereiten, Google Cloud-APIs aktivieren und dann den Konsolenagenten erstellen.</block>
   <block id="702a1eca6754acddde443fd4cb404a99" category="doc">Erstellen Sie einen Konsolenagenten in Google Cloud über die NetApp Console</block>
-  <block id="4b4904242b46a5c5de838c3bf8de1c06" category="paragraph">Sie können über die Konsole einen Konsolenagenten in Google Cloud erstellen.  Sie müssen Ihr Netzwerk einrichten, Google Cloud-Berechtigungen vorbereiten, Google Cloud-APIs aktivieren und dann den Konsolenagenten erstellen.</block>
   <block id="05e4e55b4a1ded174cd4d080db80632c" category="paragraph">Richten Sie das Netzwerk ein, um sicherzustellen, dass der Konsolenagent Ressourcen verwalten kann, mit Verbindungen zu Zielnetzwerken und ausgehendem Internetzugang.</block>
   <block id="1ac278db12cb6e29a5837e46be7230d6" category="paragraph">Implementieren Sie diese Netzwerkanforderung, nachdem Sie den Konsolenagenten erstellt haben.</block>
   <block id="367fc1a15d8d93ee5b98ec9fb0626a3f" category="section-title">Schritt 2: Richten Sie Berechtigungen zum Erstellen des Konsolenagenten ein</block>
@@ -3639,8 +3571,6 @@
   <block id="9bfb17e64abc7809724f85bcd87b6901" category="inline-link">Erfahren Sie, wie Sie Google Cloud Storage über die Konsole verwalten</block>
   <block id="b1599f1dab16f4dcd35886dbdbbbb28e" category="paragraph">Wenn Sie Google Cloud Storage-Buckets im selben Google Cloud-Konto haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Google Cloud Storage-System angezeigt.<block ref="f1cd5bada461ae8da2b324edaa3edd7e" category="inline-link-rx"></block></block>
   <block id="4c2e9efea94172b6ed2675549b18aa3d" category="summary">Um mithilfe von Google Cloud einen Konsolenagenten in Google Cloud zu erstellen, müssen Sie Ihr Netzwerk einrichten, Google Cloud-Berechtigungen vorbereiten, Google Cloud-APIs aktivieren und dann den Konsolenagenten erstellen.</block>
-  <block id="133f87cfee7691c59e4aceff51289761" category="doc">Erstellen Sie einen Konsolenagenten aus Google Cloud</block>
-  <block id="59f043795dea8adedffde70f225f6c29" category="list-text">Sie sollten eine<block ref="d16111ab8ba33a1610fbb17fe340b992" category="inline-link-macro-rx"></block> .</block>
   <block id="eaf8526751222fae318894a8fef05e01" category="paragraph">Richten Sie das Netzwerk ein, damit der Konsolenagent Ressourcen verwalten und eine Verbindung zu Zielnetzwerken und dem Internet herstellen kann.</block>
   <block id="721dfac3d9c6cded3f26338ec95ebc2f" category="paragraph">Richten Sie Berechtigungen für den Google Cloud-Benutzer ein, um die Konsolen-Agent-VM von Google Cloud bereitzustellen.</block>
   <block id="b15447ab7023f90d56f633477d68cf63" category="list-text">Weisen Sie diese benutzerdefinierte Rolle dem Benutzer zu, der den Konsolenagenten von Google Cloud bereitstellt.</block>
@@ -3695,9 +3625,7 @@
   <block id="7d8205c63a7b91b92998e4cecc811f54" category="paragraph">Sie müssen dem Konsolenagenten die Google Cloud-Berechtigungen erteilen, die Sie zuvor eingerichtet haben.  Durch die Bereitstellung der Berechtigungen kann der Konsolenagent Ihre Daten und Speicherinfrastruktur in Google Cloud verwalten.</block>
   <block id="b851520b404a9e4e66e67b6d193bd247" category="list-text">Wenn Sie Ressourcen in anderen Google Cloud-Projekten verwalten möchten, gewähren Sie Zugriff, indem Sie das Dienstkonto mit der Rolle „Konsolenagent“ zu diesem Projekt hinzufügen.  Sie müssen diesen Schritt für jedes Projekt wiederholen.</block>
   <block id="6213290b2e7665edea40cc0e43f3bd7d" category="summary">Wenn Sie ein VMWare-Benutzer sind, können Sie eine OVA verwenden, um einen Konsolenagenten in Ihrem VCenter zu installieren.  Der OVA-Download oder die URL ist über die NetApp Console verfügbar.</block>
-  <block id="598124c889e49f03f109be5b35ba8241" category="doc">Installieren Sie einen Konsolenagenten vor Ort mit VCenter</block>
   <block id="a3c7b5a3c1143faff777c4825dfe7b66" category="inline-link-macro">Erfahren Sie mehr über die VM-Konsole für den Agenten.</block>
-  <block id="bc94d0ce52cf2b87693515602a7f1b7d" category="admonition">Wenn Sie einen Konsolenagenten mit Ihren VCenter-Tools installieren, können Sie die VM-Webkonsole verwenden, um Wartungsaufgaben durchzuführen.<block ref="21e15fc43bbac3ef120d8f996828c28e" category="inline-link-macro-rx"></block></block>
   <block id="0342133e06734200c991eb898e2ca8be" category="section-title">Vorbereiten der Installation des Konsolenagenten</block>
   <block id="89a24ecb39c9f62ac88a464d920dec1d" category="paragraph">Stellen Sie vor der Installation sicher, dass Ihr VM-Host die Anforderungen erfüllt und der Konsolenagent auf das Internet und die Zielnetzwerke zugreifen kann.  Um NetApp -Datendienste oder Cloud Volumes ONTAP zu verwenden, erstellen Sie Anmeldeinformationen für den Cloud-Anbieter, damit der Konsolenagent Aktionen in Ihrem Namen ausführen kann.</block>
   <block id="a2ccc065fec0ca308af3f41033df8cc5" category="section-title">Überprüfen der Hostanforderungen für den Konsolenagenten</block>
@@ -3716,16 +3644,12 @@
   <block id="4bb5a2a521eb4d58e16bc14b8c911f01" category="paragraph">Sie sollten jetzt über IAM-Benutzerzugriffsschlüssel mit den erforderlichen Berechtigungen verfügen. Nachdem Sie den Konsolenagenten installiert haben, verknüpfen Sie diese Anmeldeinformationen mit dem Konsolenagenten aus der Konsole.</block>
   <block id="697fed71e5c4d47214c869b8aa917600" category="paragraph">Wenn der Konsolen-Agent vor Ort installiert ist, müssen Sie dem Konsolen-Agenten Azure-Berechtigungen erteilen, indem Sie einen Dienstprinzipal in der Microsoft Entra ID einrichten und die Azure-Anmeldeinformationen abrufen, die der Konsolen-Agent benötigt.</block>
   <block id="8c499dc49b60230cffd92735462c1e33" category="section-title">Installieren Sie einen Konsolenagenten in Ihrer VCenter-Umgebung</block>
-  <block id="36fca964adf48d96b43be1303fec1555" category="paragraph">NetApp unterstützt die Installation des Konsolenagenten in Ihrer VCenter-Umgebung.  Die OVA-Datei enthält ein vorkonfiguriertes VM-Image, das Sie in Ihrer VMware-Umgebung bereitstellen können.  Ein Dateidownload oder eine URL-Bereitstellung ist direkt über die NetApp Console möglich.  Es umfasst die Konsolenagent-Software und ein selbstsigniertes Zertifikat.</block>
   <block id="15e605ee974fa55f027726848cc8afff" category="section-title">Laden Sie die OVA herunter oder kopieren Sie die URL</block>
   <block id="3cb68bd3e8922f7c1ffbda95dcdfc461" category="paragraph">Laden Sie die OVA herunter oder kopieren Sie die OVA-URL direkt von der NetApp Console.</block>
   <block id="e4988d7a577285f1e24c4e82aa9743ef" category="list-text">Wählen Sie auf der Seite *Übersicht* die Option *Agent bereitstellen &gt; Vor Ort* aus.</block>
   <block id="4fc92d7e33e740f10aef02cbbc6fa610" category="list-text">Wählen Sie *Mit OVA*.</block>
   <block id="3692c50940f6e7b93bd78e98318c75b0" category="list-text">Sie können entweder die OVA herunterladen oder die URL zur Verwendung in VCenter kopieren.</block>
-  <block id="0656b78c49bcc0a8cb6bb22d217ef11b" category="section-title">Stellen Sie den Agenten in Ihrem VCenter bereit</block>
   <block id="bae9ea4e0a7a3c2d248631b12fa7d19f" category="paragraph">Melden Sie sich bei Ihrer VCenter-Umgebung an, um den Agenten bereitzustellen.</block>
-  <block id="e6a0f5627fe3066636f6bb5941b39405" category="inline-link-macro">Erfahren Sie, wie Sie das selbstsignierte Zertifikat ersetzen.</block>
-  <block id="22a54eb86fd0f906eec36ddaf06f92e5" category="list-text">Laden Sie das selbstsignierte Zertifikat zu Ihren vertrauenswürdigen Zertifikaten hoch, wenn Ihre Umgebung dies erfordert.  Sie ersetzen dieses Zertifikat nach der Installation.<block ref="0106d288ac46b05030063dd41f2f730c" category="inline-link-macro-rx"></block></block>
   <block id="c7183a793d1ba773366b88c02fa65bbf" category="list-text">Stellen Sie die OVA aus der Inhaltsbibliothek oder dem lokalen System bereit.</block>
   <block id="0b044bf45314e5d20c59ab7b578f7495" category="cell">Vom lokalen System</block>
   <block id="0aac2e2d60f56941b22e0c247b2e8606" category="cell">Aus der Inhaltsbibliothek</block>
@@ -3761,10 +3685,7 @@
   <block id="54a3b32628f9142d15de42359d5a4ab9" category="admonition">Wenn die Bereitstellung fehlschlägt, können Sie auf den Validierungsbericht und die Protokolle vom Agent-Host zugreifen.<block ref="61c0b8f4aae5855ed1c7905138f2dd94" category="inline-link-macro-rx"></block></block>
   <block id="9ef04a4b8a28bfcf784c72eeace644a2" category="section-title">Registrieren Sie den Konsolenagenten bei der NetApp Console</block>
   <block id="24ec0b6e7c909c10633ec52c6523f771" category="section-title">Fügen Sie der Konsole Anmeldeinformationen des Cloud-Anbieters hinzu</block>
-  <block id="cca4f6a8cd3b38b59290a730ac48ae7f" category="summary">Installieren Sie einen Konsolenagenten vor Ort, melden Sie sich dann an und richten Sie ihn für die Arbeit mit Ihrer Konsolenorganisation ein.</block>
   <block id="5ec74590d8c956ff4efa142da1a4f0a3" category="doc">Manuelle Installation eines Konsolen-Agenten vor Ort</block>
-  <block id="ab075a42f295242f234cb717631b4faf" category="inline-link-macro">Erfahren Sie mehr über die Installation eines Agenten in einem VCenter.</block>
-  <block id="90f53e285c815f9cee772c268b2d4a9d" category="admonition">Wenn Sie ein VMWare-Benutzer sind, können Sie eine OVA verwenden, um einen Konsolenagenten in Ihrem VCenter zu installieren.<block ref="c80ea7035145cda256eae9895006ac46" category="inline-link-macro-rx"></block></block>
   <block id="7ca24cd3ff141e4586dd77f541557fbb" category="paragraph">Vor der Installation müssen Sie sicherstellen, dass Ihr Host (VM oder Linux-Host) die Anforderungen erfüllt und dass der Konsolenagent ausgehenden Zugriff auf das Internet sowie auf Zielnetzwerke hat.  Wenn Sie NetApp -Datendienste oder Cloud-Speicheroptionen wie Cloud Volumes ONTAP nutzen möchten, müssen Sie bei Ihrem Cloud-Anbieter Anmeldeinformationen erstellen, die Sie der Konsole hinzufügen, damit der Konsolenagent in Ihrem Namen Aktionen in der Cloud ausführen kann.</block>
   <block id="48cf64c1b89091cf12a59389f02aeecb" category="paragraph">Bevor Sie einen Konsolenagenten installieren, sollten Sie sicherstellen, dass Sie über einen Hostcomputer verfügen, der die Installationsanforderungen erfüllt.  Sie müssen außerdem mit Ihrem Netzwerkadministrator zusammenarbeiten, um sicherzustellen, dass der Konsolenagent ausgehenden Zugriff auf die erforderlichen Endpunkte und Verbindungen zu Zielnetzwerken hat.</block>
   <block id="23c99137ddf95fcb54b75a1f1bf8bb1e" category="paragraph">Führen Sie den Konsolenagenten auf einem x86-Host aus, der die Anforderungen an Betriebssystem, RAM und Port erfüllt.  Stellen Sie sicher, dass Ihr Host diese Anforderungen erfüllt, bevor Sie den Konsolenagenten installieren.</block>
@@ -3886,9 +3807,6 @@
   <block id="912ae110aa8df4a37c4331859a5e502a" category="list-text">Ein NetApp Console mit Ihrer E-Mail-Adresse und einem Passwort</block>
   <block id="03eb7e8aedd1ad900f6996ff1a9cf8dd" category="list-text">Geben Sie auf der Seite *Anmelden* die E-Mail-Adresse ein, die mit Ihrem Login verknüpft ist.</block>
   <block id="b3cb6ababbe01759cd13ec3fb3684c1a" category="summary">Die Wartung des Betriebssystems auf dem Agent-Host liegt in Ihrer Verantwortung.  Sie sollten beispielsweise Sicherheitsupdates auf das Betriebssystem auf dem Konsolenagent-Host anwenden, indem Sie die Standardverfahren Ihres Unternehmens zur Betriebssystemverteilung befolgen.</block>
-  <block id="6148da760abfb5167327e2dbd67b1724" category="doc">Warten der Konsolen-Agent-VM und des Betriebssystems</block>
-  <block id="5279ec16620bed638d689fb55a687bf8" category="paragraph">Die Wartung des Betriebssystems auf dem Konsolenagent-Host liegt in Ihrer (der Verantwortung des Kunden).  Beispielsweise sollten Sie (der Kunde) Sicherheitsupdates auf das Betriebssystem auf dem Agent-Host anwenden, indem Sie die Standardverfahren Ihres Unternehmens zur Betriebssystemverteilung befolgen.</block>
-  <block id="35379aa08313c0fa9274fecfc86b4cc0" category="section-title">Betriebssystem-Patches und der Agent</block>
   <block id="e841c125c9e210ed4ede7a3ae1c5ada8" category="paragraph">Wenden Sie Betriebssystem-Sicherheitspatches an, ohne die Agent-Hostdienste zu stoppen.</block>
   <block id="d54ab8a1d5dd0b1066137c76d5021844" category="section-title">VM- oder Instanztyp</block>
   <block id="d69b367407abdea589b8942156f4e07a" category="paragraph">Wenn Sie einen Konsolenagenten aus der Konsole erstellen, stellt dieser eine VM-Instanz mit einer Standardkonfiguration bei Ihrem Cloud-Anbieter bereit.  Wechseln Sie nach dem Erstellen des Agenten nicht zu einer kleineren VM-Instanz mit weniger CPU oder RAM.</block>
@@ -3899,7 +3817,6 @@
   <block id="317906a769f89601a484794c64e9042d" category="paragraph">Die Konsole benachrichtigt Sie, wenn die Agent-VM fehlerhaft ist, beispielsweise bei Problemen mit Speicherplatz, RAM und CPU.  Überwachen Sie diese Benachrichtigungen im Benachrichtigungscenter in der Konsole oder konfigurieren Sie E-Mail-Benachrichtigungen.  Gelegentliche Erhöhungen des Speicherplatzes, des Arbeitsspeichers oder der CPU-Auslastung sind normal. Wenn dies jedoch häufig vorkommt, sollten Sie Maßnahmen zur Behebung des Problems ergreifen.</block>
   <block id="1ea31e4b3b5747148fd4f93da267694f" category="paragraph">Beispielsweise benachrichtigt Sie die Konsole, wenn eine Agentenressource (CPU, RAM oder Festplattenspeicher) 30 Minuten lang hintereinander 90 % ihrer Gesamtkapazität überschreitet.  Wenn die Ressourcennutzung anschließend unter diesen Schwellenwert fällt, wird die Benachrichtigung im Benachrichtigungscenter als behoben (grün) angezeigt.</block>
   <block id="6a84e3053bbf1efa2a6cfbd206b01ccf" category="admonition">Wenden Sie sich an den NetApp -Support, wenn Sie Fragen zum Ändern Ihrer Agent-VM haben.</block>
-  <block id="b76919d8a6dd33b62b49a16ab1b560aa" category="paragraph"><block ref="b76919d8a6dd33b62b49a16ab1b560aa" category="inline-link-macro-rx"></block></block>
   <block id="96d008db67fc0b5551a926842bbb6a71" category="cell">Benachrichtigung</block>
   <block id="27cddd48f04c03ba2ee3de901409426c" category="cell">Handlungsbedarf</block>
   <block id="9fd6077327da6ac541f6fd95cfffcc63" category="cell">Der Speicherplatz ist zu groß</block>
@@ -3934,13 +3851,8 @@
   <block id="12cf6b8337c04d4e7e622d1c39b40efe" category="list-text">Führen Sie den folgenden Befehl aus, um das aktuelle Sicherungsziel anzuzeigen:</block>
   <block id="78cae36205d703274f695ea4e85f6ffe" category="list-text">Führen Sie den folgenden Befehl aus, um die IP-Adresse für das Sicherungsziel zu aktualisieren:</block>
   <block id="c0a66b24df979b205d818e91357028ee" category="section-title">Bearbeiten der URIs eines Agenten</block>
-  <block id="776c814c9b0c72880dcd5eaf49118ff2" category="paragraph">Sie können den Uniform Resource Identifier (URI) für einen Agenten hinzufügen und entfernen.</block>
   <block id="ae3e99ad1c50edf4e25c2d64cf2eefa5" category="list-text">Erweitern Sie die Leiste *Agent-URIs*, um Agent-URIs anzuzeigen.</block>
   <block id="fb9b59364e346ccfcbfc4636f13644b5" category="list-text">Fügen Sie URIs hinzu und entfernen Sie sie, und wählen Sie dann *Übernehmen* aus.</block>
-  <block id="322805244d3cfbc06b20be41ebf54d36" category="doc">Arbeiten mit mehreren Konsolenagenten</block>
-  <block id="c73b380f2cf43cbe65e10db11adc4709" category="paragraph">Wenn Sie mehrere Konsolenagenten verwenden, können Sie direkt von der Konsole aus zwischen diesen Konsolenagenten wechseln, um die zugehörigen Systeme anzuzeigen.</block>
-  <block id="74bd0729b4aa2adbd6a34d8410d08abb" category="paragraph">Beispielsweise haben Sie in einer Multi-Cloud-Umgebung möglicherweise einen Agenten in AWS und einen anderen in Google Cloud.  Wechseln Sie zwischen diesen Agenten, um die Cloud Volumes ONTAP -Systeme in den jeweiligen Cloud-Umgebungen zu verwalten.</block>
-  <block id="af3558cc25519499b10621ce3d0d7c2d" category="admonition">Diese Option ist nicht verfügbar, wenn Sie die NetApp Console über die lokale Benutzeroberfläche des Agenten anzeigen.</block>
   <block id="5a81096fe0d305b5a45a3b345ef47141" category="list-text">Wählen Sie das Symbol „Konsolenagenten“ (<block ref="62a3266a0f73164c666fbf135f341ae2" category="inline-image-macro-rx" type="image"></block> ), um die Liste der verfügbaren Agenten anzuzeigen.</block>
   <block id="39a66cbd55302576b83a0a5471064712" category="inline-image-macro">Ein Screenshot, der das Agentensymbol in der Kopfzeile und die Switch-Aktion zeigt.</block>
   <block id="2bf29a9ec2a497699149ddb5c47450d4" category="paragraph"><block ref="2bf29a9ec2a497699149ddb5c47450d4" category="inline-image-macro-rx" type="image"></block></block>
@@ -4384,7 +4296,6 @@
   <block id="b9b50a4a67814c748f85c0dd361e7931" category="list-text">Wählen Sie *Administration &gt; Support &gt; Agenten*.</block>
   <block id="b8833ad6a19536ecd8aef7620db4ddce" category="paragraph">Die Konsole zeigt die Version oben auf der Seite an.</block>
   <block id="021662795bfc95f525aded11ea0f47b7" category="inline-link-macro">Erfahren Sie mehr über die erforderlichen Netzwerkzugriffspunkte.</block>
-  <block id="532483dbc5894a7da7a4dd2c7f9b4e0e" category="paragraph">Stellen Sie sicher, dass der Konsolenagent über den erforderlichen Netzwerkzugriff verfügt.<block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block></block>
   <block id="3b2256fce45383ccea4ebfc8f456dcf9" category="section-title">Probleme bei der Installation des Konsolenagenten</block>
   <block id="2cca0346972b04930650bf988ebae1ab" category="paragraph">Wenn die Installation fehlschlägt, sehen Sie sich den Bericht und die Protokolle an, um die Probleme zu beheben.</block>
   <block id="f8a1a17cd9b62f1fc12e61715a042238" category="section-title">Deaktivieren Sie Konfigurationsprüfungen für manuelle Installationen</block>
@@ -4473,7 +4384,6 @@
   <block id="16068479a2701e2f4cc03e6c5d4a2304" category="section-title">Dunkelmodus konfigurieren (dunkles Design)</block>
   <block id="028c8274cfa01e62e5591b427f85e126" category="paragraph">Sie können die Konsole so einstellen, dass sie im Dunkelmodus angezeigt wird.</block>
   <block id="a99608db4d85374403174f1119cac088" category="list-text">Bewegen Sie den Schieberegler *Dunkles Design*, um es zu aktivieren.</block>
-  <block id="54fd6ad42040e4dcd0dcda5cc49c6c66" category="summary">Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetApp Console : IAM, Konsolenagenten, Anmeldeinformationen für Cloud-Anbieter und mehr.</block>
   <block id="490414e0366b091220802d406e52c076" category="doc">Was ist neu</block>
   <block id="3243765239f2c6f00af00297914a69d4" category="paragraph">Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetApp Console : Identitäts- und Zugriffsverwaltung (IAM), Konsolenagenten, Anmeldeinformationen von Cloud-Anbietern und mehr.</block>
   <block id="b9d888f58b09c4007db0247286e392b5" category="section-title">11. August 2025</block>
@@ -4615,12 +4525,7 @@
   <block id="3bc0e23bd46bad08da1876b2cc4430a7" category="sidebar">Verwenden Sie den NetApp Console Assistenten</block>
   <block id="65ce4dce26160be29539699c6623e379" category="sidebar">Workflow „Erste Schritte“</block>
   <block id="1434a6bb482886cf18491c3161371a87" category="sidebar">Bei der NetApp Console anmelden</block>
-  <block id="09b85e561b979d579e985e238b5e5d1c" category="sidebar">Installationsoptionen für den Konsolenagenten</block>
-  <block id="b9c838fe095b8b207e2903c139e3b496" category="sidebar">Erstellen Sie einen Konsolenagenten über die NetApp Console</block>
-  <block id="143fa1019fce3ddf5117f0b1f4f14fae" category="sidebar">Manuelle Installation des Konsolenagenten</block>
   <block id="ac04a782af57ff93f16c88e88212efb7" category="sidebar">Installieren eines Agenten vor Ort</block>
-  <block id="0cd6a787b0c3cf4c965fe4f471c14a79" category="sidebar">Manuelles Installieren eines Agenten vor Ort</block>
-  <block id="999d0fc21e3f7ccb9869c3812a630168" category="sidebar">Installieren Sie einen lokalen Agenten in VCenter</block>
   <block id="102e22f275df79c5a1dde1e8293216b7" category="sidebar">Abonnieren Sie NetApp Intelligent Services</block>
   <block id="d0a7edff5cd82c23f3d1c18e0779ccbc" category="sidebar">Was Sie als Nächstes tun können</block>
   <block id="7029abd7e78c892ffba05a2ede3d7c4d" category="sidebar">Verwenden Sie die NetApp Console</block>
@@ -4719,7 +4624,6 @@
   <block id="1aed0c96ab82a81ab5988e9702bb43da" category="paragraph">Wie in den obigen Abschnitten beschrieben, können Sie mit der Konsole AWS-Anmeldeinformationen auf verschiedene Weise bereitstellen: über eine mit dem Konsolenagenten verknüpfte IAM-Rolle, durch die Übernahme einer IAM-Rolle in einem vertrauenswürdigen Konto oder durch die Bereitstellung von AWS-Zugriffsschlüsseln.</block>
   <block id="a47f802b14f43406913307d1775681b4" category="list-text">Sie müssen einen Konsolen-Agenten mit einem Google-Konto bereitstellen, das über die Berechtigung zum Starten des Konsolen-Agenten von der Konsole aus verfügt.</block>
   <block id="2f452b0fc39f70459edce8976da308fa" category="list-text">Beim Bereitstellen des Konsolenagenten werden Sie aufgefordert, einen<block ref="98f22f2dda0728ebb39af9a8fe826c8e" category="inline-link-rx"></block> für den Agenten Die Konsole erhält vom Dienstkonto Berechtigungen zum Erstellen und Verwalten von Cloud Volumes ONTAP -Systemen, zum Verwalten von Backups mithilfe von NetApp Backup und Recovery und mehr. Berechtigungen werden erteilt, indem dem Dienstkonto eine benutzerdefinierte Rolle zugewiesen wird.</block>
-  <block id="0f45389ced3603929ac70a3772bf2348" category="paragraph">Sie benötigen spezielle Berechtigungen, um den Konsolenagenten direkt von der NetApp Console aus zu erstellen, und einen weiteren Satz von Berechtigungen für den Konsolenagenten selbst. Wenn Sie den Konsolenagenten in AWS oder Azure direkt von der Konsole aus erstellen, erstellt die Konsole den Konsolenagenten mit den erforderlichen Berechtigungen.</block>
   <block id="ba792e43ee25d6c3d972aef21f18efbd" category="summary">Wenn die NetApp Console den Agenten in AWS startet, fügt sie dem Agenten eine Richtlinie hinzu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt. Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere AWS-Dienste zu tätigen, darunter EC2, S3, CloudFormation, IAM, den Key Management Service und mehr.</block>
   <block id="b10c09311b2a36cdbb586dd7823222f1" category="paragraph">Wenn die NetApp Console einen Konsolenagenten in AWS startet, fügt sie dem Agenten eine Richtlinie hinzu, die dem Agenten die Berechtigung zum Verwalten von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt. Der Agent verwendet die Berechtigungen, um API-Aufrufe an mehrere AWS-Dienste zu tätigen, darunter EC2, S3, CloudFormation, IAM, den Key Management Service (KMS) und mehr.</block>
   <block id="a4a0e88b76170508470ee15848f6e7ba" category="cell">Verwalten Sie EBS-Volumes, die Cloud Volumes ONTAP als Backend-Speicher verwendet</block>
@@ -4777,7 +4681,6 @@
   <block id="5218e689f8059e737f702b1608b1d2aa" category="list-text">Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt.  NetApp empfiehlt Standard_D8s_v3.</block>
   <block id="9588595fbe3fa7f47431af3c53dbfa23" category="list-text"><block ref="9588595fbe3fa7f47431af3c53dbfa23" category="inline-link-rx"></block></block>
   <block id="cb4f6677094ab1c46678dcab5e428e83" category="summary">Sie müssen sicherstellen, dass die Konsole und alle von Ihnen installierten Agenten über den richtigen Netzwerkzugriff verfügen, um ordnungsgemäß zu funktionieren.</block>
-  <block id="08c556d51e4f6c65d7b6fa418e7669be" category="doc">Erforderlicher Netzwerkzugriff für 3.9.55 und darunter</block>
   <block id="fffe82f62bbb62138e05f9a97b7b3c53" category="paragraph">NetApp Console, der NetApp Console Agent und NetApp Datendienste erfordern ausgehenden Internetzugang, um die erforderlichen Endpunkte zu kontaktieren.</block>
   <block id="85c99bdcf4951ca82a78bf31a1de7173" category="inline-link-macro">die erforderlichen Endpunkte für 4.0.0 und höher</block>
   <block id="e631f72e5da7444059b0ba7e6eae2fc7" category="admonition">In diesem Thema wird der Netzwerkzugriff dokumentiert, der für Versionen des NetApp Console Standardmodus 3.9.55 und darunter erforderlich ist.  Informationen zu den erforderlichen Endpunkten für 4.0.0 und höher finden Sie unter<block ref="ef1073f8509c45bff5f75999a15fb4b5" category="inline-link-macro-rx"></block> .</block>
@@ -4810,7 +4713,6 @@
   <block id="ab925d8c9a6924f34df64e8e1fb1a38d" category="list-text">* Google Cloud NetApp Volumes Viewer*: Google Cloud NetApp Volumes in der Konsole anzeigen.</block>
   <block id="7d04a8adb8b138151b42f809761295c7" category="cell"><block ref="7d04a8adb8b138151b42f809761295c7" category="inline-link-macro-rx"></block></block>
   <block id="247a6a0ee254b2ff09347b727ee46227" category="inline-link-macro">Erfahren Sie mehr über die Agentenwartungskonsole.</block>
-  <block id="fbcd7669a7a0c8cc9053c7c78029654b" category="admonition">Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über die <block ref="d3f69ee6935d5f5f8542f4da69ac2bb6" category="inline-link-macro-rx"></block>Die</block>
   <block id="334ed7efb24267c8a9d5f60a214ee627" category="list-text">Installieren Sie das Podman-Compose-Paket 1.5.0.</block>
   <block id="83291537b9ae75a78c7add56b73a4688" category="list-text">Bei Verwendung von Red Hat Enterprise Linux 8:</block>
   <block id="9c1b6a208384484254769349d91e3af9" category="doc">Konsolenagent 4.1.0</block>
@@ -4835,7 +4737,6 @@
   <block id="08ea771e22fb933fc1428178b36eb902" category="paragraph">Agenten von Drittanbietern oder VM-Erweiterungen werden auf der Agenten-VM nicht unterstützt.</block>
   <block id="c976a9d1d7322a1a795f641867000e2b" category="paragraph">Wenn Sie einen Console-Agenten für die Verwendung eines Proxy-Servers konfiguriert haben, können Sie den direkten API-Datenverkehr auf dem Console-Agenten aktivieren, um API-Aufrufe direkt an Cloud-Anbieterdienste zu senden, ohne den Proxy zu durchlaufen. Agenten, die in AWS, Azure oder Google Cloud ausgeführt werden, unterstützen diese Option.</block>
   <block id="8b1d2ab0552c5d7793153d9fda3b575d" category="paragraph"><block ref="51298227862ac5270d9350ee1061138a" category="inline-link-macro-rx"></block>.</block>
-  <block id="e5d52cc85bda9d53a6d755f08201667b" category="summary">Wenn Sie mehrere Konsolenagenten verwenden, können Sie direkt von der Konsole aus zwischen diesen Agenten wechseln.</block>
   <block id="b634c2786e9d7bad38c80a81b3416dd7" category="paragraph">Wenn Sie eine Agenten-VM gelöscht oder den Agenten deinstalliert haben, sollten Sie ihn aus der Liste der Agenten in der Konsole entfernen. Nach dem Löschen einer Agenten-VM oder der Deinstallation der Agentensoftware wird der Agent in der Konsole als *Getrennt* angezeigt.</block>
   <block id="f6b8e4c4df658aad1c40b366b5c5d259" category="list-text">Auf der Seite *Übersicht* wählen Sie das Aktionsmenü für einen getrennten Agenten und anschließend *Agent entfernen*.</block>
   <block id="77750efa6f5ff153acdc42067058017f" category="section-title">10. November 2025</block>
@@ -4878,10 +4779,6 @@
   <block id="04a0a4e163c04f3082e39c4a05b56121" category="paragraph">Durch das Hinzufügen von AWS-Anmeldeinformationen werden Berechtigungen zum Erstellen eines Konsolenagenten erteilt.</block>
   <block id="325cf27c7a62fb4beb8b270094e56814" category="paragraph">Sie müssen die Anmeldeinformationen, die Sie einem Console-Agenten hinzufügen, mit einem AWS Marketplace-Abonnement verknüpfen, um Cloud Volumes ONTAP auf Stundenbasis (PAYGO) und andere NetApp -Datendienste oder über einen Jahresvertrag zu bezahlen. <block ref="ec04a55c38de32bb88fa7b4155061e7c" category="inline-link-macro-rx"></block>.</block>
   <block id="349b76807d98d4378df29b585951b7a4" category="summary">Erfahren Sie mehr über die Standardkonfigurationen des Console-Agenten für Standardbereitstellungen (mit Internetzugang) in AWS, Azure und Google Cloud sowie für eingeschränkte Bereitstellungen (ohne Internetzugang) in lokalen Umgebungen.</block>
-  <block id="95df10d2ac630ff125b089e1f8e0e67f" category="paragraph">Sie müssen Proxy-Informationen hinzufügen, wenn Ihr Netzwerk einen Proxy für den Internetzugang benötigt. Sie können entweder einen transparenten oder einen expliziten Proxy hinzufügen. Die Parameter --proxy und --cacert sind optional und Sie werden nicht aufgefordert, sie hinzuzufügen. Wenn Sie einen Proxyserver haben, müssen Sie die Parameter wie gezeigt eingeben.</block>
-  <block id="64de7c6251637d266e8df72d8ab7c1d3" category="paragraph">--proxy konfiguriert den Konsolenagenten für die Verwendung eines HTTP- oder HTTPS-Proxyservers in einem der folgenden Formate:</block>
-  <block id="9d9d85de516d17d89215c336041bd69c" category="paragraph">--cacert gibt ein von einer Zertifizierungsstelle signiertes Zertifikat an, das für den HTTPS-Zugriff zwischen dem Konsolenagenten und dem Proxyserver verwendet werden soll. Dieser Parameter ist für HTTPS-Proxyserver, abfangende Proxyserver und transparente Proxyserver erforderlich.</block>
-  <block id="fa5c0c80d3dab7b433f9ebd1f6d0e8db" category="paragraph">Hier ist ein Beispiel für die Konfiguration eines transparenten Proxyservers. Wenn Sie einen transparenten Proxy konfigurieren, müssen Sie den Proxyserver nicht definieren. Sie fügen Ihrem Konsolen-Agent-Host lediglich ein von einer Zertifizierungsstelle signiertes Zertifikat hinzu:</block>
   <block id="c55d3d704bf32eff6f655f83abc7cdde" category="cell">compute.disks.create</block>
   <block id="87087b5eac4a5e53c4945e9539fcaf0e" category="cell">compute.disks.createSnapshot</block>
   <block id="5e64e2bda82f0b6231b4d8a6ee930490" category="cell">compute.disks.delete</block>
@@ -5037,19 +4934,16 @@
   <block id="c513928c0b95afec773bd29d135d4632" category="list-text">Die Seite * Discoverable systems* trennt die zusammenfassenden Informationen von der Registerkartenansicht der verfügbaren Systeme und erleichtert so die Anzeige umfassender Informationen über auffindbare Systeme.</block>
   <block id="044a03cc529cee34c57112a210e50b35" category="paragraph">Bei den ersten beiden Optionen verwendet die Konsole den AWS Security Token Service, um temporäre Anmeldeinformationen zu erhalten, die ständig rotieren. Dieses Verfahren ist die beste Vorgehensweise – es ist automatisch und sicher.</block>
   <block id="b0d37b69696e5fe98085933a2a7e3fc1" category="paragraph">Durch die Schaffung von Partnerschaften zwischen Organisationen in der NetApp Console können Partner NetApp Ressourcen über Organisationsgrenzen hinweg sicher verwalten, die Zusammenarbeit optimieren und die Sicherheit erhöhen.</block>
-  <block id="d7046de4945385aed3cb44fde274d256" category="doc">Agentenvalidierung mit der Wartungskonsole</block>
   <block id="af6e565b77baba04e851ef6db3453fab" category="paragraph">Mit der Wartungskonsole des Console-Agenten können Sie die Installation und Konfiguration eines Console-Agenten überprüfen.</block>
   <block id="2df2419e3b3e4992394516227a5f4a71" category="section-title">config-checker validate</block>
   <block id="11d2b70f92f5671a073ee7f95edbc568" category="paragraph">Der<block ref="2df2419e3b3e4992394516227a5f4a71" prefix=" " category="inline-code"></block> Mit diesem Befehl können Sie die Konfiguration eines Konsolenagenten überprüfen.</block>
   <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">Parameter</block>
   <block id="bb9f0d8e73ffa6630952dc1ecc6cd9de" category="paragraph"><block ref="6a11199e55b0cb53d751c5170e5f74f9" prefix="" category="inline-code"></block>--*ERFORDERLICH*--</block>
-  <block id="1fde504b28ae1c1b6dbb99c104b00a85" category="paragraph"><block ref="693f786102104e01b7396235926fc506" prefix="" category="inline-code"></block>--*ERFORDERLICH*-- Wählen Sie einen oder mehrere Validierungstypen aus, die ausgeführt werden sollen.  Gültige Validierungstypen sind: *<block ref="25835188a2355e9530d3a10fcbe4c65b" prefix=" " category="inline-code"></block> wodurch die Netzwerkverbindung zu den erforderlichen Konsolenendpunkten überprüft wird.</block>
   <block id="b3c3244f084b65704359870cc6488d93" category="paragraph"><block ref="f2d537814e28e44e0e35d5b4ce13cadb" prefix="" category="inline-code"></block>--*OPTIONAL*--</block>
   <block id="d076e244720434cf026cb278c7f19d8e" category="paragraph">Gibt die URL des Proxy-Servers an, der für die Validierung verwendet werden soll.  Erforderlich, wenn Ihr Agent für die Verwendung eines Proxy-Servers konfiguriert ist.</block>
   <block id="775c73e442d845c4596a67e7c69aefd9" category="paragraph"><block ref="b58f4fd799634e7ef624ae15a007f9bb" prefix="" category="inline-code"></block>--*OPTIONAL*--</block>
   <block id="4ed623d06dfe32e4f16db9d33c5ede6c" category="paragraph">Gibt den Pfad zu einer oder mehreren Zertifikatsdateien an, die für die Validierung verwendet werden sollen.  Die Zertifikatsdateien müssen im PEM-Format vorliegen.  Mehrere Pfade durch Kommas trennen.  Dieser Parameter ist erforderlich, wenn Ihr Agent ein benutzerdefiniertes Zertifikat verwendet.</block>
   <block id="6a90f9864a2f9aa8de0590c60d07a970" category="section-title">Config-Checker-Validierungsbeispiele</block>
-  <block id="56cc3a7f96b8e67c7d92a9185e36c08e" category="listing-title">Grundlegende Validierung:</block>
   <block id="2947152e0492b862524897c4ae5ba389" category="listing-title">Validierung, bei der ein Proxy-Server für den Agenten verwendet wird:</block>
   <block id="97df144968d77a81cf138d0e4021ce2c" category="listing-title">Validierung, bei der ein Zertifikat für den Agenten verwendet wird:</block>
   <block id="6db60e859007b84c686f5dc3f04f4697" category="section-title">Proxy abrufen</block>
@@ -5219,9 +5113,7 @@
   <block id="7c53729e63e6d7b0ff2748297a9aa07d" category="paragraph">Diese Tabelle listet häufige Fehlermeldungen auf und zeigt, wie man sie beheben kann:</block>
   <block id="5d3a908b240fe98ac0740455635b4cc0" category="list-text">Sollten weiterhin Probleme auftreten, wenden Sie sich bitte an den Support.</block>
   <block id="13ab9425db1c4ad9c7ca529999f6de24" category="list-text">Prüfen Sie, ob der Agent ausgehenden Zugriff auf die erforderlichen Endpunkte hat.<block ref="c7fe41b97889c23a57defbbf2129845e" category="inline-link-macro-rx"></block></block>
-  <block id="61af83c0a45998dc351428765c46fa2e" category="section-title">Führen Sie Konfigurationsprüfungen auf dem Konsolenagenten durch.</block>
   <block id="cb4e992a592d7b26e6c218cdde9ee1b5" category="inline-link-macro">Erfahren Sie mehr über die Verwendung des Befehls config-checker validate.</block>
-  <block id="adbf5b321ab6472093079a96d92216c2" category="paragraph">Sie können Konfigurationsprüfungen auch über die Agentenwartungskonsole durchführen.<block ref="714b5c6de8ffee7e082263b89290e9dc" category="inline-link-macro-rx"></block></block>
   <block id="2c8b526b02d94d86279aebb87311c90d" category="admonition">Sie können nur Agenten validieren, die den Status *Verbunden* haben.</block>
   <block id="2256ce9e5331fffeb7ded438ec67c9bf" category="list-title">Schritte von der Konsole</block>
   <block id="80ed8e269497520c11a5f07aaac10ca9" category="list-text">Wählen Sie im Aktionsmenü des Konsolenagenten, den Sie überprüfen möchten, die Option *Validieren* aus.</block>
@@ -5263,20 +5155,11 @@
   <block id="66f249e9d83e1feff3fbdd894b518eff" category="paragraph"><block ref="66f249e9d83e1feff3fbdd894b518eff" category="inline-image-macro-rx" type="image"></block></block>
   <block id="30417b3c810a323e60b9866f8e6c9350" category="inline-image-macro">Eine konzeptionelle Abbildung, die das ursprüngliche Azure-Konto zeigt, das Berechtigungen über eine benutzerdefinierte Rolle und eine verwaltete Identität erhält, sowie zwei zusätzliche Konten, die Berechtigungen über eine benutzerdefinierte Rolle und einen Dienstprinzipal erhalten.</block>
   <block id="3c3998b3724b770848f697973652cbed" category="paragraph"><block ref="3c3998b3724b770848f697973652cbed" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8a28d84712ec63fca5b3358a179fd161" category="summary">Sie verwenden einen Console-Agenten, um die NetApp Console mit Ihrer Infrastruktur zu verbinden und Speicherlösungen sicher über AWS-, Azure-, Google Cloud- oder On-Premises-Umgebungen hinweg zu orchestrieren sowie Datensicherungsdienste zu nutzen.</block>
-  <block id="aab5731bfa6cbaa9335ace3b6119b1ed" category="paragraph">Sie verwenden einen Console-Agenten, um die NetApp Console mit Ihrer Infrastruktur zu verbinden und Speicherlösungen sicher über AWS-, Azure-, Google Cloud- oder On-Premises-Umgebungen hinweg zu orchestrieren sowie Datensicherungsdienste zu nutzen.</block>
-  <block id="3230673163c008cdd02f112405efaaf9" category="paragraph">Ein Konsolenagent ermöglicht Ihnen Folgendes:</block>
-  <block id="4d7b2f840c5d1940c932ef5b68407d63" category="list-text">Orchestrieren Sie Speicherverwaltungsaufgaben über die NetApp Console , wie z. B. die Bereitstellung von Cloud Volumes ONTAP, das Einrichten von Speichervolumes, die Verwendung der Datenklassifizierung und vieles mehr.</block>
-  <block id="63e5cc9026d02c060058ae369a9c3c72" category="list-text">Authentifizieren Sie sich mithilfe der IAM-Rollen Ihres Cloud-Anbieters für die Integration der Abonnementabrechnung.</block>
-  <block id="b5442d822ef2fdf45dde0be1d98a8164" category="list-text">Nutzen Sie erweiterte Datendienste (NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience und NetApp Cloud Tiering).</block>
-  <block id="89d00b0e4cdc5ca22b542515e11cf7fb" category="paragraph">Die folgende Tabelle zeigt, welche Funktionen und Dienste Sie mit und ohne Console-Agent nutzen können.</block>
   <block id="3ec96dde9691a6afd519c61179d8bedd" category="cell">Beim Agenten erhältlich</block>
   <block id="1490f23e97090196f0b8e4be2d8742a2" category="cell">Ohne Makler erhältlich</block>
-  <block id="8104d245049cf15410198b6913ed44d1" category="cell">*Unterstützte Speichersysteme*:</block>
   <block id="fb97d1c8259ba6635407f1a41cf956eb" category="paragraph">Ja (Erkennungs- und Verwaltungsfunktionen)</block>
   <block id="fab18a3d0e482e8c690720ece0d59967" category="paragraph">Ja (nur Discovery)</block>
   <block id="821aade5bfe8143b04b0e3329145eb49" category="cell">Google Cloud-Speicher-Buckets</block>
-  <block id="38b3d6672c5cc9fcae4bb30e89781b0d" category="cell">On-Premises ONTAP Cluster (erweiterte Verwaltung und Erkennung)</block>
   <block id="bdec6a7498ca4d25566e3e23d2c62a76" category="paragraph">Ja (fortschrittliches Management und Entdeckung)</block>
   <block id="b60366a003b487aaa0f17f8db3163ecc" category="paragraph">Nein (nur grundlegende Entdeckung)</block>
   <block id="3b00545dfd90abf1453721e441754d3d" category="cell">Digital Advisor (Active IQ)</block>
@@ -5285,10 +5168,6 @@
   <block id="fec52cc0232a22ef4060c7b61d92c0a0" category="paragraph">Nr. 1</block>
   <block id="3863a60fc30916ec3597541037025585" category="cell">*Verfügbare Datendienste*:</block>
   <block id="6444e1b68689d877ddc4f4121e08c0f6" category="paragraph">^1^ Die Lebenszyklusplanung kann auch ohne Konsolenagent angezeigt werden, jedoch ist ein Konsolenagent erforderlich, um Aktionen auszulösen.</block>
-  <block id="69503e81cc92bb7b09446dacc350d84d" category="paragraph">^2^ Für genaue Messwerte auf der Startseite sind entsprechend dimensionierte und konfigurierte Konsolenagenten erforderlich.</block>
-  <block id="932e0f0da3df907fbda805c12b12abe5" category="paragraph">Sie können einen Konsolenagenten direkt von der Konsole, vom Marktplatz Ihres Cloud-Anbieters oder durch manuelle Installation der Software auf Ihrem eigenen Linux-Host oder in Ihrer VCenter-Umgebung installieren.</block>
-  <block id="0d07862d67097acd517fe27c0de099d7" category="section-title">Cloud-Anbieter-Berechtigungen</block>
-  <block id="3ba516db764b4c90d4973b3960d1d8d9" category="paragraph">Wenn Sie Ihren Agenten in der Cloud installieren, aktualisiert sich der Console-Agent automatisch, sofern er über einen Internetzugang verfügt.</block>
   <block id="9ea7157b38fa199a8532fa65cd92d096" category="summary">Verwalten Sie den Benutzerzugriff auf die NetApp Console mit rollenbasierter Zugriffskontrolle (RBAC), indem Sie vordefinierte Rollen auf Organisations-, Ordner- oder Projektebene zuweisen. Jede Rolle gewährt spezifische Berechtigungen, die definieren, welche Aktionen Benutzer innerhalb ihres zugewiesenen Bereichs ausführen können.</block>
   <block id="6369e7866450cfbd1595f3b5f17a45ce" category="doc">Erfahren Sie mehr über die rollenbasierte Zugriffskontrolle (RBAC) der NetApp Console .</block>
   <block id="adb744c66714a9cd79eb46c484743e3a" category="paragraph">NetApp entwirft Konsolenrollen nach dem Prinzip der minimalen Berechtigungen, sodass jede Rolle nur die Berechtigungen enthält, die für ihre Aufgaben erforderlich sind. Dieser Ansatz erhöht die Sicherheit, indem der Zugriff auf das beschränkt wird, was jedes Mitglied benötigt.</block>
@@ -5296,7 +5175,6 @@
   <block id="17b936d2e4829a5cf778b2c29100bb7a" category="paragraph">Beispielsweise können Sie einem Mitglied die Administratorrolle für Ransomware-Resilienz auf einer bestimmten Projektebene zuweisen, sodass dieses Mitglied Ransomware-Resilienzmaßnahmen für Ressourcen innerhalb dieses Projekts durchführen kann, ohne ihm einen umfassenderen Zugriff auf die gesamte Organisation zu gewähren. Diesem Benutzer kann die Rolle für mehrere Projekte innerhalb Ihrer Organisation zugewiesen werden.</block>
   <block id="9b372111c3284b1c413c38133ce241b7" category="paragraph">Sie können Benutzern je nach ihren Verantwortlichkeiten mehrere Rollen für denselben oder für verschiedene Verantwortungsbereiche zuweisen. In einer kleineren Organisation könnte beispielsweise ein und derselbe Benutzer sowohl die Aufgaben der Ransomware-Resilienz als auch der Datensicherung und -wiederherstellung auf Organisationsebene verwalten, während in einer größeren Organisation auf Projektebene unterschiedliche Benutzer den einzelnen Rollen zugeordnet sein könnten.</block>
   <block id="0455998a9b4d48dfc90712f125c02594" category="section-title">Arten von Konsolenorganisationsmitgliedern</block>
-  <block id="216d633ebb90f040a2915716b0e69fdf" category="paragraph">In einer NetApp Console Organisation gibt es drei Arten von Mitgliedern: * _Benutzerkonten_: Einzelne Benutzer, die sich bei der NetApp Console anmelden, um Ressourcen zu verwalten. Benutzer müssen sich bei der NetApp Console registrieren, bevor sie einer Organisation hinzugefügt werden können. * _Servicekonten_: Nicht-menschliche Konten, die von Anwendungen oder Diensten verwendet werden, um über APIs mit der NetApp Console zu interagieren. Sie können Dienstkonten direkt zu Ihrer Konsolenorganisation hinzufügen. * _Verbundene Gruppen_: Gruppen, die von Ihrem Identitätsanbieter (IdP) synchronisiert werden und es Ihnen ermöglichen, den Zugriff für mehrere Benutzer gemeinsam zu verwalten. Jeder Benutzer innerhalb einer föderierten Gruppe muss sich bei der NetApp Console registriert haben und Ihrer Organisation mit einer Zugriffsrolle hinzugefügt worden sein, bevor er auf die der Gruppe zugewiesenen Ressourcen zugreifen kann.</block>
   <block id="143a5c25b96e4e8867190c0d1f10dbb3" category="inline-link-macro">Erfahren Sie, wie Sie Mitglieder zu Ihrer Organisation hinzufügen.</block>
   <block id="5bc06c288bf257ec517f854ffef3edce" category="paragraph"><block ref="5bc06c288bf257ec517f854ffef3edce" category="inline-link-macro-rx"></block></block>
   <block id="429804783adfb78f99dde5b7f7743fa3" category="section-title">Vordefinierte Rollen in der NetApp Console</block>
@@ -5310,37 +5188,19 @@
   <block id="ca5fd8bb5d9faf476fbe2d765b802bdc" category="paragraph"><block ref="55b5ceff8fee7cfc075b04636ac3ba7f" category="inline-link-macro-rx"></block>Die</block>
   <block id="e6f301b2c67375931164ffab8594268a" category="summary">Mit der Identitäts- und Zugriffsverwaltung (IAM) der NetApp Console können Sie den Ressourcenzugriff entsprechend Ihrer Unternehmenshierarchie strukturieren und steuern, beispielsweise nach Standort, Abteilung oder Projekt.</block>
   <block id="8f0b3e866642f7b2bd73e95879da522a" category="paragraph">Mit der Identitäts- und Zugriffsverwaltung (IAM) der NetApp Console können Sie Ihre NetApp -Ressourcen organisieren und den Zugriff entsprechend Ihrer Unternehmensstruktur steuern – nach Standort, Abteilung oder Projekt.</block>
-  <block id="3ffaa4542bdc105235c2aa6d84398ba1" category="paragraph">Die Ressourcen sind hierarchisch angeordnet: An oberster Stelle steht die Organisation, gefolgt von Ordnern (die weitere Ordner oder Projekte enthalten können) und dann Projekten, die Speichersysteme, Workloads und Agenten enthalten.</block>
-  <block id="6eccc51ae400d9583687f84b5fbdb257" category="admonition">Sie benötigen die Rollen _Super admin_, _Organization admin_ oder _Folder or project admin_, um IAM in der NetApp Console zu verwalten.</block>
   <block id="e8c67cc0d7ca66d55340b50ff19e81d8" category="inline-image-macro">Ein konzeptionelles Diagramm, das die Komponenten des Ressourcenmanagements darstellt.</block>
-  <block id="64e87e268d8a02cfb5d37a77e92402d6" category="paragraph"><block ref="0642d6783c4254d0630aae1c47f2e5b2" category="inline-image-macro-rx" type="image"></block>]</block>
   <block id="6dc5e990649602e7e565307ea2b766cc" category="section-title">Komponenten für Identitäts- und Zugriffsmanagement</block>
-  <block id="b9bd354ffbde2ab3520144428026e644" category="paragraph">In der NetApp Console organisieren Sie Ihre Speicherressourcen mithilfe von drei Hauptkomponenten: Organisationskomponenten, Ressourcenkomponenten und Benutzerzugriffskomponenten.</block>
-  <block id="8031ad367c5f0eab4552c9249b900da5" category="section-title">Projekte und Ordner innerhalb Ihrer Organisation</block>
-  <block id="b1e9822212430f6a045685b8ee19be13" category="paragraph">Innerhalb Ihrer IAM-Struktur arbeiten Sie mit drei Organisationskomponenten: Organisationen, Projekten und Ordnern. Sie können Benutzern Zugriff gewähren, indem Sie ihnen Rollen auf einer dieser Ebenen zuweisen.</block>
-  <block id="6cded2372fd04c9dd52343a98f35146b" category="list-text">Ein _Projekt_ dient dazu, Zugriff auf eine Speicherressource zu ermöglichen. Sie müssen Ressourcen einem Projekt zuweisen, bevor jemand darauf zugreifen kann. Sie können einem einzelnen Projekt mehrere Ressourcen zuweisen und Sie können auch mehrere Projekte haben. Anschließend weisen Sie den Benutzern Berechtigungen für das Projekt zu, um ihnen Zugriff auf die darin enthaltenen Ressourcen zu gewähren.</block>
   <block id="8427feb21fa52ea7a726ef6e57657a30" category="paragraph">Sie können beispielsweise ein lokales ONTAP System einem einzelnen Projekt oder allen Projekten in Ihrer Organisation zuordnen, je nach Ihren Bedürfnissen.</block>
   <block id="34c4afb90e82099fac404c0f590e4c24" category="inline-link-macro">Erfahren Sie, wie Sie Projekte zu Ihrer Organisation hinzufügen.</block>
   <block id="caee6d2f97679cf9374c79a1d6ae25b0" category="paragraph"><block ref="caee6d2f97679cf9374c79a1d6ae25b0" category="inline-link-macro-rx"></block></block>
-  <block id="dbbd0be2ab27e73b122e8161ad90c3da" category="list-text">Gruppieren Sie verwandte Projekte in Ordnern, um sie nach Standort, Standort oder Geschäftsbereich zu organisieren. Ressourcen können nicht direkt Ordnern zugeordnet werden, aber durch die Zuweisung einer Rolle auf Ordnerebene erhält der Benutzer Zugriff auf alle Projekte in diesem Ordner.</block>
-  <block id="4141f49cc8cf63834c1efaa049d309e0" category="inline-link-macro">Erfahren Sie, wie Sie Ordner zu Ihrer Organisation hinzufügen.</block>
-  <block id="9b81d805be63395863d2a1721014a6bb" category="paragraph"><block ref="9b81d805be63395863d2a1721014a6bb" category="inline-link-macro-rx"></block></block>
-  <block id="de535fcbd4d214b2ab192b8311cd28bb" category="paragraph">+ Eine Ressource muss einem Projekt zugeordnet werden, bevor jemand darauf zugreifen kann.</block>
   <block id="41e1fd34ab20918035d6b06b198a4dd6" category="paragraph">Beispielsweise können Sie ein Cloud Volumes ONTAP -System einem einzelnen Projekt oder allen Projekten in Ihrer Organisation zuordnen. Wie Sie eine Ressource zuordnen, hängt von den Bedürfnissen Ihrer Organisation ab.</block>
   <block id="ea7af68e4527f06be6522ac5e2825e2d" category="inline-link-macro">Erfahren Sie, wie Sie Ressourcen Projekten zuordnen.</block>
   <block id="54b06ad2f4c53f14ee1e9e9d7c2b1b2a" category="paragraph"><block ref="54b06ad2f4c53f14ee1e9e9d7c2b1b2a" category="inline-link-macro-rx"></block></block>
-  <block id="235f31305ad49210767c08b30ea8f944" category="list-text">Speichersysteme und Keystone -Abonnements</block>
   <block id="acf67f786e22a15c3ff04ae1f6c8ea12" category="paragraph">Keystone -Abonnements sind außerdem Ressourcen, die Sie Projekten zuordnen können, um Benutzern Zugriff auf das Abonnement in der NetApp Console zu gewähren.</block>
-  <block id="8e88fe5e613df95ef0fde3cf27c21a5b" category="list-text">Organisationsadministratoren erstellen Konsolenagenten, um Speichersysteme zu verwalten und NetApp -Datendienste zu aktivieren. Agenten sind zunächst an das Projekt gebunden, in dem sie erstellt wurden. Administratoren können sie jedoch von der Agentenseite aus anderen Projekten oder Ordnern hinzufügen.</block>
-  <block id="628d9176cd0fff84e7a7642d6e347c77" category="paragraph">Durch die Zuordnung eines Agenten zu einem Projekt wird die Verwaltung von Ressourcen in diesem Projekt ermöglicht, während die Zuordnung eines Agenten zu einem Ordner es Ordner- oder Projektadministratoren erlaubt, zu entscheiden, welche Projekte den Agenten verwenden sollen. Um Managementfunktionen bereitstellen zu können, müssen Agenten bestimmten Projekten zugeordnet werden.</block>
   <block id="803ae69b5603a03e7969373e143099c4" category="inline-link-macro">Erfahren Sie, wie Sie Agenten Projekten zuordnen.</block>
   <block id="d2023a4ab828cd6c831b409006f97d93" category="paragraph"><block ref="d2023a4ab828cd6c831b409006f97d93" category="inline-link-macro-rx"></block></block>
   <block id="3046a3cf2a88459ab80652e4ae68b22c" category="section-title">Mitglieder und Rollen</block>
-  <block id="c16d2c57bf7fad0e40cde58d27c1339f" category="paragraph">Sie müssen Mitglieder zu Ihrer Organisation hinzufügen, nachdem diese sich bei der NetApp Console angemeldet haben. Sobald sie hinzugefügt wurden, können Sie ihnen Rollen zuweisen, um ihnen Zugriff auf Ressourcen zu gewähren. Sie können Servicekonten manuell über die Konsole hinzufügen oder deren Erstellung und Verwaltung über die NetApp Console IAM API automatisieren.</block>
   <block id="43b297cbb0e75204baf387be01022755" category="paragraph"><block ref="43b297cbb0e75204baf387be01022755" category="inline-link-macro-rx"></block></block>
-  <block id="f916d263ec3be157e30192a304e53728" category="paragraph">Wenn Sie einem Mitglied eine Rolle zuweisen, können Sie diese Rolle für die gesamte Organisation, einen bestimmten Ordner oder ein bestimmtes Projekt vergeben. Die von Ihnen ausgewählte Rolle gewährt einem Mitglied Berechtigungen für die Ressourcen im ausgewählten Teil der Hierarchie.</block>
-  <block id="ef07a2f4fd4017b8814a997f89b39300" category="paragraph">Die NetApp Console bietet differenzierte Rollen, die dem Prinzip der „minimalen Berechtigungen“ folgen. Das bedeutet, dass Zugriffsrollen so gestaltet sind, dass Benutzer nur auf das zugreifen können, was sie benötigen.</block>
-  <block id="2a841c3875a3cfb6973b8cf8d764ccb7" category="paragraph">Dies bedeutet, dass Benutzern im Zuge der Erweiterung ihrer Aufgaben mehrere Rollen zugewiesen werden können.</block>
   <block id="04049ea3946b8d071880d432ab8244f5" category="section-title">Beispiele für IAM-Strategien</block>
   <block id="0107f97fd7cbc1a3c8ceb62d7e5a6d61" category="section-title">Strategie für kleine Organisationen</block>
   <block id="32443b220e6828d6f9f8016ad5c10432" category="paragraph">Für Organisationen mit weniger als 50 Benutzern und zentralisierter Speicherverwaltung empfiehlt sich ein vereinfachter Ansatz mit den Rollen Super-Administrator und Super-Betrachter.</block>
@@ -5519,10 +5379,7 @@
   <block id="839048d357b4befdffffdf7daf5ab90a" category="section-title">Konsolenressourcentypen</block>
   <block id="005ca739b8c68c884a42cd2b34782fd8" category="paragraph">Sie können in Ihrer NetApp Console Organisation verschiedene Ressourcentypen Projekten zuordnen:</block>
   <block id="19dbfcf1459f2bf9d1efc94a96c88d10" category="list-text">Speicherressourcen</block>
-  <block id="63798ea34197c7edbbb5794fb20b2d0e" category="list-text">Speicherressourcen sind die am häufigsten vorkommende Ressourcenart in Ihrem Unternehmen und umfassen sowohl lokale als auch Cloud-Speichersysteme. Wenn Sie ein Speichersystem zur Konsole hinzufügen, können Sie es einem Ordner oder Projekt hinzufügen. Bis dahin wird es in der Konsole als nicht entdeckt markiert und nicht auf der Seite *Ressourcen* angezeigt.</block>
-  <block id="9c1341268d013754bd82bdf6ffbb0757" category="list-text">Wenn Sie einen Console-Agenten zur Erkennung von Speichersystemen verwendet haben, fügen Sie den Agenten demselben Ordner oder Projekt hinzu. Dies ermöglicht es Benutzern, agentenbasierte Funktionen auszuführen, wie z. B. Datendienste oder die native Speicherverwaltung der Konsole. Sie können Agenten über die Seite *Agenten* in der Konsole Ordnern oder Projekten hinzufügen. <block ref="a6db5244ec8666b2e12c38c770923c31" category="inline-link-macro-rx"></block>Die</block>
   <block id="6e0ffc28497d27ad3c6bea6ff91952d8" category="list-text">Keystone -Abonnements</block>
-  <block id="914389e5e60dfc20b254ad9e68c9222f" category="list-text">Wenn Sie in Ihrer Organisation Keystone Abonnements haben, können Sie diese auf der Seite *Ressourcen* einsehen. Sie können Keystone -Abonnements mit Ordnern oder Projekten verknüpfen, um Mitgliedern, die über Berechtigungen für diese Ordner oder Projekte verfügen, Zugriff zu gewähren.</block>
   <block id="0ae3744d4aece1a5dd0a98ad7070fcda" category="admonition">Die Konsole schließt Amazon FSx for NetApp ONTAP Ressourcen von der Ressourcenseite aus, da Benutzer sie keiner Rolle zuordnen können. Sie können diese Ressourcen auf der Seite *Systeme* oder unter Workloads einsehen.</block>
   <block id="213681c9dc8fd7427e93994d790da314" category="paragraph">Verknüpfen Sie eine Ressource mit einem Ordner oder Projekt, um sie Mitgliedern zur Verfügung zu stellen, die über Berechtigungen für diesen Ordner oder dieses Projekt verfügen.</block>
   <block id="c04502b23fc006429135d64d911d5536" category="list-text">Wenn Sie die Ressource mit einem Ordner verknüpft haben, kann ein _Ordner- oder Projektadministrator_ jetzt auf die Ressource zugreifen und sie mit einem Projekt innerhalb des Ordners verknüpfen. <block ref="af70645a2ec4694e18976ffdc9418df7" category="inline-link-macro-rx"></block>Die</block>
@@ -5636,8 +5493,6 @@
   <block id="e164f7a733b2fa9b64a65e86a09dd8a1" category="sidebar">NetApp Supportkonten</block>
   <block id="809491e400d5e2dcbace5d5f1a7a33be" category="sidebar">NSS-Anmeldeinformationen verwalten</block>
   <block id="4cdcdd6cc684e8847f57a8c461306706" category="sidebar">Bereitstellen eines Konsolenagenten</block>
-  <block id="bbc07544cc7c462eb5a4289a5bcfc9f6" category="sidebar">Erstellen Sie einen Konsolenagenten aus dem AWS Marketplace.</block>
-  <block id="4a3560a731f667c1fdd695e7355a9a38" category="sidebar">Erstellen Sie einen Konsolenagenten aus dem Azure Marketplace.</block>
   <block id="775bf3ee1192539276369c51ffb1e11a" category="sidebar">Cloud-Anbieter-Zugangsdaten verwalten</block>
   <block id="a8e85a76d65daefc79e2cc1686473b8b" category="sidebar">Richten Sie Ihre Konsolenorganisation ein.</block>
   <block id="74e6765601a5bb33738c62a4a5fa467e" category="sidebar">Ordner und Projekte erstellen</block>
@@ -5675,7 +5530,6 @@
   <block id="3a78a8ea0b02debae5e6b16cc1929cb5" category="paragraph">Sie können nun die Netzwerkverbindungen verbundener Console-Agenten direkt von der NetApp Console aus validieren. Diese Funktion hilft, die Konnektivität zu überprüfen und Probleme mit Console-Agenten zu beheben. Dies ist zusätzlich zur bestehenden Möglichkeit, Netzwerkanalysen über die Befehlszeile (CLI) der Console-Agent-Wartungskonsole auszuführen.</block>
   <block id="16e0d5a8229f3c0136c12aa9def60bb1" category="inline-link-macro">Erfahren Sie, wie Sie die Konfiguration aus der NetApp Console ausführen.</block>
   <block id="3cb937c3382e580784aa7486c365ec19" category="paragraph"><block ref="3cb937c3382e580784aa7486c365ec19" category="inline-link-macro-rx"></block></block>
-  <block id="ee856bddd35f8f0d8d6a5e0b5017b7dd" category="sidebar">Console-Agenten verstehen</block>
   <block id="1b074cef0a39f307bf3f23d76207e4f6" category="sidebar">Standardagentenkonfiguration</block>
   <block id="cf6adff661a596f01b211beffb99d879" category="paragraph">Sie müssen Proxy-Informationen hinzufügen, falls Ihr Netzwerk einen Proxy für den Internetzugang benötigt. Sie können während der Installation einen expliziten Proxy hinzufügen. Die<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> und<block ref="a2bb8d2428da5c2a723c47bd3b78308d" prefix=" " category="inline-code"></block> Parameter sind optional und Sie werden nicht dazu aufgefordert, sie hinzuzufügen. Wenn Sie einen expliziten Proxyserver haben, müssen Sie die Parameter wie gezeigt eingeben.</block>
   <block id="55ccbb5c67dea0ea25dc1703475c6f80" category="paragraph">+<block ref="595589ae3dfdb377f4f5b01e56137ac6" prefix=" " category="inline-code"></block> konfiguriert den Konsolenagenten für die Verwendung eines HTTP- oder HTTPS-Proxyservers in einem der folgenden Formate:</block>
@@ -5699,11 +5553,9 @@
   <block id="ee4c6f236464665c90e91a3f4c9b027f" category="section-title">Einmaliges Anmelden mit Ihrem Identitätsanbieter</block>
   <block id="118079baff415c40b2ccc891079ba2e1" category="paragraph">Weisen Sie Zugriffsrollen auf Organisations-, Ordner- oder Projektebene zu, damit Benutzer den richtigen Zugriff auf Ressourcen haben.</block>
   <block id="16c8cb56a7f9e98bee6f5799207b5d74" category="paragraph">Eine _Ressource_ ist eine Entität, die der Console bekannt ist und die einem Projekt zugewiesen werden kann. _Ressourcen_ umfassen Speichersysteme, Keystone-Abonnements, einige NetApp Backup and Recovery-Workloads sowie Console-Agenten.</block>
-  <block id="17fcc6a962ac37e30e3ac0efd8e7e1ab" category="list-text">Speichersysteme sind die primären Ressourcen, die Sie in NetApp Console verwalten. NetApp Console unterstützt die Verwaltung sowohl lokaler als auch Cloud-Speichersysteme. Sie müssen einem Projekt ein Speichersystem hinzufügen, damit die dem Projekt zugewiesenen Personen darauf zugreifen können.</block>
   <block id="87d2b5d50a3f94d38a8b567627e0fb58" category="list-text">Speichersysteme</block>
   <block id="c5a4c92d61a00aa93ed0e2e91cd396e5" category="list-text">Speichersysteme werden automatisch dem Projekt zugeordnet, in dem sie hinzugefügt werden, aber Sie können sie auf der Seite *Ressourcen* auch anderen Projekten oder Ordnern zuordnen. Sie können FSx for NetApp ONTAP-Speichersysteme nicht Projekten oder Ordnern zuordnen, aber Sie können sie auf der Seite *Systeme* oder unter Workloads einsehen.</block>
   <block id="b21b013b17072459deed40157a28f04c" category="list-text">Backup and Recovery-Workloads (Oracle und Microsoft SQL Server)</block>
-  <block id="74869869e1e77d7ff0af89938eb46965" category="list-text">Einige Backup und Recovery Workloads werden ebenfalls als Ressourcen betrachtet. Sie können Benutzern Berechtigungen für den Zugriff auf Backup und</block>
   <block id="e1826278f73613e39c2eb5a5b9bc4593" category="doc">Organisationspartnerschaften in NetApp Console</block>
   <block id="566147af4c9016826e0b72e65115c15c" category="paragraph">Weisen Sie einem oder mehreren Benutzern in der initiierenden und der empfangenden Organisation die Rolle Partnership admin zu, damit sie Partnerschaften erstellen und verwalten können. Sie können Benutzern, die Partnerschaften lediglich einsehen, aber nicht verwalten müssen, die Rolle Partnership viewer zuweisen.</block>
   <block id="fa65dbaec8413a6f5b464ae076206d91" category="paragraph"><block ref="fa65dbaec8413a6f5b464ae076206d91" category="inline-link-macro-rx"></block></block>
@@ -5762,29 +5614,19 @@
   <block id="c1c74cf0737facb2879b7e9d70e13707" category="cell">Gehe zu<block ref="f887ca45067fd52c2ee2854f67f70a25" category="inline-link-rx"></block>.</block>
   <block id="fad45f664f0478b74c9485a0b1f6d781" category="inline-link-macro">Berechtigungen für den privaten Modus einrichten</block>
   <block id="6c3a57872e006099844f13049e7b1891" category="list-text"><block ref="6c3a57872e006099844f13049e7b1891" category="inline-link-macro-rx"></block></block>
-  <block id="6ac740475336104c0a338afa7c968b92" category="summary">Sie aktivieren die NetApp Console-Funktionen, indem Sie Konsolenagenten bereitstellen – eine schlanke Softwarekomponente, die eine sichere Verbindung zwischen Ihren lokalen und Cloud-Speichersystemen und der NetApp Console herstellt und so eine erweiterte Speicherorchestrierung und Datendienste ermöglicht.</block>
-  <block id="8ac78ab8923692f88d46369bad02e649" category="paragraph">Sie aktivieren die NetApp Console-Funktionen, indem Sie Konsolenagenten bereitstellen – schlanke Softwarekomponenten, die eine sichere Verbindung zwischen Ihren lokalen und Cloud-Speichersystemen und der NetApp Console herstellen und so eine erweiterte Speicherorchestrierung und Datendienste ermöglichen.</block>
   <block id="64de839c0c32e1a751d58d0ef8b0fdfb" category="section-title">Was ein Console-Agent tut</block>
-  <block id="19e6068a69e57ce5709e253adb1d4062" category="paragraph">Ein Console-Agent überbrückt die Netzwerklücke zwischen Ihren Speichersystemen und der NetApp Console. Er verbindet Ihre Infrastruktur sicher mit den NetApp APIs und der Console und ermöglicht Ihnen Folgendes:</block>
   <block id="fdcdd0b06c236ebbe76d60efcc4cd7ec" category="list-text">Entdecken und überwachen Sie Speichersysteme in AWS-, Azure-, Google Cloud- und On-Premises-Umgebungen über die NetApp Console.</block>
   <block id="c46631c16d2e1fcc35bf31842e6161f5" category="list-text">Orchestrieren Sie Speicherbereitstellungs- und Konfigurationsaufgaben auf Speichersystemen von der NetApp Console.</block>
-  <block id="785bc63c597dfac25b559538c8e96503" category="list-text">Aktivieren Sie erweiterte Datenschutz- und Optimierungsdienste.</block>
-  <block id="d20c1539205e6fd1b25947b81eddfd64" category="list-text">Verknüpfen Sie Ihre Cloud-Anbieter-Zugangsdaten mit einem Console-Agenten, um die Nutzung von Cloud-Diensten sicher zu verfolgen und Bereitstellungen mit dem richtigen Abonnement zu verbinden, damit eine genaue Abrechnung und Kostenverwaltung möglich ist.</block>
-  <block id="6a02c4b17140e3428ec94946b7d436e4" category="section-title">Agentenarchitektur</block>
   <block id="a25e3c2f3dac5d7e6482dce310183cd5" category="paragraph">Agenten arbeiten mit schlanken Prozessen, die:</block>
-  <block id="768d6d76975488f4ba88ef017c4edd78" category="list-text">Daten zur und von der Console SaaS-Anwendung übertragen (Standard- und eingeschränkter Modus) oder ausschließlich lokal arbeiten (privater Modus)</block>
   <block id="f70202345a6dfcbfe77d627d2ac58285" category="list-text">Initiieren Sie die gesamte Kommunikation – die Konsole initiiert niemals ausgehende Anrufe an Agenten</block>
   <block id="93600a46170527ea578d26f1b7fde4e3" category="list-text">Stellen Sie über Standardverwaltungsprotokolle eine Verbindung zu Ihren Speichersystemen her</block>
   <block id="972474bcb92581c6b930a7f04f6d8710" category="list-text">Verwenden Sie TLS 1.3 für die sichere Kommunikation mit Cloud-Anbietern und den NetApp Console-APIs</block>
-  <block id="e61e46b7de69fefd5d77bc17d028e3b6" category="section-title">Verfügbarkeit des Agenten und betriebliche Anforderungen</block>
-  <block id="e6b8da90c6635e88daf47711cf3785d0" category="paragraph">Console-Agenten sind eine kritische Infrastruktur für NetApp Console. NetApp Console kann kurze Ausfälle überbrücken, aber die Agenten müssen betriebsbereit und erreichbar bleiben, um einen unterbrechungsfreien Management- und Datenbetrieb zu gewährleisten. Sie sind dafür verantwortlich, Folgendes sicherzustellen:</block>
   <block id="74c2f09d744d651cb5a4a662d2b18d1c" category="list-text">Agenten bleiben aktiv und laufen weiter</block>
   <block id="fd15e45efbec8c5db31829777b77fcb0" category="list-text">Agenten haben Netzwerkverbindung zu den erforderlichen Endpunkten</block>
   <block id="1fd9dbae51b571c6b97ab45c3154513f" category="list-text">Infrastrukturausfälle werden schnell behoben</block>
   <block id="7b5156100172ee6fa1476bac765fd041" category="list-text">Die Agenten-VMs werden gemäß den Empfehlungen von NetApp gewartet und aktualisiert.</block>
   <block id="d24ccb00f9e5803fe3257cfa648d21ce" category="section-title">Wenn Sie einen Console Agent benötigen</block>
   <block id="9325edcf04c322305789f32f84c0cb59" category="paragraph">Sie müssen mindestens einen Console-Agenten bereitstellen, wenn Sie Folgendes tun möchten:</block>
-  <block id="223a9d9cbfb96107d7bd54234e33162a" category="list-text">Verwenden Sie eingeschränkte oder private Bereitstellungsmodi (Console in Ihrer eigenen Umgebung installiert). Für einige Dienste sind zusätzliche Agenten erforderlich.</block>
   <block id="7f01ef620ffff2abf7f2610491ec035d" category="list-text">Greifen Sie auf erweiterte Datendienste zu (NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, NetApp Data Classification und mehr).</block>
   <block id="ec9b2bc9b30484bfadf2945f19c86114" category="list-text">Cloud Volumes ONTAP Systeme verwalten.</block>
   <block id="6fe86acb33af67fd58702973ee4ab94a" category="list-text">Führe fortgeschrittene Verwaltungsaufgaben auf lokalen ONTAP Clustern durch.</block>
@@ -5793,35 +5635,15 @@
   <block id="be1c134e082f5cbc30cc533514d95cf5" category="paragraph"><block ref="d0fb4185dcdae7937ec99f5b30ad1a65" category="inline-link-macro-rx"></block> um zu verstehen, wann man einen Agenten benötigt und welche Funktionen Agenten ermöglichen.</block>
   <block id="e4a025a18b1f8e62ad15ad270a21573d" category="section-title">Bereitstellungsoptionen für Console-Agenten</block>
   <block id="5f4a870ffaecc8c4b3681d6ac88273fc" category="paragraph">Sie können Console-Agenten in bereitstellen:</block>
-  <block id="899d1bc9e05d1bc1959c42b13c2918a4" category="list-text">Amazon Web Services (standard, eingeschränkter oder privater Modus)</block>
-  <block id="2474cad8d741f2cd4c0890cf082af8db" category="list-text">Microsoft Azure (standard, eingeschränkter oder privater Modus)</block>
-  <block id="1d7cc8d3f6824854c5d2b12952fe2df1" category="list-text">Google Cloud (standard, eingeschränkter oder privater Modus)</block>
-  <block id="8a6bb6cb1b0238791d83a19a1046d664" category="list-text">Bei Ihnen vor Ort (Standard- oder Privatmodus)</block>
   <block id="0d3e897c4a816e0c092c2daf64921fe7" category="paragraph">Ihr Console-Bereitstellungsmodus, Ihre Speicherumgebung und Ihre Anforderungen an die Datenhoheit bestimmen, wo Sie Agenten bereitstellen. Stellen Sie mehrere Agenten in verschiedenen Umgebungen bereit, um organisatorische Trennung oder geschäftliche Anforderungen zu erfüllen.</block>
-  <block id="fd7b5a05c342e2d52f6a8285038457eb" category="paragraph">Nach der Bereitstellung eines Agenten registrieren Sie diesen bei Ihrer NetApp Console-Organisation, um die Funktionen für diese Organisation zu aktivieren. Sie können mehrere Speichersysteme und Datendienste mit einem einzelnen Agenten verknüpfen oder mehrere Agenten in verschiedenen Umgebungen bereitstellen, um organisatorische Trennungen oder geschäftliche Anforderungen zu erfüllen.</block>
   <block id="1d21faf6497a388f1c21c3018f517792" category="section-title">Agenten für die NetApp Console SaaS-Anwendung (Standardmodus)</block>
   <block id="64bd2b23107c1554c9272fddbd63de33" category="paragraph">Setzen Sie Agenten in Ihrer Cloud oder lokal ein, um die Verbindung zur Cloud-gehosteten Console SaaS-Anwendung herzustellen. Agenten ermöglichen erweiterte Funktionen, während die Console-UI weiterhin von überall aus zugänglich bleibt.</block>
   <block id="2d99f5ff70e4995a63fd979f218ffff6" category="paragraph">Sie können Agenten direkt von der Console installieren, wenn Sie die SaaS-Anwendung (Standardmodus) verwenden. Sie können in AWS, Azure oder Google Cloud installieren oder manuell vor Ort auf Ihrem eigenen Linux-Host oder in Ihrer VCenter-Umgebung.</block>
-  <block id="058e0a063d8fa981adaf3326cf1cb26b" category="paragraph">Wenn Sie einen Agenten in Ihren Räumlichkeiten installieren, können Sie die jeweiligen Cloud-Provider-Zugangsdaten verknüpfen, um die Abrechnungsintegration und Datendienste zu aktivieren.</block>
   <block id="d352fb6abd2321079aa6ae4cf5ccffd8" category="section-title">Agenten für NetApp Console im eingeschränkten Modus</block>
-  <block id="bb86181d92786b27c5037b1e2052f318" category="paragraph">Sie müssen einen Agenten installieren, über den die Benutzer auf die NetApp Console zugreifen. Zusätzliche Agenten sind erforderlich, um Datendienste zu aktivieren und Speichersysteme zu verwalten.</block>
-  <block id="801101aa6060932ba30773f5b51fb2e1" category="paragraph">Wenn Sie die NetApp Console im eingeschränkten Modus verwenden, installieren Sie Agenten entweder über den Marktplatz Ihres Cloud-Anbieters oder indem Sie die Software manuell auf Ihrem eigenen Linux-Host in der Cloud, vor Ort oder in Ihrer VCenter-Umgebung installieren.</block>
-  <block id="cd9eaf17be6a58930ba21c8e25898ae0" category="paragraph">Sie müssen einen Agenten installieren, über den die Benutzer auf die NetApp Console zugreifen. Zusätzliche Agenten sind erforderlich, um Datendienste zu aktivieren und Speichersysteme zu verwalten.</block>
   <block id="39f03287943ea9024a48114d1c813c9c" category="section-title">Agenten für NetApp Console im privaten Modus (lokal oder in der Cloud ohne ausgehende Konnektivität)</block>
-  <block id="58b57be8256f389aa03c4bd2a43e14c7" category="paragraph">Installieren Sie Agenten in Ihrem Rechenzentrum oder einer abgeschotteten Umgebung. Die Agenten haben keine Verbindung zu NetApp API-Endpunkten. Alle Vorgänge bleiben lokal, mit voller Datenhoheit und Kontrolle.</block>
   <block id="174d20ad6124d3d071e1cf8db158cf81" category="section-title">Verwenden Sie mehrere Agenten, wenn nötig</block>
   <block id="34844adab5cab548cd83a1bbdf5cf105" category="paragraph">Jeder Agent arbeitet unabhängig und kann mehrere Speichersysteme und Datendienste verwalten. Setzen Sie mehrere Agenten ein, wenn Sie Folgendes benötigen:</block>
   <block id="da16884e7d880d3d379590aa3547eb5f" category="list-text">Isolation nach Speichertyp oder Organisationsfunktion</block>
-  <block id="48b5e113a80ee93a31fb523087a1228b" category="list-text">Erfüllen Sie geografische oder Netzwerksegmentierungsanforderungen</block>
-  <block id="51fdc08238f2b902c4ae72aa6f2170f9" category="paragraph">Erfahren Sie, wie Sie Console-Agenten bereitstellen:</block>
-  <block id="671c13c6a9ba7605dee99a36bb936c9b" category="inline-link-macro">Installieren Sie einen Agenten in AWS</block>
-  <block id="7731b95e61f103f4fcdc8c35c12c6a40" category="list-text"><block ref="e4c8ea5b65b48e6be5e2cc830b3a3126" category="inline-link-macro-rx"></block>.</block>
-  <block id="b3715f8647324203cdc79c6887601ee5" category="inline-link-macro">Installieren Sie einen Agenten in Azure</block>
-  <block id="3e45098b0d9c257b4627a17390ae1959" category="list-text"><block ref="a2c5157bc864eede4beff17cfa68d202" category="inline-link-macro-rx"></block>.</block>
-  <block id="c9d415f7120a9d16f9a9ab7755b6e8e4" category="inline-link-macro">Installieren Sie einen Agenten in Google Cloud</block>
-  <block id="5cc50e0700be2ae34f2fb511abc44d4f" category="list-text"><block ref="dd0c583ebdf9a13cbc10d1b593b7aad7" category="inline-link-macro-rx"></block>.</block>
-  <block id="3de032c3eca58d2f1334f31cbf9c1f97" category="list-text"><block ref="4d8249618f142f0b8f88894df46c9870" category="inline-link-macro-rx"></block>.</block>
-  <block id="9e2328a47449dbb247a94c88105affd8" category="paragraph">Wenn Sie keine erweiterten Orchestrierungs- oder Datenschutzdienste benötigen, können Sie lokale ONTAP-Cluster und Cloud-native Speicherdienste zentral verwalten, ohne einen Agenten bereitzustellen. Einige Überwachungs- und Datenmobilitätstools sind ebenfalls ohne Agenten verfügbar.</block>
   <block id="b984ee282b5ae7bd8200b391985e0b7a" category="cell">*Storage-Management und Gesundheitsdienste*:</block>
   <block id="3ff457654de1144b6139c52950ddf987" category="inline-link-macro">Erfahren Sie mehr über NetApp Console-Modi</block>
   <block id="a0e82755b2273e9a4360c92766d25540" category="admonition">Die Föderation ist nicht verfügbar, wenn sich die NetApp Console im privaten Modus befindet. <block ref="c8f88c82d0a8784db4736bf5632657d2" category="inline-link-macro-rx"></block>.</block>
@@ -5950,9 +5772,7 @@
   <block id="83e5d949613547f552890cbaf97a52db" category="section-title">So starten Sie mit dem privaten Modus</block>
   <block id="2ec8b0a0f85b8d5eb1e817dd692d490d" category="paragraph">Der private Modus ist verfügbar, indem Sie das „Offline“-Installationsprogramm von der NetApp Support Site herunterladen.</block>
   <block id="fb45c34b4268797014451aa41c2ea38f" category="inline-link-macro">Erfahren Sie, wie Sie mit dem privaten Modus beginnen</block>
-  <block id="90dadad3719a53e4b2bc0f512e763bdb" category="paragraph">+ <block ref="fe22d90ac580c62f8eea5bbabb839850" category="inline-link-macro-rx"></block>.</block>
   <block id="958949b356b2f90081cbb745321e2bf3" category="inline-link">Erfahren Sie, wie Sie mit Cloud Volumes ONTAP in der AWS Secret Cloud oder Top Secret Cloud loslegen können.</block>
-  <block id="b05f814989364c5de6ec94ebc8e3b44b" category="paragraph">+ HINWEIS: Wenn Sie die NetApp Console in der <block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block> oder der <block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block> verwenden möchten, sollten Sie separate Anweisungen befolgen, um in diesen Umgebungen zu beginnen.<block ref="7305ccb1d247c4e62b18170abee468ff" category="inline-link-rx"></block></block>
   <block id="d1f73e853ae398a7dfb8e9ddb57c9920" category="section-title">NetApp Console Service- und Funktionsvergleich</block>
   <block id="29266a44516a1695ec25e51464e6ce51" category="paragraph">Diese Tabelle zeigt, welche Dienste und Funktionen im eingeschränkten und privaten Modus unterstützt werden.</block>
   <block id="aa0106ba900239b9b240117351fd31a1" category="admonition">Standardmodus (NetApp Console SaaS-Anwendung) unterstützt alle Funktionen.</block>
@@ -6013,7 +5833,6 @@
   <block id="56a5c925d77740ea69d50272863f3f75" category="section-title">26. Februar 2026</block>
   <block id="ca76fb3a5c3254bbb60d8872e85c0dd2" category="paragraph">Die <block ref="b366c1901726ed94faabaca293b342ab" prefix=" " category="inline-code"></block> und <block ref="a5bb5562c6a74b17ab2426705833048f" prefix=" " category="inline-code"></block> Berechtigungen wurden hinzugefügt, um Infrastructure Manager bei privaten Bereitstellungen von Cloud Volumes ONTAP in Google Cloud zu unterstützen.</block>
   <block id="822fb1292e00acb015eaeae98fa0d707" category="summary">Nachdem Sie die NetApp Console im privaten Modus eingerichtet und in Betrieb genommen haben, können Sie die Dienste nutzen, die im privaten Modus unterstützt werden.</block>
-  <block id="299e0f249c257857628a7f5786b1b039" category="doc">Was Sie als Nächstes tun können (privater Modus)</block>
   <block id="fced466a309d5f02b614e19af9c50a3a" category="paragraph">Weitere Hilfe finden Sie in der folgenden Dokumentation:</block>
   <block id="e2526549eb6efd40df917c2c161ca7e0" category="list-text"><block ref="e2526549eb6efd40df917c2c161ca7e0" category="inline-link-rx"></block></block>
   <block id="69eb68d33ba0429abb5fa64f4944c13f" category="inline-link">Scannen Sie lokale ONTAP Volumedaten mit NetApp Classification</block>
@@ -6107,7 +5926,6 @@
   <block id="c89064bda3f1ae133a231f5b1f44c3b0" category="list-text">Führen Sie auf dem Linux-Host die folgenden Befehle aus:</block>
   <block id="1b2b35b59eb889c82041c85d020846da" category="list-text">Löschen Sie auf dem Linux-Host alte, nicht verwendete Container-Image-Dateien, um Speicherplatz im Verzeichnis /var für die Re-Installation freizugeben.</block>
   <block id="c5fd214cdd0d2b3b4272e73b022ba5c2" category="open-title">Docker</block>
-  <block id="485b9a6d9e38df00661f2dd32a3f0746" category="summary">Der Konsolenagent wird automatisch aktualisiert, wenn er über eine ausgehende Verbindung verfügt. Wenn Ihr Konsolenagent keine ausgehende Verbindung hat, können Sie ihn manuell aktualisieren (zum Beispiel im privaten Modus).</block>
   <block id="3b240599579798c1fd8c4e7b4aa36e0e" category="sidebar">Stellen Sie die NetApp Console im privaten Modus bereit</block>
   <block id="754dab26f37da0666d18d084eeb9cac1" category="sidebar">Erste Schritte mit NetApp Console (SaaS)</block>
   <block id="fc2bd25c4501ebc9670b599a0996c243" category="sidebar">Arbeitsablauf für den Einstieg in den eingeschränkten Modus</block>
@@ -6117,20 +5935,313 @@
   <block id="dd340069cb16665edf781618805f1165" category="doc">Console Agent 4.5.0</block>
   <block id="de3b44fa9f294325dd837b3f15773cd6" category="paragraph">Die Version 4.5.0 unterstützt sowohl den Standardmodus als auch den eingeschränkten Modus.</block>
   <block id="8d40f2642d0505b33483f580f9515a11" category="paragraph">Diese Version des Console-Agenten enthält Sicherheitsverbesserungen und Fehlerbehebungen sowie die folgende neue Funktion.</block>
-  <block id="b8ea9a14287592fd39444f5f11f22b28" category="paragraph-title">Unterstützung für Konfigurationsprüfungen für erforderliche Ports</block>
   <block id="e6aa0876ac72372fe4102974fad02f9e" category="inline-link-macro">Erfahren Sie mehr über die Durchführung von Konfigurationsprüfungen auf dem Console agent.</block>
-  <block id="8fab8f63a86cd4593eb84501e6b42574" category="paragraph">Sie können mithilfe von Konfigurationsprüfungen überprüfen, ob die erforderlichen Ports für den Console Agent geöffnet sind. Sie können Konfigurationsprüfungen entweder von der Console oder der Agent Maintenance Console aus durchführen. <block ref="b6bcdf4dfaf7604bd81efc4009e39859" category="inline-link-macro-rx"></block></block>
   <block id="2de08c251ba5c647be79f6b565692ba4" category="section-title">Konsolenverwaltung</block>
   <block id="2bdd9842a1d8845c8d1b9f13695c4ac5" category="inline-link-macro">Erfahren Sie mehr über die Zuweisung von Keystone-Rollen an Partnerbenutzer.</block>
-  <block id="f932e5731af0b28e3d04131c77f23704" category="paragraph">Sie können Keystone-Rollen Partnerbenutzern zuweisen, um diesen Benutzern die Verwaltung von Keystone-Ressourcen in einer Partnerorganisation zu ermöglichen. <block ref="37c7e4a6dbebd9961095310c537fa832" category="inline-link-macro-rx"></block></block>
-  <block id="89c004a6a6a30c4e3297ce59ad9244fe" category="paragraph">Wählen Sie einen oder mehrere Dienste zur Validierung aus. Gültige Dienstnamen sind: <block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block> wodurch die Netzwerkverbindung zu den erforderlichen Console-Endpunkten sowie die Öffnung der erforderlichen Ports für den Console-Agenten überprüft wird.</block>
-  <block id="81e25f5172548cbe6ade4ab58b86b791" category="section-title">Überprüfen Sie den Netzwerk- und Portzugriff für den Console-Agenten</block>
-  <block id="79809c4a6f04cdeb09f4ec1df49c2f33" category="paragraph">Führen Sie Konfigurationsprüfungen an den Console Agents über die Console oder die Agent Maintenance Console durch, um sicherzustellen, dass sie auf die erforderlichen Endpunkte zugreifen können und die erforderlichen Ports geöffnet sind.</block>
   <block id="01440d4fde4475cae0005dbb66b8f907" category="list-text"><block ref="01440d4fde4475cae0005dbb66b8f907" category="inline-link-macro-rx"></block></block>
   <block id="83c2b9a6cf87b54eb30380def11da84d" category="list-text"><block ref="83c2b9a6cf87b54eb30380def11da84d" category="inline-link-macro-rx"></block></block>
-  <block id="b4a377b58913080baf7f33d3fbf72f1a" category="list-text"><block ref="b4a377b58913080baf7f33d3fbf72f1a" category="inline-link-macro-rx"></block></block>
   <block id="1bbaa3de74e15060c4e8eab23f5e562e" category="list-text"><block ref="1bbaa3de74e15060c4e8eab23f5e562e" category="inline-link-macro-rx"></block></block>
   <block id="fa05cdec48b95e7a466d56fb898a127b" category="admonition">Wenn Sie der Konsole eine Verbundgruppe hinzufügen und ihr eine Rolle zuweisen, können nur Benutzer, die Mitglieder dieser Gruppe in Ihrem IdP sind und sich bereits für die NetApp Console registriert und explizit eine Rolle in der Konsole zugewiesen bekommen haben, auf Ressourcen zugreifen. NetApp empfiehlt, diesen Benutzern eine Rolle mit minimalen Zugriffsrechten, wie zum Beispiel Organization viewer, zuzuweisen.</block>
   <block id="e40a26e15c2c65355aa43c03560cc632" category="list-text">Alle Benutzer müssen sich zunächst für die NetApp Console registrieren, bevor ihnen Zugriff auf Ressourcen gewährt werden kann, auch wenn sie Teil einer föderierten Gruppe sind.</block>
   <block id="34df2c4da19b4e31f0349125e9cabfc7" category="section-title">10. März 2026</block>
+  <block id="70f951e26d0f82125c6b126eda96abf3" category="list-text">Während der Installation prüft NetApp, ob auf dem Agent-Host mindestens 80 % des gesamten Festplattenspeichers verfügbar sind, einschließlich 48 GB in<block ref="68ab1268abb7e5f5688810968df97d6b" prefix=" " category="inline-code"></block> und 32 GB in<block ref="ca905eb4a00d34150573153a09e2e79b" prefix=" " category="inline-code"></block> (insgesamt 80 GB). Nach der Installation müssen mindestens 20 % des gesamten Festplattenspeichers verfügbar bleiben, einschließlich 12 GB in<block ref="68ab1268abb7e5f5688810968df97d6b" prefix=" " category="inline-code"></block> und 8 GB in<block ref="ca905eb4a00d34150573153a09e2e79b" prefix=" " category="inline-code"></block> (insgesamt 20 GB).</block>
+  <block id="6c2b7b3c5e84f4042f3d6d2fcefdb933" category="paragraph">Beachten Sie, dass Sie (Kunde) beim Anwenden kleinerer Sicherheitsupdates keine Dienste auf dem Console-Agent-Host stoppen müssen.</block>
+  <block id="eddcacabf97ccd7e1dee4ec808dd25fd" category="paragraph-title">Unterstützung für Konfigurationsprüfungen der erforderlichen Ports</block>
+  <block id="cb33727456248b735e49b29eeb0872ab" category="paragraph">Sie können mithilfe von Konfigurationsprüfungen überprüfen, ob die erforderlichen Ports für den Console Agent geöffnet sind. Sie können Konfigurationsprüfungen entweder von der Console oder der Agent Maintenance Console aus durchführen. <block ref="7af92084a09bd75adeb2599696166bd3" category="inline-link-macro-rx"></block></block>
+  <block id="ddce4978cfd5d98adb618dcf416c6735" category="paragraph">Sie können Keystone-Rollen Partnerbenutzern zuweisen, um diesen Benutzern die Verwaltung von Keystone-Ressourcen in einer Partnerorganisation zu ermöglichen. <block ref="0cfd89aa5faa36e757947073b4868cee" category="inline-link-macro-rx"></block></block>
+  <block id="15ddb6291e652b3c0316a7b15db5331f" category="doc">Console Agent 4.6.0</block>
+  <block id="fae382d7132035be0e5ef52e52a74b43" category="paragraph">Die Version 4.6.0 unterstützt sowohl den Standardmodus als auch den eingeschränkten Modus.</block>
+  <block id="2eb56c59e41feaf4292cee22bac918e8" category="paragraph-title">Unterstützung für Konfigurationsprüfungen des benötigten Speicherplatzes</block>
+  <block id="6644a48d7e2c01ea2eb4118705a6aecb" category="inline-link-macro">Erfahren Sie mehr über die Durchführung von Konfigurationsprüfungen auf dem Konsolenagent.</block>
+  <block id="01ec5c0199a20329cd9739a87994ba1d" category="paragraph">Sie können mithilfe von Konfigurationsprüfungen sicherstellen, dass der für den Konsolenagenten erforderliche Speicherplatz verfügbar ist. Sie können Konfigurationsprüfungen entweder über die Konsole oder die Wartungskonsole des Agenten durchführen. <block ref="2f1b890fa743352ff9f5cd648c952940" category="inline-link-macro-rx"></block></block>
+  <block id="6f8cdd1e2991c2d2f9a4580b6f79bf52" category="paragraph-title">Aktualisieren Sie einen vCenter-bereitgestellten Console-Agenten mithilfe einer ISO</block>
+  <block id="307d2695a2fce9ab7e904c8ad0ec1904" category="inline-link-macro">Erfahren Sie, wie Sie einen vCenter-bereitgestellten Konsolenagenten aktualisieren</block>
+  <block id="30c4a8a1d5fde5730fe4249081e4d06c" category="paragraph">Wenn Sie einen Console-Agenten in vCenter mithilfe einer OVA bereitgestellt haben, können Sie ihn jetzt auf eine neue Version aktualisieren, indem Sie eine ISO an die VM anhängen und das Upgrade von der VM-Wartungskonsole ausführen. <block ref="5494ba1785de42707e7a1fa6cefcddcd" category="inline-link-macro-rx"></block></block>
+  <block id="4d2638b05d3fa7aba4bb7424fa2b2a26" category="summary">Stellen Sie einen Konsolenagenten über die NetApp Console, den Marktplatz Ihres Cloud-Anbieters oder durch manuelle Softwareinstallation auf einem Linux-Host bereit. Die gewählte Bereitstellungsmethode bestimmt Ihre Kontrolle über den Host und wie schnell Sie starten können.</block>
+  <block id="9db458bccb025b8de9d4cfd46a4d1578" category="doc">Wählen Sie eine Bereitstellungsmethode für den Console-Agenten</block>
+  <block id="bf9b093b5914185e68f2bf0b3c47073f" category="paragraph">Stellen Sie einen Konsolenagenten über die NetApp Console, den Marktplatz Ihres Cloud-Anbieters oder durch manuelle Softwareinstallation auf einem Linux-Host bereit. Die gewählte Bereitstellungsmethode bestimmt Ihre Kontrolle über den Host und wie schnell Sie starten können.</block>
+  <block id="091643e3b21d7e830a310e57763b4775" category="paragraph">Für Cloud-Bereitstellungen können Sie einen Agenten in Amazon Web Services (AWS), Microsoft Azure oder Google Cloud bereitstellen.</block>
+  <block id="775737d382907fd41e70093d7ab88b9f" category="section-title">Bereitstellung über die NetApp Console</block>
+  <block id="d791eb5db248a6d2868b3d89245f5f00" category="paragraph">NetApp empfiehlt die Bereitstellung über die NetApp Console, wenn Sie den Standardmodus verwenden. Die NetApp Console führt Sie durch die Netzwerk- und Berechtigungskonfiguration und startet dann automatisch die VM oder Instanz bei Ihrem Cloud-Anbieter. Die Console führt Sie durch die Netzwerk- und Berechtigungskonfiguration und startet dann die VM oder Instanz bei Ihrem Cloud-Anbieter automatisch.</block>
+  <block id="0c953a85f1f4515ccc52506ecc778750" category="paragraph">Wählen Sie diese Methode, wenn:</block>
+  <block id="90998f8d07e9d695036b6f45409d2610" category="list-text">Sie setzen die Software in einer Standard-Cloud-Umgebung mit ausgehendem Internetzugang ein.</block>
+  <block id="3d75e3df90f147f1c1bd92e31cf7cc99" category="list-text">Sie möchten den schnellsten Weg zu einem laufenden Agenten mit dem geringsten manuellen Einrichtungsaufwand.</block>
+  <block id="f7b2ceb71d1db781418644d81e747782" category="cell">Vorteile</block>
+  <block id="90843c066e7c75581a9005b9579c151d" category="cell">Nachteile</block>
+  <block id="97a1958f09e3549d62ec20510e8f7f12" category="list-text">Geführte Einrichtung – die Konsole übernimmt die VM-Erstellung, die Softwareinstallation und die Erstregistrierung in einem einzigen Arbeitsablauf</block>
+  <block id="a52750f0190c1174a32d6525dd1e21b8" category="list-text">Wendet automatisch das richtige VM-Image und die richtige Konfiguration an</block>
+  <block id="25fba4b8d050186c4ada6a255f487d65" category="list-text">Die wenigsten manuellen Schritte aller Cloud-Bereitstellungsmethoden</block>
+  <block id="334a3cf1854d658e5d1bb6da8743a33e" category="list-text">Nicht verfügbar für lokale, eingeschränkte oder abgeschottete Umgebungen</block>
+  <block id="6d3a370481870c4cca24024b03b6e678" category="inline-link-macro">Stellen Sie einen Console-Agenten in AWS über die Console bereit.</block>
+  <block id="dd374dfb146154c9bd0f1204a9bbd647" category="inline-link-macro">Stellen Sie einen Console-Agenten in Azure über die Console bereit.</block>
+  <block id="df233a00b4dd3e4cbab6f6087c53babe" category="inline-link-macro">Stellen Sie einen Console-Agenten in Google Cloud über die Console bereit.</block>
+  <block id="cd5c109235b430869a51debc5f2424ed" category="paragraph"><block ref="96e5b459f326d154a96222701aeccce2" category="inline-link-macro-rx"></block> <block ref="d6ee2949c41de5065081ddd47dc4da6c" category="inline-link-macro-rx"></block> <block ref="2b42bfaca2fb652314e05ee6308fee68" category="inline-link-macro-rx"></block></block>
+  <block id="ac33e6fb279f4516fbb939d1a7993fb7" category="section-title">Bereitstellung über einen Cloud-Anbieter-Marktplatz</block>
+  <block id="ce86682fcbfc0b94f9e2f050a57d90bb" category="paragraph">Bei der Bereitstellung über den AWS Marketplace oder den Azure Marketplace wird die Agenteninstallation direkt vom Marketplace aus initiiert, nicht von der NetApp Console.</block>
+  <block id="ff537a2876e361e48ebdfb7a871d8a26" category="admonition">Eine dem Marktplatz gleichwertige Option ist in Google Cloud mithilfe von Google Cloud Tools (gcloud CLI oder Google Cloud console) anstelle eines herkömmlichen Marktplatzeintrags verfügbar.</block>
+  <block id="7e897e4a50cc8f2437aa414eb7ba4577" category="list-text">Ihre Organisation verlangt, dass sämtliche Cloud-Software über den Marktplatz beschafft wird.</block>
+  <block id="130e9087303643bb180070489c1c0df1" category="list-text">Sie ziehen es vor, Bereitstellungen über die Benutzeroberfläche Ihres Cloud-Anbieters anstatt über die NetApp Console zu initiieren.</block>
+  <block id="7346570b783aeaa687ddda4c19d5e377" category="list-text">Vertraute Bereitstellungsschnittstelle für Teams, die bereits mit der Konsole des Cloud-Anbieters arbeiten</block>
+  <block id="b2ff196c3d1b0fd16fa701e9840325c7" category="list-text">Die Bereitstellung wird außerhalb der NetApp Console initiiert, daher steht der geführte Workflow nicht zur Verfügung</block>
+  <block id="69e7b5100c54dabaa7a70a4691939fa4" category="inline-link-macro">Stellen Sie einen Console-Agenten in AWS über den Marketplace bereit.</block>
+  <block id="9da93c2471bd7615fdd0b26a9184dc62" category="inline-link-macro">Stellen Sie einen Konsolenagenten in Azure über den Marketplace bereit.</block>
+  <block id="2fd63b1553de7cdb8d62cc26cdf314c7" category="inline-link-macro">Stellen Sie einen Console-Agenten in Google Cloud mithilfe der Google Cloud-Tools bereit.</block>
+  <block id="e07e1048d9df6990833ad3fb67dac1c9" category="paragraph"><block ref="f1f839b91b4d709a258ed91266ca5a0f" category="inline-link-macro-rx"></block> <block ref="5490a9082f4fe808b2f57ad5577a239b" category="inline-link-macro-rx"></block> <block ref="eefac4b4f9842d202a1689224f842ba2" category="inline-link-macro-rx"></block></block>
+  <block id="0a6e20c91b3b90bff41aac0b71010f33" category="section-title">Manuelle Installation auf einem Linux-Host in der Cloud</block>
+  <block id="c2e678bc5765a0deadc8c824f329bd84" category="paragraph">Die manuelle Installation ermöglicht es Ihnen, die Console-Agent-Software direkt auf einem Linux-Host zu installieren, den Sie in AWS, Azure, Google Cloud oder lokal bereitstellen und verwalten.</block>
+  <block id="cd0711c8d1cd587acf681abc28bf905b" category="list-text">Sie müssen in einer eingeschränkten oder privaten Umgebung ohne ausgehenden Internetzugang bereitstellen.</block>
+  <block id="66ef2cdffe9cac61636d8ce8150cbef9" category="list-text">Ihre Organisation verlangt, dass die gesamte Software auf vorab genehmigten, intern verwalteten Hosts installiert wird.</block>
+  <block id="b8b72b9335234a0da7491834cb62cf94" category="list-text">Unterstützt Umgebungen mit eingeschränktem ausgehendem Internetzugang (eingeschränkter Modus oder privater Modus)</block>
+  <block id="e2374b2fd1f74672bb5fa6d3c8612668" category="list-text">Aktualisierungen werden automatisch durchgeführt, wenn der Konsolenagent über Internetzugang verfügt</block>
+  <block id="a7ed66b9c705f50336846ff5ef191d94" category="list-text">Die meisten Schritte jeder Bereitstellungsmethode. Sie müssen den Host vorbereiten, Podman oder Docker installieren, das Netzwerk konfigurieren, die Software installieren und Berechtigungen manuell vergeben.</block>
+  <block id="23fcbd289622370ba64df81e884f7e66" category="list-text">* Die Bereitstellung wird außerhalb der NetApp Console initiiert, daher steht der geführte Workflow nicht zur Verfügung</block>
+  <block id="9f939267e0773fb60073eb9397e269aa" category="inline-link-macro">Manuelle Installation eines Console-Agenten in AWS</block>
+  <block id="a6ace19ad21eea33b105e68e43a2fa09" category="inline-link-macro">Manuelle Installation eines Console-Agenten in Azure</block>
+  <block id="d4cfedeb82bf9617a64723ba87591a81" category="inline-link-macro">Manuelle Installation eines Console-Agenten in Google Cloud</block>
+  <block id="94bb3f3d5596afa2ce9fd4f9a0ce5065" category="paragraph"><block ref="84e4c5822cb7118a8407917cb49ff995" category="inline-link-macro-rx"></block> <block ref="a07936a8d40c6e8fbb75930f0913dd28" category="inline-link-macro-rx"></block> <block ref="f68eae68210f07251bd0a330e990555a" category="inline-link-macro-rx"></block></block>
+  <block id="92a74ad4d7941d43571959e6aceb2b1d" category="section-title">Manuelle Installation lokal mit VCenter (OVA)</block>
+  <block id="3dc925b1204ea08a0d28c7908f7cd21f" category="paragraph">Bei Verwendung von VMware VCenter können Sie den Konsolenagenten durch Importieren einer OVA-Datei (Open Virtual Appliance) bereitstellen. Die OVA ist ein vorkonfiguriertes VM-Image, das Sie mit dem vSphere-Client bereitstellen, ohne Linux zu installieren oder eine Container-Laufzeitumgebung zu konfigurieren.</block>
+  <block id="967fd6a608264a97516302b9074f1377" category="list-text">Sie führen eine lokale Bereitstellung in einer VMware-Umgebung durch.</block>
+  <block id="0108204194025b72dec99100c458879c" category="list-text">Sie wünschen sich eine einfachere Installation vor Ort, die weniger Wartung und Linux-Einrichtung erfordert.</block>
+  <block id="35c40d0120343b4c03fe7b22907454ae" category="admonition">Google Cloud-Ressourcen können nicht über einen lokalen Console-Agenten verwaltet werden. Um Google Cloud-Ressourcen zu verwalten, installieren Sie den Agenten in Google Cloud.</block>
+  <block id="507889ebff75bd116ae3a7c87afad893" category="list-text">Einfachere Installation vor Ort, keine Einrichtung von Linux oder einer Container-Laufzeitumgebung erforderlich</block>
+  <block id="59a5b2c4cd8dc806d2b0160ef6cce2d6" category="list-text">Nur für lokale Installationen verfügbar; nicht für Cloud-Bereitstellungen verfügbar</block>
+  <block id="aef12e23c1f1d604cdd75f9803b1aa9c" category="list-text">Beinhaltet eine menügesteuerte Wartungskonsole für Agentenwartungsaufgaben</block>
+  <block id="6a65dacf4fecb91fcbd08fba485137a8" category="list-text">Vertrauter Bereitstellungsworkflow für VMware-Administratoren</block>
+  <block id="9d4eafc0d1975ce31c01c9722ff25704" category="list-text">* Ein vorkonfiguriertes VM-Image hilft, Fehler zu vermeiden und die Wartung zu erleichtern</block>
+  <block id="dfae738999d0d30bd2b070b2f2c332c3" category="list-text">Erfordert vCenter; kann nicht direkt auf einem Bare-ESXi-Host installiert werden</block>
+  <block id="4d57b20094505ac89a1ec5c30287b399" category="inline-link-macro">Lokale Bereitstellung mit VCenter</block>
+  <block id="014b4110a1d6bcfd7360d23b515296b3" category="paragraph"><block ref="014b4110a1d6bcfd7360d23b515296b3" category="inline-link-macro-rx"></block></block>
+  <block id="31172ee207143b4133abcddf6d5c722c" category="section-title">Manuelle Installation vor Ort (ohne VCenter)</block>
+  <block id="1235ca1452f2842499e187b4fb054629" category="paragraph">Sie können den Console-Agenten manuell auf jedem lokalen Linux-Host installieren. Sie müssen den Linux-Host und die Container-Laufzeitumgebung (Docker oder Podman) einrichten und anschließend den Console-Agenten installieren.</block>
+  <block id="076401621063d87cec75426d4d159932" category="list-text">Sie führen die Bereitstellung lokal durch und verfügen nicht über eine VMware VCenter-Umgebung.</block>
+  <block id="f03a956fe2537a403f15ad4493a91587" category="list-text">Sie sind mit der Linux-Administration vertraut und möchten den zugrunde liegenden Host selbst verwalten.</block>
+  <block id="1c6b22af2ee4d43b97894040b8642541" category="list-text">Sie möchten steuern, wann der Console-Agent aktualisiert wird.</block>
+  <block id="45cba4b64a76ef3eefafefe86789ed7c" category="list-text">Funktioniert auf jeder Linux-kompatiblen lokalen Hardware oder VM-Plattform – VMware ist nicht erforderlich</block>
+  <block id="02cadcabf098950d3b3cde5972655153" category="list-text">Unterstützt private (Air-Gap-)Bereitstellungen ohne ausgehenden Internetzugang</block>
+  <block id="fc01fb0386abba79a7c721bea7be4f5b" category="list-text">Sie müssen wissen, wie Sie Linux verwenden und Docker oder Podman selbst einrichten</block>
+  <block id="63eaad3d15a31650b1b5d145e69b3fea" category="list-text">Sie sind dafür verantwortlich, Aktualisierungen des Console-Agenten manuell anzuwenden, wenn neue Versionen veröffentlicht werden</block>
+  <block id="b54a281c9b68da4fb3182239ca4fd3d4" category="inline-link-macro">Manuelle Installation vor Ort</block>
+  <block id="a51bd5e1c76e0b54ebe83305ebaf1d92" category="paragraph"><block ref="a51bd5e1c76e0b54ebe83305ebaf1d92" category="inline-link-macro-rx"></block></block>
+  <block id="010c1b6d906b86f03bc3645e727e75aa" category="summary">Ein Konsolenagent ist eine schlanke Softwarekomponente, die Sie in Ihrem Netzwerk installieren, um Ihre Speicherinfrastruktur mit der NetApp Console zu verbinden. Er ermöglicht erweiterte Speicherorchestrierung, Datendienste und sichere Cloud-Integration.</block>
+  <block id="407c844995bdc40cbc8f0cd53e8fe02f" category="paragraph">Ein Console-Agent schließt die Verbindungslücke zwischen Ihren Speichersystemen und der NetApp Console. Er verbindet Ihre Infrastruktur sicher mit den NetApp APIs und der Console und ermöglicht Ihnen Folgendes:</block>
+  <block id="d92a0aeabf16b086e12807dd41878e27" category="list-text">Nutzen Sie intelligente Workflows für Datenschutz und Datenmanagement.</block>
+  <block id="deeb0bccffa42bdaaf01b815e4732b65" category="list-text">Verfolgen Sie die Nutzung von Cloud-Diensten sicher und verbinden Sie Bereitstellungen mit dem richtigen Abonnement für eine genaue Abrechnung und Kostenmanagement.</block>
+  <block id="83d1d44d4570ce3d44e1f323ea021688" category="section-title">Konsolenagentenarchitektur</block>
+  <block id="4d2002d09ea15148b99588aef3e483dc" category="list-text">Daten von und zur Console SaaS-Anwendung abrufen oder senden (Standard- und eingeschränkter Modus)</block>
+  <block id="949cbe60e5e970f89b89640ece858df3" category="section-title">Verfügbarkeit und Betriebsanforderungen des Konsolenagenten</block>
+  <block id="994e7d46bd1bb959ad4fd15dd04fb571" category="paragraph">Console-Agenten sind für NetApp Console unerlässlich. Agenten müssen stets betriebsbereit und erreichbar sein, um einen unterbrechungsfreien Management- und Datenservice zu gewährleisten. Sie sind dafür verantwortlich, Folgendes sicherzustellen:</block>
+  <block id="abe07efe048ac1cf92bd09d5c5f3103e" category="list-text">Verwenden Sie eingeschränkte oder private Bereitstellungsmodi (Console in Ihrer eigenen Umgebung installiert). Zusätzliche Agenten können erforderlich sein, um einige Dienste zu aktivieren.</block>
+  <block id="e25842751cafa99bcd27e28d53aa0a74" category="paragraph">Die folgende Tabelle zeigt, welche Speichersysteme und Dienste mit und ohne Console-Agent verfügbar sind.</block>
+  <block id="103dc98f6960434c2f9ff478ef8618f7" category="cell">*Unterstützte Speichersysteme*:</block>
+  <block id="0ef90fde5440e5fbd859cb4d59f76f2c" category="cell">On-premises ONTAP Cluster</block>
+  <block id="9b2d29fbe0d27c5340433f589b4ffedd" category="paragraph">^2^ Für genaue Homepage-Metriken werden entsprechend dimensionierte und konfigurierte Console-Agenten benötigt.</block>
+  <block id="762c7a5905f9e2e1e066d46ccf563a52" category="paragraph">Um Google Cloud-Ressourcen zu verwalten, müssen Sie Ihren Agenten in Google Cloud bereitstellen. Ein lokaler Agent kann keine Google Cloud-Ressourcen verwalten.</block>
+  <block id="6265d84f2de108c19a3c1b8a19a22d01" category="list-text">Bei Ihnen vor Ort (nur Standard- oder Private-Modi)</block>
+  <block id="3f2acb165155b9f2c13851d0a96a3f63" category="inline-link-macro">Vergleichen Sie die Bereitstellungsmethoden, um die richtige für Ihre Umgebung auszuwählen</block>
+  <block id="027ceb508378ef5e8201ac1ede31b97b" category="paragraph">Sie können Agenten direkt über die Console, über Ihren Cloud-Marktplatz oder manuell in VCenter oder lokal bereitstellen. <block ref="f56b5fe23e6f6d313560173f8ee670fb" category="inline-link-macro-rx"></block>.</block>
+  <block id="4d30ec0dc8488a3de78a5bd4a65493c5" category="paragraph">Im eingeschränkten Modus greifen Benutzer direkt über einen installierten Agenten auf die NetApp Console zu – nicht über die cloud-basierte SaaS-Anwendung. Sie müssen mindestens einen Agenten als Zugriffspunkt für die Console installieren. Weitere Agenten sind erforderlich, um Datendienste zu aktivieren und Speichersysteme zu verwalten.</block>
+  <block id="680309564f6bd76782e29a8b8d0d4889" category="paragraph">Installieren Sie Agenten vom Marktplatz Ihres Cloud-Anbieters oder indem Sie die Software manuell auf Ihrem eigenen Linux-Host in der Cloud, in Ihren Räumlichkeiten oder in Ihrer VCenter-Umgebung installieren.</block>
+  <block id="e2dca74da4ed1a459417acb1484581c1" category="paragraph">Im privaten Modus greifen Benutzer direkt über einen installierten Agenten auf die NetApp Console zu. Sie müssen mindestens einen Agenten als Zugriffspunkt für die Console installieren. Weitere Agenten sind erforderlich, um Datendienste zu aktivieren und Speichersysteme zu verwalten.</block>
+  <block id="e60553e52147dde3c95f2eea91a6bbb0" category="paragraph">Installieren Sie Agenten in Ihrem Rechenzentrum oder in einer abgeschotteten Umgebung. Die Agenten haben keine Verbindung zu NetApp API-Endpunkten, und alle Vorgänge bleiben lokal, mit voller Datenhoheit und Kontrolle.</block>
+  <block id="03537c5aead2ad159df93164f46cf6cd" category="list-text">Anforderungen an die geografische oder Netzwerksegmentierung</block>
+  <block id="541b81023128da67ac9cf4c10ec3b05b" category="list-text">In einer Multicloud-Umgebung können Sie einen Agenten in AWS und einen weiteren in Azure bereitstellen. Jeder Agent verwaltet die Cloud Volumes ONTAP Systeme in seiner jeweiligen Umgebung.</block>
+  <block id="173489b2f9652ae0419699a02c843220" category="list-text">Ein Dienstanbieter könnte eine Console-Organisation nutzen, um Dienstleistungen für Kunden bereitzustellen, und eine weitere Organisation für die Notfallwiederherstellung einer Geschäftseinheit. Jede Organisation benötigt einen eigenen Agenten.</block>
+  <block id="85cb17a7aed7b9acd0004fc99b4d7c30" category="paragraph">Agenten in der Cloud werden automatisch aktualisiert, sobald sie über ausgehenden Internetzugang verfügen. Für Agenten ohne Internetzugang (privater Modus) siehe <block ref="31babfeb991e4f9fd738c7c289a1cc2d" category="inline-link-macro-rx"></block> für Anweisungen zur manuellen Aktualisierung.</block>
+  <block id="ff818c51ea32ecd1389ca657f84d8386" category="list-text"><block ref="ff818c51ea32ecd1389ca657f84d8386" category="inline-link-macro-rx"></block></block>
+  <block id="78921777257c14b389323c9cd8eddd18" category="paragraph">Es gibt drei Arten von Mitgliedern in einer NetApp Console-Organisation:</block>
+  <block id="9842ecdb7a14e228db0bd52e747cd3e1" category="list-text">_Benutzerkonten_: Einzelne Benutzer, die sich in der NetApp Console anmelden, um Ressourcen zu verwalten. Benutzer müssen sich für die NetApp Console registrieren, bevor sie einer Organisation hinzugefügt werden können.</block>
+  <block id="aeca4fcd51c0f41739e5fa7ba1ef3fcf" category="list-text">_Dienstkonten_: Nicht-menschliche Konten, die von Anwendungen oder Diensten zur Interaktion mit der NetApp Console über APIs verwendet werden. Sie können Dienstkonten direkt zu Ihrer Console-Organisation hinzufügen.</block>
+  <block id="3cdd926d835528850a500619db932838" category="list-text">_Verbundene Gruppen_: Gruppen, die von Ihrem Identitätsanbieter (IdP) synchronisiert werden und Ihnen die gemeinsame Verwaltung des Zugriffs mehrerer Benutzer ermöglichen. Jeder Benutzer innerhalb einer verbundenen Gruppe muss sich für die NetApp Console registriert und Ihrer Organisation mit einer Zugriffsrolle hinzugefügt worden sein, bevor er auf die der Gruppe zugewiesenen Ressourcen zugreifen kann.</block>
+  <block id="b5d97030cd1280a71643f1aac21775e2" category="paragraph">Sie organisieren Ressourcen in einer Hierarchie: An oberster Stelle steht die Organisation, dann folgen Ordner (die wiederum andere Ordner oder Projekte enthalten können) und schließlich Projekte, die Speichersysteme, Workloads und Agenten umfassen.</block>
+  <block id="65659b876104048995f473c6d61584fe" category="admonition">Sie benötigen die Rollen _Super Admin_, _Organisationsadministrator_ oder _Ordner- bzw. Projektadministrator_, um IAM in der NetApp Console zu verwalten.</block>
+  <block id="0642d6783c4254d0630aae1c47f2e5b2" category="paragraph"><block ref="0642d6783c4254d0630aae1c47f2e5b2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7e91a6a14eddff5211a6fa18ba41e3ac" category="paragraph">NetApp Console IAM basiert auf drei Arten von Komponenten: Organisationskomponenten, die die Hierarchie definieren, Ressourcen, die innerhalb dieser Hierarchie zugewiesen werden, und Mitglieder und Rollen, die steuern, wer worauf Zugriff hat.</block>
+  <block id="cd6aee4291d019f321fb0650b4239e7a" category="section-title">NetApp Console-Organisationskomponenten</block>
+  <block id="f0c2a3eb67b8830e12786543e7d9d344" category="paragraph">Die organisatorischen Komponenten – Organisation, Ordner und Projekte – bilden eine Hierarchie, die festlegt, wie Ressourcen gruppiert und wie der Zugriff delegiert wird.</block>
+  <block id="f394fd451b02f013bf9a8b7533fe2076" category="list-text">Eine Organisation bildet die oberste Ebene des Console IAM-Systems und repräsentiert in der Regel Ihr Unternehmen. Ihre Organisation besteht aus Ordnern, Projekten, Mitgliedern, Rollen und Ressourcen. Ressourcen sind Projekten zugeordnet, und Mitgliedern werden Rollen auf Organisations-, Ordner- oder Projektebene zugewiesen.</block>
+  <block id="c454084e1661e1e6ce1cd0be0d8c648f" category="list-text">Projekte gruppieren Speicherressourcen. Weisen Sie Ressourcen Projekten zu und gewähren Sie Benutzern Zugriff auf Projektebene. Ressourcen können mehreren Projekten zugeordnet sein. Benutzer mit Projektzugriff können die zugehörigen Ressourcen nutzen.</block>
+  <block id="921d4719452855c619e84d308554529d" category="list-text">Gruppieren Sie zusammengehörige Projekte in _Ordnern_, um sie nach Standort, Site oder Geschäftsbereich zu organisieren. Sie können Ressourcen nicht direkt Ordnern zuordnen, aber wenn Sie einem Benutzer auf Ordnerebene eine Rolle zuweisen, erhält er Zugriff auf alle Projekte in diesem Ordner.</block>
+  <block id="4f5194fa1771b8ebe6101a8e9e4f034a" category="admonition">Benutzer mit der Rolle „Org admin“ können Ressourcen zu einem Ordner hinzufügen, um die Aufgabe, die Ressource Projekten zuzuordnen, an einen Ordner- oder Projektadministrator des jeweiligen Ordners zu delegieren. <block ref="af70645a2ec4694e18976ffdc9418df7" category="inline-link-macro-rx"></block>.</block>
+  <block id="710b5da64a715399d91f81d7b679da8b" category="paragraph">Verknüpfen Sie eine Ressource mit einem Projekt, damit Benutzer mit Zugriff auf das Projekt die Ressource nutzen können.</block>
+  <block id="66fcef27e5a8418109136d024e454e07" category="list-text">Speichersysteme sind die primären Ressourcen, die Sie in NetApp Console verwalten. NetApp Console unterstützt die Verwaltung sowohl lokaler als auch Cloud-Speichersysteme. Fügen Sie einem Projekt ein Speichersystem hinzu, damit Benutzer mit Zugriff auf das Projekt darauf zugreifen können.</block>
+  <block id="a1f90944761934e324b18d467e28f970" category="list-text">Einige Backup- und Recovery-Workloads werden ebenfalls als Ressourcen betrachtet. Weisen Sie einen Backup- und Recovery-Workload einem Projekt zu, um Benutzern Zugriff zu gewähren.</block>
+  <block id="82df311009003b6f1858213f4d5ff36b" category="list-text">Organisationsadministratoren erstellen Konsolenagenten, um Speichersysteme zu verwalten und NetApp Datenservices zu aktivieren. Agenten sind zunächst dem Projekt zugeordnet, in dem sie erstellt wurden, können aber von Administratoren über die Seite *Agenten* anderen Projekten hinzugefügt werden.</block>
+  <block id="1af654a2b7e523c47d1e0ac3f9ac175a" category="paragraph">Mitglieder sind die Benutzer und Dienstkonten in Ihrer Organisation. Rollen definieren, welche Aktionen sie ausführen können und auf welcher Ebene der Hierarchie—Organisation, Ordner oder Projekt.</block>
+  <block id="f71b4152f594b0b4ed6db49384c364ee" category="paragraph">Fügen Sie Mitglieder zu Ihrer Organisation hinzu, nachdem diese sich bei NetApp Console registriert haben. Nachdem Sie sie hinzugefügt haben, weisen Sie Rollen zu, um Zugriff auf Ressourcen zu gewähren. Sie können Dienstkonten manuell innerhalb der Console hinzufügen oder deren Erstellung und Verwaltung über die NetApp Console IAM API automatisieren.</block>
+  <block id="217aa9842d84c4deeef09a0417e96663" category="paragraph">Wenn Sie einem Mitglied eine Rolle zuweisen, können Sie diese Rolle für die gesamte Organisation, einen bestimmten Ordner oder ein bestimmtes Projekt vergeben. Die ausgewählte Rolle gewährt dem Mitglied Zugriff auf die Ressourcen im ausgewählten Teil der Hierarchie.</block>
+  <block id="a73b3b527a172ca79dfeff15eebce0f9" category="paragraph">NetApp Console bietet granulare Rollen, die dem Prinzip der „minimalen Berechtigung“ folgen, was bedeutet, dass die Zugriffsrollen so gestaltet sind, dass Benutzer nur Zugriff auf das erhalten, was sie benötigen.</block>
+  <block id="7da2d5e7bf4f39f32e76fd55ec5b269a" category="paragraph">Benutzer können im Zuge der Erweiterung ihrer Aufgaben mehrere Rollen übernehmen.</block>
+  <block id="2c9cae38402c53cb896043494ce6e921" category="paragraph">Die richtige IAM-Struktur hängt von der Größe Ihres Unternehmens und der Organisation Ihrer Teams ab. Die folgenden Beispiele zeigen, wie verschiedene Organisationen die IAM-Hierarchie nutzen können, um den Zugriff effektiv zu verwalten.</block>
+  <block id="000be3a1a08dc9e78c5fab739204c685" category="paragraph"><block ref="fe22d90ac580c62f8eea5bbabb839850" category="inline-link-macro-rx"></block>.</block>
+  <block id="04b5f578246d6d6719e3cb33d880c2b2" category="admonition">Wenn Sie die NetApp Console im <block ref="da2732e6e9a1be4ab82a1194533aac59" category="inline-link-rx"></block> oder im <block ref="6f5217ea8a3f93cd9532863eb844647b" category="inline-link-rx"></block> verwenden möchten, sollten Sie separate Anweisungen befolgen, um in diesen Umgebungen zu beginnen.<block ref="7305ccb1d247c4e62b18170abee468ff" category="inline-link-rx"></block></block>
+  <block id="e0855b9915ebbcfde5774291b6d178a4" category="summary">Häufig gestellte Fragen zu Identitäts- und Zugriffsmanagement sowie rollenbasierter Zugriffssteuerung in NetApp Console.</block>
+  <block id="c3c69d9a6e5c193b8578bee02ff0c489" category="doc">Häufig gestellte Fragen zur Identitäts- und Zugriffsverwaltung für die NetApp Console</block>
+  <block id="b0d72043f81fda7234970a9ba345ff3b" category="paragraph">Diese FAQ beantwortet häufig gestellte Fragen zum Identitäts- und Zugriffsmanagement (IAM) in der NetApp Console. Sie konzentriert sich auf rollenbasierte Zugriffssteuerung, Hierarchieverhalten und Mitgliederverwaltung, die bei der Planung und Implementierung des Zugriffs für Ihre Organisation hilfreich sind.</block>
+  <block id="cb59b87e00d11222bfd9159d0d23836f" category="section-title">Erste Schritte</block>
+  <block id="59fd6adbecd250dddd31be77f629268c" category="paragraph-title">Was sind die ersten Schritte zur Einrichtung von IAM nach der Erstellung einer neuen NetApp Console-Organisation?</block>
+  <block id="7ad522ac5313ed3eb9f66605c6346bc0" category="paragraph">Bei der Anmeldung erstellt die Console eine Organisation mit einem Organization admin und einem Standardprojekt. Die empfohlenen Einrichtungsschritte sind anschließend:</block>
+  <block id="1927da670eee7150958de64842296c59" category="list-text">Bearbeiten Sie das Standardprojekt oder erstellen Sie zusätzliche Projekte und Ordner, die Ihrer Unternehmenshierarchie entsprechen.</block>
+  <block id="a581b88e359b87a897eb6718d34fdeb9" category="list-text">Füge Mitglieder zu deiner Organisation hinzu.</block>
+  <block id="c68c101087ec48c3ab7a53f40560679b" category="list-text">Ressourcen hinzufügen oder entdecken.</block>
+  <block id="858c60b5f7f507b29b100314039d8d3e" category="list-text">Weisen Sie Ressourcen bei Bedarf zusätzlichen Projekten zu.</block>
+  <block id="d3755161059a0ae845e851cbba537187" category="section-title">Ressourcenhierarchie: Organisationen, Ordner und Projekte</block>
+  <block id="73f8ccae9fd79bfd7be0db9422ea5018" category="paragraph-title">Worin besteht der Unterschied zwischen einem Ordner und einem Projekt in NetApp Console IAM?</block>
+  <block id="609646adcf8f1726cc80db348afcd60e" category="paragraph">Ordner gruppieren zusammengehörige Projekte zur Organisationsstruktur und Rollenverteilung. Projekte enthalten Ressourcen und sind der Ort, an dem Mitglieder auf diese Ressourcen zugreifen. Ressourcen können nicht direkt Ordnern zugeordnet werden – sie müssen Projekten zugeordnet sein. Durch die Zuweisung einer Rolle auf Ordnerebene erhält das entsprechende Mitglied automatisch Zugriff auf alle untergeordneten Projekte und Ordner.</block>
+  <block id="7eee9919d6fec09bba479a505b7bddd4" category="paragraph-title">Sind die Ordner für alle Mitglieder meiner Organisation sichtbar?</block>
+  <block id="68d35c03eebb055b2d35431c33fe46a4" category="paragraph">Nein. Ordner sind nur für Mitglieder mit IAM-Berechtigungen sichtbar: Organisationsadministrator, Ordner- oder Projektadministrator oder Superadministrator. Normale Mitglieder greifen direkt auf Projekte zu und sehen keine Ordner.</block>
+  <block id="c62377f518697573d78ddecf47014f20" category="paragraph-title">Kann ich eine Ressource direkt einem Ordner zuordnen?</block>
+  <block id="69c597f2438c5c9da12314006c1c25dd" category="paragraph">Nein. Ressourcen müssen Projekten und nicht Ordnern zugeordnet werden. Ein Organisationsadministrator kann jedoch eine Ressource einem Ordner zuordnen, sodass ein Ordner- oder Projektadministrator sie anschließend mit den entsprechenden Projekten innerhalb dieses Ordners verknüpfen kann.</block>
+  <block id="4611f21fc17bd2f3bdc00a771434b0c2" category="paragraph-title">Wie tief kann ich Ordner und Projekte in der Hierarchie meiner Organisation verschachteln?</block>
+  <block id="561e43ae1f2d227f6d57fe9ff6beb8d1" category="paragraph">Sie können bis zu sieben Ebenen von Ordnern und Projekten in der Ressourcenstruktur Ihrer Organisation erstellen.</block>
+  <block id="aa99768580eeed219b45aa35c887710a" category="paragraph-title">Welche Ressourcentypen können Projekten in NetApp Console zugeordnet werden?</block>
+  <block id="1626b073fbb4d2d37760da049edf863b" category="paragraph">Zu den Ressourcen, die Projekten zugeordnet werden können, gehören:</block>
+  <block id="13ea1415acc1626e4e506a432657bf32" category="list-text">Einige Backup- und Wiederherstellungs-Workloads</block>
+  <block id="cc3fc292512275828d3e52e16ae33c1e" category="section-title">Rollen und Berechtigungen</block>
+  <block id="afa5075234b37fed626ba5886f96fe24" category="paragraph-title">Worin besteht der Unterschied zwischen einem Organisationsadministrator und einem Ordner- oder Projektadministrator?</block>
+  <block id="90bd8c4cbc8d8168e085b82f0eb34f4a" category="paragraph">Ein Organisationsadministrator hat uneingeschränkten Zugriff auf alle Projekte und Ordner der gesamten Organisation und ist die einzige Rolle, die Console Agents erstellen kann. Ein Ordner- oder Projektadministrator kann nur die ihm zugewiesenen Ordner und Projekte verwalten und keine Console Agents erstellen.</block>
+  <block id="eba636784ed870e16f7d92470ff1a60d" category="paragraph-title">Wer kann Console-Agenten in NetApp Console erstellen?</block>
+  <block id="61274420f69fb3d4dae99c10ee00cce5" category="paragraph">Nur Benutzer mit der Administratorrolle der Organisation können Konsolenagenten erstellen. Ordner- oder Projektadministratoren können keine Konsolenagenten erstellen.</block>
+  <block id="6a855b1bf00996d0647b598b779edacf" category="paragraph-title">Welche Rolle sollte ich einem Benutzer zuweisen, der lediglich den Zustand des Speichers überwachen und Supportfälle verwalten muss?</block>
+  <block id="71aa89799177ccb05170e66a600936b2" category="paragraph">Weisen Sie die Rolle des *Operation support analyst* zu, die Zugriff auf Warnmeldungen und Überwachungstools sowie die Möglichkeit zur Eingabe und Verwaltung von Supportfällen bietet.</block>
+  <block id="2d23f866e0c803991d3bde772a736782" category="paragraph-title">Kann ich die Rolle eines Mitglieds auf Projektebene ändern, wenn dieser Zugriff von einem Ordner geerbt wurde?</block>
+  <block id="70e73502b79f98d15f78285f212c0139" category="paragraph">Nein. Sie können den Zugriff von Mitgliedern auf einer niedrigeren Ebene nicht ändern, wenn er von einer höheren Ebene vererbt wurde. Um den Zugriff zu ändern, müssen Sie die Berechtigung des Mitglieds auf der höheren Hierarchieebene (Ordner oder Organisation) ändern, auf der sie ursprünglich zugewiesen wurde.</block>
+  <block id="f0a39484508ed29066841ede7b5c2184" category="section-title">Mitgliederverwaltung und Zugriff verwalten</block>
+  <block id="622df014227256ffe238aafd06826fba" category="paragraph-title">Was muss geschehen, bevor ich einen Benutzer zu meiner NetApp Console-Organisation hinzufügen kann?</block>
+  <block id="1e73f468a23737da3bfcd93319966a51" category="paragraph">Der Benutzer muss sich bereits für die NetApp Console registriert haben, bevor Sie ihn Ihrer Organisation, Ihrem Ordner oder Ihrem Projekt hinzufügen können. Diese Anforderung gilt auch für Benutzer, die Mitglieder einer Verbundgruppe sind.</block>
+  <block id="0d5acc4825d115cf32b4f93584f7bbc1" category="paragraph-title">Erhalten Verbundbenutzer automatisch Zugriff auf Ressourcen, wenn ich ihre Gruppe zur Console hinzufüge?</block>
+  <block id="c80ed6e6b65ea2e8d5cb635c5cae2e77" category="paragraph">Nein. Selbst wenn einer föderierten Gruppe eine Rolle zugewiesen wird, müssen einzelne Benutzer zwei Voraussetzungen erfüllen, bevor sie auf Ressourcen zugreifen können:</block>
+  <block id="ea58fe50474f23fad880b31a627d9c40" category="list-text">Der Benutzer muss sich bereits für die NetApp Console registriert haben.</block>
+  <block id="0012052b5a743b9d243c8576b3fadd95" category="list-text">Dem Benutzer muss in der Console explizit eine Rolle zugewiesen werden.</block>
+  <block id="1b387f1596c3594337e5a24c66a6b668" category="paragraph">NetApp empfiehlt, diesen Benutzern eine minimale Zugriffsrolle wie z. B. Organization viewer zuzuweisen.</block>
+  <block id="085d76a8cd59fe065e635dfc15c9c5d5" category="paragraph-title">Was geschieht mit einem Console-Agenten nach seiner Erstellung, und kann er in anderen Projekten verwendet werden?</block>
+  <block id="bcf5cfed1ae1a5334f242557bb42e0e8" category="paragraph">Konsolenagenten sind zunächst an das Projekt gebunden, in dem sie erstellt wurden. Nach der Erstellung können Administratoren Agenten anderen Projekten hinzufügen oder sie auf der Seite „Agenten“ einem Ordner zuordnen.</block>
+  <block id="17f379511f4881ad036809cbced9e845" category="list-text"><block ref="17f379511f4881ad036809cbced9e845" category="inline-link-macro-rx"></block></block>
+  <block id="dd060f675ce33c1b8a6b6f1c9d2568c5" category="list-text"><block ref="dd060f675ce33c1b8a6b6f1c9d2568c5" category="inline-link-macro-rx"></block></block>
+  <block id="077eff84ca4bd2dc8c7af8087fe2a4d2" category="list-text"><block ref="077eff84ca4bd2dc8c7af8087fe2a4d2" category="inline-link-macro-rx"></block></block>
+  <block id="25403b7392475effd330f408e6bbd7a9" category="doc">Standardkonfiguration des Konsolenagenten in NetApp Console</block>
+  <block id="752e1b43b74deb74960cb18c018ddd8e" category="list-text">Der Console-Agent-Dienst heißt <block ref="b3330283a07d4f62f4e4680fc88ca461" prefix=" " category="inline-code"></block>.</block>
+  <block id="269edf96f29bb3a2c7627f8d9fea7631" category="list-text">Der <block ref="b3330283a07d4f62f4e4680fc88ca461" prefix=" " category="inline-code"></block>Dienst ist vom MySQL Service abhängig.</block>
+  <block id="539718583e0bd284466d28bbae39f3cb" category="paragraph">Wenn der MySQL-Dienst ausfällt, dann ist der <block ref="b3330283a07d4f62f4e4680fc88ca461" prefix=" " category="inline-code"></block> Dienst ebenfalls ausgefallen.</block>
+  <block id="5a90a48360bc7c6e85efaf9490987e5b" category="doc">Konsolenagentenvalidierung mit der Wartungskonsole in NetApp Console</block>
+  <block id="29e4d1ed6697c0060983716d9518ac7d" category="paragraph">Wählen Sie einen oder mehrere Dienste zur Validierung aus. Gültige Dienstnamen sind:</block>
+  <block id="085479426160ce25924b6c12d5ff3798" category="paragraph"><block ref="8b55a44b49368262df89fd0e17b1a181" prefix="*" category="inline-code"></block>Dabei wird überprüft, ob die Netzwerkverbindung zu den erforderlichen Console-Endpunkten besteht und ob die erforderlichen Ports für den Console-Agent geöffnet sind.</block>
+  <block id="c46dbbd30b8f351b84d3ac4888362c02" category="paragraph"><block ref="693f786102104e01b7396235926fc506" prefix="" category="inline-code"></block> --*ERFORDERLICH*-- Wählen Sie einen oder mehrere Validierungstypen aus, die ausgeführt werden sollen. Gültige Validierungstypen sind:</block>
+  <block id="d2cd8789ebaba535a6c98419f468e081" category="list-text"><block ref="25835188a2355e9530d3a10fcbe4c65b" prefix="" category="inline-code"></block>wodurch die Netzwerkverbindung zu den erforderlichen Console-Endpunkten überprüft wird.</block>
+  <block id="13d4dc0aba42abb3a53b4a791152bc56" category="list-text"><block ref="39e0e6e3d8f3580dbec023e0a9d76f96" prefix="" category="inline-code"></block>wodurch bestätigt wird, dass der Agentenhost die Mindesthardwareanforderungen für den Console Agent erfüllt.</block>
+  <block id="65a9a95671009f020b9bf7ac32aa4bdb" category="paragraph">Die folgenden Beispiele umfassen die Überprüfung der Netzwerkverbindungen, der benötigten Ports und der Hardwarevoraussetzungen sowie verschiedene Kombinationen der Verwendung eines Proxyservers und benutzerdefinierter Zertifikate.</block>
+  <block id="80f48611c1bef55d72d46a64fc380278" category="listing-title">Überprüfung der Netzwerkverbindungen und Hardwareanforderungen:</block>
+  <block id="de69e8633d4ddcf1beb6e9af84080384" category="doc">Transparente Proxy-Befehle für den Console-Agenten in NetApp Console</block>
+  <block id="39442b581cc52635af9cf2e5d2fe3673" category="doc">Zugriffsrolle für den operativen Supportanalysten in der NetApp Console</block>
+  <block id="dce3cf2abadb3552176d2f6b8851afa8" category="doc">Netzwerkzugriff für NetApp Console 3.9.55 und früher</block>
+  <block id="242449bfa8c5aeec893a23b37cc87d38" category="doc">Netzwerkzugriff für die NetApp Console</block>
+  <block id="4d819fcab6255dc911eb706563c786c6" category="doc">AWS-Berechtigungen für den NetApp Console-Agenten</block>
+  <block id="191d01a2e791f9226fdfc683126f30ab" category="doc">Azure-Berechtigungen für den NetApp Console-Agenten</block>
+  <block id="e179c09a16f639ba0aee60505b9b0fb2" category="doc">Google Cloud-Berechtigungen für den NetApp Console-Agenten</block>
+  <block id="9601a7a8aa3b6df2dd4755c1dbee3337" category="cell">Zum Erstellen und Verwalten von Datenträgern auf Cloud Volumes ONTAP-Systemen.</block>
+  <block id="73dba1f9217dce9211895ed011e4b598" category="cell">compute.disks.update</block>
+  <block id="403f4a170e2d1c03d329e0f0dd8d1b84" category="section-title">13. April 2026</block>
+  <block id="e2a8ee530e070fce89827c2190951eec" category="paragraph">Die <block ref="73dba1f9217dce9211895ed011e4b598" prefix=" " category="inline-code"></block>Berechtigung wird hinzugefügt, um IOPS- und Durchsatzparameter auf einem Hyperdisk Balanced-Aggregat oder einer Festplatte in Cloud Volumes ONTAP Systemen zu aktualisieren.</block>
+  <block id="4a1cb4c93b649370a0e0e47ec5b25673" category="doc">Nächste Schritte für NetApp Console im privaten Modus</block>
+  <block id="be45208aa9504e6037509093055dddc9" category="doc">Nächste Schritte für NetApp Console im eingeschränkten Modus</block>
+  <block id="eed4a673610f6c4f20ac06374e0d02c7" category="doc">Nächste Schritte für NetApp Console im Standardmodus</block>
+  <block id="e6d86121d517346d17150627d0fc1547" category="paragraph">Sie müssen einen Konsolenagenten erstellen, bevor Sie ein Abonnement konfigurieren können. <block ref="4c719d3ce8f9711862a56581ad1ef6e2" category="inline-link-macro-rx"></block>.</block>
+  <block id="1e103164ca89176649567d1032789e52" category="paragraph">Über die Wartungskonsole können Sie lediglich Informationen zur IP-Adresse, zum DNS und zu den Gateways anzeigen (nicht aktualisieren).</block>
+  <block id="5ecd25d455a75fde7f239100d6de877d" category="inline-link-macro">Fügen Sie eine Domäne mit Microsoft Entra ID hinzu</block>
+  <block id="f9548ac6f4d56ee31c131b0c422bd405" category="paragraph">Wenn Sie beispielsweise Microsoft Entra ID verwenden, können Sie die Schritte in der Microsoft-Dokumentation <block ref="7ce09034dd873009fb4c4b1029031288" category="inline-link-macro-rx"></block> befolgen.</block>
+  <block id="9b0ac00d797170a5d11a68a9382f26a8" category="admonition">Benutzer mit der Rolle „Org admin“ können Ressourcen zu Ordnern hinzufügen, um die Aufgabe, die Ressource Projekten zuzuordnen, an die Ordner- oder Projektadministratoren des jeweiligen Ordners zu delegieren. <block ref="af70645a2ec4694e18976ffdc9418df7" category="inline-link-macro-rx"></block>.</block>
+  <block id="cfdc0c6d3226bf1ca74a7e7fefd85528" category="list-text">Speicherressourcen sind die am häufigsten vorkommende Ressourcenart in Ihrem Unternehmen und umfassen sowohl lokale als auch Cloud-Speichersysteme. Wenn Sie ein Speichersystem zur Console hinzufügen, müssen Sie es einem Projekt zuordnen. Bis dahin markiert die Console es als nicht erkannt und zeigt es nicht auf der Seite *Ressourcen* an.</block>
+  <block id="ec88772127d46412abce4f0d7d7d7982" category="inline-link-macro">Erfahren Sie, wie Sie einen Console-Agenten mit einem Projekt verknüpfen</block>
+  <block id="e773bf9ef8fd07284aa97da5bcac5b10" category="list-text">Wenn Sie einen Console-Agenten zur Ermittlung von Speichersystemen verwendet haben, fügen Sie den Agenten demselben Projekt wie das Speichersystem hinzu. Dadurch können Benutzer agentenbasierte Funktionen wie Datendienste oder die Console-eigene Speicherverwaltung nutzen. Sie können Agenten auf der Seite *Agenten* in der Console zu Projekten hinzufügen. <block ref="9575d7837a709e4ae8a4165fa6169eb2" category="inline-link-macro-rx"></block>.</block>
+  <block id="f84bc6d9d13416ccde14b675c20b3fe0" category="list-text">Wenn Ihre Organisation Keystone-Abonnements besitzt, können Sie diese auf der Seite *Ressourcen* einsehen. Sie können Keystone-Abonnements Projekten zuordnen, um Mitgliedern mit entsprechenden Berechtigungen Zugriff auf diese Projekte zu gewähren.</block>
+  <block id="e828183af99bbe9f55b9edafa7e11282" category="list-text">Backup- und Recovery-Workloads</block>
+  <block id="9f10ad14238ee6185b52e10c695a3cbe" category="list-text">Auch Backup- und Recovery-Workloads gelten als Ressourcen. Sie können Benutzern Berechtigungen für den Zugriff auf Backup- und Recovery-Workloads zuweisen, indem Sie die Workloads Projekten zuordnen. Weisen Sie beispielsweise einem Benutzer Zugriff auf einen Backup- und Recovery-Workload zu, indem Sie ihn einem Projekt zuordnen, auf das der Benutzer Zugriff hat, und die entsprechende Backup- und Recovery-Rolle zuweisen.</block>
+  <block id="5ac9b947c65653cf6d02fe3c59e7fa2f" category="summary">Sie können einen Console-Agenten in AWS direkt über die NetApp Console bereitstellen. Vor der Bereitstellung eines Console-Agenten in AWS über die Console müssen Sie Ihr Netzwerk einrichten und die AWS-Berechtigungen vorbereiten.</block>
+  <block id="dc06977a17baa1d2ac30423086ded05e" category="doc">Einen Console-Agenten in AWS über die NetApp Console bereitstellen</block>
+  <block id="21bc24ad9112fe84642a352511c8c896" category="paragraph">Durch die Bereitstellung eines Agenten in AWS wird eine EC2-Instanz gestartet, auf der Linux und die Console-Agent-Software in einer VPC Ihrer Wahl ausgeführt werden.</block>
+  <block id="a7bfdf791cd40e0ecc1b8e7cef1ca6c1" category="list-text"><block ref="6863c249d676553f48927d7d95fd710e" category="inline-link-macro-rx"></block>.</block>
+  <block id="13cc9918631bd12add35c3badfe98a74" category="doc">Manuelle Bereitstellung des Console-Agenten in AWS</block>
+  <block id="3f0527499a34df287448340f6ef53274" category="paragraph">Sie können einen Console-Agenten manuell auf einem Linux-Host in AWS bereitstellen. Um den Console-Agenten manuell auf Ihrem eigenen Linux-Host bereitzustellen, müssen Sie die Host-Anforderungen prüfen, Ihr Netzwerk einrichten, die AWS-Berechtigungen vorbereiten, den Console-Agenten bereitstellen und anschließend die vorbereiteten Berechtigungen erteilen.</block>
+  <block id="ae156547be858d5da6a6ad874dab7c9e" category="doc">Stellen Sie einen Konsolenagenten aus dem AWS Marketplace bereit.</block>
+  <block id="1117dd42210c4bae3fbd14a0d5fbfb90" category="paragraph">Sie stellen einen Console-Agenten in AWS direkt über den AWS Marketplace bereit. Um einen Console-Agenten aus dem AWS Marketplace bereitzustellen, müssen Sie Ihre Netzwerkkonfiguration einrichten, die AWS-Berechtigungen vorbereiten, die Instanzanforderungen prüfen und anschließend den Console-Agenten bereitstellen.</block>
+  <block id="8803623e8c34d1e3b06ab16ac0799483" category="doc">Bereitstellen eines Konsolenagenten in Azure über die NetApp Console</block>
+  <block id="34032c9a096e8efc23a3a259c8c09ac9" category="paragraph">Um einen Console-Agenten in Azure von der NetApp Console bereitzustellen, müssen Sie Ihr Netzwerk einrichten, die Azure-Berechtigungen vorbereiten und dann den Console-Agenten bereitstellen.</block>
+  <block id="c4adbd41a227822451336c4a895b47d7" category="paragraph">Durch die Bereitstellung eines Agenten in Azure wird eine VM gestartet, auf der Linux und die Console-Agent-Software in einem VNet Ihrer Wahl ausgeführt werden.</block>
+  <block id="64fb292d18184e91972b2aa0b5f160c2" category="admonition">Stellen Sie einen Konsolenagenten in derselben Azure-Region wie die Cloud Volumes ONTAP-Systeme, die er verwaltet, oder in der <block ref="71e0e9a7366955554f0600c5ea8cfc7f" category="inline-link-rx"></block> bereit. Dadurch wird sichergestellt, dass eine Azure Private Link-Verbindung zwischen Cloud Volumes ONTAP und den zugehörigen Speicherkonten verwendet wird.</block>
+  <block id="e9e3d2e696d0041aedbee33492e5bb65" category="doc">Einen Console-Agenten in Google Cloud über die NetApp Console bereitstellen</block>
+  <block id="76755ec08e48ddd18aa09eb792dccf25" category="paragraph">Sie können einen Console-Agenten in Google Cloud über die Console bereitstellen. Sie müssen Ihr Netzwerk einrichten, Google Cloud-Berechtigungen vorbereiten, Google Cloud APIs aktivieren und dann den Console-Agenten bereitstellen.</block>
+  <block id="921f27265f15374a9fe7782b3f1e4497" category="paragraph">Durch die Bereitstellung eines Agenten in Google Cloud wird eine VM-Instanz gestartet, auf der Linux und die Console-Agent-Software in einer VPC Ihrer Wahl ausgeführt werden.</block>
+  <block id="1956f48ec510aa9e9aaa1693a61d862a" category="doc">Einen Console-Agenten aus der Google Cloud bereitstellen</block>
+  <block id="269f4bb9794c23a34082aab4e7846b08" category="paragraph">Um einen Console-Agenten in Google Cloud mithilfe von Google Cloud bereitzustellen, müssen Sie Ihr Netzwerk einrichten, die Google Cloud-Berechtigungen vorbereiten, die Google Cloud APIs aktivieren und anschließend den Console-Agenten bereitstellen.</block>
+  <block id="b98ee0686e4120fe92ce6300afe0de81" category="list-text">Du solltest einen <block ref="6863c249d676553f48927d7d95fd710e" category="inline-link-macro-rx"></block> haben.</block>
+  <block id="f03765e7c67cd3e0afdcbb02e2df97ae" category="doc">Manuelle Bereitstellung des Console-Agenten in Google Cloud</block>
+  <block id="4cf3aefb03cce74960230022eaa4e100" category="paragraph">Um den Console-Agenten manuell auf Ihrem eigenen Linux-Host bereitzustellen, müssen Sie die Host-Anforderungen überprüfen, Ihre Netzwerkkonfiguration einrichten, die Google Cloud-Berechtigungen vorbereiten, die Google Cloud APIs aktivieren, die Console installieren und anschließend die vorbereiteten Berechtigungen erteilen.</block>
+  <block id="54db96db7364d9fb797bdc9d7b164d32" category="doc">Stellen Sie einen Console-Agenten lokal mithilfe von VCenter bereit.</block>
+  <block id="20829e61e3540bc01a07bf8c421fdcf6" category="paragraph">Als VMware-Nutzer können Sie eine OVA-Datei verwenden, um einen Konsolenagenten in Ihrem vCenter bereitzustellen. Der OVA-Download bzw. die URL ist über die NetApp Console verfügbar.</block>
+  <block id="f4ee8cae9dcc1483831fc714e31a327a" category="admonition">Wenn Sie einen Konsolenagenten mit Ihren VCenter-Tools bereitstellen, können Sie die VM-Webkonsole verwenden, um Wartungsaufgaben durchzuführen. <block ref="21e15fc43bbac3ef120d8f996828c28e" category="inline-link-macro-rx"></block></block>
+  <block id="d14a65d137d542e4c5b525df633f8463" category="paragraph">NetApp unterstützt die Installation des Console-Agenten in Ihrer vCenter-Umgebung. Die OVA-Datei enthält ein vorkonfiguriertes VM-Image, das Sie in Ihrer VMware-Umgebung bereitstellen können. Ein Dateidownload oder eine URL-Bereitstellung ist direkt von der NetApp Console verfügbar. Sie enthält die Console-Agent-Software und ein selbstsigniertes Zertifikat.</block>
+  <block id="1d068aaf3e17a864925e3bde9dcd297b" category="section-title">Stellen Sie den Agenten in Ihrer vCenter-Umgebung bereit.</block>
+  <block id="c55edff269043bf525a954a4154ec0a3" category="list-text">Laden Sie das selbstsignierte Zertifikat in Ihre vertrauenswürdigen Zertifikate hoch, falls Ihre Umgebung dies erfordert. Sie ersetzen dieses Zertifikat nach der Installation.</block>
+  <block id="e8e9fe3b3946d0efef2689d6b175ac89" category="summary">Installieren Sie einen Console-Agenten lokal, melden Sie sich anschließend an und richten Sie ihn für die Zusammenarbeit mit Ihrer Console-Organisation ein.</block>
+  <block id="fb650b55c60d91a2caf6cc6d1a275439" category="doc">Manuelle Bereitstellung eines Console-Agenten vor Ort</block>
+  <block id="a0eb01c340f51daff7ce167933696b14" category="inline-link-macro">Erfahren Sie mehr über die Bereitstellung eines Agenten in einem vCenter.</block>
+  <block id="4f97b869621ba57e0e74b7a49c9a21bf" category="admonition">Als VMware-Benutzer können Sie eine OVA verwenden, um einen Console-Agenten in Ihrem vCenter bereitzustellen. <block ref="010c34d4268375df7c2f32f17a975d90" category="inline-link-macro-rx"></block></block>
+  <block id="6bdefeb27ef2009862c6af73ba4aa4f9" category="doc">Die VM für einen manuell installierten Konsolenagenten verwalten</block>
+  <block id="9845a65d039380c03d0798dc8b86888f" category="paragraph">Bei der manuellen Installation eines Console-Agenten liegt die Wartung des Betriebssystems auf dem Agentenhost in Ihrer (des Kunden) Verantwortung. Beispielsweise sollten Sie (der Kunde) Sicherheitsupdates für das Betriebssystem auf dem Agentenhost anwenden, indem Sie die Standardverfahren Ihres Unternehmens für die Betriebssystemverteilung befolgen.</block>
+  <block id="55775d5f288008be574f12b89a4bfa2f" category="section-title">Wenden Sie Betriebssystemaktualisierungen auf dem Agentenhost an</block>
+  <block id="3ce4474c24a93038aca82b41eaebbafa" category="paragraph">Um die Kompatibilität mit unterstützten Konfigurationen zu gewährleisten, sollten Sie verhindern, dass Docker oder Podman während routinemäßiger Betriebssystem-Patches aktualisiert werden. Dies können Sie tun, indem Sie Docker oder Podman entweder vorübergehend während Updates ausschließen oder den Paketmanager dauerhaft so konfigurieren, dass Docker- oder Podman-Updates übersprungen werden.</block>
+  <block id="1df03cb601702d6a5780de5b5b3fad56" category="paragraph">Im Folgenden finden Sie Beispiele, wie Sie Docker- oder Podman-Updates für verschiedene Linux-Distributionen ausschließen können. Konsultieren Sie die Dokumentation Ihrer Linux-Distribution für die aktuellsten Anweisungen zum Ausschließen von Paketen von Updates.</block>
+  <block id="63fc7b8ffa3779963d0e9e15f3827fb1" category="listing-title">Podman-Beispiel</block>
+  <block id="3402ff8bffa8ff62a7a411640fbf9267" category="listing-title">Docker-Beispiel</block>
+  <block id="6b760811b41279815381722ec59c6db8" category="paragraph"><block ref="6b760811b41279815381722ec59c6db8" category="inline-link-macro-rx"></block></block>
+  <block id="c3061182b0608223477dfa4bed2d6351" category="summary">Wenn Ihre Organisation mehrere Console-Agenten verwendet, können Sie direkt von der Systemseite aus zwischen diesen Console-Agenten wechseln, um die zugehörigen Systeme anzuzeigen.</block>
+  <block id="5d8ba3d050e36d7f49c4f934f845e109" category="doc">Systeme anzeigen, die verschiedenen Console-Agenten zugeordnet sind</block>
+  <block id="329badf03329cb771727c0786ad87e21" category="paragraph">Wenn Ihre Organisation mehrere Console-Agenten verwendet, können Sie zwischen ihnen wechseln, um die Systeme anzuzeigen, die einem bestimmten Agenten zugeordnet sind.</block>
+  <block id="dcc47dcea19fcb9bcdd04df7dd263d38" category="paragraph">Für Benutzer mit der Rolle „Org admin“ ist dies hilfreich bei der Implementierung Ihrer Ressourcenmanagement-Strategie. Sie können beim Erkennen von Speichersystemen zu einem anderen Agenten wechseln, um diese Systeme automatisch dem Agenten zuzuordnen, der sich in derselben Umgebung befindet.</block>
+  <block id="9163944e443363f5518f7d0597155fd1" category="paragraph">Für Speicheradministratoren zwischen Agenten wechseln, um die Systeme zu verwalten, die jeweils einem Agenten zugeordnet sind.</block>
+  <block id="1e8b5c1d2a4e61eee5977215f7e536ff" category="paragraph">In einer Multi-Cloud-Umgebung könnte Ihre Organisation beispielsweise einen Agenten in AWS und einen weiteren in Google Cloud einsetzen. Wechseln Sie zwischen diesen Agenten, um die Cloud Volumes ONTAP Systeme in den jeweiligen Cloud-Umgebungen zu verwalten.</block>
+  <block id="5c7dec5267a1dccf96dd6276b683ce50" category="admonition">Diese Option ist nicht verfügbar, wenn die NetApp Console über die lokale Benutzeroberfläche des Agenten angezeigt wird.</block>
+  <block id="c8dd52f08fb8566417d35b03304b0cff" category="list-text">Wählen Sie *Speicher* &gt; *Verwaltung* &gt; *Systeme*.</block>
+  <block id="7637b8dc2dc8400e13533a4d4bd5405a" category="section-title">Überprüfen Sie, ob der Konsolenagent die Anforderungen erfüllt.</block>
+  <block id="63c741e55fcb9e1649e2141c14cc0b50" category="paragraph">Konsolenagenten benötigen Zugriff auf bestimmte Netzwerkendpunkte, müssen mehrere Ports geöffnet haben und bestimmte Hardwareanforderungen erfüllen. Sie können überprüfen, ob Ihr Konsolenagent diese Anforderungen erfüllt, entweder direkt in der Console oder mithilfe der Agent Maintenance Console.</block>
+  <block id="9805c5af2d15bb13cff2866178041d2b" category="paragraph"><block ref="787bde807a1a57661aeb1e9aa8557b03" category="inline-link-macro-rx"></block>Link:</block>
+  <block id="340fa7bee37b14e663d7987a8bbd375e" category="paragraph">Sie können Validierungsprüfungen auch über die Agentenwartungskonsole durchführen. <block ref="714b5c6de8ffee7e082263b89290e9dc" category="inline-link-macro-rx"></block></block>
+  <block id="4902d11dd0f4b0186db4b1c0ed82d690" category="summary">Bei Änderungen der Netzwerkkonfiguration müssen Sie möglicherweise die IP-Adresse des Agenten bei Ihrem Cloud-Anbieter und die registrierten URIs in der Console aktualisieren.</block>
+  <block id="fb908a9fb802db6efd6ee687bf0e90b1" category="doc">Agentenadressierung und URIs aktualisieren</block>
+  <block id="66fcc07184081a5dbb5153c82ad1d2ad" category="paragraph">Die URI eines Konsolenagenten wird aktualisiert, wenn sich Ihre Netzwerkanforderungen ändern. Dies gewährleistet eine unterbrechungsfreie, sichere und konforme Verwaltung Ihrer Speicherinfrastruktur.</block>
+  <block id="5115300955106a1244bbf3c52c1a629e" category="summary">Der Konsolenagent wird automatisch aktualisiert, wenn er über eine ausgehende Verbindung verfügt. Wenn Ihr Konsolenagent keine ausgehende Verbindung hat, können Sie ihn manuell aktualisieren. Wenn Ihr Agent in vCenter bereitgestellt wurde, können Sie ihn mit einer ISO aktualisieren.</block>
+  <block id="e1d28aa425c88249f3fe0596a4b219ec" category="paragraph">Der Konsolenagent wird automatisch aktualisiert, sobald eine ausgehende Verbindung besteht. Falls Ihr Konsolenagent keine ausgehende Verbindung hat, können Sie ihn manuell aktualisieren. Wenn Ihr Agent in vCenter mithilfe einer OVA bereitgestellt wurde, können Sie ihn durch Einbinden einer ISO in die VM auf eine neue Version aktualisieren.</block>
+  <block id="a51733d32f07dea4302c4c2b24a35371" category="paragraph">Wenn Ihr Konsolenagent in vCenter mithilfe einer OVA bereitgestellt wurde, können Sie ihn auf eine neue Version aktualisieren, indem Sie eine ISO an die VM anhängen und das Upgrade von der Wartungskonsole der VM aus durchführen.</block>
+  <block id="317b50d6e77d808c314bfa19b1ae2c66" category="paragraph">Bevor Sie beginnen, erstellen Sie einen Snapshot der VM, falls Sie einen Rollback durchführen müssen.</block>
+  <block id="bf3054c9efa6aea6cfd204c31f87622b" category="list-text">Laden Sie die ISO-Datei des Console-Agenten von der <block ref="99637e01fa8caa34a544049093cac68c" category="inline-link-rx"></block>.</block>
+  <block id="9a6f25fe6c9eb33b78a15468e01662d6" category="list-text">Laden Sie die ISO-Datei in einen Datenspeicher hoch, der von vCenter aus zugänglich ist.</block>
+  <block id="84e284b64d458ae2ed97be15dc1379f9" category="list-text">Melden Sie sich im vSphere-Client bei Ihrem vCenter an und wählen Sie die VM-Instanz aus, die den Console-Agenten hostet.</block>
+  <block id="265fa7c6f5bd2475b595e3454738161f" category="list-text">ISO-Datei in die VM einbinden:</block>
+  <block id="fed8f328858852eb8b7e922b80b8c6f0" category="list-text">Klicken Sie mit der rechten Maustaste auf die VM und wählen Sie *Einstellungen bearbeiten*.</block>
+  <block id="f440094c54eeec3d2dbf7a1b9b8208b0" category="list-text">Wählen Sie das CD/DVD-Laufwerk und anschließend *Datastore ISO File*.</block>
+  <block id="f28ab1e2714e54bc297ca9a933c20b51" category="list-text">Navigieren Sie zur ISO-Datei des Console-Agenten und wählen Sie diese aus.</block>
+  <block id="cd60efbacf62e1de3207c97f50b3228e" category="list-text">Stellen Sie sicher, dass *Connect* aktiviert ist.</block>
+  <block id="3d1c64d2c8b1e4058225a78c3ef09fa6" category="list-text">Wählen Sie *OK*.</block>
+  <block id="2cb5a1a5241ad6593735c8022b05a3a5" category="list-text">Wählen Sie bei ausgewählter VM die Option *Web Console starten*.</block>
+  <block id="630125b3287d32dddd226602e8dd6803" category="list-text">Melden Sie sich an der Wartungskonsole mit dem Benutzernamen <block ref="67f50785d40416a7a7689c5c353f1128" prefix=" " category="inline-code"></block> und dem Wartungspasswort an, das Sie bei der Bereitstellung der OVA angegeben haben.</block>
+  <block id="cd975b382ffd3de432ce2ffb42508a03" category="list-text">Drücken Sie <block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>, um das Menü *System Configuration* zu öffnen.</block>
+  <block id="ed9d848f40aa067619f57a0c3bdd1aa7" category="list-text">Drücken Sie die Eingabetaste <block ref="eccbc87e4b5ce2fe28308fd9f2a7baf3" prefix=" " category="inline-code"></block>, um *Upgrade* auszuwählen, und folgen Sie den Anweisungen auf dem Bildschirm.</block>
+  <block id="c017b1c0dccb6954f1ade63dff926a0c" category="paragraph">Das Upgrade installiert das aktualisierte Betriebssystem, die Docker-Laufzeitumgebung und die Konsolenagentendienste an Ort und Stelle. Wenn der Kernel aktualisiert wird, startet die VM automatisch neu.</block>
+  <block id="5acb3aced6d8dac916dec3aade57b7e1" category="list-text">Nach Abschluss des Upgrades überprüfen Sie, ob der Console Agent ordnungsgemäß ausgeführt wird:</block>
+  <block id="969e7ac6672c561c12855b0df5552218" category="list-text">Im vSphere-Client bestätigen Sie, dass die VM eingeschaltet ist und die Webkonsole zugänglich ist.</block>
+  <block id="f1dea5408c76a6c79fe56adbe57d4bf3" category="list-text">Gehen Sie in der NetApp Console zu *Administration &gt; Support &gt; Agents* und überprüfen Sie, ob die Agentenversion der neuen Version entspricht.</block>
+  <block id="e169af5277f4f18447755957609654e2" category="list-text">ISO-Datei aus der VM aushängen:</block>
+  <block id="26ebb9e5362ebbe39939cfeec9b06e2e" category="list-text">Klicken Sie im vSphere Client mit der rechten Maustaste auf die VM und wählen Sie *Einstellungen bearbeiten*.</block>
+  <block id="25f777f1eaa91fa773a6c639768fa5fc" category="list-text">Wählen Sie das CD/DVD-Laufwerk aus und wählen Sie *Client Device* oder trennen Sie die Datastore-ISO.</block>
+  <block id="e382e67da79695356dc1fa71918bf917" category="summary">Erfahren Sie, was es Neues bei der NetApp Console-Administration gibt.</block>
+  <block id="34fb7793c6dd21820fca4599855cc8d6" category="sidebar">Installationsoptionen für den Konsolenagenten für AWS</block>
+  <block id="dfaeded134f05cc3b6e8cfbb7dc74750" category="sidebar">Erstellen Sie einen Console-Agenten in AWS über den AWS Marketplace</block>
+  <block id="da3632a79f01a64e10a52f3d8b2f20b3" category="sidebar">Installationsoptionen für den Konsolenagenten in Azure</block>
+  <block id="7b3521e08bd698da5e7f4e8dd23ffd28" category="sidebar">Erstellen Sie einen Konsolenagenten in Azure über den Azure Marketplace</block>
+  <block id="aeb40985e24f14c0392276a5b302ec39" category="sidebar">Installationsoptionen für den Console-Agenten in Google Cloud</block>
+  <block id="9263d00bd3085ab3f7fe9d54b53da0bb" category="sidebar">Erstellen Sie einen Console-Agenten in Google Cloud aus Google Cloud</block>
+  <block id="ef65981a653f842358b97ed65fdd873e" category="sidebar">Installieren Sie einen Console-Agenten lokal in VCenter</block>
+  <block id="0b1032eeff080ebafeabe1d451b25cbc" category="sidebar">Manuell installierte Console-Agenten verwalten</block>
+  <block id="fed6fefc4794de432303a8decf8cfed9" category="sidebar">Einen manuell installierten Agenten pflegen</block>
+  <block id="15cae31ad8279b2e766e14f72e9a7766" category="sidebar">Häufig gestellte Fragen zum Identitäts- und Zugriffsmanagement</block>
 </blocks>

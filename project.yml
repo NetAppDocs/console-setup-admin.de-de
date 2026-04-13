@@ -30,7 +30,7 @@ sidebar:
         url: "/concept-modes.html"
       - title: NetApp Supportkonten
         url: "/task-adding-nss-accounts.html"
-      - title: Console-Agenten verstehen
+      - title: Erfahren Sie mehr über Konsolenagenten
         url: "/concept-agents.html"
       - title: Identitäts- und Zugriffsverwaltung
         url: "/concept-identity-and-access-management.html"
@@ -71,7 +71,7 @@ sidebar:
     entries:
     - title: Melden Sie sich bei der NetApp Console an
       url: "/task-logging-in.html"
-    - title: Arbeiten mit mehreren Konsolenagenten
+    - title: Systeme anzeigen, die verschiedenen Console-Agenten zugeordnet sind
       url: "/task-manage-multiple-agents.html"
     - title: Anzeigen von Metriken auf der Startseite der NetApp Console
       url: "/task-dashboard.html"
@@ -91,48 +91,58 @@ sidebar:
         url: "/concept-agents.html"
       - title: Bereitstellen eines Konsolenagenten
         entries:
+        - title: Wählen Sie eine Bereitstellungsmethode für den Console-Agenten
+          url: "/concept-agent-install-options.html"
         - title: AWS
           entries:
-          - title: Installationsoptionen für den Konsolenagenten
-            url: "/concept-install-options-aws.html"
-          - title: Erstellen Sie einen Konsolenagenten über die NetApp Console
+          - title: Installationsoptionen für den Konsolenagenten für AWS
+            url: "/concept-install-aws.html"
+          - title: Erstellen Sie einen Konsolenagenten in AWS über die NetApp Console
             url: "/task-install-agent-aws-console.html"
-          - title: Erstellen Sie einen Konsolenagenten aus dem AWS Marketplace.
+          - title: Erstellen Sie einen Console-Agenten in AWS über den AWS Marketplace
             url: "/task-install-agent-aws-marketplace.html"
-          - title: Manuelle Installation des Konsolenagenten
+          - title: Manuelle Installation eines Console-Agenten in AWS
             url: "/task-install-agent-aws-manual.html"
         - title: Azurblau
           entries:
-          - title: Installationsoptionen für den Konsolenagenten
-            url: "/concept-install-options-azure.html"
-          - title: Erstellen Sie einen Konsolenagenten über die NetApp Console
+          - title: Installationsoptionen für den Konsolenagenten in Azure
+            url: "/concept-install-azure.html"
+          - title: Erstellen Sie einen Konsolen-Agenten in Azure über die NetApp Console
             url: "/task-install-agent-azure-console.html"
-          - title: Erstellen Sie einen Konsolenagenten aus dem Azure Marketplace.
+          - title: Erstellen Sie einen Konsolenagenten in Azure über den Azure Marketplace
             url: "/task-install-agent-azure-marketplace.html"
-          - title: Manuelle Installation des Konsolenagenten
+          - title: Manuelle Installation eines Console-Agenten in Azure
             url: "/task-install-agent-azure-manual.html"
         - title: Google Cloud
           entries:
-          - title: Installationsoptionen für den Konsolenagenten
-            url: "/concept-install-options-google.html"
-          - title: Erstellen Sie einen Konsolenagenten über die NetApp Console
+          - title: Installationsoptionen für den Console-Agenten in Google Cloud
+            url: "/concept-install-google.html"
+          - title: Erstellen Sie einen Konsolenagenten in Google Cloud über die NetApp
+              Console
             url: "/task-install-agent-google-console-gcloud.html"
-          - title: Erstellen Sie einen Konsolenagenten aus Google Cloud
+          - title: Erstellen Sie einen Console-Agenten in Google Cloud aus Google
+              Cloud
             url: "/task-install-agent-google-gcloud.html"
-          - title: Manuelle Installation des Konsolenagenten
+          - title: Manuelle Installation eines Console-Agenten in Google Cloud
             url: "/task-install-agent-google-manual.html"
         - title: Installieren eines Agenten vor Ort
           entries:
-          - title: Manuelles Installieren eines Agenten vor Ort
+          - title: Manuelle Installation eines Konsolen-Agenten vor Ort
             url: "/task-install-agent-on-prem.html"
-          - title: Installieren Sie einen lokalen Agenten in VCenter
+          - title: Installieren Sie einen Console-Agenten lokal in VCenter
             url: "/task-install-agent-on-prem-ova.html"
           - title: Ports für den lokalen Konsolenagenten
             url: "/reference-ports-on-prem.html"
       - title: Konsolenagenten verwalten
         entries:
-        - title: Verwalten eines in VCenter installierten Agenten
-          url: "/task-agent-vm-config.html"
+        - title: Manuell installierte Console-Agenten verwalten
+          entries:
+          - title: Verwalten eines in VCenter installierten Agenten
+            url: "/task-agent-vm-config.html"
+          - title: Einen manuell installierten Agenten pflegen
+            url: "/task-maintain-agents.html"
+        - title: Agentenadressierung und URIs aktualisieren
+          url: "/task-update-agent-addressing.html"
         - title: Installieren Sie ein CA-signiertes Zertifikat für den Zugriff auf
             die Webkonsole
           url: "/task-installing-https-cert.html"
@@ -170,6 +180,8 @@ sidebar:
         url: "/concept-identity-and-access-management.html"
       - title: Erste Schritte mit Identität und Zugriff
         url: "/task-iam-get-started.html"
+      - title: Häufig gestellte Fragen zum Identitäts- und Zugriffsmanagement
+        url: "/faq-iam-netapp-console.html"
       - title: Richten Sie Ihre Konsolenorganisation ein.
         entries:
         - title: Ordner und Projekte erstellen

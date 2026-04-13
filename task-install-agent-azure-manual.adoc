@@ -16,6 +16,11 @@ summary: Um den Konsolen-Agent manuell auf Ihrem eigenen Linux-Host zu installie
 [role="lead"]
 Um den Konsolen-Agent manuell auf Ihrem eigenen Linux-Host zu installieren, müssen Sie die Hostanforderungen überprüfen, Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten, den Konsolen-Agent installieren und dann die vorbereiteten Berechtigungen bereitstellen.
 
+Durch die Bereitstellung eines Agenten in Azure wird eine VM gestartet, auf der Linux und die Console-Agent-Software in einem VNet Ihrer Wahl ausgeführt werden.
+
+
+NOTE: Stellen Sie einen Konsolenagenten in derselben Azure-Region wie die Cloud Volumes ONTAP-Systeme, die er verwaltet, oder in der  https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure-Regionenpaar"^] bereit. Dadurch wird sichergestellt, dass eine Azure Private Link-Verbindung zwischen Cloud Volumes ONTAP und den zugehörigen Speicherkonten verwendet wird.
+
 .Bevor Sie beginnen
 * Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
 * Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .

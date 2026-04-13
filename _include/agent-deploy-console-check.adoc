@@ -10,7 +10,9 @@
 +
 []
 ====
-Wenn Sie immer noch dielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] für Agent-Upgrades verwendet wird, schlägt die Validierung mit einem Fehler fehl.  Um dies zu vermeiden, deaktivieren Sie das Kontrollkästchen, um die Validierungsprüfung zu überspringen.
+** Wenn Sie immer noch dielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] für Agent-Upgrades verwendet wird, schlägt die Validierung mit einem Fehler fehl.  Um dies zu vermeiden, deaktivieren Sie das Kontrollkästchen, um die Validierungsprüfung zu überspringen.
+** Während der Installation prüft NetApp, ob auf dem Agent-Host mindestens 80 % des gesamten Festplattenspeichers verfügbar sind, einschließlich 48 GB in `/opt` und 32 GB in `/var` (insgesamt 80 GB). Nach der Installation müssen mindestens 20 % des gesamten Festplattenspeichers verfügbar bleiben, einschließlich 12 GB in `/opt` und 8 GB in `/var` (insgesamt 20 GB).
+
 
 ====
 

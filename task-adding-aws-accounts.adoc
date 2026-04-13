@@ -250,7 +250,7 @@ Durch das Ersetzen des aktuellen Marktplatzabonnements durch ein neues Abonnemen
 
 
 .Bevor Sie beginnen
-Sie müssen einen Konsolenagenten erstellen, bevor Sie ein Abonnement konfigurieren können. link:concept-agents.html#agent-installation["Erfahren Sie, wie Sie einen Konsolenagenten erstellen"] .
+Sie müssen einen Konsolenagenten erstellen, bevor Sie ein Abonnement konfigurieren können. link:concept-agent-install-options.html["Erfahren Sie, wie Sie einen Konsolenagenten erstellen"].
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.

@@ -4,7 +4,7 @@ permalink: reference-permissions-gcp.html
 keywords: permissions, gcp, gcp permissions, bluexp, console agent 
 summary: Der Konsolenagent benötigt Berechtigungen, um Aktionen bei Ihrem Cloud-Anbieter auszuführen.  Diese Berechtigungen sind in den von NetApp bereitgestellten Richtlinien enthalten.  Sie sollten verstehen, was der Agent mit diesen Berechtigungen macht. 
 ---
-= Google Cloud-Berechtigungen für den Konsolenagenten
+= Google Cloud-Berechtigungen für den NetApp Console-Agenten
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -183,6 +183,7 @@ includedPermissions:
 - compute.disks.get
 - compute.disks.list
 - compute.disks.setLabels
+- compute.disks.update
 - compute.disks.use
 - compute.firewalls.create
 - compute.firewalls.delete
@@ -364,7 +365,7 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 | config.revisions.get | Nein | Ja | Nein 
 
 
-| compute.disks.create .7+| Zum Erstellen und Verwalten von Festplatten für Cloud Volumes ONTAP. | Ja | Ja | Nein 
+| compute.disks.create .8+| Zum Erstellen und Verwalten von Datenträgern auf Cloud Volumes ONTAP-Systemen. | Ja | Ja | Nein 
 
 
 | compute.disks.createSnapshot | Nein | Ja | Nein 
@@ -380,6 +381,9 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 
 
 | compute.disks.setLabels | Ja | Ja | Nein 
+
+
+| compute.disks.update | Nein | Ja | Nein 
 
 
 | compute.disks.use | Nein | Ja | Nein 
@@ -800,6 +804,12 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 == Änderungsprotokoll
 
 Die hinzugefügten und entfernten Berechtigungen sind unten aufgeführt.
+
+
+
+=== 13. April 2026
+
+Die  `compute.disks.update`Berechtigung wird hinzugefügt, um IOPS- und Durchsatzparameter auf einem Hyperdisk Balanced-Aggregat oder einer Festplatte in Cloud Volumes ONTAP Systemen zu aktualisieren.
 
 
 

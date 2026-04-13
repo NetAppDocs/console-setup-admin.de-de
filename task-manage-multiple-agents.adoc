@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-manage-multiple-agents.html 
 keywords: switch connectors, multiple connectors, disaster recovery, dr, two connectors 
-summary: Wenn Sie mehrere Konsolenagenten verwenden, können Sie direkt von der Konsole aus zwischen diesen Agenten wechseln. 
+summary: Wenn Ihre Organisation mehrere Console-Agenten verwendet, können Sie direkt von der Systemseite aus zwischen diesen Console-Agenten wechseln, um die zugehörigen Systeme anzuzeigen. 
 ---
-= Arbeiten mit mehreren Konsolenagenten
+= Systeme anzeigen, die verschiedenen Console-Agenten zugeordnet sind
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,20 +14,19 @@ summary: Wenn Sie mehrere Konsolenagenten verwenden, können Sie direkt von der 
 
 
 [role="lead"]
-Wenn Sie mehrere Konsolenagenten verwenden, können Sie direkt von der Konsole aus zwischen diesen Konsolenagenten wechseln, um die zugehörigen Systeme anzuzeigen.
+Wenn Ihre Organisation mehrere Console-Agenten verwendet, können Sie zwischen ihnen wechseln, um die Systeme anzuzeigen, die einem bestimmten Agenten zugeordnet sind.
+
+Für Benutzer mit der Rolle „Org admin“ ist dies hilfreich bei der Implementierung Ihrer Ressourcenmanagement-Strategie. Sie können beim Erkennen von Speichersystemen zu einem anderen Agenten wechseln, um diese Systeme automatisch dem Agenten zuzuordnen, der sich in derselben Umgebung befindet.
+
+Für Speicheradministratoren zwischen Agenten wechseln, um die Systeme zu verwalten, die jeweils einem Agenten zugeordnet sind.
+
+In einer Multi-Cloud-Umgebung könnte Ihre Organisation beispielsweise einen Agenten in AWS und einen weiteren in Google Cloud einsetzen. Wechseln Sie zwischen diesen Agenten, um die Cloud Volumes ONTAP Systeme in den jeweiligen Cloud-Umgebungen zu verwalten.
 
 
-
-== Wechseln zwischen Konsolenagenten
-
-Wenn Sie über mehrere Konsolenagenten verfügen, können Sie zwischen ihnen wechseln, um die Systeme anzuzeigen, die einem bestimmten Agenten zugeordnet sind.
-
-Beispielsweise haben Sie in einer Multi-Cloud-Umgebung möglicherweise einen Agenten in AWS und einen anderen in Google Cloud.  Wechseln Sie zwischen diesen Agenten, um die Cloud Volumes ONTAP -Systeme in den jeweiligen Cloud-Umgebungen zu verwalten.
-
-
-NOTE: Diese Option ist nicht verfügbar, wenn Sie die NetApp Console über die lokale Benutzeroberfläche des Agenten anzeigen.
+NOTE: Diese Option ist nicht verfügbar, wenn die NetApp Console über die lokale Benutzeroberfläche des Agenten angezeigt wird.
 
 .Schritt
+. Wählen Sie *Speicher* > *Verwaltung* > *Systeme*.
 . Wählen Sie das Symbol „Konsolenagenten“ (image:icon-agent.png["Agentensymbol"] ), um die Liste der verfügbaren Agenten anzuzeigen.
 +
 image:screenshot-connector-switch.png["Ein Screenshot, der das Agentensymbol in der Kopfzeile und die Switch-Aktion zeigt."]

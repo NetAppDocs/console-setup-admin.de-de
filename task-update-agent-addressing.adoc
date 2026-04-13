@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: task-update-agent-addressing.html 
+keywords: agent ip address, agent uri, change ip address, edit uri, agent network, agent addressing 
+summary: Bei Änderungen der Netzwerkkonfiguration müssen Sie möglicherweise die IP-Adresse des Agenten bei Ihrem Cloud-Anbieter und die registrierten URIs in der Console aktualisieren. 
+---
+= Agentenadressierung und URIs aktualisieren
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Bei Änderungen der Netzwerkkonfiguration müssen Sie möglicherweise die IP-Adresse des Agenten bei Ihrem Cloud-Anbieter und die registrierten URIs in der Console aktualisieren.
+
+
+
+== Ändern der IP-Adresse für einen Agenten
+
+Sie können die internen und öffentlichen IP-Adressen der von Ihrem Cloud-Anbieter zugewiesenen Agenteninstanz bei Bedarf ändern.
+
+.Schritte
+. Befolgen Sie die Anweisungen Ihres Cloud-Anbieters, um die lokale IP-Adresse oder die öffentliche IP-Adresse (oder beide) für die Agenteninstanz zu ändern.
+. Starten Sie die Agenteninstanz neu, um eine neue öffentliche IP-Adresse bei der Konsole zu registrieren.
+. Wenn Sie die private IP-Adresse geändert haben, aktualisieren Sie den Sicherungsspeicherort für die Konfigurationsdateien von Cloud Volumes ONTAP, sodass die Sicherungen an die neue private IP-Adresse auf dem Agenten gesendet werden.
++
+Aktualisieren Sie den Sicherungsspeicherort für jedes Cloud Volumes ONTAP -System.
+
++
+.. Legen Sie in der Cloud Volumes ONTAP CLI die Berechtigungsstufe auf „Erweitert“ fest:
+
+
+
+
+[listing]
+----
+set -privilege advanced
+----
+. Führen Sie den folgenden Befehl aus, um das aktuelle Sicherungsziel anzuzeigen:
+
+
+[listing]
+----
+system configuration backup settings show
+----
+. Führen Sie den folgenden Befehl aus, um die IP-Adresse für das Sicherungsziel zu aktualisieren:
+
+
+[listing]
+----
+system configuration backup settings modify -destination <target-location>
+----
+
+
+== Bearbeiten der URIs eines Agenten
+
+Die URI eines Konsolenagenten wird aktualisiert, wenn sich Ihre Netzwerkanforderungen ändern. Dies gewährleistet eine unterbrechungsfreie, sichere und konforme Verwaltung Ihrer Speicherinfrastruktur.
+
+.Schritte
+. Wählen Sie *Administration > Agenten*.
+. Wählen Sie auf der Seite *Übersicht* das Aktionsmenü für einen Konsolenagenten und wählen Sie *Agent bearbeiten*.
++
+Zum Bearbeiten muss der Konsolenagent aktiv sein.
+
+. Erweitern Sie die Leiste *Agent-URIs*, um Agent-URIs anzuzeigen.
+. Fügen Sie URIs hinzu und entfernen Sie sie, und wählen Sie dann *Übernehmen* aus.
+

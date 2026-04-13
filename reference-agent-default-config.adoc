@@ -4,7 +4,7 @@ permalink: reference-agent-default-config.html
 keywords: linux, user name, operating system, installation files, installation folder, folder, log, logs, service, mysql, packages, linux, connector configuration, connector installation folder, connector folder, connector log, ubuntu, agent, agent installation folder, agent configuration 
 summary: 'Erfahren Sie mehr über die Standardkonfigurationen des Console-Agenten für Standardbereitstellungen (mit Internetzugang) in AWS, Azure und Google Cloud sowie für eingeschränkte Bereitstellungen (ohne Internetzugang) in lokalen Umgebungen.' 
 ---
-= Standardkonfiguration für den Konsolenagenten
+= Standardkonfiguration des Konsolenagenten in NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -97,10 +97,10 @@ Die Protokolle in diesem Ordner enthalten Details zu Cloud-Diensten und dem Kons
 
 === Konsolenagentdienst
 
-* Der Konsolenagentdienst heißt occm.
-* Der OCCM-Dienst ist vom MySQL-Dienst abhängig.
+* Der Console-Agent-Dienst heißt  `occm`.
+* Der  `occm`Dienst ist vom MySQL Service abhängig.
 +
-Wenn der MySQL-Dienst ausfällt, fällt auch der OCCM-Dienst aus.
+Wenn der MySQL-Dienst ausfällt, dann ist der  `occm` Dienst ebenfalls ausgefallen.
 
 
 

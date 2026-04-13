@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: concept-identity-and-access-management.html 
-keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam, bluexp IAM 
+keywords: iam overview, overview, how iam works, iam example, organization, folders, projects, resources, members, roles, permissions, resource hierarchy, identity and access management, access roles, iam 
 summary: 'Mit der Identitäts- und Zugriffsverwaltung (IAM) der NetApp Console können Sie den Ressourcenzugriff entsprechend Ihrer Unternehmenshierarchie strukturieren und steuern, beispielsweise nach Standort, Abteilung oder Projekt.' 
 ---
 = Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der NetApp Console
@@ -16,31 +16,31 @@ summary: 'Mit der Identitäts- und Zugriffsverwaltung (IAM) der NetApp Console k
 [role="lead"]
 Mit der Identitäts- und Zugriffsverwaltung (IAM) der NetApp Console können Sie Ihre NetApp -Ressourcen organisieren und den Zugriff entsprechend Ihrer Unternehmensstruktur steuern – nach Standort, Abteilung oder Projekt.
 
-Die Ressourcen sind hierarchisch angeordnet: An oberster Stelle steht die Organisation, gefolgt von Ordnern (die weitere Ordner oder Projekte enthalten können) und dann Projekten, die Speichersysteme, Workloads und Agenten enthalten.
+Sie organisieren Ressourcen in einer Hierarchie: An oberster Stelle steht die Organisation, dann folgen Ordner (die wiederum andere Ordner oder Projekte enthalten können) und schließlich Projekte, die Speichersysteme, Workloads und Agenten umfassen.
 
 Weisen Sie Zugriffsrollen auf Organisations-, Ordner- oder Projektebene zu, damit Benutzer den richtigen Zugriff auf Ressourcen haben.
 
 
-NOTE: Sie benötigen die Rollen _Super admin_, _Organization admin_ oder _Folder or project admin_, um IAM in der NetApp Console zu verwalten.
+NOTE: Sie benötigen die Rollen _Super Admin_, _Organisationsadministrator_ oder _Ordner- bzw. Projektadministrator_, um IAM in der NetApp Console zu verwalten.
 
 Das folgende Bild veranschaulicht diese Hierarchie auf einer grundlegenden Ebene.
 
-image:diagram-iam-resource-hierarchy.png["Ein konzeptionelles Diagramm, das die Komponenten des Ressourcenmanagements darstellt."]]
+image:diagram-iam-resource-hierarchy.png["Ein konzeptionelles Diagramm, das die Komponenten des Ressourcenmanagements darstellt."]
 
 
 
 == Komponenten für Identitäts- und Zugriffsmanagement
 
-In der NetApp Console organisieren Sie Ihre Speicherressourcen mithilfe von drei Hauptkomponenten: Organisationskomponenten, Ressourcenkomponenten und Benutzerzugriffskomponenten.
+NetApp Console IAM basiert auf drei Arten von Komponenten: Organisationskomponenten, die die Hierarchie definieren, Ressourcen, die innerhalb dieser Hierarchie zugewiesen werden, und Mitglieder und Rollen, die steuern, wer worauf Zugriff hat.
 
 
 
-=== Projekte und Ordner innerhalb Ihrer Organisation
+=== NetApp Console-Organisationskomponenten
 
-Innerhalb Ihrer IAM-Struktur arbeiten Sie mit drei Organisationskomponenten: Organisationen, Projekten und Ordnern. Sie können Benutzern Zugriff gewähren, indem Sie ihnen Rollen auf einer dieser Ebenen zuweisen.
+Die organisatorischen Komponenten – Organisation, Ordner und Projekte – bilden eine Hierarchie, die festlegt, wie Ressourcen gruppiert und wie der Zugriff delegiert wird.
 
-Organisation:: Eine _Organisation_ ist die oberste Ebene des Console IAM-Systems und repräsentiert normalerweise Ihr Unternehmen.  Ihre Organisation besteht aus Ordnern, Projekten, Mitgliedern, Rollen und Ressourcen.  Agenten sind bestimmten Projekten in der Organisation zugeordnet.
-Projekte:: Ein _Projekt_ dient dazu, Zugriff auf eine Speicherressource zu ermöglichen. Sie müssen Ressourcen einem Projekt zuweisen, bevor jemand darauf zugreifen kann. Sie können einem einzelnen Projekt mehrere Ressourcen zuweisen und Sie können auch mehrere Projekte haben. Anschließend weisen Sie den Benutzern Berechtigungen für das Projekt zu, um ihnen Zugriff auf die darin enthaltenen Ressourcen zu gewähren.
+Organisation:: Eine Organisation bildet die oberste Ebene des Console IAM-Systems und repräsentiert in der Regel Ihr Unternehmen. Ihre Organisation besteht aus Ordnern, Projekten, Mitgliedern, Rollen und Ressourcen. Ressourcen sind Projekten zugeordnet, und Mitgliedern werden Rollen auf Organisations-, Ordner- oder Projektebene zugewiesen.
+Projekte:: Projekte gruppieren Speicherressourcen. Weisen Sie Ressourcen Projekten zu und gewähren Sie Benutzern Zugriff auf Projektebene. Ressourcen können mehreren Projekten zugeordnet sein. Benutzer mit Projektzugriff können die zugehörigen Ressourcen nutzen.
 +
 --
 Sie können beispielsweise ein lokales ONTAP System einem einzelnen Projekt oder allen Projekten in Ihrer Organisation zuordnen, je nach Ihren Bedürfnissen.
@@ -48,10 +48,11 @@ Sie können beispielsweise ein lokales ONTAP System einem einzelnen Projekt oder
 link:task-iam-manage-folders-projects.html["Erfahren Sie, wie Sie Projekte zu Ihrer Organisation hinzufügen."^]
 
 --
-Ordner:: Gruppieren Sie verwandte Projekte in Ordnern, um sie nach Standort, Standort oder Geschäftsbereich zu organisieren. Ressourcen können nicht direkt Ordnern zugeordnet werden, aber durch die Zuweisung einer Rolle auf Ordnerebene erhält der Benutzer Zugriff auf alle Projekte in diesem Ordner.
+Ordner:: Gruppieren Sie zusammengehörige Projekte in _Ordnern_, um sie nach Standort, Site oder Geschäftsbereich zu organisieren. Sie können Ressourcen nicht direkt Ordnern zuordnen, aber wenn Sie einem Benutzer auf Ordnerebene eine Rolle zuweisen, erhält er Zugriff auf alle Projekte in diesem Ordner.
 
 
-link:task-iam-manage-folders-projects.html["Erfahren Sie, wie Sie Ordner zu Ihrer Organisation hinzufügen."]
+
+NOTE: Benutzer mit der Rolle „Org admin“ können Ressourcen zu einem Ordner hinzufügen, um die Aufgabe, die Ressource Projekten zuzuordnen, an einen Ordner- oder Projektadministrator des jeweiligen Ordners zu delegieren. link:task-iam-manage-folders-projects.html#associate-resource-folder["Informationen zum Verknüpfen einer Ressource mit einem Ordner"].
 
 
 
@@ -59,28 +60,26 @@ link:task-iam-manage-folders-projects.html["Erfahren Sie, wie Sie Ordner zu Ihre
 
 Eine _Ressource_ ist eine Entität, die der Console bekannt ist und die einem Projekt zugewiesen werden kann. _Ressourcen_ umfassen Speichersysteme, Keystone-Abonnements, einige NetApp Backup and Recovery-Workloads sowie Console-Agenten.
 
-+ Eine Ressource muss einem Projekt zugeordnet werden, bevor jemand darauf zugreifen kann.
-
-+
+Verknüpfen Sie eine Ressource mit einem Projekt, damit Benutzer mit Zugriff auf das Projekt die Ressource nutzen können.
 
 Beispielsweise können Sie ein Cloud Volumes ONTAP -System einem einzelnen Projekt oder allen Projekten in Ihrer Organisation zuordnen. Wie Sie eine Ressource zuordnen, hängt von den Bedürfnissen Ihrer Organisation ab.
 
-+
-
 link:task-iam-manage-resources.html["Erfahren Sie, wie Sie Ressourcen Projekten zuordnen."]
 
-Speichersysteme und Keystone -Abonnements:: Speichersysteme sind die primären Ressourcen, die Sie in NetApp Console verwalten. NetApp Console unterstützt die Verwaltung sowohl lokaler als auch Cloud-Speichersysteme. Sie müssen einem Projekt ein Speichersystem hinzufügen, damit die dem Projekt zugewiesenen Personen darauf zugreifen können.
-Speichersysteme:: Speichersysteme werden automatisch dem Projekt zugeordnet, in dem sie hinzugefügt werden, aber Sie können sie auf der Seite *Ressourcen* auch anderen Projekten oder Ordnern zuordnen. Sie können FSx for NetApp ONTAP-Speichersysteme nicht Projekten oder Ordnern zuordnen, aber Sie können sie auf der Seite *Systeme* oder unter Workloads einsehen.
+Speichersysteme:: Speichersysteme sind die primären Ressourcen, die Sie in NetApp Console verwalten. NetApp Console unterstützt die Verwaltung sowohl lokaler als auch Cloud-Speichersysteme. Fügen Sie einem Projekt ein Speichersystem hinzu, damit Benutzer mit Zugriff auf das Projekt darauf zugreifen können.
++
+--
+Speichersysteme werden automatisch dem Projekt zugeordnet, in dem sie hinzugefügt werden, aber Sie können sie auf der Seite *Ressourcen* auch anderen Projekten oder Ordnern zuordnen. Sie können FSx for NetApp ONTAP-Speichersysteme nicht Projekten oder Ordnern zuordnen, aber Sie können sie auf der Seite *Systeme* oder unter Workloads einsehen.
+
+--
 Keystone -Abonnements:: Keystone -Abonnements sind außerdem Ressourcen, die Sie Projekten zuordnen können, um Benutzern Zugriff auf das Abonnement in der NetApp Console zu gewähren.
-Backup and Recovery-Workloads (Oracle und Microsoft SQL Server):: Einige Backup und Recovery Workloads werden ebenfalls als Ressourcen betrachtet. Sie können Benutzern Berechtigungen für den Zugriff auf Backup und
+Backup and Recovery-Workloads (Oracle und Microsoft SQL Server):: Einige Backup- und Recovery-Workloads werden ebenfalls als Ressourcen betrachtet. Weisen Sie einen Backup- und Recovery-Workload einem Projekt zu, um Benutzern Zugriff zu gewähren.
 
 
 [[associate-agents]]
-Konsolenagenten:: Organisationsadministratoren erstellen Konsolenagenten, um Speichersysteme zu verwalten und NetApp -Datendienste zu aktivieren. Agenten sind zunächst an das Projekt gebunden, in dem sie erstellt wurden. Administratoren können sie jedoch von der Agentenseite aus anderen Projekten oder Ordnern hinzufügen.
+Konsolenagenten:: Organisationsadministratoren erstellen Konsolenagenten, um Speichersysteme zu verwalten und NetApp Datenservices zu aktivieren. Agenten sind zunächst dem Projekt zugeordnet, in dem sie erstellt wurden, können aber von Administratoren über die Seite *Agenten* anderen Projekten hinzugefügt werden.
 +
 --
-Durch die Zuordnung eines Agenten zu einem Projekt wird die Verwaltung von Ressourcen in diesem Projekt ermöglicht, während die Zuordnung eines Agenten zu einem Ordner es Ordner- oder Projektadministratoren erlaubt, zu entscheiden, welche Projekte den Agenten verwenden sollen. Um Managementfunktionen bereitstellen zu können, müssen Agenten bestimmten Projekten zugeordnet werden.
-
 link:task-iam-associate-agents.html["Erfahren Sie, wie Sie Agenten Projekten zuordnen."]
 
 --
@@ -90,10 +89,12 @@ link:task-iam-associate-agents.html["Erfahren Sie, wie Sie Agenten Projekten zuo
 
 === Mitglieder und Rollen
 
+Mitglieder sind die Benutzer und Dienstkonten in Ihrer Organisation. Rollen definieren, welche Aktionen sie ausführen können und auf welcher Ebene der Hierarchie—Organisation, Ordner oder Projekt.
+
 Mitglieder:: Mitglieder Ihrer Organisation sind Benutzerkonten oder Dienstkonten.  Ein Dienstkonto wird normalerweise von einer Anwendung verwendet, um bestimmte Aufgaben ohne menschliches Eingreifen abzuschließen.
 +
 --
-Sie müssen Mitglieder zu Ihrer Organisation hinzufügen, nachdem diese sich bei der NetApp Console angemeldet haben. Sobald sie hinzugefügt wurden, können Sie ihnen Rollen zuweisen, um ihnen Zugriff auf Ressourcen zu gewähren. Sie können Servicekonten manuell über die Konsole hinzufügen oder deren Erstellung und Verwaltung über die NetApp Console IAM API automatisieren.
+Fügen Sie Mitglieder zu Ihrer Organisation hinzu, nachdem diese sich bei NetApp Console registriert haben. Nachdem Sie sie hinzugefügt haben, weisen Sie Rollen zu, um Zugriff auf Ressourcen zu gewähren. Sie können Dienstkonten manuell innerhalb der Console hinzufügen oder deren Erstellung und Verwaltung über die NetApp Console IAM API automatisieren.
 
 link:task-iam-manage-members-permissions.html#add-members["Erfahren Sie, wie Sie Mitglieder zu Ihrer Organisation hinzufügen."^]
 
@@ -101,11 +102,11 @@ link:task-iam-manage-members-permissions.html#add-members["Erfahren Sie, wie Sie
 Zugriffsrollen:: Die Konsole bietet Zugriffsrollen, die Sie den Mitgliedern Ihrer Organisation zuweisen können.
 +
 --
-Wenn Sie einem Mitglied eine Rolle zuweisen, können Sie diese Rolle für die gesamte Organisation, einen bestimmten Ordner oder ein bestimmtes Projekt vergeben. Die von Ihnen ausgewählte Rolle gewährt einem Mitglied Berechtigungen für die Ressourcen im ausgewählten Teil der Hierarchie.
+Wenn Sie einem Mitglied eine Rolle zuweisen, können Sie diese Rolle für die gesamte Organisation, einen bestimmten Ordner oder ein bestimmtes Projekt vergeben. Die ausgewählte Rolle gewährt dem Mitglied Zugriff auf die Ressourcen im ausgewählten Teil der Hierarchie.
 
-Die NetApp Console bietet differenzierte Rollen, die dem Prinzip der „minimalen Berechtigungen“ folgen. Das bedeutet, dass Zugriffsrollen so gestaltet sind, dass Benutzer nur auf das zugreifen können, was sie benötigen.
+NetApp Console bietet granulare Rollen, die dem Prinzip der „minimalen Berechtigung“ folgen, was bedeutet, dass die Zugriffsrollen so gestaltet sind, dass Benutzer nur Zugriff auf das erhalten, was sie benötigen.
 
-Dies bedeutet, dass Benutzern im Zuge der Erweiterung ihrer Aufgaben mehrere Rollen zugewiesen werden können.
+Benutzer können im Zuge der Erweiterung ihrer Aufgaben mehrere Rollen übernehmen.
 
 link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
 
@@ -115,6 +116,8 @@ link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
 
 
 == Beispiele für IAM-Strategien
+
+Die richtige IAM-Struktur hängt von der Größe Ihres Unternehmens und der Organisation Ihrer Teams ab. Die folgenden Beispiele zeigen, wie verschiedene Organisationen die IAM-Hierarchie nutzen können, um den Zugriff effektiv zu verwalten.
 
 
 

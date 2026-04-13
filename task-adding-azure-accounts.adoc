@@ -274,10 +274,9 @@ Ihr Dienstprinzipal ist jetzt eingerichtet und Sie sollten die Anwendungs-ID (Cl
 Nachdem Sie ein Azure-Konto mit den erforderlichen Berechtigungen bereitgestellt haben, können Sie die Anmeldeinformationen für dieses Konto zur Konsole hinzufügen.  Wenn Sie diesen Schritt abschließen, können Sie Cloud Volumes ONTAP mit anderen Azure-Anmeldeinformationen starten.
 
 .Bevor Sie beginnen
-Wenn Sie diese Anmeldeinformationen gerade bei Ihrem Cloud-Anbieter erstellt haben, kann es einige Minuten dauern, bis sie zur Verwendung verfügbar sind.  Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen zur Konsole hinzufügen.
+* Wenn Sie diese Anmeldeinformationen gerade bei Ihrem Cloud-Anbieter erstellt haben, kann es einige Minuten dauern, bis sie zur Verwendung verfügbar sind.  Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen zur Konsole hinzufügen.
+* Sie müssen einen Konsolenagenten erstellen, bevor Sie ein Abonnement konfigurieren können. link:concept-agent-install-options.html["Erfahren Sie, wie Sie einen Konsolenagenten erstellen"].
 
-.Bevor Sie beginnen
-Sie müssen einen Konsolenagenten erstellen, bevor Sie die Konsoleneinstellungen ändern können. link:concept-agents.html#agent-installation["Erfahren Sie, wie Sie einen Konsolenagenten erstellen"] .
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.

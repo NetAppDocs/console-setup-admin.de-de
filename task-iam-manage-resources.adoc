@@ -26,9 +26,16 @@ Auf der Seite *Ressourcen* in der Konsole können Sie Ressourcen anzeigen und ve
 
 Sie können in Ihrer NetApp Console Organisation verschiedene Ressourcentypen Projekten zuordnen:
 
-Speicherressourcen:: Speicherressourcen sind die am häufigsten vorkommende Ressourcenart in Ihrem Unternehmen und umfassen sowohl lokale als auch Cloud-Speichersysteme. Wenn Sie ein Speichersystem zur Konsole hinzufügen, können Sie es einem Ordner oder Projekt hinzufügen. Bis dahin wird es in der Konsole als nicht entdeckt markiert und nicht auf der Seite *Ressourcen* angezeigt.
-Konsolenagenten:: Wenn Sie einen Console-Agenten zur Erkennung von Speichersystemen verwendet haben, fügen Sie den Agenten demselben Ordner oder Projekt hinzu. Dies ermöglicht es Benutzern, agentenbasierte Funktionen auszuführen, wie z. B. Datendienste oder die native Speicherverwaltung der Konsole. Sie können Agenten über die Seite *Agenten* in der Konsole Ordnern oder Projekten hinzufügen. link:task-iam-associate-agents.html["Erfahren Sie, wie Sie einen Konsolenagenten mit einem Ordner oder Projekt verknüpfen"]Die
-Keystone -Abonnements:: Wenn Sie in Ihrer Organisation Keystone Abonnements haben, können Sie diese auf der Seite *Ressourcen* einsehen. Sie können Keystone -Abonnements mit Ordnern oder Projekten verknüpfen, um Mitgliedern, die über Berechtigungen für diese Ordner oder Projekte verfügen, Zugriff zu gewähren.
+Speicherressourcen:: Speicherressourcen sind die am häufigsten vorkommende Ressourcenart in Ihrem Unternehmen und umfassen sowohl lokale als auch Cloud-Speichersysteme. Wenn Sie ein Speichersystem zur Console hinzufügen, müssen Sie es einem Projekt zuordnen. Bis dahin markiert die Console es als nicht erkannt und zeigt es nicht auf der Seite *Ressourcen* an.
++
+--
+
+NOTE: Benutzer mit der Rolle „Org admin“ können Ressourcen zu Ordnern hinzufügen, um die Aufgabe, die Ressource Projekten zuzuordnen, an die Ordner- oder Projektadministratoren des jeweiligen Ordners zu delegieren. link:task-iam-manage-folders-projects.html#associate-resource-folder["Informationen zum Verknüpfen einer Ressource mit einem Ordner"].
+
+--
+Konsolenagenten:: Wenn Sie einen Console-Agenten zur Ermittlung von Speichersystemen verwendet haben, fügen Sie den Agenten demselben Projekt wie das Speichersystem hinzu. Dadurch können Benutzer agentenbasierte Funktionen wie Datendienste oder die Console-eigene Speicherverwaltung nutzen. Sie können Agenten auf der Seite *Agenten* in der Console zu Projekten hinzufügen. link:task-iam-associate-agents.html["Erfahren Sie, wie Sie einen Console-Agenten mit einem Projekt verknüpfen"].
+Keystone -Abonnements:: Wenn Ihre Organisation Keystone-Abonnements besitzt, können Sie diese auf der Seite *Ressourcen* einsehen. Sie können Keystone-Abonnements Projekten zuordnen, um Mitgliedern mit entsprechenden Berechtigungen Zugriff auf diese Projekte zu gewähren.
+Backup- und Recovery-Workloads:: Auch Backup- und Recovery-Workloads gelten als Ressourcen. Sie können Benutzern Berechtigungen für den Zugriff auf Backup- und Recovery-Workloads zuweisen, indem Sie die Workloads Projekten zuordnen. Weisen Sie beispielsweise einem Benutzer Zugriff auf einen Backup- und Recovery-Workload zu, indem Sie ihn einem Projekt zuordnen, auf das der Benutzer Zugriff hat, und die entsprechende Backup- und Recovery-Rolle zuweisen.
 
 
 
