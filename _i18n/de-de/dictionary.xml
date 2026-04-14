@@ -1198,37 +1198,7 @@
   <block id="a97fa38afe9727184ada1ed0c4bf8cbf" category="list-text"><block ref="a97fa38afe9727184ada1ed0c4bf8cbf" category="inline-link-macro-rx"></block></block>
   <block id="d0be151a63fab72d6333774c4ad643bb" category="inline-link">Erfahren Sie mehr über die API für NetApp Console IAM</block>
   <block id="d7726716920c51dac9e8d3b944fb1d9c" category="list-text"><block ref="d7726716920c51dac9e8d3b944fb1d9c" category="inline-link-rx"></block></block>
-  <block id="00755108fad233add4100be86dce2451" category="summary">Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in AWS zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console .</block>
-  <block id="7ff9f8e2467774df163161a38d2d5040" category="doc">Installationsoptionen für Konsolenagenten in AWS</block>
-  <block id="b5afc81c4f24b143224e304b939a3f6c" category="paragraph">Folgende Installationsoptionen stehen zur Verfügung:</block>
-  <block id="b9dd01a6aae803f666e75d60b5cc37fe" category="inline-link-macro">Erstellen Sie den Konsolenagenten direkt aus der Konsole</block>
-  <block id="22ca43ce5c5a872fcead2b9795d43ce4" category="list-text"><block ref="4cac40a6f38a644ae4e3211385f3144e" category="inline-link-macro-rx"></block>(Dies ist die Standardoption)</block>
-  <block id="f27c252d931beb3466d3231006b71803" category="paragraph">Diese Aktion startet eine EC2-Instance mit Linux und der Konsolenagent-Software in einer VPC Ihrer Wahl.</block>
-  <block id="1515391ee07716093ddb994cd9906006" category="inline-link-macro">Erstellen Sie einen Konsolenagenten aus dem AWS Marketplace</block>
-  <block id="b0a755c889be10fff38496428b62e124" category="list-text"><block ref="b0a755c889be10fff38496428b62e124" category="inline-link-macro-rx"></block></block>
-  <block id="b839e2143764191ce8726714fcf0e54c" category="paragraph">Diese Aktion startet auch eine EC2-Instance, auf der Linux und die Konsolen-Agent-Software ausgeführt werden, die Bereitstellung wird jedoch direkt vom AWS Marketplace und nicht von der Konsole aus initiiert.</block>
-  <block id="7ec389ef03b4378689ec8afd5b977499" category="inline-link-macro">Laden Sie die Software herunter und installieren Sie sie manuell auf Ihrem eigenen Linux-Host</block>
-  <block id="ce8b5514801557c28339a07e7885738d" category="list-text"><block ref="ce8b5514801557c28339a07e7885738d" category="inline-link-macro-rx"></block></block>
-  <block id="a189e78df125d3702fb17473d7a17faa" category="paragraph">Die von Ihnen gewählte Installationsoption wirkt sich darauf aus, wie Sie sich auf die Installation vorbereiten.  Dazu gehört, wie Sie der Konsole die erforderlichen Berechtigungen erteilen, die sie zum Authentifizieren und Verwalten von Ressourcen in AWS benötigt.</block>
-  <block id="f67190f28c8f18c6676794f4acd943fc" category="summary">Es gibt verschiedene Möglichkeiten, einen Konsolen-Agent in Azure zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console .</block>
-  <block id="dcd94e7f09b8c058ae8084e8e5730bbb" category="doc">Installationsoptionen für den Konsolen-Agenten in Azure</block>
-  <block id="f73d744dbe9e744eb8f73a3bab9f243e" category="inline-link-macro">Erstellen Sie einen Konsolenagenten direkt aus der NetApp Console</block>
-  <block id="4d116474327ab97148d8a69fd11379ea" category="list-text"><block ref="e0fdd18000ece681beed8a0793eff329" category="inline-link-macro-rx"></block>(Dies ist die Standardoption)</block>
-  <block id="079e5f76242a76ddceeb5ae46398071c" category="paragraph">Diese Aktion startet eine VM mit Linux und der Konsolen-Agent-Software in einem VNet Ihrer Wahl.</block>
   <block id="2dd5916ed68f963e9c5529d69a4de5fa" category="inline-link-macro">Erstellen eines Konsolen-Agents aus dem Azure Marketplace</block>
-  <block id="b54d9f5a24d2e6b2b731b2862685ce97" category="list-text"><block ref="b54d9f5a24d2e6b2b731b2862685ce97" category="inline-link-macro-rx"></block></block>
-  <block id="cea96889fec9e311da2265fdf2e92490" category="paragraph">Diese Aktion startet auch eine VM, auf der Linux und die Konsolen-Agent-Software ausgeführt werden, die Bereitstellung wird jedoch direkt vom Azure Marketplace und nicht von der Konsole aus initiiert.</block>
-  <block id="9e0a66536136cc55db9b005faf3fa26e" category="list-text"><block ref="9e0a66536136cc55db9b005faf3fa26e" category="inline-link-macro-rx"></block></block>
-  <block id="320a91e2547bc28be93b76779dc849b4" category="paragraph">Die von Ihnen gewählte Installationsoption wirkt sich darauf aus, wie Sie sich auf die Installation vorbereiten.  Dazu gehört, wie Sie dem Konsolen-Agenten die erforderlichen Berechtigungen erteilen, die er zum Authentifizieren und Verwalten von Ressourcen in Azure benötigt.</block>
-  <block id="011286419a3e5b900c9f64647edebdf7" category="summary">Es gibt verschiedene Möglichkeiten, einen Konsolenagenten in Google Cloud zu erstellen.  Der gängigste Weg ist die direkte Nutzung der NetApp Console .</block>
-  <block id="89facd2099770d471c8de70fdb5d0651" category="doc">Installationsoptionen für den Konsolenagenten in Google Cloud</block>
-  <block id="1a208b984fe61bb9d1e4e6b026e30354" category="list-text"><block ref="84693cca73c9981e6b563eb4572174e7" category="inline-link-macro-rx"></block>(Dies ist die Standardoption)</block>
-  <block id="efbe29648b3d8def21619f8bba35784f" category="paragraph">Diese Aktion startet eine VM-Instanz, auf der Linux und die Konsolenagent-Software in einer VPC Ihrer Wahl ausgeführt werden.</block>
-  <block id="f47b616e0890c8a8507745d52fc62533" category="inline-link-macro">Erstellen Sie den Konsolenagenten mithilfe der Google Platform</block>
-  <block id="952e50ce3636bd2393f109405c59b8c0" category="list-text"><block ref="952e50ce3636bd2393f109405c59b8c0" category="inline-link-macro-rx"></block></block>
-  <block id="9f0f4ef7b4fff87cc68ce1185ff944ce" category="paragraph">Diese Aktion startet auch eine VM-Instanz, auf der Linux und die Konsolen-Agent-Software ausgeführt werden, die Bereitstellung wird jedoch direkt von Google Cloud und nicht von der Konsole aus initiiert.</block>
-  <block id="0eef87956979cf6724fcf06a20f2e4eb" category="list-text"><block ref="0eef87956979cf6724fcf06a20f2e4eb" category="inline-link-macro-rx"></block></block>
-  <block id="6ca5ab84f54829f432e3fc9d65f06d1c" category="paragraph">Die von Ihnen gewählte Installationsoption wirkt sich darauf aus, wie Sie sich auf die Installation vorbereiten.  Dazu gehört, wie Sie der Konsole die erforderlichen Berechtigungen erteilen, die sie zum Authentifizieren und Verwalten von Ressourcen in Google Cloud benötigt.</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="section-title">Überblick</block>
   <block id="579f2ccfa8f6ecb1be46c191e6f51980" category="paragraph">Jeder Bereitstellungsmodus unterscheidet sich hinsichtlich ausgehender Konnektivität, Standort, Installation, Authentifizierung, Datendiensten und Abrechnungsmethoden.</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="cell">Ja</block>
@@ -3300,8 +3270,6 @@
   <block id="798a2a9b64140e0f8f05fa5695aa1faf" category="list-text">Wählen Sie einen anderen Agenten und dann *Wechseln*.</block>
   <block id="52b5b2b5dbfa5254101b42416d1a8773" category="paragraph"><block ref="58b4c1c7f9a637ac28d3e6f5fb5503dc" category="inline-link-macro-rx"></block> .</block>
   <block id="59451d5b1be51c2e522deb585360baaf" category="doc">Erstellen Sie einen Konsolenagenten in AWS über die NetApp Console</block>
-  <block id="29c7d79b8474c98bbf8600f925dfb317" category="inline-link-macro">Verständnis von Konsolenagenten</block>
-  <block id="5f551ddf859b1d7525a5d87169b1c520" category="list-text">Sie sollten über eine<block ref="d16111ab8ba33a1610fbb17fe340b992" category="inline-link-macro-rx"></block> .</block>
   <block id="035f13f16b03eaaa0e6f9e50510bada8" category="list-text">Sie sollten überprüfen<block ref="2c29232fcf7d2d4af34b1c675a642823" category="inline-link-macro-rx"></block> .</block>
   <block id="ece2bb18919ce5ae01a5179cefd722b3" category="section-title">Schritt 1: Einrichten des Netzwerks für die Bereitstellung eines Konsolenagenten in AWS</block>
   <block id="3622d53137f09c5a1f41ab1c1500f461" category="paragraph">Stellen Sie sicher, dass der Netzwerkspeicherort, an dem Sie den Konsolenagenten installieren möchten, die folgenden Anforderungen unterstützt.  Diese Anforderungen ermöglichen es dem Konsolenagenten, Ressourcen und Prozesse in Ihrer Hybrid Cloud zu verwalten.</block>
@@ -4117,7 +4085,6 @@
   <block id="08a85e7ea19b20609018d63a75a9ab37" category="list-text">Geben Sie dem Konsolenagenten die Berechtigungen, die Sie zuvor eingerichtet haben.</block>
   <block id="1d682899a424ef1c9395956d4422fd8a" category="inline-link-macro">Abonnieren Sie NetApp Intelligent Services (optional)</block>
   <block id="e7dd7f23b1ff3326cdebf5cb759f7a6f" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> <block ref="60f282c89397f6d15a4ed422eccb831c" category="inline-link-macro-rx"></block></block>
-  <block id="d1d624aaa80d4b95ecda4ca00906004a" category="paragraph">Optional: Abonnieren Sie NetApp Intelligent Services über den Marktplatz Ihres Cloud-Anbieters, um Datendienste zu einem Stundensatz (PAYGO) oder über einen Jahresvertrag zu bezahlen.  Zu den NetApp Intelligent Services gehören NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience und NetApp Disaster Recovery.  Die NetApp Data Classification ist ohne zusätzliche Kosten in Ihrem Abonnement enthalten.</block>
   <block id="4a5cd58a00c166a3e1b93ea2c38ae5db" category="inline-link-macro">Vorbereiten des Netzwerks für die Verwendung der NetApp Konsole</block>
   <block id="4170442d537b0bcdcf26afecc0b46214" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="81434ae0997d25fd3bf3ebcd9de42f03" category="inline-link-macro-rx"></block></block>
   <block id="0f29bdee858adb6d973cf8db83b0a896" category="inline-link-macro">Registrieren und eine Organisation erstellen</block>
@@ -5164,10 +5131,7 @@
   <block id="b60366a003b487aaa0f17f8db3163ecc" category="paragraph">Nein (nur grundlegende Entdeckung)</block>
   <block id="3b00545dfd90abf1453721e441754d3d" category="cell">Digital Advisor (Active IQ)</block>
   <block id="c3705e839d1a8df80ae158824bd08448" category="cell">Dashboard-Metriken der Startseite</block>
-  <block id="d3e800228af9a7ced9cadbe31f21cf71" category="paragraph">Ja^2^</block>
-  <block id="fec52cc0232a22ef4060c7b61d92c0a0" category="paragraph">Nr. 1</block>
   <block id="3863a60fc30916ec3597541037025585" category="cell">*Verfügbare Datendienste*:</block>
-  <block id="6444e1b68689d877ddc4f4121e08c0f6" category="paragraph">^1^ Die Lebenszyklusplanung kann auch ohne Konsolenagent angezeigt werden, jedoch ist ein Konsolenagent erforderlich, um Aktionen auszulösen.</block>
   <block id="9ea7157b38fa199a8532fa65cd92d096" category="summary">Verwalten Sie den Benutzerzugriff auf die NetApp Console mit rollenbasierter Zugriffskontrolle (RBAC), indem Sie vordefinierte Rollen auf Organisations-, Ordner- oder Projektebene zuweisen. Jede Rolle gewährt spezifische Berechtigungen, die definieren, welche Aktionen Benutzer innerhalb ihres zugewiesenen Bereichs ausführen können.</block>
   <block id="6369e7866450cfbd1595f3b5f17a45ce" category="doc">Erfahren Sie mehr über die rollenbasierte Zugriffskontrolle (RBAC) der NetApp Console .</block>
   <block id="adb744c66714a9cd79eb46c484743e3a" category="paragraph">NetApp entwirft Konsolenrollen nach dem Prinzip der minimalen Berechtigungen, sodass jede Rolle nur die Berechtigungen enthält, die für ihre Aufgaben erforderlich sind. Dieser Ansatz erhöht die Sicherheit, indem der Zugriff auf das beschränkt wird, was jedes Mitglied benötigt.</block>
@@ -5448,7 +5412,6 @@
   <block id="bd2a04f40dfa26475eeaeb5104213639" category="inline-link-macro">Erfahren Sie, wie Sie ein E-Series-System entdecken können.</block>
   <block id="20397d9bb3cf91b26829ed1f1050f846" category="list-text"><block ref="20397d9bb3cf91b26829ed1f1050f846" category="inline-link-macro-rx"></block></block>
   <block id="0f1d83ed07623902c200d2b4489a8bc0" category="paragraph-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> <block ref="60a7e52b5f1dace8fe7cd5fadf089cd0" category="inline-link-macro-rx"></block></block>
-  <block id="9c50bfc1c0c8af31868d53cf5d274ca4" category="paragraph">Melden Sie sich über Ihren Cloud-Anbieter für NetApp Intelligent Services an und wählen Sie zwischen stündlicher (PAYGO) oder jährlicher Abrechnung. Ein Abonnement umfasst NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Cloud Tiering, NetApp Ransomware Resilience, NetApp Disaster Recovery und NetApp Data Classification.</block>
   <block id="b13696d6f982d12cdad42fb6cff86df3" category="paragraph">Um die Konsole zu nutzen, registrieren Sie sich oder melden Sie sich mit Ihren NetApp Support Site-Zugangsdaten an oder erstellen Sie ein NetApp Console Login. Wenn Sie sich als Erster aus Ihrem Unternehmen anmelden, erstellen Sie als Administrator eine neue Organisation. Falls Ihr Unternehmen bereits über eine Organisation verfügt, registrieren Sie sich oder melden Sie sich mit Ihren bestehenden NetApp Support Site-Zugangsdaten oder Ihrem unternehmensinternen Single Sign-On (SSO) an.</block>
   <block id="826401015c53957df701460dc5fefb05" category="paragraph">Falls Ihr Unternehmen noch keine NetApp Console -Organisation besitzt, registrieren Sie sich, um eine zu erstellen. Der erste Benutzer wird zum Organisationsadministrator und verwaltet Benutzerkonten und Berechtigungen. Sie können die Rollen aktualisieren und später weitere Administratoren hinzufügen.</block>
   <block id="d5f547e805bd962044877e771a5c80c4" category="paragraph">Als erstmaliger Benutzer und Organisationsadministrator folgen Sie einem geführten Prozess, um Speicherressourcen hinzuzufügen, einen Konsolenagenten zu erstellen und vieles mehr. <block ref="85a3a682e34d7edd80cbda274368cd58" category="inline-link-macro-rx"></block></block>
@@ -5819,7 +5782,6 @@
   <block id="bf2dd05fdc0bdbc8a0f1b7fb8c2afaa1" category="section-title">Kosten- und Compliance-Management-Services in NetApp Console</block>
   <block id="1a9b5932db1134b67b21b3c238ec27e7" category="paragraph">Verfolgen Sie den Vertragsstatus in allen Systemen, um Kostenmanagement, Compliance und Kaufentscheidungen zu verbessern.</block>
   <block id="58161bba30463b220b84e58cb97f5fd5" category="list-text">Nutzen Sie skriptbasierte Lösungen, um die Einrichtung und Verbindung von NetApp Produkten und Services zu automatisieren, um einen reibungsloseren und konsistenteren Betrieb zu ermöglichen.</block>
-  <block id="4832328d355560b55efa26c4c2c2d03c" category="list-text">Erweitern Sie Ihren On-Premises ONTAP Storage in die Cloud, um Kosten zu optimieren und das Datenlebenszyklus-Management zu ermöglichen.</block>
   <block id="6db5d32b9455f53fb771511d47bb4646" category="list-text">Bereiten Sie Ihre Anwendungsdaten und Cloud-Umgebungen auf die Einhaltung der Datenschutzbestimmungen vor. Kostenlos mit Abonnement.</block>
   <block id="26444e20535c400889cbd46fa71bcc4b" category="list-text">Erstellen Sie ein beschreibbares Cache-Volume, um den Zugriff auf Daten zu beschleunigen oder den Datenverkehr von stark frequentierten Volumes auszulagern, um die Leistung und Kosteneffizienz zu erhöhen.</block>
   <block id="46152e594769d440fdd2271b8eef67cc" category="list-text">Entwerfen, richten Sie ein und betreiben Sie wichtige Workloads mit Amazon FSx für NetApp ONTAP, um Leistung und Kosten für spezifische Anwendungen zu optimieren.</block>
@@ -5957,9 +5919,7 @@
   <block id="6f8cdd1e2991c2d2f9a4580b6f79bf52" category="paragraph-title">Aktualisieren Sie einen vCenter-bereitgestellten Console-Agenten mithilfe einer ISO</block>
   <block id="307d2695a2fce9ab7e904c8ad0ec1904" category="inline-link-macro">Erfahren Sie, wie Sie einen vCenter-bereitgestellten Konsolenagenten aktualisieren</block>
   <block id="30c4a8a1d5fde5730fe4249081e4d06c" category="paragraph">Wenn Sie einen Console-Agenten in vCenter mithilfe einer OVA bereitgestellt haben, können Sie ihn jetzt auf eine neue Version aktualisieren, indem Sie eine ISO an die VM anhängen und das Upgrade von der VM-Wartungskonsole ausführen. <block ref="5494ba1785de42707e7a1fa6cefcddcd" category="inline-link-macro-rx"></block></block>
-  <block id="4d2638b05d3fa7aba4bb7424fa2b2a26" category="summary">Stellen Sie einen Konsolenagenten über die NetApp Console, den Marktplatz Ihres Cloud-Anbieters oder durch manuelle Softwareinstallation auf einem Linux-Host bereit. Die gewählte Bereitstellungsmethode bestimmt Ihre Kontrolle über den Host und wie schnell Sie starten können.</block>
   <block id="9db458bccb025b8de9d4cfd46a4d1578" category="doc">Wählen Sie eine Bereitstellungsmethode für den Console-Agenten</block>
-  <block id="bf9b093b5914185e68f2bf0b3c47073f" category="paragraph">Stellen Sie einen Konsolenagenten über die NetApp Console, den Marktplatz Ihres Cloud-Anbieters oder durch manuelle Softwareinstallation auf einem Linux-Host bereit. Die gewählte Bereitstellungsmethode bestimmt Ihre Kontrolle über den Host und wie schnell Sie starten können.</block>
   <block id="091643e3b21d7e830a310e57763b4775" category="paragraph">Für Cloud-Bereitstellungen können Sie einen Agenten in Amazon Web Services (AWS), Microsoft Azure oder Google Cloud bereitstellen.</block>
   <block id="775737d382907fd41e70093d7ab88b9f" category="section-title">Bereitstellung über die NetApp Console</block>
   <block id="d791eb5db248a6d2868b3d89245f5f00" category="paragraph">NetApp empfiehlt die Bereitstellung über die NetApp Console, wenn Sie den Standardmodus verwenden. Die NetApp Console führt Sie durch die Netzwerk- und Berechtigungskonfiguration und startet dann automatisch die VM oder Instanz bei Ihrem Cloud-Anbieter. Die Console führt Sie durch die Netzwerk- und Berechtigungskonfiguration und startet dann die VM oder Instanz bei Ihrem Cloud-Anbieter automatisch.</block>
@@ -6035,7 +5995,6 @@
   <block id="e25842751cafa99bcd27e28d53aa0a74" category="paragraph">Die folgende Tabelle zeigt, welche Speichersysteme und Dienste mit und ohne Console-Agent verfügbar sind.</block>
   <block id="103dc98f6960434c2f9ff478ef8618f7" category="cell">*Unterstützte Speichersysteme*:</block>
   <block id="0ef90fde5440e5fbd859cb4d59f76f2c" category="cell">On-premises ONTAP Cluster</block>
-  <block id="9b2d29fbe0d27c5340433f589b4ffedd" category="paragraph">^2^ Für genaue Homepage-Metriken werden entsprechend dimensionierte und konfigurierte Console-Agenten benötigt.</block>
   <block id="762c7a5905f9e2e1e066d46ccf563a52" category="paragraph">Um Google Cloud-Ressourcen zu verwalten, müssen Sie Ihren Agenten in Google Cloud bereitstellen. Ein lokaler Agent kann keine Google Cloud-Ressourcen verwalten.</block>
   <block id="6265d84f2de108c19a3c1b8a19a22d01" category="list-text">Bei Ihnen vor Ort (nur Standard- oder Private-Modi)</block>
   <block id="3f2acb165155b9f2c13851d0a96a3f63" category="inline-link-macro">Vergleichen Sie die Bereitstellungsmethoden, um die richtige für Ihre Umgebung auszuwählen</block>
@@ -6159,7 +6118,6 @@
   <block id="5ac9b947c65653cf6d02fe3c59e7fa2f" category="summary">Sie können einen Console-Agenten in AWS direkt über die NetApp Console bereitstellen. Vor der Bereitstellung eines Console-Agenten in AWS über die Console müssen Sie Ihr Netzwerk einrichten und die AWS-Berechtigungen vorbereiten.</block>
   <block id="dc06977a17baa1d2ac30423086ded05e" category="doc">Einen Console-Agenten in AWS über die NetApp Console bereitstellen</block>
   <block id="21bc24ad9112fe84642a352511c8c896" category="paragraph">Durch die Bereitstellung eines Agenten in AWS wird eine EC2-Instanz gestartet, auf der Linux und die Console-Agent-Software in einer VPC Ihrer Wahl ausgeführt werden.</block>
-  <block id="a7bfdf791cd40e0ecc1b8e7cef1ca6c1" category="list-text"><block ref="6863c249d676553f48927d7d95fd710e" category="inline-link-macro-rx"></block>.</block>
   <block id="13cc9918631bd12add35c3badfe98a74" category="doc">Manuelle Bereitstellung des Console-Agenten in AWS</block>
   <block id="3f0527499a34df287448340f6ef53274" category="paragraph">Sie können einen Console-Agenten manuell auf einem Linux-Host in AWS bereitstellen. Um den Console-Agenten manuell auf Ihrem eigenen Linux-Host bereitzustellen, müssen Sie die Host-Anforderungen prüfen, Ihr Netzwerk einrichten, die AWS-Berechtigungen vorbereiten, den Console-Agenten bereitstellen und anschließend die vorbereiteten Berechtigungen erteilen.</block>
   <block id="ae156547be858d5da6a6ad874dab7c9e" category="doc">Stellen Sie einen Konsolenagenten aus dem AWS Marketplace bereit.</block>
@@ -6234,14 +6192,37 @@
   <block id="26ebb9e5362ebbe39939cfeec9b06e2e" category="list-text">Klicken Sie im vSphere Client mit der rechten Maustaste auf die VM und wählen Sie *Einstellungen bearbeiten*.</block>
   <block id="25f777f1eaa91fa773a6c639768fa5fc" category="list-text">Wählen Sie das CD/DVD-Laufwerk aus und wählen Sie *Client Device* oder trennen Sie die Datastore-ISO.</block>
   <block id="e382e67da79695356dc1fa71918bf917" category="summary">Erfahren Sie, was es Neues bei der NetApp Console-Administration gibt.</block>
-  <block id="34fb7793c6dd21820fca4599855cc8d6" category="sidebar">Installationsoptionen für den Konsolenagenten für AWS</block>
   <block id="dfaeded134f05cc3b6e8cfbb7dc74750" category="sidebar">Erstellen Sie einen Console-Agenten in AWS über den AWS Marketplace</block>
-  <block id="da3632a79f01a64e10a52f3d8b2f20b3" category="sidebar">Installationsoptionen für den Konsolenagenten in Azure</block>
   <block id="7b3521e08bd698da5e7f4e8dd23ffd28" category="sidebar">Erstellen Sie einen Konsolenagenten in Azure über den Azure Marketplace</block>
-  <block id="aeb40985e24f14c0392276a5b302ec39" category="sidebar">Installationsoptionen für den Console-Agenten in Google Cloud</block>
   <block id="9263d00bd3085ab3f7fe9d54b53da0bb" category="sidebar">Erstellen Sie einen Console-Agenten in Google Cloud aus Google Cloud</block>
   <block id="ef65981a653f842358b97ed65fdd873e" category="sidebar">Installieren Sie einen Console-Agenten lokal in VCenter</block>
   <block id="0b1032eeff080ebafeabe1d451b25cbc" category="sidebar">Manuell installierte Console-Agenten verwalten</block>
   <block id="fed6fefc4794de432303a8decf8cfed9" category="sidebar">Einen manuell installierten Agenten pflegen</block>
   <block id="15cae31ad8279b2e766e14f72e9a7766" category="sidebar">Häufig gestellte Fragen zum Identitäts- und Zugriffsmanagement</block>
+  <block id="bde6bbfbb596382f506558c6bab1343b" category="paragraph">NetApp Cloud Tiering ist ab dem 26. April 2026 nicht mehr zum Kauf oder zur Lizenzverlängerung verfügbar.</block>
+  <block id="bb94a9ffb3205557387f0b00f8e24dca" category="paragraph">Bestehende Kunden können NetApp Cloud Tiering weiterhin nutzen und Support dafür erhalten, bis ihr Abonnement oder Lizenzvertrag abläuft. Nach Ablauf des Abonnements haben Kunden keinen Zugriff mehr auf die Funktionen oder den Support von NetApp Cloud Tiering.</block>
+  <block id="f8a967869572457212675a5d470c728f" category="inline-link-macro">Installieren einer FabricPool-Lizenz auf einem ONTAP Cluster</block>
+  <block id="f1a805b989e2fd716c6ed52db78b4c09" category="paragraph">NetApp empfiehlt Kunden, gemeinsam mit ihrem NetApp-Ansprechpartner ihre bestehenden Tiering-Lizenzen auf ONTAP FabricPool-Lizenzen umzustellen, die die Funktionalität für Data Tiering in ONTAP bereitstellen. Siehe <block ref="ecd46e7261f4b06a38f69686168fad8b" category="inline-link-macro-rx"></block> für weitere Informationen zur Einrichtung von Data Tiering in ONTAP mit FabricPool.</block>
+  <block id="d5b1e29a38c69118ebb52ddd25078a82" category="inline-link-macro">NetApp Cloud Tiering End-of-Availability-Benachrichtigung</block>
+  <block id="3c1b98a4347b1e75ca57e51e43e141b2" category="list-text"><block ref="bc9f3746ee1a6c6e91093bc2b9ff13fb" category="inline-link-macro-rx"></block></block>
+  <block id="65afa52dc402fa4f804d1fad742f5b32" category="inline-link-macro">NetApp Cloud Tiering FAQ zum Ende der Verfügbarkeit</block>
+  <block id="91140b6bf054d442adb9178830663a05" category="list-text"><block ref="317d9243bec15035f876da17dbcf900e" category="inline-link-macro-rx"></block></block>
+  <block id="d1618b2005bb616189c51872f4eeb7a1" category="summary">Sie können einen Console-Agenten über die NetApp Console, den Marketplace Ihres Cloud-Anbieters oder durch manuelle Softwareinstallation auf einem Linux-Host bereitstellen. Die gewählte Bereitstellungsmethode bestimmt die Wartung des Agenten-Hosts und hängt davon ab, welchen NetApp Console-Bereitstellungsmodus Sie verwenden.</block>
+  <block id="45fb0fdcc82849eb5d817c5636b5bdfe" category="paragraph">Ja. Für genaue Homepage-Metriken sind entsprechend dimensionierte und konfigurierte Console-Agenten erforderlich.</block>
+  <block id="79f67f651f3a0b97533f98f67c3ae42a" category="paragraph">Nein. Sie können die Lebenszyklusplanung ohne einen Konsolenagenten anzeigen, aber ein Konsolenagent ist erforderlich, um Aktionen zu initiieren.</block>
+  <block id="e56f7590d3bf460e920c96d0e1a4d00c" category="paragraph">NetApp Cloud Tiering*</block>
+  <block id="d82435623d1717d1441dd242d0d2d5dd" category="inline-link-macro">Erfahren Sie, wann Sie über die Konsole bereitstellen sollten.</block>
+  <block id="bb4de92fce42a43473c818b1a685f78e" category="list-text"><block ref="65345eed93b7b4d57b17176976feb61c" category="inline-link-macro-rx"></block>.</block>
+  <block id="4058bec8c05b7eec8e8da62db0d4c29c" category="inline-link-macro">Erfahren Sie, wann Sie in AWS manuell bereitstellen sollten</block>
+  <block id="bbba72d665c28a50ff890f9bf258bf44" category="list-text"><block ref="af0eeb37b47edb9c09804643bac40d9c" category="inline-link-macro-rx"></block>.</block>
+  <block id="90e4f94df0a9c5eb44bab6156156dfc9" category="inline-link-macro">Erfahren Sie, wann Sie über den AWS Marketplace bereitstellen sollten</block>
+  <block id="16ed41e7d53f616b01345af5fa5bd8df" category="list-text"><block ref="2cd30ddcbcdf1f251e7b73909152be56" category="inline-link-macro-rx"></block>.</block>
+  <block id="66aa6cab05064212e5db559feb1dc39b" category="inline-link-macro">Erfahren Sie, wann Sie in der Azure manuell bereitstellen sollten.</block>
+  <block id="68168baf0e09918601a7b016175f25dc" category="list-text"><block ref="51a3655f41ec4f97f4438747d212bacc" category="inline-link-macro-rx"></block>.</block>
+  <block id="d1ed08857033eae041161d0cf84b5e13" category="inline-link-macro">Erfahren Sie, wann Sie aus dem Azure Marketplace bereitstellen sollten</block>
+  <block id="da299adc373f6bb4f71527af1d4a5229" category="list-text"><block ref="549d9ddde85979492f18f1b01a816a1c" category="inline-link-macro-rx"></block>.</block>
+  <block id="ea8976e4bcb3a4dc4f9dbcce6a078f45" category="inline-link-macro">Erfahren Sie, wann Sie in der Google Cloud manuell bereitstellen sollten</block>
+  <block id="fdac344e6e2a4fe5d79f5e4669b070fe" category="list-text"><block ref="0c9621013a18e4c625fdd25673bfa917" category="inline-link-macro-rx"></block>.</block>
+  <block id="8f5eebf6075fe260d8a4c0281dc3bfe2" category="paragraph">Optional: Abonnieren Sie NetApp Intelligent Services über den Marktplatz Ihres Cloud-Anbieters, um Datendienste stundenweise (PAYGO) oder im Rahmen eines Jahresvertrags zu bezahlen. NetApp Intelligent Services umfassen NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Ransomware Resilience und NetApp Disaster Recovery. NetApp Data Classification ist in Ihrem Abonnement ohne zusätzliche Kosten enthalten.</block>
+  <block id="6c842907a578805c3a54843de813b384" category="paragraph">Melden Sie sich für NetApp Intelligent Services über Ihren Cloud-Anbieter für stündliche (PAYGO) oder jährliche Abrechnung an. Ein Abonnement umfasst NetApp Backup and Recovery, Cloud Volumes ONTAP, NetApp Ransomware Resilience, NetApp Disaster Recovery und NetApp Data Classification.</block>
 </blocks>

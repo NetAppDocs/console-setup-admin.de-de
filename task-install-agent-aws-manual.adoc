@@ -19,7 +19,7 @@ Sie können einen Console-Agenten manuell auf einem Linux-Host in AWS bereitstel
 Durch die Bereitstellung eines Agenten in AWS wird eine EC2-Instanz gestartet, auf der Linux und die Console-Agent-Software in einer VPC Ihrer Wahl ausgeführt werden.
 
 .Bevor Sie beginnen
-* Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
+* link:concept-agent-install-options.html#agent-cloud-manual-deploy["Erfahren Sie, wann Sie in AWS manuell bereitstellen sollten"].
 * Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 

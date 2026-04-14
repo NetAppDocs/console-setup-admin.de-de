@@ -19,7 +19,7 @@ Um den Console-Agenten manuell auf Ihrem eigenen Linux-Host bereitzustellen, mü
 Durch die Bereitstellung eines Agenten in Google Cloud wird eine VM-Instanz gestartet, auf der Linux und die Console-Agent-Software in einer VPC Ihrer Wahl ausgeführt werden.
 
 .Bevor Sie beginnen
-* link:concept-agents.html["Erfahren Sie mehr über Konsolenagenten"].
+* link:concept-agent-install-options.html#agent-cloud-manual-deploy["Erfahren Sie, wann Sie in der Google Cloud manuell bereitstellen sollten"].
 * Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 

@@ -19,7 +19,7 @@ Sie können einen Console-Agenten in Google Cloud über die Console bereitstelle
 Durch die Bereitstellung eines Agenten in Google Cloud wird eine VM-Instanz gestartet, auf der Linux und die Console-Agent-Software in einer VPC Ihrer Wahl ausgeführt werden.
 
 .Bevor Sie beginnen
-* Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
+* link:concept-agent-install-options.html#agent-console-deploy["Erfahren Sie, wann Sie über die Konsole bereitstellen sollten."].
 * Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 

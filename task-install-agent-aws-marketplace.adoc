@@ -19,7 +19,7 @@ Sie stellen einen Console-Agenten in AWS direkt über den AWS Marketplace bereit
 Durch die Bereitstellung eines Agenten in AWS wird eine EC2-Instanz gestartet, auf der Linux und die Console-Agent-Software in einer VPC Ihrer Wahl ausgeführt werden.
 
 .Bevor Sie beginnen
-* Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
+* link:concept-agent-install-options.html#agent-marketplace-deploy["Erfahren Sie, wann Sie über den AWS Marketplace bereitstellen sollten"].
 * Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 

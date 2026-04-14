@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-agent-install-options.html 
 keywords: install agent, deployment method, console install, marketplace install, manual install, ova install, vcenter install, installation options, 
-summary: Stellen Sie einen Konsolenagenten über die NetApp Console, den Marktplatz Ihres Cloud-Anbieters oder durch manuelle Softwareinstallation auf einem Linux-Host bereit. Die gewählte Bereitstellungsmethode bestimmt Ihre Kontrolle über den Host und wie schnell Sie starten können. 
+summary: Sie können einen Console-Agenten über die NetApp Console, den Marketplace Ihres Cloud-Anbieters oder durch manuelle Softwareinstallation auf einem Linux-Host bereitstellen. Die gewählte Bereitstellungsmethode bestimmt die Wartung des Agenten-Hosts und hängt davon ab, welchen NetApp Console-Bereitstellungsmodus Sie verwenden. 
 ---
 = Wählen Sie eine Bereitstellungsmethode für den Console-Agenten
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Stellen Sie einen Konsolenagenten über die NetApp Console, den Marktpl
 
 
 [role="lead"]
-Stellen Sie einen Konsolenagenten über die NetApp Console, den Marktplatz Ihres Cloud-Anbieters oder durch manuelle Softwareinstallation auf einem Linux-Host bereit. Die gewählte Bereitstellungsmethode bestimmt Ihre Kontrolle über den Host und wie schnell Sie starten können.
+Sie können einen Console-Agenten über die NetApp Console, den Marketplace Ihres Cloud-Anbieters oder durch manuelle Softwareinstallation auf einem Linux-Host bereitstellen. Die gewählte Bereitstellungsmethode bestimmt die Wartung des Agenten-Hosts und hängt davon ab, welchen NetApp Console-Bereitstellungsmodus Sie verwenden.
 
 Für Cloud-Bereitstellungen können Sie einen Agenten in Amazon Web Services (AWS), Microsoft Azure oder Google Cloud bereitstellen.
 

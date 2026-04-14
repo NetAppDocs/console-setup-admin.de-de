@@ -22,7 +22,7 @@ Durch die Bereitstellung eines Agenten in Azure wird eine VM gestartet, auf der 
 NOTE: Stellen Sie einen Konsolenagenten in derselben Azure-Region wie die Cloud Volumes ONTAP-Systeme, die er verwaltet, oder in der  https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure-Regionenpaar"^] bereit. Dadurch wird sichergestellt, dass eine Azure Private Link-Verbindung zwischen Cloud Volumes ONTAP und den zugehörigen Speicherkonten verwendet wird.
 
 .Bevor Sie beginnen
-* Sie sollten über einelink:concept-agents.html["Verständnis von Konsolenagenten"] .
+* link:concept-agent-install-options.html#agent-marketplace-deploy["Erfahren Sie, wann Sie aus dem Azure Marketplace bereitstellen sollten"].
 * Rezensionlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 
