@@ -32,7 +32,9 @@ Um die NetApp Console in der https://aws.amazon.com/federal/secret-cloud/["AWS S
 .Schritte
 . Laden Sie die Console-Agent-Software von der https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp Support Site"^]
 +
-Laden Sie unbedingt das Offline-Installationsprogramm für private Netzwerke ohne Internetzugang herunter.
+** Wählen Sie die Version, die den privaten Modus unterstützt. Überprüfen Sie das link:whats-new.html["Versionshinweise"] für die neueste unterstützte Version.
+** Laden Sie das Offline-Installationsprogramm für Netzwerke ohne Internetzugang herunter.
+
 
 . Kopieren Sie das Installationsprogramm auf den Linux-Host.
 . Weisen Sie Berechtigungen zum Ausführen des Skripts zu.
