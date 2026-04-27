@@ -23,8 +23,6 @@ Eingeschränkter Modus (in Ihrer eigenen öffentlichen Cloud installiert):: Der 
 Privater Modus (installiert vor Ort oder in der Cloud):: Der private Modus ist für Organisationen mit strengen Sicherheitsanforderungen geeignet, wie beispielsweise in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6 oder abgeschotteten Umgebungen. Er stellt keine Verbindung zur NetApp Console SaaS-Anwendung oder NetApp Cloud-basierten APIs her, wodurch Sie die volle Kontrolle haben und die externe Kommunikation blockiert wird. Unterstützte Datendienste umfassen NetApp Backup and Recovery, NetApp Data Classification, NetApp Replication und Cloud Volumes ONTAP. Alle Speicherung und Authentifizierung bleiben lokal, sodass die Daten innerhalb Ihrer Umgebung verbleiben. Verwenden Sie diesen Modus für Rüstungsunternehmen, Finanzinstitute mit strengen Datenresidenzregeln und Regierungsbehörden mit klassifizierten Systemen.
 
 
-Bei Installation in Ihren Räumlichkeiten werden ausschließlich ONTAP-Speichersysteme unterstützt.
-
 
 NOTE: NetApp Console beschränkt den Datenfluss in eingeschränkten und privaten Modi, aber Sie müssen sicherstellen, dass Ihre Umgebung Ihren Vorschriften entspricht.
 
