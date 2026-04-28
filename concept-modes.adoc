@@ -182,7 +182,7 @@ NetApp empfiehlt Kunden, gemeinsam mit ihrem NetApp-Ansprechpartner ihre bestehe
 | Föderation | Nein 
 
 
-| Identitäts- und Zugriffsverwaltung | Nein 
+| Identitäts- und Zugriffsverwaltung | Ja 
 
 
  a| 
@@ -321,7 +321,7 @@ NetApp Replication
 | Föderation | Nein 
 
 
-| Identitäts- und Zugriffsverwaltung | Nein 
+| Identitäts- und Zugriffsverwaltung | Ja 
 
 
  a| 
@@ -474,7 +474,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 | Nein 
 
 
-| Identitäts- und Zugriffsverwaltung | Nein 
+| Identitäts- und Zugriffsverwaltung | Ja 
 
 
 | Cloud-Anbieter-Zugangsdaten verwalten | Nein 

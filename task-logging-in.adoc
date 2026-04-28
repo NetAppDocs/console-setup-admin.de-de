@@ -21,7 +21,7 @@ Nachdem Sie sich angemeldet haben, muss Ihr Console-Organisationsadministrator I
 .Schritte
 . Navigieren Sie zur NetApp Console-URL. Die URL hängt davon ab, welchen Modus der Console Ihre Organisation verwendet:
 +
-** **Standardmodus*: Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Console"]
+** *Standardmodus*: Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Console"]
 ** **Eingeschränkter Modus oder Privater Modus**: Öffnen Sie einen Webbrowser und gehen Sie zu der IP-Adresse, auf der der Console agent installiert ist.
 
 

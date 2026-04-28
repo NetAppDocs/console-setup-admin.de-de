@@ -99,7 +99,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 | Nein 
 
 
-| Identitäts- und Zugriffsverwaltung | Nein 
+| Identitäts- und Zugriffsverwaltung | Ja 
 
 
 | Cloud-Anbieter-Zugangsdaten verwalten | Nein 
@@ -165,7 +165,7 @@ Licenses and subscriptions-Verwaltung
 | Nein 
 
 
-| Identitäts- und Zugriffsverwaltung | Nein 
+| Identitäts- und Zugriffsverwaltung | Ja 
 
 
 | Cloud-Anbieter-Zugangsdaten verwalten | Nein 

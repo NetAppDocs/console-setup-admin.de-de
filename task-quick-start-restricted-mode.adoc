@@ -106,7 +106,7 @@ NetApp Replication
 | Föderation | Nein 
 
 
-| Identitäts- und Zugriffsverwaltung | Nein 
+| Identitäts- und Zugriffsverwaltung | Ja 
 
 
  a| 
