@@ -1,0 +1,34 @@
+= 
+:allow-uri-read: 
+
+
+[role="tabbed-block"]
+====
+.Mindestanforderungen an Endpunkte
+--
+Diese Endpunkte sind für alle Bereitstellungen des Console-Agenten erforderlich. Zusätzliche Endpunkte werden benötigt, um NetApp Ressourcen in AWS oder Azure zu verwalten.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck Unaufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=nss-endpoints] Unaufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=saas-endpoints] Unaufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=upgrade-endpoints] 
+|===
+--
+.Zusätzliche Endpunkte für AWS-Ressourcen
+--
+Wenn der Console-Agent lokal installiert wird, benötigt er Netzwerkzugriff auf die folgenden zusätzlichen AWS-Endpunkte, um NetApp-Systeme (wie Cloud Volumes ONTAP), die in AWS bereitgestellt sind, zu verwalten.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck Unaufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=aws-endpoints] 
+|===
+--
+.Zusätzliche Endpunkte für Azure-Ressourcen
+--
+Wenn der Console-Agent lokal installiert wird, benötigt er Netzwerkzugriff auf die folgenden zusätzlichen Azure-Endpunkte, um NetApp-Systeme (wie Cloud Volumes ONTAP), die in Azure bereitgestellt sind, zu verwalten.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck Nicht aufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=azure-public-endpoints] Nicht aufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=azure-china-endpoints] 
+|===
+--
+====

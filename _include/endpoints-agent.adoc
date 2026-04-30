@@ -22,12 +22,12 @@ Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
 
 | Zur Verwaltung von AWS-Ressourcen.  Der Endpunkt hängt von Ihrer AWS-Region ab. https://docs.aws.amazon.com/general/latest/gr/rande.html["Weitere Einzelheiten finden Sie in der AWS-Dokumentation."^]
 
-| Amazon FsX für NetApp ONTAP:
+| Amazon FSx for NetApp ONTAP:
 
 * api.workloads.netapp.com
 
 
-| Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und FSx for ONTAP basierte Workloads zu verwalten und zu betreiben.
+| Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und FSx für ONTAP-basierte Workloads zu verwalten und zu betreiben.
 
 | \https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
 
@@ -49,7 +49,7 @@ Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
 
 | Zum Verwalten von Ressourcen in Google Cloud.
 
-| \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport Nachrichten an den NetApp Support zu senden. | \https://signin.b2c.netapp.com | So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu. | \https://support.netapp.com | Zum Abrufen von Lizenzinformationen und zum Senden von AutoSupport Nachrichten an den NetApp Support sowie zum Empfangen von Software-Updates für Cloud Volumes ONTAP.
+| https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden. | https://signin.b2c.netapp.com | Um NetApp Support Site (NSS) Zugangsdaten zu aktualisieren oder neue NSS-Zugangsdaten zur NetApp Console hinzuzufügen. | https://support.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden sowie Software-Updates für Cloud Volumes ONTAP zu erhalten.
 
 | https://api.bluexp.netapp.com https://netapp-cloud-account.auth0.com https://netapp-cloud-account.us.auth0.com https://console.netapp.com https://components.console.netapp.com https://cdn.auth0.com | Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
 
@@ -87,8 +87,8 @@ Um Bilder für Upgrades des Konsolenagenten zu erhalten.
 
 NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen, es sei denn, Sie verwenden Ransomware Resilience oder Backup and Recovery.  Beachten Sie Folgendes zu diesen Endpunkten:
 
-* Endpunkte der Option 1 werden in 3.9.47 und höher unterstützt.  Versionen vor 3.9.47 unterstützen keine Abwärtskompatibilität.
-* Der Konsolenagent initiiert zuerst den Kontakt mit den Endpunkten in Option 2.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.
+* Option-1-Endpunkte werden ab Version 3.9.47 unterstützt. Versionen vor 3.9.47 unterstützen keine Abwärtskompatibilität.
+* Der Konsolenagent kontaktiert zuerst die Endpunkte in Option 2. Wenn diese Endpunkte nicht erreichbar sind, kontaktiert er automatisch die Endpunkte in Option 1.
 * Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
 
 
@@ -102,7 +102,7 @@ Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp 
 * Wenn Sie auf die aktuellen Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
 
 
-a| https://occmclientinfragov.azurecr.us.io https://bluexpinfraprod.azurecr.io a| Um Images für Console-Agent-Upgrades zu erhalten.
+a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| Um Images für Console-Agent-Upgrades zu erhalten.
 
 * Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten. Wenn Sielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl. Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
 +
@@ -113,7 +113,7 @@ Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp 
 
 ^1^ NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen.  Beachten Sie Folgendes zu diesen Endpunkten:
 
-+ * Ab der Version 3.9.47 des Konsolenagenten unterstützt das System die in Option 1 aufgeführten Endpunkte.  Frühere Versionen des Konsolenagenten unterstützen keine Abwärtskompatibilität.  * Der Konsolenagent kontaktiert in Option 2 zuerst die Endpunkte.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.  * Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
++ * Ab der Version 3.9.47 des Console-Agenten unterstützt das System die in Option 1 aufgeführten Endpunkte. Frühere Versionen des Console-Agenten unterstützen keine Abwärtskompatibilität. * Der Console-Agent kontaktiert zuerst die Endpunkte in Option 2. Sind diese Endpunkte nicht erreichbar, kontaktiert er automatisch die Endpunkte in Option 1. * Wenn Sie den Console-Agenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System die Endpunkte von Option 1 nicht. Erlauben Sie die Endpunkte von Option 2 und deaktivieren Sie die von Option 1.
 
 | Wenn sich der Konsolenagent in einer AWS-Regierungsregion befindet: \https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
 

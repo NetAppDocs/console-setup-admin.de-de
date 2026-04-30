@@ -143,8 +143,8 @@ Um Bilder für Upgrades des Konsolenagenten zu erhalten.
 
 NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen, es sei denn, Sie verwenden Ransomware Resilience oder Backup and Recovery.  Beachten Sie Folgendes zu diesen Endpunkten:
 
-* Endpunkte der Option 1 werden in 3.9.47 und höher unterstützt.  Versionen vor 3.9.47 unterstützen keine Abwärtskompatibilität.
-* Der Konsolenagent initiiert zuerst den Kontakt mit den Endpunkten in Option 2.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.
+* Option-1-Endpunkte werden ab Version 3.9.47 unterstützt. Versionen vor 3.9.47 unterstützen keine Abwärtskompatibilität.
+* Der Konsolenagent kontaktiert zuerst die Endpunkte in Option 2. Wenn diese Endpunkte nicht erreichbar sind, kontaktiert er automatisch die Endpunkte in Option 1.
 * Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
 
 

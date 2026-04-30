@@ -4,7 +4,7 @@ permalink: task-install-agent-on-prem.html
 keywords: deploy agent, on prem agent deployment, on prem agent, deploy connector on prem, manual deployment 
 summary: Installieren Sie einen Console-Agenten lokal, melden Sie sich anschließend an und richten Sie ihn für die Zusammenarbeit mit Ihrer Console-Organisation ein. 
 ---
-= Manuelle Bereitstellung eines Console-Agenten vor Ort
+= Manuelle Installation eines Konsolen-Agenten vor Ort
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -17,9 +17,9 @@ summary: Installieren Sie einen Console-Agenten lokal, melden Sie sich anschlie�
 Installieren Sie einen Console-Agenten lokal, melden Sie sich anschließend an und richten Sie ihn für die Zusammenarbeit mit Ihrer Console-Organisation ein.
 
 
-NOTE: Als VMware-Benutzer können Sie eine OVA verwenden, um einen Console-Agenten in Ihrem vCenter bereitzustellen. link:task-install-agent-on-prem-ova.html["Erfahren Sie mehr über die Bereitstellung eines Agenten in einem vCenter."]
+NOTE: Wenn Sie ein VMware-Benutzer sind, können Sie eine OVA verwenden, um einen Console-Agenten in Ihrem vCenter bereitzustellen. link:task-install-agent-on-prem-ova.html["Erfahren Sie mehr über die Bereitstellung eines Agenten in einer vCenter."]
 
-Vor der Installation müssen Sie sicherstellen, dass Ihr Host (VM oder Linux-Host) die Anforderungen erfüllt und dass der Konsolenagent ausgehenden Zugriff auf das Internet sowie auf Zielnetzwerke hat.  Wenn Sie NetApp -Datendienste oder Cloud-Speicheroptionen wie Cloud Volumes ONTAP nutzen möchten, müssen Sie bei Ihrem Cloud-Anbieter Anmeldeinformationen erstellen, die Sie der Konsole hinzufügen, damit der Konsolenagent in Ihrem Namen Aktionen in der Cloud ausführen kann.
+Vor der Installation müssen Sie sicherstellen, dass Ihr Host (VM oder Linux-Host) die Anforderungen erfüllt und dass der Konsolenagent ausgehenden Zugriff auf das Internet sowie auf die Zielnetzwerke hat. Wenn Sie NetApp Datenservices oder Cloud-Speicheroptionen wie Cloud Volumes ONTAP nutzen möchten, müssen Sie bei Ihrem Cloud-Anbieter Anmeldeinformationen erstellen, um diese der Konsole hinzuzufügen, damit der Konsolenagent in Ihrem Namen Aktionen in der Cloud ausführen kann.
 
 
 
@@ -31,7 +31,7 @@ Bevor Sie einen Konsolenagenten installieren, sollten Sie sicherstellen, dass Si
 
 === Überprüfen der Hostanforderungen für den Konsolenagenten
 
-Führen Sie den Konsolenagenten auf einem x86-Host aus, der die Anforderungen an Betriebssystem, RAM und Port erfüllt.  Stellen Sie sicher, dass Ihr Host diese Anforderungen erfüllt, bevor Sie den Konsolenagenten installieren.
+Führen Sie den Console-Agent auf einem x86-Host aus, der die Anforderungen an Betriebssystem, RAM und Ports erfüllt. Stellen Sie sicher, dass Ihr Host diese Anforderungen erfüllt, bevor Sie den Console-Agent installieren.
 
 
 NOTE: Der Konsolenagent reserviert den UID- und GID-Bereich von 19000 bis 19200.  Dieser Bereich ist fest und kann nicht geändert werden.  Wenn Drittanbietersoftware auf Ihrem Host UIDs oder GIDs innerhalb dieses Bereichs verwendet, schlägt die Agenteninstallation fehl.  NetApp empfiehlt die Verwendung eines Hosts, der frei von Software von Drittanbietern ist, um Konflikte zu vermeiden.
@@ -187,14 +187,60 @@ NOTE: Ein bei Ihnen vor Ort installierter Konsolenagent kann keine Ressourcen in
 
 [role="tabbed-block"]
 ====
-.AWS
+.Mindestanforderungen an Endpunkte
 --
-Wenn der Konsolenagent vor Ort installiert wird, benötigt er Netzwerkzugriff auf die folgenden AWS-Endpunkte, um in AWS bereitgestellte NetApp -Systeme (wie Cloud Volumes ONTAP) zu verwalten.
+Diese Endpunkte sind für alle Bereitstellungen des Console-Agenten erforderlich. Zusätzliche Endpunkte werden benötigt, um NetApp Ressourcen in AWS oder Azure zu verwalten.
 
-Vom Konsolenagenten kontaktierte Endpunkte:: Der Konsolenagent benötigt ausgehenden Internetzugang, um die folgenden Endpunkte zu kontaktieren und Ressourcen und Prozesse innerhalb Ihrer öffentlichen Cloud-Umgebung für den täglichen Betrieb zu verwalten.
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+\https://mysupport.netapp.com
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden.
+
+
+
+ a| 
+\https://signin.b2c.netapp.com
+ a| 
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
+
+
+
+ a| 
+\https://support.netapp.com
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden sowie Software-Updates für Cloud Volumes ONTAP zu erhalten.
+
+
+
+ a| 
+\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
+ a| 
+Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
+
+
+
+ a| 
+\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+ a| 
+Um Bilder für Upgrades des Konsolenagenten zu erhalten.
+
+* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten. Wenn Sielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl. Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
 +
+Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
+
+* Wenn Sie auf die aktuellen Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
+
+
+|===
 --
-Die unten aufgeführten Endpunkte sind alle CNAME-Einträge.
+.Zusätzliche Endpunkte für AWS-Ressourcen
+--
+Wenn der Console-Agent lokal installiert wird, benötigt er Netzwerkzugriff auf die folgenden zusätzlichen AWS-Endpunkte, um NetApp-Systeme (wie Cloud Volumes ONTAP), die in AWS bereitgestellt sind, zu verwalten.
 
 [cols="2a,1a"]
 |===
@@ -217,118 +263,18 @@ Zur Verwaltung von AWS-Ressourcen.  Der Endpunkt hängt von Ihrer AWS-Region ab.
 
 
  a| 
-Amazon FsX für NetApp ONTAP:
+Amazon FSx for NetApp ONTAP:
 
 * api.workloads.netapp.com
 
  a| 
-Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und so FSx for ONTAP basierte Workloads zu verwalten und zu betreiben.
-
-
-
- a| 
-\https://mysupport.netapp.com
- a| 
-Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
-
-
-
- a| 
-\https://signin.b2c.netapp.com
- a| 
-So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
-
-
-
- a| 
-\https://support.netapp.com
- a| 
-Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden sowie um Software-Updates für Cloud Volumes ONTAP zu erhalten.
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
- a| 
-Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
-
-
-
- a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
- a| 
-Um Bilder für Upgrades des Konsolenagenten zu erhalten.
-
-* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten. Wenn Sielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl. Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
-+
-Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
-
-* Wenn Sie auf die aktuellen Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
-
-
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-Um Bilder für Upgrades des Konsolenagenten zu erhalten.
-
-* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten. Wenn Sielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl. Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
-+
-Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
-
-* Wenn Sie auf die aktuellen Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
-
-
-^1^ NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen.  Beachten Sie Folgendes zu diesen Endpunkten:
-
-+ * Ab der Version 3.9.47 des Konsolenagenten unterstützt das System die in Option 1 aufgeführten Endpunkte.  Frühere Versionen des Konsolenagenten unterstützen keine Abwärtskompatibilität.  * Der Konsolenagent kontaktiert in Option 2 zuerst die Endpunkte.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.  * Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
-
-
-
- a| 
-Wenn sich der Konsolenagent in einer AWS-Regierungsregion befindet: \https://*.blob.core.windows.net https://cloudmanagerinfraprod.azurecr.io
- a| 
-Um Images für Console-Agent-Upgrades zu erhalten, wenn der Console-Agent in einer AWS Government-Region installiert ist.
-
-
-
- a| 
-Wenn sich der Konsolenagent in einer Azure-Regierungsregion befindet: \https://*.blob.core.windows.net https://occmclientinfragov.azurecr.us
- a| 
-Um Images für Console-Agent-Upgrades zu erhalten, wenn der Console-Agent in einer Azure Government-Region installiert ist.
-
-
-
- a| 
-Befindet sich der Konsolenagent in einer kommerziellen Region oder einer souveränen Region, können Sie zwischen zwei Endpunktgruppen wählen:
-
-* Option 1 (empfohlen) ^1^
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* Option 2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Um Images für Console-Agent-Upgrades zu erhalten, wenn der Console-Agent in einer kommerziellen Region oder einer souveränen Region installiert ist.
+Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und FSx for ONTAP-basierte Workloads zu verwalten und zu betreiben.
 
 |===
 --
-
-
-|*Endpunkte für 3.9.55 und niedriger* | *Endpunkte für 4.0.0 und höher* | *Zweck*
-
-a| * https://support.netapp.com * https://mysupport.netapp.com a| * https://mysupport.netapp.com * https://signin.b2c.netapp.com * https://support.netapp.com a| Für Lizenzierung und Kontaktaufnahme mit dem NetApp Support. a| * https://*.api.bluexp.netapp.com * https://api.bluexp.netapp.com * https://*.cloudmanager.cloud.netapp.com * https://cloudmanager.cloud.netapp.com * https://netapp-cloud-account.auth0.com * https://netapp-cloud-account.us.auth0.com * https://console.netapp.com * https://*.console.netapp.com a| * https://api.bluexp.netapp.com * https://netapp-cloud-account.auth0.com * https://netapp-cloud-account.us.auth0.com * https://console.netapp.com * https://components.console.netapp.com * https://cdn.auth0.com a| Für den täglichen Betrieb. a| * https://*.blob.core.windows.net * https://cloudmanagerinfraprod.azurecr.io a| * https://bluexpinfraprod.eastus2.data.azurecr.io * https://bluexpinfraprod.azurecr.io | Um Images für Console-Agent-Upgrades zu erhalten.
-
-|===
-|===
+.Zusätzliche Endpunkte für Azure-Ressourcen
 --
-.Azurblau
---
-Wenn der Konsolenagent vor Ort installiert wird, benötigt er Netzwerkzugriff auf die folgenden Azure-Endpunkte, um in Azure bereitgestellte NetApp -Systeme (wie Cloud Volumes ONTAP) zu verwalten.
+Wenn der Console-Agent lokal installiert wird, benötigt er Netzwerkzugriff auf die folgenden zusätzlichen Azure-Endpunkte, um NetApp-Systeme (wie Cloud Volumes ONTAP), die in Azure bereitgestellt sind, zu verwalten.
 
 [cols="2a,1a"]
 |===
@@ -347,103 +293,6 @@ Zum Verwalten von Ressourcen in öffentlichen Azure-Regionen.
  a| 
 Zum Verwalten von Ressourcen in Azure China-Regionen.
 
-
-
- a| 
-\https://mysupport.netapp.com
- a| 
-Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
-
-
-
- a| 
-\https://signin.b2c.netapp.com
- a| 
-So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
-
-
-
- a| 
-\https://support.netapp.com
- a| 
-Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden sowie um Software-Updates für Cloud Volumes ONTAP zu erhalten.
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.netapp.com \https://cdn.auth0.com
- a| 
-Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
-
-
-
- a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
- a| 
-Um Bilder für Upgrades des Konsolenagenten zu erhalten.
-
-* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten. Wenn Sielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl. Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
-+
-Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
-
-* Wenn Sie auf die aktuellen Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
-
-
-
-
- a| 
-\https://occmclientinfragov.azurecr.us.io \https://bluexpinfraprod.azurecr.io
- a| 
-Um Bilder für Upgrades des Konsolenagenten zu erhalten.
-
-* Wenn Sie einen neuen Agenten bereitstellen, testet die Validierungsprüfung die Konnektivität zu aktuellen Endpunkten. Wenn Sielink:reference-networking-saas-console-previous.html["vorherige Endpunkte"] , schlägt die Validierungsprüfung fehl. Um diesen Fehler zu vermeiden, überspringen Sie die Validierungsprüfung.
-+
-Obwohl die vorherigen Endpunkte weiterhin unterstützt werden, empfiehlt NetApp , Ihre Firewall-Regeln so schnell wie möglich auf die aktuellen Endpunkte zu aktualisieren. link:reference-networking-saas-console-previous.html#update-endpoint-list["Erfahren Sie, wie Sie Ihre Endpunktliste aktualisieren"] .
-
-* Wenn Sie auf die aktuellen Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
-
-
-^1^ NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen.  Beachten Sie Folgendes zu diesen Endpunkten:
-
-+ * Ab der Version 3.9.47 des Konsolenagenten unterstützt das System die in Option 1 aufgeführten Endpunkte.  Frühere Versionen des Konsolenagenten unterstützen keine Abwärtskompatibilität.  * Der Konsolenagent kontaktiert in Option 2 zuerst die Endpunkte.  Wenn diese Endpunkte nicht erreichbar sind, werden automatisch die Endpunkte in Option 1 kontaktiert.  * Wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder Ransomware Resilience verwenden, unterstützt das System keine Endpunkte der Option 1.  Erlauben Sie Endpunkte der Option 2 und verbieten Sie Option 1.
-
-
-
- a| 
-Wenn sich der Konsolenagent in einer AWS-Regierungsregion befindet: \https://*.blob.core.windows.net https://cloudmanagerinfraprod.azurecr.io
- a| 
-Um Images für Console-Agent-Upgrades zu erhalten, wenn der Console-Agent in einer AWS Government-Region installiert ist.
-
-
-
- a| 
-Wenn sich der Konsolenagent in einer Azure-Regierungsregion befindet: \https://*.blob.core.windows.net https://occmclientinfragov.azurecr.us
- a| 
-Um Images für Console-Agent-Upgrades zu erhalten, wenn der Console-Agent in einer Azure Government-Region installiert ist.
-
-
-
- a| 
-Befindet sich der Konsolenagent in einer kommerziellen Region oder einer souveränen Region, können Sie zwischen zwei Endpunktgruppen wählen:
-
-* Option 1 (empfohlen) ^1^
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
-
-* Option 2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
-
-
- a| 
-Um Images für Console-Agent-Upgrades zu erhalten, wenn der Console-Agent in einer kommerziellen Region oder einer souveränen Region installiert ist.
-
-|===
-|*Endpunkte für 3.9.55 und niedriger* | *Endpunkte für 4.0.0 und höher* | *Zweck*
-
-a| * https://support.netapp.com * https://mysupport.netapp.com a| * https://mysupport.netapp.com * https://signin.b2c.netapp.com * https://support.netapp.com a| Für Lizenzierung und Kontaktaufnahme mit dem NetApp Support. a| * https://*.api.bluexp.netapp.com * https://api.bluexp.netapp.com * https://*.cloudmanager.cloud.netapp.com * https://cloudmanager.cloud.netapp.com * https://netapp-cloud-account.auth0.com * https://netapp-cloud-account.us.auth0.com * https://console.netapp.com * https://*.console.netapp.com a| * https://api.bluexp.netapp.com * https://netapp-cloud-account.auth0.com * https://netapp-cloud-account.us.auth0.com * https://console.netapp.com * https://components.console.netapp.com * https://cdn.auth0.com a| Für den täglichen Betrieb. a| * https://*.blob.core.windows.net * https://cloudmanagerinfraprod.azurecr.io a| * https://bluexpinfraprod.eastus2.data.azurecr.io * https://bluexpinfraprod.azurecr.io | Um Images für Console-Agent-Upgrades zu erhalten.
-
-|===
 |===
 --
 ====
@@ -479,7 +328,7 @@ Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unter
 
 === Erstellen Sie Cloud-Berechtigungen für den Konsolenagenten für AWS oder Azure
 
-Wenn Sie NetApp Datendienste in AWS oder Azure mit einem lokalen Konsolenagenten verwenden möchten, müssen Sie bei Ihrem Cloud-Anbieter Berechtigungen einrichten und nach der Installation die Anmeldeinformationen zum Konsolenagenten hinzufügen.
+Wenn Sie NetApp Datendienste in AWS oder Azure mit einem lokalen Konsolenagenten nutzen möchten, müssen Sie Berechtigungen bei Ihrem Cloud-Anbieter einrichten und anschließend die Anmeldeinformationen zum Konsolenagenten hinzufügen, nachdem Sie diesen installiert haben.
 
 
 TIP: Sie müssen den Konsolenagenten in Google Cloud installieren, um alle dort vorhandenen Ressourcen zu verwalten.
@@ -671,7 +520,7 @@ image:screenshot_azure_client_secret.gif["Ein Screenshot des Azure-Portals, der 
 
 == Manuelles Installieren eines Konsolenagenten
 
-Wenn Sie einen Konsolenagenten manuell installieren, müssen Sie Ihre Computerumgebung so vorbereiten, dass sie die Anforderungen erfüllt.  Sie benötigen eine Linux-Maschine und müssen je nach Linux-Betriebssystem Podman oder Docker installieren.
+Wenn Sie einen Console-Agent manuell installieren, müssen Sie Ihre Systemumgebung so vorbereiten, dass sie die Anforderungen erfüllt. Sie benötigen eine Linux-Maschine und müssen je nach Ihrem Linux-Betriebssystem Podman oder Docker installieren.
 
 
 
@@ -989,7 +838,7 @@ Sie müssen den Konsolenagenten in der NetApp Console registrieren.
 
 == Registrieren Sie den Konsolenagenten bei der NetApp Console
 
-Melden Sie sich an der Console an und verknüpfen Sie den Console-Agenten mit Ihrer Organisation. Wie Sie sich anmelden, hängt vom Modus ab, in dem Sie die Console verwenden. Wenn Sie die Console im Standardmodus verwenden, melden Sie sich über die SaaS-Website an. Wenn Sie die Console im eingeschränkten Modus oder im privaten Modus verwenden, melden Sie sich lokal vom Console-Agent-Host an.
+Melden Sie sich an der Console an und verknüpfen Sie den Console-Agent mit Ihrer Organisation. Wie Sie sich anmelden, hängt vom Modus ab, in dem Sie die Console verwenden. Wenn Sie die Console im Standardmodus verwenden, melden Sie sich über die SaaS-Website an. Wenn Sie die Console im eingeschränkten oder privaten Modus verwenden, melden Sie sich lokal vom Console-Agent-Host an.
 
 .Schritte
 . Öffnen Sie einen Webbrowser und geben Sie die Host-URL des Konsolenagenten ein:
@@ -1042,7 +891,7 @@ Sie können jetzt zu https://console.netapp.com["NetApp Console"^] um mit der Ve
 .Azurblau
 --
 .Bevor Sie beginnen
-Wenn Sie diese Azure-Anmeldeinformationen gerade erstellt haben, kann es einige Minuten dauern, bis sie verfügbar sind.  Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen zum Konsolenagenten hinzufügen.
+Wenn Sie diese Azure-Anmeldeinformationen gerade erst erstellt haben, kann es einige Minuten dauern, bis sie verfügbar sind. Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen dem NetApp Console-Agenten hinzufügen.
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.

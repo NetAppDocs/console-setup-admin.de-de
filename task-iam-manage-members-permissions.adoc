@@ -14,7 +14,7 @@ summary: Verwalten Sie die Mitglieder Ihrer Organisation, um Berechtigungen auf 
 
 
 [role="lead"]
-Innerhalb der Konsole gewähren Sie Benutzern Zugriff auf Projekte oder Ordner entsprechend einer Zugriffsrolle. Eine Zugriffsrolle enthält eine Reihe von Berechtigungen, die es einem Mitglied (Benutzer oder Dienstkonto) ermöglichen, bestimmte Aktionen auf der zugewiesenen Ebene der Ressourcenhierarchie durchzuführen.
+Innerhalb der Console gewähren Sie Benutzern Zugriff auf Projekte oder Ordner entsprechend einer Zugriffsrolle. Eine _Zugriffsrolle_ enthält eine Reihe von Berechtigungen, die es einem Mitglied (Benutzer oder Servicekonto) ermöglichen, bestimmte Aktionen auf der zugewiesenen Ebene der Ressourcenhierarchie durchzuführen.
 
 .Erforderliche Zugriffsrollen
 Super-Admin, Organisations-Admin oder Ordner- bzw. Projekt-Admin (für die von ihnen verwalteten Ordner und Projekte). link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"]Die
@@ -23,7 +23,7 @@ Super-Admin, Organisations-Admin oder Ordner- bzw. Projekt-Admin (für die von i
 
 == Verstehen Sie, wie der Zugriff in der NetApp Console gewährt wird.
 
-Die NetApp Console verwendet rollenbasierte Zugriffskontrolle (RBAC) zur Verwaltung von Berechtigungen. Weisen Sie Benutzern Rollen einzeln oder über föderierte Gruppen zu. Jede Rolle definiert die zulässigen Aktionen für bestimmte Ressourcen.
+Die NetApp Console verwendet rollenbasierte Zugriffssteuerung (RBAC) zur Verwaltung von Berechtigungen. Weisen Sie Rollen Benutzern einzeln oder über föderierte Gruppen zu. Jede Rolle definiert zulässige Aktionen für bestimmte Ressourcen.
 
 Beachten Sie Folgendes bezüglich der Zugriffsgewährung in der NetApp Console:
 
@@ -54,7 +54,7 @@ Benutzer registrieren sich für die NetApp Console, aber ein Organisationsadmini
 Der Benutzer muss sich bereits für die NetApp Console registriert haben. Falls sie sich noch nicht angemeldet haben, leiten Sie sie bitte weiter zu link:task-sign-up-saas.html["Registrieren Sie sich für die NetApp Console."]
 
 
-NOTE: Wenn Sie einen Benutzer hinzufügen, der Teil einer Verbundgruppe ist, stellen Sie sicher, dass sich der Benutzer bereits bei der NetApp Console registriert hat und ihm explizit eine Rolle in der Console zugewiesen wurde. NetApp empfiehlt, eine minimale Zugriffsrolle wie z. B. „Organisationsbetrachter“ zuzuweisen.
+NOTE: Wenn Sie einen Benutzer hinzufügen, der einer Verbundgruppe angehört, stellen Sie sicher, dass sich der Benutzer bereits für die NetApp Console registriert und ihm explizit eine Rolle in der Console zugewiesen wurde. NetApp empfiehlt, eine minimale Zugriffsrolle zuzuweisen, wie zum Beispiel Organization viewer.
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
@@ -100,7 +100,7 @@ Bereiten Sie für die JWT-Authentifizierung Ihren öffentlichen Schlüssel oder 
 . Geben Sie einen Namen für das Dienstkonto ein.
 . Um die JWT-Authentifizierung zu verwenden, wählen Sie *Private-Key-JWT-Authentifizierung verwenden* und laden Sie Ihren öffentlichen RSA-Schlüssel oder Ihr Zertifikat hoch. Überspringen, falls Client-ID und Client-Geheimnis verwendet werden.
 +
-Ihr X.509-Zertifikat. Es muss im PEM-, CRT- oder CER-Format vorliegen.
+Laden Sie Ihr X.509-Zertifikat im PEM-, CRT- oder CER-Format hoch.
 
 +
 .. Richten Sie Ablaufbenachrichtigungen für Ihr Zertifikat ein.  Sie haben die Wahl zwischen sieben Tagen oder 30 Tagen.  Ablaufbenachrichtigungen werden per E-Mail versendet und Benutzern mit der Rolle „Super-Admin“ oder „Org-Admin“ in der Konsole angezeigt.
@@ -121,7 +121,7 @@ Beachten Sie Folgendes:
 link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
 
 . Um Zugriff auf weitere Ordner, Projekte oder Rollen zu gewähren, wählen Sie *Rolle hinzufügen*, wählen Sie die Ordner-, Projekt- oder Rollenkategorie und anschließend eine Rolle aus.
-. Wenn Sie sich nicht für die Verwendung der JWT-Authentifizierung entschieden haben, laden Sie die Client-ID und das Client-Geheimnis herunter oder kopieren Sie sie.
+. Falls Sie keine JWT-Authentifizierung verwendet haben, laden Sie die Client-ID und das Client-Geheimnis herunter oder kopieren Sie diese.
 +
 Die Konsole zeigt das Client-Geheimnis nur einmal an. Sicher kopieren; falls Sie es verlieren, können Sie es später wiederherstellen.
 
@@ -136,12 +136,12 @@ Die Konsole zeigt das Client-Geheimnis nur einmal an. Sicher kopieren; falls Sie
 Sie können eine föderierte Gruppe von Ihrem Identitätsanbieter (IdP) zu Ihrer Organisation hinzufügen und ihr eine oder mehrere Rollen zuweisen. Die Mitglieder der föderierten Gruppe erben die Rollen, die Sie der Gruppe in der Konsole zuweisen.
 
 
-IMPORTANT: Wenn Sie der Konsole eine Verbundgruppe hinzufügen und ihr eine Rolle zuweisen, können nur Benutzer, die Mitglieder dieser Gruppe in Ihrem IdP sind und sich bereits für die NetApp Console registriert und explizit eine Rolle in der Konsole zugewiesen bekommen haben, auf Ressourcen zugreifen. NetApp empfiehlt, diesen Benutzern eine Rolle mit minimalen Zugriffsrechten, wie zum Beispiel Organization viewer, zuzuweisen.
+IMPORTANT: Wenn Sie der Konsole eine Verbundgruppe hinzufügen und ihr eine Rolle zuweisen, können nur Benutzer, die Mitglieder dieser Gruppe in Ihrem IdP sind, sich bereits für die NetApp Console registriert und explizit eine Rolle in der Konsole zugewiesen bekommen haben, auf Ressourcen zugreifen. NetApp empfiehlt, diesen Benutzern eine minimale Zugriffsrolle, wie z. B. Organization viewer, zuzuweisen.
 
 Bevor Sie einer föderierten Gruppe eine Rolle zuweisen können, stellen Sie Folgendes sicher:
 
 * Richten Sie eine Föderation zwischen Ihrem IdP und der Konsole ein. link:concept-federation.html["Erfahren Sie, wie Sie eine Föderation einrichten."]
-* Die Gruppe muss bereits in Ihrem Identitätsanbieter existieren und über App-Zugriff auf die Konsole verfügen.
+* Die Gruppe muss bereits in Ihrem Identitätsanbieter existieren und über App-Zugriff auf die Console verfügen.
 
 
 .Schritte
