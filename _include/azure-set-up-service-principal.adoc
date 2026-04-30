@@ -120,7 +120,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Ein Screenshot des Azure-Porta
 . Wählen Sie im Dienst *Microsoft Entra ID* *App-Registrierungen* und wählen Sie die Anwendung aus.
 . Kopieren Sie die *Anwendungs-ID (Client-ID)* und die *Verzeichnis-ID (Mandant-ID)*.
 +
-image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für eine Anwendung in Microsoft Entra IDy zeigt."]
+image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs- (Client-)ID und die Verzeichnis- (Mandanten-)ID für eine Anwendung in Microsoft Entra ID anzeigt."]
 
 +
 Wenn Sie das Azure-Konto zur Konsole hinzufügen, müssen Sie die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für die Anwendung angeben.  Die Konsole verwendet die IDs zur programmgesteuerten Anmeldung.

@@ -65,7 +65,7 @@ Wenn Sie beispielsweise zwei Projekte hätten und möchten, dass derselbe Benutz
 +
 In der Liste *Mitglieder* werden die Mitglieder angezeigt, die die Partnerorganisation zur Partnerschaft hinzugefügt hat.
 
-. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben dem Mitglied, dem Sie eine Rolle zuweisen möchten, und wählen Sie *Rolle hinzufügen* aus.
+. Wählen Sie das Aktionsmenü image:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben dem Mitglied, dem Sie eine Rolle zuweisen möchten, und wählen Sie *Rolle hinzufügen*.
 . Um eine Rolle hinzuzufügen, führen Sie die Schritte im Dialogfeld aus:
 +
 ** *Wählen Sie eine Organisation, einen Ordner oder ein Projekt aus*: Wählen Sie die Ebene Ihrer Ressourcenhierarchie aus, für die das Mitglied Berechtigungen haben soll.
@@ -99,7 +99,7 @@ In der Liste *Mitglieder* werden die Mitglieder angezeigt, die die Partnerorgani
 . Sie können eine vorhandene Rolle für ein Mitglied ändern oder eine Rolle entfernen.
 +
 .. Um die Rolle eines Mitglieds zu ändern, wählen Sie *Ändern* neben der Rolle, die Sie ändern möchten.  Sie können eine Rolle nur in eine Rolle innerhalb derselben Rollenkategorie ändern.  Sie können beispielsweise von einer Datendienstrolle zu einer anderen wechseln.  Bestätigen Sie die Änderung.
-.. Um die Rolle eines Mitglieds aufzuheben, wählen Sie aus image:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der Rolle, um die jeweilige Rolle vom Mitglied zu entfernen. Sie werden aufgefordert, die Entfernung zu bestätigen.
+.. Um einem Mitglied eine Rolle zu entziehen, wählen Sie image:icon-delete.png["Ein Symbol, das einem Mülleimer ähnelt"] neben der entsprechenden Rolle aus, um die jeweilige Rolle vom Mitglied zu entfernen. Sie werden aufgefordert, die Entfernung zu bestätigen.
 
 
 

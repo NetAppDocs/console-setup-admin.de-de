@@ -12,7 +12,7 @@ Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordne
 +
 image:screenshot_aws_configure_subscription.png["Ein Screenshot des Aktionsmenüs für einen Satz vorhandener Anmeldeinformationen."]
 
-. Um die Anmeldeinformationen mit einem vorhandenen Abonnement zu verknüpfen, wählen Sie das Abonnement aus der Dropdown-Liste aus und wählen Sie *Konfigurieren*.
+. Um die Anmeldeinformationen mit einem bestehenden Abonnement zu verknüpfen, wählen Sie das Abonnement aus der Dropdown-Liste aus und wählen Sie *Konfigurieren*.
 . Um die Anmeldeinformationen einem neuen Abonnement zuzuordnen, wählen Sie *Abonnement hinzufügen > Fortfahren* und folgen Sie den Schritten im AWS Marketplace:
 +
 .. Wählen Sie *Kaufoptionen anzeigen*.

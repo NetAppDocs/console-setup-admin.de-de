@@ -15,7 +15,7 @@ Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzei
 
 ** `/var`: 40 GiB Speicherplatz müssen verfügbar sein
 +
-Der Konsolenagent benötigt diesen Speicherplatz. `/var` weil Podman oder Docker so konzipiert sind, dass die Container in diesem Verzeichnis erstellt werden.  Konkret werden sie Container erstellen in der `/var/lib/containers/storage` Verzeichnis und `/var/lib/docker` für Docker. Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+Der Console-Agent benötigt diesen Bereich in `/var`, da Podman oder Docker so konzipiert sind, dass die Container in diesem Verzeichnis erstellt werden. Genauer gesagt, werden die Container im `/var/lib/containers/storage` Verzeichnis und `/var/lib/docker` für Docker erstellt. Externe Mounts oder symbolische Links funktionieren für diesen Bereich nicht.
 
 
 
@@ -115,7 +115,7 @@ Ubuntu
  a| 
 3.9.45 oder höher mit der NetApp Console im Standardmodus oder eingeschränkten Modus
  a| 
-Docker Engine 23.06 bis 28.0.0.
+Docker Engine 23.0.6 bis 28.0.0.
  a| 
 Nicht unterstützt
 
@@ -220,7 +220,7 @@ Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzei
 Speicherplatz in /var:: 20 GiB Speicherplatz müssen verfügbar sein
 +
 --
-Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podman so konzipiert sind, dass sie die Container in diesem Verzeichnis erstellen.  Konkret werden sie Container in der `/var/lib/containers/storage` Verzeichnis.  Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+Der Console-Agent benötigt diesen Speicherplatz in `/var`, da Docker oder Podman so konzipiert sind, dass sie die Container innerhalb dieses Verzeichnisses erstellen. Genauer gesagt, werden sie Container im `/var/lib/containers/storage` Verzeichnis erstellen. Externe Mounts oder symbolische Links funktionieren für diesen Speicherplatz nicht.
 
 --
 

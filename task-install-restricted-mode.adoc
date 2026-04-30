@@ -48,7 +48,7 @@ link:task-prepare-restricted-mode.html#step-3-review-host-requirements["Überpr�
 
 
 .Schritte
-. Gehen Sie zum https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Auflistung des NetApp Console -Agenten im AWS Marketplace"^]
+. Gehe zu https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Auflistung des NetApp Console -Agenten im AWS Marketplace"^].
 . Wählen Sie auf der Marketplace-Seite *Weiter zum Abonnieren* aus.
 . Um die Software zu abonnieren, wählen Sie *Bedingungen akzeptieren*.
 +
@@ -217,7 +217,7 @@ Folgendes sollten Sie haben:
 * Root-Berechtigungen zum Installieren des Konsolenagenten.
 * Details zu einem Proxyserver, falls für den Internetzugriff vom Konsolenagenten ein Proxy erforderlich ist.
 +
-Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfigurieren, hierzu ist jedoch ein Neustart des Konsolenagenten erforderlich.
+Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfigurieren. Dazu muss jedoch der Console-Agent neu gestartet werden.
 
 * Ein von einer Zertifizierungsstelle signiertes Zertifikat, wenn der Proxyserver HTTPS verwendet oder wenn es sich bei dem Proxy um einen abfangenden Proxy handelt.
 
@@ -245,9 +245,9 @@ Wenn Sie diese Systemvariablen nicht entfernen, schlägt die Installation fehl.
 
 . Laden Sie die Console-Agent-Software herunter und kopieren Sie sie anschließend auf den Linux-Host.  Sie können es entweder von der NetApp Console oder von der NetApp -Support-Website herunterladen.
 +
-** NetApp Console: Gehen Sie zu *Agents > Management > Agent bereitstellen > On-Premise > Manuelle Installation*.
+** NetApp Console: Gehen Sie zu *Agents > Verwaltung > Agent bereitstellen > Lokal > Manuelle Installation*.
 +
-Wählen Sie entweder die Agenteninstallationsdateien oder eine URL zu den Dateien zum Herunterladen.
+Wählen Sie aus, ob Sie die Agenteninstallationsdateien herunterladen oder eine URL zu den Dateien kopieren möchten.
 
 
 
@@ -256,7 +256,7 @@ Wählen Sie entweder die Agenteninstallationsdateien oder eine URL zu den Dateie
 NOTE: Laden Sie den "online"-Agenten-Installer herunter, der für die Verwendung in Ihrem Netzwerk oder in der Cloud vorgesehen ist. Ein separater "offline"-Installer ist für den Console-Agenten verfügbar, aber er wird nur bei Bereitstellungen im privaten Modus unterstützt.
 
 +
-** NetApp Supportseite (erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^] ,
+** NetApp Support-Website (erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^].
 
 
 . Weisen Sie Berechtigungen zum Ausführen des Skripts zu.
@@ -281,17 +281,17 @@ Sie müssen Proxy-Informationen hinzufügen, falls Ihr Netzwerk einen Proxy für
 
 
 
-NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun. link:reference-agent-maint-console-proxy.html["Erfahren Sie mehr über die Agentenwartungskonsole."]
+NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies tun, nachdem Sie einen Agenten installiert haben. link:reference-agent-maint-console-proxy.html["Erfahren Sie mehr über die Agentenwartungskonsole."].
 
 +
 
-Hier ist ein Beispiel für die Konfiguration eines expliziten Proxyservers mit einem von einer Zertifizierungsstelle signierten Zertifikat:
+Hier ist ein Beispiel für die Konfiguration eines expliziten Proxyservers mit einem CA-signierten Zertifikat:
 
 +
 
 [source, cli]
 ----
-./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy` konfiguriert den Konsolenagenten für die Verwendung eines HTTP- oder HTTPS-Proxyservers in einem der folgenden Formate:
@@ -414,7 +414,7 @@ Stellen Sie der NetApp Console den AWS-Zugriffsschlüssel für einen IAM-Benutze
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
 +
-.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > Agent.
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > Agent*.
 .. *Anmeldeinformationen definieren*: Geben Sie einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel ein.
 .. *Marketplace-Abonnement*: Verknüpfen Sie ein Marketplace-Abonnement mit diesen Anmeldeinformationen, indem Sie sich jetzt anmelden oder ein vorhandenes Abonnement auswählen.
 .. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.

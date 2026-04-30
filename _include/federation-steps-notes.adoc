@@ -17,7 +17,7 @@ NOTE: Wenn Sie die Konsole im eingeschränkten Modus verwenden, kopieren Sie die
 . Wählen Sie in der Konsole *Weiter*, um die Zusammenfassungsseite anzuzeigen.
 . Benachrichtigungen einrichten.
 +
-Sie haben die Wahl zwischen sieben Tagen oder 30 Tagen.  Das System versendet E-Mail-Benachrichtigungen über das Ablaufdatum und zeigt diese in der Konsole allen Benutzern mit den folgenden Rollen an: Super-Admin, Organisations-Admin, Verbund-Admin und Verbund-Viewer.
+Wählen Sie zwischen sieben und 30 Tagen. Das System versendet Ablaufbenachrichtigungen per E-Mail und zeigt sie in der NetApp Console für alle Benutzer mit den folgenden Rollen an: Super admin, Org admin, Federation admin und Federation viewer.
 
 . Überprüfen Sie die Föderationsdetails und wählen Sie dann *Föderation aktivieren*.
 . Wählen Sie *Fertig*, um den Vorgang abzuschließen.
@@ -37,5 +37,5 @@ Nach der Aktivierung der Föderation melden sich die Benutzer mit ihren Unterneh
 
 .Bevor Sie beginnen
 * Es ist ein IdP-Konto mit Administratorrechten erforderlich.  Koordinieren Sie die Durchführung der Schritte mit Ihrem IdP-Administrator.
-* Identifizieren Sie die Domäne, die Sie für die Föderation verwenden möchten.  Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört.  Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Konsole verifizieren.  Sie können dies tun, indem Sie die Schritte in derlink:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Console"] Thema.
+* Wählen Sie die Domäne aus, die Sie für die Föderation verwenden möchten. Sie können Ihre E-Mail-Domäne oder eine andere Domäne verwenden, die Ihnen gehört. Wenn Sie eine andere Domäne als Ihre E-Mail-Domäne verwenden möchten, müssen Sie die Domäne zuerst in der Console verifizieren. Anweisungen dazu finden Sie unter link:task-federation-verify-domain.html["Überprüfen Sie Ihre Domäne in der NetApp Console"].
 

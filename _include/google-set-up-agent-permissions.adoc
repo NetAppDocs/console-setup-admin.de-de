@@ -17,8 +17,10 @@ Es liegt in Ihrer Verantwortung, die benutzerdefinierte Rolle zu aktualisieren, 
 Das folgende Beispiel erstellt eine Rolle mit dem Namen „Agent“ auf Projektebene:
 
 +
-`gcloud iam roles create connector --project=myproject --file=agent.yaml`
-
+[source, shell]
+----
+gcloud iam roles create agent --project=myproject --file=agent.yaml
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud-Dokumente: Erstellen und Verwalten benutzerdefinierter Rollen"^]
 
@@ -29,13 +31,13 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. Wählen Sie im IAM- und Admin-Dienst *Dienstkonten > Dienstkonto erstellen*.
 .. Geben Sie die Details des Dienstkontos ein und wählen Sie *Erstellen und fortfahren*.
 .. Wählen Sie die Rolle aus, die Sie gerade erstellt haben.
-.. Führen Sie die restlichen Schritte aus, um die Rolle zu erstellen.
+.. Schließen Sie die restlichen Schritte ab, um das Dienstkonto zu erstellen.
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud-Dokumente: Erstellen eines Dienstkontos"^]
 
 
 
-. Wenn Sie Cloud Volumes ONTAP -Systeme in anderen Projekten als dem Projekt bereitstellen möchten, in dem sich der Konsolenagent befindet, müssen Sie dem Dienstkonto des Konsolenagenten Zugriff auf diese Projekte gewähren.
+. Wenn Sie Cloud Volumes ONTAP-Systeme in anderen Projekten als dem Projekt, in dem sich der Console-Agent befindet, bereitstellen möchten, müssen Sie dem Dienstkonto des Console-Agents Zugriff auf diese Projekte gewähren.
 +
 Nehmen wir beispielsweise an, der Konsolenagent befindet sich in Projekt 1 und Sie möchten Cloud Volumes ONTAP -Systeme in Projekt 2 erstellen.  Sie müssen dem Dienstkonto in Projekt 2 Zugriff gewähren.
 

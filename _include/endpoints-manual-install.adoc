@@ -42,7 +42,7 @@ Während der manuellen Installation kontaktierte Endpunkte:: Wenn Sie den Konsol
  a| 
 Um Bilder zu erhalten, benötigt das Installationsprogramm Zugriff auf einen dieser beiden Endpunktsätze.  ^1^ Die in Option 1 aufgeführten Endpunkte werden empfohlen, da sie sicherer sind.  Wir empfehlen, dass Sie Ihre Firewall so einrichten, dass die in Option 1 aufgeführten Endpunkte zugelassen und die in Option 2 aufgeführten Endpunkte nicht zugelassen werden.  Beachten Sie Folgendes zu diesen Endpunkten:
 
-* Die in Option 1 aufgeführten Endpunkte werden ab der Version 3.9.47 des Konsolenagenten unterstützt.  Es besteht keine Abwärtskompatibilität mit früheren Versionen des Konsolenagenten.
+* Die in Option 1 aufgeführten Endpunkte werden ab der Version 3.9.47 des Console-Agenten unterstützt. Es besteht keine Abwärtskompatibilität mit früheren Versionen des Console-Agenten.
 * Der Konsolenagent kontaktiert zuerst die in Option 2 aufgeführten Endpunkte.  Wenn auf diese Endpunkte nicht zugegriffen werden kann, kontaktiert der Konsolenagent automatisch die in Option 1 aufgeführten Endpunkte.
 * Die Endpunkte in Option 1 werden nicht unterstützt, wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder NetApp Ransomware Resilience verwenden.  In diesem Fall können Sie die in Option 1 aufgeführten Endpunkte verbieten und die in Option 2 aufgeführten Endpunkte zulassen.
 
@@ -111,14 +111,12 @@ Während der manuellen Installation kontaktierte Endpunkte:: Wenn Sie den Konsol
  a| 
 Die in Option 1 aufgeführten Endpunkte werden empfohlen, da sie sicherer sind.  Wir empfehlen, dass Sie Ihre Firewall so einrichten, dass die in Option 1 aufgeführten Endpunkte zugelassen und die in Option 2 aufgeführten Endpunkte nicht zugelassen werden.  Beachten Sie Folgendes zu diesen Endpunkten:
 
-* Die in Option 1 aufgeführten Endpunkte werden ab der Version 3.9.47 des Konsolenagenten unterstützt.  Es besteht keine Abwärtskompatibilität mit früheren Versionen des Konsolenagenten.
+* Die in Option 1 aufgeführten Endpunkte werden ab der Version 3.9.47 des Console-Agenten unterstützt. Es besteht keine Abwärtskompatibilität mit früheren Versionen des Console-Agenten.
 * Der Konsolenagent kontaktiert zuerst die in Option 2 aufgeführten Endpunkte.  Wenn auf diese Endpunkte nicht zugegriffen werden kann, kontaktiert der Konsolenagent automatisch die in Option 1 aufgeführten Endpunkte.
 * Die Endpunkte in Option 1 werden nicht unterstützt, wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder NetApp Ransomware Resilience verwenden.  In diesem Fall können Sie die in Option 1 aufgeführten Endpunkte verbieten und die in Option 2 aufgeführten Endpunkte zulassen.
 
 
 |===
-+
-
-Die in Option 1 aufgeführten Endpunkte werden empfohlen, da sie sicherer sind.  Wir empfehlen, dass Sie Ihre Firewall so einrichten, dass die in Option 1 aufgeführten Endpunkte zugelassen und die in Option 2 aufgeführten Endpunkte nicht zugelassen werden.  Beachten Sie Folgendes zu diesen Endpunkten: ** Die in Option 1 aufgeführten Endpunkte werden ab der Version 3.9.47 des Konsolenagenten unterstützt.  Es besteht keine Abwärtskompatibilität mit früheren Versionen des Konsolenagenten.  ** Der Konsolenagent kontaktiert zuerst die in Option 2 aufgeführten Endpunkte.  Wenn auf diese Endpunkte nicht zugegriffen werden kann, kontaktiert der Konsolenagent automatisch die in Option 1 aufgeführten Endpunkte.  ** Die Endpunkte in Option 1 werden nicht unterstützt, wenn Sie den Konsolenagenten mit NetApp Backup and Recovery oder NetpApp Ransomware Resilience verwenden.  In diesem Fall können Sie die in Option 1 aufgeführten Endpunkte verbieten und die in Option 2 aufgeführten Endpunkte zulassen.
+Die in Option 1 aufgeführten Endpunkte werden empfohlen, da sie sicherer sind. Wir empfehlen, Ihre Firewall so zu konfigurieren, dass die in Option 1 aufgeführten Endpunkte zugelassen und die in Option 2 aufgeführten Endpunkte nicht zugelassen werden. Beachten Sie Folgendes zu diesen Endpunkten: ** Die in Option 1 aufgeführten Endpunkte werden ab der Version 3.9.47 des Console-Agenten unterstützt. Es besteht keine Abwärtskompatibilität mit früheren Versionen des Console-Agenten. ** Der Console-Agent kontaktiert zuerst die in Option 2 aufgeführten Endpunkte. Sind diese Endpunkte nicht erreichbar, kontaktiert der Console-Agent automatisch die in Option 1 aufgeführten Endpunkte. ** Die Endpunkte in Option 1 werden nicht unterstützt, wenn Sie den Console-Agenten mit NetApp Backup and Recovery oder NetApp Ransomware Resilience verwenden. In diesem Fall können Sie die in Option 1 aufgeführten Endpunkte nicht zulassen, während Sie die in Option 2 aufgeführten Endpunkte zulassen.
 
 Der Host versucht möglicherweise, während der Installation Betriebssystempakete zu aktualisieren.  Der Host kann für diese Betriebssystempakete verschiedene Spiegelungssites kontaktieren.

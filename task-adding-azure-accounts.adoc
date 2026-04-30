@@ -239,7 +239,7 @@ Wenn Sie das Azure-Konto zur Konsole hinzufügen, müssen Sie die Anwendungs-ID 
 . Wählen Sie im Dienst *Microsoft Entra ID* *App-Registrierungen* und wählen Sie die Anwendung aus.
 . Kopieren Sie die *Anwendungs-ID (Client-ID)* und die *Verzeichnis-ID (Mandant-ID)*.
 +
-image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für eine Anwendung in Microsoft Entra IDy zeigt."]
+image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs- (Client-)ID und die Verzeichnis- (Mandanten-)ID für eine Anwendung in Microsoft Entra ID anzeigt."]
 
 +
 Wenn Sie das Azure-Konto zur Konsole hinzufügen, müssen Sie die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für die Anwendung angeben.  Die Konsole verwendet die IDs zur programmgesteuerten Anmeldung.
@@ -329,7 +329,7 @@ Durch das Ersetzen des aktuellen Marktplatzabonnements wird es für vorhandene u
 +
 Sie müssen Anmeldeinformationen auswählen, die einem Konsolenagenten zugeordnet sind.  Sie können ein Marktplatzabonnement nicht mit Anmeldeinformationen verknüpfen, die mit der NetApp Console verknüpft sind.
 
-. Um die Anmeldeinformationen mit einem vorhandenen Abonnement zu verknüpfen, wählen Sie das Abonnement aus der Dropdown-Liste aus und wählen Sie *Konfigurieren*.
+. Um die Anmeldeinformationen mit einem bestehenden Abonnement zu verknüpfen, wählen Sie das Abonnement aus der Dropdown-Liste aus und wählen Sie *Konfigurieren*.
 . Um die Anmeldeinformationen einem neuen Abonnement zuzuordnen, wählen Sie *Abonnement hinzufügen > Fortfahren* und befolgen Sie die Schritte im Azure Marketplace:
 +
 .. Melden Sie sich bei entsprechender Aufforderung bei Ihrem Azure-Konto an.

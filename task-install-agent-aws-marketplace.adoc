@@ -128,7 +128,7 @@ Proxyserver:: NetApp unterstützt sowohl explizite als auch transparente Proxy-K
 --
 
 
-Häfen:: Es gibt keinen eingehenden Datenverkehr zum Konsolenagenten, es sei denn, Sie initiieren ihn oder er wird als Proxy zum Senden von AutoSupport Nachrichten von Cloud Volumes ONTAP an den NetApp Support verwendet.
+Häfen:: Es gibt keinen eingehenden Datenverkehr zum Console-Agenten, es sei denn, Sie initiieren ihn oder er wird als Proxy verwendet, um AutoSupport-Nachrichten von Cloud Volumes ONTAP an den NetApp Support zu senden.
 +
 --
 * HTTP (80) und HTTPS (443) ermöglichen den Zugriff auf die lokale Benutzeroberfläche, die Sie in seltenen Fällen verwenden werden.
@@ -142,7 +142,7 @@ Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden
 --
 
 
-Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+Aktivieren von NTP:: Wenn Sie planen, NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen zu verwenden, sollten Sie einen Network Time Protocol (NTP)-Dienst sowohl auf dem Console-Agenten als auch auf dem NetApp Data Classification-System aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über NetApp Data Classification"^].
 +
 --
 Implementieren Sie diesen Netzwerkzugriff, nachdem Sie den Konsolenagenten erstellt haben.
@@ -212,7 +212,7 @@ Folgendes sollten Sie haben:
 
 
 .Schritte
-. Gehen Sie zum https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Auflistung des NetApp Console -Agenten im AWS Marketplace"^]
+. Gehe zu https://aws.amazon.com/marketplace/pp/prodview-jbay5iyfmu6ui["Auflistung des NetApp Console -Agenten im AWS Marketplace"^].
 . Wählen Sie auf der Marketplace-Seite *Weiter zum Abonnieren* aus.
 . Um die Software zu abonnieren, wählen Sie *Bedingungen akzeptieren*.
 +

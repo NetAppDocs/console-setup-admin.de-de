@@ -128,7 +128,7 @@ Proxyserver:: NetApp unterstützt sowohl explizite als auch transparente Proxy-K
 --
 
 
-Häfen:: Es gibt keinen eingehenden Datenverkehr zum Konsolenagenten, es sei denn, Sie initiieren ihn oder er wird als Proxy zum Senden von AutoSupport Nachrichten von Cloud Volumes ONTAP an den NetApp Support verwendet.
+Häfen:: Es gibt keinen eingehenden Datenverkehr zum Console-Agenten, es sei denn, Sie initiieren ihn oder er wird als Proxy verwendet, um AutoSupport-Nachrichten von Cloud Volumes ONTAP an den NetApp Support zu senden.
 +
 --
 * HTTP (80) und HTTPS (443) ermöglichen den Zugriff auf die lokale Benutzeroberfläche, die Sie in seltenen Fällen verwenden werden.
@@ -142,7 +142,7 @@ Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden
 --
 
 
-Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+Aktivieren von NTP:: Wenn Sie planen, NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen zu verwenden, sollten Sie einen Network Time Protocol (NTP)-Dienst sowohl auf dem Console-Agenten als auch auf dem NetApp Data Classification-System aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über NetApp Data Classification"^].
 +
 --
 Implementieren Sie die Netzwerkanforderungen, nachdem Sie den Konsolenagenten erstellt haben.
@@ -348,7 +348,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Ein Screenshot des Azure-Porta
 . Wählen Sie im Dienst *Microsoft Entra ID* *App-Registrierungen* und wählen Sie die Anwendung aus.
 . Kopieren Sie die *Anwendungs-ID (Client-ID)* und die *Verzeichnis-ID (Mandant-ID)*.
 +
-image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für eine Anwendung in Microsoft Entra IDy zeigt."]
+image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs- (Client-)ID und die Verzeichnis- (Mandanten-)ID für eine Anwendung in Microsoft Entra ID anzeigt."]
 
 +
 Wenn Sie das Azure-Konto zur Konsole hinzufügen, müssen Sie die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für die Anwendung angeben.  Die Konsole verwendet die IDs zur programmgesteuerten Anmeldung.

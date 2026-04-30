@@ -45,7 +45,7 @@ Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzei
 
 ** `/var`: 40 GiB Speicherplatz müssen verfügbar sein
 +
-Der Konsolenagent benötigt diesen Speicherplatz. `/var` weil Podman oder Docker so konzipiert sind, dass die Container in diesem Verzeichnis erstellt werden.  Konkret werden sie Container erstellen in der `/var/lib/containers/storage` Verzeichnis und `/var/lib/docker` für Docker. Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+Der Console-Agent benötigt diesen Bereich in `/var`, da Podman oder Docker so konzipiert sind, dass die Container in diesem Verzeichnis erstellt werden. Genauer gesagt, werden die Container im `/var/lib/containers/storage` Verzeichnis und `/var/lib/docker` für Docker erstellt. Externe Mounts oder symbolische Links funktionieren für diesen Bereich nicht.
 
 
 
@@ -132,7 +132,7 @@ Ubuntu
  a| 
 3.9.45 oder höher mit der NetApp Console im Standardmodus oder eingeschränkten Modus
  a| 
-Docker Engine 23.06 bis 28.0.0.
+Docker Engine 23.0.6 bis 28.0.0.
  a| 
 Nicht unterstützt
 
@@ -185,7 +185,7 @@ Befolgen Sie diese Schritte, um Podman zu installieren und zu konfigurieren:
 
 * Aktivieren und starten Sie den Dienst podman.socket
 * Installieren Sie Python3
-* Installieren Sie das Podman-Compose-Paket Version 1.0.6
+* Installieren Sie das podman-compose-Paket (variiert je nach Red Hat-Version)
 * Fügen Sie podman-compose zur Umgebungsvariablen PATH hinzu
 * Wenn Sie Red Hat Enterprise Linux verwenden, überprüfen Sie, ob Ihre Podman-Version Netavark Aardvark DNS anstelle von CNI verwendet
 
@@ -360,9 +360,9 @@ Ausgehender Internetzugang:: Der Netzwerkstandort, an dem Sie den Konsolenagente
 Von Computern kontaktierte Endpunkte bei Verwendung der webbasierten NetApp Console::
 +
 --
-Computer, die über einen Webbrowser auf die Konsole zugreifen, müssen in der Lage sein, mehrere Endpunkte zu kontaktieren.  Sie müssen die Konsole verwenden, um den Konsolenagenten einzurichten und für die tägliche Verwendung der Konsole.
+Computer, die über einen Webbrowser auf die Console zugreifen, müssen in der Lage sein, mehrere Endpunkte zu kontaktieren.
 
-link:reference-networking-saas-console.html["Vorbereiten des Netzwerks für die NetApp Konsole"] .
+link:reference-networking-saas-console.html["Bereiten Sie die Netzwerkverbindung für die NetApp Console vor."].
 
 --
 
@@ -457,7 +457,7 @@ Proxyserver:: NetApp unterstützt sowohl explizite als auch transparente Proxy-K
 --
 
 
-Häfen:: Es gibt keinen eingehenden Datenverkehr zum Konsolenagenten, es sei denn, Sie initiieren ihn oder er wird als Proxy zum Senden von AutoSupport Nachrichten von Cloud Volumes ONTAP an den NetApp Support verwendet.
+Häfen:: Es gibt keinen eingehenden Datenverkehr zum Console-Agenten, es sei denn, Sie initiieren ihn oder er wird als Proxy verwendet, um AutoSupport-Nachrichten von Cloud Volumes ONTAP an den NetApp Support zu senden.
 +
 --
 * HTTP (80) und HTTPS (443) ermöglichen den Zugriff auf die lokale Benutzeroberfläche, die Sie in seltenen Fällen verwenden werden.
@@ -471,7 +471,7 @@ Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden
 --
 
 
-Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+Aktivieren von NTP:: Wenn Sie planen, NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen zu verwenden, sollten Sie einen Network Time Protocol (NTP)-Dienst sowohl auf dem Console-Agenten als auch auf dem NetApp Data Classification-System aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über NetApp Data Classification"^].
 
 
 
@@ -559,7 +559,7 @@ Folgendes sollten Sie haben:
 * Root-Berechtigungen zum Installieren des Konsolenagenten.
 * Details zu einem Proxyserver, falls für den Internetzugriff vom Konsolenagenten ein Proxy erforderlich ist.
 +
-Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfigurieren, hierzu ist jedoch ein Neustart des Konsolenagenten erforderlich.
+Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfigurieren. Dazu muss jedoch der Console-Agent neu gestartet werden.
 
 * Ein von einer Zertifizierungsstelle signiertes Zertifikat, wenn der Proxyserver HTTPS verwendet oder wenn es sich bei dem Proxy um einen abfangenden Proxy handelt.
 
@@ -583,9 +583,9 @@ Wenn Sie diese Systemvariablen nicht entfernen, schlägt die Installation fehl.
 
 . Laden Sie die Console-Agent-Software herunter und kopieren Sie sie anschließend auf den Linux-Host.  Sie können es entweder von der NetApp Console oder von der NetApp -Support-Website herunterladen.
 +
-** NetApp Console: Gehen Sie zu *Agents > Management > Agent bereitstellen > On-Premise > Manuelle Installation*.
+** NetApp Console: Gehen Sie zu *Agents > Verwaltung > Agent bereitstellen > Lokal > Manuelle Installation*.
 +
-Wählen Sie entweder die Agenteninstallationsdateien oder eine URL zu den Dateien zum Herunterladen.
+Wählen Sie aus, ob Sie die Agenteninstallationsdateien herunterladen oder eine URL zu den Dateien kopieren möchten.
 
 
 
@@ -594,7 +594,7 @@ Wählen Sie entweder die Agenteninstallationsdateien oder eine URL zu den Dateie
 NOTE: Laden Sie den "online"-Agenten-Installer herunter, der für die Verwendung in Ihrem Netzwerk oder in der Cloud vorgesehen ist. Ein separater "offline"-Installer ist für den Console-Agenten verfügbar, aber er wird nur bei Bereitstellungen im privaten Modus unterstützt.
 
 +
-** NetApp Supportseite (erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^] ,
+** NetApp Support-Website (erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^].
 
 
 . Weisen Sie Berechtigungen zum Ausführen des Skripts zu.
@@ -619,17 +619,17 @@ Sie müssen Proxy-Informationen hinzufügen, falls Ihr Netzwerk einen Proxy für
 
 
 
-NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun. link:reference-agent-maint-console-proxy.html["Erfahren Sie mehr über die Agentenwartungskonsole."]
+NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies tun, nachdem Sie einen Agenten installiert haben. link:reference-agent-maint-console-proxy.html["Erfahren Sie mehr über die Agentenwartungskonsole."].
 
 +
 
-Hier ist ein Beispiel für die Konfiguration eines expliziten Proxyservers mit einem von einer Zertifizierungsstelle signierten Zertifikat:
+Hier ist ein Beispiel für die Konfiguration eines expliziten Proxyservers mit einem CA-signierten Zertifikat:
 
 +
 
 [source, cli]
 ----
-./NetApp_Console_Agent_Cloud_v4.0.0--proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
 `--proxy` konfiguriert den Konsolenagenten für die Verwendung eines HTTP- oder HTTPS-Proxyservers in einem der folgenden Formate:
@@ -730,7 +730,7 @@ Stellen Sie der Konsole den AWS-Zugriffsschlüssel für einen IAM-Benutzer berei
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
 +
-.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > Agent.
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > Agent*.
 .. *Anmeldeinformationen definieren*: Geben Sie einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel ein.
 .. *Marketplace-Abonnement*: Verknüpfen Sie ein Marketplace-Abonnement mit diesen Anmeldeinformationen, indem Sie sich jetzt anmelden oder ein vorhandenes Abonnement auswählen.
 .. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.

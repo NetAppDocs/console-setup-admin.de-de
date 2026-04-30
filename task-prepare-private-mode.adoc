@@ -54,7 +54,7 @@ Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzei
 
 ** `/var`: 40 GiB Speicherplatz müssen verfügbar sein
 +
-Der Konsolenagent benötigt diesen Speicherplatz. `/var` weil Podman oder Docker so konzipiert sind, dass die Container in diesem Verzeichnis erstellt werden.  Konkret werden sie Container erstellen in der `/var/lib/containers/storage` Verzeichnis und `/var/lib/docker` für Docker. Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+Der Console-Agent benötigt diesen Bereich in `/var`, da Podman oder Docker so konzipiert sind, dass die Container in diesem Verzeichnis erstellt werden. Genauer gesagt, werden die Container im `/var/lib/containers/storage` Verzeichnis und `/var/lib/docker` für Docker erstellt. Externe Mounts oder symbolische Links funktionieren für diesen Bereich nicht.
 
 
 
@@ -127,7 +127,7 @@ Der Agent verwendet `/opt` zur Installation des `/opt/application/netapp` Verzei
 Speicherplatz in /var:: 20 GiB Speicherplatz müssen verfügbar sein
 +
 --
-Der Konsolenagent benötigt diesen Speicherplatz in `/var` weil Docker oder Podman so konzipiert sind, dass sie die Container in diesem Verzeichnis erstellen.  Konkret werden sie Container in der `/var/lib/containers/storage` Verzeichnis.  Externe Mounts oder Symlinks funktionieren für diesen Bereich nicht.
+Der Console-Agent benötigt diesen Speicherplatz in `/var`, da Docker oder Podman so konzipiert sind, dass sie die Container innerhalb dieses Verzeichnisses erstellen. Genauer gesagt, werden sie Container im `/var/lib/containers/storage` Verzeichnis erstellen. Externe Mounts oder symbolische Links funktionieren für diesen Speicherplatz nicht.
 
 --
 
@@ -159,7 +159,7 @@ Befolgen Sie diese Schritte, um Podman zu installieren und zu konfigurieren:
 
 * Aktivieren und starten Sie den Dienst podman.socket
 * Installieren Sie Python3
-* Installieren Sie das Podman-Compose-Paket Version 1.0.6
+* Installieren Sie das podman-compose-Paket (variiert je nach Red Hat-Version)
 * Fügen Sie podman-compose zur Umgebungsvariablen PATH hinzu
 * Wenn Sie Red Hat Enterprise Linux verwenden, überprüfen Sie, ob Ihre Podman-Version Netavark Aardvark DNS anstelle von CNI verwendet
 
@@ -421,7 +421,7 @@ HTTP (80) und HTTPS (443) ermöglichen den Zugriff auf die NetApp Console. SSH (
 --
 
 
-Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+Aktivieren von NTP:: Wenn Sie planen, NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen zu verwenden, sollten Sie einen Network Time Protocol (NTP)-Dienst sowohl auf dem Console-Agenten als auch auf dem NetApp Data Classification-System aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über NetApp Data Classification"^].
 
 
 
@@ -668,7 +668,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Ein Screenshot des Azure-Porta
 . Wählen Sie im Dienst *Microsoft Entra ID* *App-Registrierungen* und wählen Sie die Anwendung aus.
 . Kopieren Sie die *Anwendungs-ID (Client-ID)* und die *Verzeichnis-ID (Mandant-ID)*.
 +
-image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für eine Anwendung in Microsoft Entra IDy zeigt."]
+image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs- (Client-)ID und die Verzeichnis- (Mandanten-)ID für eine Anwendung in Microsoft Entra ID anzeigt."]
 
 +
 Wenn Sie das Azure-Konto zur Konsole hinzufügen, müssen Sie die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für die Anwendung angeben.  Die Konsole verwendet die IDs zur programmgesteuerten Anmeldung.
@@ -720,7 +720,7 @@ https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-
 .. Wählen Sie im IAM- und Admin-Dienst *Dienstkonten > Dienstkonto erstellen*.
 .. Geben Sie die Details des Dienstkontos ein und wählen Sie *Erstellen und fortfahren*.
 .. Wählen Sie die Rolle aus, die Sie gerade erstellt haben.
-.. Führen Sie die restlichen Schritte aus, um die Rolle zu erstellen.
+.. Schließen Sie die restlichen Schritte ab, um das Dienstkonto zu erstellen.
 +
 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["Google Cloud-Dokumente: Erstellen eines Dienstkontos"^]
 
@@ -746,7 +746,7 @@ Sie müssen mehrere APIs aktivieren, um Cloud Volumes ONTAP in Google Cloud bere
 ** Cloud Resource Manager-API
 ** Compute Engine-API
 ** API für Identitäts- und Zugriffsverwaltung (IAM)
-** Cloud Key Management Service (KMS) API (Nur erforderlich, wenn Sie NetApp Backup and Recovery mit kundenseitig verwalteten Verschlüsselungsschlüsseln (CMEK) verwenden möchten)
+** Cloud Key Management Service (KMS) API (nur erforderlich, wenn Sie NetApp Backup and Recovery mit kundenseitig verwalteten Verschlüsselungsschlüsseln (CMEK) verwenden möchten)
 ** Cloud Quotas API (erforderlich für Cloud Volumes ONTAP Deployments mit Infrastructure Manager)
 
 

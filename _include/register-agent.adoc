@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-Melden Sie sich bei der Konsole an und verknüpfen Sie den Konsolenagenten mit Ihrer Organisation.  Die Art der Anmeldung hängt vom Modus ab, in dem Sie die Konsole verwenden.  Wenn Sie die Konsole im Standardmodus verwenden, melden Sie sich über die SaaS-Website an.  Wenn Sie die Konsole im eingeschränkten oder privaten Modus verwenden, melden Sie sich lokal vom Konsolen-Agent-Host aus an.
+Melden Sie sich bei der Console an und verknüpfen Sie den Console-Agent mit Ihrer Organisation. Wie Sie sich anmelden, hängt von dem Modus ab, in dem Sie die Console verwenden. Wenn Sie die Console im Standardmodus verwenden, melden Sie sich über die SaaS-Website an. Wenn Sie die Console im eingeschränkten oder privaten Modus verwenden, melden Sie sich lokal vom Console-Agent-Host an.
 
 .Schritte
 . Öffnen Sie einen Webbrowser und geben Sie die Host-URL des Konsolenagenten ein:

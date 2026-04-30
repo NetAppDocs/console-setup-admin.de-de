@@ -56,9 +56,9 @@ Ausgehender Internetzugang:: Der Netzwerkstandort, an dem Sie den Konsolenagente
 Von Computern kontaktierte Endpunkte bei Verwendung der webbasierten NetApp Console::
 +
 --
-Computer, die über einen Webbrowser auf die Konsole zugreifen, müssen in der Lage sein, mehrere Endpunkte zu kontaktieren.  Sie müssen die Konsole verwenden, um den Konsolenagenten einzurichten und für die tägliche Verwendung der Konsole.
+Computer, die über einen Webbrowser auf die Console zugreifen, müssen in der Lage sein, mehrere Endpunkte zu kontaktieren.
 
-link:reference-networking-saas-console.html["Vorbereiten des Netzwerks für die NetApp Konsole"] .
+link:reference-networking-saas-console.html["Bereiten Sie die Netzwerkverbindung für die NetApp Console vor."].
 
 --
 
@@ -196,7 +196,7 @@ Proxyserver:: NetApp unterstützt sowohl explizite als auch transparente Proxy-K
 --
 
 
-Häfen:: Es gibt keinen eingehenden Datenverkehr zum Konsolenagenten, es sei denn, Sie initiieren ihn oder er wird als Proxy zum Senden von AutoSupport Nachrichten von Cloud Volumes ONTAP an den NetApp Support verwendet.
+Häfen:: Es gibt keinen eingehenden Datenverkehr zum Console-Agenten, es sei denn, Sie initiieren ihn oder er wird als Proxy verwendet, um AutoSupport-Nachrichten von Cloud Volumes ONTAP an den NetApp Support zu senden.
 +
 --
 * HTTP (80) und HTTPS (443) ermöglichen den Zugriff auf die lokale Benutzeroberfläche, die Sie in seltenen Fällen verwenden werden.
@@ -210,7 +210,7 @@ Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden
 --
 
 
-Aktivieren von NTP:: Wenn Sie NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen verwenden möchten, sollten Sie sowohl auf dem Konsolenagenten als auch auf dem NetApp Data Classification -System einen Network Time Protocol (NTP)-Dienst aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über die NetApp Datenklassifizierung"^]
+Aktivieren von NTP:: Wenn Sie planen, NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen zu verwenden, sollten Sie einen Network Time Protocol (NTP)-Dienst sowohl auf dem Console-Agenten als auch auf dem NetApp Data Classification-System aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über NetApp Data Classification"^].
 
 
 
@@ -384,7 +384,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Ein Screenshot des Azure-Porta
 . Wählen Sie im Dienst *Microsoft Entra ID* *App-Registrierungen* und wählen Sie die Anwendung aus.
 . Kopieren Sie die *Anwendungs-ID (Client-ID)* und die *Verzeichnis-ID (Mandant-ID)*.
 +
-image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für eine Anwendung in Microsoft Entra IDy zeigt."]
+image:screenshot_azure_app_ids.gif["Ein Screenshot, der die Anwendungs- (Client-)ID und die Verzeichnis- (Mandanten-)ID für eine Anwendung in Microsoft Entra ID anzeigt."]
 
 +
 Wenn Sie das Azure-Konto zur Konsole hinzufügen, müssen Sie die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für die Anwendung angeben.  Die Konsole verwendet die IDs zur programmgesteuerten Anmeldung.
@@ -492,7 +492,7 @@ NOTE: Wenn die Bereitstellung fehlschlägt, können Sie auf den Validierungsberi
 
 == Registrieren Sie den Konsolenagenten bei der NetApp Console
 
-Melden Sie sich bei der Konsole an und verknüpfen Sie den Konsolenagenten mit Ihrer Organisation.  Die Art der Anmeldung hängt vom Modus ab, in dem Sie die Konsole verwenden.  Wenn Sie die Konsole im Standardmodus verwenden, melden Sie sich über die SaaS-Website an.  Wenn Sie die Konsole im eingeschränkten oder privaten Modus verwenden, melden Sie sich lokal vom Konsolen-Agent-Host aus an.
+Melden Sie sich bei der Console an und verknüpfen Sie den Console-Agent mit Ihrer Organisation. Wie Sie sich anmelden, hängt von dem Modus ab, in dem Sie die Console verwenden. Wenn Sie die Console im Standardmodus verwenden, melden Sie sich über die SaaS-Website an. Wenn Sie die Console im eingeschränkten oder privaten Modus verwenden, melden Sie sich lokal vom Console-Agent-Host an.
 
 .Schritte
 . Öffnen Sie einen Webbrowser und geben Sie die Host-URL des Konsolenagenten ein:
@@ -531,7 +531,7 @@ Wenn Sie diese AWS-Anmeldeinformationen gerade erstellt haben, kann es einige Mi
 . Wählen Sie *Anmeldeinformationen der Organisation* aus.
 . Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
 +
-.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > Agent.
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > Agent*.
 .. *Anmeldeinformationen definieren*: Geben Sie einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel ein.
 .. *Marketplace-Abonnement*: Verknüpfen Sie ein Marketplace-Abonnement mit diesen Anmeldeinformationen, indem Sie sich jetzt anmelden oder ein vorhandenes Abonnement auswählen.
 .. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
@@ -545,7 +545,7 @@ Sie können jetzt zu https://console.netapp.com["NetApp Console"^] um mit der Ve
 .Azurblau
 --
 .Bevor Sie beginnen
-Wenn Sie diese Azure-Anmeldeinformationen gerade erstellt haben, kann es einige Minuten dauern, bis sie verfügbar sind.  Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen zum Konsolenagenten hinzufügen.
+Wenn Sie diese Azure-Anmeldeinformationen gerade erst erstellt haben, kann es einige Minuten dauern, bis sie verfügbar sind. Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen dem NetApp Console-Agenten hinzufügen.
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.

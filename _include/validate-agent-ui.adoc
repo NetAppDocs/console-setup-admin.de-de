@@ -13,6 +13,5 @@ NOTE: Wenn die Konsole den Agenten erfolgreich bereitstellt, wird kein Bericht g
 +
 Sie müssen den gesamten Vorgang erneut starten, wenn Sie versuchen möchten, den Agenten erneut bereitzustellen.
 
+. Zugriff auf den Bericht und die Protokolle vom Konsolen-Agent-Host
 
-
-Zugriff auf den Bericht und die Protokolle vom Konsolen-Agent-Host
