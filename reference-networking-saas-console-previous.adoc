@@ -82,6 +82,7 @@ Für den täglichen Betrieb.
  a| 
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io
+* https://occmclientinfragov.azurecr.us.io (falls in einer eingeschränkten Modusumgebung)
 
 | Um Bilder für Upgrades des Konsolenagenten zu erhalten. 
 |===

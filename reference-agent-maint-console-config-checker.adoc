@@ -32,6 +32,8 @@ Sie können die Wartungskonsole vom Host des Konsolenagenten aus aufrufen. Navig
 
 Der `config-checker validate` Mit diesem Befehl können Sie die Konfiguration eines Konsolenagenten überprüfen.
 
+link:reference-networking-saas-console.html["Erfahren Sie mehr über die erforderlichen Netzwerkzugriffspunkte."] link:task-install-agent-on-prem.html#os-req-agent["Erfahren Sie mehr über die Anforderungen des Hostsystems."]
+
 
 
 === Parameter
