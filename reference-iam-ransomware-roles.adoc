@@ -16,13 +16,13 @@ summary: Ransomware Resilience bietet verschiedene Benutzerrollen zur Verwaltung
 [role="lead"]
 Ransomware Resilience-Rollen bieten Benutzern Zugriff auf NetApp Ransomware Resilience. Ransomware Resilience unterstützt die folgenden Rollen:
 
-**Basisrollen**
+*Grundrollen*
 
 * Ransomware-Resilience-Administrator – Konfigurieren Sie die Ransomware-Resilience-Einstellungen; untersuchen Sie Verschlüsselungswarnungen und reagieren Sie darauf.
 * Ransomware Resilience Viewer – Anzeigen von Verschlüsselungsvorfällen, Berichten und Erkennungseinstellungen
 
 
-**Aktivitätsrollen für Benutzerverhalten**link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Erkennung verdächtiger Benutzeraktivitäten"^] Warnungen bieten Einblick in Daten wie Dateiaktivitätsereignisse. Diese Warnungen umfassen Dateinamen und vom Benutzer ausgeführte Dateiaktionen (wie Lesen, Schreiben, Löschen, Umbenennen).  Um die Sichtbarkeit dieser Daten einzuschränken, können nur Benutzer mit diesen Rollen diese Warnungen verwalten oder anzeigen.
+*Benutzerverhaltensaktivitätsrollen* link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Erkennung verdächtiger Benutzeraktivitäten"^]-Warnmeldungen bieten Einblick in Daten wie Dateiaktivitätsereignisse; diese Warnmeldungen enthalten Dateinamen und vom Benutzer durchgeführte Dateiaktionen (wie Lesen, Schreiben, Löschen, Umbenennen). Um die Sichtbarkeit dieser Daten einzuschränken, können nur Benutzer mit diesen Rollen diese Warnmeldungen verwalten oder anzeigen.
 
 * Ransomware Resilience-Benutzerverhaltensadministrator – Aktivieren Sie die Erkennung verdächtiger Benutzeraktivitäten, untersuchen Sie verdächtige Benutzeraktivitäten und reagieren Sie auf Warnungen zu verdächtigen Benutzeraktivitäten
 * Ransomware Resilience-Benutzerverhaltensanzeige – Anzeigen von Warnungen zu verdächtigen Benutzeraktivitäten
@@ -309,7 +309,7 @@ Ja
 
 Um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren und auf Warnungen zu reagieren, muss ein Benutzer über die Administratorrolle „Ransomware Resilience-Benutzerverhalten“ verfügen. Um nur Warnungen zu verdächtigem Benutzerverhalten anzuzeigen, sollte ein Benutzer über die Rolle „Ransomware Resilience-Benutzerverhaltensanzeiger“ verfügen.
 
-Benutzerverhaltensrollen sollten Benutzern mit vorhandenen Ransomware Resilience-Administrator- oder Viewer-Berechtigungen zugewiesen werden, die Zugriff auf Folgendes benötigen:link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Einstellungen und Warnungen bei verdächtigen Benutzeraktivitäten"^] .  Ein Benutzer mit der Administratorrolle „Ransomware Resilience“ sollte beispielsweise die Administratorrolle „Ransomware Resilience-Benutzerverhalten“ erhalten, um Benutzeraktivitäts-Agenten zu konfigurieren und Benutzer zu sperren oder die Sperrung aufzuheben.  Die Administratorrolle für das Benutzerverhalten von Ransomware Resilience sollte keinem Ransomware Resilience-Viewer übertragen werden.
+Benutzerverhaltensrollen sollten Benutzern mit bestehenden Administrator- oder Betrachterberechtigungen für Ransomware Resilience zugewiesen werden, die Zugriff auf link:https://docs.netapp.com/us-en/data-services-ransomware-resilience/suspicious-user-activity.html["Einstellungen und Warnungen bei verdächtigen Benutzeraktivitäten"^] benötigen. Ein Benutzer mit der Ransomware Resilience Administratorrolle sollte beispielsweise die Ransomware Resilience Benutzerverhalten-Administratorrolle erhalten, um Benutzeraktivitätsagenten zu konfigurieren und Benutzer zu sperren oder zu entsperren. Die Ransomware Resilience Benutzerverhalten-Administratorrolle sollte nicht einem Ransomware Resilience Betrachter zugewiesen werden.
 
 
 NOTE: Um die Erkennung verdächtiger Benutzeraktivitäten zu aktivieren, müssen Sie über die Administratorrolle der Konsolenorganisation verfügen.

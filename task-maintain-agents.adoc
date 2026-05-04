@@ -62,7 +62,7 @@ Die Konsole benachrichtigt Sie, wenn die Agent-VM fehlerhaft ist, beispielsweise
 Beispielsweise benachrichtigt Sie die Konsole, wenn eine Agentenressource (CPU, RAM oder Festplattenspeicher) 30 Minuten lang hintereinander 90 % ihrer Gesamtkapazität überschreitet.  Wenn die Ressourcennutzung anschließend unter diesen Schwellenwert fällt, wird die Benachrichtigung im Benachrichtigungscenter als behoben (grün) angezeigt.
 
 
-NOTE: Wenden Sie sich an den NetApp -Support, wenn Sie Fragen zum Ändern Ihrer Agent-VM haben.
+NOTE: Wenden Sie sich an den NetApp Support, wenn Sie Fragen zur Modifizierung Ihrer Agenten-VM haben.
 
 link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#notification-center["Erfahren Sie mehr."^]
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-federation-verify-domain.html 
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
-summary: Sie können für die Föderation nur verifizierte Domänen verwenden. Wenn Sie eine Föderation mit einer Domäne durchführen möchten, die sich von Ihrer E-Mail-Domäne unterscheidet, müssen Sie zunächst bestätigen, dass Sie der Eigentümer der Domäne sind.  Sie können für die Föderation nur verifizierte Domänen verwenden. 
+summary: Wenn Sie eine Verbindung mit einer anderen Domain als Ihrer E-Mail-Domain herstellen möchten, müssen Sie zunächst nachweisen, dass Sie Inhaber dieser Domain sind. Sie können nur verifizierte Domains für die Föderation verwenden. 
 ---
 = Überprüfen Sie die E-Mail-Domäne für Ihre Verbundverbindung
 :hardbreaks:
@@ -14,14 +14,14 @@ summary: Sie können für die Föderation nur verifizierte Domänen verwenden. W
 
 
 [role="lead"]
-Wenn Sie eine Föderation mit einer Domäne durchführen möchten, die sich von Ihrer E-Mail-Domäne unterscheidet, müssen Sie zunächst bestätigen, dass Sie der Eigentümer der Domäne sind.  Sie können für die Föderation nur verifizierte Domänen verwenden.
+Wenn Sie eine Verbindung mit einer anderen Domain als Ihrer E-Mail-Domain herstellen möchten, müssen Sie zunächst nachweisen, dass Sie Inhaber dieser Domain sind. Sie können nur verifizierte Domains für die Föderation verwenden.
 
 .Erforderliche Rollen
-Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+Die Administratorrolle der Föderation ist erforderlich, um Föderationen zu erstellen und zu verwalten. Mit dem Föderations-Viewer kann die Föderationsseite angezeigt werden. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
 
 Zur Überprüfung Ihrer Domäne müssen Sie den DNS-Einstellungen Ihrer Domäne einen TXT-Eintrag hinzufügen.  Dieser Datensatz dient als Nachweis dafür, dass Sie der Eigentümer der Domäne sind, und ermöglicht der NetApp Console, der Domäne für die Föderation zu vertrauen.  Möglicherweise müssen Sie sich mit Ihrem IT- oder Netzwerkadministrator abstimmen, um diesen Schritt abzuschließen.
 
-Wenn Sie beispielsweise Microsoft Entra ID verwenden, können Sie die Schritte in der Microsoft-Dokumentation link:https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["Fügen Sie eine Domäne mit Microsoft Entra ID hinzu"] befolgen.
+Wenn Sie beispielsweise Microsoft Entra ID verwenden, können Sie die Schritte in der Microsoft-Dokumentation  https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain["Fügen Sie eine Domäne mit Microsoft Entra ID hinzu"^] befolgen.
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.

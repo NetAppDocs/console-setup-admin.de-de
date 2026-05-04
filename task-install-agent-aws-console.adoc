@@ -291,7 +291,7 @@ Sie sollten jetzt über eine IAM-Rolle mit den erforderlichen Berechtigungen ode
 
 == Schritt 3: Erstellen des Konsolenagenten
 
-Erstellen Sie den Konsolenagenten direkt von der webbasierten Konsole aus.
+Erstellen Sie den Konsolenagenten direkt über die webbasierte Konsole.
 
 .Informationen zu diesem Vorgang
 * Durch Erstellen des Konsolenagenten aus der Konsole wird eine EC2-Instanz in AWS mithilfe einer Standardkonfiguration bereitgestellt.  Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren EC2-Instance mit weniger CPUs oder weniger RAM. link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
@@ -311,10 +311,10 @@ Folgendes sollten Sie haben:
 
 .Schritte
 . Wählen Sie *Administration > Agenten*.
-. Wählen Sie auf der Seite *Übersicht* *Agent bereitstellen > AWS*
+. Wählen Sie auf der Seite *Übersicht* die Option *Agent bereitstellen > AWS*.
 . Befolgen Sie die Schritte im Assistenten, um den Konsolenagenten zu erstellen:
-. Auf der Seite *Einführung* erhalten Sie einen Überblick über den Prozess
-. Geben Sie auf der Seite *AWS-Anmeldeinformationen* Ihre AWS-Region an und wählen Sie dann eine Authentifizierungsmethode aus. Dabei kann es sich entweder um eine IAM-Rolle handeln, die die Konsole übernehmen kann, oder um einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel.
+. Auf der Seite *Einführung* sehen Sie die Übersicht über den Prozess.
+. Geben Sie auf der Seite *AWS-Anmeldeinformationen* Ihre AWS-Region an und wählen Sie dann ein Authentifizierungsverfahren. Dies kann entweder eine IAM-Rolle sein, die die Console annehmen kann, oder ein AWS-Zugriffsschlüssel und ein geheimer Schlüssel.
 +
 
 TIP: Wenn Sie „Rolle übernehmen“ wählen, können Sie den ersten Satz Anmeldeinformationen über den Bereitstellungsassistenten des Konsolenagenten erstellen.  Alle zusätzlichen Anmeldeinformationen müssen auf der Seite „Anmeldeinformationen“ erstellt werden.  Sie stehen dann im Assistenten in einer Dropdown-Liste zur Verfügung. link:task-adding-aws-accounts.html["Erfahren Sie, wie Sie zusätzliche Anmeldeinformationen hinzufügen"] .
@@ -327,7 +327,7 @@ TIP: Wenn Sie „Rolle übernehmen“ wählen, können Sie den ersten Satz Anmel
 ** Wählen Sie, ob Sie die EBS-Festplatten des Konsolen-Agenten verschlüsseln möchten.  Sie haben die Möglichkeit, den Standardverschlüsselungsschlüssel oder einen benutzerdefinierten Schlüssel zu verwenden.
 
 
-. Geben Sie auf der Seite *Netzwerk* eine VPC, ein Subnetz und ein Schlüsselpaar für den Agenten an, wählen Sie, ob eine öffentliche IP-Adresse aktiviert werden soll, und geben Sie optional eine Proxy-Konfiguration an.
+. Auf der Seite *Netzwerk* können Sie eine VPC, ein Subnetz und ein Schlüsselpaar für den Agenten angeben, auswählen, ob eine öffentliche IP-Adresse aktiviert werden soll, und optional eine Proxy-Konfiguration festlegen.
 +
 Stellen Sie sicher, dass Sie über das richtige Schlüsselpaar für den Zugriff auf die virtuelle Maschine des Konsolenagenten verfügen.  Ohne Schlüsselpaar ist ein Zugriff nicht möglich.
 

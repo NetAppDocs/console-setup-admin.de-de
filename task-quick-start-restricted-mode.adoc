@@ -91,13 +91,13 @@ NetApp Replication
 
 * Wird in Regierungsregionen mit eingeschränktem Modus unterstützt.  Wird in kommerziellen Regionen oder in souveränen Regionen mit eingeschränktem Modus nicht unterstützt.
 
-| Ja*, (nicht erforderlich, wenn von ONTAP on-premises zu ONTAP on-premises repliziert wird) 
+| Ja* (nicht erforderlich, wenn von ONTAP on-premises zu ONTAP on-premises repliziert wird) 
 
 
 | *NetApp Supportvertragsfunktionen* | Keine | k. A. 
 
 
-.12+| *Administrative Merkmale* | Prüfung | Nein 
+.11+| *Administrative Merkmale* | Prüfung | Nein 
 
 
 | Automatisierungszentrum | Nein 
@@ -144,7 +144,4 @@ Für Cloud Volumes ONTAP werden mit BYOL sowohl kapazitätsbasierte als auch kno
 
 
 | Nur-Lese-Modus | Nein 
-
-
-| Benachrichtigungen | Nein 
 |===

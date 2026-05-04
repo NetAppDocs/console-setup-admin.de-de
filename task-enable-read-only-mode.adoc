@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-enable-read-only-mode.html 
 keywords: sign up, signing up, sign in, signing in, login with netapp, log in with netapp, create account, account, log in with nss, nss, nss login 
-summary: Um mit der Konsole zu beginnen, müssen Sie sich zunächst mit Ihren NetApp Support Site-Zugangsdaten registrieren oder anmelden bzw. ein NetApp Console -Login erstellen. Wenn Sie der erste Benutzer Ihres Unternehmens sind, der sich anmeldet, erstellen Sie in der Konsole als Organisationsadministrator eine neue Organisation. Falls Ihr Unternehmen bereits über eine solche Organisation verfügt, können Sie sich registrieren oder anmelden, um darauf zuzugreifen. 
+summary: Als Sicherheitsmaßnahme können Sie den Nur-Lese-Modus für Ihre NetApp Console Organisation aktivieren. Im Nur-Lese-Modus können Benutzer Ressourcen und Einstellungen einsehen, aber keine Änderungen vornehmen. 
 ---
 = Aktivieren Sie den Nur-Lese-Modus für eine NetApp Console Organisation
 :hardbreaks:
@@ -40,70 +40,3 @@ Wenn der Nur-Lese-Modus aktiviert ist, sehen die Benutzer ein Banner, das sie da
 image:screenshot-read-only-slider.png["Ein Screenshot, der den Schalter für den Nur-Lese-Modus in der Position „Ein“ zeigt."]
 
 
-
-
-
-== Registrieren Sie sich als erster Organisationsadministrator für die NetApp Console.
-
-Falls Ihr Unternehmen noch keine NetApp Console -Organisation besitzt, registrieren Sie sich, um eine zu erstellen. Der erste Benutzer ist der Administrator und verwaltet Konten und Berechtigungen. Sie können Rollen aktualisieren und Administratoren später hinzufügen.
-
-.Schritte
-. Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Console"^]
-. Wenn Sie über ein NetApp Support Site-Konto verfügen, geben Sie die mit Ihrem Konto verknüpfte E-Mail-Adresse direkt auf der *Anmeldeseite* ein.
-+
-Die Konsole registriert Sie im Rahmen dieser ersten Anmeldung mit Ihren Zugangsdaten für die NetApp Support Site.
-
-. Wenn Sie sich durch Erstellen eines Konsolen-Logins anmelden möchten, wählen Sie *Anmelden*.
-+
-.. Geben Sie auf der Seite *Anmelden* die erforderlichen Informationen ein und wählen Sie *Weiter*.
-+
-
-NOTE: Im Anmeldeformular sind nur englische Zeichen zulässig.
-
-.. Suchen Sie in Ihrem Posteingang nach einer E-Mail von NetApp mit Anweisungen zur Bestätigung Ihrer E-Mail-Adresse.
-+
-Bitte bestätigen Sie Ihre E-Mail-Adresse, um die Anmeldung abzuschließen.
-
-
-
-. Nachdem Sie sich angemeldet haben, lesen und akzeptieren Sie bitte die Endbenutzer-Lizenzvereinbarung.
-. Auf der *Willkommensseite* können Sie eine Organisation erstellen.
-. Wählen Sie *Los geht's*.
-
-
-+ Als erstmaliger Administrator folgen Sie dem geführten Prozess, um Speicher hinzuzufügen, einen Konsolenagenten zu erstellen und vieles mehr. link:task-console-assistant.html["Erfahren Sie mehr über die Verwendung des Konsolenassistenten."]
-
-.Nächste Schritte
-Als Administrator sollten Sie, nachdem Sie die im Konsolenassistenten enthaltenen Schritte abgeschlossen haben, Ihre Identitäts- und Zugriffsstrategie planen, Benutzer zu Ihrer Organisation hinzufügen und Rollen zuweisen. link:task-iam-get-started.html["Erfahren Sie mehr über Identitäts- und Zugriffsmanagement für die NetApp Console."]
-
-
-
-== Registrieren Sie sich oder melden Sie sich bei der NetApp Console an, wenn bereits eine Organisation existiert.
-
-Falls Ihr Unternehmen bereits über eine NetApp Console Organisation verfügt, registrieren Sie sich oder melden Sie sich an, um darauf zuzugreifen. Die Art Ihrer Registrierung oder Anmeldung hängt davon ab, ob Ihr Unternehmen eine Identitätsföderation nutzt oder über Anmeldeinformationen für die NetApp Support Site verfügt. Falls nicht, erstellen Sie ein NetApp Console -Login.
-
-.Schritte
-. Öffnen Sie einen Webbrowser und gehen Sie zu https://console.netapp.com["NetApp Console"^]
-. Wenn Sie über ein NetApp Support Site-Konto verfügen oder Ihr Unternehmen Single Sign-On (SSO) eingerichtet hat, geben Sie Ihre zugehörige E-Mail-Adresse oder Ihre SSO-Anmeldeinformationen auf der Seite *Anmelden* ein. Folgen Sie den Anweisungen, um die Anmeldung abzuschließen.
-+
-In beiden Fällen werden Sie im Rahmen dieser ersten Anmeldung für die Konsole angemeldet.
-
-. Wenn Sie sich durch Erstellen eines Konsolen-Logins anmelden möchten, wählen Sie *Anmelden*.
-+
-.. Geben Sie auf der Seite *Anmelden* die erforderlichen Informationen ein und wählen Sie *Weiter*.
-+
-
-NOTE: Im Anmeldeformular sind nur englische Zeichen zulässig.
-
-.. Suchen Sie in Ihrem Posteingang nach einer E-Mail von NetApp mit Anweisungen zur Bestätigung Ihrer E-Mail-Adresse.
-+
-Bitte bestätigen Sie Ihre E-Mail-Adresse, um die Anmeldung abzuschließen.
-
-
-
-. Nachdem Sie sich angemeldet haben, lesen und akzeptieren Sie bitte die Endbenutzer-Lizenzvereinbarung.
-. Wenn Sie vom System aufgefordert werden, eine Organisation zu erstellen, schließen Sie das Dialogfeld und informieren Sie einen Konsolenadministrator, damit dieser Sie Ihrer Konsolenorganisation hinzufügen und Ihnen Zugriff gewähren kann. link:task-user-settings.html#contact-admin["Erfahren Sie, wie Sie einen Organisationsadministrator kontaktieren können."]
-
-
-.Nächste Schritte
-Sobald Sie Zugriff auf Ihre Organisation erhalten haben, können Sie mit der Verwaltung des Speichers und der Nutzung der Ihnen zugewiesenen Datendienste beginnen.

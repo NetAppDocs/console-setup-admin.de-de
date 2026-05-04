@@ -8,9 +8,10 @@ summary: Bei Bedarf können Sie den Namen Ihrer NetApp Console Konsolenorganisat
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
-:icons: font
+:icons: 
 :linkattrs: 
 :imagesdir: ./media/
+:icontype: fontapp
 
 
 [role="lead"]
@@ -20,14 +21,14 @@ Ihre NetApp Console Konsolenorganisation hat einen Namen und eine ID.  Sie könn
 
 == Benennen Sie Ihre Organisation um
 
-Sie können Ihre Organisation umbenennen.  Dies ist hilfreich, wenn Sie mehr als nur die Organisation unterstützen.
+Sie können Ihre Organisation umbenennen. Dies ist hilfreich, wenn Sie mehr als eine Organisation unterstützen.
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Organisation* aus.
 . Navigieren Sie auf der Seite *Organisation* zur ersten Zeile in der Tabelle und wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Organisation bearbeiten*.
 +
-image:screenshot-iam-edit-organization.png["Ein Screenshot der Übersichtsseite, der das Aktionssymbol und die Option „Organisation bearbeiten“ zeigt."]
+image:screenshot-iam-edit-organization.png["Ein Screenshot der Organisationsseite, der das Aktionssymbol und die Option „Organisation bearbeiten“ zeigt."]
 
 . Geben Sie einen neuen Organisationsnamen ein und wählen Sie *Übernehmen*.
 

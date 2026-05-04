@@ -19,7 +19,7 @@ Ordnen Sie Console-Agenten spezifischen Projekten zu, um Ressourcenmanagement un
 Super-Administratoren und Organisationsadministratoren können Agenten erstellen und jeden Agenten einem beliebigen Projekt oder Ordner zuordnen. Ordner- oder Projektadministratoren können nur vorhandene Agenten Ordnern und Projekten zuordnen, für die sie die entsprechenden Berechtigungen besitzen. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Aktionen, die ein Ordner- oder Projektadministrator ausführen kann."]Die
 
 
-NOTE: Benutzer mit der Rolle „Org admin“ können Ressourcen zu Ordnern hinzufügen, um die Aufgabe, die Ressource Projekten zuzuordnen, an die Ordner- oder Projektadministratoren des jeweiligen Ordners zu delegieren. link:task-iam-manage-folders-projects.html#associate-resource-folder["Informationen zum Verknüpfen einer Ressource mit einem Ordner"].
+NOTE: Benutzer mit der Rolle „Organisationsadministrator“ können Ressourcen zu einem Ordner hinzufügen, um die Aufgabe, die Ressource Projekten zuzuordnen, an die Ordner- oder Projektadministratoren des jeweiligen Ordners zu delegieren. link:task-iam-manage-folders-projects.html#associate-resource-folder["Informationen zum Verknüpfen einer Ressource mit einem Ordner"].
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff* > *Agenten*.

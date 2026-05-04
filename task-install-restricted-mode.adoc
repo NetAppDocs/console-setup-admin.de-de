@@ -456,7 +456,7 @@ NOTE: „Konsolenoperator“ ist der in der Richtlinie angegebene Standardname. 
 --
 .Azure-Dienstprinzipal
 --
-Geben Sie in der NetApp Console die Anmeldeinformationen für den Azure-Dienstprinzipal ein, den Sie zuvor eingerichtet haben.
+Geben Sie der NetApp Console die Anmeldeinformationen für den Azure-Dienstprinzipal an, den Sie zuvor eingerichtet haben.
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.
@@ -477,7 +477,7 @@ Geben Sie in der NetApp Console die Anmeldeinformationen für den Azure-Dienstpr
 
 
 .Ergebnis
-Die NetApp Console verfügt jetzt über die erforderlichen Berechtigungen, um in Ihrem Namen Aktionen in Azure auszuführen.
+Die NetApp Console verfügt nun über die erforderlichen Berechtigungen, um in Ihrem Namen Aktionen in Azure durchzuführen.
 
 --
 .Google Cloud-Dienstkonto

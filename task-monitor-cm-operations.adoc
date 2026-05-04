@@ -154,7 +154,7 @@ Alle anderen Benutzer und Empfänger sind so konfiguriert, dass sie keine Benach
 Sie müssen über die Rolle des Organisationsadministrators verfügen, um die Benachrichtigungseinstellungen anzupassen.
 
 .Schritte
-. Wählen Sie *Verwaltung > Benachrichtigungseinstellungen*.
+. Wählen Sie *Administration > Benachrichtigungseinstellungen*.
 . Wählen Sie *Benutzer der Organisation* oder *Zusätzliche Empfänger*.
 +
 Auf der Seite *Zusätzliche Empfänger* können Sie die Konsole so konfigurieren, dass Personen benachrichtigt werden, die Mitglieder Ihrer Konsolenorganisation sind.

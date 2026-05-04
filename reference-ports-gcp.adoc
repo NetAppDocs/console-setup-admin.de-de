@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: reference-ports-gcp.html 
 keywords: ports, firewall rules, http, https, inbound, outbound, connector, agent 
-summary: Die Google Cloud-Firewallregeln für den Agenten erfordern sowohl eingehende als auch ausgehende Regeln.  Die NetApp Console erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten aus der Konsole erstellen. Für andere Installationsoptionen müssen Sie diese Sicherheitsgruppe manuell einrichten. 
+summary: Die Firewall-Regeln von Google Cloud für den Agenten erfordern sowohl eingehende als auch ausgehende Regeln. Die NetApp Console erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Console-Agenten über die Console erstellen. Für andere Installationsoptionen müssen Sie diese Sicherheitsgruppe manuell einrichten. 
 ---
 = Firewallregeln für Konsolenagenten in Google Cloud
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Die Google Cloud-Firewallregeln für den Agenten erfordern sowohl einge
 
 
 [role="lead"]
-Die Google Cloud-Firewallregeln für den Agenten erfordern sowohl eingehende als auch ausgehende Regeln.  Die NetApp Console erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Konsolenagenten aus der Konsole erstellen. Für andere Installationsoptionen müssen Sie diese Sicherheitsgruppe manuell einrichten.
+Die Firewall-Regeln von Google Cloud für den Agenten erfordern sowohl eingehende als auch ausgehende Regeln. Die NetApp Console erstellt diese Sicherheitsgruppe automatisch, wenn Sie einen Console-Agenten über die Console erstellen. Für andere Installationsoptionen müssen Sie diese Sicherheitsgruppe manuell einrichten.
 
 
 
@@ -82,5 +82,5 @@ NOTE: Die Quell-IP-Adresse ist der Agent-Host.
 | API-Aufrufe | TCP | 8080 | Datenklassifizierung | Testen der Datenklassifizierungsinstanz während der Bereitstellung 
 
 
-| DNS | UDP | 53 | DNS | Wird für die DNS-Auflösung durch Datenklassifizierung verwendet 
+| DNS | UDP | 53 | DNS | Wird von der Datenklassifizierung für die DNS-Auflösung verwendet 
 |===

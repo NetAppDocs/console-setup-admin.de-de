@@ -16,7 +16,7 @@ summary: Um mit der Identitäts- und Zugriffsverwaltung in der NetApp Console zu
 [role="lead"]
 Wenn Sie sich für die NetApp Console anmelden, werden Sie aufgefordert, eine neue Organisation zu erstellen.  Die Organisation umfasst ein Mitglied (einen Organisationsadministrator) und ein Standardprojekt.  Um die Identitäts- und Zugriffsverwaltung (IAM) so einzurichten, dass sie Ihren Geschäftsanforderungen entspricht, müssen Sie die Hierarchie Ihrer Organisation anpassen, zusätzliche Mitglieder hinzufügen, Ressourcen hinzufügen oder ermitteln und diese Ressourcen in Ihrer Hierarchie verknüpfen.
 
-Sie benötigen die Berechtigungen *Organisationsadministrator* oder *Superadministrator*, um Identität und Zugriff für Ihre Organisation zu verwalten. Mit *Ordner- oder Projektadministratorberechtigungen* können Sie nur die Ordner und Projekte verwalten, auf die Sie Zugriff haben.
+Sie benötigen *Org admin* oder *Super admin* Berechtigungen, um Identitäten und Zugriffsrechte für Ihre Organisation zu verwalten. Mit *Folder or project admin* Berechtigungen können Sie nur die Ordner und Projekte verwalten, auf die Sie Zugriff haben.
 
 Befolgen Sie diese Schritte, um eine neue Organisation einzurichten.  Die Reihenfolge kann je nach den Anforderungen Ihrer Organisation variieren.
 

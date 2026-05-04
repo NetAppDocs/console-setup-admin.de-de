@@ -16,7 +16,7 @@ summary: Fügen Sie Ordner und Projekte hinzu, die Ihrer Unternehmensstruktur en
 [role="lead"]
 Fügen Sie Ordner und Projekte hinzu, die Ihrer Unternehmensstruktur entsprechen. Nachdem Sie Ordner und Projekte erstellt haben, können Sie ihnen Ressourcen zuordnen und den Zugriff von Mitgliedern auf diese Projekte verwalten.
 
-Die Konsole erstellt automatisch ein Projekt für Sie, wenn Sie eine neue Organisation anlegen. Die meisten Organisationen benötigen mehr als ein Projekt sowie Ordner, um die Dinge übersichtlich zu organisieren. link:concept-identity-and-access-management.html["Erfahren Sie mehr über die Ressourcenhierarchie in der NetApp Console."]Die
+Die Konsole erstellt automatisch ein Projekt für Sie, wenn Sie eine neue Organisation anlegen. Die meisten Organisationen benötigen mehr als ein Projekt sowie Ordner, um die Abläufe übersichtlich zu gestalten. link:concept-identity-and-access-management.html["Erfahren Sie mehr über die Ressourcenhierarchie in der NetApp Console."].
 
 
 
@@ -35,7 +35,7 @@ Ordner ermöglichen Ihnen außerdem eine effizientere Verwaltung der Mitgliederz
 
 NOTE: Ordner sind ein Organisationswerkzeug und für Mitglieder, die keine IAM-Berechtigungen wie z. B. die Rollen Organisationsadministrator, Ordner- oder Projektadministrator oder Superadministrator besitzen, nicht sichtbar. Mitglieder greifen auf Projekte zu, nicht auf Ordner.
 
-Organisationsadministratoren können administrative Aufgaben delegieren, indem sie Ordner erstellen. Nach dem Erstellen eines Ordners kann ein Organisationsadministrator einem Mitglied die Ordner- oder Projektadministratorrolle für bestimmte Ordner zuweisen. Diese Mitglieder können dann alle Projekte innerhalb dieses Ordners verwalten, ohne Zugriff auf die gesamte Organisation zu haben.
+Organisationsadministratoren können administrative Aufgaben delegieren, indem sie Ordner erstellen. Nach der Erstellung eines Ordners kann ein Organisationsadministrator einem Mitglied die Rolle „Ordner- oder Projektadministrator“ für bestimmte Ordner zuweisen. Diese Mitglieder können dann alle Projekte innerhalb dieses Ordners verwalten, ohne Zugriff auf die gesamte Organisation zu haben.
 
 Ordner können andere Ordner oder Projekte als Unterordner haben, aber es können keine Ressourcen direkt mit ihnen verknüpft sein. Ressourcen müssen einem Projekt zugeordnet werden.
 
@@ -194,7 +194,7 @@ image:screenshot-iam-member-access.png["Ein Screenshot der Seite „Projekt bear
 
 Ändern Sie die Zugriffsrechte der Mitglieder, um den Ressourcenzugriff zu steuern. Beachten Sie, dass Rollen, die auf Ordnerebene zugewiesen werden, an alle untergeordneten Projekte und Ordner vererbt werden.
 
-Die Zugriffsrechte von Mitgliedern auf niedrigeren Ebenen können nicht geändert werden, wenn sie von der Ordner- oder Organisationsebene übernommen wurden. Ändern Sie die Berechtigungen des Mitglieds auf der höheren Hierarchieebene, um den Zugriff zu ändern. Alternativ können Sie link:task-iam-manage-roles.html#manage-permissions["Verwalten Sie Berechtigungen auf der Seite „Mitglieder“"]Die
+Die Zugriffsrechte von Mitgliedern auf niedrigeren Ebenen können nicht geändert werden, wenn sie von der Ordner- oder Organisationsebene vererbt wurden. Ändern Sie die Berechtigung des Mitglieds auf der höheren Hierarchieebene, um den Zugriff zu ändern. Alternativ können Sie link:task-iam-manage-roles.html#manage-permissions["Verwalten Sie Berechtigungen auf der Seite „Mitglieder“"].
 
 .Schritte
 . Navigieren Sie auf der Seite *Organisation* zu einem Projekt oder Ordner in der Tabelle, wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Ordner bearbeiten* oder *Projekt bearbeiten*.

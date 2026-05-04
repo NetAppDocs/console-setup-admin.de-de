@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: reference-agent-maint-console-config-checker.html 
-keywords: transparent proxy, connector certificate, agent maintenance console, proxy configuration, connector proxy. agent proxy 
-summary: Sie können die Wartungskonsole des Konsolenagenten verwenden, um einen Konsolenagenten für die Verwendung eines transparenten Proxyservers zu konfigurieren. 
+keywords: agent maintenance console, agent troubleshooting, network connectivity validation, agent validation, hardware requirements, deployment readiness, operational compliance, installation troubleshooting 
+summary: Mit der Wartungskonsole des Console-Agenten können Sie die Installation und Konfiguration eines Console-Agenten überprüfen. 
 ---
 = Konsolenagentenvalidierung mit der Wartungskonsole in NetApp Console
 :hardbreaks:
@@ -20,7 +20,7 @@ Mit der Wartungskonsole des Console-Agenten können Sie die Installation und Kon
 
 == Zugriff auf die Agenten-Wartungskonsole
 
-Sie können vom Konsolenagent-Host aus auf die Wartungskonsole zugreifen.  Navigieren Sie zum folgenden Verzeichnis:
+Sie können die Wartungskonsole vom Host des Konsolenagenten aus aufrufen. Navigieren Sie zum folgenden Verzeichnis:
 
 [source, cli]
 ----
@@ -41,9 +41,10 @@ Der `config-checker validate` Mit diesem Befehl können Sie die Konfiguration ei
 [role="quick-margin-para"]
 Wählen Sie einen oder mehrere Dienste zur Validierung aus. Gültige Dienstnamen sind:
 
-*`PLATFORM`Dabei wird überprüft, ob die Netzwerkverbindung zu den erforderlichen Console-Endpunkten besteht und ob die erforderlichen Ports für den Console-Agent geöffnet sind.
+* `PLATFORM`Dabei wird überprüft, ob die Netzwerkverbindung zu den erforderlichen Console-Endpunkten besteht und ob die erforderlichen Ports für den Console-Agent geöffnet sind.
 
-`--validationTypes <comma-separated list validation types to run>` --*ERFORDERLICH*-- Wählen Sie einen oder mehrere Validierungstypen aus, die ausgeführt werden sollen. Gültige Validierungstypen sind:
+
+`--validationTypes <comma-separated list of validation types to run>` --*ERFORDERLICH*-- Wählen Sie einen oder mehrere Validierungstypen aus, die ausgeführt werden sollen. Gültige Validierungstypen sind:
 
 * `NETWORK`wodurch die Netzwerkverbindung zu den erforderlichen Console-Endpunkten überprüft wird.
 * `HARDWARE`wodurch bestätigt wird, dass der Agentenhost die Mindesthardwareanforderungen für den Console Agent erfüllt.
@@ -67,7 +68,7 @@ Gibt den Pfad zu einer oder mehreren Zertifikatsdateien an, die für die Validie
 
 === Config-Checker-Validierungsbeispiele
 
-Die folgenden Beispiele umfassen die Überprüfung der Netzwerkverbindungen, der benötigten Ports und der Hardwarevoraussetzungen sowie verschiedene Kombinationen der Verwendung eines Proxyservers und benutzerdefinierter Zertifikate.
+Die folgenden Beispiele umfassen die Überprüfung der Netzwerkverbindungen, der erforderlichen Ports und der Hardwareanforderungen sowie verschiedener Kombinationen aus der Verwendung eines Proxyserver und benutzerdefinierter Zertifikate.
 
 .Überprüfung der Netzwerkverbindungen und Hardwareanforderungen:
 [source, cli]

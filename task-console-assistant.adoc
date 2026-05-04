@@ -24,7 +24,7 @@ Der Konsolenassistent ist nur für Benutzer mit der Rolle „Organisationsadmini
 
 Standardmäßig wird der Konsolenassistent auf der Startseite der NetApp Console für Erstbenutzer mit der Rolle „Organisationsadministrator“ angezeigt. Es bleibt so lange verfügbar, bis Sie die obligatorischen Aufgaben der Erstellung eines Konsolenagenten und des Hinzufügens eines Systems abgeschlossen haben.
 
-Nutzen Sie den Assistenten, um diese Aufgaben zu erledigen. Dadurch wird die minimale Einrichtung Ihrer NetApp Console Umgebung sichergestellt:
+Nutzen Sie den Assistenten, um diese Aufgaben zu erledigen, die die minimale Einrichtung Ihrer NetApp Console-Umgebung bereitstellen:
 
 * Fügen Sie ein NetApp Support Site (NSS)-Konto hinzu.
 +

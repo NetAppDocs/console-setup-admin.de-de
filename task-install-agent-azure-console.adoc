@@ -168,7 +168,7 @@ Erstellen Sie eine benutzerdefinierte Azure-Rolle, die Sie Ihrem Azure-Konto ode
 
 Die Konsole stellt die Konsolen-Agent-VM in Azure bereit und ermöglicht eine https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["systemseitig zugewiesene verwaltete Identität"^] , erstellt die erforderliche Rolle und weist sie der VM zu. link:reference-permissions-azure.html["Überprüfen Sie, wie die Konsole die Berechtigungen verwendet"] .
 
-Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle mithilfe des Azure-Portals, Azure PowerShell, Azure CLI oder REST-API erstellen können.  Die folgenden Schritte zeigen, wie Sie die Rolle mithilfe der Azure CLI erstellen.  Wenn Sie eine andere Methode bevorzugen, lesen Sie bitte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure-Dokumentation"^]
+Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle über das Azure-Portal, Azure PowerShell, die Azure CLI oder die REST-API erstellen können. Die folgenden Schritte zeigen, wie Sie die Rolle mithilfe der Azure CLI erstellen. Wenn Sie eine andere Methode bevorzugen, lesen Sie bitte  https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure-Dokumentation"^].
 
 .Schritte
 . Kopieren Sie die erforderlichen Berechtigungen für eine neue benutzerdefinierte Rolle in Azure und speichern Sie sie in einer JSON-Datei.
@@ -455,9 +455,9 @@ Diese Berechtigungen gelten für den Konsolenagenten selbst. Es handelt sich um 
 
 .Schritte
 . Wählen Sie *Administration > Agenten*.
-. Wählen Sie auf der Seite *Übersicht* die Option *Agent bereitstellen > Azure* aus.
+. Wählen Sie auf der Seite *Übersicht* die Option *Agent bereitstellen > Azure*.
 . Überprüfen Sie auf der Seite *Überprüfen* die Anforderungen für die Bereitstellung eines Agenten.  Diese Anforderungen werden oben auf dieser Seite ebenfalls ausführlich beschrieben.
-. Wählen Sie auf der Seite *Virtual Machine Authentication* die Authentifizierungsoption aus, die Ihrer Einrichtung der Azure-Berechtigungen entspricht:
+. Wählen Sie auf der Seite *Authentifizierung virtueller Maschinen* die Authentifizierungsoption aus, die Ihrer Konfiguration der Azure-Berechtigungen entspricht:
 +
 ** Wählen Sie *Anmelden*, um sich bei Ihrem Microsoft-Konto anzumelden, das über die erforderlichen Berechtigungen verfügen sollte.
 +
@@ -481,22 +481,19 @@ TIP: Wenn Sie bereits bei einem Azure-Konto angemeldet sind, verwendet die Konso
 
 . Wählen Sie auf der Seite *Virtual Machine Authentication* ein Azure-Abonnement, einen Standort, eine neue Ressourcengruppe oder eine vorhandene Ressourcengruppe aus und wählen Sie dann eine Authentifizierungsmethode für die virtuelle Maschine des Konsolen-Agenten aus, die Sie erstellen.
 +
-Die Authentifizierungsmethode für die virtuelle Maschine kann ein Kennwort oder ein öffentlicher SSH-Schlüssel sein.
++ Das Authentifizierungsverfahren für die virtuelle Maschine kann ein Passwort oder ein öffentlicher SSH-Schlüssel sein.
 
 +
-https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Erfahren Sie mehr über die Verbindung mit einer Linux-VM in Azure."^]
++ https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect?tabs=Linux["Erfahren Sie mehr über die Verbindung mit einer Linux-VM in Azure."^]
 
-. Geben Sie auf der Seite *Details* einen Namen für den Agenten ein, geben Sie Tags an und wählen Sie, ob die Konsole eine neue Rolle mit den erforderlichen Berechtigungen erstellen soll oder ob Sie eine vorhandene Rolle auswählen möchten, die Sie mitlink:reference-permissions-azure.html["die erforderlichen Berechtigungen"] .
+. Auf der *Details*-Seite geben Sie einen Namen für den Agenten ein, legen Sie Tags fest und wählen Sie aus, ob die Console eine neue Rolle mit den erforderlichen Berechtigungen erstellen soll oder ob Sie eine vorhandene Rolle auswählen möchten, die Sie mit link:reference-permissions-azure.html["die erforderlichen Berechtigungen"] eingerichtet haben.
 +
 Beachten Sie, dass Sie die mit dieser Rolle verknüpften Azure-Abonnements auswählen können.  Jedes von Ihnen ausgewählte Abonnement erteilt dem Konsolenagenten die Berechtigung, Ressourcen in diesem Abonnement zu verwalten (z. B. Cloud Volumes ONTAP).
 
 . Wählen Sie auf der Seite *Netzwerk* ein VNet und ein Subnetz aus, geben Sie an, ob eine öffentliche IP-Adresse aktiviert werden soll, und geben Sie optional eine Proxy-Konfiguration an.
-+
-** Wählen Sie auf der Seite *Sicherheitsgruppe* aus, ob Sie eine neue Sicherheitsgruppe erstellen oder eine vorhandene Sicherheitsgruppe auswählen möchten, die die erforderlichen eingehenden und ausgehenden Regeln zulässt.
+. Wählen Sie auf der Seite *Sicherheitsgruppe* aus, ob Sie eine neue Sicherheitsgruppe erstellen oder eine vorhandene Sicherheitsgruppe auswählen möchten, die die erforderlichen eingehenden und ausgehenden Regeln zulässt.
 +
 link:reference-ports-azure.html["Anzeigen von Sicherheitsgruppenregeln für Azure"] .
-
-
 
 . Überprüfen Sie Ihre Auswahl, um zu verifizieren, dass Ihre Einrichtung korrekt ist.
 +

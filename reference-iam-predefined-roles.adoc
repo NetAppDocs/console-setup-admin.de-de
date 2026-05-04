@@ -27,7 +27,7 @@ Plattformrollen gewähren Administratorberechtigungen für die NetApp Console , 
 | Plattformrolle | Aufgaben 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["Organisationsadministrator"] | Ermöglicht einem Benutzer uneingeschränkten Zugriff auf alle Projekte und Ordner innerhalb einer Organisation, das Hinzufügen von Mitgliedern zu Projekten oder Ordnern sowie das Ausführen beliebiger Aufgaben und die Verwendung beliebiger Datendienste, denen keine explizite Rolle zugeordnet ist.  Benutzer mit dieser Rolle verwalten Ihre Organisation, indem sie Ordner und Projekte erstellen, Rollen zuweisen, Benutzer hinzufügen und Systeme verwalten, wenn sie über die entsprechenden Anmeldeinformationen verfügen.  Dies ist die einzige Zugriffsrolle, die Konsolenagenten erstellen kann. 
+| link:reference-iam-platform-roles.html#organization-admin-roles["Organisationsadministrator"] | Gewährt einem Benutzer uneingeschränkten Zugriff auf alle Projekte und Ordner innerhalb einer Organisation. Kann Mitglieder zu jedem Projekt oder Ordner hinzufügen sowie alle Aufgaben ausführen und alle Datendienste nutzen, denen keine explizite Rolle zugeordnet ist. Benutzer mit dieser Rolle verwalten Ihre Organisation, indem sie Ordner und Projekte erstellen, Rollen zuweisen, Benutzer hinzufügen und Systeme verwalten, sofern sie über die entsprechenden Anmeldeinformationen verfügen. Dies ist die einzige Zugriffsrolle, die Console-Agenten erstellen kann. 
 
 
 | link:reference-iam-platform-roles.html#organization-admin-roles["Ordner- oder Projektadministrator"] | Ermöglicht einem Benutzer uneingeschränkten Zugriff auf zugewiesene Projekte und Ordner. Kann Mitglieder zu Ordnern oder Projekten hinzufügen, die sie verwalten, sowie beliebige Aufgaben ausführen und beliebige Datendienste oder Anwendungen auf Ressourcen innerhalb des ihnen zugewiesenen Ordners oder Projekts verwenden. Ordner- oder Projektadministratoren können keine Konsolenagenten erstellen. 
@@ -48,7 +48,7 @@ Plattformrollen gewähren Administratorberechtigungen für die NetApp Console , 
 | link:reference-iam-platform-roles.html#super-admin-roles["Super-Admin"] | Gibt dem Benutzer eine Teilmenge von Administratorrollen.  Diese Rolle ist für kleinere Organisationen gedacht, die die Konsolenverantwortlichkeiten möglicherweise nicht auf mehrere Benutzer verteilen müssen. 
 
 
-| link:reference-iam-platform-roles.html#super-admin-roles["Super Viewer"] | Gibt dem Benutzer eine Teilmenge der Viewer-Rollen.  Diese Rolle ist für kleinere Organisationen gedacht, die die Konsolenverantwortlichkeiten möglicherweise nicht auf mehrere Benutzer verteilen müssen. 
+| link:reference-iam-platform-roles.html#super-admin-roles["Super Viewer"] | Weist dem Benutzer eine Teilmenge der Betrachterrollen zu. Diese Rolle ist für kleinere Organisationen konzipiert, die die Konsolenverantwortung möglicherweise nicht auf mehrere Benutzer verteilen müssen. 
 |===
 
 
@@ -107,7 +107,7 @@ Nachfolgend finden Sie eine Liste der Rollen in der Kategorie Datendienste.  Jed
 | link:reference-iam-backup-rec-roles.html["Administrator für die Wiederherstellung von Backup und Wiederherstellung"] | Stellen Sie Workloads in Backup und Recovery wieder her. 
 
 
-| link:reference-iam-backup-rec-roles.html["Backup- und Wiederherstellungsklon-Administrator"] | Klonen Sie Anwendungen und Daten in der Sicherung und Wiederherstellung. 
+| link:reference-iam-backup-rec-roles.html["Backup- und Wiederherstellungsklon-Administrator"] | Anwendungen und Daten in Backup und Recovery klonen. 
 
 
 | link:reference-iam-backup-rec-roles.html["Backup- und Wiederherstellungs-Viewer"] | Informationen zur Sicherung und Wiederherstellung anzeigen. 

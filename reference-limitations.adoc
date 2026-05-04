@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-limitations.html 
-keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, BlueXP, Cloud Volumes ONTAP, days, running, Connectors should remain running, imdsv2, https tokens, agents should remain running, Console agent 
+keywords: limitations, active directory, ad, iscsi, key managers, ip address, govcloud, Cloud Volumes ONTAP, days, running,  imdsv2, https tokens, Console agent 
 summary: Bekannte Einschränkungen kennzeichnen Plattformen, Geräte oder Funktionen, die von dieser Produktversion nicht unterstützt werden oder nicht ordnungsgemäß mit ihr zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch. 
 ---
 = Bekannte Einschränkungen der NetApp Console
@@ -16,7 +16,7 @@ summary: Bekannte Einschränkungen kennzeichnen Plattformen, Geräte oder Funkti
 [role="lead"]
 Bekannte Einschränkungen kennzeichnen Plattformen, Geräte oder Funktionen, die von dieser Produktversion nicht unterstützt werden oder nicht ordnungsgemäß mit ihr zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch.
 
-Diese Einschränkungen gelten speziell für die Einrichtung der NetApp Console und die Administration: den Agenten, die Software-as-a-Service (SaaS)-Plattform und mehr.
+Diese Einschränkungen gelten speziell für die Einrichtung der NetApp Console und die Administration: den Agenten, die Software-as-a-Service (SaaS) Plattform und mehr.
 
 
 

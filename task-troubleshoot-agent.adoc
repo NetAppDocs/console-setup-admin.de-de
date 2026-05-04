@@ -48,7 +48,7 @@ Auf die NetApp Agent-Benutzeroberfläche kann nicht zugegriffen werden
 Diese Meldung wird angezeigt, wenn versucht wird, auf die IP-Adresse eines Agenten zuzugreifen.  Die Initialisierung des Agenten kann fehlschlagen, wenn er nicht über den richtigen Netzwerkzugriff verfügt oder instabil ist.
  a| 
 * Stellen Sie eine Verbindung zum Konsolenagenten her.
-* Überprüfen Sie, ob der Service Manager-Dienst
+* Stellen Sie sicher, dass der Service Manager-Dienst aktiv ist.
 * Stellen Sie sicher, dass der Agent über den erforderlichen Netzwerkzugriff verfügt.link:reference-networking-saas-console.html["Erfahren Sie mehr über erforderliche Endpunkte für den Netzwerkzugriff."]
 
 
@@ -57,7 +57,7 @@ Diese Meldung wird angezeigt, wenn versucht wird, auf die IP-Adresse eines Agent
  a| 
 Agenteneinstellungen konnten nicht geladen werden
  a| 
-Die Konsole zeigt diese Meldung an, wenn Sie versuchen, auf die Seite mit den Agenteneinstellungen zuzugreifen.
+Die Konsole zeigt diese Meldung an, wenn Sie versuchen, auf die Agenteneinstellungsseite zuzugreifen.
  a| 
 * Überprüfen Sie, ob der OCCM-Container ausgeführt wird und funktioniert.
 * Wenn das Problem weiterhin besteht, wenden Sie sich an den Support.
@@ -78,18 +78,18 @@ Diese Meldung wird angezeigt, wenn der Agent nicht auf Ihr Supportkonto zugreife
 
 == Überprüfen Sie den Status des Konsolenagenten
 
-Verwenden Sie einen der folgenden Befehle, um Ihren Konsolenagenten zu überprüfen.  Alle Dienste sollten den Status „Wird ausgeführt“ haben.  Wenn dies nicht der Fall ist, wenden Sie sich an den NetApp Support.
+Verwenden Sie einen der folgenden Befehle, um Ihren Console-Agenten zu überprüfen. Alle Dienste sollten den Status _Wird ausgeführt_ aufweisen. Falls dies nicht der Fall ist, wenden Sie sich an den NetApp Support.
 
 [NOTE]
 ====
 Ausführlichere Informationen zum Zugriff auf die Konsolen-Agent-Diagnose finden Sie in den folgenden Themen:
 
 * link:task-maintain-agents.html#connect-linux-host["Überprüfen Sie den Status des Konsolenagenten (für Linux-Hostbereitstellungen)."]
-* link:task-agent-vm-config.html#connect-vcenter-host["Überprüfen Sie den Status des Konsolenagenten (für VCenter-Bereitstellungen)."]
+* link:task-agent-vm-config.html#connect-vcenter-host["Überprüfen Sie den Status des Konsolenagenten (für vCenter-Bereitstellungen)"]
 
 
 ====
-Docker (für Ubuntu- und VCenter-Bereitstellungen)::
+Docker (für Ubuntu und vCenter-Bereitstellungen)::
 +
 --
 [source, cli]
@@ -122,15 +122,13 @@ Die Konsole zeigt die Version oben auf der Seite an.
 
 
 
-== Überprüfen Sie, ob der Konsolenagent die Anforderungen erfüllt.
+== Prüfen Sie, ob der Konsolenagent die Anforderungen erfüllt.
 
 Konsolenagenten benötigen Zugriff auf bestimmte Netzwerkendpunkte, müssen mehrere Ports geöffnet haben und bestimmte Hardwareanforderungen erfüllen. Sie können überprüfen, ob Ihr Konsolenagent diese Anforderungen erfüllt, entweder direkt in der Console oder mithilfe der Agent Maintenance Console.
 
-link:reference-networking-saas-console.html["Erfahren Sie mehr über die erforderlichen Netzwerkzugriffspunkte."]Link:
+link:reference-networking-saas-console.html["Erfahren Sie mehr über die erforderlichen Netzwerkzugriffspunkte."]
 
 Während der Installation prüft NetApp, ob auf dem Agent-Host mindestens 80 % des gesamten Festplattenspeichers verfügbar sind, einschließlich 48 GB in `/opt` und 32 GB in `/var` (insgesamt 80 GB). Nach der Installation müssen mindestens 20 % des gesamten Festplattenspeichers verfügbar bleiben, einschließlich 12 GB in `/opt` und 8 GB in `/var` (insgesamt 20 GB).
-
-link:reference-networking-saas-console.html["Erfahren Sie mehr über die erforderlichen Netzwerkzugriffspunkte."]Link:
 
 Sie können Validierungsprüfungen auch über die Agentenwartungskonsole durchführen. link:reference-agent-maint-console-config-checker.html["Erfahren Sie mehr über die Verwendung des Befehls config-checker validate."]
 
@@ -210,7 +208,7 @@ systemctl restart netapp-service-manager.service
 
 == Arbeiten Sie mit dem NetApp Support
 
-Wenn Sie die Probleme mit Ihrem Konsolenagenten nicht lösen konnten, sollten Sie sich an den NetApp -Support wenden.  Der NetApp Support fragt möglicherweise nach der Konsolen-Agent-ID oder fordert Sie auf, ihm die Konsolen-Agent-Protokolle zu senden, falls diese noch nicht vorliegen.
+Falls Sie die Probleme mit Ihrem Console-Agenten nicht beheben konnten, wenden Sie sich bitte an NetApp Support. NetApp Support benötigt möglicherweise die Console-Agenten-ID oder bittet Sie, die Console-Agentenprotokolle zuzusenden, falls diese noch nicht vorliegen.
 
 
 
@@ -236,7 +234,7 @@ image:screenshot-system-id.png["Ein Screenshot, der die System-ID zeigt, die im 
 
 === Laden Sie eine AutoSupport -Nachricht herunter oder senden Sie sie
 
-Wenn bei Ihnen Probleme auftreten, werden Sie von NetApp möglicherweise aufgefordert, zur Fehlerbehebung eine AutoSupport -Nachricht an den NetApp -Support zu senden.
+Falls Sie Probleme haben, könnte NetApp Sie bitten, eine AutoSupport-Nachricht an den NetApp Support zu senden, um das Problem zu beheben.
 
 
 NOTE: Aufgrund des Lastenausgleichs benötigt die NetApp Console bis zu fünf Stunden, um AutoSupport -Nachrichten zu senden.  Laden Sie für dringende Mitteilungen die Datei herunter und senden Sie sie manuell.
@@ -260,7 +258,7 @@ Der Konsolenagent lädt automatisch Softwareupdates für Cloud Volumes ONTAP her
 .Schritt
 . Senden Sie eine PUT-Anfrage an /occm/config mit dem folgenden JSON als Text:
 +
-[source]
+[source, json]
 ----
 {
   "maxDownloadSessions": 32

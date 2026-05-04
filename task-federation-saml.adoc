@@ -14,10 +14,10 @@ summary: 'Verbinden Sie sich mit Ihrem SAML 2.0-IdP-Anbieter, um Single Sign-On 
 
 
 [role="lead"]
-Verbinden Sie sich mit Ihrem SAML 2.0-IdP-Anbieter, um Single Sign-On (SSO) für die NEtApp-Konsole zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.
+Verbinden Sie sich mit Ihrem SAML 2.0-IdP-Anbieter, um Single Sign-On (SSO) für die NetApp Console zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.
 
 .Erforderliche Rolle
-Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+Die Administratorrolle der Föderation ist erforderlich, um Föderationen zu erstellen und zu verwalten. Mit dem Föderations-Viewer kann die Föderationsseite angezeigt werden. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
 
 
 NOTE: Sie können eine Föderation mit Ihrem Unternehmens-IdP oder mit der NetApp -Support-Site herstellen.  Sie können nicht mit beiden eine Föderation bilden.

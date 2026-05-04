@@ -90,7 +90,7 @@ Sie sollten das HTTPS-Zertifikat des Agenten vor Ablauf erneuern, um einen siche
 . Wählen Sie *Administration > Agenten*.
 . Wählen Sie auf der Seite *Übersicht* das Aktionsmenü für einen Konsolenagenten und wählen Sie *HTTPS-Setup*.
 +
-Es werden Details zum Zertifikat angezeigt, einschließlich des Ablaufdatums.
+Details zur Zertifikatsanzeige, einschließlich des Ablaufdatums.
 
 . Wählen Sie *Zertifikat ändern* und folgen Sie den Schritten zum Generieren einer CSR oder zum Installieren Ihres eigenen CA-signierten Zertifikats.
 

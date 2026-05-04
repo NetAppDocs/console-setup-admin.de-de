@@ -19,7 +19,7 @@ Bauen Sie Partnerschaften auf, um sichere, verwaltete Verbindungen zwischen Ihre
 Durch Partnerschaften können Sie NetApp -Ressourcen über Grenzen hinweg sicher verwalten, indem Sie rollenbasierte Beziehungen in der Konsole nutzen.  Die initiierende Organisation gewährt Zugriff auf ihre Ressourcen, während die akzeptierende Organisation die Benutzer oder Dienstkonten bereitstellt, denen Zugriff gewährt werden soll.  Partnerschaften werden über einen Self-Service-Workflow eingerichtet, der der initiierenden Organisation die volle Kontrolle darüber gibt, welche Ressourcen gemeinsam genutzt und welche Rollen zugewiesen werden. Außerdem hat sie die Möglichkeit, den Partnerzugriff nach Bedarf zu integrieren, zu verwalten oder zu widerrufen.
 
 .Erforderliche Rollen
-Zum Erstellen und Verwalten von Partnerschaften ist die Rolle *Partnerschaftsadministrator* erforderlich.  Der *Partnerschaftsbetrachter* kann die Seite „Partnerschaften“ anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+Die Rolle *Partnerschaftsadministrator* ist erforderlich, um Partnerschaften zu erstellen und zu verwalten. Der *Partnerschaftsbetrachter* kann die Seite „Partnerschaften“ anzeigen. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
 
 
 
@@ -51,7 +51,7 @@ Eine Anfrage für eine Organisationspartnerschaft muss von der empfangenden Orga
 . Wählen Sie die Registerkarte *Partnerschaft erhalten*.
 . Navigieren Sie zu der empfangenen Partnerschaft, die Sie genehmigen möchten, und wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Genehmigen*.
 . Überprüfen Sie die Details der Partnerschaft, einschließlich des Namens und der Organisations-ID der Organisation, die die Partnerschaft angefordert hat, und wählen Sie *Weiter* aus.
-. Fügen Sie optional Organisationsmitglieder zur Partnerschaft hinzu und wählen Sie *Übernehmen*.
+. Optional können Sie Organisationsmitglieder zur Partnerschaft hinzufügen und *Anwenden* auswählen.
 +
 Sie können jederzeit weitere Mitglieder über die Seite *Partnerschaft* hinzufügen.
 
@@ -62,7 +62,7 @@ NOTE: Alle von Ihnen hinzugefügten Mitglieder werden in der Organisation des Pa
 
 
 .Ergebnis
-Die von Ihnen genehmigte Partnerschaft weist jetzt den Status *Etabliert* auf.  Benutzer mit der Rolle *Partnerschaftsadministrator* oder *Partnerschaftsbetrachter* in einer der beiden Organisationen können die Partnerschaft anzeigen.
+Die von Ihnen genehmigte Partnerschaft hat nun den Status *Etabliert*. Benutzer mit den Rollen *Partnerschaftsadministrator* oder *Partnerschaftsbetrachter* in einer der beiden Organisationen können die Partnerschaft einsehen.
 
 
 
@@ -75,8 +75,8 @@ Partnerschaftsadministrator, Partnerschaftsbetrachter.link:reference-iam-predefi
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
-. Wählen Sie die *Partnerschaften* aus.
-. Wählen Sie entweder die Registerkarte *Initiierte Partnerschaften* oder *Erhaltene Partnerschaften*.
+. Wählen Sie die Registerkarte *Partnerschaften*.
+. Wählen Sie entweder die Registerkarte *Initiierte Partnerschaften* oder die Registerkarte *Empfangene Partnerschaften*.
 . Sehen Sie sich die jeweilige Tabelle an, in der Partnerschaften und deren Status angezeigt werden.
 
 
@@ -91,8 +91,8 @@ Partnerschaftsverwaltung.link:reference-iam-predefined-roles.html["Erfahren Sie 
 
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
-. Wählen Sie die *Partnerschaften* aus.
-. Wählen Sie entweder die Registerkarte *Initiierte Partnerschaften* aus.
+. Wählen Sie die Registerkarte *Partnerschaften*.
+. Wählen Sie die Registerkarte *Initiierte Partnerschaften*.
 . Sehen Sie sich die jeweilige Tabelle an, in der Partnerschaften und deren Status angezeigt werden.
 . Navigieren Sie zu der initiierten Partnerschaft, die Sie deaktivieren möchten, und wählen Sieimage:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Deaktivieren*.
 

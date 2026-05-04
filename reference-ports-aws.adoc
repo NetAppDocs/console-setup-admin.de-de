@@ -66,7 +66,7 @@ Die vordefinierte Sicherheitsgruppe für den Agenten umfasst die folgenden ausge
 
 === Erweiterte Ausgangsregeln
 
-Wenn Sie strenge Regeln für den ausgehenden Verkehr benötigen, können Sie die folgenden Informationen verwenden, um nur die Ports zu öffnen, die für die ausgehende Kommunikation durch den Agenten benötigt werden
+Wenn Sie strenge Regeln für den ausgehenden Datenverkehr benötigen, können Sie die folgenden Informationen verwenden, um nur die Ports zu öffnen, die für die ausgehende Kommunikation durch den Agenten erforderlich sind.
 
 
 NOTE: Die Quell-IP-Adresse ist der Agent-Host.
@@ -85,5 +85,5 @@ NOTE: Die Quell-IP-Adresse ist der Agent-Host.
 | TCP | 8080 | Datenklassifizierung | Testen der Datenklassifizierungsinstanz während der Bereitstellung 
 
 
-| DNS | UDP | 53 | DNS | Wird von der Konsole für die DNS-Auflösung verwendet 
+| DNS | UDP | 53 | DNS | Wird von der Konsole zur DNS-Auflösung verwendet 
 |===

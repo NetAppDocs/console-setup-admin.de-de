@@ -28,7 +28,7 @@ Ein Marktplatz-Abonnement ermöglicht die Abrechnung der folgenden NetApp -Daten
 Die NetApp Data Classification wird über Ihr Abonnement aktiviert, für die Verwendung der Klassifizierung fallen jedoch keine Gebühren an.
 
 .Bevor Sie beginnen
-Sie müssen bereits einen Konsolenagenten bereitgestellt haben, um Datendienste abonnieren zu können.  Sie müssen den mit einem Konsolenagenten verbundenen Cloud-Anmeldeinformationen ein Marktplatzabonnement zuordnen.
+Sie müssen bereits einen Console-Agenten bereitgestellt haben, um Datendienste zu abonnieren. Sie müssen ein Marketplace-Abonnement mit den Cloud-Anmeldeinformationen verknüpfen, die mit einem Console-Agenten verbunden sind.
 
 [role="tabbed-block"]
 ====

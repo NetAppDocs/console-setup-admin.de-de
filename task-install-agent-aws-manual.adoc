@@ -498,7 +498,7 @@ Befolgen Sie die Schritte, um Berechtigungen für die Konsole vorzubereiten.
 .. Wählen Sie *JSON* und kopieren und fügen Sie den Inhalt deslink:reference-permissions-aws.html["IAM-Richtlinie für den Konsolenagenten"] .
 .. Führen Sie die restlichen Schritte aus, um die Richtlinie zu erstellen.
 +
-Abhängig von den NetApp -Datendiensten, die Sie verwenden möchten, müssen Sie möglicherweise eine zweite Richtlinie erstellen.  Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Aufgrund einer maximalen Zeichengrößenbeschränkung für verwaltete Richtlinien in AWS sind zwei Richtlinien erforderlich. link:reference-permissions-aws.html["Weitere Informationen zu IAM-Richtlinien für den Konsolenagenten"] .
+Je nach den NetApp Datendiensten, die Sie verwenden möchten, müssen Sie möglicherweise eine zweite Richtlinie erstellen. In Standardregionen werden die Berechtigungen auf zwei Richtlinien verteilt. Zwei Richtlinien sind aufgrund einer maximalen Zeichenlängenbeschränkung für verwaltete Richtlinien in AWS erforderlich. link:reference-permissions-aws.html["Weitere Informationen zu IAM-Richtlinien für den Konsolenagenten"].
 
 
 
@@ -695,7 +695,7 @@ Sie sollten den eingeschränkten Modus deaktiviert lassen, da diese Schritte die
 
 
 
-Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenagenten erstellt haben, wird auf der Seite *Systeme* automatisch ein Amazon S3-Speichersystem angezeigt. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp ConsoleP verwalten"^]
+Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Console-Agenten erstellt haben, wird automatisch ein Amazon S3-Speichersystem auf der Seite *Systeme* angezeigt. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp Console verwalten"^]
 
 
 

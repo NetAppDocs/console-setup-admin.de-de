@@ -297,7 +297,7 @@ Nachdem Sie ein Azure-Konto mit den erforderlichen Berechtigungen bereitgestellt
 
 
 .Ergebnis
-Sie können auf der Seite „Details und Anmeldeinformationen“ zu einem anderen Satz von Anmeldeinformationen wechseln. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["beim Hinzufügen eines Systems zur Konsole"^]
+Auf der Seite „Details und Anmeldeinformationen“ können Sie zu einem anderen Satz von Anmeldeinformationen wechseln https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html["beim Hinzufügen eines Systems zur Konsole"^].
 
 image:screenshot_accounts_switch_azure.gif["Ein Screenshot, der die Auswahl zwischen Anmeldeinformationen zeigt, nachdem Sie auf der Seite „Details und Anmeldeinformationen“ die Option „Anmeldeinformationen bearbeiten“ ausgewählt haben."]
 

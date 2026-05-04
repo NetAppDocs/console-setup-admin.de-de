@@ -18,18 +18,18 @@ Beginnen Sie mit der NetApp Console (SaaS), indem Sie die Netzwerkkonfiguration 
 
 Sie greifen auf eine webbasierte Konsole zu, die als Software-as-a-Service (SaaS)-Produkt von NetApp gehostet wird. Mit der Konsole können Sie Ihre Hybrid-Cloud-Speicherumgebung verwalten und NetApp Datendienste nutzen.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:reference-networking-saas-console.html["Vorbereiten des Netzwerks für die Verwendung der NetApp Konsole"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Eins"] link:reference-networking-saas-console.html["Bereiten Sie das Netzwerk für die Verwendung der NetApp Console vor"]
 [role="quick-margin-para"]
-Stellen Sie sicher, dass die Computer, die auf die NetApp Konsole zugreifen, über Netzwerkzugriff auf die erforderlichen Endpunkte verfügen.
+Stellen Sie sicher, dass die Computer, die auf die NetApp Console zugreifen, Netzwerkzugriff auf die erforderlichen Endpunkte haben.
 
-link:reference-networking-saas-console.html["Erfahren Sie, wie Sie die Netzwerkverbindung für die NetApp -Konsole vorbereiten."]
+link:reference-networking-saas-console.html["Erfahren Sie, wie Sie das Netzwerk für die NetApp Console vorbereiten."]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"] link:task-sign-up-saas.html["Registrieren und eine Organisation erstellen"]
 [role="quick-margin-para"]
-Gehe zu https://console.netapp.com["NetApp Konsole"^] und melde dich an. Wenn Sie aufgefordert werden, eine Organisation zu erstellen, und Sie der Meinung sind, dass für Ihr Unternehmen bereits eine Organisation existiert, schließen Sie das Dialogfeld und informieren Sie Ihren Organisationsadministrator. Falls es in Ihrem Unternehmen derzeit keinen Organisationsadministrator gibt, können Sie diese Rolle beanspruchen. link:task-user-settings.html#contact-admin["Erfahren Sie, wie Sie einen Organisationsadministrator kontaktieren können."^]
+Gehen Sie zu  https://console.netapp.com["NetApp Console"^] und registrieren Sie sich. Falls Sie aufgefordert werden, eine Organisation zu erstellen, und Sie glauben, dass bereits eine Organisation für Ihr Unternehmen existiert, schließen Sie das Dialogfeld und informieren Sie Ihren Organisationsadministrator. Falls es derzeit keinen Organisationsadministrator für Ihr Unternehmen gibt, können Sie diese Rolle übernehmen. link:task-user-settings.html#contact-admin["Erfahren Sie, wie Sie einen Organisationsadministrator kontaktieren können."^]
 
 [role="quick-margin-para"]
-An diesem Punkt sind Sie angemeldet und können den NetApp Assistenten verwenden, um mit der Konfiguration der Konsole zu beginnen. Um den vollen Funktionsumfang zu aktivieren, müssen Sie zunächst Ihr NetApp Supportkonto und einen Console-Agenten verknüpfen.
+Sie sind nun angemeldet und können den NetApp-Assistenten verwenden, um die Konsole zu konfigurieren. Verbinden Sie zunächst Ihr NetApp Support Site-Konto und einen Konsolenagenten, um den vollen Funktionsumfang zu aktivieren.
 
 Wenn Sie sich gegen die Verwendung des NetApp Assistenten oder die Installation eines Konsolenagenten entscheiden, können Sie mit der Speicherverwaltung und der Nutzung von Diensten wie Digital Advisor, Amazon FSx for ONTAP, Azure NetApp Files und anderen beginnen. link:concept-agents.html["Erfahren Sie, was Sie ohne Konsolenagent tun können"]Die
 

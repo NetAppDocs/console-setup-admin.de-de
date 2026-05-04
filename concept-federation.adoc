@@ -78,16 +78,16 @@ Um eine Föderation mit einer anderen Domäne als Ihrer E-Mail-Domäne herzustel
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Zwei"]Konfigurieren Sie Ihren IdP so, dass er NetApp als Serviceprovider vertraut
 [role="quick-margin-para"]
-Konfigurieren Sie Ihren Identitätsanbieter so, dass er NetApp vertraut, indem Sie eine neue Anwendung erstellen und Details wie die ACS-URL, die Entitäts-ID oder andere Anmeldeinformationen angeben. Die Informationen zum Dienstanbieter variieren je nach Identitätsanbieter. Weitere Informationen finden Sie in der Dokumentation Ihres spezifischen Identitätsanbieters. Sie müssen mit Ihrem IdP-Administrator zusammenarbeiten, um diesen Schritt abzuschließen.
+Konfigurieren Sie Ihren Identitätsanbieter so, dass er NetApp vertraut, indem Sie eine neue Anwendung erstellen und Details wie die ACS-URL, die Entity-ID oder andere Anmeldeinformationen angeben. Die Informationen zum Dienstanbieter variieren je nach Identitätsanbieter. Konsultieren Sie daher die Dokumentation Ihres spezifischen Identitätsanbieters für Details. Sie müssen mit Ihrem IdP-Administrator zusammenarbeiten, um diesen Schritt abzuschließen.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Drei"]Erstellen Sie die Verbundverbindung in der Konsole
 [role="quick-margin-para"]
 Geben Sie die SAML-Metadaten-URL oder -Datei von Ihrem Identitätsanbieter an, um die Verbindung herzustellen.  Diese Informationen werden verwendet, um die Vertrauensbeziehung zwischen der Konsole und Ihrem Identitätsanbieter herzustellen. Die von Ihnen bereitgestellten Informationen hängen von dem von Ihnen verwendeten IdP ab. Wenn Sie beispielsweise die Microsoft Entra ID verwenden, müssen Sie die Client-ID, das Geheimnis und die Domäne angeben.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Drei"]Testen Sie Ihre Föderation in der Konsole
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Vier"]Testen Sie Ihre Föderation in der Konsole
 [role="quick-margin-para"]
 Testen Sie Ihre Verbundverbindung, bevor Sie sie aktivieren. Verwenden Sie die Testoption auf der Seite „Föderation“ in der Konsole, um zu überprüfen, ob sich Ihr Testbenutzer erfolgreich authentifizieren kann. Wenn der Test erfolgreich ist, können Sie die Verbindung aktivieren.
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Drei"]Aktivieren Sie Ihre Verbindung in der Konsole
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Fünf"]Aktivieren Sie Ihre Verbindung in der Konsole
 [role="quick-margin-para"]
 Nachdem Sie die Verbindung aktiviert haben, können sich Benutzer mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.

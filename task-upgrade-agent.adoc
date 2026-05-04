@@ -20,7 +20,7 @@ Der Konsolenagent wird automatisch aktualisiert, sobald eine ausgehende Verbindu
 
 == Aktualisieren Sie den Konsolenagenten
 
-Der Konsolenagent muss während des Upgradevorgangs neu gestartet werden, sodass die NetApp Console während des Upgrades nicht verfügbar ist.
+Der Konsolenagent muss während des Upgrade-Vorgangs neu gestartet werden, daher wird die NetApp Console während des Upgrades nicht verfügbar sein.
 
 .Schritte
 . Laden Sie die Console-Agent-Software von der https://mysupport.netapp.com/site/products/all/details/cloud-manager/downloads-tab["NetApp Support Site"^] .

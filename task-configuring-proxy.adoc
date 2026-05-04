@@ -33,7 +33,7 @@ Wenn der Konsolenagent selbst keine ausgehende Internetverbindung hat, können C
 
 
 
-IMPORTANT: Nachdem Sie einen Proxy konfiguriert haben, können Sie den Proxy-Typ nicht mehr ändern.  Wenn Sie den Proxy-Typ ändern müssen, entfernen Sie den Konsolen-Agenten und fügen einen neuen Agenten mit dem neuen Proxy-Typ hinzu.
+IMPORTANT: Sobald Sie einen Proxy konfiguriert haben, können Sie den Proxy-Typ nicht mehr ändern. Wenn Sie den Proxy-Typ ändern müssen, müssen Sie den Console-Agent entfernen und einen neuen Agenten mit dem neuen Proxy-Typ hinzufügen.
 
 
 
@@ -115,7 +115,7 @@ Stellen Sie sicher, dass die Zertifikatsdatei im PEM-Format vorliegt und sich im
 Sie können den vorhandenen transparenten Proxy-Server eines Console-Agenten aktualisieren, indem Sie die folgende Funktion verwenden: `proxy update` Befehl oder entfernen Sie den transparenten Proxy-Server mithilfe des Befehls `proxy remove` Befehl.  Weitere Informationen finden Sie in der Dokumentation zulink:reference-agent-maint-console-proxy.html["Agenten-Wartungskonsole"] Die
 
 
-IMPORTANT: Nachdem Sie einen Proxy konfiguriert haben, können Sie den Proxy-Typ nicht mehr ändern.  Wenn Sie den Proxy-Typ ändern müssen, entfernen Sie den Konsolen-Agenten und fügen einen neuen Agenten mit dem neuen Proxy-Typ hinzu.
+IMPORTANT: Sobald Sie einen Proxy konfiguriert haben, können Sie den Proxy-Typ nicht mehr ändern. Wenn Sie den Proxy-Typ ändern müssen, müssen Sie den Console-Agent entfernen und einen neuen Agenten mit dem neuen Proxy-Typ hinzufügen.
 
 
 
@@ -127,7 +127,7 @@ Wenn sich die Proxy-Konfiguration für Ihr Netzwerk ändert, verliert Ihr Agent 
 
 == Aktivieren Sie den direkten API-Verkehr
 
-Wenn Sie einen Console-Agenten für die Verwendung eines Proxy-Servers konfiguriert haben, können Sie den direkten API-Datenverkehr auf dem Console-Agenten aktivieren, um API-Aufrufe direkt an Cloud-Anbieterdienste zu senden, ohne den Proxy zu durchlaufen. Agenten, die in AWS, Azure oder Google Cloud ausgeführt werden, unterstützen diese Option.
+Wenn Sie einen Console-Agenten für die Verwendung eines Proxyservers konfiguriert haben, können Sie den direkten API-Datenverkehr auf dem Console-Agenten aktivieren, um API-Aufrufe direkt an Cloud-Anbieterdienste zu senden, ohne den Proxy zu verwenden. Agenten, die in AWS, Azure oder Google Cloud ausgeführt werden, unterstützen diese Option.
 
 Wenn Sie Azure Private Links mit Cloud Volumes ONTAP deaktivieren und Service-Endpunkte verwenden, aktivieren Sie den direkten API-Verkehr.  Andernfalls wird der Datenverkehr nicht richtig weitergeleitet.
 

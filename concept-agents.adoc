@@ -305,7 +305,7 @@ Um Google Cloud-Ressourcen zu verwalten, müssen Sie Ihren Agenten in Google Clo
 
 Ihr Console-Bereitstellungsmodus, Ihre Speicherumgebung und Ihre Anforderungen an die Datenhoheit bestimmen, wo Sie Agenten bereitstellen. Stellen Sie mehrere Agenten in verschiedenen Umgebungen bereit, um organisatorische Trennung oder geschäftliche Anforderungen zu erfüllen.
 
-Sie können Agenten direkt über die Console, über Ihren Cloud-Marktplatz oder manuell in VCenter oder lokal bereitstellen. link:concept-agent-install-options.html["Vergleichen Sie die Bereitstellungsmethoden, um die richtige für Ihre Umgebung auszuwählen"].
+Sie können Agenten direkt über die Konsole, über Ihren Cloud-Marktplatz oder manuell in vCenter oder in Ihren eigenen Räumlichkeiten bereitstellen. link:concept-agent-install-options.html["Vergleichen Sie die Bereitstellungsmethoden, um die richtige für Ihre Umgebung auszuwählen"].
 
 
 
@@ -313,7 +313,7 @@ Sie können Agenten direkt über die Console, über Ihren Cloud-Marktplatz oder 
 
 Setzen Sie Agenten in Ihrer Cloud oder lokal ein, um die Verbindung zur Cloud-gehosteten Console SaaS-Anwendung herzustellen. Agenten ermöglichen erweiterte Funktionen, während die Console-UI weiterhin von überall aus zugänglich bleibt.
 
-Sie können Agenten direkt von der Console installieren, wenn Sie die SaaS-Anwendung (Standardmodus) verwenden. Sie können in AWS, Azure oder Google Cloud installieren oder manuell vor Ort auf Ihrem eigenen Linux-Host oder in Ihrer VCenter-Umgebung.
+Bei Verwendung der SaaS-Anwendung (Standardmodus) können Sie Agenten direkt über die Console installieren. Sie können in AWS, Azure oder Google Cloud installieren oder manuell vor Ort auf Ihrem eigenen Linux-Host oder in Ihrer vCenter-Umgebung.
 
 
 

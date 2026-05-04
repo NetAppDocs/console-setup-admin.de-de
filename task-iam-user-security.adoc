@@ -17,7 +17,7 @@ summary: Verwalten Sie die Mitglieder Ihrer Organisation, um Berechtigungen auf 
 Sichern Sie den Benutzerzugriff auf Ihre NetApp Console -Organisation durch die Verwaltung der Sicherheitseinstellungen der Mitglieder. Sie können Benutzerpasswörter zurücksetzen, die Multi-Faktor-Authentifizierung (MFA) verwalten und die Anmeldeinformationen für Dienstkonten neu erstellen.
 
 .Erforderliche Zugriffsrollen
-Super-Admin, Organisations-Admin oder Ordner- bzw. Projekt-Admin (für die von ihnen verwalteten Ordner und Projekte). Link:reference-iam-predefined-roles.html[Erfahren Sie mehr über Zugriffsrollen].
+Super-Admin, Organisations-Admin oder Ordner- bzw. Projekt-Admin (für die von ihnen verwalteten Ordner und Projekte). link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"]Die
 
 
 
@@ -60,7 +60,7 @@ In der Tabelle *Mitglieder* sind die Mitglieder Ihrer Organisation aufgelistet.
 
 == Erstellen Sie die Anmeldeinformationen für ein Dienstkonto neu
 
-Sie können neue Zugangsdaten für einen Dienst erstellen, falls Sie diese verlieren oder aktualisieren müssen.
+Sie können neue Zugangsdaten für ein Dienstkonto erstellen, falls Sie diese verlieren oder aktualisieren müssen.
 
 Durch das Erstellen neuer Anmeldeinformationen werden die alten gelöscht. Die alten Zugangsdaten können nicht verwendet werden.
 

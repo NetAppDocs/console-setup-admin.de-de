@@ -57,7 +57,7 @@ system configuration backup settings modify -destination <target-location>
 
 == Bearbeiten der URIs eines Agenten
 
-Die URI eines Konsolenagenten wird aktualisiert, wenn sich Ihre Netzwerkanforderungen ändern. Dies gewährleistet eine unterbrechungsfreie, sichere und konforme Verwaltung Ihrer Speicherinfrastruktur.
+Aktualisieren Sie die URI eines Console-Agenten, wenn sich Ihre Netzwerkanforderungen ändern. Dies gewährleistet eine unterbrechungsfreie, sichere und konforme Verwaltung Ihrer Speicherinfrastruktur.
 
 .Schritte
 . Wählen Sie *Administration > Agenten*.

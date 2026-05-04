@@ -93,8 +93,6 @@ Sie können Wiederherstellungscodes nur einmal verwenden.  Wenn Sie Ihr Konto ve
 
 == Löschen Sie Ihre MFA-Konfiguration
 
-Wenn Sie fertig sind, melden Sie sich entweder von der Konsole ab oder bewegen Sie den Schieberegler zurück, um in den Nur-Lese-Modus zurückzukehren. Das System entfernt Ihre erhöhten Berechtigungen, sobald Ihre Sitzung abläuft.
-
 
 NOTE: Wenn Sie nicht auf Ihre Authentifizierungs-App oder Ihren Wiederherstellungscode zugreifen können, müssen Sie sich an Ihren Organisationsadministrator wenden, um Ihre MFA-Konfiguration zurückzusetzen.
 

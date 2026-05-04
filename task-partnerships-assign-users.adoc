@@ -17,15 +17,15 @@ summary: Sie können Benutzer zu einer Partnerschaft hinzufügen, indem Sie sie 
 Sie können Benutzer zu einer Partnerschaft hinzufügen, indem Sie sie der Partnerorganisation hinzufügen.  Nachdem Sie Benutzer hinzugefügt haben, ist die Partnerorganisation dafür verantwortlich, ihnen Rollen für bestimmte Ressourcen in ihrer Organisation zuzuweisen.
 
 .Erforderliche Rollen
-Zum Erstellen und Verwalten von Partnerschaften ist die Rolle *Partnerschaftsadministrator* erforderlich.  Der *Partnerschaftsbetrachter* kann die Seite „Partnerschaften“ anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+Die Rolle *Partnerschaftsadministrator* ist erforderlich, um Partnerschaften zu erstellen und zu verwalten. Der *Partnerschaftsbetrachter* kann die Seite „Partnerschaften“ anzeigen. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
 
-Sie können Benutzer jederzeit aus einer Partnerschaft entfernen.  Durch das Entfernen eines Benutzers aus einer Partnerschaft wird dessen Zugriff auf alle Ressourcen in der Partnerorganisation sofort widerrufen.
+Sie können Benutzer jederzeit aus einer Partnerschaft entfernen. Durch das Entfernen eines Benutzers aus einer Partnerschaft wird dessen Zugriff auf alle Ressourcen der Partnerorganisation sofort widerrufen.
 
 
 
 == Mitglieder zu einer Partnerschaft hinzufügen
 
-Wenn Sie einer Partnerschaft Mitglieder hinzufügen, muss der *Partnerschaftsadministrator* der Partnerorganisation ihnen Rollen für bestimmte Ressourcen in seiner Organisation zuweisen, bevor sie auf diese Ressourcen zugreifen können.
+Wenn Sie Mitglieder zu einer Partnerschaft hinzufügen, muss der *Partnership admin* der Partnerorganisation ihnen Rollen für bestimmte Ressourcen in ihrer Organisation zuweisen, bevor sie auf diese Ressourcen zugreifen können.
 
 Nachdem Sie Mitglieder zu einer Partnerschaft hinzugefügt haben, werden die Mitglieder als Mitglieder in der Partnerorganisation angezeigt, wo der Partner sie Ressourcen zuweisen kann.
 
@@ -33,15 +33,15 @@ Nachdem Sie Mitglieder zu einer Partnerschaft hinzugefügt haben, werden die Mit
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Partnerschaften* aus.
 . Wählen Sie die Registerkarte *Partnerschaft erhalten*.
-. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben der bestehenden Partnerschaft, der Sie Mitglieder hinzufügen möchten, und wählen Sie *Mitglieder hinzufügen*.
-. Wählen Sie ein oder mehrere Mitglieder aus, die Sie der Partnerschaft hinzufügen möchten, und wählen Sie *Hinzufügen*.
+. Wählen Sie das Aktionsmenü image:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben der bestehenden Partnerschaft, zu der Sie Mitglieder hinzufügen möchten, und wählen Sie *Mitglieder hinzufügen*.
+. Wählen Sie ein oder mehrere Mitglieder aus, die Sie der Partnerschaft hinzufügen möchten, und wählen Sie *Hinzufügen* aus.
 
 
 
 
 == Mitglieder aus einer Partnerschaft entfernen
 
-Sie können Mitglieder jederzeit aus einer Partnerschaft entfernen.  Durch das Entfernen eines Benutzers aus einer Partnerschaft wird dessen Zugriff auf alle Ressourcen in der Partnerorganisation sofort widerrufen.
+Sie können Mitglieder jederzeit aus einer Partnerschaft entfernen. Durch das Entfernen eines Benutzers aus einer Partnerschaft wird dessen Zugriff auf alle Ressourcen der Partnerorganisation sofort widerrufen.
 
 Wenn Sie die Rolle eines Mitglieds oder die Ressourcen, auf die es zugreifen kann, anpassen möchten, muss der Partnerschaftsadministrator der Partnerorganisation diese Änderungen vornehmen.
 
@@ -49,7 +49,7 @@ Wenn Sie die Rolle eines Mitglieds oder die Ressourcen, auf die es zugreifen kan
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Partnerschaften* aus.
 . Wählen Sie die Registerkarte *Partnerschaft erhalten*.
-. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben dem Mitglied, das Sie entfernen möchten, und wählen Sie *Zuordnung entfernen*.
+. Wählen Sie das Aktionsmenü image:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben dem Mitglied, das Sie entfernen möchten, und wählen Sie *Zuordnung entfernen*.
 . Bestätigen Sie die Aktion, indem Sie im Dialogfeld *Entfernen* auswählen.
 
 

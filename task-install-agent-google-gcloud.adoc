@@ -19,7 +19,7 @@ Um einen Console-Agenten in Google Cloud mithilfe von Google Cloud bereitzustell
 Durch die Bereitstellung eines Agenten in Google Cloud wird eine VM-Instanz gestartet, auf der Linux und die Console-Agent-Software in einer VPC Ihrer Wahl ausgeführt werden.
 
 .Bevor Sie beginnen
-* Du solltest einen link:concept-agents.html["Erfahren Sie mehr über Konsolenagenten"] haben.
+* link:concept-agents.html["Erfahren Sie mehr über Konsolenagenten"].
 * Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 
@@ -147,7 +147,7 @@ Implementieren Sie diese Netzwerkanforderung, nachdem Sie den Konsolenagenten er
 Richten Sie Berechtigungen für den Google Cloud-Benutzer ein, um die Konsolen-Agent-VM von Google Cloud bereitzustellen.
 
 .Schritte
-. Erstellen Sie eine benutzerdefinierte Rolle in der Google Platform:
+. Erstellen Sie eine benutzerdefinierte Rolle in Google Cloud:
 +
 .. Erstellen Sie eine YAML-Datei, die die folgenden Berechtigungen enthält:
 +
@@ -248,8 +248,10 @@ includedPermissions:
 Das folgende Beispiel erstellt auf Projektebene eine Rolle mit dem Namen „connectorDeployment“:
 
 +
+[source, bash]
+----
 gcloud iam roles create connectorDeployment --project=myproject --file=connector-deployment.yaml
-
+----
 +
 https://cloud.google.com/iam/docs/creating-custom-roles#iam-custom-roles-create-gcloud["Google Cloud-Dokumente: Erstellen und Verwalten benutzerdefinierter Rollen"^]
 

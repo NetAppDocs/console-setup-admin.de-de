@@ -160,7 +160,7 @@ Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwende
 |===
 
 
-=== NetApp Kopieren und Synchronisieren
+=== NetApp Copy and Sync
 
 [cols="20,60,20"]
 |===

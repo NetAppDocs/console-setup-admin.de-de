@@ -20,9 +20,9 @@ Sie verwalten AWS-Zugangsdaten und Marketplace-Abonnements direkt über die NetA
 
 == Anfängliche AWS-Anmeldeinformationen
 
-Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, müssen Sie die ARN einer IAM-Rolle oder Zugriffsschlüssel für einen IAM-Benutzer angeben. Die Authentifizierungsmethode muss über Berechtigungen zum Bereitstellen des Console-Agenten in AWS verfügen.  Die erforderlichen Berechtigungen sind in der folgenden Liste aufgeführt:link:task-install-agent-aws-console.html#aws-permissions-agent["Agentenbereitstellungsrichtlinie für AWS"] Die
+Wenn Sie einen Console-Agenten über die Console bereitstellen, müssen Sie den ARN einer IAM-Rolle oder die Zugriffsschlüssel eines IAM-Benutzers angeben. Das Authentifizierungsverfahren muss über Berechtigungen verfügen, um den Console-Agenten in AWS bereitzustellen. Die erforderlichen Berechtigungen sind in der link:task-install-agent-aws-console.html#aws-permissions-agent["Agentenbereitstellungsrichtlinie für AWS"] aufgeführt.
 
-Wenn die Konsole den Konsolenagenten in AWS startet, erstellt sie eine IAM-Rolle und ein Profil für den Agenten. Außerdem wird eine Richtlinie angehängt, die dem Konsolenagenten die Berechtigung erteilt, Ressourcen und Prozesse innerhalb dieses AWS-Kontos zu verwalten. link:reference-permissions-aws.html["Überprüfen Sie, wie der Agent die Berechtigungen verwendet"].
+Wenn die NetApp Console den Console Agent in AWS startet, erstellt sie eine IAM-Rolle und ein Profil für den Agenten. Außerdem wird eine Richtlinie angehängt, die dem Console Agent Berechtigungen zur Verwaltung von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt. link:reference-permissions-aws.html["Überprüfen Sie, wie der Agent die Berechtigungen nutzt"].
 
 image:diagram_permissions_initial_aws.png["Ein konzeptionelles Bild, das die Konsole zeigt, die den Konsolenagenten in einem AWS-Konto bereitstellt."]
 
@@ -30,7 +30,7 @@ Wenn Sie ein neues Cloud Volumes ONTAP -System hinzufügen, wählt die Konsole s
 
 image:screenshot_accounts_select_aws.gif["Ein Screenshot, der die Option „Konto wechseln“ auf der Seite „Details und Anmeldeinformationen“ zeigt."]
 
-Stellen Sie alle Ihre Cloud Volumes ONTAP -Systeme mit den anfänglichen AWS-Anmeldeinformationen bereit, oder fügen Sie zusätzliche Anmeldeinformationen hinzu.
+Sie können alle Ihre Cloud Volumes ONTAP Systeme mit den anfänglichen AWS-Anmeldeinformationen bereitstellen oder zusätzliche Anmeldeinformationen hinzufügen.
 
 
 
@@ -131,7 +131,7 @@ Nein, es ist nicht möglich, die mit Ihrem Cloud Volumes ONTAP -System verknüpf
 
 === Wie funktionieren Anmeldeinformationen für Marktplatzbereitstellungen und lokale Bereitstellungen?
 
-In den obigen Abschnitten wird die empfohlene Bereitstellungsmethode für den Konsolenagenten beschrieben, die von der Konsole aus erfolgt. Sie können auch einen Agenten in AWS über den AWS Marketplace bereitstellen und die Console-Agent-Software manuell auf Ihrem eigenen Linux-Host oder in Ihrem VCenter installieren.
+Die obigen Abschnitte beschreiben die empfohlene Bereitstellungsmethode für den Console-Agenten, die über die Console erfolgt. Sie können einen Agenten auch in AWS über den AWS Marketplace bereitstellen und die Console-Agent-Software manuell auf Ihrem eigenen Linux-Host oder in Ihrem vCenter installieren.
 
 Wenn Sie den Marketplace verwenden, werden die Berechtigungen auf die gleiche Weise bereitgestellt.  Sie müssen lediglich die IAM-Rolle manuell erstellen und einrichten und dann Berechtigungen für alle zusätzlichen Konten erteilen.
 

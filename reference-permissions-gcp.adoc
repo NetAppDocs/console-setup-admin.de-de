@@ -605,7 +605,7 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 | logging.privateLogEntries.list | Ja | Ja | Nein 
 
 
-| logging.logEntries.create .2+| Protokolleinträge erstellen und weiterleiten für Überwachung, Fehlersuche und Prüfung. | Ja | Ja | Nein 
+| logging.logEntries.create .2+| Protokolleinträge für Überwachung, Fehlersuche und Auditierung erstellen und weiterleiten. | Ja | Ja | Nein 
 
 
 | logging.logEntries.route | Ja | Ja | Nein 

@@ -30,7 +30,7 @@ Speicherressourcen:: Speicherressourcen sind die am häufigsten vorkommende Ress
 +
 --
 
-NOTE: Benutzer mit der Rolle „Org admin“ können Ressourcen zu Ordnern hinzufügen, um die Aufgabe, die Ressource Projekten zuzuordnen, an die Ordner- oder Projektadministratoren des jeweiligen Ordners zu delegieren. link:task-iam-manage-folders-projects.html#associate-resource-folder["Informationen zum Verknüpfen einer Ressource mit einem Ordner"].
+NOTE: Benutzer mit der Rolle „Organisationsadministrator“ können Ressourcen zu einem Ordner hinzufügen, um die Aufgabe, die Ressource Projekten zuzuordnen, an die Ordner- oder Projektadministratoren des jeweiligen Ordners zu delegieren. link:task-iam-manage-folders-projects.html#associate-resource-folder["Informationen zum Verknüpfen einer Ressource mit einem Ordner"].
 
 --
 Konsolenagenten:: Wenn Sie einen Console-Agenten zur Ermittlung von Speichersystemen verwendet haben, fügen Sie den Agenten demselben Projekt wie das Speichersystem hinzu. Dadurch können Benutzer agentenbasierte Funktionen wie Datendienste oder die Console-eigene Speicherverwaltung nutzen. Sie können Agenten auf der Seite *Agenten* in der Console zu Projekten hinzufügen. link:task-iam-associate-agents.html["Erfahren Sie, wie Sie einen Console-Agenten mit einem Projekt verknüpfen"].
@@ -86,7 +86,7 @@ Beachten Sie, dass Sie nur aus den Ordnern und Projekten auswählen können, fü
 .Nach Abschluss
 Wenn Sie mithilfe eines Konsolenagenten eine Ressource entdecken, verknüpfen Sie den Konsolenagenten mit dem Projekt, um Zugriff zu gewähren.  Andernfalls sind der Konsolenagent und die zugehörige Ressource für Mitglieder ohne die Rolle „Organisationsadministrator“ nicht zugänglich.
 
-link:task-iam-associate-connectors.html["Erfahren Sie, wie Sie einen Konsolenagenten mit einem Ordner oder Projekt verknüpfen"].
+link:task-iam-associate-agents.html["Erfahren Sie, wie Sie einen Konsolenagenten mit einem Ordner oder Projekt verknüpfen"] .
 
 
 

@@ -16,9 +16,9 @@ summary: 'Verwalten Sie den Benutzerzugriff auf die NetApp Console mit rollenbas
 [role="lead"]
 Verwalten Sie den Benutzerzugriff auf die NetApp Console mit rollenbasierter Zugriffskontrolle (RBAC), indem Sie vordefinierte Rollen auf Organisations-, Ordner- oder Projektebene zuweisen. Jede Rolle gewährt spezifische Berechtigungen, die definieren, welche Aktionen Benutzer innerhalb ihres zugewiesenen Bereichs ausführen können.
 
-NetApp entwirft Konsolenrollen nach dem Prinzip der minimalen Berechtigungen, sodass jede Rolle nur die Berechtigungen enthält, die für ihre Aufgaben erforderlich sind. Dieser Ansatz erhöht die Sicherheit, indem der Zugriff auf das beschränkt wird, was jedes Mitglied benötigt.
+NetApp gestaltet Konsolenrollen nach dem Prinzip der minimalen Berechtigungen, sodass jede Rolle nur die für ihre Aufgaben notwendigen Berechtigungen enthält. Dieser Ansatz erhöht die Sicherheit, indem der Zugriff auf das beschränkt wird, was jedes Mitglied benötigt.
 
-Nachdem Sie die Ressourcen in Ordnern und Projekten organisiert haben, weisen Sie den Organisationsmitgliedern eine oder mehrere Rollen für bestimmte Ordner oder Projekte zu, die es ihnen ermöglichen, nur ihre jeweiligen Verantwortlichkeiten wahrzunehmen.
+Nachdem Sie die Ressourcen in Ordnern und Projekten organisiert haben, weisen Sie den Mitgliedern eine oder mehrere Rollen für bestimmte Ordner oder Projekte zu, die es ihnen ermöglichen, nur ihre jeweiligen Verantwortlichkeiten wahrzunehmen.
 
 Beispielsweise können Sie einem Mitglied die Administratorrolle für Ransomware-Resilienz auf einer bestimmten Projektebene zuweisen, sodass dieses Mitglied Ransomware-Resilienzmaßnahmen für Ressourcen innerhalb dieses Projekts durchführen kann, ohne ihm einen umfassenderen Zugriff auf die gesamte Organisation zu gewähren. Diesem Benutzer kann die Rolle für mehrere Projekte innerhalb Ihrer Organisation zugewiesen werden.
 
@@ -43,7 +43,7 @@ link:task-iam-manage-members-permissions.html#add-members["Erfahren Sie, wie Sie
 
 Die NetApp Console enthält vordefinierte Rollen, die Sie Organisationsmitgliedern zuweisen können. Jede Rolle beinhaltet Berechtigungen, die festlegen, welche Aktionen ein Mitglied innerhalb seines zugewiesenen Bereichs (Organisation, Ordner oder Projekt) durchführen kann.
 
-Die NetApp Console -Rollen verwenden das Prinzip der minimalen Berechtigungen, um sicherzustellen, dass Mitglieder nur über die für ihre Aufgaben erforderlichen Berechtigungen verfügen, und kategorisieren die Rollen nach der Art des Zugriffs, den sie gewähren:
+NetApp Console-Rollen verwenden das Prinzip der minimalen Berechtigungen, um sicherzustellen, dass Mitglieder nur die für ihre Aufgaben erforderlichen Berechtigungen besitzen, und kategorisieren Rollen nach der Art des Zugriffs, den sie gewähren:
 
 * Plattformrollen: Konsolenadministrationsberechtigungen bereitstellen
 * Datendienstrollen: Berechtigungen für die Verwaltung spezifischer Datendienste wie Ransomware-Resilienz und Datensicherung und -wiederherstellung bereitstellen.

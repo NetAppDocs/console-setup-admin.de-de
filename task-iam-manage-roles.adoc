@@ -17,9 +17,9 @@ summary: In der NetApp Console können Sie Benutzern Rollen zuweisen, je nachdem
 Verwalten Sie den Mitgliederzugriff in Ihrer Console-Organisation. Weisen Sie Rollen zu, um Berechtigungen festzulegen. Mitglieder werden entfernt, wenn sie das Unternehmen verlassen.
 
 .Erforderliche Zugriffsrollen
-Super-Admin, Organisations-Admin oder Ordner- bzw. Projekt-Admin (für die von ihnen verwalteten Ordner und Projekte). Link:reference-iam-predefined-roles.html[Erfahren Sie mehr über Zugriffsrollen].
+Super-Admin, Organisations-Admin oder Ordner- bzw. Projekt-Admin (für die von ihnen verwalteten Ordner und Projekte). link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"]Die
 
-Sie können Zugriffsrollen projekt- oder ordnerbasiert zuweisen. Weisen Sie beispielsweise einem Benutzer eine Rolle für zwei bestimmte Projekte zu oder weisen Sie die Rolle auf Ordnerebene zu, um einem Benutzer die Administratorrolle für Ransomware-Resilienz für alle Projekte in einem Ordner zu geben.
+Sie können Zugriffsrollen projekt- oder ordnerbasiert zuweisen. Beispielsweise können Sie einem Benutzer eine Rolle für zwei bestimmte Projekte zuweisen oder die Rolle auf Ordnerebene festlegen, um einem Benutzer die Ransomware Resilience-Administratorrolle für alle Projekte in einem Ordner zu geben.
 
 
 NOTE: Fügen Sie Ihre Ordner und Projekte hinzu, bevor Sie Benutzern Zugriffsrechte zuweisen. link:task-iam-manage-folders-projects.html["Erfahren Sie, wie Sie Ordner und Projekte hinzufügen."]
@@ -28,7 +28,7 @@ NOTE: Fügen Sie Ihre Ordner und Projekte hinzu, bevor Sie Benutzern Zugriffsrec
 
 == Verstehen Sie, wie der Zugriff in der NetApp Console gewährt wird.
 
-Die NetApp Console verwendet ein rollenbasiertes Zugriffskontrollmodell (RBAC) zur Verwaltung von Benutzerberechtigungen. Sie können Mitgliedern vordefinierte Rollen einzeln oder über föderierte Gruppen zuweisen. Sie können Dienstkonten und Verbundgruppen Rollen hinzufügen und zuweisen. Jede Rolle definiert, welche Aktionen ein Mitglied an den zugehörigen Ressourcen durchführen kann.
+Die NetApp Console verwendet ein rollenbasiertes Zugriffssteuerungsmodell (RBAC), um Benutzerberechtigungen zu verwalten. Sie können vordefinierte Rollen einzelnen Mitgliedern oder über Verbundgruppen zuweisen. Sie können Dienstkonten sowie Verbundgruppen hinzufügen und Rollen zuweisen. Jede Rolle definiert, welche Aktionen ein Mitglied an den zugehörigen Ressourcen ausführen darf.
 
 Beachten Sie Folgendes bezüglich der Zugriffsgewährung in der NetApp Console:
 
@@ -60,9 +60,9 @@ In der Tabelle *Mitglieder* sind die Mitglieder Ihrer Organisation aufgelistet.
 
 
 
-== Einem Mitglied zugewiesene Rollen anzeigen
+== Einem Mitglied zugewiesene(n) Rolle(n) anzeigen
 
-Sie können überprüfen, welche Rollen ihnen aktuell zugewiesen sind.
+Sie können überprüfen, welchen Rollen das Mitglied aktuell zugewiesen ist.
 
 Wenn Sie die Rolle „Ordner- oder Projektadministrator“ haben, werden auf der Seite alle Mitglieder der Organisation angezeigt.  Sie können jedoch nur die Mitgliedsberechtigungen für die Ordner und Projekte anzeigen und verwalten, für die Sie über Berechtigungen verfügen. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Aktionen, die ein Ordner- oder Projektadministrator ausführen kann."] .
 

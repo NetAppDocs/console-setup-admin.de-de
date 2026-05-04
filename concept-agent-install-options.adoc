@@ -100,7 +100,7 @@ Wählen Sie diese Methode, wenn:
 
  a| 
 * Die meisten Schritte jeder Bereitstellungsmethode. Sie müssen den Host vorbereiten, Podman oder Docker installieren, das Netzwerk konfigurieren, die Software installieren und Berechtigungen manuell vergeben.
-* * Die Bereitstellung wird außerhalb der NetApp Console initiiert, daher steht der geführte Workflow nicht zur Verfügung
+* Die Bereitstellung wird außerhalb der NetApp Console initiiert, daher steht der geführte Workflow nicht zur Verfügung
 
 
 |===
@@ -108,9 +108,9 @@ link:task-install-agent-aws-manual.html["Manuelle Installation eines Console-Age
 
 
 
-== Manuelle Installation lokal mit VCenter (OVA)
+== Manuelle Installation vor Ort mit vCenter (OVA)
 
-Bei Verwendung von VMware VCenter können Sie den Konsolenagenten durch Importieren einer OVA-Datei (Open Virtual Appliance) bereitstellen. Die OVA ist ein vorkonfiguriertes VM-Image, das Sie mit dem vSphere-Client bereitstellen, ohne Linux zu installieren oder eine Container-Laufzeitumgebung zu konfigurieren.
+Bei Verwendung von VMware vCenter können Sie den Konsolenagenten durch Importieren einer OVA-Datei (Open Virtual Appliance) bereitstellen. Die OVA ist ein vorkonfiguriertes VM-Image, das Sie mit dem vSphere Client bereitstellen, ohne Linux zu installieren oder eine Container-Laufzeitumgebung zu konfigurieren.
 
 Wählen Sie diese Methode, wenn:
 
@@ -131,24 +131,24 @@ NOTE: Google Cloud-Ressourcen können nicht über einen lokalen Console-Agenten 
 * Nur für lokale Installationen verfügbar; nicht für Cloud-Bereitstellungen verfügbar
 * Beinhaltet eine menügesteuerte Wartungskonsole für Agentenwartungsaufgaben
 * Vertrauter Bereitstellungsworkflow für VMware-Administratoren
-* * Ein vorkonfiguriertes VM-Image hilft, Fehler zu vermeiden und die Wartung zu erleichtern
+* Vorkonfiguriertes VM-Image hilft, Fehler zu vermeiden und die Wartung zu vereinfachen
 
  a| 
 * Erfordert vCenter; kann nicht direkt auf einem Bare-ESXi-Host installiert werden
 
 
 |===
-link:task-install-agent-on-prem-ova.html["Lokale Bereitstellung mit VCenter"]
+link:task-install-agent-on-prem-ova.html["Lokale Bereitstellung mit vCenter"]
 
 
 
-== Manuelle Installation vor Ort (ohne VCenter)
+== Manuelle Installation vor Ort (ohne vCenter)
 
 Sie können den Console-Agenten manuell auf jedem lokalen Linux-Host installieren. Sie müssen den Linux-Host und die Container-Laufzeitumgebung (Docker oder Podman) einrichten und anschließend den Console-Agenten installieren.
 
 Wählen Sie diese Methode, wenn:
 
-* Sie führen die Bereitstellung lokal durch und verfügen nicht über eine VMware VCenter-Umgebung.
+* Sie führen die Bereitstellung lokal durch und verfügen nicht über eine VMware vCenter-Umgebung.
 * Sie sind mit der Linux-Administration vertraut und möchten den zugrunde liegenden Host selbst verwalten.
 * Sie möchten steuern, wann der Console-Agent aktualisiert wird.
 

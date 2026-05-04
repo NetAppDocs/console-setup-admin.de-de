@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-uninstall-agent.html 
 keywords: uninstall, remove connector, uninstall connector, uninstall agent, remove agent 
-summary: Deinstallieren Sie einen Konsolenagenten, um Probleme zu beheben oder ihn dauerhaft vom Host zu entfernen.  Die erforderlichen Schritte hängen vom verwendeten Bereitstellungsmodus ab.  Nachdem Sie einen Konsolenagenten aus Ihrer Umgebung entfernt haben, können Sie ihn aus der Konsole entfernen. 
+summary: Deinstallieren Sie einen Console-Agenten, um Probleme zu beheben oder ihn dauerhaft vom Host zu entfernen. Die Schritte, die Sie verwenden müssen, hängen vom Bereitstellungsmodus ab, den Sie verwenden. Sobald Sie einen Console-Agenten aus Ihrer Umgebung entfernt haben, können Sie ihn aus der Console entfernen. 
 ---
 = Deinstallieren und Entfernen eines Konsolenagenten
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Deinstallieren Sie einen Konsolenagenten, um Probleme zu beheben oder i
 
 
 [role="lead"]
-Deinstallieren Sie einen Konsolenagenten, um Probleme zu beheben oder ihn dauerhaft vom Host zu entfernen.  Die erforderlichen Schritte hängen vom verwendeten Bereitstellungsmodus ab.  Nachdem Sie einen Konsolenagenten aus Ihrer Umgebung entfernt haben, können Sie ihn aus der Konsole entfernen.
+Deinstallieren Sie einen Console-Agenten, um Probleme zu beheben oder ihn dauerhaft vom Host zu entfernen. Die Schritte, die Sie verwenden müssen, hängen vom Bereitstellungsmodus ab, den Sie verwenden. Sobald Sie einen Console-Agenten aus Ihrer Umgebung entfernt haben, können Sie ihn aus der Console entfernen.
 
 
 
@@ -83,6 +83,6 @@ Beachten Sie beim Entfernen eines Konsolenagenten Folgendes:
 
 .Schritte
 . Wählen Sie *Administration > Agenten*.
-. Auf der Seite *Übersicht* wählen Sie das Aktionsmenü für einen getrennten Agenten und anschließend *Agent entfernen*.
+. Auf der Seite *Übersicht* wählen Sie das Aktionsmenü für einen getrennten Agenten und wählen Sie *Agent entfernen*.
 . Geben Sie zur Bestätigung den Namen des Agenten ein und wählen Sie dann *Entfernen*.
 

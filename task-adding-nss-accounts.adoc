@@ -51,7 +51,7 @@ Sie können Ihrer Organisation mehrere NSS-Konten zuordnen. Sie können jedoch n
 NOTE: NetApp verwendet Microsoft Entra ID als Identitätsanbieter für Authentifizierungsdienste speziell für Support und Lizenzierung.
 
 .Schritte
-. Unter *Administration > Support*.
+. Wählen Sie *Administration > Support*.
 . Wählen Sie *NSS-Verwaltung*.
 . Wählen Sie *NSS-Konto hinzufügen*.
 . Wählen Sie *Weiter*, um zu einer Microsoft-Anmeldeseite weitergeleitet zu werden.
@@ -65,7 +65,7 @@ Dies ist eine vom System generierte ID, die Ihrer E-Mail-Adresse zugeordnet ist.
 +
 ** Wenn Sie Ihre Anmeldeinformationen aktualisieren müssen, gibt es auch die Option *Anmeldeinformationen aktualisieren* imimage:https://raw.githubusercontent.com/NetAppDocs/console-family/main/media/icon-nss-menu.png["Ein Symbol mit drei horizontalen Punkten"] Speisekarte.
 +
-Bei Verwendung dieser Option werden Sie aufgefordert, sich erneut anzumelden.  Beachten Sie, dass das Token für diese Konten nach 90 Tagen abläuft.  Sie werden durch eine entsprechende Benachrichtigung darauf aufmerksam gemacht.
+Bei Nutzung dieser Option müssen Sie sich erneut anmelden. Beachten Sie, dass das Token für diese Konten nach 90 Tagen abläuft. Eine Benachrichtigung wird veröffentlicht, um Sie darauf hinzuweisen.
 
 
 
@@ -95,7 +95,7 @@ Abgelaufene Anmeldeinformationen können unter anderem Folgendes beeinträchtige
 Darüber hinaus können Sie die mit Ihrer Organisation verknüpften NSS-Anmeldeinformationen aktualisieren, wenn Sie das mit Ihrer Organisation verknüpfte NSS-Konto ändern möchten.  Zum Beispiel, wenn die mit Ihrem NSS-Konto verknüpfte Person Ihr Unternehmen verlassen hat.
 
 .Schritte
-. Unter *Administration > Support*.
+. Wählen Sie *Administration > Support*.
 . Wählen Sie *NSS-Verwaltung*.
 . Wählen Sie für das NSS-Konto, das Sie aktualisieren möchten,image:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Anmeldeinformationen aktualisieren*.
 . Wenn Sie dazu aufgefordert werden, wählen Sie *Weiter*, um zu einer Microsoft-Anmeldeseite weitergeleitet zu werden.
@@ -114,7 +114,7 @@ Wenn Ihr Unternehmen über mehrere NetApp Support Site-Konten verfügt, können 
 Sie müssen das Konto zunächst mit der Konsole verknüpft haben.
 
 .Schritte
-. Unter *Administration > Support*.
+. Wählen Sie *Administration > Support*.
 . Wählen Sie *NSS-Verwaltung*.
 . Führen Sie die folgenden Schritte aus, um das NSS-Konto zu ändern:
 +
@@ -139,7 +139,7 @@ Aus Sicherheitsgründen wird die mit einem NSS-Konto verknüpfte E-Mail-Adresse 
 TIP: Wenn Sie zur NSS-Verwaltungsseite gehen, generiert die Konsole für jedes Konto in der Tabelle ein Token.  Dieses Token enthält Informationen zur zugehörigen E-Mail-Adresse.  Das Token wird entfernt, wenn Sie die Seite verlassen.  Die Informationen werden niemals zwischengespeichert, was zum Schutz Ihrer Privatsphäre beiträgt.
 
 .Schritte
-. Unter *Administration > Support*.
+. Wählen Sie *Administration > Support*.
 . Wählen Sie *NSS-Verwaltung*.
 . Wählen Sie für das NSS-Konto, das Sie aktualisieren möchten,image:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *E-Mail-Adresse anzeigen*.  Über die Schaltfläche „Kopieren“ können Sie die E-Mail-Adresse kopieren.
 
@@ -153,7 +153,7 @@ Löschen Sie alle NSS-Konten, die Sie nicht mehr mit der Konsole verwenden möch
 Sie können kein Konto löschen, das derzeit mit einem Cloud Volumes ONTAP System verknüpft ist.  Sie müssen zuerst<<attach-system-nss-account,Verbinden Sie diese Systeme mit einem anderen NSS-Konto>> .
 
 .Schritte
-. Unter *Administration > Support*.
+. Wählen Sie *Administration > Support*.
 . Wählen Sie *NSS-Verwaltung*.
 . Wählen Sie für das NSS-Konto, das Sie löschen möchten,image:icon-action.png["Ein Symbol, das aus drei nebeneinander liegenden Punkten besteht"] und wählen Sie dann *Löschen*.
 . Wählen Sie zur Bestätigung *Löschen*.

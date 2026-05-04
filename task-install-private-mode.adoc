@@ -160,7 +160,7 @@ NOTE: „Konsolenoperator“ ist der in der Richtlinie angegebene Standardname. 
 --
 .Azure-Dienstprinzipal
 --
-Übergeben Sie dem Console-Agenten die Anmeldeinformationen für den Azure Service Principal, den Sie zuvor eingerichtet haben.
+Übergeben Sie dem Console-Agenten die Anmeldeinformationen für den Azure-Dienstprinzipal, den Sie zuvor eingerichtet haben.
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.

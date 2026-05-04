@@ -39,7 +39,7 @@ Die folgenden Tabellen zeigen die Aktionen, die jede Konsolenplattformrolle ausf
 | Agenten erstellen | Ja | Nein 
 
 
-| Erstellen, Ändern oder Löschen von Systemen über die Konsole (Hinzufügen oder Erkennen von Systemen) | Ja | Ja 
+| Systeme über die Console erstellen, ändern oder löschen (Systeme hinzufügen oder ermitteln) | Ja | Ja 
 
 
 | Erstellen von Ordnern und Projekten, einschließlich Löschen | Ja | Nein 

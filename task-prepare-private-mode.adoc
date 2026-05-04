@@ -428,7 +428,7 @@ Aktivieren von NTP:: Wenn Sie planen, NetApp Data Classification zum Scannen Ihr
 
 == Schritt 6: Cloud-Berechtigungen vorbereiten
 
-Wenn der Console-Agent in der Cloud installiert ist und Sie planen, Cloud Volumes ONTAP-Systeme zu erstellen, benötigt die NetApp Console Berechtigungen Ihres Cloud-Anbieters. Sie müssen die Berechtigungen bei Ihrem Cloud-Anbieter einrichten und diese anschließend der Console-Agent-Instanz zuordnen, nachdem Sie sie installiert haben.
+Wenn der Console-Agent in der Cloud installiert ist und Sie Cloud Volumes ONTAP-Systeme erstellen möchten, benötigt die NetApp Console Berechtigungen Ihres Cloud-Anbieters. Sie müssen die Berechtigungen bei Ihrem Cloud-Anbieter einrichten und diese anschließend der Console-Agent-Instanz zuweisen, nachdem Sie sie installiert haben.
 
 Um die erforderlichen Schritte anzuzeigen, wählen Sie die Authentifizierungsoption aus, die Sie für Ihren Cloud-Anbieter verwenden möchten.
 
@@ -497,7 +497,7 @@ Das Konto verfügt nun über die erforderlichen Berechtigungen.
 --
 Erstellen Sie eine benutzerdefinierte Azure-Rolle mit den erforderlichen Berechtigungen. Weisen Sie diese Rolle der Console-Agenten-VM zu.
 
-Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle mithilfe des Azure-Portals, Azure PowerShell, Azure CLI oder REST-API erstellen können.  Die folgenden Schritte zeigen, wie Sie die Rolle mithilfe der Azure CLI erstellen.  Wenn Sie eine andere Methode bevorzugen, lesen Sie bitte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure-Dokumentation"^]
+Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle über das Azure-Portal, Azure PowerShell, die Azure CLI oder die REST-API erstellen können. Die folgenden Schritte zeigen, wie Sie die Rolle mithilfe der Azure CLI erstellen. Wenn Sie eine andere Methode bevorzugen, lesen Sie bitte  https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure-Dokumentation"^].
 
 .Schritte
 . Aktivieren Sie eine systemseitig zugewiesene verwaltete Identität auf der VM, auf der Sie den Console agent installieren möchten, damit Sie die erforderlichen Azure-Berechtigungen über eine benutzerdefinierte Rolle bereitstellen können.

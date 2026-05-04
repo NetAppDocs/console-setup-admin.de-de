@@ -50,7 +50,7 @@ Die folgende Tabelle vergleicht diese Modi.
 | UI-Zugriff | Aus der Console SaaS-Anwendung | Lokal von einer Agent-VM | Lokal von der Agent-VM 
 
 
-| API-Endpunkt | Die Console SaaS-Anwendung | ein Agent | ein Agent 
+| API-Endpunkt | Die Console SaaS-Anwendung | Ein Agent | Ein Agent 
 
 
 | Authentifizierung | Über SaaS mit Auth0, NSS-Login oder Identitätsföderation | Durch SaaS mit Auth0 oder Identitätsföderation | Lokale Benutzerauthentifizierung 
@@ -140,13 +140,13 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 | NetApp Klassifizierung | Ja 
 
 
-| NetApp Kopieren und Synchronisieren | Ja 
+| NetApp Copy and Sync | Ja 
 
 
 | NetApp Disaster Recovery | Ja 
 
 
-| NetApp Ransomware Protection | Ja 
+| NetApp Ransomware Resilience | Ja 
 
 
 | NetApp Replication | Nein 
@@ -188,7 +188,7 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
  a| 
 Licenses and subscriptions-Verwaltung
 
-* Marketplace-Abonnements und BYOL werden im Standardmodus unterstützt. Die unterstützten Lizenzierungsoptionen hängen jedoch davon ab, welchen NetApp Datendienst Sie verwenden.  Lesen Sie die Dokumentation zu jedem Dienst, um mehr über die verfügbaren Lizenzierungsoptionen zu erfahren.
+* Marketplace-Abonnements und BYOL werden im Standardmodus unterstützt; die unterstützten Lizenzoptionen hängen jedoch davon ab, welchen NetApp-Datendienst Sie verwenden. Lesen Sie die Dokumentation für jeden Dienst, um mehr über die verfügbaren Lizenzoptionen zu erfahren.
 
 | Nein 
 
@@ -209,9 +209,6 @@ Licenses and subscriptions-Verwaltung
 
 
 | Nur-Lese-Modus | Nein 
-
-
-| Benachrichtigungen | Nein 
 |===
 
 
@@ -306,7 +303,7 @@ NetApp Replication
 
 * Wird in Regierungsregionen mit eingeschränktem Modus unterstützt.  Wird in kommerziellen Regionen oder in souveränen Regionen mit eingeschränktem Modus nicht unterstützt.
 
-| Ja*, (nicht erforderlich, wenn von ONTAP on-premises zu ONTAP on-premises repliziert wird) 
+| Ja* (nicht erforderlich, wenn von ONTAP on-premises zu ONTAP on-premises repliziert wird) 
 
 
 | *NetApp Supportvertragsfunktionen* | Keine | k. A. 
@@ -359,9 +356,6 @@ Für Cloud Volumes ONTAP werden mit BYOL sowohl kapazitätsbasierte als auch kno
 
 
 | Nur-Lese-Modus | Ja 
-
-
-| Benachrichtigungen | Nein 
 |===
 
 
@@ -615,7 +609,7 @@ Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstütz
 | Google Cloud-Speicher | Nein | Nein 
 
 
-| On-premisesONTAP-Cluster | Ja | Ja 
+| On-Premises- ONTAP -Cluster | Ja | Ja 
 
 
 | E-Series | Nein | Nein 
@@ -624,7 +618,7 @@ Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstütz
 | StorageGRID | Nein | Nein 
 
 
-| Workload-Factory | Nein | Nein 
+| Arbeitslasten | Nein | Nein 
 
 
 .8+| *Datendienste* | Backup and Recovery | Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] | Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] 
@@ -633,13 +627,13 @@ Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstütz
 | NetApp Klassifizierung | Ja | Ja 
 
 
-| Kopieren und synchronisieren | Nein | Nein 
+| NetApp Copy and Sync | Nein | Nein 
 
 
 | NetApp Disaster Recovery | Nein | Nein 
 
 
-| NetApp Ransomware Protection | Nein | Nein 
+| NetApp Ransomware Resilience | Nein | Nein 
 
 
 | NetApp Replication | Ja | Ja 

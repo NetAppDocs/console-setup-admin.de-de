@@ -14,7 +14,7 @@ summary: Fügen Sie AWS-Anmeldeinformationen hinzu und verwalten Sie diese, dami
 
 
 [role="lead"]
-Fügen Sie AWS-Anmeldeinformationen hinzu und verwalten Sie diese, damit Sie Cloud-Ressourcen in Ihren AWS-Konten über die NetApp Console bereitstellen und verwalten können.  Wenn Sie mehrere AWS Marketplace-Abonnements verwalten, können Sie jedem Abonnement auf der Seite „Anmeldeinformationen“ unterschiedliche AWS-Anmeldeinformationen zuweisen.
+Fügen Sie AWS-Anmeldeinformationen hinzu und verwalten Sie diese, damit Sie Cloud-Ressourcen in Ihren AWS-Konten über die NetApp Console bereitstellen und verwalten können. Wenn Sie mehrere AWS Marketplace-Abonnements verwalten, können Sie jedem einzelnen auf der Seite „Anmeldeinformationen“ unterschiedliche AWS-Anmeldeinformationen zuweisen.
 
 
 
@@ -99,7 +99,7 @@ Das Konto verfügt über die erforderlichen Berechtigungen. <<add-the-credential
 
 ==== Erteilen Sie Berechtigungen durch die Bereitstellung von AWS-Schlüsseln
 
-Wenn Sie der Konsole AWS-Schlüssel für einen IAM-Benutzer bereitstellen möchten, müssen Sie diesem Benutzer die erforderlichen Berechtigungen erteilen.  Die IAM-Richtlinie der Konsole definiert die AWS-Aktionen und -Ressourcen, die die Konsole verwenden darf.
+Wenn Sie der NetApp Console AWS-Schlüssel für einen IAM-Benutzer bereitstellen möchten, müssen Sie diesem Benutzer die erforderlichen Berechtigungen erteilen. Die IAM-Richtlinie der NetApp Console definiert die AWS-Aktionen und -Ressourcen, die die NetApp Console verwenden darf.
 
 Sie müssen diese Authentifizierungsmethode verwenden, wenn ein Konsolenagent vor Ort installiert ist.  Sie können keine IAM-Rolle verwenden.
 
@@ -189,7 +189,7 @@ Die Richtlinie sollte beispielsweise folgendermaßen aussehen:
 }
 ----
 +
-Siehe link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["AWS Identity and Access Management (IAM)-Dokumentation"^] für weitere Informationen zum kontoübergreifenden Ressourcenzugriff in IAM.
+Weitere Informationen zum kontoübergreifenden Ressourcenzugriff in IAM finden Sie unter link:https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies-cross-account-resource-access.html["AWS Identity and Access Management (IAM)-Dokumentation"^].
 
 ** Erstellen Sie eine Richtlinie, die die zum Erstellen eines Konsolenagenten erforderlichen Berechtigungen enthält.
 +
@@ -212,7 +212,7 @@ Die IAM-Rolle verfügt jetzt über die erforderlichen Berechtigungen. <<add-the-
 Nachdem Sie die IAM-Rolle mit den erforderlichen Berechtigungen ausgestattet haben, fügen Sie die Rollen-ARN zur Konsole hinzu.
 
 .Bevor Sie beginnen
-Wenn Sie die IAM-Rolle gerade erst erstellt haben, kann es einige Minuten dauern, bis sie zur Verwendung verfügbar ist.  Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen zur Konsole hinzufügen.
+Wenn Sie die IAM-Rolle gerade erst erstellt haben, kann es einige Minuten dauern, bis sie einsatzbereit ist. Warten Sie einige Minuten, bevor Sie die Anmeldeinformationen zur NetApp Console hinzufügen.
 
 .Schritte
 . Wählen Sie *Administration > Anmeldeinformationen*.
@@ -232,7 +232,7 @@ image:screenshot-settings-icon-organization.png["Ein Screenshot, der das Einstel
 
 == Anmeldeinformationen zur Konsole für Amazon FSx for ONTAP hinzufügen
 
-Einzelheiten finden Sie im https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["die Konsolendokumentation für Amazon FSx for ONTAP"^]
+Für Einzelheiten siehe die https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-setting-up-permissions-fsx.html["Konsolendokumentation für Amazon FSx für ONTAP"^]
 
 
 
@@ -292,7 +292,7 @@ Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell 
 
 == Verknüpfen Sie ein vorhandenes Abonnement mit Ihrer Organisation
 
-Wenn Sie sich beim AWS Marketplace anmelden, besteht der letzte Schritt im Prozess darin, das Abonnement Ihrer Organisation zuzuordnen. Wenn Sie diesen Schritt nicht abgeschlossen haben, können Sie das Abonnement nicht mit Ihrer Organisation verwenden.
+Wenn Sie ein Abonnement über den AWS Marketplace abschließen, besteht der letzte Schritt darin, das Abonnement Ihrer Organisation zuzuordnen. Falls Sie diesen Schritt nicht ausgeführt haben, können Sie das Abonnement nicht für Ihre Organisation nutzen.
 
 * link:concept-modes.html["Erfahren Sie mehr über die Bereitstellungsmodi der Konsole"]
 * link:concept-identity-and-access-management.html["Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der Konsole"]

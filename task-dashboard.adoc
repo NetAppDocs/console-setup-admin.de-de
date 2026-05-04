@@ -39,7 +39,7 @@ Jeder Bereich auf der Startseite erfordert unterschiedliche Benutzerrollen:
 
 Wenn Sie nicht über die Berechtigung zum Zugriff auf einen Bereich verfügen, wird in dem Bereich eine Meldung angezeigt, die darauf hinweist, dass Ihnen die Berechtigung zur Verwendung des Bereichs fehlt.
 
-https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Informieren Sie sich über die Zugriffsrollen der NetApp Console ."] .
+link:reference-iam-predefined-roles.html["Erfahren Sie mehr über die Zugriffsrollen der NetApp Console"].
 
 .Schritte
 . Wählen Sie im NetApp Console *Home* aus.

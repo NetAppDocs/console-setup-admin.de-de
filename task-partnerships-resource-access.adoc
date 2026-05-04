@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-partnerships-resource-access.html 
-keywords: role-based access, partnership access, partner resources, resource access, grant acces, provide partner access, partnership organization 
+keywords: role-based access, partnership access, partner resources, resource access, grant access, provide partner access, partnership organization 
 summary: Sie können Partnerschaftsbenutzern Zugriff gewähren, indem Sie ihnen bestimmte Rollen für Ordner und Projekte innerhalb Ihrer Organisation zuweisen. 
 ---
 = Gewähren Sie Partnerschaftsbenutzern Zugriff auf Ressourcen
@@ -27,7 +27,7 @@ Eine Partnerorganisation muss zunächst Mitglieder zur Partnerschaft hinzufügen
 
 Sie können Rollen für Mitglieder von Partnerorganisationen auf dieselbe Weise verwalten wie für Ihre eigenen.  Allerdings stehen Partnerschaftsbenutzern nicht alle Rollen zur Verfügung.  Insbesondere können Sie Partnerbenutzern keine Rolle zuweisen, die Softwareupdates zulässt.  Das Aktualisieren der ONTAP -Software erfordert im Allgemeinen direkten Netzwerkzugriff.
 
-Sie können Partnerbenutzern folgende Rollen zuweisen:
+Sie können Partnerbenutzern die folgenden Rollen zuweisen:
 
 * link:reference-iam-platform-roles.html#organization-admin-roles["Organisationsadministrator"]
 * link:reference-iam-platform-roles.html#organization-admin-roles["Ordner- oder Projektadministrator"]
@@ -61,7 +61,7 @@ Wenn Sie beispielsweise zwei Projekte hätten und möchten, dass derselbe Benutz
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Partnerschaften* aus.
 . Wählen Sie die Registerkarte *Partnerschaft initiiert*.
-. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben der bestehenden Partnerschaft, die Sie anzeigen möchten, und wählen Sie *Details anzeigen* aus.
+. Wählen Sie das Aktionsmenü image:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben der bestehenden Partnerschaft, die Sie anzeigen möchten, und wählen Sie *Details anzeigen*.
 +
 In der Liste *Mitglieder* werden die Mitglieder angezeigt, die die Partnerorganisation zur Partnerschaft hinzugefügt hat.
 
@@ -90,7 +90,7 @@ Sie können eine Rolle ändern oder entfernen, die Sie einem Mitglied einer Part
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Partnerschaften* aus.
 . Wählen Sie die Registerkarte *Partnerschaft initiiert*.
-. Wählen Sie das Aktionsmenüimage:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben der bestehenden Partnerschaft, die Sie anzeigen möchten, und wählen Sie *Details anzeigen* aus.
+. Wählen Sie das Aktionsmenü image:icon-action.png["ein Symbol mit drei vertikalen Punkten"] neben der bestehenden Partnerschaft, die Sie anzeigen möchten, und wählen Sie *Details anzeigen*.
 +
 In der Liste *Mitglieder* werden die Mitglieder angezeigt, die die Partnerorganisation zur Partnerschaft hinzugefügt hat.
 

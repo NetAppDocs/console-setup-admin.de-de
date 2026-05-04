@@ -19,13 +19,13 @@ Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf NetApp
 Der Dienst verwendet die folgenden Rollen, die spezifisch für NetApp Backup and Recovery sind.
 
 * *Superadministrator für Backup und Wiederherstellung*: Führen Sie beliebige Aktionen in NetApp Backup and Recovery aus.
-* *Backup- und Recovery-Backup-Administrator*: Führen Sie Sicherungen auf lokalen Snapshots durch, replizieren Sie auf sekundären Speicher und sichern Sie Aktionen auf Objektspeicher in NetApp Backup and Recovery.
-* *Backup- und Recovery-Wiederherstellungsadministrator*: Stellen Sie Workloads mit NetApp Backup and Recovery wieder her.
-* *Backup- und Recovery-Klonadministrator*: Klonen Sie Anwendungen und Daten mit NetApp Backup and Recovery.
+* *Backup und Recovery Backup-Administrator*: Führt Backups in lokalen Snapshots durch, repliziert auf sekundären Speicher und sichert auf Objektspeicher in NetApp Backup und Recovery.
+* *Backup und Recovery Wiederherstellungsadministrator*: Workloads mithilfe von NetApp Backup und Recovery wiederherstellen.
+* *Backup und Recovery-Klonadministrator*: Anwendungen und Daten mithilfe von NetApp Backup und Recovery klonen.
 * *Backup- und Recovery-Viewer*: Informationen in NetApp Backup and Recovery anzeigen, aber keine Aktionen ausführen.
 
 
-Einzelheiten zu allen NetApp Console finden Sie unter https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["die Dokumentation zur Einrichtung und Verwaltung der Konsole"^] .
+Einzelheiten zu allen NetApp Console-Zugriffsrollen finden Sie unter link:reference-iam-predefined-roles.html["Zugriffsrollen"].
 
 
 

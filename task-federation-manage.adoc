@@ -14,10 +14,10 @@ summary: Nachdem Sie eine Verbundverbindung hinzugefügt haben, können Sie sie 
 
 
 [role="lead"]
-Sie können Ihre Föderation in der NetApp Console verwalten.  Sie können es deaktivieren, abgelaufene Anmeldeinformationen aktualisieren und es deaktivieren, wenn Sie es nicht mehr benötigen.
+Sie können Ihre Föderation in der NetApp Console verwalten. Sie können sie deaktivieren, abgelaufene Anmeldeinformationen aktualisieren sowie sie löschen, wenn Sie sie nicht mehr benötigen.
 
 .Erforderliche Rollen
-Zum Erstellen und Verwalten von Föderationen ist die Rolle des Föderationsadministrators erforderlich.  Der Federation-Viewer kann die Federation-Seite anzeigen.link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
+Die Administratorrolle der Föderation ist erforderlich, um Föderationen zu erstellen und zu verwalten. Mit dem Föderations-Viewer kann die Föderationsseite angezeigt werden. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
 
 Sie können einer bestehenden Föderation auch eine zusätzliche verifizierte Domäne hinzufügen, wodurch Sie mehrere Domänen für Ihre föderierte Verbindung nutzen können.
 
@@ -82,7 +82,7 @@ Testen Sie die Verbindung einer vorhandenen Föderation, um sicherzustellen, das
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie die Registerkarte *Föderation* aus.
-. Wählen Sie das Aktionsmenüimage:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] neben dem Verbund, dem Sie eine verifizierte Domäne hinzufügen möchten, und wählen Sie *Verbindung testen* aus.
+. Wählen Sie das Aktionsmenü image:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] neben der Föderation, die Sie testen möchten, und wählen Sie *Verbindung testen*.
 . Wählen Sie *Test*.  Das System fordert Sie auf, sich mit Ihren Unternehmensanmeldeinformationen anzumelden.  Wenn die Verbindung erfolgreich ist, werden Sie zur NetApp Console weitergeleitet.  Wenn die Verbindung fehlschlägt, wird eine Fehlermeldung angezeigt, die auf das Problem mit der Föderation hinweist.
 . Wählen Sie *Fertig*, um zur Registerkarte *Föderation* zurückzukehren.
 
@@ -98,7 +98,7 @@ Deaktivieren Sie eine Föderation, bevor Sie sie löschen, beispielsweise wenn S
 .Schritte
 . Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie die Registerkarte *Föderation* aus.
-. Wählen Sie das Aktionsmenüimage:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] neben dem Verbund, dem Sie eine verifizierte Domäne hinzufügen möchten, und wählen Sie *Deaktivieren* aus.
+. Wählen Sie das Aktionsmenü image:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] neben der Föderation, die Sie deaktivieren möchten, und wählen Sie *Deaktivieren* aus.
 
 
 
@@ -113,7 +113,7 @@ Sie können eine Föderation nicht wiederherstellen, nachdem Sie sie gelöscht h
 IMPORTANT: Sie müssen eine Föderation deaktivieren, bevor Sie sie löschen können.  Sie können eine Föderation nach dem Löschen nicht wiederherstellen.
 
 .Schritte
-. Wählen Sie *Administration > Identität und Zugriff*.
+. Wählen Sie *Verwaltung > Identität und Zugriff*.
 . Wählen Sie *Föderationen* aus, um die Seite *Föderationen* anzuzeigen.
-. Wählen Sie das Aktionsmenüimage:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] neben dem Verbund, dem Sie eine verifizierte Domäne hinzufügen möchten, und wählen Sie *Löschen* aus.
+. Wählen Sie das Aktionsmenü image:button_3_vert_dots.png["ein Symbol mit drei vertikalen Punkten"] neben dem Verbund, den Sie löschen möchten, und wählen Sie *Löschen* aus.
 

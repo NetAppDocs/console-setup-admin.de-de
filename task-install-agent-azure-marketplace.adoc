@@ -30,7 +30,7 @@ NOTE: Stellen Sie einen Konsolenagenten in derselben Azure-Region wie die Cloud 
 
 == Schritt 1: Einrichten des Netzwerks
 
-Stellen Sie sicher, dass der Netzwerkstandort, an dem Sie den Konsolen-Agenten installieren möchten, die folgenden Anforderungen unterstützt. Diese Anforderungen ermöglichen dem Konsolen-Agenten die Verwaltung von Ressourcen in Ihrer Hybrid Cloud.
+Stellen Sie sicher, dass der Netzwerkstandort, an dem Sie den Console-Agenten installieren möchten, die folgenden Anforderungen erfüllt. Diese Anforderungen ermöglichen es dem Console-Agenten, Ressourcen in Ihrer Hybrid-Cloud zu verwalten.
 
 Azure-Region:: Wenn Sie Cloud Volumes ONTAP verwenden, sollte der Konsolenagent in derselben Azure-Region wie die von ihm verwalteten Cloud Volumes ONTAP -Systeme oder in der https://docs.microsoft.com/en-us/azure/availability-zones/cross-region-replication-azure#azure-cross-region-replication-pairings-for-all-geographies["Azure-Regionenpaar"^] für die Cloud Volumes ONTAP -Systeme.  Diese Anforderung stellt sicher, dass zwischen Cloud Volumes ONTAP und den zugehörigen Speicherkonten eine Azure Private Link-Verbindung verwendet wird.
 +
@@ -417,7 +417,7 @@ Beachten Sie beim Konfigurieren der VM Folgendes:
 +
 link:reference-ports-azure.html["Anzeigen von Sicherheitsgruppenregeln für Azure"] .
 
-** Identität*: Wählen Sie unter *Verwaltung* die Option *Systemseitig zugewiesene verwaltete Identität aktivieren*.
+** *Identität*: Wählen Sie unter *Verwaltung* die Option *Vom System zugewiesene verwaltete Identität aktivieren*.
 +
 Diese Einstellung ist wichtig, da eine verwaltete Identität es der virtuellen Maschine des Konsolenagenten ermöglicht, sich gegenüber der Microsoft Entra ID zu identifizieren, ohne Anmeldeinformationen angeben zu müssen. https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Erfahren Sie mehr über verwaltete Identitäten für Azure-Ressourcen"^] .
 
@@ -449,7 +449,7 @@ Lassen Sie den eingeschränkten Modus deaktiviert, um die Konsole im Standardmod
 
 
 .Ergebnis
-Sie haben jetzt den Konsolenagenten installiert und ihn mit Ihrer Konsolenorganisation eingerichtet.
+Sie haben nun den Console-Agenten installiert und ihn mit Ihrer Console-Organisation verbunden.
 
 Wenn Sie Azure Blob Storage im selben Azure-Abonnement haben, in dem Sie den Konsolen-Agent erstellt haben, wird auf der Seite *Systeme* automatisch ein Azure Blob Storage-System angezeigt. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Erfahren Sie, wie Sie Azure Blob Storage über die Konsole verwalten"^]
 

@@ -625,7 +625,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
 --
 Erstellen Sie eine benutzerdefinierte Azure-Rolle mit den erforderlichen Berechtigungen.  Sie weisen diese Rolle der Konsolen-Agent-VM zu.
 
-Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle mithilfe des Azure-Portals, Azure PowerShell, Azure CLI oder REST-API erstellen können.  Die folgenden Schritte zeigen, wie Sie die Rolle mithilfe der Azure CLI erstellen.  Wenn Sie eine andere Methode bevorzugen, lesen Sie bitte https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure-Dokumentation"^]
+Beachten Sie, dass Sie eine benutzerdefinierte Azure-Rolle über das Azure-Portal, Azure PowerShell, die Azure CLI oder die REST-API erstellen können. Die folgenden Schritte zeigen, wie Sie die Rolle mithilfe der Azure CLI erstellen. Wenn Sie eine andere Methode bevorzugen, lesen Sie bitte  https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles#steps-to-create-a-custom-role["Azure-Dokumentation"^].
 
 .Schritte
 . Wenn Sie die Software manuell auf Ihrem eigenen Host installieren möchten, aktivieren Sie eine systemseitig zugewiesene verwaltete Identität auf der VM, damit Sie die erforderlichen Azure-Berechtigungen über eine benutzerdefinierte Rolle bereitstellen können.
