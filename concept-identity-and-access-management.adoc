@@ -40,6 +40,10 @@ Das NetApp Console IAM basiert auf drei Komponententypen: Organisationskomponent
 Die organisatorischen Komponenten – Organisation, Ordner und Projekte – bilden eine Hierarchie, die festlegt, wie Ressourcen gruppiert und wie der Zugriff delegiert wird.
 
 Organisation:: Eine Organisation bildet die oberste Ebene des Console IAM-Systems und repräsentiert in der Regel Ihr Unternehmen. Ihre Organisation besteht aus Ordnern, Projekten, Mitgliedern, Rollen und Ressourcen. Ressourcen sind Projekten zugeordnet, und Mitgliedern werden Rollen auf Organisations-, Ordner- oder Projektebene zugewiesen.
+
+
+Sie können Ihre Organisation auch verifizieren, um sie mit Ihrer NetApp Geschäftskonto-Identität zu verknüpfen und so eine konsistente Governance über NetApp Systeme hinweg sicherzustellen. link:concept-verified-organization.html["Erfahren Sie mehr über verifizierte Organisationen in der NetApp Console"].
+
 Projekte:: Projekte gruppieren Speicherressourcen. Weisen Sie Ressourcen Projekten zu und gewähren Sie Benutzern Zugriff auf Projektebene. Ressourcen können mehreren Projekten zugeordnet sein. Benutzer mit Projektzugriff können die zugehörigen Ressourcen nutzen.
 +
 --

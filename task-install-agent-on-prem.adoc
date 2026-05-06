@@ -225,7 +225,7 @@ Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
 
 
  a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us (wird für Bereitstellungen im eingeschränkten Modus benötigt)
  a| 
 Um Bilder für Upgrades des Konsolenagenten zu erhalten.
 
@@ -738,15 +738,13 @@ Wenn Sie diese Systemvariablen nicht entfernen, schlägt die Installation fehl.
 +
 ** NetApp Console: Gehen Sie zu *Agents > Verwaltung > Agent bereitstellen > Lokal > Manuelle Installation*.
 +
-Wählen Sie aus, ob Sie die Agenteninstallationsdateien herunterladen oder eine URL zu den Dateien kopieren möchten.
+Wählen Sie das Herunterladen der Agenteninstallationsdateien oder eine URL zu den Dateien.
 
-
-
+** https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^] (Erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben).
 +
 
 NOTE: Laden Sie den "online"-Agenten-Installer herunter, der für die Verwendung in Ihrem Netzwerk oder in der Cloud vorgesehen ist. Ein separater "offline"-Installer ist für den Console-Agenten verfügbar, aber er wird nur bei Bereitstellungen im privaten Modus unterstützt.
 
-+
 ** NetApp Support-Website (erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^].
 
 
@@ -769,33 +767,46 @@ Dabei ist <Version> die Version des Konsolenagenten, die Sie heruntergeladen hab
 +
 Sie müssen Proxy-Informationen hinzufügen, falls Ihr Netzwerk einen Proxy für den Internetzugang benötigt. Sie können während der Installation einen expliziten Proxy hinzufügen. Die `--proxy` und `--cacert` Parameter sind optional und Sie werden nicht dazu aufgefordert, sie hinzuzufügen. Wenn Sie einen expliziten Proxyserver haben, müssen Sie die Parameter wie gezeigt eingeben.
 
-
-
-
-NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies tun, nachdem Sie einen Agenten installiert haben. link:reference-agent-maint-console-proxy.html["Erfahren Sie mehr über die Agentenwartungskonsole."].
-
 +
 
+NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun link:reference-agent-maint-console-proxy.html["Erfahren Sie mehr über die Agentenwartungskonsole."].
+
++
 Hier ist ein Beispiel für die Konfiguration eines expliziten Proxyservers mit einem CA-signierten Zertifikat:
 
 +
-
 [source, cli]
 ----
 ./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
 ----
 +
-`--proxy` konfiguriert den Konsolenagenten für die Verwendung eines HTTP- oder HTTPS-Proxyservers in einem der folgenden Formate:
+`--proxy`Konfiguriert den Konsolenagenten zur Verwendung eines HTTP- oder HTTPS-Proxyserver mithilfe eines der folgenden Formate:
 
-+ * \http://address:port * \http://user-name:password@address:port * \http://domain-name%92user-name:password@address:port * \https://address:port * \https://user-name:password@address:port * \https://domain-name%92user-name:password@address:port
++
+** \http://Adresse:Port
+** \http://Benutzername:Passwort@Adresse:Port
+** \http://Domänenname%92Benutzername:Passwort@Adresse:Port
+** \https://Adresse:Port
+** \https://Benutzername:Passwort@Adresse:Port
+** \https://Domänenname%92Benutzername:Passwort@Adresse:Port
++
+Beachten Sie Folgendes:
 
-+ Beachten Sie Folgendes:
++
+*** Der Benutzer kann ein lokaler Benutzer oder ein Domänenbenutzer sein.
+*** Für einen Domänenbenutzer müssen Sie den ASCII-Code für ein \ verwenden, wie oben gezeigt.
+*** Der Console-Agent unterstützt keine Benutzernamen oder Passwörter, die das @-Zeichen enthalten.
+*** Wenn das Kennwort eines der folgenden Sonderzeichen enthält, müssen Sie dieses Sonderzeichen durch Voranstellen eines Backslashs maskieren: & oder !
++
+Beispiel:
 
-+ ** Der Benutzer kann ein lokaler Benutzer oder ein Domänenbenutzer sein. ** Für einen Domänenbenutzer müssen Sie den ASCII-Code für ein \ verwenden, wie oben gezeigt. ** Der Console-Agent unterstützt keine Benutzernamen oder Passwörter, die das @-Zeichen enthalten. ** Wenn das Passwort eines der folgenden Sonderzeichen enthält, müssen Sie dieses Sonderzeichen durch Voranstellen eines Backslashs maskieren: & oder !
++
+\http://bxpproxyuser:netapp1\!@Adresse:3128
 
-+ Zum Beispiel:
 
-+ \http://bxpproxyuser:netapp1\!@address:3128
+
+
 
 . Wenn Sie Podman verwendet haben, müssen Sie den Aardvark-DNS-Port anpassen.
 +

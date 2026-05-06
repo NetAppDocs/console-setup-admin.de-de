@@ -51,7 +51,7 @@ Konsolenagenten, die bei Ihrem Cloud-Anbieter bereitgestellt werden, benötigen 
 
 
  a| 
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us (wird für Bereitstellungen im eingeschränkten Modus benötigt)
  a| 
 Um Bilder für Upgrades des Konsolenagenten zu erhalten.
 

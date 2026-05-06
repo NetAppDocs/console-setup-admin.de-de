@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task-organization-verify.html 
+keywords: adding, creating, netapp support site account, nss, update account, update nss account, update nss credentials, delete nss account, remove nss account, change working environment, working environment nss, digital wallet, license, change system, system nss, licenses and subscriptions 
+summary: Verknüpfen Sie ein NetApp Support Site-Konto mit Ihrer NetApp Console -Organisation, um wichtige Workflows für Cloud Volumes ONTAP zu aktivieren.  Diese NSS-Anmeldeinformationen sind mit der gesamten Organisation verknüpft. 
+---
+= Überprüfen Sie Ihre NetApp Console-Organisation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie Digital Advisor verwenden, müssen Sie Ihre Console-Organisation verifizieren, falls Ihr Unternehmen mehrere Geschäftskonten bei NetApp hat. Digital Advisor zeigt möglicherweise mehrere NetApp-Konten an, die nicht zu Ihrer Console-Organisation gehören. Um sicherzustellen, dass Sie nur Ressourcen sehen, die Ihrer Console-Organisation zugeordnet sind, können Sie die Unternehmens-ID verifizieren, die Sie mit Ihrer Console-Organisation verknüpfen möchten.
+
+Die Konsole unterstützt auch die Zuordnung eines NSS-Kontos pro Benutzerkonto. link:task-manage-user-credentials.html["Erfahren Sie, wie Sie Anmeldeinformationen auf Benutzerebene verwalten"] .
+
+
+
+== Bevor Sie beginnen
+
+Sie benötigen die Administratorrolle der Organisation, um Ihre Organisation zu verifizieren, und Ihr Benutzer muss außerdem mit einem NetApp Support Site (NSS)-Konto verknüpft sein. link:task-adding-nss-accounts["Erfahren Sie, wie Sie Ihr NSS-Konto verknüpfen"].
+
+
+NOTE: Wenn Ihr Unternehmen nur ein Geschäftskonto besitzt und Ihr Benutzer mit einem NetApp Support Site-Konto verknüpft ist, wird Ihre Organisation automatisch verifiziert.
+
+
+
+== Bestätigen Sie Ihre Organisation
+
+.Schritte
+. Wenn Ihr Benutzer Zugriff auf mehr als eine Organisation hat, wählen Sie die zu überprüfende Organisation aus dem Dropdown-Menü „Organisation“ aus.
+. Unter *Administration > Identität und Zugriff*.
+. Wählen Sie *Organisation* aus.
+

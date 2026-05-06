@@ -93,12 +93,9 @@ NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese 
 
 
 |===
-a| \https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io a| Um Bilder für Upgrades des Konsolenagenten zu erhalten.
+a| https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us (erforderlich für Bereitstellungen im eingeschränkten Modus) a| Zum Abrufen von Images für Console-Agent-Upgrades.
 
-* Wenn Sie auf die aktuellen Endpunkte in Ihrer Firewall aktualisieren, funktionieren Ihre vorhandenen Agenten weiterhin.
-
-
-a| https://occmclientinfragov.azurecr.us https://bluexpinfraprod.azurecr.io a| Um Images für Console-Agent-Upgrades zu erhalten.
+a| https://occmclientinfragov.azurecr.us a| Um Images für Console-Agent-Upgrades zu erhalten.
 
 ^1^ NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese sicherer sind, und Endpunkte der Option 2 nicht zuzulassen.  Beachten Sie Folgendes zu diesen Endpunkten:
 

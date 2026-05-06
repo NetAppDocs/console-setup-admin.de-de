@@ -15,7 +15,7 @@ summary: Bei Bedarf können Sie den Namen Ihrer NetApp Console Konsolenorganisat
 
 
 [role="lead"]
-Ihre NetApp Console Konsolenorganisation hat einen Namen und eine ID.  Sie können einen Namen für Ihre Organisation auswählen, um sie leichter zu identifizieren.  Möglicherweise müssen Sie für bestimmte Integrationen auch die Organisations-ID abrufen.
+Ihre NetApp Console-Organisation hat einen Namen und eine ID. Sie können Ihrer Organisation einen Namen geben, um sie zu identifizieren. Möglicherweise müssen Sie auch die Organisations-ID für API-Aufrufe kennen.
 
 
 
