@@ -217,6 +217,8 @@ sidebar:
           entries:
           - title: Sicherungs- und Wiederherstellungsrollen
             url: "/reference-iam-backup-rec-roles.html"
+          - title: Datenklassifizierungsrollen
+            url: "/reference-iam-data-classification.html"
           - title: Disaster Recovery-Rollen
             url: "/reference-iam-disaster-rec-roles.html"
           - title: Ransomware-Resilienzrollen
