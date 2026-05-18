@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: reference-iam-licenses-subscriptions.html 
+keywords: licenses, subscriptions, digital wallet, operational governance, access delegation, rbac, IAM roles 
+summary: NetApp Licenses and Subscriptions-Rollen ermöglichen es Ihnen, Benutzern in der NetApp Console verschiedene Rollen zuzuweisen, um die notwendigen Aufgaben für die Lizenz- und Abonnementverwaltung zu erledigen. 
+---
+= Licenses and subscriptions Rollen in NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Um Licenses and subscriptions in der NetApp Console zu verwalten, müssen Sie sicherstellen, dass die Benutzer über die entsprechenden Berechtigungen verfügen. Die Verwaltung von Licenses and subscriptions ist unerlässlich für die effektive Bereitstellung und den reibungslosen Ablauf Ihrer Dienste in der Console. Wie Sie Rollen zuweisen, hängt von Ihren eigenen Geschäfts- und Speichermanagementpraktiken ab.
+
+Licenses and subscriptions verwenden die folgenden Rollen:
+
+* *Licenses and subscriptions-Administrator*
+* *Licenses and subscriptions-Viewer*
+
+
+[cols="40,30,30"]
+|===
+| Fähigkeit | Licenses and subscriptions Admin | Licenses and subscriptions-Viewer 
+
+
+| Lizenz hinzufügen | Ja | Nein 
+
+
+| Lizenz anzeigen | Ja | Ja 
+
+
+| Lizenz aktualisieren | Ja | Nein 
+
+
+| Abonnement hinzufügen | Ja | Nein 
+
+
+| Abonnement ändern | Ja | Nein 
+
+
+| Abonnement ansehen | Ja | Ja 
+
+
+| Abonnement entfernen | Ja | Nein 
+
+
+| Lizenz löschen | Ja | Nein 
+|===

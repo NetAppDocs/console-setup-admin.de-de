@@ -73,6 +73,12 @@ Nachfolgend finden Sie eine Liste der Rollen in der Anwendungskategorie.  Jede R
 | link:reference-iam-keystone-roles.html["Keystone -Viewer"] | Benutzer mit der Keystone Viewer-Rolle KÖNNEN KEINE Serviceanfragen erstellen.  Ermöglicht Benutzern die Überwachung und Anzeige von Verbrauch, Anlagen und Verwaltungsinformationen innerhalb des Keystone Mandanten, auf den sie zugreifen. 
 
 
+| link:reference-iam-licenses-subscriptions.html["Lizenz- und Abonnement-Admin"] | Benutzer mit der Administratorrolle „Lizenz und Abonnement“ können Direktlizenzen und Marktplatz-Abonnements für die NetApp Console und zugehörige Datendienste erstellen, aktualisieren und löschen. 
+
+
+| link:reference-iam-licenses-subscriptions.html["Lizenz- und Abonnementbetrachter"] | Benutzer mit der Rolle „Lizenz- und Abonnementbetrachter“ können direkte Lizenzen und Marktplatzabonnements für die NetApp Console und zugehörige Datendienste einsehen. 
+
+
 | ONTAP Mediator-Setup-Rolle | Dienstkonten mit der Setup-Rolle „ONTAP Mediator“ können Dienstanfragen erstellen.  Diese Rolle ist in einem Dienstkonto erforderlich, um eine Instanz deslink:https://docs.netapp.com/us-en/ontap/mediator/mediator-overview-concept.html["ONTAP Cloud Mediator"^] . 
 
 

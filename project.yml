@@ -207,6 +207,8 @@ sidebar:
           entries:
           - title: Google Cloud NetApp Volumes Rollen
             url: "/reference-iam-gcnv-roles.html"
+          - title: Licenses and subscriptions Rollen
+            url: "/reference-iam-licenses-subscriptions.html"
           - title: Keystone
             url: "/reference-iam-keystone-roles.html"
           - title: Betriebsunterstützungsanalyst
