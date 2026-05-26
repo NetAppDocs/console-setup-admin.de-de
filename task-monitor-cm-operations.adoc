@@ -142,7 +142,7 @@ Sie können bestimmte Arten von Benachrichtigungen per E-Mail senden, sodass Sie
 
 [NOTE]
 ====
-* Die Konsole sendet E-Mail-Benachrichtigungen für den Agenten, Lizenzen und Abonnements, NetApp Copy and Sync und NetApp Backup and Recovery.
+* Die Konsole versendet E-Mail-Benachrichtigungen für Agenten, Lizenzen und Abonnements, NetApp Copy and Sync, NetApp Backup and Recovery und NetApp Ransomware Resilience.
 * Das Senden von E-Mail-Benachrichtigungen wird nicht unterstützt, wenn der Konsolenagent auf einer Site ohne Internetzugang installiert ist.
 
 
