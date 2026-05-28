@@ -16,8 +16,6 @@ summary: Wenn Sie eine Verbindung mit einer anderen Domain als Ihrer E-Mail-Doma
 [role="lead"]
 Wenn Sie eine Verbindung mit einer anderen Domain als Ihrer E-Mail-Domain herstellen möchten, müssen Sie zunächst nachweisen, dass Sie Inhaber dieser Domain sind. Sie können nur verifizierte Domains für die Föderation verwenden.
 
-Dieser Workflow zur Domänenverifizierung unterscheidet sich von dem zur Organisationsverifizierung. link:task-verify-organization.html["Erfahren Sie, wie Sie Ihre Organisation verifizieren können"].
-
 .Erforderliche Rollen
 Die Administratorrolle der Föderation ist erforderlich, um Föderationen zu erstellen und zu verwalten. Mit dem Föderations-Viewer kann die Föderationsseite angezeigt werden. link:reference-iam-predefined-roles.html["Erfahren Sie mehr über Zugriffsrollen."]
 

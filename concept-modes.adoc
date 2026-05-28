@@ -125,16 +125,19 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 | Google Cloud-Speicher | Ja 
 
 
+| Keystone-Abonnementzugriff | Ja 
+
+
 | On-Premises- ONTAP -Cluster | Für die Erkennung und Verwaltung erforderlich. Sie können die direkte Erkennung ohne einen Console-Agent verwenden, aber für die Nutzung der Verwaltungsfunktionen benötigen Sie einen Agent. 
 
 
 | StorageGRID | Ja 
 
 
-| Arbeitslasten | Nein 
+| Arbeitslasten | Nein .8+| *Datendienste* 
 
 
-.8+| *Datendienste* | NetApp Backup and Recovery | Ja 
+| NetApp Backup and Recovery | Ja 
 
 
 | NetApp Klassifizierung | Ja 
@@ -155,10 +158,10 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 | NetApp Cloud Tiering | Ja 
 
 
-| NetApp Volume Caching | Ja 
+| NetApp Volume Caching | Ja .5+| *NetApp Supportvertragsfunktionen* 
 
 
-.5+| *NetApp Supportvertragsfunktionen* | Digitaler Berater | Ja 
+| Digitaler Berater | Ja 
 
 
 | Wirtschaftlichkeit | Ja 
@@ -170,10 +173,10 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 | Software-Updates | Nein 
 
 
-| Nachhaltigkeit | Ja 
+| Nachhaltigkeit | Ja .12+| *Administrative Merkmale* 
 
 
-.12+| *Administrative Merkmale* | Prüfung | Nein 
+| Prüfung | Nein 
 
 
 | Automatisierungszentrum | Nein 

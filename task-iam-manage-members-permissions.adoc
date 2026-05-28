@@ -30,6 +30,7 @@ Beachten Sie Folgendes bezüglich der Zugriffsgewährung in der NetApp Console:
 * Alle Benutzer müssen sich zunächst für die NetApp Console registrieren, bevor ihnen Zugriff auf Ressourcen gewährt werden kann, auch wenn sie Teil einer föderierten Gruppe sind.
 * Sie müssen jedem Benutzer in der Konsole explizit eine Rolle zuweisen, bevor er auf Ressourcen zugreifen kann, selbst wenn er Mitglied einer Verbundgruppe ist, der eine Rolle zugewiesen wurde.
 * Sie können Dienstkonten direkt über die Konsole hinzufügen und ihnen Rollen zuweisen.
+* Sie können bei der Zuweisung von Rollen an Benutzer oder Dienstkonten aus den unterstützten Rollen auswählen.
 
 
 
@@ -74,7 +75,7 @@ Beachten Sie Folgendes:
 
 . *Wählen Sie eine Kategorie* und dann eine *Rolle* aus, die dem Mitglied Berechtigungen für die Ressourcen erteilt, die mit der von Ihnen ausgewählten Organisation, dem Ordner oder dem Projekt verknüpft sind.
 +
-link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
+In der Dropdown-Liste werden nur unterstützte Rollen angezeigt. link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"].
 
 . Um Zugriff auf weitere Ordner, Projekte oder Rollen zu gewähren, wählen Sie *Rolle hinzufügen*, wählen Sie die Ordner-, Projekt- oder Rollenkategorie und anschließend eine Rolle aus.
 . Wählen Sie *Hinzufügen*.
@@ -163,7 +164,7 @@ Beachten Sie Folgendes:
 
 . Wählen Sie eine *Kategorie* und anschließend eine *Rolle* aus, die dem Mitglied Berechtigungen für die Ressourcen in der von Ihnen ausgewählten Organisation, dem Ordner oder dem Projekt erteilt.
 +
-link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
+In der Dropdown-Liste werden nur unterstützte Rollen angezeigt. link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"].
 
 . Um Zugriff auf weitere Ordner, Projekte oder Rollen zu gewähren, wählen Sie *Rolle hinzufügen*, wählen Sie die Ordner-, Projekt- oder Rollenkategorie und anschließend eine Rolle aus.
 
