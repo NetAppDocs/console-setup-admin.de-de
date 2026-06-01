@@ -170,9 +170,12 @@ Sie können auch direkt vom Konsolen-Agent-Host in den folgenden Verzeichnissen 
 
 === Deaktivieren Sie Konfigurationsprüfungen für manuelle Installationen
 
+
+
+=== Deaktivieren Sie Konfigurationsprüfungen für manuelle Installationen
+
 Es kann vorkommen, dass Sie die Konfigurationsprüfungen deaktivieren müssen, die während der Installation die ausgehende Konnektivität überprüfen. Wenn Sie beispielsweise einen Agenten in Ihrer Government Cloud-Umgebung manuell installieren, müssen Sie die Konfigurationsprüfungen deaktivieren, da die Installation sonst fehlschlägt.
 
-.Schritte
 Sie deaktivieren die Konfigurationsprüfung, indem Sie das Flag _skipConfigCheck_ in der Datei _com/opt/application/netapp/service-manager-2/config.json_ setzen. Standardmäßig ist dieses Flag auf „false“ gesetzt und die Konfigurationsprüfung überprüft den ausgehenden Zugriff für den Agenten. Setzen Sie dieses Flag auf „true“, um die Prüfung zu deaktivieren. Machen Sie sich mit der JSON-Syntax vertraut, bevor Sie diesen Schritt ausführen.
 
 Um die Konfigurationsprüfung wieder zu aktivieren, führen Sie diese Schritte aus und setzen Sie das Flag _skipConfigCheck_ auf „false“.
@@ -181,8 +184,7 @@ Um die Konfigurationsprüfung wieder zu aktivieren, führen Sie diese Schritte a
 . Greifen Sie als Root oder mit Sudo-Berechtigungen auf den Konsolen-Agent-Host zu.
 . Erstellen Sie eine Sicherungskopie der Datei _/opt/application/netapp/service-manager-2/config.json_, um sicherzustellen, dass Sie Ihre Änderungen rückgängig machen können.
 . Stoppen Sie den Dienst Service Manager 2, indem Sie den folgenden Befehl ausführen:
-
-
++
 [source, cli]
 ----
 systemctl stop netapp-service-manager.service
