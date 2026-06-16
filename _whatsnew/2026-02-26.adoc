@@ -28,8 +28,8 @@ Die Version 4.4.0 enthält Aktualisierungen der folgenden NetApp Console-Kompone
 | Konsolenagent | 4.4.0 | Gehen Sie zu  https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-02-09.html["Was ist neu auf der NetApp Console-Seite"^] und informieren Sie sich über die Änderungen in Version 4.4.0. 
 
 
-| Sicherung und Wiederherstellung | 5.0.3 (2. März 2026) | Gehe zu https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["Was ist neu auf der Seite NetApp Backup and Recovery"^]. 
+| NetApp Backup and Recovery | 5.0.3 (2. März 2026) | Gehe zu https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["Was ist neu auf der Seite NetApp Backup and Recovery"^]. 
 
 
-| Einstufung | 1.5.1 (9. Februar 2026) | Gehe zu https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["Was ist neu auf der Seite NetApp Klassifizierung"^]. 
+| NetApp Data Classification | 1.5.1 (9. Februar 2026) | Gehe zu https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["Was ist neu auf der Seite NetApp Klassifizierung"^]. 
 |===
