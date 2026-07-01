@@ -100,4 +100,11 @@ Der Console-Agent muss für NetApp -Workloads auf den folgenden Endpunkt zugreif
  a| 
 Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und FSx for ONTAP-basierte Workloads zu verwalten und zu betreiben.
 
+
+
+ a| 
+\https://ws.workloads.bluexp.netapp.com
+ a| 
+Wird vom Workload Factory Backend verwendet, um den Console Agenten nach ONTAP-Operationen abzufragen.
+
 |===
