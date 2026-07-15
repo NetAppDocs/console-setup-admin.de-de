@@ -18,6 +18,7 @@ Sie können die Google Cloud-Anmeldeinformationen, die mit einer Console-Agent-V
 
 
 
+[[associate-a-marketplace-subscription-with-google-cloud-credentials]]
 == Verknüpfen Sie ein Marketplace-Abonnement mit Google Cloud-Anmeldeinformationen
 
 Wenn Sie einen Console-Agenten in Google Cloud bereitstellen, erstellt die Console standardmäßig einen Satz von Anmeldeinformationen, die mit einer Console-Agent-VM-Instanz verknüpft sind. Sie können das Google Cloud Marketplace-Abonnement, das mit diesen Anmeldeinformationen verknüpft ist, jederzeit ändern. Das Abonnement ermöglicht es Ihnen, ein Cloud Volumes ONTAP System mit nutzungsbasierter Abrechnung zu erstellen und andere Datendienste zu nutzen.
@@ -88,6 +89,7 @@ image:screenshot_gcp_associate.gif["Ein Screenshot der Abonnementzuweisungsseite
 
 
 
+[[troubleshoot-the-marketplace-subscription-process]]
 == Fehlerbehebung beim Marketplace-Abonnementprozess
 
 Manchmal kann das Abonnieren von NetApp Datendiensten über den Google Cloud Marketplace aufgrund fehlerhafter Berechtigungen oder weil die Weiterleitung zur Console versehentlich nicht befolgt wurde, fragmentiert werden. Wenn dies passiert, verwenden Sie die folgenden Schritte, um den Abonnementprozess abzuschließen.

@@ -18,6 +18,7 @@ Erfahren Sie, wie die NetApp Console Google Cloud-Anmeldeinformationen verwendet
 
 
 
+[[project-and-permissions-for-netapp-console]]
 == Projekt und Berechtigungen für die NetApp Console
 
 Bevor Sie die Konsole zum Verwalten von Ressourcen in Ihrem Google Cloud-Projekt verwenden können, müssen Sie zunächst einen Konsolen-Agenten bereitstellen.  Der Agent darf nicht bei Ihnen vor Ort oder bei einem anderen Cloud-Anbieter ausgeführt werden.
@@ -41,6 +42,7 @@ Informationen zum Einrichten von Berechtigungen finden Sie auf den folgenden Sei
 
 
 
+[[credentials-and-marketplace-subscriptions]]
 == Anmeldeinformationen und Marktplatzabonnements
 
 Wenn Sie einen Konsolen-Agenten in Google Cloud bereitstellen, erstellt die Konsole einen Standardsatz von Anmeldeinformationen für das Google Cloud-Dienstkonto in dem Projekt, in dem sich der Konsolen-Agent befindet.  Diese Anmeldeinformationen müssen mit einem Google Cloud Marketplace-Abonnement verknüpft sein, damit Sie für Cloud Volumes ONTAP und NetApp -Datendienste bezahlen können.
@@ -56,6 +58,7 @@ Beachten Sie Folgendes zu Google Cloud-Anmeldeinformationen und Marktplatz-Abonn
 
 
 
+[[project-for-cloud-volumes-ontap]]
 == Projekt für Cloud Volumes ONTAP
 
 Cloud Volumes ONTAP kann sich im selben Projekt wie der Konsolenagent oder in einem anderen Projekt befinden.  Um Cloud Volumes ONTAP in einem anderen Projekt bereitzustellen, müssen Sie zuerst das Dienstkonto und die Rolle des Konsolenagenten zu diesem Projekt hinzufügen.

@@ -18,12 +18,14 @@ Sie müssen dem Konsolenagenten die entsprechenden Berechtigungen erteilen, dami
 
 
 
+[[aws-permissions]]
 == AWS-Berechtigungen
 
 Die NetApp Console erfordert AWS-Berechtigungen für einen Konsolenagenten und für einzelne Dienste.
 
 
 
+[[console-agents]]
 === Konsolenagenten
 
 [cols="20,60,20"]
@@ -35,6 +37,7 @@ Die NetApp Console erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -46,6 +49,7 @@ Die NetApp Console erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 |===
 
 
+[[cloud-volumes-ontap]]
 === Cloud Volumes ONTAP
 
 [cols="20,60,20"]
@@ -57,6 +61,7 @@ Die NetApp Console erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -74,6 +79,7 @@ Die NetApp Console erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 |===
 
 
+[[fsx-for-ontap]]
 === FSx für ONTAP
 
 [cols="20,60,20"]
@@ -85,6 +91,7 @@ Die NetApp Console erfordert AWS-Berechtigungen für einen Konsolenagenten und f
 |===
 
 
+[[netapp-cloud-tiering]]
 === NetApp Cloud Tiering
 
 [NOTE]
@@ -109,12 +116,14 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 |===
 
 
+[[azure-permissions]]
 == Azure-Berechtigungen
 
 Die Konsole erfordert Azure-Berechtigungen für einen Konsolen-Agenten und für einzelne Dienste.
 
 
 
+[[console-agent]]
 === Konsolenagent
 
 [cols="20,60,20"]
@@ -137,6 +146,7 @@ link:reference-permissions-azure.html["Azure-Berechtigungen für einen Konsolen-
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -160,6 +170,7 @@ Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwende
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -171,12 +182,14 @@ Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwende
 |===
 
 
+[[google-cloud-permissions]]
 == Google Cloud-Berechtigungen
 
 Die Konsole erfordert Google Cloud-Berechtigungen für einen Konsolenagenten und für einzelne Dienste.
 
 
 
+[[console-agents]]
 === Konsolenagenten
 
 [cols="20,60,20"]
@@ -191,6 +204,7 @@ Die Konsole erfordert Google Cloud-Berechtigungen für einen Konsolenagenten und
 |===
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -215,6 +229,7 @@ Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwende
 |===
 
 
+[[netapp-copy-and-sync]]
 === NetApp Copy and Sync
 
 [cols="20,60,20"]
@@ -229,12 +244,14 @@ Wenn Sie NetApp Backup and Recovery zum Sichern von Cloud Volumes ONTAP verwende
 |===
 
 
+[[storagegrid-permissions]]
 == StorageGRID Berechtigungen
 
 Die Konsole benötigt StorageGRID -Berechtigungen für zwei Dienste.
 
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 [cols="20,60,20"]
@@ -246,6 +263,7 @@ Die Konsole benötigt StorageGRID -Berechtigungen für zwei Dienste.
 |===
 
 
+[[netapp-cloud-tiering]]
 === NetApp Cloud Tiering
 
 [NOTE]

@@ -25,6 +25,7 @@ Durch die Bereitstellung eines Agenten in Google Cloud wird eine VM-Instanz gest
 
 
 
+[[step-1-review-host-requirements]]
 == Schritt 1: Hostanforderungen prüfen
 
 Die Konsolenagent-Software muss auf einem Host ausgeführt werden, der bestimmte Betriebssystemanforderungen, RAM-Anforderungen, Portanforderungen usw. erfüllt.
@@ -156,6 +157,8 @@ Nicht unterstützt
 |===
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == Schritt 2: Installieren Sie Podman oder Docker Engine
 
 Abhängig von Ihrem Betriebssystem ist vor der Installation des Agenten entweder Podman oder Docker Engine erforderlich.
@@ -341,6 +344,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == Schritt 3: Einrichten des Netzwerks
 
 Richten Sie Ihr Netzwerk so ein, dass der Konsolenagent Ressourcen und Prozesse in Ihrer Hybrid-Cloud-Umgebung verwalten kann.  Sie müssen beispielsweise sicherstellen, dass Verbindungen zu Zielnetzwerken verfügbar sind und dass ausgehender Internetzugang verfügbar ist.
@@ -445,6 +449,8 @@ Aktivieren von NTP:: Wenn Sie planen, NetApp Data Classification zum Scannen Ihr
 
 
 
+[[step-4-set-up-permissions-for-the-console-agent]]
+[[agent-permissions-google]]
 == Schritt 4: Berechtigungen für den Konsolen-Agent einrichten
 
 Ein Google Cloud-Dienstkonto ist erforderlich, um dem Konsolenagenten die Berechtigungen zu erteilen, die die Konsole zum Verwalten von Ressourcen in Google Cloud benötigt.  Wenn Sie den Konsolen-Agenten erstellen, müssen Sie dieses Dienstkonto mit der Konsolen-Agent-VM verknüpfen.
@@ -504,6 +510,7 @@ Weitere Einzelheiten finden Sie unter https://cloud.google.com/iam/docs/granting
 
 
 
+[[step-5-set-up-shared-vpc-permissions]]
 == Schritt 5: Einrichten freigegebener VPC-Berechtigungen
 
 Wenn Sie eine gemeinsam genutzte VPC verwenden, um Ressourcen in einem Serviceprojekt bereitzustellen, müssen Sie Ihre Berechtigungen vorbereiten.
@@ -556,6 +563,7 @@ Hinweise:
 ====
 
 
+[[step-6-enable-google-cloud-apis]]
 == Schritt 6: Google Cloud APIs aktivieren
 
 Bevor Sie einen Console-Agenten in Google Cloud bereitstellen können, müssen mehrere Google Cloud APIs aktiviert werden.
@@ -580,6 +588,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud-D
 
 
 
+[[step-7-install-the-console-agent]]
 == Schritt 7: Installieren des Konsolenagenten
 
 Nachdem die Voraussetzungen erfüllt sind, können Sie die Software manuell auf Ihrem eigenen Linux-Host installieren.
@@ -746,6 +755,7 @@ Wenn Sie Google Cloud Storage-Buckets im selben Google Cloud-Konto haben, in dem
 
 
 
+[[step-8-provide-permissions-to-console-agent]]
 == Schritt 8: Erteilen Sie dem Konsolenagenten Berechtigungen
 
 Sie müssen dem Konsolenagenten die Google Cloud-Berechtigungen erteilen, die Sie zuvor eingerichtet haben.  Durch die Bereitstellung der Berechtigungen kann der Konsolenagent Ihre Daten und Speicherinfrastruktur in Google Cloud verwalten.

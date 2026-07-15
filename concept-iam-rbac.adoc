@@ -26,6 +26,7 @@ Sie können Benutzern je nach ihren Verantwortlichkeiten mehrere Rollen für den
 
 
 
+[[types-of-console-organization-members]]
 == Arten von Konsolenorganisationsmitgliedern
 
 Es gibt drei Arten von Mitgliedern in einer NetApp Console-Organisation:
@@ -39,6 +40,7 @@ link:task-iam-manage-members-permissions.html#add-members["Erfahren Sie, wie Sie
 
 
 
+[[predefined-roles-in-netapp-console]]
 == Vordefinierte Rollen in der NetApp Console
 
 Die NetApp Console enthält vordefinierte Rollen, die Sie Organisationsmitgliedern zuweisen können. Jede Rolle beinhaltet Berechtigungen, die festlegen, welche Aktionen ein Mitglied innerhalb seines zugewiesenen Bereichs (Organisation, Ordner oder Projekt) durchführen kann.

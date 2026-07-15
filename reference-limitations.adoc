@@ -20,10 +20,12 @@ Diese Einschränkungen gelten speziell für die Einrichtung der NetApp Console u
 
 
 
+[[console-agent-limitations]]
 == Einschränkungen des Konsolenagenten
 
 
 
+[[possible-conflict-with-ip-addresses-in-the-172-range]]
 === Möglicher Konflikt mit IP-Adressen im Bereich 172
 
 Die NetApp Console stellt einen Agenten mit zwei Schnittstellen bereit, die IP-Adressen in den Bereichen 172.17.0.0/16 und 172.18.0.0/16 haben.
@@ -34,6 +36,7 @@ Siehe Knowledge Base-Artikellink:https://kb.netapp.com/Advice_and_Troubleshootin
 
 
 
+[[ssl-decryption-supported-only-for-cloud-volumes-ontap]]
 === SSL-Entschlüsselung wird nur für Cloud Volumes ONTAP unterstützt
 
 Transparente Proxyserver werden nur für Agenten unterstützt, die mit Cloud Volumes ONTAP verknüpft sind. Sie können keinen transparenten Proxy für einen Agenten verwenden, wenn er mit anderen NetApp Datenservices verwendet wird. Wenn Sie NetApp Datenservices mit Cloud Volumes ONTAP verwenden, erstellen Sie einen dedizierten Agenten für Cloud Volumes ONTAP, bei dem Sie einen transparenten Proxyserver verwenden können.
@@ -42,6 +45,7 @@ Für mehr Sicherheit haben Sie die Möglichkeit,link:task-installing-https-cert.
 
 
 
+[[blank-page-when-loading-the-local-ui]]
 === Leere Seite beim Laden der lokalen Benutzeroberfläche
 
 Wenn Sie die webbasierte Konsole laden, die auf einem Agenten ausgeführt wird, kann es vorkommen, dass die Schnittstelle manchmal nicht angezeigt wird und Sie nur eine leere Seite erhalten.
@@ -50,12 +54,14 @@ Dieses Problem hängt mit einem Caching-Problem zusammen.  Die Problemumgehung b
 
 
 
+[[shared-linux-hosts-are-not-supported]]
 === Gemeinsam genutzte Linux-Hosts werden nicht unterstützt
 
 Der Agent wird auf einer VM, die mit anderen Anwendungen gemeinsam genutzt wird, nicht unterstützt.  Die VM muss der Agentensoftware gewidmet sein.
 
 
 
+[[third-party-agents-and-extensions]]
 === Drittanbieter-Agenten und Erweiterungen
 
 Agenten von Drittanbietern oder VM-Erweiterungen werden auf der Agenten-VM nicht unterstützt.

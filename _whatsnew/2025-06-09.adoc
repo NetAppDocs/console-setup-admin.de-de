@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-53]]
 === Connector 3.9.53
 
 Diese Version des BlueXP Connector enthält Sicherheitsverbesserungen und Fehlerbehebungen.
@@ -12,18 +13,21 @@ Die Version 3.9.53 ist für den Standardmodus und den eingeschränkten Modus ver
 
 
 
+[[disk-space-usage-alerts]]
 === Warnungen zur Speicherplatznutzung
 
 Das Benachrichtigungscenter enthält jetzt Warnungen zur Speicherplatznutzung auf dem Connector.link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-maintain-connectors.html#monitor-disk-space["Erfahren Sie mehr."^]
 
 
 
+[[audit-improvements]]
 === Audit-Verbesserungen
 
 Die Zeitleiste enthält jetzt Anmelde- und Abmeldeereignisse für Benutzer.  Sie können die Anmeldeaktivität sehen, was bei der Prüfung und Sicherheitsüberwachung hilfreich sein kann.  API-Benutzer mit der Rolle „Organisationsadministrator“ können die E-Mail-Adresse des angemeldeten Benutzers anzeigen, indem sie Folgendes angeben: `includeUserData=true`` Parameter wie im Folgenden: `/audit/<account_id>?includeUserData=true` .
 
 
 
+[[keystone-subscription-management-available-in-bluexp]]
 === Keystone -Abonnementverwaltung in BlueXP verfügbar
 
 Sie können Ihr NetApp Keystone Abonnement von BlueXP aus verwalten.
@@ -32,6 +36,7 @@ link:https://docs.netapp.com/us-en/keystone-staas/index.html["Erfahren Sie mehr 
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP Identitäts- und Zugriffsmanagement (IAM)
 
 
@@ -44,6 +49,7 @@ link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-user-settings.html#ta
 
 
 
+[[workloads]]
 === Arbeitslasten
 
 Sie können jetzt Anmeldeinformationen für Amazon FSx for NetApp ONTAP auf der Anmeldeinformationsseite in BlueXP anzeigen und löschen.

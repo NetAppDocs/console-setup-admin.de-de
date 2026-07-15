@@ -18,6 +18,7 @@ Deinstallieren Sie einen Console-Agenten, um Probleme zu beheben oder ihn dauerh
 
 
 
+[[uninstall-the-agent-when-it-has-outbound-connectivity]]
 == Deinstallieren Sie den Agenten, wenn er über ausgehende Konnektivität verfügt
 
 Wenn Sie den Standardmodus oder den eingeschränkten Modus verwenden (mit anderen Worten, der Agent-Host verfügt über eine ausgehende Konnektivität), sollten Sie die folgenden Schritte ausführen, um den Agenten zu deinstallieren.
@@ -35,6 +36,7 @@ _silent_ führt das Skript aus, ohne Sie zur Bestätigung aufzufordern.
 
 
 
+[[uninstall-the-agent-when-it-has-no-outbound-connectivity]]
 == Deinstallieren Sie den Agenten, wenn er keine ausgehende Verbindung hat
 
 Wenn Ihr Agent keine ausgehende Verbindung hat (zum Beispiel im privaten Modus), müssen Sie die Agentensoftware manuell vom Host entfernen.
@@ -71,6 +73,7 @@ docker system prune -a
 
 
 
+[[remove-console-agents-from-the-console]]
 == Entfernen von Konsolenagenten aus der Konsole
 
 Wenn Sie eine Agenten-VM gelöscht oder den Agenten deinstalliert haben, sollten Sie ihn aus der Liste der Agenten in der Konsole entfernen. Nach dem Löschen einer Agenten-VM oder der Deinstallation der Agentensoftware wird der Agent in der Konsole als *Getrennt* angezeigt.

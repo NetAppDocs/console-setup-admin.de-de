@@ -20,6 +20,7 @@ Innerhalb der Konsole verfügt jeder Benutzer über ein Profil, das Informatione
 
 
 
+[[change-your-display-name]]
 == Ändern Sie Ihren Anzeigenamen
 
 Sie können Ihren Konsolen-Anzeigenamen ändern, der Sie für andere Benutzer identifiziert. Sie können Ihren Benutzernamen oder Ihre E-Mail-Adresse nicht ändern.
@@ -32,6 +33,7 @@ Sie können Ihren Konsolen-Anzeigenamen ändern, der Sie für andere Benutzer id
 
 
 
+[[elevate-your-role-in-read-only-mode]]
 == Erhöhen Sie Ihre Rolle im Nur-Lese-Modus
 
 In einigen Fällen kann Ihr Organisationsadministrator Ihre Organisation in den Nur-Lese-Modus versetzen. Wenn Sie über Administratorrechte verfügen, müssen Sie Ihre Berechtigungen erweitern, um Änderungen vornehmen zu können. Dadurch wird sichergestellt, dass Änderungen beabsichtigt und autorisiert sind.
@@ -50,6 +52,8 @@ image:screenshot-user-elevated.png["Ein Screenshot, der den Schieberegler für d
 
 
 
+[[configure-multi-factor-authentication]]
+[[task-user-mfa]]
 == Konfigurieren der mehrstufigen Authentifizierung
 
 Konfigurieren Sie die Multi-Faktor-Authentifizierung (MFA), um die Sicherheit durch die Anforderung einer zweiten Überprüfungsmethode zu verbessern.
@@ -78,6 +82,7 @@ Nachdem Sie MFA eingerichtet haben, werden Sie von der Konsole bei jeder Anmeldu
 
 
 
+[[regenerate-your-mfa-recovery-code]]
 == MFA-Wiederherstellungscode neu generieren
 
 Sie können Wiederherstellungscodes nur einmal verwenden.  Wenn Sie Ihr Konto verwenden oder verlieren, erstellen Sie ein neues.
@@ -91,6 +96,7 @@ Sie können Wiederherstellungscodes nur einmal verwenden.  Wenn Sie Ihr Konto ve
 
 
 
+[[delete-your-mfa-configuration]]
 == Löschen Sie Ihre MFA-Konfiguration
 
 
@@ -104,6 +110,8 @@ NOTE: Wenn Sie nicht auf Ihre Authentifizierungs-App oder Ihren Wiederherstellun
 
 
 
+[[contact-your-organization-administrator]]
+[[contact-admin]]
 == Wenden Sie sich an den Administrator Ihrer Organisation
 
 Wenn Sie den Administrator Ihrer Organisation kontaktieren müssen, können Sie ihm direkt von der Konsole aus eine E-Mail senden.  Der Administrator verwaltet Benutzerkonten und Berechtigungen innerhalb Ihrer Organisation.
@@ -120,6 +128,7 @@ NOTE: Um die Funktion *Administratoren kontaktieren* verwenden zu können, muss 
 
 
 
+[[configure-dark-mode-dark-theme]]
 == Dunkelmodus konfigurieren (dunkles Design)
 
 Sie können die Konsole so einstellen, dass sie im Dunkelmodus angezeigt wird.

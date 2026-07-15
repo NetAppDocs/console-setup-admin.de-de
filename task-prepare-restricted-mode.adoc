@@ -18,6 +18,7 @@ Bereiten Sie Ihre Umgebung vor, bevor Sie die NetApp Console im eingeschränkten
 
 
 
+[[step-1-understand-how-restricted-mode-works]]
 == Schritt 1: Verstehen, wie der eingeschränkte Modus funktioniert
 
 Machen Sie sich vor dem Start mit der Funktionsweise der NetApp Console im eingeschränkten Modus vertraut.
@@ -30,6 +31,7 @@ link:concept-modes.html["Erfahren Sie, wie der eingeschränkte Modus funktionier
 
 
 
+[[step-2-review-installation-options]]
 == Schritt 2: Überprüfen der Installationsoptionen
 
 Im eingeschränkten Modus können Sie den Konsolenagenten nur in der Cloud installieren.  Folgende Installationsoptionen stehen zur Verfügung:
@@ -41,6 +43,7 @@ Im eingeschränkten Modus können Sie den Konsolenagenten nur in der Cloud insta
 
 
 
+[[step-3-review-host-requirements]]
 == Schritt 3: Hostanforderungen prüfen
 
 Ein Host muss bestimmte Betriebssystem-, RAM- und Portanforderungen erfüllen, um den Konsolenagenten auszuführen.
@@ -173,6 +176,8 @@ Nicht unterstützt
 |===
 
 
+[[step-4-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == Schritt 4: Installieren Sie Podman oder Docker Engine
 
 Um den Konsolenagenten manuell zu installieren, bereiten Sie den Host vor, indem Sie Podman oder Docker Engine installieren.
@@ -360,6 +365,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-5-prepare-network-access]]
 == Schritt 5: Netzwerkzugriff vorbereiten
 
 Richten Sie den Netzwerkzugriff ein, damit der Konsolenagent Ressourcen in Ihrer öffentlichen Cloud verwalten kann.  Zusätzlich zum Vorhandensein eines virtuellen Netzwerks und Subnetzes für den Konsolenagenten müssen Sie sicherstellen, dass die folgenden Anforderungen erfüllt sind.
@@ -546,6 +552,7 @@ Wenn Sie vorhaben, einen Konsolen-Agenten aus dem Marktplatz Ihres Cloud-Anbiete
 
 
 
+[[step-6-prepare-cloud-permissions]]
 == Schritt 6: Cloud-Berechtigungen vorbereiten
 
 Der Konsolenagent benötigt Berechtigungen von Ihrem Cloud-Anbieter, um Cloud Volumes ONTAP in einem virtuellen Netzwerk bereitzustellen und NetApp -Datendienste zu verwenden.  Sie müssen Berechtigungen bei Ihrem Cloud-Anbieter einrichten und diese Berechtigungen dann dem Konsolenagenten zuordnen.
@@ -853,6 +860,7 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 ====
 
 
+[[step-7-enable-google-cloud-apis]]
 == Schritt 7: Google Cloud APIs aktivieren
 
 Für die Bereitstellung von Cloud Volumes ONTAP in Google Cloud sind mehrere APIs erforderlich.

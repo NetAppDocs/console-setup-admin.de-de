@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-54]]
 === Connector 3.9.54
 
 Diese Version des BlueXP Connectors enthält Sicherheitsverbesserungen, Fehlerbehebungen und die folgenden neuen Funktionen:
@@ -17,6 +18,7 @@ Derzeit ist die Version 3.9.54 für den Standardmodus und den eingeschränkten M
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP Identitäts- und Zugriffsmanagement (IAM)
 
 Identitäts- und Zugriffsmanagement in BlueXP bietet jetzt die folgenden Funktionen:

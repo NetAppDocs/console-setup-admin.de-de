@@ -42,6 +42,7 @@ Die Tabelle hebt die Funktionen der Audit-Seite und des Benachrichtigungscenters
 |===
 
 
+[[audit-user-activity-from-the-audit-page]]
 == Überwachen Sie die Benutzeraktivität auf der Seite „Überwachen“.
 
 Verwenden Sie die Audit-Seite, um zu ermitteln, wer eine Aktion ausgeführt hat oder welchen Status sie hat.
@@ -60,6 +61,7 @@ Sie können beispielsweise den Filter *Dienst* verwenden, um Aktionen anzuzeigen
 
 
 
+[[download-audit-logs-from-the-audit-page]]
 === Laden Sie Überwachungsprotokolle von der Überwachungsseite herunter
 
 Sie können die Audit-Protokolle von der Audit-Seite in eine CSV-Datei herunterladen.  Auf diese Weise können Sie die Aktionen protokollieren, die Benutzer in Ihrer Organisation ausführen.  Die CSV-Datei enthält alle Spalten in der heruntergeladenen CSV-Datei, unabhängig von Filtern oder angezeigten Spalten auf der Audit-Seite.
@@ -70,6 +72,8 @@ Sie können die Audit-Protokolle von der Audit-Seite in eine CSV-Datei herunterl
 
 
 
+[[monitor-activities-using-the-notification-center]]
+[[notification-center]]
 == Überwachen Sie Aktivitäten mithilfe des Benachrichtigungscenters
 
 Benachrichtigungen verfolgen Konsolenvorgänge, um den Erfolg zu bestätigen.  Sie ermöglichen Ihnen, den Status vieler Konsolenaktionen anzuzeigen, die Sie während Ihrer aktuellen Anmeldesitzung initiiert haben.  Nicht alle Konsolendienste melden Informationen an das Benachrichtigungscenter.
@@ -80,6 +84,7 @@ Sie können die Konsole auch so konfigurieren, dass bestimmte Arten von Benachri
 
 
 
+[[comparing-the-notification-center-with-alerts]]
 === Vergleich des Benachrichtigungscenters mit Warnungen
 
 Über das Benachrichtigungscenter können Sie den Status der von Ihnen eingeleiteten Vorgänge anzeigen und Warnbenachrichtigungen für bestimmte Arten von Systemaktivitäten einrichten.  Mithilfe von Warnmeldungen können Sie Probleme oder potenzielle Risiken in Ihrer ONTAP Speicherumgebung im Zusammenhang mit Kapazität, Verfügbarkeit, Leistung, Schutz und Sicherheit erkennen.
@@ -88,6 +93,7 @@ https://docs.netapp.com/us-en/console-alerts/index.html["Erfahren Sie mehr über
 
 
 
+[[notification-types]]
 === Benachrichtigungstypen
 
 Die Konsole klassifiziert Benachrichtigungen in die folgenden Kategorien:
@@ -116,6 +122,7 @@ Die Konsole klassifiziert Benachrichtigungen in die folgenden Kategorien:
 |===
 
 
+[[filter-notifications]]
 === Benachrichtigungen filtern
 
 Standardmäßig werden alle aktiven Benachrichtigungen im Benachrichtigungscenter angezeigt.  Sie können die angezeigten Benachrichtigungen filtern, um nur die Benachrichtigungen anzuzeigen, die für Sie wichtig sind.  Sie können nach „Dienst“ und nach „Typ“ der Benachrichtigung filtern.
@@ -126,6 +133,7 @@ Wenn Sie beispielsweise für Konsolenvorgänge nur Benachrichtigungen vom Typ �
 
 
 
+[[dismiss-notifications]]
 === Benachrichtigungen verwerfen
 
 Sie können Benachrichtigungen von der Seite entfernen, wenn Sie sie nicht mehr sehen müssen.  Sie können Benachrichtigungen einzeln oder alle auf einmal ablehnen.
@@ -136,6 +144,7 @@ Um einzelne Benachrichtigungen abzulehnen, bewegen Sie den Cursor über die Bena
 
 
 
+[[set-email-notification-settings]]
 === E-Mail-Benachrichtigungseinstellungen festlegen
 
 Sie können bestimmte Arten von Benachrichtigungen per E-Mail senden, sodass Sie über wichtige Systemaktivitäten informiert werden, auch wenn Sie nicht angemeldet sind. E-Mails können an alle Benutzer gesendet werden, die Teil Ihrer Organisation oder Ihres Kontos sind, oder an alle anderen Empfänger, die über bestimmte Arten von Systemaktivitäten informiert werden müssen.
@@ -169,6 +178,7 @@ Auf der Seite *Zusätzliche Empfänger* können Sie die Konsole so konfigurieren
 
 
 
+[[add-additional-email-recipients]]
 === Zusätzliche E-Mail-Empfänger hinzufügen
 
 Die Benutzer, die auf der Seite „Benutzer der Organisation“ angezeigt werden, werden automatisch aus den Benutzern Ihrer Organisation oder Ihres Kontos gefüllt.  Sie können auf der Seite „Zusätzliche Empfänger“ E-Mail-Adressen für andere Personen oder Gruppen hinzufügen, die keinen Zugriff auf die Konsole haben, aber über bestimmte Arten von Warnungen und Benachrichtigungen benachrichtigt werden müssen.

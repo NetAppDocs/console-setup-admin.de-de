@@ -18,6 +18,7 @@ Wenn Sie die NetApp Console (SaaS) zum ersten Mal mit der Rolle eines Organisati
 
 
 
+[[required-roles-to-access-the-console-assistant]]
 == Erforderliche Rollen für den Zugriff auf den Konsolenassistenten
 
 Der Konsolenassistent ist nur für Benutzer mit der Rolle „Organisationsadministrator“ verfügbar.

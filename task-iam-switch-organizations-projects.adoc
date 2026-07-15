@@ -21,6 +21,7 @@ TIP: Sie können mehreren Organisationen angehören, wenn Sie von einer anderen 
 
 
 
+[[switch-between-organizations]]
 == Wechseln zwischen Organisationen
 
 Wenn Sie Mitglied in mehreren Organisationen sind, können Sie jederzeit zwischen diesen wechseln.
@@ -39,6 +40,7 @@ Die Registerkarte *Partnerschaft* wird nicht angezeigt, wenn Sie keine Partneror
 
 
 
+[[switch-between-projects]]
 == Zwischen Projekten wechseln
 
 Wenn Ihre Organisation mehrere Projekte umfasst und Sie Zugriff auf diese Projekte haben, können Sie jederzeit zwischen ihnen wechseln.
@@ -56,6 +58,7 @@ image:screenshot-iam-switch-projects-select.png["Ein Screenshot des Scope-Menüs
 
 
 
+[[switch-between-console-agents]]
 == Wechseln zwischen Konsolenagenten
 
 Wenn Sie über mehrere Konsolenagenten verfügen, können Sie zwischen ihnen wechseln, um die Systeme anzuzeigen, die einem bestimmten Agenten zugeordnet sind.
@@ -70,6 +73,7 @@ link:task-iam-associate-agents.html["Agenten Ordnern und Projekten zuordnen"] .
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identität und Zugriff in der NetApp Console"]

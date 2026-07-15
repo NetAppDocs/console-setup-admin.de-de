@@ -18,6 +18,7 @@ Fügen Sie Azure-Anmeldeinformationen hinzu und verwalten Sie diese, damit die N
 
 
 
+[[overview]]
 == Überblick
 
 Es gibt zwei Möglichkeiten, zusätzliche Azure-Abonnements und Anmeldeinformationen in der Konsole hinzuzufügen.
@@ -28,6 +29,7 @@ Es gibt zwei Möglichkeiten, zusätzliche Azure-Abonnements und Anmeldeinformati
 
 
 
+[[associate-additional-azure-subscriptions-with-a-managed-identity]]
 == Zuordnen zusätzlicher Azure-Abonnements zu einer verwalteten Identität
 
 Über die Konsole können Sie die Azure-Anmeldeinformationen und das Azure-Abonnement auswählen, in dem Sie Cloud Volumes ONTAP bereitstellen möchten.  Sie können kein anderes Azure-Abonnement für das verwaltete Identitätsprofil auswählen, es sei denn, Sie verknüpfen das https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview["Verwaltete Identität"^] mit diesen Abonnements.
@@ -65,6 +67,8 @@ image:screenshot_accounts_switch_azure_subscription.gif["Ein Screenshot, der die
 
 
 
+[[add-additional-azure-credentials-to-netapp-console]]
+[[add-credentials-azure]]
 == Fügen Sie der NetApp Console zusätzliche Azure-Anmeldeinformationen hinzu
 
 Wenn Sie einen Konsolenagenten über die Konsole bereitstellen, aktiviert die Konsole eine vom System zugewiesene verwaltete Identität auf der virtuellen Maschine, die über die erforderlichen Berechtigungen verfügt.  Die Konsole wählt diese Azure-Anmeldeinformationen standardmäßig aus, wenn Sie ein neues System für Cloud Volumes ONTAP erstellen.
@@ -76,6 +80,7 @@ Wenn Sie Cloud Volumes ONTAP mit _verschiedenen_ Azure-Anmeldeinformationen bere
 
 
 
+[[grant-azure-permissions-using-a-service-principal]]
 === Gewähren von Azure-Berechtigungen mithilfe eines Dienstprinzipals
 
 Die Konsole benötigt Berechtigungen, um Aktionen in Azure auszuführen.  Sie können einem Azure-Konto die erforderlichen Berechtigungen erteilen, indem Sie einen Dienstprinzipal in Microsoft Entra ID erstellen und einrichten und die Azure-Anmeldeinformationen abrufen, die die Konsole benötigt.
@@ -231,6 +236,7 @@ image:screenshot_azure_service_mgmt_apis_add.gif["Ein Screenshot des Azure-Porta
 
 
 
+[[ids]]
 ==== Abrufen der Anwendungs-ID und der Verzeichnis-ID
 
 Wenn Sie das Azure-Konto zur Konsole hinzufügen, müssen Sie die Anwendungs-ID (Client) und die Verzeichnis-ID (Mandant) für die Anwendung angeben.  Die Konsole verwendet die IDs zur programmgesteuerten Anmeldung.
@@ -269,6 +275,7 @@ Ihr Dienstprinzipal ist jetzt eingerichtet und Sie sollten die Anwendungs-ID (Cl
 
 
 
+[[add-the-credentials-to-the-console]]
 === Fügen Sie die Anmeldeinformationen zur Konsole hinzu
 
 Nachdem Sie ein Azure-Konto mit den erforderlichen Berechtigungen bereitgestellt haben, können Sie die Anmeldeinformationen für dieses Konto zur Konsole hinzufügen.  Wenn Sie diesen Schritt abschließen, können Sie Cloud Volumes ONTAP mit anderen Azure-Anmeldeinformationen starten.
@@ -303,12 +310,15 @@ image:screenshot_accounts_switch_azure.gif["Ein Screenshot, der die Auswahl zwis
 
 
 
+[[manage-existing-credentials]]
 == Vorhandene Anmeldeinformationen verwalten
 
 Verwalten Sie die Azure-Anmeldeinformationen, die Sie der Konsole bereits hinzugefügt haben, indem Sie ein Marketplace-Abonnement zuordnen, Anmeldeinformationen bearbeiten und löschen.
 
 
 
+[[associate-an-azure-marketplace-subscription-to-credentials]]
+[[subscribe]]
 === Zuordnen eines Azure Marketplace-Abonnements zu Anmeldeinformationen
 
 Nachdem Sie Ihre Azure-Anmeldeinformationen zur Konsole hinzugefügt haben, können Sie diesen Anmeldeinformationen ein Azure Marketplace-Abonnement zuordnen.  Mit dem Abonnement können Sie ein nutzungsbasiertes Cloud Volumes ONTAP System erstellen und auf NetApp -Datendienste zugreifen.
@@ -358,6 +368,7 @@ Für alle anderen Organisationen oder Konten müssen Sie das Abonnement manuell 
 
 
 
+[[edit-credentials]]
 === Anmeldeinformationen bearbeiten
 
 Bearbeiten Sie Ihre Azure-Anmeldeinformationen in der Konsole.  Sie können beispielsweise das Clientgeheimnis aktualisieren, wenn ein neues Geheimnis für die Dienstprinzipalanwendung erstellt wurde.
@@ -371,6 +382,7 @@ Bearbeiten Sie Ihre Azure-Anmeldeinformationen in der Konsole.  Sie können beis
 
 
 
+[[delete-credentials]]
 === Anmeldeinformationen löschen
 
 Wenn Sie einen Satz Anmeldeinformationen nicht mehr benötigen, können Sie ihn löschen.  Sie können nur Anmeldeinformationen löschen, die keinem System zugeordnet sind.

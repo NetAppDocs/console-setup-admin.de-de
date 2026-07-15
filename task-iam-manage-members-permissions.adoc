@@ -21,6 +21,7 @@ Super-Admin, Organisations-Admin oder Ordner- bzw. Projekt-Admin (für die von i
 
 
 
+[[understand-how-access-is-granted-in-netapp-console]]
 == Verstehen Sie, wie der Zugriff in der NetApp Console gewährt wird.
 
 Die NetApp Console verwendet rollenbasierte Zugriffssteuerung (RBAC) zur Verwaltung von Berechtigungen. Weisen Sie Rollen Benutzern einzeln oder über föderierte Gruppen zu. Jede Rolle definiert zulässige Aktionen für bestimmte Ressourcen.
@@ -35,6 +36,8 @@ Beachten Sie Folgendes bezüglich der Zugriffsgewährung in der NetApp Console:
 
 
 
+[[add-members-to-your-organization]]
+[[add-members]]
 == Fügen Sie Ihrer Organisation Mitglieder hinzu
 
 Die NetApp Console unterstützt drei Arten von Mitgliedern: Benutzerkonten, Dienstkonten und Verbundgruppen.
@@ -47,6 +50,7 @@ Beim Hinzufügen eines Mitglieds wählen Sie die Ressourcenebene (Organisation, 
 
 
 
+[[add-a-user]]
 === Einen Benutzer hinzufügen
 
 Benutzer registrieren sich für die NetApp Console, aber ein Organisationsadministrator, Ordner- oder Projektadministrator muss sie einer Organisation, einem Ordner oder einem Projekt hinzufügen, damit sie auf Ressourcen zugreifen können.
@@ -86,6 +90,8 @@ Die Konsole sendet dem Benutzer eine E-Mail mit Anweisungen.
 
 
 
+[[add-a-service-account]]
+[[service-account]]
 === Hinzufügen eines Dienstkontos
 
 Dienstkonten ermöglichen die Automatisierung von Aufgaben und die sichere Verbindung mit Console-APIs. Wählen Sie eine Client-ID und ein Client-Geheimnis für einfache Setups oder JWT (JSON Web Token) für eine höhere Sicherheit in automatisierten oder Cloud-nativen Umgebungen. Wählen Sie die Methode, die Ihren Sicherheitsanforderungen entspricht.
@@ -132,6 +138,7 @@ Die Konsole zeigt das Client-Geheimnis nur einmal an. Sicher kopieren; falls Sie
 
 
 
+[[add-a-federated-group-to-your-organization]]
 == Fügen Sie Ihrer Organisation eine föderierte Gruppe hinzu.
 
 Sie können eine föderierte Gruppe von Ihrem Identitätsanbieter (IdP) zu Ihrer Organisation hinzufügen und ihr eine oder mehrere Rollen zuweisen. Die Mitglieder der föderierten Gruppe erben die Rollen, die Sie der Gruppe in der Konsole zuweisen.
@@ -171,6 +178,7 @@ In der Dropdown-Liste werden nur unterstützte Rollen angezeigt. link:reference-
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identitäts- und Zugriffsmanagement in der NetApp Console"]

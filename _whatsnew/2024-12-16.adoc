@@ -4,6 +4,7 @@
 
 
 
+[[new-secure-endpoints-to-obtain-connector-images]]
 === Neue sichere Endpunkte zum Abrufen von Connector-Bildern
 
 Wenn Sie den Connector installieren oder wenn ein automatisches Upgrade erfolgt, kontaktiert der Connector Repositorys, um Images für die Installation oder das Upgrade herunterzuladen.  Standardmäßig hat der Connector immer die folgenden Endpunkte kontaktiert:

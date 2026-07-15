@@ -28,6 +28,8 @@ NOTE: Stellen Sie einen Konsolenagenten in derselben Azure-Region wie die Cloud 
 
 
 
+[[step-1-set-up-networking]]
+[[networking-azure-agent]]
 == Schritt 1: Einrichten des Netzwerks
 
 Stellen Sie sicher, dass der Netzwerkspeicherort, an dem Sie den Konsolenagenten installieren möchten, die folgenden Anforderungen unterstützt.  Diese Anforderungen ermöglichen dem Konsolenagenten die Verwaltung hybrider Cloud-Ressourcen.
@@ -153,6 +155,8 @@ Sie müssen diese Netzwerkanforderung implementieren, nachdem Sie den Konsolenag
 
 
 
+[[step-2-create-a-console-agent-deployment-policy-custom-role]]
+[[agent-custom-role]]
 == Schritt 2: Erstellen einer Bereitstellungsrichtlinie für den Konsolen-Agenten (benutzerdefinierte Rolle)
 
 Sie müssen eine benutzerdefinierte Rolle erstellen, die über die Berechtigung zum Bereitstellen des Konsolen-Agenten in Azure verfügt.
@@ -275,6 +279,7 @@ Sie verfügen jetzt über eine benutzerdefinierte Rolle namens _Azure SetupAsSer
 
 
 
+[[step-3-set-up-authentication]]
 == Schritt 3: Authentifizierung einrichten
 
 Wenn Sie den Konsolen-Agenten von der Konsole aus erstellen, müssen Sie eine Anmeldung angeben, die es der Konsole ermöglicht, sich bei Azure zu authentifizieren und die VM bereitzustellen.  Sie haben zwei Möglichkeiten:
@@ -415,6 +420,7 @@ Ihr Dienstprinzipal ist jetzt eingerichtet und Sie sollten die Anwendungs-ID (Cl
 ====
 
 
+[[step-4-create-the-console-agent]]
 == Schritt 4: Erstellen des Konsolenagenten
 
 Erstellen Sie den Konsolenagenten direkt von der NetApp Console aus.

@@ -22,6 +22,7 @@ Auf der Seite *Ressourcen* in der Konsole können Sie Ressourcen anzeigen und ve
 
 
 
+[[console-resource-types]]
 == Konsolenressourcentypen
 
 Sie können in Ihrer NetApp Console Organisation verschiedene Ressourcentypen Projekten zuordnen:
@@ -40,6 +41,7 @@ Backup- und Recovery-Workloads:: Auch Backup- und Recovery-Workloads gelten als 
 
 
 
+[[view-the-resources-in-your-organization]]
 == Zeigen Sie die Ressourcen in Ihrer Organisation an
 
 Sie können sowohl entdeckte als auch unentdeckte Ressourcen anzeigen, die mit Ihrer Organisation verknüpft sind. Das System findet Speicherressourcen und markiert sie als nicht entdeckt, bis Sie sie zur Konsole hinzufügen.
@@ -64,6 +66,8 @@ NOTE: Die Konsole schließt Amazon FSx for NetApp ONTAP Ressourcen von der Resso
 
 
 
+[[associate-a-resource-with-folders-and-projects]]
+[[associate-resource]]
 == Zuordnen einer Ressource zu Ordnern und Projekten
 
 Verknüpfen Sie eine Ressource mit einem Ordner oder Projekt, um sie Mitgliedern zur Verfügung zu stellen, die über Berechtigungen für diesen Ordner oder dieses Projekt verfügen.
@@ -90,6 +94,8 @@ link:task-iam-associate-agents.html["Erfahren Sie, wie Sie einen Konsolenagenten
 
 
 
+[[view-the-folders-and-projects-associated-with-a-resource]]
+[[view-folders-and-projects]]
 == Anzeigen der mit einer Ressource verknüpften Ordner und Projekte
 
 Sie können die Ordner und Projekte anzeigen, die mit einer bestimmten Ressource verknüpft sind.
@@ -110,6 +116,8 @@ NOTE: Um zu sehen, welche Organisationsmitglieder Zugriff auf die Ressource habe
 
 
 
+[[remove-a-resource-from-a-folder-or-project]]
+[[remove-resource]]
 == Entfernen einer Ressource aus einem Ordner oder Projekt
 
 Um eine Ressource aus einem Ordner oder Projekt zu entfernen, muss ihre Zuordnung aufgehoben werden. Dies verhindert, dass Mitglieder die Ressource in diesem Ordner oder Projekt verwalten können.
@@ -125,6 +133,7 @@ NOTE: Um eine gefundene Ressource aus der gesamten Organisation zu entfernen, ge
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identität und Zugriff in der NetApp Console"]

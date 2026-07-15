@@ -25,6 +25,7 @@ Durch die Bereitstellung eines Agenten in AWS wird eine EC2-Instanz gestartet, a
 
 
 
+[[step-1-set-up-networking]]
 == Schritt 1: Einrichten des Netzwerks
 
 Stellen Sie sicher, dass der Netzwerkstandort für den Konsolenagenten die folgenden Anforderungen erfüllt, um Hybrid Cloud-Ressourcen zu verwalten.
@@ -145,6 +146,7 @@ Implementieren Sie diesen Netzwerkzugriff, nachdem Sie den Konsolenagenten erste
 
 
 
+[[step-2-set-up-aws-permissions]]
 == Schritt 2: AWS-Berechtigungen einrichten
 
 Um eine Marktplatzbereitstellung vorzubereiten, erstellen Sie IAM-Richtlinien in AWS und ordnen Sie sie einer IAM-Rolle zu.  Wenn Sie den Konsolenagenten aus dem AWS Marketplace erstellen, werden Sie aufgefordert, diese IAM-Rolle auszuwählen.
@@ -176,6 +178,7 @@ Sie verfügen jetzt über eine IAM-Rolle, die Sie während der Bereitstellung vo
 
 
 
+[[step-3-review-instance-requirements]]
 == Schritt 3: Überprüfen der Instanzanforderungen
 
 Wenn Sie den Konsolenagenten erstellen, müssen Sie einen EC2-Instance-Typ auswählen, der die folgenden Anforderungen erfüllt.
@@ -187,6 +190,7 @@ AWS EC2-Instanztyp:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt
 
 
 
+[[step-4-create-the-console-agent]]
 == Schritt 4: Erstellen des Konsolenagenten
 
 Erstellen Sie den Konsolenagenten direkt vom AWS Marketplace.

@@ -18,6 +18,7 @@ Die Firewall-Regeln von Google Cloud für den Agenten erfordern sowohl eingehend
 
 
 
+[[inbound-rules]]
 == Eingehende Regeln
 
 [cols="10,10,80"]
@@ -42,12 +43,14 @@ Die Firewall-Regeln von Google Cloud für den Agenten erfordern sowohl eingehend
 |===
 
 
+[[outbound-rules]]
 == Ausgangsregeln
 
 Die vordefinierten Firewall-Regeln des Agenten öffnen den gesamten ausgehenden Datenverkehr.  Befolgen Sie die grundlegenden Ausgangsregeln, sofern dies akzeptabel ist, oder verwenden Sie erweiterte Ausgangsregeln für strengere Anforderungen.
 
 
 
+[[basic-outbound-rules]]
 === Grundlegende Ausgangsregeln
 
 Die vordefinierten Firewall-Regeln für den Agenten umfassen die folgenden ausgehenden Regeln.
@@ -64,6 +67,7 @@ Die vordefinierten Firewall-Regeln für den Agenten umfassen die folgenden ausge
 |===
 
 
+[[advanced-outbound-rules]]
 === Erweiterte Ausgangsregeln
 
 Wenn Sie strenge Regeln für den ausgehenden Datenverkehr benötigen, können Sie die folgenden Informationen verwenden, um nur die Ports zu öffnen, die für die ausgehende Kommunikation durch den Agenten erforderlich sind.

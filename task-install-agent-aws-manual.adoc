@@ -25,6 +25,7 @@ Durch die Bereitstellung eines Agenten in AWS wird eine EC2-Instanz gestartet, a
 
 
 
+[[step-1-review-host-requirements]]
 == Schritt 1: Hostanforderungen prüfen
 
 Stellen Sie sicher, dass der Host, auf dem die Console-Agent-Software ausgeführt wird, die Anforderungen an Betriebssystem, RAM und Ports erfüllt.
@@ -162,6 +163,8 @@ PUT-Antwort-Hop-Limit bei Verwendung von IMDSv2:: Wenn IMDSv2 aktiviert ist (Sta
 
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == Schritt 2: Installieren Sie Podman oder Docker Engine
 
 Abhängig von Ihrem Betriebssystem ist vor der Installation des Agenten entweder Podman oder Docker Engine erforderlich.
@@ -347,6 +350,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == Schritt 3: Einrichten des Netzwerks
 
 Stellen Sie sicher, dass der Netzwerkstandort die folgenden Anforderungen erfüllt, damit der Console-Agent Ressourcen in Ihrer Hybrid-Cloud verwalten kann.
@@ -469,6 +473,8 @@ Aktivieren von NTP:: Wenn Sie planen, NetApp Data Classification zum Scannen Ihr
 
 
 
+[[step-4-set-up-aws-permissions-for-the-console]]
+[[console-permissions-aws]]
 == Schritt 4: AWS-Berechtigungen für die Konsole einrichten
 
 Erteilen Sie der NetApp Console AWS-Berechtigungen mithilfe einer dieser Optionen:
@@ -542,6 +548,7 @@ Sie verfügen jetzt über einen IAM-Benutzer mit den erforderlichen Berechtigung
 ====
 
 
+[[step-5-install-the-console-agent]]
 == Schritt 5: Installieren des Konsolenagenten
 
 Nachdem Sie die Voraussetzungen erfüllt haben, installieren Sie die Software manuell auf Ihrem Linux-Host.
@@ -702,6 +709,7 @@ Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Console-Age
 
 
 
+[[step-6-provide-permissions-to-netapp-console]]
 == Schritt 6: Berechtigungen für die NetApp Console erteilen
 
 Nach der Installation des Console-Agenten müssen Sie die von Ihnen eingerichteten AWS-Berechtigungen bereitstellen, damit der Console-Agent Ihre Daten- und Speicherinfrastruktur in AWS verwalten kann.

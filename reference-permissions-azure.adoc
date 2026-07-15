@@ -176,12 +176,14 @@ Sie müssen sicherstellen, dass die Rolle auf dem neuesten Stand ist, da in nach
 ----
 
 
+[[how-azure-permissions-are-used]]
 == So werden Azure-Berechtigungen verwendet
 
 In den folgenden Abschnitten wird beschrieben, wie die Berechtigungen für jedes NetApp -Speichersystem und jeden Datendienst verwendet werden.  Diese Informationen können hilfreich sein, wenn Ihre Unternehmensrichtlinien vorschreiben, dass Berechtigungen nur bei Bedarf erteilt werden.
 
 
 
+[[azure-netapp-files]]
 === Azure NetApp Files
 
 Der Agent stellt die folgenden API-Anforderungen, wenn Sie die NetApp Data Classification zum Scannen von Azure NetApp Files -Daten verwenden:
@@ -195,6 +197,7 @@ Der Agent stellt die folgenden API-Anforderungen, wenn Sie die NetApp Data Class
 
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 In den folgenden Abschnitten wird beschrieben, wie Berechtigungen für NetApp Backup and Recovery verwendet werden.
@@ -299,6 +302,7 @@ Der Agent führt die folgenden API-Anfragen aus, wenn Sie die Such- und Wiederhe
 
 
 
+[[netapp-data-classification]]
 === NetApp Data Classification
 
 Der Agent stellt die folgenden API-Anfragen, wenn Sie die Datenklassifizierung verwenden.
@@ -444,6 +448,7 @@ Der Agent stellt die folgenden API-Anfragen, wenn Sie die Datenklassifizierung v
 |===
 
 
+[[cloud-volumes-ontap]]
 === Cloud Volumes ONTAP
 
 Der Agent stellt die folgenden API-Anfragen, um Cloud Volumes ONTAP in Azure bereitzustellen und zu verwalten.
@@ -766,6 +771,7 @@ Der Agent stellt die folgenden API-Anfragen, um Cloud Volumes ONTAP in Azure ber
 |===
 
 
+[[tiering]]
 === Abstufung
 
 Der Agent stellt die folgenden API-Anfragen, wenn Sie NetApp Cloud Tiering einrichten.
@@ -798,12 +804,14 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 ====
 
 
+[[change-log]]
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt oder entfernt werden, vermerken wir dies in den folgenden Abschnitten.
 
 
 
+[[11-november-2025]]
 === 11. November 2025
 
 Es wurde eine benutzerdefinierte JSON-Richtlinie hinzugefügt, die die geringstmöglichen Berechtigungen und den kleinstmöglichen Geltungsbereich widerspiegelt.
@@ -845,6 +853,7 @@ Die folgenden Berechtigungen wurden in den Abschnitt „Zusätzliche Sicherungs-
 
 
 
+[[9-september-2024]]
 === 9. September 2024
 
 Die folgenden Berechtigungen wurden aus der JSON-Richtlinie entfernt, da die Konsole die Erkennung und Verwaltung von Kubernetes-Clustern nicht mehr unterstützt:
@@ -855,6 +864,7 @@ Die folgenden Berechtigungen wurden aus der JSON-Richtlinie entfernt, da die Kon
 
 
 
+[[22-august-2024]]
 === 22. August 2024
 
 Die folgenden Berechtigungen wurden der JSON-Richtlinie hinzugefügt, da sie für die Cloud Volumes ONTAP Unterstützung von Virtual Machine Scale Sets erforderlich sind:
@@ -866,6 +876,7 @@ Die folgenden Berechtigungen wurden der JSON-Richtlinie hinzugefügt, da sie fü
 
 
 
+[[5-december-2023]]
 === 5. Dezember 2023
 
 Die folgenden Berechtigungen werden für NetApp Backup and Recovery beim Sichern von Volumedaten im Azure Blob-Speicher nicht mehr benötigt:
@@ -881,6 +892,7 @@ Diese Berechtigungen sind für andere Konsolenspeicherdienste erforderlich, soda
 
 
 
+[[12-may-2023]]
 === 12. Mai 2023
 
 Die folgenden Berechtigungen wurden der JSON-Richtlinie hinzugefügt, da sie für die Verwaltung von Cloud Volumes ONTAP erforderlich sind:
@@ -897,6 +909,7 @@ Die folgenden Berechtigungen wurden aus der JSON-Richtlinie entfernt, da sie nic
 
 
 
+[[23-march-2023]]
 === 23. März 2023
 
 Die Berechtigung „Microsoft.Storage/storageAccounts/delete“ wird für die Datenklassifizierung nicht mehr benötigt.
@@ -905,6 +918,7 @@ Diese Berechtigung ist für Cloud Volumes ONTAP weiterhin erforderlich.
 
 
 
+[[5-january-2023]]
 === 5. Januar 2023
 
 Die folgenden Berechtigungen wurden der JSON-Richtlinie hinzugefügt:

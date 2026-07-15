@@ -18,6 +18,7 @@ Sie verwalten AWS-Zugangsdaten und Marketplace-Abonnements direkt über die NetA
 
 
 
+[[initial-aws-credentials]]
 == Anfängliche AWS-Anmeldeinformationen
 
 Wenn Sie einen Console-Agenten über die Console bereitstellen, müssen Sie den ARN einer IAM-Rolle oder die Zugriffsschlüssel eines IAM-Benutzers angeben. Das Authentifizierungsverfahren muss über Berechtigungen verfügen, um den Console-Agenten in AWS bereitzustellen. Die erforderlichen Berechtigungen sind in der link:task-install-agent-aws-console.html#aws-permissions-agent["Agentenbereitstellungsrichtlinie für AWS"] aufgeführt.
@@ -34,6 +35,7 @@ Sie können alle Ihre Cloud Volumes ONTAP Systeme mit den anfänglichen AWS-Anme
 
 
 
+[[additional-aws-credentials]]
 == Zusätzliche AWS-Anmeldeinformationen
 
 In den folgenden Fällen können Sie der Konsole zusätzliche AWS-Anmeldeinformationen hinzufügen:
@@ -47,6 +49,7 @@ Weitere Einzelheiten finden Sie in den folgenden Abschnitten.
 
 
 
+[[add-aws-credentials-to-use-a-console-agent-with-another-aws-account]]
 === Fügen Sie AWS-Anmeldeinformationen hinzu, um einen Konsolenagenten mit einem anderen AWS-Konto zu verwenden
 
 Um die Konsole mit zusätzlichen AWS-Konten zu verwenden, geben Sie AWS-Schlüssel oder den ARN einer Rolle in einem vertrauenswürdigen Konto an. Das folgende Bild zeigt zwei zusätzliche Konten, eines, das Berechtigungen über eine IAM-Rolle in einem vertrauenswürdigen Konto bereitstellt, und ein anderes über die AWS-Schlüssel eines IAM-Benutzers:
@@ -63,6 +66,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["Erfahren Sie, wie 
 
 
 
+[[add-aws-credentials-to-create-a-console-agent]]
 === Fügen Sie AWS-Anmeldeinformationen hinzu, um einen Konsolenagenten zu erstellen
 
 Durch das Hinzufügen von AWS-Anmeldeinformationen werden Berechtigungen zum Erstellen eines Konsolenagenten erteilt.
@@ -71,6 +75,7 @@ link:task-adding-aws-accounts.html#add-credentials-agent-aws["Erfahren Sie, wie 
 
 
 
+[[add-aws-credentials-for-fsx-for-ontap]]
 === AWS-Anmeldeinformationen für FSx for ONTAP hinzufügen
 
 Fügen Sie der Konsole AWS-Anmeldeinformationen hinzu, um die erforderlichen Berechtigungen zum Erstellen und Verwalten eines FSx for ONTAP Systems bereitzustellen.
@@ -79,6 +84,7 @@ https://docs.netapp.com/us-en/storage-management-fsx-ontap/requirements/task-set
 
 
 
+[[credentials-and-marketplace-subscriptions]]
 == Anmeldeinformationen und Marktplatzabonnements
 
 Sie müssen die Anmeldeinformationen, die Sie einem Console-Agenten hinzufügen, mit einem AWS Marketplace-Abonnement verknüpfen, um Cloud Volumes ONTAP auf Stundenbasis (PAYGO) und andere NetApp -Datendienste oder über einen Jahresvertrag zu bezahlen. link:task-adding-aws-accounts.html#subscribe["Erfahren Sie, wie Sie ein AWS-Abonnement zuordnen"].
@@ -91,12 +97,14 @@ Beachten Sie Folgendes zu AWS-Anmeldeinformationen und Marktplatz-Abonnements:
 
 
 
+[[faq]]
 == FAQ
 
 Die folgenden Fragen beziehen sich auf Anmeldeinformationen und Abonnements.
 
 
 
+[[how-can-i-securely-rotate-my-aws-credentials]]
 === Wie kann ich meine AWS-Anmeldeinformationen sicher rotieren?
 
 Wie in den obigen Abschnitten beschrieben, können Sie mit der Konsole AWS-Anmeldeinformationen auf verschiedene Weise bereitstellen: über eine mit dem Konsolenagenten verknüpfte IAM-Rolle, durch die Übernahme einer IAM-Rolle in einem vertrauenswürdigen Konto oder durch die Bereitstellung von AWS-Zugriffsschlüsseln.
@@ -107,6 +115,7 @@ Wenn Sie der Konsole AWS-Zugriffsschlüssel bereitstellen, sollten Sie die Schl�
 
 
 
+[[can-i-change-the-aws-marketplace-subscription-for-cloud-volumes-ontap-systems]]
 === Kann ich das AWS Marketplace-Abonnement für Cloud Volumes ONTAP Systeme ändern?
 
 Ja, das können Sie.  Wenn Sie das AWS Marketplace-Abonnement ändern, das mit einem Satz Anmeldeinformationen verknüpft ist, werden alle vorhandenen und neuen Cloud Volumes ONTAP Systeme über das neue Abonnement abgerechnet.
@@ -115,6 +124,7 @@ link:task-adding-aws-accounts.html#subscribe["Erfahren Sie, wie Sie ein AWS-Abon
 
 
 
+[[can-i-add-multiple-aws-credentials-each-with-different-marketplace-subscriptions]]
 === Kann ich mehrere AWS-Anmeldeinformationen mit jeweils unterschiedlichen Marktplatz-Abonnements hinzufügen?
 
 Alle AWS-Anmeldeinformationen, die zum selben AWS-Konto gehören, werden mit demselben AWS Marketplace-Abonnement verknüpft.
@@ -123,12 +133,14 @@ Wenn Sie über mehrere AWS-Anmeldeinformationen verfügen, die zu verschiedenen 
 
 
 
+[[can-i-move-existing-cloud-volumes-ontap-systems-to-a-different-aws-account]]
 === Kann ich vorhandene Cloud Volumes ONTAP Systeme auf ein anderes AWS-Konto verschieben?
 
 Nein, es ist nicht möglich, die mit Ihrem Cloud Volumes ONTAP -System verknüpften AWS-Ressourcen auf ein anderes AWS-Konto zu verschieben.
 
 
 
+[[how-do-credentials-work-for-marketplace-deployments-and-on-premises-deployments]]
 === Wie funktionieren Anmeldeinformationen für Marktplatzbereitstellungen und lokale Bereitstellungen?
 
 Die obigen Abschnitte beschreiben die empfohlene Bereitstellungsmethode für den Console-Agenten, die über die Console erfolgt. Sie können einen Agenten auch in AWS über den AWS Marketplace bereitstellen und die Console-Agent-Software manuell auf Ihrem eigenen Linux-Host oder in Ihrem vCenter installieren.

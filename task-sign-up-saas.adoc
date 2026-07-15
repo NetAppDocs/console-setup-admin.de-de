@@ -18,6 +18,7 @@ Um die Konsole zu nutzen, registrieren Sie sich oder melden Sie sich mit Ihren N
 
 
 
+[[sign-up-for-netapp-console-as-the-initial-organization-administrator]]
 == Registrieren Sie sich als erster Organisationsadministrator für die NetApp Console.
 
 Falls Ihr Unternehmen noch keine NetApp Console -Organisation besitzt, registrieren Sie sich, um eine zu erstellen. Der erste Benutzer wird zum Organisationsadministrator und verwaltet Benutzerkonten und Berechtigungen. Sie können die Rollen aktualisieren und später weitere Administratoren hinzufügen.
@@ -53,6 +54,7 @@ Als Administrator sollten Sie, nachdem Sie die im Konsolenassistenten enthaltene
 
 
 
+[[sign-up-or-login-to-netapp-console-when-an-organization-already-exists]]
 == Registrieren Sie sich oder melden Sie sich bei der NetApp Console an, wenn bereits eine Organisation existiert.
 
 Falls Ihr Unternehmen bereits über eine NetApp Console Organisation verfügt, registrieren Sie sich oder melden Sie sich an, um darauf zuzugreifen. Die Art Ihrer Registrierung oder Anmeldung hängt davon ab, ob Ihr Unternehmen eine Identitätsföderation nutzt oder über Anmeldeinformationen für die NetApp Support Site verfügt. Falls nicht, erstellen Sie ein NetApp Console -Login.

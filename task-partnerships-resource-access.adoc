@@ -23,6 +23,7 @@ Eine Partnerorganisation muss zunächst Mitglieder zur Partnerschaft hinzufügen
 
 
 
+[[understand-roles-for-partnership-users]]
 == Verstehen Sie die Rollen für Partnerschaftsbenutzer
 
 Sie können Rollen für Mitglieder von Partnerorganisationen auf dieselbe Weise verwalten wie für Ihre eigenen.  Allerdings stehen Partnerschaftsbenutzern nicht alle Rollen zur Verfügung.  Insbesondere können Sie Partnerbenutzern keine Rolle zuweisen, die Softwareupdates zulässt.  Das Aktualisieren der ONTAP -Software erfordert im Allgemeinen direkten Netzwerkzugriff.
@@ -51,6 +52,7 @@ link:reference-iam-predefined-roles.html["Erfahren Sie mehr über vordefinierte 
 
 
 
+[[add-a-role-to-a-partner-user]]
 == Einem Partnerbenutzer eine Rolle hinzufügen
 
 Sie gewähren Zugriff auf die Ressourcen Ihrer Organisation, indem Sie einem Mitglied eine Rolle zuweisen.  Wenn Sie eine Rolle zuweisen, geben Sie eine Ressource und eine Rolle an.  Sie können einem Benutzer mehr als eine Rolle zuweisen.
@@ -82,6 +84,7 @@ Wenn Sie die Organisation oder einen Ordner auswählen, verfügt das Mitglied ü
 
 
 
+[[change-or-remove-a-role-from-a-partner-user]]
 == Ändern oder Entfernen einer Rolle eines Partnerbenutzers
 
 Sie können eine Rolle ändern oder entfernen, die Sie einem Mitglied einer Partnerorganisation zugewiesen haben.

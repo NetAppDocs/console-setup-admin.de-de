@@ -25,6 +25,7 @@ Durch die Bereitstellung eines Agenten in Google Cloud wird eine VM-Instanz gest
 
 
 
+[[step-1-set-up-networking]]
 == Schritt 1: Einrichten des Netzwerks
 
 Richten Sie das Netzwerk ein, damit der Konsolenagent Ressourcen verwalten und eine Verbindung zu Zielnetzwerken und dem Internet herstellen kann.
@@ -135,6 +136,8 @@ Implementieren Sie diese Netzwerkanforderung, nachdem Sie den Konsolenagenten er
 
 
 
+[[step-2-set-up-permissions-to-create-the-console-agent]]
+[[agent-permissions-google]]
 == Schritt 2: Richten Sie Berechtigungen zum Erstellen des Konsolenagenten ein
 
 Richten Sie Berechtigungen für den Google Cloud-Benutzer ein, um die Konsolen-Agent-VM von Google Cloud bereitzustellen.
@@ -258,6 +261,8 @@ https://cloud.google.com/iam/docs/granting-changing-revoking-access#grant-single
 
 
 
+[[step-3-set-up-permissions-for-the-console-agent-operations]]
+[[console-permissions-google]]
 == Schritt 3: Berechtigungen für die Konsolen-Agent-Operationen einrichten
 
 Ein Google Cloud-Dienstkonto ist erforderlich, um dem Konsolenagenten die Berechtigungen zu erteilen, die die Konsole zum Verwalten von Ressourcen in Google Cloud benötigt.  Wenn Sie den Konsolen-Agenten erstellen, müssen Sie dieses Dienstkonto mit der Konsolen-Agent-VM verknüpfen.
@@ -317,6 +322,7 @@ Weitere Einzelheiten finden Sie unter https://cloud.google.com/iam/docs/granting
 
 
 
+[[step-4-set-up-shared-vpc-permissions]]
 == Schritt 4: Einrichten freigegebener VPC-Berechtigungen
 
 Wenn Sie eine gemeinsam genutzte VPC verwenden, um Ressourcen in einem Serviceprojekt bereitzustellen, müssen Sie Ihre Berechtigungen vorbereiten.
@@ -369,6 +375,7 @@ Hinweise:
 ====
 
 
+[[step-5-enable-google-cloud-apis]]
 == Schritt 5: Google Cloud APIs aktivieren
 
 Aktivieren Sie mehrere Google Cloud-APIs, bevor Sie den Konsolenagenten und Cloud Volumes ONTAP bereitstellen.
@@ -393,6 +400,7 @@ https://cloud.google.com/apis/docs/getting-started#enabling_apis["Google Cloud-D
 
 
 
+[[step-6-create-the-console-agent]]
 == Schritt 6: Erstellen des Konsolenagenten
 
 Erstellen Sie mithilfe von Google Cloud einen Konsolenagenten.

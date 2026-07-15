@@ -26,6 +26,7 @@ Super-Admin oder Organisationsadministrator.
 
 
 
+[[enable-read-only-mode-for-your-console-organization]]
 == Aktivieren Sie den schreibgeschützten Modus für Ihre Konsolenorganisation.
 
 Aktivieren Sie den Nur-Lese-Modus, um Änderungen an Ihrer Konsolenorganisation einzuschränken. Alle Benutzer können weiterhin auf die Ressourcen zugreifen. Benutzer mit Administratorrechten können in der Konsole keine Aktionen durchführen, ohne ihre Berechtigungen manuell zu erhöhen.

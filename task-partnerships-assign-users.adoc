@@ -23,6 +23,7 @@ Sie können Benutzer jederzeit aus einer Partnerschaft entfernen. Durch das Entf
 
 
 
+[[add-members-to-a-partnership]]
 == Mitglieder zu einer Partnerschaft hinzufügen
 
 Wenn Sie Mitglieder zu einer Partnerschaft hinzufügen, muss der *Partnership admin* der Partnerorganisation ihnen Rollen für bestimmte Ressourcen in ihrer Organisation zuweisen, bevor sie auf diese Ressourcen zugreifen können.
@@ -39,6 +40,7 @@ Nachdem Sie Mitglieder zu einer Partnerschaft hinzugefügt haben, werden die Mit
 
 
 
+[[remove-members-from-a-partnership]]
 == Mitglieder aus einer Partnerschaft entfernen
 
 Sie können Mitglieder jederzeit aus einer Partnerschaft entfernen. Durch das Entfernen eines Benutzers aus einer Partnerschaft wird dessen Zugriff auf alle Ressourcen der Partnerorganisation sofort widerrufen.
@@ -55,6 +57,7 @@ Wenn Sie die Rolle eines Mitglieds oder die Ressourcen, auf die es zugreifen kan
 
 
 
+[[view-role-information-for-a-user]]
 == Anzeigen von Rolleninformationen für einen Benutzer
 
 Sie können die einem Benutzer zugewiesene Rolle und die zugehörigen Ressourcen anzeigen.

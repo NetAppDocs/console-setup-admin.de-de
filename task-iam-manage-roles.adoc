@@ -26,6 +26,7 @@ NOTE: Fügen Sie Ihre Ordner und Projekte hinzu, bevor Sie Benutzern Zugriffsrec
 
 
 
+[[understand-how-access-is-granted-in-netapp-console]]
 == Verstehen Sie, wie der Zugriff in der NetApp Console gewährt wird.
 
 Die NetApp Console verwendet ein rollenbasiertes Zugriffssteuerungsmodell (RBAC), um Benutzerberechtigungen zu verwalten. Sie können vordefinierte Rollen einzelnen Mitgliedern oder über Verbundgruppen zuweisen. Sie können Dienstkonten sowie Verbundgruppen hinzufügen und Rollen zuweisen. Jede Rolle definiert, welche Aktionen ein Mitglied an den zugehörigen Ressourcen ausführen darf.
@@ -39,12 +40,15 @@ Beachten Sie Folgendes bezüglich der Zugriffsgewährung in der NetApp Console:
 
 
 
+[[using-role-inheritance]]
+[[role-inheritance]]
 === Verwendung der Rollenvererbung
 
 Wenn Sie in der NetApp Console eine Rolle auf Organisations-, Ordner- oder Projektebene zuweisen, wird diese Rolle automatisch an alle Ressourcen innerhalb des ausgewählten Bereichs vererbt. Beispielsweise gelten Rollen auf Ordnerebene für alle darin enthaltenen Projekte, während Rollen auf Projektebene für alle Ressourcen innerhalb dieses Projekts gelten.
 
 
 
+[[view-organization-members]]
 == Organisationsmitglieder anzeigen
 
 Um zu verstehen, welche Ressourcen und Berechtigungen einem Mitglied zur Verfügung stehen, können Sie die dem Mitglied auf verschiedenen Ebenen der Ressourcenhierarchie Ihrer Organisation zugewiesenen Rollen anzeigen.link:task-iam-manage-roles.html["Erfahren Sie, wie Sie mithilfe von Rollen den Zugriff auf Konsolenressourcen steuern."^]
@@ -60,6 +64,8 @@ In der Tabelle *Mitglieder* sind die Mitglieder Ihrer Organisation aufgelistet.
 
 
 
+[[view-roles-assigned-to-a-member]]
+[[manage-permissions]]
 == Einem Mitglied zugewiesene(n) Rolle(n) anzeigen
 
 Sie können überprüfen, welchen Rollen das Mitglied aktuell zugewiesen ist.
@@ -72,6 +78,7 @@ Wenn Sie die Rolle „Ordner- oder Projektadministrator“ haben, werden auf der
 
 
 
+[[view-members-associated-with-a-folder-or-project]]
 == Anzeigen von Mitgliedern, die einem Ordner oder Projekt zugeordnet sind
 
 Sie können die Mitglieder anzeigen, die Zugriff auf einen bestimmten Ordner oder ein bestimmtes Projekt haben.
@@ -91,6 +98,7 @@ image:screenshot-iam-member-access.png["Ein Screenshot der Seite „Projekt bear
 
 
 
+[[assign-or-modify-member-access]]
 == Mitgliederzugriff zuweisen oder ändern
 
 Nach der Registrierung eines Benutzers bei der NetApp Console können Sie ihn Ihrer Organisation hinzufügen und ihm eine Rolle zuweisen, um ihm Zugriff auf Ressourcen zu gewähren. link:task-iam-manage-members-permissions.html#add-members["Erfahren Sie, wie Sie Mitglieder zu Ihrer Organisation hinzufügen."^]
@@ -99,6 +107,7 @@ Sie können die Zugriffsrechte eines Mitglieds anpassen, indem Sie nach Bedarf R
 
 
 
+[[add-an-access-role-to-a-member]]
 == Einem Mitglied eine Zugriffsrolle hinzufügen
 
 Normalerweise weisen Sie eine Rolle zu, wenn Sie ein Mitglied zu Ihrer Organisation hinzufügen, Sie können sie jedoch jederzeit aktualisieren, indem Sie Rollen entfernen oder hinzufügen.
@@ -130,6 +139,7 @@ Wenn Sie die Organisation oder einen Ordner auswählen, verfügt das Mitglied ü
 
 
 
+[[change-a-members-assigned-role]]
 == Ändern der einem Mitglied zugewiesenen Rolle
 
 Ändern Sie die Rollen eines Mitglieds, um dessen Zugriffsrechte zu aktualisieren.
@@ -153,6 +163,7 @@ NOTE: Benutzern muss mindestens eine Rolle zugewiesen sein.  Sie können einem B
 
 
 
+[[remove-a-member-from-your-organization]]
 == Entfernen eines Mitglieds aus Ihrer Organisation
 
 Entfernen Sie ein Mitglied, wenn es Ihre Organisation verlässt.

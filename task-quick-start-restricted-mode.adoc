@@ -51,6 +51,7 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 ====
 
 
+[[supported-features-and-services-for-netapp-console-in-restricted-mode]]
 == Unterstützte Funktionen und Dienste für die NetApp Console im eingeschränkten Modus
 
 Die folgende Tabelle listet die Speicherverwaltungsfunktionen, Datendienste und administrativen Funktionen auf, die in NetApp Console verfügbar sind, wenn Sie es im eingeschränkten Modus installieren.

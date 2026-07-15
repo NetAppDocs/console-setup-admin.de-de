@@ -18,6 +18,7 @@ Standardmäßig zeigt Digital Advisor alle NetApp Konten an, die mit Ihrem Unter
 
 
 
+[[before-you-begin]]
 == Bevor Sie beginnen
 
 Sie benötigen die Administratorrolle Ihrer Organisation, um Ihre Organisation zu verifizieren. Ihr Benutzer muss außerdem mit einem NetApp Support Site (NSS) Konto verknüpft sein. link:task-adding-nss-accounts.html["Erfahren Sie, wie Sie Ihr NSS-Konto verknüpfen"].
@@ -27,6 +28,7 @@ NOTE: Wenn Ihr Unternehmen nur ein Geschäftskonto besitzt und Ihr Benutzer mit 
 
 
 
+[[verify-your-organization]]
 == Bestätigen Sie Ihre Organisation
 
 .Schritte

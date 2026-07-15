@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-47]]
 === Connector 3.9.47
 
 Diese Version des BlueXP Connectors enthält Fehlerbehebungen und eine Änderung der Endpunkte, die während der Connector-Installation kontaktiert werden.
@@ -17,6 +18,7 @@ Der Installateur kontaktiert weiterhin \https://mysupport.netapp.com.
 
 
 
+[[bluexp-identity-and-access-management]]
 === BlueXP Identitäts- und Zugriffsverwaltung
 
 Auf der Seite „Konnektoren“ werden nur die derzeit verfügbaren Konnektoren aufgelistet.  Von Ihnen entfernte Konnektoren werden nicht mehr angezeigt.

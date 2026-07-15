@@ -18,6 +18,7 @@ Der Konsolenagent wird automatisch aktualisiert, sobald eine ausgehende Verbindu
 
 
 
+[[upgrade-the-console-agent]]
 == Aktualisieren Sie den Konsolenagenten
 
 Der Konsolenagent muss während des Upgrade-Vorgangs neu gestartet werden, daher wird die NetApp Console während des Upgrades nicht verfügbar sein.
@@ -48,6 +49,7 @@ Dabei ist <Version> die Version des Agenten, die Sie heruntergeladen haben.
 
 
 
+[[upgrade-a-vcenter-deployed-console-agent-using-an-iso]]
 == Aktualisieren Sie einen vCenter-bereitgestellten Console-Agenten mithilfe einer ISO
 
 Wenn Ihr Konsolenagent in vCenter mithilfe einer OVA bereitgestellt wurde, können Sie ihn auf eine neue Version aktualisieren, indem Sie eine ISO an die VM anhängen und das Upgrade von der Wartungskonsole der VM aus durchführen.

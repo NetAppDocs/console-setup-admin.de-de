@@ -18,6 +18,7 @@ Mit der Wartungskonsole des Console-Agenten können Sie die Installation und Kon
 
 
 
+[[access-the-agent-maintenance-console]]
 == Zugriff auf die Agenten-Wartungskonsole
 
 Sie können die Wartungskonsole vom Host des Konsolenagenten aus aufrufen. Navigieren Sie zum folgenden Verzeichnis:
@@ -28,6 +29,7 @@ Sie können die Wartungskonsole vom Host des Konsolenagenten aus aufrufen. Navig
 ----
 
 
+[[config-checker-validate]]
 == config-checker validate
 
 Der `config-checker validate` Mit diesem Befehl können Sie die Konfiguration eines Konsolenagenten überprüfen.
@@ -36,6 +38,7 @@ link:reference-networking-saas-console.html["Erfahren Sie mehr über die erforde
 
 
 
+[[parameters]]
 === Parameter
 
 `--services <comma-separated list of services to validate>`--*ERFORDERLICH*--
@@ -68,6 +71,7 @@ Gibt den Pfad zu einer oder mehreren Zertifikatsdateien an, die für die Validie
 
 
 
+[[config-checker-validate-examples]]
 === Config-Checker-Validierungsbeispiele
 
 Die folgenden Beispiele umfassen die Überprüfung der Netzwerkverbindungen, der erforderlichen Ports und der Hardwareanforderungen sowie verschiedener Kombinationen aus der Verwendung eines Proxyserver und benutzerdefinierter Zertifikate.
@@ -89,6 +93,7 @@ Die folgenden Beispiele umfassen die Überprüfung der Netzwerkverbindungen, der
 ----
 
 
+[[view-help-for-any-command]]
 === Hilfe zu jedem Befehl anzeigen
 
 Um Hilfe zu einem Befehl anzuzeigen, fügen Sie an `--help` zum Befehl.  Um beispielsweise Hilfe für die `proxy add` Befehl, verwenden Sie den folgenden Befehl:

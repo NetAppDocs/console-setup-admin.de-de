@@ -18,6 +18,7 @@ Die Azure-Sicherheitsgruppe für den Agenten erfordert sowohl eingehende als auc
 
 
 
+[[inbound-rules]]
 == Eingehende Regeln
 
 [cols="3*"]
@@ -42,12 +43,14 @@ Die Azure-Sicherheitsgruppe für den Agenten erfordert sowohl eingehende als auc
 |===
 
 
+[[outbound-rules]]
 == Ausgangsregeln
 
 Die vordefinierte Sicherheitsgruppe für den Agenten öffnet den gesamten ausgehenden Datenverkehr.  Wenn das akzeptabel ist, befolgen Sie die grundlegenden Regeln für ausgehende Nachrichten.  Wenn Sie strengere Regeln benötigen, verwenden Sie die erweiterten Ausgangsregeln.
 
 
 
+[[basic-outbound-rules]]
 === Grundlegende Ausgangsregeln
 
 Die vordefinierte Sicherheitsgruppe für den Agenten umfasst die folgenden ausgehenden Regeln.
@@ -64,6 +67,7 @@ Die vordefinierte Sicherheitsgruppe für den Agenten umfasst die folgenden ausge
 |===
 
 
+[[advanced-outbound-rules]]
 === Erweiterte Ausgangsregeln
 
 Wenn Sie strenge Regeln für den ausgehenden Datenverkehr benötigen, können Sie die folgenden Informationen verwenden, um nur die Ports zu öffnen, die für die ausgehende Kommunikation durch den Agenten erforderlich sind.

@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-1-0]]
 === Konsolenagent 4.1.0
 
 Diese Version des Konsolenagenten enthält Sicherheitsverbesserungen, Fehlerbehebungen und die folgenden Funktionen:
@@ -18,6 +19,7 @@ Bei der manuellen Installation eines Console-Agenten unterstützt der Agent nun 
 
 
 
+[[netapp-console-administration]]
 === NetApp Console
 
 Diese Version enthält Folgendes:

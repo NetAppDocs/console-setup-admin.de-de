@@ -24,6 +24,7 @@ Wenn der Konsolenagent selbst keine ausgehende Internetverbindung hat, können C
 
 
 
+[[supported-configurations]]
 == Unterstützte Konfigurationen
 
 * Transparente Proxyserver werden für Agenten unterstützt, die Cloud Volumes ONTAP -Systeme bedienen.  Wenn Sie NetApp -Datendienste mit Cloud Volumes ONTAP verwenden, erstellen Sie einen dedizierten Agenten für Cloud Volumes ONTAP, bei dem Sie einen transparenten Proxyserver verwenden können.
@@ -37,6 +38,7 @@ IMPORTANT: Sobald Sie einen Proxy konfiguriert haben, können Sie den Proxy-Typ 
 
 
 
+[[enable-an-explicit-proxy-on-a-console-agent]]
 == Aktivieren Sie einen expliziten Proxy auf einem Konsolenagenten
 
 Wenn Sie einen Konsolenagenten für die Verwendung eines Proxyservers konfigurieren, verwenden dieser Agent und die von ihm verwalteten Cloud Volumes ONTAP -Systeme (einschließlich aller HA-Mediatoren) alle den Proxyserver.
@@ -71,6 +73,8 @@ Beispiel: netapp%92proxy
 
 
 
+[[enable-a-transparent-proxy-for-a-console-agent]]
+[[transparent-proxy]]
 == Aktivieren Sie einen transparenten Proxy für einen Konsolenagenten
 
 Nur Cloud Volumes ONTAP unterstützt die Verwendung eines transparenten Proxys auf dem Konsolenagenten.  Wenn Sie zusätzlich zu Cloud Volumes ONTAP NetApp -Datendienste verwenden, sollten Sie einen separaten Agenten für die Verwendung für Datendienste oder für Cloud Volumes ONTAP erstellen.
@@ -110,6 +114,7 @@ Stellen Sie sicher, dass die Zertifikatsdatei im PEM-Format vorliegt und sich im
 
 
 
+[[modify-the-transparent-proxy-for-the-console-agent]]
 === Ändern Sie den transparenten Proxy für den Konsolenagenten
 
 Sie können den vorhandenen transparenten Proxy-Server eines Console-Agenten aktualisieren, indem Sie die folgende Funktion verwenden: `proxy update` Befehl oder entfernen Sie den transparenten Proxy-Server mithilfe des Befehls `proxy remove` Befehl.  Weitere Informationen finden Sie in der Dokumentation zulink:reference-agent-maint-console-proxy.html["Agenten-Wartungskonsole"] Die
@@ -119,12 +124,14 @@ IMPORTANT: Sobald Sie einen Proxy konfiguriert haben, können Sie den Proxy-Typ 
 
 
 
+[[update-the-console-agent-proxy-if-it-loses-access-to-the-internet]]
 == Aktualisieren Sie den Proxy des Konsolenagenten, wenn dieser den Zugriff auf das Internet verliert
 
 Wenn sich die Proxy-Konfiguration für Ihr Netzwerk ändert, verliert Ihr Agent möglicherweise den Zugriff auf das Internet.  Zum Beispiel, wenn jemand das Passwort für den Proxyserver ändert oder das Zertifikat aktualisiert.  In diesem Fall müssen Sie direkt vom Konsolenagent-Host auf die Benutzeroberfläche zugreifen und die Einstellungen aktualisieren.  Stellen Sie sicher, dass Sie Netzwerkzugriff auf den Konsolen-Agent-Host haben und sich bei der Konsole anmelden können.
 
 
 
+[[enable-direct-api-traffic]]
 == Aktivieren Sie den direkten API-Verkehr
 
 Wenn Sie einen Console-Agenten für die Verwendung eines Proxyservers konfiguriert haben, können Sie den direkten API-Datenverkehr auf dem Console-Agenten aktivieren, um API-Aufrufe direkt an Cloud-Anbieterdienste zu senden, ohne den Proxy zu verwenden. Agenten, die in AWS, Azure oder Google Cloud ausgeführt werden, unterstützen diese Option.

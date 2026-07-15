@@ -18,6 +18,7 @@ Diese FAQ beantwortet häufig gestellte Fragen zum Identitäts- und Zugriffsmana
 
 
 
+[[getting-started]]
 == Erste Schritte
 
 .Was sind die ersten Schritte zur Einrichtung von IAM nach der Erstellung einer neuen NetApp Console-Organisation?
@@ -31,6 +32,7 @@ Bei der Anmeldung erstellt die Console eine Organisation mit einem Organization 
 
 
 
+[[resource-hierarchy-organizations-folders-and-projects]]
 == Ressourcenhierarchie: Organisationen, Ordner und Projekte
 
 .Worin besteht der Unterschied zwischen einem Ordner und einem Projekt in NetApp Console IAM?
@@ -56,6 +58,7 @@ Zu den Ressourcen, die Projekten zugeordnet werden können, gehören:
 
 
 
+[[roles-and-permissions]]
 == Rollen und Berechtigungen
 
 .Worin besteht der Unterschied zwischen einem Organisationsadministrator und einem Ordner- oder Projektadministrator?
@@ -72,6 +75,7 @@ Nein. Sie können den Zugriff von Mitgliedern auf einer niedrigeren Ebene nicht 
 
 
 
+[[managing-members-and-access]]
 == Mitgliederverwaltung und Zugriff verwalten
 
 .Was muss geschehen, bevor ich einen Benutzer zu meiner NetApp Console-Organisation hinzufügen kann?
@@ -88,6 +92,7 @@ NetApp empfiehlt, diesen Benutzern eine minimale Zugriffsrolle wie z. B. Organiz
 
 
 
+[[console-agents]]
 == Konsolenagenten
 
 .Was geschieht mit einem Console-Agenten nach seiner Erstellung, und kann er in anderen Projekten verwendet werden?
@@ -95,6 +100,7 @@ Konsolenagenten sind zunächst an das Projekt gebunden, in dem sie erstellt wurd
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:concept-identity-and-access-management.html["Erfahren Sie mehr über die Identitäts- und Zugriffsverwaltung der NetApp Console"]

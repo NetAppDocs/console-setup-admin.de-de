@@ -18,12 +18,14 @@ Erfahren Sie mehr über die Standardkonfigurationen des Console-Agenten für Sta
 
 
 
+[[default-configuration-with-internet-access]]
 == Standardkonfiguration mit Internetzugang
 
 Die folgenden Konfigurationsdetails gelten, wenn Sie einen Konsolenagenten von der NetApp Console oder vom Marktplatz Ihres Cloud-Anbieters bereitgestellt haben oder wenn Sie einen Konsolenagenten manuell auf einem lokalen Linux-Host mit Internetzugang installiert haben.
 
 
 
+[[console-agent-vm-details-for-aws]]
 === VM-Details des Konsolenagenten für AWS
 
 Wenn Sie einen Konsolenagenten über die Konsole oder den Marktplatz des Cloud-Anbieters bereitgestellt haben, beachten Sie Folgendes:
@@ -40,6 +42,7 @@ Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um a
 
 
 
+[[console-agent-vm-details-for-azure]]
 === VM-Details des Konsolenagenten für Azure
 
 Wenn Sie einen Konsolenagenten über die Konsole oder den Marktplatz des Cloud-Anbieters bereitgestellt haben, beachten Sie Folgendes:
@@ -55,6 +58,7 @@ Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um a
 
 
 
+[[console-agent-vm-details-for-google-cloud]]
 === VM-Details des Console-Agenten für Google Cloud
 
 Wenn Sie einen Konsolenagenten über die Konsole bereitgestellt haben, beachten Sie Folgendes:
@@ -70,6 +74,7 @@ Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um a
 
 
 
+[[installation-folder]]
 === Installationsordner
 
 Der Ordner für die Agenteninstallation befindet sich an folgendem Speicherort:
@@ -78,6 +83,7 @@ Der Ordner für die Agenteninstallation befindet sich an folgendem Speicherort:
 
 
 
+[[log-files]]
 === Protokolldateien
 
 Protokolldateien sind in den folgenden Ordnern enthalten:
@@ -95,6 +101,7 @@ Die Protokolle in diesem Ordner enthalten Details zu Cloud-Diensten und dem Kons
 
 
 
+[[console-agent-service]]
 === Konsolenagentdienst
 
 * Der Console-Agent-Dienst heißt  `occm`.
@@ -106,6 +113,7 @@ Wenn der MySQL-Dienst ausfällt, dann ist der  `occm` Dienst ebenfalls ausgefall
 
 
 
+[[ports]]
 === Häfen
 
 Der Agent verwendet die folgenden Ports auf dem Linux-Host:
@@ -116,6 +124,7 @@ Der Agent verwendet die folgenden Ports auf dem Linux-Host:
 
 
 
+[[default-configuration-without-internet-access]]
 == Standardkonfiguration ohne Internetzugang
 
 Die folgende Konfiguration gilt, wenn Sie den Konsolen-Agent manuell auf einem lokalen Linux-Host installiert haben, der keinen Internetzugang hat. link:task-quick-start-private-mode.html["Erfahren Sie mehr über diese Installationsoption"] .

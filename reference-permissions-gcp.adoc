@@ -18,6 +18,7 @@ Der Konsolenagent benötigt Berechtigungen zum Ausführen von Aktionen in Google
 
 
 
+[[google-cloud-user-account-permissions]]
 == Berechtigungen für Google Cloud-Nutzerkonten
 
 Die unten stehende benutzerdefinierte Rolle gewährt einem Google Cloud-Benutzer die erforderlichen Berechtigungen zum Bereitstellen eines Agenten.  Weisen Sie diese benutzerdefinierte Rolle dem Benutzer zu, der den Agenten bereitstellen wird.
@@ -115,6 +116,7 @@ includedPermissions:
 ====
 
 
+[[service-account-permissions]]
 == Dienstkontoberechtigungen
 
 Die unten stehende benutzerdefinierte Rolle weist dem mit dem Console-Agenten verknüpften Google Cloud-Dienstkonto die Berechtigungen zu, die zum Verwalten von Ressourcen und Prozessen in Ihrem Google Cloud-Netzwerk erforderlich sind.
@@ -302,12 +304,14 @@ includedPermissions:
 ====
 
 
+[[how-google-cloud-permissions-are-used]]
 == So werden Google Cloud-Berechtigungen verwendet
 
 Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um Cloud Volumes ONTAP Ressourcen und NetApp -Datendienstprozesse in Ihrem Google Cloud-Netzwerk zu verwalten.  In den folgenden Abschnitten wird beschrieben, wie der Agent diese Berechtigungen nutzt.
 
 
 
+[[permissions-used-for-cloud-volumes-ontap]]
 === Für Cloud Volumes ONTAP verwendete Berechtigungen
 
 Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um Cloud Volumes ONTAP Ressourcen und -Prozesse in Ihrem Google Cloud-Netzwerk zu verwalten.  In den folgenden Abschnitten wird beschrieben, wie der Agent diese Berechtigungen nutzt.
@@ -748,6 +752,7 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 ====
 
 
+[[permissions-used-for-netapp-backup-and-recovery]]
 === Für NetApp Backup and Recovery verwendete Berechtigungen
 
 Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um NetApp Backup and Recovery Ressourcen und -Prozesse in Ihrem Google Cloud-Netzwerk zu verwalten.  In den folgenden Abschnitten wird beschrieben, wie der Agent diese Berechtigungen nutzt.
@@ -777,6 +782,7 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 ====
 
 
+[[permissions-used-for-netapp-data-classification]]
 === Für die NetApp Data Classification verwendete Berechtigungen
 
 Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um NetApp Data Classification Ressourcen und -Prozesse in Ihrem Google Cloud-Netzwerk zu verwalten.  In den folgenden Abschnitten wird beschrieben, wie der Agent diese Berechtigungen nutzt.
@@ -801,30 +807,36 @@ Der Console-Agent nutzt die Berechtigungen in der benutzerdefinierten Rolle, um 
 ====
 
 
+[[change-log]]
+[[gcp-permissions-change-log]]
 == Änderungsprotokoll
 
 Die hinzugefügten und entfernten Berechtigungen sind unten aufgeführt.
 
 
 
+[[13-april-2026]]
 === 13. April 2026
 
 Die  `compute.disks.update`Berechtigung wird hinzugefügt, um IOPS- und Durchsatzparameter auf einem Hyperdisk Balanced-Aggregat oder einer Festplatte in Cloud Volumes ONTAP Systemen zu aktualisieren.
 
 
 
+[[26-february-2026]]
 === 26. Februar 2026
 
 Die  `cloudbuild.workerpools.get` und  `cloudbuild.workerpools.list` Berechtigungen wurden hinzugefügt, um Infrastructure Manager bei privaten Bereitstellungen von Cloud Volumes ONTAP in Google Cloud zu unterstützen.
 
 
 
+[[09-february-2026]]
 === 09. Februar 2026
 
 Die  `compute.forwardingRules.update`Berechtigung wurde hinzugefügt, um Infrastructure Manager in Cloud Volumes ONTAP-Bereitstellungen in Google Cloud zu unterstützen.
 
 
 
+[[08-december-2025]]
 === 8. Dezember 2025
 
 NetApp wechselt von Google Cloud Deployment Manager zu Google Cloud Infrastructure Manager (IM), um den Console-Agenten in Google Cloud bereitzustellen und auszuführen.  Um diese Änderung zu unterstützen, wurden die folgenden Berechtigungen hinzugefügt.
@@ -916,12 +928,14 @@ Für das Dienstkonto, das für den täglichen Betrieb von Cloud Volumes ONTAP ve
 
 
 
+[[26-november-2025]]
 === 26. November 2025
 
 Die Berechtigungen wurden aktualisiert, um ihre Verwendung klarer zu gestalten; es wurden jedoch keine Berechtigungen hinzugefügt oder entfernt. Es wurden drei Spalten hinzugefügt, um anzuzeigen, ob die jeweilige Berechtigung für die Bereitstellung, den täglichen Betrieb oder die Löschung verwendet wird. Darüber hinaus sind einige Berechtigungen nach ihrer Verwendung für NetApp Data Classification und NetApp Backup and Recovery getrennt.
 
 
 
+[[06-february-2023]]
 === 06. Februar 2023
 
 Die folgende Berechtigung wurde dieser Richtlinie hinzugefügt:
@@ -933,6 +947,7 @@ Diese Berechtigung ist für Cloud Volumes ONTAP erforderlich.
 
 
 
+[[27-january-2023]]
 === 27.01.2023
 
 Folgende Berechtigungen wurden dieser Richtlinie hinzugefügt:

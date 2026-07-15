@@ -18,6 +18,7 @@ Wenn die NetApp Console einen Konsolenagenten in AWS startet, fügt sie dem Agen
 
 
 
+[[iam-policies]]
 == IAM-Richtlinien
 
 Die unten verfügbaren IAM-Richtlinien bieten die Berechtigungen, die ein Konsolenagent benötigt, um Ressourcen und Prozesse in Ihrer öffentlichen Cloud-Umgebung basierend auf Ihrer AWS-Region zu verwalten.
@@ -745,12 +746,14 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
 ====
 
 
+[[how-the-aws-permissions-are-used]]
 == So werden die AWS-Berechtigungen verwendet
 
 In den folgenden Abschnitten wird beschrieben, wie die Berechtigungen für die einzelnen NetApp Console -Verwaltungs- oder Datendienste verwendet werden.  Diese Informationen können hilfreich sein, wenn Ihre Unternehmensrichtlinien vorschreiben, dass Berechtigungen nur bei Bedarf erteilt werden.
 
 
 
+[[amazon-fsx-for-ontap]]
 === Amazon FSx für ONTAP
 
 Der Konsolenagent stellt die folgenden API-Anfragen, um ein Amazon FSx for ONTAP Dateisystem zu verwalten:
@@ -785,6 +788,7 @@ Der Konsolenagent stellt die folgenden API-Anfragen, um ein Amazon FSx for ONTAP
 
 
 
+[[amazon-s3-bucket-discovery]]
 === Amazon S3 Bucket-Erkennung
 
 Der Konsolenagent stellt die folgende API-Anfrage, um Amazon S3-Buckets zu ermitteln:
@@ -793,6 +797,7 @@ s3:GetEncryptionConfiguration
 
 
 
+[[netapp-backup-and-recovery]]
 === NetApp Backup and Recovery
 
 Der Agent stellt die folgenden API-Anfragen, um Backups in Amazon S3 zu verwalten:
@@ -886,6 +891,7 @@ Die folgenden Berechtigungen benötigen Sie nur, wenn Sie vor der Veröffentlich
 
 
 
+[[netapp-data-classification]]
 === NetApp Data Classification
 
 Der Agent stellt die folgenden API-Anfragen, um NetApp Data Classification bereitzustellen:
@@ -939,6 +945,7 @@ Der Agent stellt die folgenden API-Anfragen, um S3-Buckets zu scannen, wenn Sie 
 
 
 
+[[cloud-volumes-ontap]]
 === Cloud Volumes ONTAP
 
 Der Agent stellt die folgenden API-Anfragen, um Cloud Volumes ONTAP in AWS bereitzustellen und zu verwalten.
@@ -1198,12 +1205,14 @@ Der Agent stellt die folgenden API-Anfragen, um Cloud Volumes ONTAP in AWS berei
 |===
 
 
+[[change-log]]
 == Änderungsprotokoll
 
 Wenn Berechtigungen hinzugefügt oder entfernt werden, vermerken wir dies in den folgenden Abschnitten.
 
 
 
+[[24-february-2026]]
 === 24. Februar 2026
 
 Für die Data Classification ist nun folgende Berechtigung erforderlich:
@@ -1212,6 +1221,7 @@ cloudformation:ListStacks
 
 
 
+[[11-november-2025]]
 === 11. November 2025
 
 Die folgenden Berechtigungen sind für NetApp Backup and Recovery nicht mehr erforderlich, es sei denn, Sie verwenden die Legacy-Indexierung. Diese Berechtigungen wurden aus den Richtlinien auf dieser Seite entfernt:
@@ -1229,6 +1239,7 @@ Die folgenden Berechtigungen sind für NetApp Backup and Recovery nicht mehr erf
 
 
 
+[[9-september-2024]]
 === 9. September 2024
 
 Berechtigungen wurden aus Richtlinie Nr. 2 für Standardregionen entfernt, da die NetApp Console NetApp -Edge-Caching sowie die Erkennung und Verwaltung von Kubernetes-Clustern nicht mehr unterstützt.
@@ -1280,6 +1291,7 @@ Berechtigungen wurden aus Richtlinie Nr. 2 für Standardregionen entfernt, da di
 ====
 
 
+[[9-may-2024]]
 === 9. Mai 2024
 
 Für Cloud Volumes ONTAP ist jetzt die folgende Berechtigung erforderlich:
@@ -1288,6 +1300,7 @@ ec2:DescribeAvailabilityZones
 
 
 
+[[6-june-2023]]
 === 6. Juni 2023
 
 Für Cloud Volumes ONTAP ist jetzt die folgende Berechtigung erforderlich:
@@ -1296,6 +1309,7 @@ kms:GenerateDataKeyWithoutPlaintext
 
 
 
+[[14-february-2023]]
 === 14. Februar 2023
 
 Für NetApp Cloud Tiering ist nun folgende Berechtigung erforderlich:

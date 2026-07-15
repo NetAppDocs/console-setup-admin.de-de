@@ -18,6 +18,7 @@ Bei Änderungen der Netzwerkkonfiguration müssen Sie möglicherweise die IP-Adr
 
 
 
+[[change-the-ip-address-for-an-agent]]
 == Ändern der IP-Adresse für einen Agenten
 
 Sie können die internen und öffentlichen IP-Adressen der von Ihrem Cloud-Anbieter zugewiesenen Agenteninstanz bei Bedarf ändern.
@@ -55,6 +56,7 @@ system configuration backup settings modify -destination <target-location>
 ----
 
 
+[[edit-an-agents-uris]]
 == Bearbeiten der URIs eines Agenten
 
 Aktualisieren Sie die URI eines Console-Agenten, wenn sich Ihre Netzwerkanforderungen ändern. Dies gewährleistet eine unterbrechungsfreie, sichere und konforme Verwaltung Ihrer Speicherinfrastruktur.

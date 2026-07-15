@@ -18,6 +18,7 @@ Bei der manuellen Installation eines Console-Agenten liegt die Wartung des Betri
 
 
 
+[[apply-operating-system-updates-to-the-agent-host]]
 == Wenden Sie Betriebssystemaktualisierungen auf dem Agentenhost an
 
 Wenden Sie Betriebssystem-Sicherheitspatches an, ohne die Agent-Hostdienste zu stoppen.
@@ -41,6 +42,7 @@ sudo apt upgrade
 ----
 
 
+[[vm-or-instance-type]]
 == VM- oder Instanztyp
 
 Wenn Sie einen Konsolenagenten aus der Konsole erstellen, stellt dieser eine VM-Instanz mit einer Standardkonfiguration bei Ihrem Cloud-Anbieter bereit.  Wechseln Sie nach dem Erstellen des Agenten nicht zu einer kleineren VM-Instanz mit weniger CPU oder RAM.
@@ -55,6 +57,8 @@ link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardko
 
 
 
+[[monitor-the-agent]]
+[[monitor-disk-space]]
 == Überwachen des Agenten
 
 Die Konsole benachrichtigt Sie, wenn die Agent-VM fehlerhaft ist, beispielsweise bei Problemen mit Speicherplatz, RAM und CPU.  Überwachen Sie diese Benachrichtigungen im Benachrichtigungscenter in der Konsole oder konfigurieren Sie E-Mail-Benachrichtigungen.  Gelegentliche Erhöhungen des Speicherplatzes, des Arbeitsspeichers oder der CPU-Auslastung sind normal. Wenn dies jedoch häufig vorkommt, sollten Sie Maßnahmen zur Behebung des Problems ergreifen.
@@ -81,6 +85,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
 |===
 
 
+[[stopping-and-starting-the-agent-vm]]
 == Stoppen und Starten der Agent-VM
 
 Stoppen und starten Sie die Agent-VM bei Bedarf über die Konsole Ihres Cloud-Anbieters oder über standardmäßige Verfahren vor Ort.
@@ -89,6 +94,8 @@ link:concept-agents.html#agents-must-be-operational-at-all-times["Beachten Sie, 
 
 
 
+[[connect-to-the-linux-vm]]
+[[connect-linux-host]]
 == Herstellen einer Verbindung mit der Linux-VM
 
 Wenn Sie eine Verbindung mit der Linux-VM herstellen müssen, auf der der Agent ausgeführt wird, verwenden Sie die Konnektivitätsoptionen Ihres Cloud-Anbieters.

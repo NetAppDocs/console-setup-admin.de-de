@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-51]]
 === Connector 3.9.51
 
 Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen.
@@ -18,6 +19,7 @@ Wenn Sie Backup und Wiederherstellung oder Ransomware-Schutz verwenden, können 
 
 
 
+[[bluexp-identity-and-access-management-iam]]
 === BlueXP Identitäts- und Zugriffsmanagement (IAM)
 
 * Benutzern ohne Organisationsadministrator oder Ordner- oder Projektadministrator muss eine Ransomware-Schutzrolle zugewiesen werden, um Zugriff auf den Ransomware-Schutz zu haben.  Sie können einem Benutzer eine von zwei Rollen zuweisen: Ransomware-Schutz-Administrator oder Ransomware-Schutz-Betrachter.

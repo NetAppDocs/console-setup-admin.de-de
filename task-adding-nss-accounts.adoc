@@ -20,6 +20,7 @@ Die Konsole unterstützt auch die Zuordnung eines NSS-Kontos pro Benutzerkonto. 
 
 
 
+[[overview]]
 == Überblick
 
 Um die folgenden Aufgaben zu ermöglichen, müssen Sie die Anmeldeinformationen der NetApp Support Site mit der Seriennummer Ihres spezifischen Konsolenkontos verknüpfen:
@@ -39,6 +40,7 @@ Diese Anmeldeinformationen sind mit der Seriennummer Ihres spezifischen Konsolen
 
 
 
+[[add-an-nss-account]]
 == Hinzufügen eines NSS-Kontos
 
 Sie können Ihre NetApp Support Site-Konten zur Verwendung mit der Konsole über das Support-Dashboard in der Konsole hinzufügen und verwalten.
@@ -82,6 +84,7 @@ Benutzer können jetzt das Konto auswählen, wenn sie neue Cloud Volumes ONTAP -
 
 
 
+[[update-nss-credentials]]
 == NSS-Anmeldeinformationen aktualisieren
 
 Aus Sicherheitsgründen müssen Sie Ihre NSS-Anmeldeinformationen alle 90 Tage aktualisieren.  Sie werden im Benachrichtigungscenter der Konsole benachrichtigt, wenn Ihre NSS-Anmeldeinformationen abgelaufen sind. link:task-monitor-cm-operations.html#notification-center["Erfahren Sie mehr über das Benachrichtigungscenter"^] .
@@ -107,6 +110,8 @@ NetApp verwendet Microsoft Entra ID als Identitätsanbieter für Authentifizieru
 
 
 
+[[attach-a-system-to-a-different-nss-account]]
+[[attach-system-nss-account]]
 == Verbinden Sie ein System mit einem anderen NSS-Konto
 
 Wenn Ihr Unternehmen über mehrere NetApp Support Site-Konten verfügt, können Sie ändern, welches Konto mit einem Cloud Volumes ONTAP -System verknüpft ist.
@@ -131,6 +136,7 @@ image:screenshot-nss-change-account.png["Ein Screenshot, der das Aktionsmenü f�
 
 
 
+[[display-the-email-address-for-an-nss-account]]
 == E-Mail-Adresse für ein NSS-Konto anzeigen
 
 Aus Sicherheitsgründen wird die mit einem NSS-Konto verknüpfte E-Mail-Adresse standardmäßig nicht angezeigt.  Sie können die E-Mail-Adresse und den zugehörigen Benutzernamen für ein NSS-Konto anzeigen.
@@ -146,6 +152,7 @@ TIP: Wenn Sie zur NSS-Verwaltungsseite gehen, generiert die Konsole für jedes K
 
 
 
+[[remove-an-nss-account]]
 == Entfernen eines NSS-Kontos
 
 Löschen Sie alle NSS-Konten, die Sie nicht mehr mit der Konsole verwenden möchten.

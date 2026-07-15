@@ -27,6 +27,8 @@ Sie müssen den Netzwerkzugriff für Folgendes einrichten:
 
 
 
+[[update-your-endpoint-list-to-the-revised-list-for-4-0-0-and-higher]]
+[[update-endpoint-list]]
 == Aktualisieren Sie Ihre Endpunktliste auf die überarbeitete Liste für 4.0.0 und höher
 
 Ab Version 4.0.0 benötigen Konsolenagenten weniger Endpunkte.  Vorhandene Bereitstellungen vor 4.0.0 werden weiterhin unterstützt.  Nach dem Upgrade auf 4.0.0 oder höher können Sie die alten Endpunkte bei Bedarf aus Ihrer Zulassungsliste entfernen.
@@ -106,6 +108,7 @@ systemctl status netapp-service-manager.service
 
 
 
+[[endpoints-for-netapp-console-and-console-agents-for-3-9-55-and-below]]
 == Endpunkte für NetApp Console und Konsolenagenten für 3.9.55 und darunter
 
 Diese Endpunkte werden für Konsolenagenten 3.9.55 und darunter verwendet.
@@ -152,6 +155,7 @@ NetApp empfiehlt, Endpunkte der Option 1 in Ihrer Firewall zuzulassen, da diese 
 |===
 
 
+[[cloud-provider-endpoints-contacted-by-the-console-agent]]
 == Vom Konsolenagenten kontaktierte Cloud-Provider-Endpunkte
 
 Konsolenagenten müssen Zugriff auf zusätzliche Endpunkte haben, wenn diese bei Ihrem Cloud-Anbieter bereitgestellt werden.
@@ -167,12 +171,14 @@ Die Endpunkte des Cloud-Anbieters sind für alle Versionen gleich.
 
 
 
+[[data-services-endpoints-contacted-by-the-console-agent]]
 == Vom Konsolenagenten kontaktierte Datendienstendpunkte
 
 Der Konsolenagent erfordert zusätzlichen ausgehenden Internetzugang, um einige NetApp Datendienste und Cloud Volumes ONTAP zu unterstützen.
 
 
 
+[[endpoints-for-cloud-volumes-ontap]]
 === Endpunkte für Cloud Volumes ONTAP
 
 * link:https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/reference-networking-aws.html#outbound-internet-access-for-cloud-volumes-ontap-nodes["Endpunkte für Cloud Volumes ONTAP in AWS"]

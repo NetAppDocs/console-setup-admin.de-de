@@ -29,6 +29,7 @@ Führen Sie diese Wartungsaufgaben mithilfe der VM-Webkonsole durch:
 
 
 
+[[access-the-vm-maintenance-console]]
 == Zugriff auf die VM-Wartungskonsole
 
 Sie können über den vSphere-Client auf die Wartungskonsole zugreifen.
@@ -42,6 +43,7 @@ Sie können über den vSphere-Client auf die Wartungskonsole zugreifen.
 
 
 
+[[change-the-maint-user-password]]
 === Ändern Sie das Kennwort des Wartungsbenutzers
 
 Sie können das Passwort für die `maint` Benutzer.
@@ -57,6 +59,7 @@ Sie können das Passwort für die `maint` Benutzer.
 
 
 
+[[increase-the-cpu-or-ram-of-the-vm-instance]]
 === Erhöhen Sie die CPU oder den RAM der VM-Instanz
 
 Sie können die CPU oder den RAM der VM-Instanz erhöhen, die den Konsolenagenten hostet.
@@ -87,6 +90,7 @@ Bearbeiten Sie die VM-Instanz-Einstellungen in Ihrem vCenter oder ESXi-Host und 
 
 
 
+[[view-network-settings-for-the-agent-vm]]
 === Netzwerkeinstellungen für die Agent-VM anzeigen
 
 Überprüfen Sie die Netzwerkeinstellungen der Agenten-VM im vSphere Client, um Netzwerkprobleme zu bestätigen oder zu beheben. Sie können lediglich die folgenden Netzwerkeinstellungen anzeigen (nicht aktualisieren): IP-Adresse und DNS-Details.
@@ -102,6 +106,7 @@ Bearbeiten Sie die VM-Instanz-Einstellungen in Ihrem vCenter oder ESXi-Host und 
 
 
 
+[[update-the-static-routes-for-the-agent-vm]]
 === Aktualisieren Sie die statischen Routen für die Agent-VM
 
 Fügen Sie nach Bedarf statische Routen für die Agent-VM hinzu, aktualisieren oder entfernen Sie sie.
@@ -120,6 +125,7 @@ Fügen Sie nach Bedarf statische Routen für die Agent-VM hinzu, aktualisieren o
 
 
 
+[[update-domain-search-settings-for-the-agent-vm]]
 === Aktualisieren der Domänensucheinstellungen für die Agent-VM
 
 Sie können die Suchdomäneneinstellungen für die Agent-VM aktualisieren.
@@ -138,6 +144,8 @@ Sie können die Suchdomäneneinstellungen für die Agent-VM aktualisieren.
 
 
 
+[[access-the-agent-diagnostic-tools]]
+[[connect-vcenter-host]]
 === Zugriff auf die Diagnosetools des Agenten
 
 Greifen Sie auf Diagnosetools zu, um Probleme mit dem Konsolenagenten zu beheben.  Der NetApp -Support fordert Sie möglicherweise bei der Fehlerbehebung dazu auf.
@@ -153,6 +161,7 @@ Greifen Sie auf Diagnosetools zu, um Probleme mit dem Konsolenagenten zu beheben
 
 
 
+[[access-the-agent-diagnostic-tools-remotely]]
 === Fernzugriff auf die Diagnosetools des Agenten
 
 Mit einem Tool wie Putty können Sie remote auf Diagnosetools zugreifen.  Aktivieren Sie den SSH-Zugriff auf die Agent-VM, indem Sie ein Einmalkennwort zuweisen.

@@ -21,6 +21,7 @@ Super-Admin, Organisations-Admin oder Ordner- bzw. Projekt-Admin (für die von i
 
 
 
+[[reset-user-passwords-local-users-only]]
 == Benutzerpasswörter zurücksetzen (nur für lokale Benutzer)
 
 Organisationsadministratoren können die Passwörter lokaler Benutzer nicht zurücksetzen. Sie können die Benutzer jedoch anweisen, ihre Passwörter selbst zurückzusetzen.
@@ -32,6 +33,8 @@ NOTE: Diese Option steht Benutzern in einer föderierten Organisation nicht zur 
 
 
 
+[[manage-a-users-multi-factor-authentication-mfa]]
+[[manage-mfa]]
 == Verwalten der Multi-Faktor-Authentifizierung (MFA) eines Benutzers
 
 Wenn ein Benutzer den Zugriff auf sein MFA-Gerät verliert, können Sie seine MFA-Konfiguration entweder entfernen oder deaktivieren.
@@ -58,6 +61,7 @@ In der Tabelle *Mitglieder* sind die Mitglieder Ihrer Organisation aufgelistet.
 
 
 
+[[recreate-the-credentials-for-a-service-account]]
 == Erstellen Sie die Anmeldeinformationen für ein Dienstkonto neu
 
 Sie können neue Zugangsdaten für ein Dienstkonto erstellen, falls Sie diese verlieren oder aktualisieren müssen.

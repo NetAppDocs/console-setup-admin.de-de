@@ -18,6 +18,7 @@ Sie können die Wartungskonsole des Konsolenagenten verwenden, um einen Konsolen
 
 
 
+[[access-the-agent-maintenance-console]]
 == Zugriff auf die Agenten-Wartungskonsole
 
 Sie können die Wartungskonsole vom Host des Konsolenagenten aus aufrufen. Navigieren Sie zum folgenden Verzeichnis:
@@ -28,6 +29,7 @@ Sie können die Wartungskonsole vom Host des Konsolenagenten aus aufrufen. Navig
 ----
 
 
+[[view-help-for-any-command]]
 === Hilfe zu jedem Befehl anzeigen
 
 Um Hilfe zu einem Befehl anzuzeigen, fügen Sie an `--help` zum Befehl.  Um beispielsweise Hilfe für die `proxy add` Befehl, verwenden Sie den folgenden Befehl:
@@ -38,12 +40,14 @@ Um Hilfe zu einem Befehl anzuzeigen, fügen Sie an `--help` zum Befehl.  Um beis
 ----
 
 
+[[proxy-get]]
 == Proxy abrufen
 
 Der `proxy get` Der Befehl zeigt Informationen über die aktuelle Konfiguration des transparenten Proxy-Servers an.  Um die aktuelle Konfiguration des transparenten Proxy-Servers anzuzeigen, verwenden Sie folgenden Befehl:
 
 
 
+[[proxy-get-example]]
 === Proxy-Abfragebeispiel
 
 [source, cli]
@@ -52,12 +56,14 @@ Der `proxy get` Der Befehl zeigt Informationen über die aktuelle Konfiguration 
 ----
 
 
+[[proxy-add]]
 == Proxy hinzufügen
 
 Der `proxy add` Der Befehl konfiguriert den Agenten zur Verwendung eines transparenten Proxy-Servers.
 
 
 
+[[parameters]]
 === Parameter
 
 `-c <certificate file>`
@@ -67,6 +73,7 @@ Gibt den Pfad zur Zertifikatsdatei für den Proxy-Server an.  Die Zertifikatsdat
 
 
 
+[[proxy-add-example]]
 === Beispiel zum Hinzufügen eines Proxys
 
 Um einen transparenten Proxyserver hinzuzufügen, verwenden Sie den folgenden Befehl, wobei `/home/ubuntu/myCA1.pem` ist der Pfad zur Zertifikatsdatei für den Proxyserver.  Die Zertifikatsdatei muss im PEM-Format vorliegen:
@@ -77,12 +84,14 @@ Um einen transparenten Proxyserver hinzuzufügen, verwenden Sie den folgenden Be
 ----
 
 
+[[proxy-update]]
 == Proxy-Update
 
 Der `proxy update` Mit diesem Befehl können Sie das Zertifikat eines transparenten Proxys aktualisieren.
 
 
 
+[[parameters]]
 === Parameter
 
 `-c <certificate file>`gibt den Pfad zur Zertifikatsdatei für den Proxy-Server an.  Die Zertifikatsdatei muss im PEM-Format vorliegen.
@@ -91,6 +100,7 @@ Stellen Sie sicher, dass sich die Zertifikatsdatei im selben Verzeichnis wie der
 
 
 
+[[proxy-update-example]]
 === Proxy-Update-Beispiel
 
 Um das Zertifikat für einen transparenten Proxyserver zu aktualisieren, verwenden Sie den folgenden Befehl, wobei `/home/ubuntu/myCA1.pem` ist der Pfad zur neuen Zertifikatsdatei für den Proxyserver.  Die Zertifikatsdatei muss im PEM-Format vorliegen:
@@ -101,12 +111,14 @@ Um das Zertifikat für einen transparenten Proxyserver zu aktualisieren, verwend
 ----
 
 
+[[proxy-remove]]
 == Proxy entfernen
 
 Der `proxy remove` Der Befehl entfernt die Konfiguration des transparenten Proxy-Servers vom Agenten.
 
 
 
+[[proxy-remove-example]]
 === Beispiel zum Entfernen eines Proxys
 
 Um den transparenten Proxyserver zu entfernen, verwenden Sie folgenden Befehl:

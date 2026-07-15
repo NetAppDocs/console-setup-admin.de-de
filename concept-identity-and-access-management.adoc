@@ -29,12 +29,14 @@ image:diagram-iam-resource-hierarchy.png["Ein konzeptionelles Diagramm, das die 
 
 
 
+[[identity-and-access-management-components]]
 == Komponenten für Identitäts- und Zugriffsmanagement
 
 Das NetApp Console IAM basiert auf drei Komponententypen: Organisationskomponenten, die die Hierarchie definieren, Ressourcen, die innerhalb dieser Hierarchie zugewiesen werden, und Mitglieder und Rollen, die steuern, wer worauf Zugriff hat.
 
 
 
+[[netapp-console-organizational-components]]
 === NetApp Console-Organisationskomponenten
 
 Die organisatorischen Komponenten – Organisation, Ordner und Projekte – bilden eine Hierarchie, die festlegt, wie Ressourcen gruppiert und wie der Zugriff delegiert wird.
@@ -56,6 +58,7 @@ NOTE: Benutzer mit der Rolle „Organisationsadministrator“ können Ressourcen
 
 
 
+[[resources]]
 === Ressourcen
 
 Eine _Ressource_ ist eine Entität, die der Console bekannt ist und die einem Projekt zugewiesen werden kann. _Ressourcen_ umfassen Speichersysteme, Keystone-Abonnements, einige NetApp Backup and Recovery-Workloads sowie Console-Agenten.
@@ -87,6 +90,7 @@ link:task-iam-associate-agents.html["Erfahren Sie, wie Sie Agenten Projekten zuo
 
 
 
+[[members-and-roles]]
 === Mitglieder und Rollen
 
 Mitglieder sind die Benutzer und Dienstkonten in Ihrer Organisation. Rollen definieren, welche Aktionen sie ausführen können und auf welcher Ebene der Hierarchie—Organisation, Ordner oder Projekt.
@@ -115,12 +119,14 @@ link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
 
 
 
+[[iam-strategy-examples]]
 == Beispiele für IAM-Strategien
 
 Die richtige IAM-Struktur hängt von der Größe Ihres Unternehmens und der Organisation Ihrer Teams ab. Die folgenden Beispiele zeigen, wie verschiedene Organisationen die IAM-Hierarchie nutzen können, um den Zugriff effektiv zu verwalten.
 
 
 
+[[small-organization-strategy]]
 === Strategie für kleine Organisationen
 
 Für Organisationen mit weniger als 50 Benutzern und zentralisierter Speicherverwaltung empfiehlt sich ein vereinfachter Ansatz mit den Rollen Super-Administrator und Super-Betrachter.
@@ -140,6 +146,7 @@ Für Organisationen mit weniger als 50 Benutzern und zentralisierter Speicherver
 
 
 
+[[multi-regional-enterprise-strategy]]
 === Strategie für ein multiregionales Unternehmen
 
 Bei großen Organisationen mit regionalen Niederlassungen und spezialisierten Teams empfiehlt sich ein hierarchischer Ansatz mit Ordnern, die geografische oder Geschäftsbereichsgrenzen repräsentieren.
@@ -173,6 +180,7 @@ Bei großen Organisationen mit regionalen Niederlassungen und spezialisierten Te
 
 
 
+[[departmental-specialization-strategy]]
 === Strategie der Fachbereichsspezialisierung
 
 Für Organisationen mit spezialisierten Teams, die einen spezifischen Zugriff auf Datendienste benötigen, sollten gezielte Rollenzuweisungen auf der Grundlage funktionaler Verantwortlichkeiten verwendet werden.
@@ -194,6 +202,7 @@ Für Organisationen mit spezialisierten Teams, die einen spezifischen Zugriff au
 
 
 
+[[next-steps-with-iam-in-netapp-console]]
 == Nächste Schritte mit IAM in der NetApp Console
 
 * link:task-iam-get-started.html["Erste Schritte mit IAM in der NetApp Console"]

@@ -4,6 +4,7 @@
 
 
 
+[[console-agent-4-5-0]]
 === Console Agent 4.5.0
 
 Die Version 4.5.0 unterstützt sowohl den Standardmodus als auch den eingeschränkten Modus.
@@ -15,6 +16,7 @@ Sie können mithilfe von Konfigurationsprüfungen überprüfen, ob die erforderl
 
 
 
+[[netapp-console-administration]]
 === NetApp Console
 
 Sie können Keystone-Rollen Partnerbenutzern zuweisen, um diesen Benutzern die Verwaltung von Keystone-Ressourcen in einer Partnerorganisation zu ermöglichen. link:https://docs.netapp.com/us-en/console-setup-admin/task-partnerships-assign-users.html["Erfahren Sie mehr über die Zuweisung von Keystone-Rollen an Partnerbenutzer."]

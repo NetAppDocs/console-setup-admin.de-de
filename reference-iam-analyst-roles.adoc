@@ -18,6 +18,7 @@ Sie können Benutzern die Rolle des Operational Support Analyst zuweisen, um ihn
 
 
 
+[[operational-support-analyst]]
 == Analyst für operative Unterstützung
 
 [cols="1,2"]

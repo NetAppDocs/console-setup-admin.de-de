@@ -28,6 +28,7 @@ NOTE: Stellen Sie einen Konsolenagenten in derselben Azure-Region wie die Cloud 
 
 
 
+[[step-1-set-up-networking]]
 == Schritt 1: Einrichten des Netzwerks
 
 Stellen Sie sicher, dass der Netzwerkstandort, an dem Sie den Console-Agenten installieren möchten, die folgenden Anforderungen erfüllt. Diese Anforderungen ermöglichen es dem Console-Agenten, Ressourcen in Ihrer Hybrid-Cloud zu verwalten.
@@ -145,6 +146,7 @@ Implementieren Sie die Netzwerkanforderungen, nachdem Sie den Konsolenagenten er
 
 
 
+[[step-2-review-vm-requirements]]
 == Schritt 2: Überprüfen der VM-Anforderungen
 
 Wählen Sie beim Erstellen des Konsolenagenten einen virtuellen Maschinentyp aus, der die folgenden Anforderungen erfüllt.
@@ -156,6 +158,7 @@ Azure-VM-Größe:: Ein Instanztyp, der die CPU- und RAM-Anforderungen erfüllt. 
 
 
 
+[[step-3-set-up-permissions]]
 == Schritt 3: Berechtigungen einrichten
 
 Sie können Berechtigungen auf folgende Weise erteilen:
@@ -364,6 +367,7 @@ image:screenshot_azure_client_secret.gif["Ein Screenshot des Azure-Portals, der 
 ====
 
 
+[[step-4-create-the-console-agent]]
 == Schritt 4: Erstellen des Konsolenagenten
 
 Starten Sie den Konsolen-Agent direkt vom Azure Marketplace.
@@ -448,6 +452,7 @@ Wenn Sie Azure Blob Storage im selben Azure-Abonnement haben, in dem Sie den Kon
 
 
 
+[[step-5-provide-permissions-to-the-console-agent]]
 == Schritt 5: Erteilen Sie dem Konsolenagenten Berechtigungen
 
 Nachdem Sie den Konsolenagenten erstellt haben, müssen Sie ihm die zuvor eingerichteten Berechtigungen erteilen.  Durch die Bereitstellung der Berechtigungen kann der Konsolenagent Ihre Daten und Speicherinfrastruktur in Azure verwalten.

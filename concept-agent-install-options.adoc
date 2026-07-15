@@ -20,6 +20,8 @@ Für Cloud-Bereitstellungen können Sie einen Agenten in Amazon Web Services (AW
 
 
 
+[[deploy-from-the-netapp-console]]
+[[agent-console-deploy]]
 == Bereitstellung über die NetApp Console
 
 NetApp empfiehlt die Bereitstellung über die NetApp Console, wenn Sie den Standardmodus verwenden. Die NetApp Console führt Sie durch die Netzwerk- und Berechtigungskonfiguration und startet dann automatisch die VM oder Instanz bei Ihrem Cloud-Anbieter. Die Console führt Sie durch die Netzwerk- und Berechtigungskonfiguration und startet dann die VM oder Instanz bei Ihrem Cloud-Anbieter automatisch.
@@ -49,6 +51,8 @@ link:task-install-agent-aws-console.html["Stellen Sie einen Console-Agenten in A
 
 
 
+[[deploy-from-a-cloud-provider-marketplace]]
+[[agent-marketplace-deploy]]
 == Bereitstellung über einen Cloud-Anbieter-Marktplatz
 
 Bei der Bereitstellung über den AWS Marketplace oder den Azure Marketplace wird die Agenteninstallation direkt vom Marketplace aus initiiert, nicht von der NetApp Console.
@@ -79,6 +83,8 @@ link:task-install-agent-aws-marketplace.html["Stellen Sie einen Console-Agenten 
 
 
 
+[[manually-install-on-a-linux-host-in-the-cloud]]
+[[agent-cloud-manual-deploy]]
 == Manuelle Installation auf einem Linux-Host in der Cloud
 
 Die manuelle Installation ermöglicht es Ihnen, die Console-Agent-Software direkt auf einem Linux-Host zu installieren, den Sie in AWS, Azure, Google Cloud oder lokal bereitstellen und verwalten.
@@ -108,6 +114,8 @@ link:task-install-agent-aws-manual.html["Manuelle Installation eines Console-Age
 
 
 
+[[manually-install-on-premises-using-vcenter-ova]]
+[[agent-ova-on-prem-deploy]]
 == Manuelle Installation vor Ort mit vCenter (OVA)
 
 Bei Verwendung von VMware vCenter können Sie den Konsolenagenten durch Importieren einer OVA-Datei (Open Virtual Appliance) bereitstellen. Die OVA ist ein vorkonfiguriertes VM-Image, das Sie mit dem vSphere Client bereitstellen, ohne Linux zu installieren oder eine Container-Laufzeitumgebung zu konfigurieren.
@@ -142,6 +150,8 @@ link:task-install-agent-on-prem-ova.html["Lokale Bereitstellung mit vCenter"]
 
 
 
+[[manually-install-on-premises-without-vcenter]]
+[[agent-manual-on-prem-deploy]]
 == Manuelle Installation vor Ort (ohne vCenter)
 
 Sie können den Console-Agenten manuell auf jedem lokalen Linux-Host installieren. Sie müssen den Linux-Host und die Container-Laufzeitumgebung (Docker oder Podman) einrichten und anschließend den Console-Agenten installieren.

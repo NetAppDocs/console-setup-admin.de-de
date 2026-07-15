@@ -28,6 +28,7 @@ NOTE: Stellen Sie einen Konsolenagenten in derselben Azure-Region wie die Cloud 
 
 
 
+[[step-1-review-host-requirements]]
 == Schritt 1: Hostanforderungen prüfen
 
 Die Konsolenagent-Software muss auf einem Host ausgeführt werden, der bestimmte Betriebssystemanforderungen, RAM-Anforderungen, Portanforderungen usw. erfüllt.
@@ -154,6 +155,8 @@ Nicht unterstützt
 |===
 
 
+[[step-2-install-podman-or-docker-engine]]
+[[podman-configuration]]
 == Schritt 2: Installieren Sie Podman oder Docker Engine
 
 Abhängig von Ihrem Betriebssystem ist vor der Installation des Agenten entweder Podman oder Docker Engine erforderlich.
@@ -339,6 +342,7 @@ sudo systemctl enable docker && sudo systemctl start docker
 ====
 
 
+[[step-3-set-up-networking]]
 == Schritt 3: Einrichten des Netzwerks
 
 Stellen Sie sicher, dass der Netzwerkspeicherort, an dem Sie den Konsolenagenten installieren möchten, die folgenden Anforderungen unterstützt.  Wenn diese Anforderungen erfüllt sind, kann der Konsolenagent Ressourcen und Prozesse in Ihrer Hybrid-Cloud-Umgebung verwalten.
@@ -458,6 +462,7 @@ Aktivieren von NTP:: Wenn Sie planen, NetApp Data Classification zum Scannen Ihr
 
 
 
+[[step-4-set-up-console-agent-deployment-permissions]]
 == Schritt 4: Einrichten der Bereitstellungsberechtigungen für den Konsolen-Agenten
 
 Sie müssen dem Konsolen-Agenten Azure-Berechtigungen erteilen, indem Sie eine der folgenden Optionen verwenden:
@@ -669,6 +674,7 @@ Ihr Dienstprinzipal ist jetzt eingerichtet und Sie sollten die Anwendungs-ID (Cl
 ====
 
 
+[[step-5-install-the-console-agent]]
 == Schritt 5: Installieren des Konsolenagenten
 
 Nachdem die Voraussetzungen erfüllt sind, können Sie die Software manuell auf Ihrem eigenen Linux-Host installieren.
@@ -835,6 +841,7 @@ Wenn Sie Azure Blob Storage im selben Azure-Abonnement haben, in dem Sie den Kon
 
 
 
+[[step-6-provide-permissions-to-netapp-console]]
 == Schritt 6: Berechtigungen für die NetApp Console erteilen
 
 Nachdem Sie den Konsolen-Agent installiert haben, müssen Sie dem Konsolen-Agenten die Azure-Berechtigungen erteilen, die Sie zuvor eingerichtet haben.  Durch die Bereitstellung der Berechtigungen kann die Konsole Ihre Daten- und Speicherinfrastruktur in Azure verwalten.

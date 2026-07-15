@@ -32,12 +32,14 @@ Sie können NetApp Console lokal oder in einer sicheren Cloud-Umgebung installie
 
 
 
+[[supported-features-and-services-for-netapp-console-in-private-mode]]
 == Unterstützte Funktionen und Dienste für NetApp Console im privaten Modus
 
 Die folgende Tabelle listet die Speicherverwaltungsfunktionen, Datendienste und administrativen Funktionen auf, die in der NetApp Console bei der Installation im privaten Modus verfügbar sind. Die Funktionen unterscheiden sich, je nachdem, ob Sie die NetApp Console in der Cloud oder vor Ort installieren.
 
 
 
+[[private-mode-installed-in-the-cloud]]
 === Privater Modus in der Cloud installiert
 
 [cols="3*"]
@@ -112,6 +114,7 @@ https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/task-manage
 |===
 
 
+[[private-mode-installed-on-premises]]
 === Privater Modus lokal installiert
 
 [cols="3*"]

@@ -35,6 +35,7 @@ Ausführliche Beschreibungen der einzelnen Rollen finden Sie in den folgenden Ta
 
 
 
+[[baseline-roles]]
 == Basisrollen
 
 In der folgenden Tabelle werden die Aktionen beschrieben, die den Administrator- und Viewer-Rollen von Ransomware Resilience zur Verfügung stehen.
@@ -305,6 +306,7 @@ Ja
 |===
 
 
+[[user-behavior-roles]]
 == Benutzerverhaltensrollen
 
 Um Einstellungen für verdächtiges Benutzerverhalten zu konfigurieren und auf Warnungen zu reagieren, muss ein Benutzer über die Administratorrolle „Ransomware Resilience-Benutzerverhalten“ verfügen. Um nur Warnungen zu verdächtigem Benutzerverhalten anzuzeigen, sollte ein Benutzer über die Rolle „Ransomware Resilience-Benutzerverhaltensanzeiger“ verfügen.

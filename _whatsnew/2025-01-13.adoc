@@ -4,6 +4,7 @@
 
 
 
+[[connector-3-9-48]]
 === Connector 3.9.48
 
 Diese Version des BlueXP Connector enthält kleinere Sicherheitsverbesserungen und Fehlerbehebungen.
@@ -12,6 +13,7 @@ Derzeit ist die Version 3.9.48 für den Standardmodus und den eingeschränkten M
 
 
 
+[[bluexp-identity-and-access-management]]
 === BlueXP Identitäts- und Zugriffsverwaltung
 
 * Auf der Ressourcenseite werden jetzt unentdeckte Ressourcen angezeigt.  Unentdeckte Ressourcen sind Speicherressourcen, die BlueXP kennt, für die Sie aber keine Arbeitsumgebungen erstellt haben.  Beispielsweise werden Ressourcen, die im Digital Advisor angezeigt werden und noch keine Arbeitsumgebungen haben, auf der Seite „Ressourcen“ als unentdeckte Ressourcen angezeigt.
@@ -20,6 +22,7 @@ Derzeit ist die Version 3.9.48 für den Standardmodus und den eingeschränkten M
 
 
 
+[[create-a-support-case-for-additional-bluexp-services]]
 === Erstellen Sie einen Supportfall für zusätzliche BlueXP -Dienste
 
 Nachdem Sie BlueXP für den Support registriert haben, können Sie direkt über die webbasierte BlueXP -Konsole einen Supportfall erstellen.  Wenn Sie den Fall erstellen, müssen Sie den Dienst auswählen, mit dem das Problem verknüpft ist.

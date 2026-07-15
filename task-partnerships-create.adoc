@@ -23,6 +23,7 @@ Die Rolle *Partnerschaftsadministrator* ist erforderlich, um Partnerschaften zu 
 
 
 
+[[initiate-an-organization-partnership]]
 == Initiieren Sie eine Organisationspartnerschaft
 
 Sie können eine Partnerschaft mit einer anderen Organisation beantragen, wenn Sie deren Organisations-ID kennen.  Die empfangende Organisation genehmigt die Anfrage, bevor die Partnerschaft fortgesetzt werden kann.
@@ -41,6 +42,7 @@ Die Partnerschaftsanfrage wird zur Genehmigung an die Partnerorganisation gesend
 
 
 
+[[approve-an-organization-partnership]]
 == Genehmigen einer Organisationspartnerschaft
 
 Eine Anfrage für eine Organisationspartnerschaft muss von der empfangenden Organisation angenommen werden, bevor die Partnerschaft fortgesetzt werden kann.  Sie müssen über die Rolle *Partnerschaftsadministrator* verfügen, um Partnerschaften zu genehmigen und zu verwalten.
@@ -66,6 +68,7 @@ Die von Ihnen genehmigte Partnerschaft hat nun den Status *Etabliert*. Benutzer 
 
 
 
+[[view-partnership-status]]
 == Partnerschaftsstatus anzeigen
 
 Sehen Sie sich den Status Ihrer Partnerschaften an.
@@ -82,6 +85,7 @@ Partnerschaftsadministrator, Partnerschaftsbetrachter.link:reference-iam-predefi
 
 
 
+[[disable-an-organization-partnership]]
 == Deaktivieren einer Organisationspartnerschaft
 
 Um eine Partnerschaft zu deaktivieren, müssen Sie Mitglied der initiierenden Organisation sein.  Durch die Deaktivierung einer Partnerschaft wird der Zugriff auf alle Ressourcen in Ihrer Organisation, die mit der Partnerorganisation geteilt wurden, sofort widerrufen.

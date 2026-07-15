@@ -20,6 +20,7 @@ Falls Ihr Unternehmen dies erfordert, können Sie ein von einer Zertifizierungss
 
 
 
+[[install-an-https-certificate]]
 == Installieren eines HTTPS-Zertifikats
 
 Installieren Sie ein von einer Zertifizierungsstelle signiertes Zertifikat für den sicheren Zugriff auf die webbasierte Konsole, die auf dem Konsolenagenten ausgeführt wird.
@@ -82,6 +83,7 @@ image:screenshot_https_cert.gif["Screenshot: Zeigt die HTTPS-Setup-Seite, nachde
 
 
 
+[[renew-the-console-https-certificate]]
 == Erneuern Sie das HTTPS-Zertifikat der Konsole
 
 Sie sollten das HTTPS-Zertifikat des Agenten vor Ablauf erneuern, um einen sicheren Zugriff zu gewährleisten.  Wenn Sie das Zertifikat nicht vor Ablauf erneuern, wird eine Warnung angezeigt, wenn Benutzer über HTTPS auf die Webkonsole zugreifen.

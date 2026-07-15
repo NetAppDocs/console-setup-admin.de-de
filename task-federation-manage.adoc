@@ -30,6 +30,7 @@ Sie können einer bestehenden Föderation auch eine zusätzliche verifizierte Do
 ====
 
 
+[[enable-a-federation]]
 == Aktivieren einer Föderation
 
 Wenn Sie eine Föderation erstellt haben, diese aber nicht aktiviert ist, können Sie sie über die Seite *Föderation* aktivieren.  Durch die Aktivierung einer Föderation können sich die mit der Föderation verknüpften Benutzer mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.  Erstellen und testen Sie die Föderation erfolgreich, bevor Sie sie aktivieren.
@@ -42,6 +43,7 @@ Wenn Sie eine Föderation erstellt haben, diese aber nicht aktiviert ist, könne
 
 
 
+[[add-a-verified-domain-to-an-existing-federation]]
 == Hinzufügen einer verifizierten Domäne zu einer vorhandenen Föderation
 
 Sie können einer vorhandenen Föderation in der Konsole eine verifizierte Domäne hinzufügen, um mehrere Domänen mit demselben Identitätsanbieter (IdP) zu verwenden.
@@ -58,6 +60,7 @@ Sie müssen die Domäne bereits in der Konsole verifiziert haben, bevor Sie sie 
 
 
 
+[[updating-an-expiring-federated-connection]]
 == Aktualisieren einer ablaufende Verbundverbindung
 
 Sie können die Details einer Föderation in der Konsole aktualisieren.  Sie müssen beispielsweise die Föderation aktualisieren, wenn Anmeldeinformationen wie ein Zertifikat oder ein Client-Geheimnis ablaufen.  Aktualisieren Sie bei Bedarf das Benachrichtigungsdatum, um Sie daran zu erinnern, die Verbindung zu aktualisieren, bevor sie abläuft.
@@ -75,6 +78,7 @@ IMPORTANT: Aktualisieren Sie zuerst die Konsole, bevor Sie Ihren IdP aktualisier
 
 
 
+[[test-an-existing-federation]]
 == Testen einer vorhandenen Föderation
 
 Testen Sie die Verbindung einer vorhandenen Föderation, um sicherzustellen, dass sie funktioniert.  Auf diese Weise können Sie etwaige Probleme mit der Föderation erkennen und beheben.
@@ -89,6 +93,7 @@ Testen Sie die Verbindung einer vorhandenen Föderation, um sicherzustellen, das
 
 
 
+[[disable-a-federation]]
 == Deaktivieren einer Föderation
 
 Wenn Sie eine Föderation nicht mehr benötigen, können Sie sie deaktivieren.  Dadurch wird verhindert, dass sich mit der Föderation verknüpfte Benutzer mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.  Sie können die Föderation bei Bedarf später wieder aktivieren.
@@ -103,6 +108,7 @@ Deaktivieren Sie eine Föderation, bevor Sie sie löschen, beispielsweise wenn S
 
 
 
+[[delete-a-federation]]
 == Löschen einer Föderation
 
 Wenn Sie eine Föderation nicht mehr benötigen, können Sie sie löschen.  Dadurch wird die Föderation entfernt und alle mit der Föderation verknüpften Benutzer können sich nicht mehr mit ihren Unternehmensanmeldeinformationen bei der Konsole anmelden.  Beispielsweise, wenn der IdP außer Betrieb genommen wird oder die Föderation nicht mehr benötigt wird.

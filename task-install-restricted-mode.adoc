@@ -18,6 +18,7 @@ Stellen Sie den Konsolenagenten im eingeschränkten Modus bereit, damit Sie die 
 
 
 
+[[step-1-install-the-console-agent]]
 == Schritt 1: Installieren des Konsolenagenten
 
 Installieren Sie den Konsolenagenten vom Marktplatz Ihres Cloud-Anbieters oder manuell auf einem Linux-Host.
@@ -354,6 +355,7 @@ Richten Sie die NetApp Console ein.
 ====
 
 
+[[step-2-set-up-netapp-console]]
 == Schritt 2: NetApp Console einrichten
 
 Wenn Sie zum ersten Mal auf die Konsole zugreifen, werden Sie aufgefordert, eine Organisation für den Konsolenagenten auszuwählen und den eingeschränkten Modus zu aktivieren.
@@ -391,6 +393,7 @@ Geben Sie der Konsole die Berechtigungen, die Sie zuvor eingerichtet haben.
 
 
 
+[[step-3-provide-permissions-to-the-console-agent]]
 == Schritt 3: Erteilen Sie dem Konsolenagenten Berechtigungen
 
 Wenn Sie den Console-Agenten über den Azure Marketplace oder manuell installiert haben, müssen Sie die zuvor eingerichteten Berechtigungen erteilen.

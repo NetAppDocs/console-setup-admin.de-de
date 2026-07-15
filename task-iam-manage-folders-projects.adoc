@@ -20,12 +20,14 @@ Die Konsole erstellt automatisch ein Projekt für Sie, wenn Sie eine neue Organi
 
 
 
+[[using-folders-and-projects-to-organize-resources]]
 == Ressourcen mithilfe von Ordnern und Projekten organisieren
 
 In der NetApp Console enthält eine Organisation Ordner und Projekte, die Ihnen helfen, Ihre Ressourcen zu organisieren. Ordner helfen Ihnen, zusammengehörige Projekte zu gruppieren, und Projekte helfen Ihnen, Ressourcen und den Mitgliederzugriff zu verwalten.
 
 
 
+[[folders]]
 === Ordner
 
 Ordner helfen Ihnen, zusammengehörige Projekte zu organisieren. Sie können verschachtelte Ordner erstellen, um verschiedene Ebenen der Struktur Ihrer Organisation darzustellen. Beispielsweise könnten Sie für jede Geschäftseinheit einen Ordner der obersten Ebene erstellen und darin Unterordner für die verschiedenen Teams innerhalb dieser Geschäftseinheit anlegen. Anschließend erstellen Sie Projekte in Ordnern.
@@ -64,6 +66,7 @@ Mitglieder, die über Berechtigungen für Projekt A verfügen, können jetzt auf
 ====
 
 
+[[projects]]
 === Projekte
 
 Ordnen Sie Ressourcen Projekten zu, damit die Mitglieder diese verwalten können. Ressourcen müssen einem Projekt zugeordnet werden, damit sie verwaltet und von Benutzern zugänglich gemacht werden können.
@@ -74,6 +77,7 @@ Auf der Seite *Systeme* navigieren die Benutzer zwischen den ihnen zugewiesenen 
 
 
 
+[[add-a-folder-or-project]]
 == Einen Ordner oder ein Projekt hinzufügen
 
 Fügen Sie Projekte hinzu, um Ressourcen zu verwalten, und Ordner, um zusammengehörige Projekte zu gruppieren. Wenn Sie eine neue Organisation erstellen, enthält die Konsole ein Projekt.
@@ -107,6 +111,7 @@ link:reference-iam-predefined-roles.html["Informationen zu Zugriffsrollen"] .
 
 
 
+[[rename-a-folder-or-project]]
 == Umbenennen eines Ordners oder Projekts
 
 Benennen Sie einen Ordner oder ein Projekt nach Bedarf um. Die Umbenennung hat keine Auswirkungen auf zugehörige Ressourcen oder den Mitgliederzugriff.
@@ -118,6 +123,7 @@ Benennen Sie einen Ordner oder ein Projekt nach Bedarf um. Die Umbenennung hat k
 
 
 
+[[delete-a-folder-or-project]]
 == Löschen eines Ordners oder Projekts
 
 Löschen Sie Ordner und Projekte, die Sie nicht mehr benötigen, beispielsweise nach einer Teamumstrukturierung oder nach Projektabschluss.
@@ -131,6 +137,8 @@ Bevor Sie einen Ordner oder ein Projekt löschen, vergewissern Sie sich, dass es
 
 
 
+[[view-the-resources-associated-with-a-folder-or-project]]
+[[view-associated-resources-members]]
 == Anzeigen der mit einem Ordner oder Projekt verknüpften Ressourcen
 
 Zeigen Sie an, welche Ressourcen und Mitglieder mit einem Ordner oder Projekt verknüpft sind.
@@ -152,6 +160,8 @@ image:screenshot-iam-allocated-resources.png["Ein Screenshot der Seite „Projek
 
 
 
+[[change-the-resources-associated-with-a-folder-or-project]]
+[[modify-resources]]
 == Ändern Sie die Ressourcen, die einem Ordner oder Projekt zugeordnet sind.
 
 Sie können die einem Ordner oder Projekt zugeordneten Ressourcen ändern, wenn sich die Bedürfnisse Ihrer Organisation ändern.
@@ -172,6 +182,7 @@ image:screenshot-iam-associate-resources.png["Ein Screenshot der Seite „Projek
 
 
 
+[[view-members-associated-with-a-folder-or-project]]
 == Anzeigen von Mitgliedern, die einem Ordner oder Projekt zugeordnet sind
 
 Auf der Seite *Organisation* können Sie die Mitglieder anzeigen, die einem Ordner oder Projekt zugeordnet sind.
@@ -190,6 +201,8 @@ image:screenshot-iam-member-access.png["Ein Screenshot der Seite „Projekt bear
 
 
 
+[[modify-member-access-to-a-folder-or-project]]
+[[modify-members]]
 == Ändern des Mitgliederzugriffs auf einen Ordner oder ein Projekt
 
 Ändern Sie die Zugriffsrechte der Mitglieder, um den Ressourcenzugriff zu steuern. Beachten Sie, dass Rollen, die auf Ordnerebene zugewiesen werden, an alle untergeordneten Projekte und Ordner vererbt werden.
@@ -211,6 +224,7 @@ Die Zugriffsrechte von Mitgliedern auf niedrigeren Ebenen können nicht geänder
 
 
 
+[[related-information]]
 == Ähnliche Informationen
 
 * link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identität und Zugriff in der NetApp Console"]

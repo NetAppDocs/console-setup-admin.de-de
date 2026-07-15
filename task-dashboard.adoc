@@ -25,6 +25,7 @@ NOTE: Für genaue Messwerte auf der Startseite sind entsprechend dimensionierte 
 
 
 
+[[required-netapp-console-roles]]
 == Erforderliche NetApp Console
 
 Jeder Bereich auf der Startseite erfordert unterschiedliche Benutzerrollen:
@@ -59,6 +60,7 @@ image:screenshot-home-metrics.png["Startseite der NetApp Console mit Metriken"]
 
 
 
+[[enable-metrics-to-appear-on-the-home-page]]
 == Aktivieren Sie die Anzeige von Metriken auf der Startseite
 
 Sie können Metriken auf der Startseite sehen, wenn die folgenden Bedingungen erfüllt sind:
@@ -77,6 +79,7 @@ Führen Sie die folgenden Aufgaben aus, um die Anzeige von Metriken auf der Star
 
 
 
+[[view-the-overall-storage-capacity]]
 == Gesamtspeicherkapazität anzeigen
 
 Der Bereich „Speicherkapazität“ bietet die folgenden Informationen zu ONTAP Clustern und Cloud Volumes ONTAP Systemen:
@@ -102,6 +105,7 @@ TIP: Wenn Sie mehrere Projekte haben, werden im Bereich „Speicherkapazität“
 
 
 
+[[view-ontap-alerts]]
 == ONTAP Warnmeldungen anzeigen
 
 Zeigen Sie Probleme oder potenzielle Risiken in Ihren lokalen NetApp ONTAP Umgebungen an.  Sie können einige Nicht-EMS-Warnungen und einige EMS-Warnungen sehen.
@@ -149,6 +153,7 @@ Eine Liste der möglicherweise angezeigten Warnmeldungen finden Sie unter https:
 
 
 
+[[view-storage-performance-capacity]]
 == Anzeigen der Speicherleistungskapazität
 
 Überprüfen Sie die pro Cluster oder Cloud Volumes ONTAP System verwendete Speicherleistungskapazität, um festzustellen, wie sich Leistungskapazität, Latenz und IOPS auf Ihre Workloads auswirken.  Beispielsweise stellen Sie möglicherweise fest, dass Sie Workloads verschieben müssen, um die Latenz zu minimieren und IOPS und Durchsatz für Ihre kritischen Workloads zu maximieren.
@@ -166,6 +171,7 @@ TIP: Durch das Zwischenspeichern wird die Leistung optimiert, es kann jedoch daz
 
 
 
+[[view-the-licenses-and-subscriptions-that-you-have]]
 == Zeigen Sie die Lizenzen und Abonnements an, die Sie haben
 
 Überprüfen Sie die folgenden Informationen im Bereich „Licenses and subscriptions“ :
@@ -188,6 +194,7 @@ TIP: Durch das Zwischenspeichern wird die Leistung optimiert, es kann jedoch daz
 
 
 
+[[view-ransomware-resilience-status]]
 == Ransomware-Resilienzstatus anzeigen
 
 Finden Sie mit dem NetApp Ransomware Resilience -Datendienst heraus, ob Workloads einem Risiko durch Ransomware-Angriffe ausgesetzt sind oder geschützt sind.  Sie können die Gesamtmenge der geschützten Daten überprüfen, die Anzahl der empfohlenen Aktionen anzeigen und die Anzahl der Warnungen im Zusammenhang mit dem Ransomware-Schutz einsehen.
@@ -209,6 +216,7 @@ https://docs.netapp.com/us-en/data-services-ransomware-resilience/concept-ransom
 
 
 
+[[view-backup-and-recovery-status]]
 == Anzeigen des Sicherungs- und Wiederherstellungsstatus
 
 Überprüfen Sie den Gesamtstatus Ihrer Backups und Wiederherstellungen von NetApp Backup and Recovery.  Sie können die Anzahl der geschützten und ungeschützten Ressourcen sehen.  Sie können auch den Prozentsatz der Sicherungs- und Wiederherstellungsvorgänge zum Schutz Ihrer Workloads sehen.  Ein höherer Prozentsatz weist auf einen verbesserten Datenschutz hin.
