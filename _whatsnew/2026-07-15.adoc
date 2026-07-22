@@ -16,6 +16,8 @@ Diese Version des Console-Agenten enthält Sicherheitsverbesserungen und Fehlerb
 [[netapp-console-administration]]
 === NetApp Console
 
+NetApp Console 4.9.0-Administration beinhaltet die folgende neue Funktion.
+
 .Unterstützung für rollenbasierte Zugriffssteuerung für Cloud Volumes ONTAP
 Die Konsole unterstützt rollenbasierte Zugriffssteuerung für Cloud Volumes ONTAP.
 
