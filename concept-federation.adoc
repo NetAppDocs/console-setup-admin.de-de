@@ -29,9 +29,6 @@ Organisationsadministrator, Föderationsadministrator, Föderationsbetrachter.li
 
 Durch die Verbindung mit der NetApp -Support-Site können sich Benutzer mit denselben Anmeldeinformationen bei der Konsole, Active IQ Digital Advisor und anderen zugehörigen Apps anmelden.
 
-
-NOTE: Wenn Sie eine Verbindung mit der NetApp -Support-Site herstellen, können Sie nicht gleichzeitig eine Verbindung mit Ihrem Corporate Identity Management-Anbieter herstellen.  Wählen Sie die Option aus, die für Ihr Unternehmen am besten geeignet ist.
-
 .Schritte
 . Laden Sie die https://kb.netapp.com/@api/deki/files/98382/NetApp-B2C-Federation-Request-Form-April-2022.docx?revision=1["NetApp Federation-Antragsformular"^] .
 . Senden Sie das Formular an die im Formular angegebene E-Mail-Adresse.
