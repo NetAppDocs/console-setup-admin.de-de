@@ -1089,7 +1089,6 @@
   <block id="c4173993f088503294e79bbbe0bb63d6" category="paragraph-title">Erforderliche Rolle</block>
   <block id="4610064cac3ad84114cc400649031071" category="paragraph">Organisationsadministrator, Föderationsadministrator, Föderationsbetrachter.<block ref="8f129ac67aaaf533c741c49d131f7a5d" category="inline-link-macro-rx"></block></block>
   <block id="89a60a6294b7338e14dd136c35959073" category="paragraph">Durch die Verbindung mit der NetApp -Support-Site können sich Benutzer mit denselben Anmeldeinformationen bei der Konsole, Active IQ Digital Advisor und anderen zugehörigen Apps anmelden.</block>
-  <block id="465e770e13636214d49910bb014b1053" category="admonition">Wenn Sie eine Verbindung mit der NetApp -Support-Site herstellen, können Sie nicht gleichzeitig eine Verbindung mit Ihrem Corporate Identity Management-Anbieter herstellen.  Wählen Sie die Option aus, die für Ihr Unternehmen am besten geeignet ist.</block>
   <block id="0a3bde973847d35b12a69e1debea9ca9" category="inline-link">NetApp Federation-Antragsformular</block>
   <block id="2364b4b1093b706141a365b97b678a4d" category="list-text">Laden Sie die<block ref="82f36446881e14fa28b945cd41d2b383" category="inline-link-rx"></block> .</block>
   <block id="28ff396d9aacc41256de2a2d064386fd" category="list-text">Senden Sie das Formular an die im Formular angegebene E-Mail-Adresse.</block>
@@ -6358,4 +6357,5 @@
   <block id="9ebf544c1d9c2833a9338e1e70ee31de" category="list-text">\https://components.console.bluexp.netapp.com</block>
   <block id="e4f459430f502d8d3158a4b206057282" category="paragraph">NetApp Console 4.9.0-Administration beinhaltet die folgende neue Funktion.</block>
   <block id="1daedeccee3ce9bebdac02815a88e596" category="cell">\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com</block>
+  <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">iam:TagRole</block>
 </blocks>

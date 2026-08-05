@@ -124,6 +124,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
         "iam:DeleteInstanceProfile",
         "iam:GetRolePolicy",
         "iam:GetRole",
+        "iam:TagRole",
         "sts:DecodeAuthorizationMessage",
         "sts:AssumeRole",
         "s3:GetBucketTagging",
@@ -362,6 +363,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -558,6 +560,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -678,6 +681,7 @@ Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Au
         "iam:CreateRole",
         "iam:DeleteRole",
         "iam:PutRolePolicy",
+        "iam:TagRole",
         "iam:CreateInstanceProfile",
         "iam:DeleteRolePolicy",
         "iam:AddRoleToInstanceProfile",
@@ -955,7 +959,7 @@ Der Agent stellt die folgenden API-Anfragen, um Cloud Volumes ONTAP in AWS berei
 | Zweck | Aktion | Wird für die Bereitstellung verwendet? | Wird es für den täglichen Betrieb verwendet? | Zum Löschen verwendet? 
 
 
-.13+| Erstellen und verwalten Sie IAM-Rollen und Instanzprofile für Cloud Volumes ONTAP -Instanzen | iam:ListInstanceProfiles | Ja | Ja | Nein 
+.14+| Erstellen und verwalten Sie IAM-Rollen und Instanzprofile für Cloud Volumes ONTAP -Instanzen | iam:ListInstanceProfiles | Ja | Ja | Nein 
 
 
 | iam:CreateRole | Ja | Nein | Nein 
@@ -965,6 +969,9 @@ Der Agent stellt die folgenden API-Anfragen, um Cloud Volumes ONTAP in AWS berei
 
 
 | iam:PutRolePolicy | Ja | Nein | Nein 
+
+
+| iam:TagRole | Ja | Nein | Nein 
 
 
 | iam:CreateInstanceProfile | Ja | Nein | Nein 
