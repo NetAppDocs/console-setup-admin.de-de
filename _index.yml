@@ -24,6 +24,8 @@ indexpage:
       url: concept-identity-and-access-management.html
     - title: Informationen zu Bereitstellungsmodi
       url: concept-modes.html
+    - title: Vergleich der NetApp Console und der NetApp Console lokalen Bereitstellung
+      url: console-differences.html
   - title: Erste Schritte
     links:
     - title: Erste Schritte mit der NetApp Console (SaaS)

@@ -6358,4 +6358,6 @@
   <block id="e4f459430f502d8d3158a4b206057282" category="paragraph">NetApp Console 4.9.0-Administration beinhaltet die folgende neue Funktion.</block>
   <block id="1daedeccee3ce9bebdac02815a88e596" category="cell">\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com</block>
   <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">iam:TagRole</block>
+  <block id="ac63bb5663971c98e9ad66f59e257a30" category="summary">NetApp Console ist eine SaaS-Anwendung, die Console-Agenten zur Verwaltung von Cloud- und On-Premises-Speichersystemen verwendet. NetApp Console lokale Bereitstellung ist eine selbstgehostete, agentenlose virtuelle Maschine für das ONTAP Flottenmanagement im Unternehmensmaßstab mit Richtliniendurchsetzung, Driftkorrektur und vollständiger Datenhoheit.</block>
+  <block id="e9136b652dc2f76f18a9d738127bb6a3" category="doc">Vergleich der NetApp Console und der NetApp Console lokalen Bereitstellung</block>
 </blocks>

@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: console-differences.html 
+keywords: netapp console, netapp console local deployment, comparison, saas, self-hosted, deployment modes, on-premises, cloud, storage management, data sovereignty, agentless, ONTAP fleet management, policy enforcement, storage class policies, data residency, vCenter, fleet management, workload analyzer, identity federation, autonomous, active directory, bring-your-own-license, local 
+summary: NetApp Console ist eine SaaS-Anwendung, die Console-Agenten zur Verwaltung von Cloud- und On-Premises-Speichersystemen verwendet. NetApp Console lokale Bereitstellung ist eine selbstgehostete, agentenlose virtuelle Maschine für das ONTAP Flottenmanagement im Unternehmensmaßstab mit Richtliniendurchsetzung, Driftkorrektur und vollständiger Datenhoheit. 
+---
+= Vergleich der NetApp Console und der NetApp Console lokalen Bereitstellung
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
