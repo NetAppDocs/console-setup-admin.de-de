@@ -4,7 +4,7 @@ permalink: task-quick-start-restricted-mode.html
 keywords: quick start, restricted mode quick start, govcloud, government, aws gov, azure gov 
 summary: Beginnen Sie mit der NetApp Console im eingeschränkten Modus, indem Sie Ihre Umgebung vorbereiten und den Konsolen-Agenten bereitstellen. 
 ---
-= Erste Schritte Workflow für NetApp Console im eingeschränkten Modus
+= Schnellstart für die NetApp Console im eingeschränkten Modus
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: task-federation-adfs.html
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
 summary: 'Verbinden Sie sich mit Ihren Active Directory Federation Services (AD FS), um Single Sign-On (SSO) für die NetApp Console zu aktivieren.  Dadurch können sich Benutzer mit ihren Unternehmensanmeldeinformationen anmelden.' 
 ---
-= Verbinden Sie die NetApp Console mit Active Directory Federation Services (AD FS).
+= NetApp Console mit Active Directory Federation Services föderieren
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

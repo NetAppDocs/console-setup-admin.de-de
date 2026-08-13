@@ -4,7 +4,7 @@ permalink: task-upgrade-agent.html
 keywords: upgrade, manual upgrade, agent upgrade, manual agent upgrade, upgrade agent manually, private mode upgrade, offline upgrade, upgrade private mode, connector upgrade, agent upgrade, vcenter upgrade, OVA upgrade, ISO upgrade, vsphere upgrade 
 summary: Der Konsolenagent wird automatisch aktualisiert, wenn er über eine ausgehende Verbindung verfügt. Wenn Ihr Konsolenagent keine ausgehende Verbindung hat, können Sie ihn manuell aktualisieren. Wenn Ihr Agent in vCenter bereitgestellt wurde, können Sie ihn mit einer ISO aktualisieren. 
 ---
-= Aktualisieren Sie den Konsolenagenten
+= Der NetApp Console-Agent aktualisieren
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

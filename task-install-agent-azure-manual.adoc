@@ -4,7 +4,7 @@ permalink: task-install-agent-azure-manual.html
 keywords: install connector, azure connector installation, azure connector, install connector in azure, manual install 
 summary: Um den Konsolen-Agent manuell auf Ihrem eigenen Linux-Host zu installieren, müssen Sie die Hostanforderungen überprüfen, Ihr Netzwerk einrichten, Azure-Berechtigungen vorbereiten, den Konsolen-Agent installieren und dann die vorbereiteten Berechtigungen bereitstellen. 
 ---
-= Manuelles Installieren des Konsolen-Agents in Azure
+= Den NetApp Console Agent manuell in Azure installieren
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

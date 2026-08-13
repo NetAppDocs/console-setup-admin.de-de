@@ -4,7 +4,7 @@ permalink: task-federation-verify-domain.html
 keywords: federation, active directory federation services, adfs, ad fs, single sign-on, microsoft, federate, federated connection, SSO, identity federation, identity management, corporate identity 
 summary: Wenn Sie eine Verbindung mit einer anderen Domain als Ihrer E-Mail-Domain herstellen möchten, müssen Sie zunächst nachweisen, dass Sie Inhaber dieser Domain sind. Sie können nur verifizierte Domains für die Föderation verwenden. 
 ---
-= Überprüfen Sie die E-Mail-Domäne für Ihre Verbundverbindung
+= E-Mail-Domäne für die Föderation in der NetApp Console verifizieren
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

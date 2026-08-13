@@ -4,7 +4,7 @@ permalink: console-differences.html
 keywords: netapp console, netapp console local deployment, comparison, saas, self-hosted, deployment modes, on-premises, cloud, storage management, data sovereignty, agentless, ONTAP fleet management, policy enforcement, storage class policies, data residency, vCenter, fleet management, workload analyzer, identity federation, autonomous, active directory, bring-your-own-license, local 
 summary: NetApp Console ist eine SaaS-Anwendung, die Console-Agenten zur Verwaltung von Cloud- und On-Premises-Speichersystemen verwendet. NetApp Console lokale Bereitstellung ist eine selbstgehostete, agentenlose virtuelle Maschine für das ONTAP Flottenmanagement im Unternehmensmaßstab mit Richtliniendurchsetzung, Driftkorrektur und vollständiger Datenhoheit. 
 ---
-= Vergleich der NetApp Console und der NetApp Console lokalen Bereitstellung
+= Unterschiede zwischen NetApp Console und NetApp Console lokaler Bereitstellung
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -13,3 +13,141 @@ summary: NetApp Console ist eine SaaS-Anwendung, die Console-Agenten zur Verwalt
 :imagesdir: ./media/
 
 
+
+NOTE: Die NetApp Console eignet sich, wenn Cloud- und On-Premises-Umgebungen verwaltet werden und NetApp die Plattforminfrastruktur übernimmt. Die lokale Bereitstellung der NetApp Console ist geeignet, wenn eine große On-Premises ONTAP Umgebung verwaltet wird und volle Datenhoheit sowie richtlinienbasierte Speicherverwaltung erforderlich sind.
+
+
+
+[[netapp-console]]
+== NetApp Console
+
+NetApp hostet und wartet die NetApp Console als SaaS-Anwendung. Die Anmeldung erfolgt und die Speicherverwaltung kann sofort begonnen werden. Zur Verwaltung von Speichersystemen werden schlanke Console-Agenten in Ihren Cloud- oder On-Premises-Umgebungen bereitgestellt. Die Agenten stellen eine ausgehende Verbindung zur NetApp Console-Plattform her, und NetApp übernimmt die Plattform-Authentifizierung, Upgrades und die Verfügbarkeit automatisch.
+
+NetApp Console unterstützt außerdem den eingeschränkten Modus (Installation in Ihrer eigenen öffentlichen Cloud mit begrenzter ausgehender Konnektivität) und den privaten Modus (Installation lokal oder in Ihrer Cloud ohne Konnektivität zur NetApp Console Plattform, einschließlich Air-Gap-Umgebungen).
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Erfahren Sie mehr über die Bereitstellungsmodi der NetApp Console"].
+
+NetApp Console unterstützt die breiteste Palette von Speichersystemen, einschließlich Cloud-Speicher wie Amazon FSx für ONTAP, Cloud Volumes ONTAP, Amazon S3, Google Cloud Storage, E-Series, StorageGRID und lokale ONTAP Cluster. Es besteht Zugriff auf die vollständige Suite der NetApp Datenservices, einschließlich NetApp Backup and Recovery, NetApp Disaster Recovery, NetApp Ransomware Resilience, NetApp Copy and Sync und NetApp Data Classification. NetApp Console bietet zudem Supportvertragsfunktionen wie Digital Advisor, Lifecycle Planning und Nachhaltigkeits-Dashboards.
+
+NetApp Console eignet sich am besten für Organisationen, die Hybrid-Cloud-Umgebungen verwalten und dabei den größtmöglichen Funktionsumfang, weniger Aufwand für den reibungslosen Betrieb und flexible Lizenzierung wünschen.
+
+https://docs.netapp.com/us-en/console-setup-admin/concept-overview.html["Informationen zur NetApp Console^."]
+
+
+
+[[netapp-console-local-deployment]]
+== NetApp Console lokale Bereitstellung
+
+NetApp Console lokale Bereitstellung ermöglicht den Betrieb der NetApp Console-Steuerungsebene vollständig innerhalb Ihrer eigenen lokalen Infrastruktur, ohne dass Verwaltungsdatenverkehr Ihre Umgebung verlässt. Die Console wird als virtuelle Maschine mithilfe eines virtuellen Appliance-Images bereitgestellt und wie jede andere virtuelle Maschine in Ihrer vCenter Umgebung verwaltet. Es sind keine Console-Agenten erforderlich. Die virtuelle Maschine kommuniziert direkt mit Ihren ONTAP Clustern.
+
+Während der private Modus der NetApp Console auch Air-Gap- und On-Premises-Bereitstellungen unterstützt, ist die lokale Bereitstellung der Console speziell für das Management von ONTAP-Flotten im Unternehmensmaßstab konzipiert. Sie bietet zusätzliche Funktionen, die in keinem NetApp Console-Bereitstellungsmodus verfügbar sind:
+
+Speicherklassenrichtlinien:: Speicherstandards werden einmalig als wiederverwendbare Vorlagen definiert, die Leistungs-, Kapazitäts- und Tiering-Anforderungen bündeln. Die gesamte Bereitstellung erfolgt über genehmigte Klassen, und die lokale Bereitstellung über die Console überwacht kontinuierlich die Workloads auf Konformität und erkennt Abweichungen.
+Flottenmanagement:: Cluster werden in Ordner und Flotten organisiert, die die Unternehmensstruktur widerspiegeln, anschließend kann die Administration auf Organisations-, Ordner- oder Flottenebene delegiert werden.
+Workload Analyzer:: Latenz, Durchsatz, Ein-/Ausgabeoperationen pro Sekunde und Konfigurationsänderungen im Zeitverlauf korrelieren, um Leistungsprobleme zu identifizieren, bevor sie sich auf die Workloads auswirken.
+Integration großer Sprachmodelle:: Eine Verbindung zum eigenen großen Sprachmodell ermöglicht die Bereitstellung von Speicher mithilfe natürlicher Sprache, die Untersuchung von Warnmeldungen sowie das Erhalten kontextbezogener Antworten zur Speicherumgebung.
+Geführte und automatisierte Behebung:: Wenn eine Arbeitslast von ihrer Speicherklasse abweicht oder eine Warnung ausgelöst wird, bietet die lokale Bereitstellung von Console Fix-It-Empfehlungen. Geführte Schritte oder eine automatisierte Ein-Klick-Fehlerbehebung ermöglichen die Wiederherstellung der Compliance ohne manuelle Schritte.
+Benachrichtigung per E-Mail und Webhook:: E-Mail- und Webhook-Benachrichtigungskanäle können so konfiguriert werden, dass Warnmeldungen die richtigen Teams erreichen, wenn sich die Storage-Bedingungen ändern. Webhooks lassen sich in bestehende Monitoring- und Incident-Management-Tools integrieren.
+
+
+Die lokale Bereitstellung über die Konsole unterstützt On-Premises ONTAP Cluster sowie NetApp Backup and Recovery. Sie integriert sich in Active Directory für föderierte Authentifizierung und unterstützt Multi-Faktor-Authentifizierung für lokale Benutzer.
+
+Die lokale Bereitstellung über die Konsole eignet sich am besten für Organisationen mit großen On-Premises ONTAP Umgebungen, die eine richtlinienbasierte Bereitstellung, automatisierte Compliance-Prüfungen und vollständige Datenhoheit benötigen.
+
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["Informationen zur lokalen Bereitstellung der NetApp Console^."]
+
+
+
+[[feature-comparison]]
+== Funktionsvergleich
+
+
+
+[[storage-management]]
+=== Speicherverwaltung
+
+[cols="3,2,2"]
+|===
+| Funktion | NetApp Console | NetApp Console lokale Bereitstellung 
+
+
+| On-Premises- ONTAP -Cluster | Ja (erfordert Console agent) | Ja (direkte Kommunikation von der Console-virtuellen Maschine) 
+
+
+| Cloud-Speichersysteme (Amazon FSx for ONTAP, Cloud Volumes ONTAP, Amazon S3 und andere) | Ja | Nein 
+
+
+| E-Series und StorageGRID | Ja | Nein 
+
+
+| NetApp Backup and Recovery | Ja | Ja 
+
+
+| NetApp Disaster Recovery | Ja | Nein 
+
+
+| NetApp Ransomware Resilience | Ja | Nein 
+
+
+| NetApp Copy and Sync | Ja | Nein 
+
+
+| NetApp Data Classification | Ja | Nein 
+
+
+| Digital Advisor, Lebenszyklusplanung, Nachhaltigkeit | Ja | Nein 
+
+
+| Richtlinien für Speicherklassen und Compliance-Überwachung | Nein | Ja 
+
+
+| Geführte und automatisierte Behebung | Nein | Ja 
+
+
+| Flottenmanagement (Ordner und Flotten) | Nein | Ja 
+
+
+| Workload Analyzer | Nein | Ja 
+
+
+| Integration großer Sprachmodelle für KI-gestützte Abläufe | Nein | Ja 
+|===
+
+
+[[console-setup-and-security]]
+=== Konsoleneinrichtung und Sicherheit
+
+[cols="3,2,2"]
+|===
+| Funktion | NetApp Console | NetApp Console lokale Bereitstellung 
+
+
+| Bereitstellungsmodell | Software as a Service, gehostet von NetApp (verschiedene Bereitstellungsmodi verfügbar) | Selbstgehostete virtuelle Maschine in Ihrer eigenen Infrastruktur 
+
+
+| Konsolenagent erforderlich | Ja | Nein 
+
+
+| Software-Upgrades | Automatisch, verwaltet von NetApp | Handbuch 
+
+
+| Zugriff auf die Benutzeroberfläche | NetApp Console Anwendung (Internet- oder virtueller Maschinenzugriff) | Virtuelle Konsolenmaschine (lokal, keine Internetverbindung erforderlich) 
+
+
+| Datenhoheit | Der Management-Datenverkehr geht an die NetApp Console Plattform | Kein Daten- oder Verwaltungsverkehr verlässt Ihre Umgebung 
+
+
+| Active Directory Integration | Nein | Ja 
+
+
+| Identitätsföderation | Ja | Nein 
+
+
+| Multifaktor-Authentifizierung (lokale Benutzer) | Ja | Ja 
+
+
+| Revisionsprotokollierung | Ja | Ja 
+
+
+| Lizenzierung | Marketplace-Abonnements und Bring-Your-Own-Lizenz | Bring-your-own-License 
+|===

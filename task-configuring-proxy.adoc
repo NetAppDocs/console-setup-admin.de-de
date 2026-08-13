@@ -4,7 +4,7 @@ permalink: task-configuring-proxy.html
 keywords: proxy, proxy server, proxy, internet, HTTP, http, https, bluexp 
 summary: Wenn Ihre Unternehmensrichtlinien die Verwendung eines Proxyservers für die gesamte Kommunikation mit dem Internet erfordern, müssen Sie Ihre Agenten für die Verwendung dieses Proxyservers konfigurieren.  Wenn Sie während der Installation keinen Konsolenagenten für die Verwendung eines Proxyservers konfiguriert haben, können Sie den Konsolenagenten jederzeit für die Verwendung dieses Proxyservers konfigurieren. 
 ---
-= Konfigurieren eines Konsolenagenten zur Verwendung eines Proxyservers
+= Einen NetApp Console-Agenten für die Nutzung eines Proxyserver konfigurieren
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

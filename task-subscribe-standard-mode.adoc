@@ -4,7 +4,7 @@ permalink: task-subscribe-standard-mode.html
 keywords: subscribe, subscription, marketplace subscription, paygo, contract, annual contract 
 summary: Abonnieren Sie NetApp Datendienste über den Marktplatz Ihres Cloud-Anbieters, um Datendienste stundenweise oder über einen Jahresvertrag zu bezahlen.  Wenn Sie eine Lizenz von NetApp erworben haben, müssen Sie auch das Marktplatzangebot abonnieren.  Ihre Lizenz wird immer zuerst in Rechnung gestellt. Wenn Sie jedoch Ihre Lizenzkapazität überschreiten oder die Laufzeit der Lizenz abläuft, wird Ihnen der Stundensatz in Rechnung gestellt. 
 ---
-= Abonnieren Sie NetApp Intelligent Services (Standardmodus)
+= Abonnement der NetApp Console Datenservices im Standardmodus
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
