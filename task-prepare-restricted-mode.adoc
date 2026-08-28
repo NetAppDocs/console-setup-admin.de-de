@@ -89,10 +89,6 @@ Hypervisor:: Es ist ein Bare-Metal- oder gehosteter Hypervisor erforderlich, der
 
  a| 
 Red Hat Enterprise Linux
-
-
-
- a| 
  a| 
 9,6
 
@@ -111,7 +107,6 @@ Unterstützt im Durchsetzungsmodus oder im Permissivmodus
 
 
  a| 
- a| 
 9,1 bis 9,4
 
 * Nur englischsprachige Versionen.
@@ -128,7 +123,6 @@ Unterstützt im Durchsetzungsmodus oder im Permissivmodus
 
 
 
- a| 
  a| 
 8,6 bis 8,10
 
@@ -148,10 +142,6 @@ Unterstützt im Durchsetzungsmodus oder im Permissivmodus
 
  a| 
 Ubuntu
-
-
-
- a| 
  a| 
 24,04 LTS
  a| 
@@ -163,7 +153,6 @@ Nicht unterstützt
 
 
 
- a| 
  a| 
 22,04 LTS
  a| 
