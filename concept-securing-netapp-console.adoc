@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: concept-securing-netapp-console.html 
+keywords: security, hardening, netapp console, console agent, identity and access management, iam, rbac, federation, mfa 
+summary: Es wird erläutert, wie NetApp Console Bereitstellungen, Benutzerzugriff, Console Agenten und Speicherverwaltungsoperationen abgesichert werden können. 
+---
+= Absicherung der NetApp Console
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Speichervorgänge werden geschützt, indem der Zugriff auf die NetApp Console eingeschränkt, Console-Agenten abgesichert und Aktivitäten auf unautorisierte oder unbeabsichtigte Änderungen überwacht werden.
+
+Sicherheit ist eine gemeinsame Verantwortung. NetApp sichert den Console-Dienst, während Sie für die Auswahl des geeigneten Bereitstellungsmodus, die Kontrolle des Benutzer- und Dienstkontozugriffs, die Sicherung der Umgebungen, in denen Sie Console-Agenten bereitstellen, und die Überwachung der Aktivitäten in Ihrer Organisation verantwortlich sind.
+
+
+
+[[choose-the-appropriate-deployment-mode]]
+== Den passenden Bereitstellungsmodus auswählen
+
+Ein Bereitstellungsmodus wird entsprechend den Anforderungen an Konnektivität, Isolation und Betrieb ausgewählt:
+
+* Im Standardmodus wird die cloudbasierte SaaS-Anwendung verwendet.
+* Im eingeschränkten Modus wird die Konsole in einer öffentlichen Cloud-Umgebung mit begrenzter ausgehender Konnektivität zu NetApp APIs installiert.
+* Im privaten Modus wird die Konsole lokal oder in einer abgeschotteten Umgebung ohne ausgehende Verbindungen zu NetApp installiert.
+
+
+Jeder Modus hat unterschiedliche Funktionsverfügbarkeit und Sicherheitsanforderungen. link:concept-modes.html["Erfahren Sie mehr über die Bereitstellungsmodi der NetApp Console"].
+
+
+
+[[control-identity-and-access]]
+== Identität und Zugriff steuern
+
+Mit Identity and Access Management (IAM) erhalten Benutzer und Dienstkonten nur den Zugriff, den sie zur Ausführung ihrer Aufgaben benötigen:
+
+* Ressourcen werden in Projekten und, falls angebracht, in Ordnern organisiert, die die Geschäfts- oder Betriebsgrenzen widerspiegeln.
+* Vordefinierte Rollen werden auf der niedrigsten Ebene der Organisationshierarchie zugewiesen, die den erforderlichen Zugriff bietet.
+* Organisationmitglieder, Servicekonten und deren Rollen sollten regelmäßig überprüft werden. Zugriffsrechte, die nicht mehr benötigt werden, sind zu entfernen.
+* Die Identitätsföderation für Single Sign-On kann verwendet werden, wenn sie die Anforderungen Ihrer Organisation erfüllt. Die Föderation ist im privaten Modus nicht verfügbar.
+* Lokale Benutzer müssen die Multi-Faktor-Authentifizierung (MFA) verwenden, und die Zugangsdaten des Dienstkontos sind als Geheimnisse zu schützen. Die Zugangsdaten des Dienstkontos sind neu zu erstellen, wenn sie verloren gehen oder ausgetauscht werden müssen.
+
+
+link:concept-identity-and-access-management.html["Informationen zu IAM in der NetApp Console"].
+
+
+
+[[secure-console-agents]]
+== Secure Console-Agenten
+
+Konsolenagenten stellen die Verbindung zwischen der Konsole und Speichersystemen sowie Cloud- oder On-Premises-Umgebungen her. Die Agenten initiieren die Kommunikation mit der Konsole; die Konsole initiiert keine Verbindungen zu den Agenten.
+
+Die folgenden Kontrollen sind auf jeden Agenten anzuwenden:
+
+* Der Agent wird in einer Umgebung bereitgestellt, die die Host-, Netzwerk- und Zugriffskontrollanforderungen Ihrer Organisation erfüllt.
+* Nur die erforderlichen ausgehenden Netzwerkverbindungen und die erforderlichen Cloud-Berechtigungen zulassen. Vor der Bereitstellung die anbieterspezifischen Berechtigungen und Portanforderungen prüfen.
+* Eine unterstützte Proxy-Konfiguration ist zu verwenden, wenn ausgehender Datenverkehr über einen Proxyserver geleitet werden muss.
+* Ein von einer Zertifizierungsstelle signiertes Zertifikat wird installiert, wenn Benutzer über HTTPS auf die Agenten-Webkonsole zugreifen.
+* Die Agentensoftware sollte stets auf dem neuesten Stand gehalten werden. Agenten im privaten Modus müssen manuell aktualisiert werden.
+* Auf AWS kann in Betracht gezogen werden, IMDSv2 für EC2-Instanzen, die einen Console Agent hosten, verpflichtend zu machen.
+
+
+link:concept-agents.html["Erfahren Sie mehr über Konsolenagenten"].
+
+
+
+[[reduce-unintended-changes]]
+== Unbeabsichtigte Änderungen reduzieren
+
+Organisationsadministratoren können den Nur-Lese-Modus für eine Organisation aktivieren. Der Nur-Lese-Modus hilft, zu verhindern, dass Benutzer Änderungen an Speichersystemen vornehmen oder Datendienste nutzen, bis sie erweiterte Berechtigungen anfordern.
+
+link:task-enable-read-only-mode.html["Informationen zum Aktivieren des Nur-Lese-Modus"].
+
+
+
+[[monitor-and-review-activity]]
+== Aktivitäten überwachen und überprüfen
+
+Die Vorgangszeitleiste bietet eine Übersicht über die Speicherverwaltung und Benutzeraktivitäten in der Console. Eine regelmäßige Überprüfung von Mitgliederzugriffen, Rollenzuweisungen, Dienstkonto-Anmeldeinformationen, Agentenstatus und aktuellen Vorgängen ist Teil des Sicherheitsprozesses Ihrer Organisation.
+
+link:task-monitor-cm-operations.html["Informationen zur Überwachung von Konsolenvorgängen"].
+
+
+
+[[related-security-topics]]
+== Verwandte Sicherheitsthemen
+
+* link:task-iam-user-security.html["Benutzersicherheit verwalten"], einschließlich MFA und Servicekonto-Anmeldeinformationen.
+* link:concept-iam-rbac.html["Rollenbasierte Zugriffskontrolle (RBAC) verstehen"].
+* link:concept-federation.html["Erfahren Sie mehr über die Identitätsföderation"].
+* link:reference-networking-saas-console.html["Netzwerkzugriff für die SaaS-Anwendung prüfen"].
+* link:reference-permissions.html["Cloud-Provider-Berechtigungen und Netzwerkanforderungen überprüfen"].
+* link:reference-compliance.html["Informationen zur Sicherheitskonformität für die NetApp Console"].
+
