@@ -12,7 +12,7 @@ summary: NetApp Data Classification unterstützt zwei Rollen zur Verwaltung des 
 
 
 [role="lead"]
-NetApp Data Classification unterstützt die Identitäts- und Zugriffsmanagementrolle, um Ihnen die Flexibilität zu geben, Benutzern eine Rolle zuzuweisen, die spezifisch für die Aufgaben ist, die sie in Ihrem Unternehmen erledigen müssen. Wie Sie Rollen zuweisen, hängt von Ihren eigenen Geschäfts- und Speichermanagementpraktiken ab.
+NetApp Data Classification unterstützt Rollen für Identitäts- und Zugriffsmanagement (IAM), sodass Sie den Zugriff an die Aufgaben anpassen können, die Benutzer erledigen müssen. Wie Sie Rollen zuweisen, hängt von Ihren eigenen Geschäfts- und Speichermanagementpraktiken ab.
 
 Data Classification unterstützt zwei Rollen:
 
@@ -38,7 +38,7 @@ NOTE: The Compliance admin wurde in Version 1.54 zu Data Classification hinzugef
 [[classification-viewer]]
 == Klassifizierungsanzeige
 
-Der Klassifizierungs-Viewer ist für Benutzer konzipiert, die Zugriff auf Scan-Ergebnisse in Data Classification benötigen, aber keinen Zugriff auf Konfigurationsressourcen haben. Benutzer mit der Rolle „Klassifizierungs-Viewer“ können Ergebnisse von Mapping- und vollständigen Scans einsehen, um Bereiche für Speichereinsparungen oder potenzielle Datenrisiken zu bewerten. Benutzer mit der Rolle „Klassifizierungs-Viewer“ können außerdem Berichte für Ressourcen generieren, auf die sie Zugriff haben. Diese Benutzer können das Scannen von Volumes, Buckets oder Datenbankschemata nicht aktivieren oder deaktivieren.
+Der Classification Viewer ist für Benutzer konzipiert, die Zugriff auf Scan-Ergebnisse in NetApp Data Classification benötigen, jedoch keinen Zugriff auf Konfigurationsressourcen. Benutzer mit der Rolle Classification Viewer können die Ergebnisse von Mapping- und vollständigen Scans einsehen, um Bereiche mit Speichereinsparungen oder potenziellen Datenrisiken zu beurteilen. Benutzer mit der Rolle Classification Viewer können außerdem Berichte für Ressourcen generieren, auf die sie Zugriff haben. Diese Benutzer können das Scannen von Volumes, Buckets oder Datenbank-Schemas nicht aktivieren oder deaktivieren.
 
 
 
