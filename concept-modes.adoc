@@ -100,7 +100,7 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 | Produktbereich | NetApp service oder Funktion | Konsolenagent erforderlich 
 
 
-.12+| *Verwaltung von Speichersystemen* Diese Tabelle zeigt, welche Speichersysteme Sie über die NetApp Console verwalten können. Es werden keine Sicherungsziele für NetApp Backup and Recovery aufgeführt. | Warnungen | Ja 
+.13+| *Verwaltung von Speichersystemen* Diese Tabelle zeigt, welche Speichersysteme Sie über die NetApp Console verwalten können. Es werden keine Sicherungsziele für NetApp Backup and Recovery aufgeführt. | Warnungen | Ja 
 
 
 | Amazon FSx für ONTAP | Ja, für Discovery und Management. Sie können die direkte Discovery ohne einen Console-Agent verwenden, aber Sie benötigen einen Agenten, um Management-Funktionen zu nutzen. 
@@ -136,10 +136,10 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 | StorageGRID | Ja 
 
 
-| Arbeitslasten | Nein .8+| *Datendienste* 
+| Arbeitslasten | Nein 
 
 
-| NetApp Backup and Recovery | Ja 
+.8+| *Datendienste* | NetApp Backup and Recovery | Ja 
 
 
 | NetApp Klassifizierung | Ja 
@@ -160,10 +160,10 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 | NetApp Cloud Tiering | Ja 
 
 
-| NetApp Volume Caching | Ja .5+| *NetApp Supportvertragsfunktionen* 
+| NetApp Volume Caching | Ja 
 
 
-| Digitaler Berater | Ja 
+.5+| *NetApp Supportvertragsfunktionen* | Digitaler Berater | Ja 
 
 
 | Wirtschaftlichkeit | Ja 
@@ -175,10 +175,10 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 | Software-Updates | Nein 
 
 
-| Nachhaltigkeit | Ja .12+| *Administrative Merkmale* 
+| Nachhaltigkeit | Ja 
 
 
-| Prüfung | Nein 
+.11+| *Administrative Merkmale* | Prüfung | Nein 
 
 
 | Automatisierungszentrum | Nein 
@@ -318,7 +318,7 @@ NetApp Replication
 | *NetApp Supportvertragsfunktionen* | Keine | k. A. 
 
 
-.12+| *Administrative Merkmale* | Prüfung | Nein 
+.11+| *Administrative Merkmale* | Prüfung | Nein 
 
 
 | Automatisierungszentrum | Nein 
@@ -674,7 +674,7 @@ Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstütz
 | Nachhaltigkeit | Nein | Nein 
 
 
-.9+| *Administrative Merkmale* | Dashboard-Kennzahlen für Speicher- und Datendienste | Nein | Nein 
+.11+| *Administrative Merkmale* | Dashboard-Kennzahlen für Speicher- und Datendienste | Nein | Nein 
 
 
 | Identitäts- und Zugriffsverwaltung | Ja | Ja 
@@ -701,5 +701,8 @@ Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstütz
 | Nur-Lese-Modus | Ja | Nein 
 
 
-| Benachrichtigungen | Ja | Nein | Prüfung 
+| Benachrichtigungen | Ja | Nein 
+
+
+| Prüfung | Ja | Ja 
 |===
