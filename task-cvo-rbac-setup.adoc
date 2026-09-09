@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: task-cvo-rbac-setup.html 
+keywords: cloud volumes ontap, role-based access, iam, identity and access management, permissions, roles, users, subscribers 
+summary: Rollenbasierter Zugriff für Cloud Volumes ONTAP wird eingerichtet, indem Projekte organisiert, NetApp Console-Mitglieder hinzugefügt und Cloud Volumes ONTAP Rollen zugewiesen werden. 
+---
+= Rollenbasierter Zugriff für Cloud Volumes ONTAP in der NetApp Console einrichten
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Der Zugriff auf Cloud Volumes ONTAP wird so eingerichtet, dass bestehende NetApp Console-Benutzer die benötigten Zugriffsrechte behalten und neue Abonnenten Benutzer mit entsprechenden Berechtigungen hinzufügen können.
+
+Einer der folgenden Abschnitte kann verwendet werden:
+
+* *Neu bei NetApp Console und Cloud Volumes ONTAP*: Rollenbasierter Zugriff für neue Benutzer und Cloud Volumes ONTAP Systeme kann eingerichtet werden.
+* *Upgrade auf eine Console Agent Version, die rollenbasiert unterstützt*: Die den bestehenden Benutzern automatisch zugewiesenen Rollen sollten überprüft und bei Bedarf angepasst werden.
+
+
+
+
+[[set-up-access-for-users-after-initial-configuration-of-cloud-volumes-ontap]]
+== Zugriff für Benutzer nach der Erstkonfiguration von Cloud Volumes ONTAP einrichten
+
+Neue Abonnenten beginnen mit der Erstellung einer Console-Organisation. Der ersten Abonnentin oder dem ersten Abonnenten wird die Rolle des Organization Admin zugewiesen. link:concept-identity-and-access-management.html["Erfahren Sie mehr über Identitäts- und Zugriffsverwaltung"].
+
+
+
+[[plan-cloud-volumes-ontap-role-assignments]]
+=== Cloud Volumes ONTAP Rollenzuweisungen planen
+
+Eine Cloud Volumes ONTAP Rolle kann auf Organisations-, Ordner- oder Projektebene zugewiesen werden, die das System enthalten. Plattformrollen ermöglichen es Benutzern, NetApp Console Ressourcen wie Organisationen, Ordner, Projekte, Mitglieder und Ressourcenzugriffe zu verwalten. Cloud Volumes ONTAP Rollen ermöglichen es Benutzern, Cloud Volumes ONTAP Systeme zu verwalten.
+
+Nur die jeweils benötigten Rollen sollten jedem Benutzer zugewiesen werden. Sowohl eine Plattformrolle als auch eine Cloud Volumes ONTAP Rolle sind zuzuweisen, wenn ein Benutzer Konsolenressourcen verwaltet und Cloud Volumes ONTAP Systeme betreut. Eine Plattformrolle ersetzt keine Cloud Volumes ONTAP Rolle für Cloud Volumes ONTAP Operationen.
+
+* Beispielsweise können einem Benutzer, der den Zugriff auf ein Projekt verwaltet und Cloud Volumes ONTAP-Systeme in diesem Projekt verwaltet, die Rollen *Ordner- oder Projektadministrator* und *Cloud Volumes ONTAP-Administrator* zugewiesen werden.
+* Die Rollen *Organization admin* und *Cloud Volumes ONTAP operator* sind einem Benutzer zuzuweisen, der die NetApp Console-Agenteneinstellungen und Cloud Volumes ONTAP Systeme in der gesamten Organisation verwaltet.
+* Wenn ein Benutzer keine Konsolenressourcen verwalten muss, sollte nur eine Cloud Volumes ONTAP Rolle zugewiesen werden, die dem erforderlichen Zugriffsniveau für die Verwaltung von Cloud Volumes ONTAP Systemen entspricht.
+
+
+
+
+==== Empfohlene Rollenzuweisungen, wenn Benutzer auch NetApp Console-Ressourcen verwalten müssen
+
+Diese Rollenzuweisungen sind zu verwenden, wenn ein Benutzer Console-Ressourcen verwalten und Cloud Volumes ONTAP Systeme in einer Organisation verwalten muss, die NetApp Console ausschließlich für Cloud Volumes ONTAP verwendet.
+
+[cols="20,30,30,20"]
+|===
+| Umfang | Plattformrolle | Cloud Volumes ONTAP Rolle | Empfehlung 
+
+
+| Organisation | Organisationsadministrator | Cloud Volumes ONTAP Operator | Wenn ein Benutzer Konsolenressourcen (einschließlich der Einstellungen des Konsolenagenten) und Cloud Volumes ONTAP Systeme verwalten muss 
+
+
+| Ordner oder Projekt | Ordner- oder Projektadministrator | Cloud Volumes ONTAP Administrator | Wenn ein Benutzer Konsolenressourcen in einem bestimmten Ordner oder Projekt und Cloud Volumes ONTAP Systeme verwalten muss 
+
+
+| Ordner oder Projekt | Ordner- oder Projektadministrator | Cloud Volumes ONTAP Operator | Wenn ein Benutzer Konsolenressourcen in einem bestimmten Ordner oder Projekt und Cloud Volumes ONTAP Systeme verwalten muss 
+
+
+| Ordner oder Projekt | Ordner- oder Projektadministrator | Cloud Volumes ONTAP Viewer | Wenn ein Benutzer Konsolenressourcen in einem bestimmten Ordner oder Projekt verwalten muss und lediglich Lesezugriff auf Cloud Volumes ONTAP Systeme benötigt 
+|===
+
+NOTE: Ein bekanntes Problem verhindert derzeit, dass die Rollenkombination *Organization viewer* und *Cloud Volumes ONTAP viewer* auf Organisationsebene funktioniert. Als temporäre Lösung kann die Rolle *Organization admin* oder *Folder or project admin* verwendet werden.
+
+.Schritte
+. Für die NetApp Console registrieren und die eigene Organisation erstellen.
+. Das Standardprojekt kann verwendet oder es können Ordner und Projekte erstellt werden, die der gewünschten Organisation der Cloud Volumes ONTAP Systeme entsprechen.
+. Das Cloud Volumes ONTAP Abonnement konfigurieren oder zuordnen.
+. Benutzer, Dienstkonten oder Verbundgruppen zur Organisation hinzufügen. link:task-iam-manage-members-permissions.html["Informationen zum Hinzufügen von Mitgliedern zu einer NetApp Console-Organisation"].
+. Cloud Volumes ONTAP kann einem Benutzer auf Organisations-, Ordner- oder Projektebene, auf der das System verwaltet wird, eine Cloud Volumes ONTAP Rolle zugewiesen werden. Wenn ein Mitglied außerdem NetApp Console Ressourcen verwalten und anderen den Zugriff zuweisen soll, ist die entsprechende Plattformrolle zuzuweisen.
+. Das Cloud Volumes ONTAP System im Projekt hinzufügen oder entdecken, in dem es verwaltet wird. Informationen zu  https://docs.netapp.com/us-en/storage-management-cloud-volumes-ontap/index.html["Cloud Volumes ONTAP"^].
+. Wenn das System oder sein Console-Agent in anderen Projekten verfügbar sein muss, sollten die Ressourcen diesen Projekten zugeordnet werden. link:task-iam-manage-resources.html["Informationen dazu, wie Ressourcen Ordnern und Projekten zugeordnet werden können"].
+
+
+
+
+[[review-roles-after-upgrading-the-console-agent]]
+== Rollen nach dem Upgrade des Console-Agenten überprüfen
+
+Nach dem Upgrade eines Console-Agenten auf Version 4.9.0 oder höher weist die Console Cloud Volumes ONTAP bestehenden Benutzern automatisch Cloud Volumes ONTAP Rollen basierend auf ihren Plattformrollen zu. Diese einmalige Zuweisung, das sogenannte Seeding, hilft dabei, dass Benutzer die passenden Cloud Volumes ONTAP Zugriffsrechte behalten, ohne dass ein Administrator jede Rolle manuell zuweisen muss. Beim Seeding wird die Cloud Volumes ONTAP Admin- oder Viewer-Rolle basierend auf der bestehenden Plattformrolle des Benutzers zugewiesen. Die Zuordnungen gelten nur während der Migration, eine Plattformrolle ersetzt keine explizite Cloud Volumes ONTAP Rolle bei neuen Zuweisungen. Die zugewiesenen Rollen sollten überprüft werden, um zu bestätigen, dass Benutzer nur den Zugriff behalten, den sie benötigen.
+
+.Schritte
+. Die Organisation, der Ordner oder das Projekt identifizieren, das jedes Cloud Volumes ONTAP System enthält.
+. Die jedem Benutzer zugewiesene Cloud Volumes ONTAP Rolle sollte überprüft werden, um sicherzustellen, dass sie auf der Organisationsebene, Ordnerebene oder Projektebene, die das System enthält, zugewiesen ist. Die erwarteten vordefinierten Rollen sind unter link:reference-iam-cvo-roles.html#seeding-mappings-for-existing-users["Initialisierung von Zuordnungen für bestehende Benutzer"] zu finden.
+. Die Cloud Volumes ONTAP Rolle wird zugewiesen oder geändert, wenn die vordefinierte Rolle nicht den Verantwortlichkeiten des Benutzers entspricht. Der Seeding-Prozess weist die Cloud Volumes ONTAP Admin- oder Viewer-Rolle basierend auf der bestehenden Plattformrolle des Benutzers zu. Wenn ein Benutzer Berechtigungen auf Operator-Ebene benötigt, wird die Cloud Volumes ONTAP Operator-Rolle nach dem Seeding explizit zugewiesen.
+. Es kann bis zu einer Stunde dauern, bis neue oder aktualisierte Rollenzuweisungen wirksam werden. Cloud Volumes ONTAP aktualisiert die Rollenzuweisungen stündlich.
+. Der Benutzer greift auf das Cloud Volumes ONTAP System zu und bestätigt, dass die verfügbaren Operationen der zugewiesenen Rolle entsprechen.
+
+
+Falls ein Benutzer keinen Zugriff auf ein System hat, sollte überprüft werden, ob der Benutzer über eine Cloud Volumes ONTAP Rolle auf Organisations-, Ordner- oder Projektebene verfügt.
+
+
+
+[[related-information]]
+== Ähnliche Informationen
+
+* link:reference-iam-cvo-roles.html["Cloud Volumes ONTAP Zugriffsrollen"]
+* link:concept-iam-rbac.html["Informationen zur NetApp Console rollenbasierten Zugriffssteuerung"]
+* link:task-iam-manage-roles.html["Mitgliederzugriffe in der NetApp Console verwalten"]
+
