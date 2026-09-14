@@ -28,18 +28,19 @@ Cloud Volumes ONTAP Rollen auf der Organisationsebene, Ordnerebene oder Projekte
 
 
 [[role-migrations-for-existing-users]]
+[[seeding-mappings-for-existing-users]]
 == Rollenmigrationen für bestehende Benutzer
 
 Beim Upgrade eines Console-Agenten auf Version 4.9.0 oder höher weist die Console bestehenden Benutzern basierend auf ihren Plattformrollen zusätzliche Cloud Volumes ONTAP Rollen zu.
 
 
-NOTE: Wenn ein vorhandener Console-Agent auf Console 4.9.0 oder höher aktualisiert wird, führt die Console einen einmaligen Initialisierungsprozess durch, der bestehenden Benutzern in der Organisation Cloud Volumes ONTAP Rollen zuweist. Dieser Vorgang kann bis zu 30 Minuten dauern. Zum Überprüfen und Anpassen der initialisierten Rollen siehe link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["Rollen nach dem Upgrade des Console-Agenten überprüfen"].
+NOTE: Wenn ein vorhandener Console-Agent auf Version 4.9.0 oder höher aktualisiert wird, führt die Console einen einmaligen Migrationsprozess durch, der bestehenden Benutzern in der Organisation Cloud Volumes ONTAP Rollen zuweist. Dieser Prozess kann bis zu 30 Minuten in Anspruch nehmen. Eine Übersicht und Anpassungsmöglichkeiten der während der Migration zugewiesenen Rollen finden sich unter link:task-cvo-rbac-setup.html#review-roles-after-upgrading-the-console-agent["Rollen nach dem Upgrade des Console-Agenten überprüfen"].
 
 Die folgenden Zuordnungen gelten nur für diesen einmaligen Migrationsprozess.
 
 [cols="50,50"]
 |===
-| Vorhandene Plattformrolle | Cloud Volumes ONTAP Rolle während des Seedings zugewiesen 
+| Vorhandene Plattformrolle | Cloud Volumes ONTAP Rolle, die während des Upgrades zugewiesen wurde 
 
 
 | Super-Admin | Cloud Volumes ONTAP Administrator 
