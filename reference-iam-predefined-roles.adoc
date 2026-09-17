@@ -155,7 +155,16 @@ Nachfolgend finden Sie eine Liste der Rollen in der Kategorie Datendienste.  Jed
 | link:reference-iam-ransomware-roles.html["Ransomware Resilience-Benutzerverhaltensanzeige"] | RANSOMWARE_RESILIENCE_USER_BEHAVIOR_VIEWER | Standard | Zeigen Sie Warnungen und Einblicke zu verdächtigem Benutzerverhalten in Ransomware Resilience an. 
 
 
-| SnapCenter -Administrator | SNAPCENTER_ADMIN | Standard, Privat | Bietet die Möglichkeit, Snapshots von lokalen ONTAP Clustern mithilfe von NetApp Backup and Recovery für Anwendungen zu sichern.  Ein Mitglied mit dieser Rolle kann die folgenden Aktionen ausführen: * Alle Aktionen unter „Sicherung und Wiederherstellung > Anwendungen“ ausführen * Alle Systeme in den Projekten und Ordnern verwalten, für die es Berechtigungen hat * Alle NetApp Console verwenden SnapCenter hat keine Viewer-Rolle. 
+| SnapCenter -Administrator | SNAPCENTER_ADMIN | Standard, Privat  a| 
+Ermöglicht das Sichern von Snapshots lokaler ONTAP Cluster mithilfe von NetApp Backup and Recovery für Anwendungen. Ein Mitglied mit dieser Rolle kann die folgenden Aktionen ausführen:
+
+* Jede Aktion aus Backup and Recovery > Applications kann abgeschlossen werden.
+* Alle Systeme in den Projekten und Ordnern, für die sie Berechtigungen haben, verwalten
+* Alle NetApp Console-Services nutzen
+
+
+SnapCenter hat keine Zuschauerrolle.
+
 |===
 
 

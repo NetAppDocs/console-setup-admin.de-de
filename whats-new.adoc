@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: whats-new.html 
-keywords: 'what"s new, features, new, release notes, enhancements, fixes, connectors, bluexp, iam, notice, releases, console' 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, agent, Console agent, NetApp Console, iam, notice, releases, console' 
 summary: Erfahren Sie, was es Neues bei der NetApp Console-Administration gibt. 
 ---
 = Neues in der NetApp Console
@@ -15,6 +15,58 @@ summary: Erfahren Sie, was es Neues bei der NetApp Console-Administration gibt.
 
 [role="lead"]
 Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetApp Console : Identitäts- und Zugriffsverwaltung (IAM), Konsolenagenten, Anmeldeinformationen von Cloud-Anbietern und mehr.
+
+
+
+[[17-september-2026]]
+== 17. September 2026
+
+
+
+[[private-mode-release-4-10-0]]
+=== Veröffentlichung im privaten Modus (4.10.0)
+
+Eine neue Version des privaten Modus steht jetzt zum Download bereit von der https://mysupport.netapp.com/site/downloads["NetApp Support Site"^]
+
+Die Version 4.10.0 enthält Aktualisierungen der folgenden NetApp Console-Komponenten und -Dienste.
+
+[cols="3*"]
+|===
+| Komponente oder Dienst | In dieser Version enthaltene Version | Änderungen seit der letzten Version des privaten Modus 
+
+
+| Konsolenagent | 4.10.0 | Gehen Sie zu  https://docs.netapp.com/us-en/console-setup-admin/whats-new.html#2026-08-13.html["Was ist neu auf der NetApp Console-Seite"^] und informieren Sie sich über die Änderungen in Version 4.10.0. 
+
+
+| NetApp Backup and Recovery | 5.6.2 (17. August 2026) | Gehe zu https://docs.netapp.com/us-en/data-services-backup-recovery/whats-new.html["Was ist neu auf der Seite NetApp Backup and Recovery"^]. 
+
+
+| NetApp Data Classification | 1.546.0 (10. August 2026) | Gehe zu https://docs.netapp.com/us-en/data-services-data-classification/whats-new.html["Was ist neu auf der Seite NetApp Klassifizierung"^]. 
+|===
+
+
+[[16-september-2026]]
+== 16. September 2026
+
+
+
+[[console-agent-4-11-0]]
+=== Console Agent 4.11.0
+
+Die Version 4.11.0 unterstützt sowohl den Standardmodus als auch den eingeschränkten Modus.
+
+Diese Version des Console-Agenten enthält Sicherheitsverbesserungen und Fehlerbehebungen.
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console
+
+
+
+==== Vereinfachter Agentenbereitstellungsprozess für Cloud Volumes ONTAP Abonnenten im AWS Marketplace
+
+Wenn Sie ein neues Abonnement für eine link:https://us-east-1.console.aws.amazon.com/marketplace/search/listing/prodview-yi43o6oz7bf32?sr=0-2&ref_=ucaf&applicationId=AWS-Marketplace-Console["eigenständiges Cloud Volumes ONTAP Abonnement im AWS Marketplace"] haben, vereinfacht die NetApp Console jetzt die Agentenbereitstellung. AWS-Rollen, -Richtlinien und -Anmeldeinformationen lassen sich mit weniger Schritten konfigurieren, Standardwerte werden automatisch auf einer einzigen Seite verwendet, und der Einrichtungsprozess erfolgt schneller.
 
 
 
