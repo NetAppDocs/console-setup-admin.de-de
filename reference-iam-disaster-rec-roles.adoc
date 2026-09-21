@@ -17,8 +17,8 @@ Sie können Benutzern die folgenden Rollen zuweisen, um ihnen Zugriff auf NetApp
 Disaster Recovery verwendet die folgenden Rollen:
 
 * *Notfallwiederherstellungsadministrator*: Führen Sie alle Aktionen aus.
-* *Disaster Recovery Failover-Administrator*: Führen Sie Failover und Migrationen durch.
-* *Administrator der Notfallwiederherstellungsanwendung*: Erstellen Sie Replikationspläne. Replikationspläne ändern. Starten Sie Test-Failover.
+* *Administrator für Failover bei der Notfallwiederherstellung*: Failover und Migrationen.
+* *Administrator für Notfallwiederherstellungsanwendungen*: Replikationspläne erstellen und ändern; Test-Failovers initiieren.
 * *Disaster Recovery Viewer*: Nur Informationen anzeigen.
 
 
@@ -26,17 +26,20 @@ Die folgende Tabelle zeigt die Aktionen, die jede Rolle ausführen kann.
 
 [cols="30,20a,20a,20a,20a"]
 |===
-| Funktion und Aktion | Notfallwiederherstellungsadministrator | Administrator für Notfallwiederherstellungs-Failover | Administrator der Notfallwiederherstellungsanwendung | Disaster Recovery-Viewer 
+| Aktion | Notfallwiederherstellungsadministrator | Administrator für Notfallwiederherstellungs-Failover | Administrator der Notfallwiederherstellungsanwendung | Disaster Recovery-Viewer 
 
 
-| Dashboard und alle Registerkarten anzeigen  a| 
+5+| *Aktivierung und Erkennung* 
+
+
+| Lizenz aktivieren  a| 
 Ja
+ a| 
+Nein
  a| 
 Ja
  a| 
-Ja
- a| 
-Ja
+Nein
 
 
 
@@ -62,6 +65,17 @@ Nein
 
 
 
+| Dashboard und alle Registerkarten anzeigen  a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+ a| 
+Ja
+
+
+
 | Lizenzinformationen anzeigen  a| 
 Ja
  a| 
@@ -73,18 +87,29 @@ Ja
 
 
 
-| Lizenz aktivieren  a| 
+| Zugangsdaten anzeigen  a| 
+Ja
+ a| 
 Ja
  a| 
 Nein
  a| 
+Nein
+
+
+
+| Anmeldeinformationen erstellen, aktualisieren oder löschen  a| 
 Ja
+ a| 
+Ja
+ a| 
+Nein
  a| 
 Nein
 
 
 
-5+| *Auf der Registerkarte „Sites“*: 
+5+| *Standorte* 
 
 
 | Websites anzeigen  a| 
@@ -98,7 +123,7 @@ Ja
 
 
 
-| Hinzufügen, Ändern oder Löschen von Sites  a| 
+| Standorte oder Cluster hinzufügen, ändern oder löschen  a| 
 Ja
  a| 
 Nein
@@ -109,7 +134,18 @@ Nein
 
 
 
-5+| *Auf der Registerkarte Replikationspläne*: 
+| Cluster anzeigen  a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+5+| *Replikationspläne* 
 
 
 | Replikationspläne anzeigen  a| 
@@ -211,7 +247,32 @@ Nein
 
 
 
-5+| *Auf der Registerkarte „Ressourcengruppen“*: 
+5+| *Einstellungen* 
+
+
+| Erstellen oder ändern Sie AppVaults  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+| Ressourcentransformationen erstellen oder ändern  a| 
+Ja
+ a| 
+Ja
+ a| 
+Nein
+ a| 
+Nein
+
+
+
+5+| *Ressourcengruppen* 
 
 
 | Anzeigen von Ressourcengruppen  a| 
@@ -236,7 +297,7 @@ Nein
 
 
 
-5+| *Auf der Registerkarte „Jobüberwachung“*: 
+5+| *Auftragsüberwachung* 
 
 
 | Jobs anzeigen  a| 
