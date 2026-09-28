@@ -65,8 +65,8 @@ Der Console-Agent benötigt diesen Bereich in `/var`, da Podman oder Docker so k
 
 --
 [[podman-versions]]Betriebssystem- und Containeranforderungen:: Der Konsolenagent wird bei Verwendung der Konsole im privaten Modus mit den folgenden Betriebssystemen unterstützt.  Vor der Installation des Agenten ist ein Container-Orchestrierungstool erforderlich.
-+
---
+
+
 [cols="2a,2a,2a,2a,2a"]
 |===
 | Betriebssystem | Unterstützte Betriebssystemversionen | Unterstützte Agent-Versionen | Erforderliches Container-Tool | SELinux 
@@ -75,13 +75,49 @@ Der Console-Agent benötigt diesen Bereich in `/var`, da Podman oder Docker so k
  a| 
 Red Hat Enterprise Linux
  a| 
+9,6
+
+* Nur englischsprachige Versionen.
+* Der Host muss bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann der Host während der Agenteninstallation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
+
+ a| 
+4.10.0 oder höher mit der Konsole im privaten Modus
+ a| 
+Podman Version 5.4.0 mit podman-compose 1.5.0.
+
+<<podman-configuration,Podman-Konfigurationsanforderungen anzeigen>> .
+ a| 
+Unterstützt im Durchsetzungsmodus oder im Permissivmodus
+
+
+
+ a| 
 9,1 bis 9,4
 
+* Nur englischsprachige Versionen.
+* Der Host muss bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann der Host während der Agenteninstallation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
+
+ a| 
+4.0.0 oder höher mit der Konsole im Standardmodus oder eingeschränkten Modus
+ a| 
+Podman Version 4.9.4 mit podman-compose 1.5.0.
+
+<<podman-configuration,Podman-Konfigurationsanforderungen anzeigen>> .
+ a| 
+Unterstützt im Durchsetzungsmodus oder im Permissivmodus
+
+
+
+ a| 
 8,6 bis 8,10
+
+* Nur englischsprachige Versionen.
+* Der Host muss bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann der Host während der Agenteninstallation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
+
  a| 
 4.0.0 oder höher mit der Konsole im privaten Modus
  a| 
-Podman Version 4.6.1 oder 4.9.4
+Podman Version 4.6.1 oder 4.9.4 mit podman-compose 1.0.6.
 
 <<podman-configuration,Podman-Konfigurationsanforderungen anzeigen>> .
  a| 
@@ -107,9 +143,7 @@ Hinweise:
 
 . Der Konsolenagent wird auf englischsprachigen Versionen dieser Betriebssysteme unterstützt.
 . Für RHEL muss der Host bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann der Host während der Agenteninstallation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.
-
-
---
++
 Hypervisor:: Es ist ein Bare-Metal- oder gehosteter Hypervisor erforderlich, der für die Ausführung eines unterstützten Betriebssystems zertifiziert ist.
 CPU:: 8 Kerne oder 8 vCPUs
 RAM:: 32 GB
@@ -133,6 +167,8 @@ Speicherplatz in /var:: 20 GiB Speicherplatz müssen verfügbar sein
 Der Console-Agent benötigt diesen Speicherplatz in `/var`, da Docker oder Podman so konzipiert sind, dass sie die Container innerhalb dieses Verzeichnisses erstellen. Genauer gesagt, werden sie Container im `/var/lib/containers/storage` Verzeichnis erstellen. Externe Mounts oder symbolische Links funktionieren für diesen Speicherplatz nicht.
 
 --
+
+
 
 
 
