@@ -16,6 +16,9 @@ summary: Rollenbasierter Zugriff für Cloud Volumes ONTAP wird eingerichtet, ind
 [role="lead"]
 Der Zugriff auf Cloud Volumes ONTAP wird so eingerichtet, dass bestehende NetApp Console-Benutzer die benötigten Zugriffsrechte behalten und neue Abonnenten Benutzer mit entsprechenden Berechtigungen hinzufügen können.
 
+
+NOTE: Zugriffsrollen für Cloud Volumes ONTAP sind verfügbar, wenn Sie einen Console agent in Version 4.9.0 oder höher ausführen.
+
 Einer der folgenden Abschnitte kann verwendet werden:
 
 * *Neu bei NetApp Console und Cloud Volumes ONTAP*: Rollenbasierter Zugriff für neue Benutzer und Cloud Volumes ONTAP Systeme kann eingerichtet werden.
