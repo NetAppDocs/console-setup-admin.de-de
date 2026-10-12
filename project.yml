@@ -132,12 +132,12 @@ sidebar:
         url: "/concept-agents.html"
       - title: Konsolenagenten verwalten
         entries:
-        - title: Manuell installierte Console-Agenten verwalten
-          entries:
-          - title: Verwalten eines in VCenter installierten Agenten
-            url: "/task-agent-vm-config.html"
-          - title: Einen manuell installierten Agenten pflegen
-            url: "/task-maintain-agents.html"
+        - title: Wartung eines in vCenter installierten Agenten
+          url: "/task-agent-vm-config.html"
+        - title: Wartung von NetApp Console Agent-VMs
+          url: "/task-maintain-agents.html"
+      - title: Secure Console-Agenten
+        entries:
         - title: Agentenadressierung und URIs aktualisieren
           url: "/task-update-agent-addressing.html"
         - title: Installieren Sie ein CA-signiertes Zertifikat für den Zugriff auf
@@ -145,12 +145,12 @@ sidebar:
           url: "/task-installing-https-cert.html"
         - title: Konfigurieren eines Konsolenagenten zur Verwendung eines Proxyservers
           url: "/task-configuring-proxy.html"
-        - title: Fehlerbehebung beim Konsolen-Agent
-          url: "/task-troubleshoot-agent.html"
-        - title: Aktualisieren Sie den Konsolenagenten
-          url: "/task-upgrade-agent.html"
-        - title: Deinstallieren und entfernen Sie den Konsolenagenten
-          url: "/task-uninstall-agent.html"
+      - title: Fehlerbehebung beim Konsolen-Agent
+        url: "/task-troubleshoot-agent.html"
+      - title: Aktualisieren Sie den Konsolenagenten
+        url: "/task-upgrade-agent.html"
+      - title: Deinstallieren und entfernen Sie den Konsolenagenten
+        url: "/task-uninstall-agent.html"
       - title: Cloud-Anbieter-Zugangsdaten verwalten
         entries:
         - title: AWS

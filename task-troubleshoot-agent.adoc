@@ -179,11 +179,6 @@ Sie können auch direkt vom Konsolen-Agent-Host in den folgenden Verzeichnissen 
 [[disable-config-check]]
 === Deaktivieren Sie Konfigurationsprüfungen für manuelle Installationen
 
-
-
-[[disable-configuration-checks-for-manual-installations]]
-=== Deaktivieren Sie Konfigurationsprüfungen für manuelle Installationen
-
 Es kann vorkommen, dass Sie die Konfigurationsprüfungen deaktivieren müssen, die während der Installation die ausgehende Konnektivität überprüfen. Wenn Sie beispielsweise einen Agenten in Ihrer Government Cloud-Umgebung manuell installieren, müssen Sie die Konfigurationsprüfungen deaktivieren, da die Installation sonst fehlschlägt.
 
 Sie deaktivieren die Konfigurationsprüfung, indem Sie das Flag _skipConfigCheck_ in der Datei _com/opt/application/netapp/service-manager-2/config.json_ setzen. Standardmäßig ist dieses Flag auf „false“ gesetzt und die Konfigurationsprüfung überprüft den ausgehenden Zugriff für den Agenten. Setzen Sie dieses Flag auf „true“, um die Prüfung zu deaktivieren. Machen Sie sich mit der JSON-Syntax vertraut, bevor Sie diesen Schritt ausführen.
