@@ -185,11 +185,11 @@ Unterstützt im Durchsetzungsmodus oder im Permissivmodus
  a| 
 Ubuntu
  a| 
-22,04 LTS
+24,04 LTS
  a| 
-4.0.0 oder höher
+4.0.0 oder höher mit der NetApp Console im privaten Modus
  a| 
-Docker Engine 23.0.6 bis 26.0.0
+Docker Engine 23.0.6 bis 28.0.0.
 
 26.0.0 wird mit _neuen_ Agenten 3.9.44 oder späteren Installationen unterstützt
  a| 

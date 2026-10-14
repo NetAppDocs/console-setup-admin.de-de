@@ -404,7 +404,6 @@
   <block id="0930e6e62078c5446e99045f0a678607" category="paragraph">Docker Engine 23.0.6 bis 28.0.0.</block>
   <block id="8f06b143b878ae3919ba41cd38ea7380" category="list-text">Der Konsolenagent wird bei Verwendung der Konsole im privaten Modus mit den folgenden Betriebssystemen unterstützt.  Vor der Installation des Agenten ist ein Container-Orchestrierungstool erforderlich.</block>
   <block id="1a3d8802d280d4ec910f54042cd62998" category="cell">SELinux</block>
-  <block id="a3336db0e9f7b6341a12794c144076b6" category="paragraph">Docker Engine 23.0.6 bis 26.0.0</block>
   <block id="5556c95763913c6cfa8f61d9cab4f4f2" category="paragraph">26.0.0 wird mit _neuen_ Agenten 3.9.44 oder späteren Installationen unterstützt</block>
   <block id="afaf0577b469adb0296b4fcfa6f2af91" category="list-text">Der Konsolenagent wird auf englischsprachigen Versionen dieser Betriebssysteme unterstützt.</block>
   <block id="31acdb1c0f97e43347645b47a1cb7ad5" category="list-text">Für RHEL muss der Host bei Red Hat Subscription Management registriert sein.  Wenn es nicht registriert ist, kann der Host während der Agenteninstallation nicht auf Repositories zugreifen, um erforderliche Software von Drittanbietern zu aktualisieren.</block>
@@ -1277,7 +1276,6 @@
   <block id="87047facc49847cec237f6d055d56b31" category="section-title">Standardkonfiguration mit Internetzugang</block>
   <block id="ee67bef980f9156a14c8bfbb2de4f437" category="paragraph">Die folgenden Konfigurationsdetails gelten, wenn Sie einen Konsolenagenten von der NetApp Console oder vom Marktplatz Ihres Cloud-Anbieters bereitgestellt haben oder wenn Sie einen Konsolenagenten manuell auf einem lokalen Linux-Host mit Internetzugang installiert haben.</block>
   <block id="33ff271280dc3e0c2c15bf39aeefdeb9" category="list-text">Der EC2-Instanztyp ist t3.2xlarge.</block>
-  <block id="7c42c6e2f8295dada12f50f825327ddf" category="list-text">Das Betriebssystem für das Image ist Ubuntu 22.04 LTS.</block>
   <block id="953e61420be6157aa122dfd3475d4070" category="paragraph">Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um auf das System zuzugreifen.</block>
   <block id="688aea6136f160e02c8d5bbec6894343" category="list-text">Die Installation umfasst Docker Engine, das erforderliche Container-Orchestrierungstool.</block>
   <block id="8061654f55b31a1347dadde5417b3bbe" category="list-text">Der Benutzername für die EC2-Linux-Instanz ist ubuntu (für Agenten, die vor Mai 2023 erstellt wurden, lautet der Benutzername ec2-user).</block>
@@ -6192,7 +6190,6 @@
   <block id="31c8c9293a24d211fe8df6780c3b5864" category="list-text">Sie können bei der Zuweisung von Rollen an Benutzer oder Dienstkonten aus den unterstützten Rollen auswählen.</block>
   <block id="b4c25e4423bb6dcb1445deb7b10e93fb" category="paragraph">In der Dropdown-Liste werden nur unterstützte Rollen angezeigt. <block ref="358dd7829c43f386bdd1bc16bf83b432" category="inline-link-macro-rx"></block>.</block>
   <block id="7ea105aee574037d5e6af21567c8c3dc" category="paragraph">4.0.0 oder höher mit der Konsole im privaten Modus</block>
-  <block id="5d818424eacea237d3f2053aafd60fbe" category="paragraph">4.0.0 oder höher</block>
   <block id="b39dc14a008a29a5ead42173a9e0c598" category="doc">Veröffentlichung im privaten Modus (4.7.0)</block>
   <block id="2c0d034db2b48e2c24de792e5f537a36" category="paragraph">Die Version 4.7.0 enthält Aktualisierungen der folgenden NetApp Console-Komponenten und -Dienste.</block>
   <block id="d794a9cd24f47c508609ee13d758511f" category="cell">4.7.0</block>
@@ -6664,4 +6661,6 @@
   <block id="83ea5433d56d3644fb56d0b6b799c35e" category="sidebar">Wartung eines in vCenter installierten Agenten</block>
   <block id="5d9476182acf1146ab60b631fc72ec99" category="admonition">Zugriffsrollen für Cloud Volumes ONTAP sind verfügbar, wenn Sie einen Console agent in Version 4.9.0 oder höher ausführen.</block>
   <block id="7be2d306061e806c6a2cf1ac2026ea93" category="section-title">Rollenmigrationen für bestehende Benutzer nach dem Upgrade auf Console agent Version 4.9.0 oder höher</block>
+  <block id="ecfb18572af1acc83bcc04e648fd570d" category="paragraph">4.0.0 oder höher mit der NetApp Console im privaten Modus</block>
+  <block id="044ded006ef73f38b5aa769474d4c58d" category="list-text">Das Betriebssystem des Images ist Ubuntu 24.04 LTS.</block>
 </blocks>

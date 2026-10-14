@@ -31,7 +31,7 @@ Die folgenden Konfigurationsdetails gelten, wenn Sie einen Konsolenagenten von d
 Wenn Sie einen Console Agenten über die Console oder über den AWS marketplace bereitgestellt haben, ist Folgendes zu beachten:
 
 * Der EC2-Instanztyp ist t3.2xlarge.
-* Das Betriebssystem für das Image ist Ubuntu 22.04 LTS.
+* Das Betriebssystem des Images ist Ubuntu 24.04 LTS.
 +
 Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um auf das System zuzugreifen.
 
@@ -48,7 +48,7 @@ Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um a
 Wenn Sie einen Console agent über die Console oder den Azure marketplace bereitgestellt haben, ist Folgendes zu beachten:
 
 * Der VM-Typ ist Standard_D8s_v3.
-* Das Betriebssystem für das Image ist Ubuntu 22.04 LTS.
+* Das Betriebssystem des Images ist Ubuntu 24.04 LTS.
 +
 Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um auf das System zuzugreifen.
 
@@ -64,7 +64,7 @@ Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um a
 Wenn Sie einen Console Agent über die Console oder den Google Cloud marketplace bereitgestellt haben, gilt Folgendes:
 
 * Die VM-Instanz ist n2-standard-8.
-* Das Betriebssystem für das Image ist Ubuntu 22.04 LTS.
+* Das Betriebssystem des Images ist Ubuntu 24.04 LTS.
 +
 Das Betriebssystem enthält keine GUI.  Sie müssen ein Terminal verwenden, um auf das System zuzugreifen.
 
