@@ -54,7 +54,7 @@ Zum Bearbeiten muss der Konsolenagent aktiv sein.
 . Wählen Sie *HTTP-Proxy-Konfiguration*.
 . Wählen Sie im Feld „Konfigurationstyp“ *Expliziter Proxy* aus.
 . Wählen Sie *Proxy aktivieren*.
-. Geben Sie den Server mit der Syntax an http://_address:port_[] oder https://_address:port_[]
+. Die Angabe des Servers erfolgt mit der Syntax \http://<address>:<port> oder \https://<address>:<port>
 . Geben Sie einen Benutzernamen und ein Kennwort an, wenn für den Server eine Basisauthentifizierung erforderlich ist.
 +
 Beachten Sie Folgendes:

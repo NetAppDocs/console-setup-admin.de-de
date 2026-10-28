@@ -18,6 +18,13 @@ Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetA
 
 
 
+[[15-october-2026]]
+== 15. Oktober 2026
+
+Nicht aufgelöste Direktive in <stdin> - include::_whatsnew/2026-10-13.adoc[]
+
+
+
 [[17-september-2026]]
 == 17. September 2026
 

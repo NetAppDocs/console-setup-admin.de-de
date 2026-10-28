@@ -54,7 +54,7 @@ Die lokale Bereitstellung über die Konsole unterstützt On-Premises ONTAP Clust
 
 Die lokale Bereitstellung über die Konsole eignet sich am besten für Organisationen mit großen On-Premises ONTAP Umgebungen, die eine richtlinienbasierte Bereitstellung, automatisierte Compliance-Prüfungen und vollständige Datenhoheit benötigen.
 
-link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["Informationen zur lokalen Bereitstellung der NetApp Console^."]
+link:https://docs.netapp.com/us-en/console-local/concept-netapp-console-local.html["Informationen zum lokalen NetApp Console Deployment."^]
 
 
 

@@ -19,7 +19,7 @@ Sie können NetApp Console über die SaaS-Anwendung nutzen oder sie selbst in Ih
 NetApp bezeichnet diese Anwendungsfälle als _Bereitstellungsmodi_. Jeder Modus bietet unterschiedliche Konnektivität, Funktionen und Dienste für Ihre Geschäfts- und Sicherheitsanforderungen.
 
 Standardmodus (SaaS):: Die NetApp Console SaaS (Software-as-a-Service)-Anwendung ermöglicht den Zugriff auf alle NetApp Datenservices, automatisierte Updates und flexible Authentifizierungsoptionen wie Identitätsföderation und NetApp Support Site-Anmeldungen. Dieser Modus unterstützt Marketplace-Abonnements und BYOL-Lizenzierung. Dieser Modus ist ideal für die meisten Benutzer und Organisationen, insbesondere für diejenigen, die die meisten Funktionen und Services nutzen möchten, die mit der NetApp Console verfügbar sind.
-Eingeschränkter Modus (in Ihrer eigenen öffentlichen Cloud installiert):: Der eingeschränkte Modus ist für Organisationen mit erhöhtem Sicherheitsbedarf und begrenzter Konnektivität vorgesehen, beispielsweise Regierungen und regulierte Unternehmen. Sie installieren die NetApp Console in Ihrer eigenen öffentlichen Cloud (in einer Regierungs-, souveränen oder kommerziellen Region), und sie hat eine eingeschränkte ausgehende Konnektivität zu den NetApp Console API-Endpunkten (gehostet in der SaaS-Anwendung). Der eingeschränkte Modus bietet Zugriff auf wichtige Datendienste wie Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in Regierungs- und kommerziellen Regionen) sowie Datenklassifizierung, zusammen mit automatisierten Software-Upgrades und Identitätsföderation.
+Eingeschränkter Modus (in Ihrer eigenen öffentlichen Cloud installiert):: Der eingeschränkte Modus ist für Organisationen mit erhöhtem Sicherheitsbedarf und begrenzter Konnektivität vorgesehen, beispielsweise für Regierungen und regulierte Unternehmen. Die NetApp Console wird in Ihrer eigenen Public Cloud installiert, in einer Regierungs-, souveränen oder kommerziellen Region, und verfügt über eine eingeschränkte ausgehende Konnektivität zu den NetApp Console API-Endpunkten, die in der SaaS Applikation gehostet werden. Der eingeschränkte Modus bietet Zugriff auf wichtige Datenservices, darunter AI Data Engine, Cloud Volumes ONTAP, Azure NetApp Files, NetApp Backup and Recovery (in Regierungs- und kommerziellen Regionen) sowie Datenklassifizierung, zusammen mit automatisierten Software-Upgrades und Identitätsverbund.
 Privater Modus (installiert vor Ort oder in der Cloud):: Der private Modus ist für Organisationen mit strengen Sicherheitsanforderungen geeignet, wie beispielsweise in AWS Secret Cloud, AWS Top Secret Cloud, Azure IL6 oder abgeschotteten Umgebungen. Er stellt keine Verbindung zur NetApp Console SaaS-Anwendung oder NetApp Cloud-basierten APIs her, wodurch Sie die volle Kontrolle haben und die externe Kommunikation blockiert wird. Unterstützte Datendienste umfassen NetApp Backup and Recovery, NetApp Data Classification, NetApp Replication und Cloud Volumes ONTAP. Alle Speicherung und Authentifizierung bleiben lokal, sodass die Daten innerhalb Ihrer Umgebung verbleiben. Verwenden Sie diesen Modus für Rüstungsunternehmen, Finanzinstitute mit strengen Datenresidenzregeln und Regierungsbehörden mit klassifizierten Systemen.
 
 
@@ -139,7 +139,10 @@ NetApp empfiehlt, dass Kunden gemeinsam mit ihrem NetApp-Ansprechpartner ihre be
 | Arbeitslasten | Nein 
 
 
-.8+| *Datendienste* | NetApp Backup and Recovery | Ja 
+.9+| *Datendienste* | NetApp AI Data Engine | Ja 
+
+
+| NetApp Backup and Recovery | Ja 
 
 
 | NetApp Klassifizierung | Ja 
@@ -290,7 +293,10 @@ Die folgende Tabelle listet die Speicherverwaltungsfunktionen, Datendienste und 
 | On-Premises- ONTAP -Cluster | Für die Erkennung und Verwaltung erforderlich. Sie können die direkte Erkennung ohne einen Console-Agent verwenden, aber für die Nutzung der Verwaltungsfunktionen benötigen Sie einen Agent. 
 
 
-.3+| *Datendienste* (Der eingeschränkte Modus unterstützt weniger Datendienste als der Standardmodus)  a| 
+.4+| *Datendienste* (Der eingeschränkte Modus unterstützt weniger Datendienste als der Standardmodus) | AI Data Engine | Ja 
+
+
+ a| 
 Backup and Recovery
 
 * Unterstützt in Regierungsregionen und Handelsregionen mit eingeschränktem Modus. Nicht unterstützt in souveränen Regionen mit eingeschränktem Modus.
@@ -638,7 +644,10 @@ Beachten Sie, dass einige Dienste möglicherweise nur eingeschränkt unterstütz
 | Arbeitslasten | Nein | Nein 
 
 
-.8+| *Datendienste* | Backup and Recovery | Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] | Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] 
+.9+| *Datendienste* | AI Data Engine | Ja | Nein 
+
+
+| Backup and Recovery | Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-limited-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] | Jahttps://docs.netapp.com/us-en/data-services-backup-recovery/prev-ontap-protect-journey.html#support-for-sites-with-no-internet-connectivity["Liste der unterstützten Backup-Ziele für ONTAP Volume-Daten anzeigen"^] 
 
 
 | NetApp Klassifizierung | Ja | Ja 
