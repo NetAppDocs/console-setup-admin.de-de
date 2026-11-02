@@ -10,7 +10,7 @@ Diese Endpunkte sind für alle Bereitstellungen des Console-Agenten erforderlich
 
 [cols="2a,1a"]
 |===
-| Endpunkte | Zweck Unaufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=nss-endpoints] Unaufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=saas-endpoints] Unaufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=upgrade-endpoints] 
+| Endpunkte | Zweck Nicht aufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=nss-endpoints] Nicht aufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=saas-endpoints] Nicht aufgelöste Direktive in <stdin> - include::endpoints-agent.adoc[tag=upgrade-endpoints-saas] 
 |===
 --
 .Zusätzliche Endpunkte für AWS-Ressourcen

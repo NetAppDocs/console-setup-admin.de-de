@@ -4,7 +4,7 @@ permalink: reference-networking-saas-console.html
 keywords: networking, urls, endpoints, web browser, console, network, set up networking, bluexp 
 summary: NetApp Console, der NetApp Console Agent und NetApp Datendienste erfordern ausgehenden Internetzugang und die Möglichkeit, die erforderlichen Endpunkte zu kontaktieren. 
 ---
-= Netzwerkzugriff für die NetApp Console
+= Netzwerkzugriff für NetApp Console im Standardmodus
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ NetApp Console, der NetApp Console Agent und NetApp Datendienste erfordern ausge
 Sie müssen den Netzwerkzugriff für Folgendes einrichten:
 
 * Computer, die als Software as a Service (SaaS) auf die NetApp Console zugreifen
-* Konsolenagenten, die Sie vor Ort oder in der Cloud installieren. Konsolenagenten.
+* Konsolenagenten, die Sie vor Ort oder in der Cloud installieren.
 
 
 
@@ -39,22 +39,49 @@ Konsolenagenten, die bei Ihrem Cloud-Anbieter bereitgestellt werden, benötigen 
 | Endpunkte | Zweck 
 
 
-| \https://mysupport.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden. 
+ a| 
+* \https://mysupport.netapp.com
 
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden.
 
-| \https://signin.b2c.netapp.com | So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu. 
-
-
-| \https://support.netapp.com | Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden sowie Software-Updates für Cloud Volumes ONTAP zu erhalten. 
-
-
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen. 
 
 
  a| 
-https://bluexpinfraprod.eastus2.data.azurecr.io https://bluexpinfraprod.azurecr.io https://occmclientinfragov.azurecr.us (wird für Bereitstellungen im eingeschränkten Modus benötigt)
+* \https://signin.b2c.netapp.com
+
  a| 
-Um Bilder für Upgrades des Konsolenagenten zu erhalten.
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
+
+
+
+ a| 
+* \https://support.netapp.com
+
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden sowie Software-Updates für Cloud Volumes ONTAP zu erhalten.
+
+
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
+
+
+
+ a| 
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+ a| 
+Zum Abrufen von Images für Console Agent Deployment und Upgrades.
 
 |===
 

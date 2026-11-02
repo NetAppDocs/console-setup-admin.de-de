@@ -4,7 +4,7 @@ permalink: task-prepare-restricted-mode.html
 keywords: restricted mode requirements, requirements, install options, restricted mode networking, dark site, restricted mode permissions, permissions for restricted mode, networking for restricted mode 
 summary: Bereiten Sie Ihre Umgebung vor, bevor Sie die NetApp Console im eingeschränkten Modus bereitstellen.  Sie müssen die Hostanforderungen überprüfen, das Netzwerk vorbereiten, Berechtigungen einrichten und vieles mehr. 
 ---
-= Vorbereitung der Bereitstellung im NetApp Console Restricted Mode
+= Vorbereitung des Deployments von NetApp Console im eingeschränkten Modus
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -31,24 +31,29 @@ link:concept-modes.html["Erfahren Sie, wie der eingeschränkte Modus funktionier
 
 
 
-[[step-2-review-installation-options]]
-== Schritt 2: Überprüfen der Installationsoptionen
+[[step-2-choose-a-restricted-mode-installation-method]]
+== Schritt 2: Auswahl einer Installationsmethode im eingeschränkten Modus
 
-Im eingeschränkten Modus können Sie den Konsolenagenten nur in der Cloud installieren.  Folgende Installationsoptionen stehen zur Verfügung:
+Im eingeschränkten Modus können Sie den Console agent in der Cloud installieren und über den lokal installierten Agenten auf die NetApp Console zugreifen. Die Installation kann über einen Cloud-Marktplatz (nur AWS oder Azure) oder manuell auf Ihrem eigenen Linux-Host in AWS, Azure oder Google Cloud erfolgen.
 
 * Aus dem AWS Marketplace
 * Aus dem Azure Marketplace
 * Manuelle Installation des Konsolen-Agenten auf Ihrem eigenen Linux-Host, der in AWS, Azure oder Google Cloud ausgeführt wird
++
+
+NOTE: Für ein Deployment in Google Cloud müssen Sie den Console Agent manuell auf einem dedizierten Linux Host installieren.
 
 
 
 
+
+[[step-3-review-console-agent-host-requirements]]
 [[step-3-review-host-requirements]]
-== Schritt 3: Hostanforderungen prüfen
-
-Ein Host muss bestimmte Betriebssystem-, RAM- und Portanforderungen erfüllen, um den Konsolenagenten auszuführen.
+== Schritt 3: Überprüfung der Anforderungen an den Console Agent Host
 
 Wenn Sie den Konsolenagenten vom AWS- oder Azure Marketplace bereitstellen, enthält das Image die erforderlichen Betriebssystem- und Softwarekomponenten.  Sie müssen lediglich einen Instanztyp auswählen, der die CPU- und RAM-Anforderungen erfüllt.
+
+Wenn die Installation manuell auf Ihrem eigenen Linux Host erfolgt, muss der Host die erforderlichen Anforderungen an OS, RAM und Ports erfüllen.
 
 Dedizierter Host:: Der Konsolenagent benötigt einen dedizierten Host.  Jede Architektur wird unterstützt, sofern sie diese Größenanforderungen erfüllt:
 +
@@ -165,203 +170,22 @@ Nicht unterstützt
 |===
 
 
-[[step-4-install-podman-or-docker-engine]]
+[[step-4-prepare-podman-or-docker-engine-for-manual-installation]]
 [[podman-configuration]]
-== Schritt 4: Installieren Sie Podman oder Docker Engine
+== Schritt 4: Podman oder Docker Engine für die manuelle Installation vorbereiten
 
-Um den Konsolenagenten manuell zu installieren, bereiten Sie den Host vor, indem Sie Podman oder Docker Engine installieren.
-
-Abhängig von Ihrem Betriebssystem ist vor der Installation des Agenten entweder Podman oder Docker Engine erforderlich.
-
-* Podman wird für Red Hat Enterprise Linux 8 und 9 benötigt.
-+
-<<podman-versions,Sehen Sie sich die unterstützten Podman-Versionen an>> .
-
-* Für Ubuntu ist Docker Engine erforderlich.
-+
-<<podman-versions,Anzeigen der unterstützten Docker Engine-Versionen>> .
+Bei manuellen Installationen erfolgt die Installation und Konfiguration von Podman oder Docker Engine gemäß den Anweisungen im link:task-install-restricted-mode-manual.html#podman-configuration["Thema zur manuellen Installation"].
 
 
 
-.Schritte
-[role="tabbed-block"]
-====
-.Podman
---
-Befolgen Sie diese Schritte, um Podman zu installieren und zu konfigurieren:
-
-* Aktivieren und starten Sie den Dienst podman.socket
-* Installieren Sie Python3
-* Installieren Sie das podman-compose-Paket (variiert je nach Red Hat-Version)
-* Fügen Sie podman-compose zur Umgebungsvariablen PATH hinzu
-* Wenn Sie Red Hat Enterprise Linux verwenden, überprüfen Sie, ob Ihre Podman-Version Netavark Aardvark DNS anstelle von CNI verwendet
-
-
-
-NOTE: Passen Sie den Aardvark-DNS-Port (Standard: 53) nach der Installation des Agenten an, um DNS-Portkonflikte zu vermeiden.  Befolgen Sie die Anweisungen zum Konfigurieren des Ports.
-
-.Schritte
-. Entfernen Sie das Podman-Docker-Paket, falls es auf dem Host installiert ist.
-+
-[source, cli]
-----
-dnf remove podman-docker
-rm /var/run/docker.sock
-----
-. Installieren Sie Podman.
-+
-Sie können Podman aus den offiziellen Red Hat Enterprise Linux-Repositories beziehen.
-
-+
-.. Für Red Hat Enterprise Linux 9,6:
-+
-[source, cli]
-----
-sudo dnf install podman-5:<version>
-----
-+
-Dabei ist <Version> die unterstützte Version von Podman, die Sie installieren. <<podman-versions,Sehen Sie sich die unterstützten Podman-Versionen an>> .
-
-.. Für Red Hat Enterprise Linux 9.1 bis 9.4:
-+
-[source, cli]
-----
-sudo dnf install podman-4:<version>
-----
-+
-Dabei ist <Version> die unterstützte Version von Podman, die Sie installieren. <<podman-versions,Sehen Sie sich die unterstützten Podman-Versionen an>> .
-
-.. Für Red Hat Enterprise Linux 8:
-+
-[source, cli]
-----
-sudo dnf install podman-4:<version>
-----
-+
-Dabei ist <Version> die unterstützte Version von Podman, die Sie installieren. <<podman-versions,Sehen Sie sich die unterstützten Podman-Versionen an>> .
-
-
-
-. Aktivieren und starten Sie den Dienst podman.socket.
-+
-[source, cli]
-----
-sudo systemctl enable --now podman.socket
-----
-. Installieren Sie python3.
-+
-[source, cli]
-----
-sudo dnf install python3
-----
-. Installieren Sie das EPEL-Repository-Paket, falls es auf Ihrem System noch nicht verfügbar ist.
-+
-Dieser Schritt ist erforderlich, da podman-compose im Repository „Extra Packages for Enterprise Linux“ (EPEL) verfügbar ist.
-
-. Bei Verwendung von Red Hat Enterprise 9:
-+
-.. Installieren Sie das EPEL-Repository-Paket.
-
-
-+
-[source, cli]
-----
-sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
-----
-+
-.. Installieren Sie das Podman-Compose-Paket 1.5.0.
-+
-[source, cli]
-----
-sudo dnf install podman-compose-1.5.0
-----
-
-
-. Bei Verwendung von Red Hat Enterprise Linux 8:
-+
-.. Installieren Sie das EPEL-Repository-Paket.
-+
-[source, cli]
-----
-sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-----
-.. Installieren Sie das Podman-Compose-Paket 1.0.6.
-+
-[source, cli]
-----
-sudo dnf install podman-compose-1.0.6
-----
-+
-
-NOTE: Verwenden des `dnf install` Der Befehl erfüllt die Anforderung zum Hinzufügen von „podman-compose“ zur Umgebungsvariablen PATH.  Der Installationsbefehl fügt podman-compose zu /usr/bin hinzu, das bereits im `secure_path` Option auf dem Host.
-
-.. Wenn Sie Red Hat Enterprise Linux 8 verwenden, überprüfen Sie, ob Ihre Podman-Version NetAvark mit Aardvark DNS anstelle von CNI verwendet.
-+
-... Überprüfen Sie, ob Ihr Netzwerk-Backend auf CNI eingestellt ist, indem Sie den folgenden Befehl ausführen:
-+
-[source, cli]
-----
-podman info | grep networkBackend
-----
-... Wenn das Netzwerk-Backend auf `CNI` , müssen Sie es ändern in `netavark` .
-... Installieren `netavark` Und `aardvark-dns` mit dem folgenden Befehl:
-+
-[source, cli]
-----
-dnf install aardvark-dns netavark
-----
-... Öffnen Sie die `/etc/containers/containers.conf` Datei und ändern Sie die Option network_backend, um „netavark“ anstelle von „cni“ zu verwenden.
-+
-Wenn `/etc/containers/containers.conf` nicht vorhanden ist, nehmen Sie die Konfigurationsänderungen vor, um `/usr/share/containers/containers.conf` .
-
-... Starten Sie Podman neu.
-+
-[source, cli]
-----
-systemctl restart podman
-----
-... Bestätigen Sie mit dem folgenden Befehl, dass networkBackend jetzt in „netavark“ geändert wurde:
-+
-[source, cli]
-----
-podman info | grep networkBackend
-----
-
-
-
-
-. Wenn dieser Agent mit einem Cloud Volumes ONTAP System verknüpft wird, kann eine Erhöhung der dem Agenten zugeordneten Thread-Anzahl die Leistung verbessern. link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console["Informationen zur Erhöhung des Thread-Limits des Agentencontainers"^].
-
-
---
-.Docker-Engine
---
-Befolgen Sie die Dokumentation von Docker, um Docker Engine zu installieren.
-
-.Schritte
-. https://docs.docker.com/engine/install/["Installationsanweisungen von Docker anzeigen"^]
-+
-Befolgen Sie die Schritte, um eine unterstützte Docker Engine-Version zu installieren. Installieren Sie nicht die neueste Version, da diese von der Konsole nicht unterstützt wird.
-
-. Stellen Sie sicher, dass Docker aktiviert und ausgeführt wird.
-+
-[source, cli]
-----
-sudo systemctl enable docker && sudo systemctl start docker
-----
-
-
---
-====
-
-
+[[step-5-prepare-network-access-for-restricted-mode]]
 [[step-5-prepare-network-access]]
-== Schritt 5: Netzwerkzugriff vorbereiten
+== Schritt 5: Netzwerkzugriff für den eingeschränkten Modus vorbereiten
 
 Richten Sie den Netzwerkzugriff ein, damit der Konsolenagent Ressourcen in Ihrer öffentlichen Cloud verwalten kann.  Zusätzlich zum Vorhandensein eines virtuellen Netzwerks und Subnetzes für den Konsolenagenten müssen Sie sicherstellen, dass die folgenden Anforderungen erfüllt sind.
 
 Verbindungen zu Zielnetzwerken:: Stellen Sie sicher, dass der Konsolenagent über eine Netzwerkverbindung zu den Speicherorten verfügt.  Beispielsweise das VPC oder VNet, in dem Sie Cloud Volumes ONTAP bereitstellen möchten, oder das Rechenzentrum, in dem sich Ihre lokalen ONTAP Cluster befinden.
-Vorbereiten des Netzwerks für den Benutzerzugriff auf die NetApp Console:: Im eingeschränkten Modus greifen Benutzer über die Konsolen-Agent-VM auf die Konsole zu.  Der Konsolenagent kontaktiert einige Endpunkte, um Datenverwaltungsaufgaben abzuschließen.  Diese Endpunkte werden vom Computer eines Benutzers aus kontaktiert, wenn bestimmte Aktionen von der Konsole aus ausgeführt werden.
+Vorbereiten des Netzwerks für den Benutzerzugriff auf die NetApp Console:: Im eingeschränkten Modus greifen Benutzer über einen Browser, der mit der VM des Console Agent verbunden ist, auf die lokale Benutzeroberfläche der Console zu. Wenn Benutzer bestimmte Aktionen in der Console ausführen, muss ihr Browser die unten aufgeführten Endpunkte erreichen können.
 
 
 
@@ -372,22 +196,41 @@ NOTE: Konsolenagenten vor Version 4.0.0 unterstützen andere Endpunkte. Wenn Sie
 | Endpunkte | Zweck 
 
 
-| \https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com | Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen. 
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
 
 
-| \https://cdn.auth0.com \https://services.cloud.netapp.com | Ihr Webbrowser stellt über die NetApp Console eine Verbindung zu diesen Endpunkten her, um eine zentrale Benutzerauthentifizierung durchzuführen. 
+
+| \https://services.cloud.netapp.com  a| 
+* Ihr Webbrowser stellt über die NetApp Console eine Verbindung zu diesen Endpunkten her, um eine zentrale Benutzerauthentifizierung durchzuführen.
+
+
 |===
-Ausgehender Internetzugang für den täglichen Betrieb:: Der Netzwerkstandort des Konsolenagenten muss über ausgehenden Internetzugang verfügen.  Es muss in der Lage sein, die SaaS-Dienste der NetApp Console sowie Endpunkte innerhalb Ihrer jeweiligen öffentlichen Cloud-Umgebung zu erreichen.
-+
---
+
+
+[[outbound-internet-access-for-day-to-day-operations]]
+=== Ausgehender Internetzugang für den täglichen Betrieb
+
+Der Console Agent benötigt ausgehenden Internetzugriff, um Ressourcen in Ihrem Cloud-Anbieter zu managen und NetApp Console Services zu nutzen. Für Ihre Umgebung und die unten aufgeführten gemeinsam genutzten Console Services ist die Zulassung der Endpunkte erforderlich.
+
+
+
+[[restricted-mode-aws-endpoints]]
+==== AWS Umgebungen
+
+Diese AWS-Service-Endpunkte müssen AWS-Ressourcen, einschließlich FSx for ONTAP, managen können.
+
 [cols="2a,1a"]
 |===
 | Endpunkte | Zweck 
-
-
- a| 
-*AWS-Umgebungen*
-
 
 
  a| 
@@ -413,88 +256,51 @@ Amazon FSx for NetApp ONTAP:
  a| 
 Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und FSx for ONTAP-basierte Workloads zu verwalten und zu betreiben.
 
+|===
+
+
+[[restricted-mode-azure-endpoints]]
+==== Azure Umgebungen
+
+Für Ihre Azure-Region müssen die entsprechenden Endpunkte zulässig sein: public, Government oder China.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck 
 
 
  a| 
-*Azure-Umgebungen*
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
 
-
-
- a| 
-\https://management.azure.com \https://login.microsoftonline.com \https://blob.core.windows.net \https://core.windows.net
  a| 
 Zum Verwalten von Ressourcen in öffentlichen Azure-Regionen.
 
 
 
  a| 
-\https://management.usgovcloudapi.net \https://login.microsoftonline.us \https://blob.core.usgovcloudapi.net \https://core.usgovcloudapi.net
+* \https://management.usgovcloudapi.net
+* \https://login.microsoftonline.us
+* \https://*.blob.core.usgovcloudapi.net
+* \https://core.usgovcloudapi.net
+
  a| 
 Zum Verwalten von Ressourcen in Azure Government-Regionen.
 
 
 
  a| 
-\https://management.chinacloudapi.cn \https://login.chinacloudapi.cn \https://blob.core.chinacloudapi.cn \https://core.chinacloudapi.cn
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
  a| 
 Zum Verwalten von Ressourcen in Azure China-Regionen.
 
-
-
- a| 
-*Google Cloud-Umgebungen*
-
-
-
- a| 
-\https://www.googleapis.com/compute/v1/ \https://compute.googleapis.com/compute/v1 \https://cloudresourcemanager.googleapis.com/v1/projects \https://www.googleapis.com/compute/beta \https://storage.googleapis.com/storage/v1 \https://www.googleapis.com/storage/v1 \https://iam.googleapis.com/v1 \https://cloudkms.googleapis.com/v1 \https://config.googleapis.com/v1/projects
- a| 
-Zum Verwalten von Ressourcen in Google Cloud.
-
-
-
- a| 
-* NetApp Console -Endpunkte*
-
-
-
- a| 
-\https://mysupport.netapp.com
- a| 
-Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden.
-
-
-
- a| 
-\https://signin.b2c.netapp.com
- a| 
-So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
-
-
-
- a| 
-\https://support.netapp.com
- a| 
-Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden sowie Software-Updates für Cloud Volumes ONTAP zu erhalten.
-
-
-
- a| 
-\https://api.bluexp.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com \https://console.netapp.com \https://components.console.bluexp.netapp.com \https://cdn.auth0.com
- a| 
-Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
-
-
-
- a| 
-\https://occmclientinfragov.azurecr.us
- a| 
-Um Bilder für Upgrades des Konsolenagenten zu erhalten.
-
 |===
---
-
-
 Öffentliche IP-Adresse in Azure:: Wenn Sie eine öffentliche IP-Adresse mit der Konsolen-Agent-VM in Azure verwenden möchten, muss die IP-Adresse eine Basic-SKU verwenden, um sicherzustellen, dass die Konsole diese öffentliche IP-Adresse verwendet.
 +
 --
@@ -507,6 +313,97 @@ https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-ad
 --
 
 
+
+
+[[restricted-mode-google-cloud-endpoints]]
+==== Google Cloud Umgebungen
+
+Diese Google Cloud API-Endpunkte benötigen die Berechtigung, Ressourcen in Ihrem Projekt zu managen.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+* \https://www.googleapis.com/compute/v1/
+* \https://compute.googleapis.com/compute/v1
+* \https://cloudresourcemanager.googleapis.com/v1/projects
+* \https://www.googleapis.com/compute/beta
+* \https://storage.googleapis.com/storage/v1
+* \https://www.googleapis.com/storage/v1
+* \https://iam.googleapis.com/v1
+* \https://cloudkms.googleapis.com/v1
+* \https://config.googleapis.com/v1/projects
+
+ a| 
+Zum Verwalten von Ressourcen in Google Cloud.
+
+|===
+
+
+[[restricted-mode-console-endpoints]]
+==== NetApp Console Endpunkte
+
+Es ist erforderlich, die gemeinsamen Endpunkte für NetApp Support, Console Funktionen sowie das Deployment und die Upgrades des Console Agent zuzulassen.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+* \https://mysupport.netapp.com
+
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden.
+
+
+
+ a| 
+* \https://signin.b2c.netapp.com
+
+ a| 
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
+
+
+
+ a| 
+* \https://support.netapp.com
+
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden sowie Software-Updates für Cloud Volumes ONTAP zu erhalten.
+
+
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
+
+
+
+ a| 
+Für Nicht-Government-Regionen gelten die folgenden Endpunkte:
+
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+
+Für Regierungsregionen gilt stattdessen der folgende Endpunkt:
+
+* \https://occmclientinfragov.azurecr.us
+
+ a| 
+Zum Abrufen von Images für Console Agent Deployment und Upgrades.
+
+|===
 Proxyserver:: NetApp unterstützt sowohl explizite als auch transparente Proxy-Konfigurationen.  Wenn Sie einen transparenten Proxy verwenden, müssen Sie nur das Zertifikat für den Proxyserver angeben.  Wenn Sie einen expliziten Proxy verwenden, benötigen Sie auch die IP-Adresse und die Anmeldeinformationen.
 +
 --
@@ -533,17 +430,13 @@ Wenn Cloud Volumes ONTAP -Systeme keine ausgehende Internetverbindung zum Senden
 
 
 Aktivieren von NTP:: Wenn Sie planen, NetApp Data Classification zum Scannen Ihrer Unternehmensdatenquellen zu verwenden, sollten Sie einen Network Time Protocol (NTP)-Dienst sowohl auf dem Console-Agenten als auch auf dem NetApp Data Classification-System aktivieren, damit die Zeit zwischen den Systemen synchronisiert wird. https://docs.netapp.com/us-en/data-services-data-classification/concept-cloud-compliance.html["Erfahren Sie mehr über NetApp Data Classification"^].
-+
---
-Wenn Sie vorhaben, einen Konsolen-Agenten aus dem Marktplatz Ihres Cloud-Anbieters zu erstellen, implementieren Sie diese Netzwerkanforderung, nachdem Sie den Konsolen-Agenten erstellt haben.
-
---
 
 
 
 
+[[step-6-prepare-cloud-provider-permissions]]
 [[step-6-prepare-cloud-permissions]]
-== Schritt 6: Cloud-Berechtigungen vorbereiten
+== Schritt 6: Berechtigungen des Cloud-Anbieters vorbereiten
 
 Der Konsolenagent benötigt Berechtigungen von Ihrem Cloud-Anbieter, um Cloud Volumes ONTAP in einem virtuellen Netzwerk bereitzustellen und NetApp -Datendienste zu verwenden.  Sie müssen Berechtigungen bei Ihrem Cloud-Anbieter einrichten und diese Berechtigungen dann dem Konsolenagenten zuordnen.
 
@@ -848,25 +741,3 @@ https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_
 
 --
 ====
-
-
-[[step-7-enable-google-cloud-apis]]
-== Schritt 7: Google Cloud APIs aktivieren
-
-Für die Bereitstellung von Cloud Volumes ONTAP in Google Cloud sind mehrere APIs erforderlich.
-
-.Schritt
-. https://cloud.google.com/apis/docs/getting-started#enabling_apis["Aktivieren Sie die folgenden Google Cloud APIs in Ihrem Projekt"^]
-+
-** Cloud Build API (erforderlich für Cloud Volumes ONTAP-Bereitstellungen im privaten Modus mit Infrastructure Manager)
-** Cloud Deployment Manager V2 API
-** Cloud Infrastructure Manager API
-** Cloud Logging API
-** Cloud Resource Manager-API
-** Compute Engine-API
-** API für Identitäts- und Zugriffsverwaltung (IAM)
-** Cloud Key Management Service (KMS) API (nur erforderlich, wenn Sie NetApp Backup and Recovery mit kundenseitig verwalteten Verschlüsselungsschlüsseln (CMEK) verwenden möchten)
-** Cloud Quotas API (erforderlich für Cloud Volumes ONTAP Deployments mit Infrastructure Manager)
-
-
-

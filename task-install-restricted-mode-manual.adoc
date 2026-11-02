@@ -1,0 +1,721 @@
+---
+sidebar: sidebar 
+permalink: task-install-restricted-mode-manual.html 
+keywords: restricted mode, manual install, AWS, Azure, Google Cloud, Linux host, Console agent 
+summary: Für den Betrieb im eingeschränkten Modus ist auf einem dedizierten Linux-Host in AWS, Azure oder Google Cloud eine manuelle Installation des Console agent erforderlich; anschließend sind die Console zu konfigurieren und Cloud-Berechtigungen zuzuweisen. 
+---
+= Manuelles Einsetzen des NetApp Console Agenten im eingeschränkten Modus
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Wenn Sie die NetApp Console mit eingeschränkter ausgehender Konnektivität verwenden möchten, müssen Sie den Console Agent im eingeschränkten Modus manuell einsetzen.
+
+Wenn Sie kein Marketplace-Abonnement nutzen möchten oder Google Cloud einsetzen, müssen Sie den Console Agent manuell installieren.
+
+
+
+[[step-1-prepare-cloud-permissions]]
+== Schritt 1: Cloud-Berechtigungen vorbereiten
+
+Bevor Sie den Console Agenten installieren, bereiten Sie die Berechtigungen des Cloud-Anbieters vor, die zum Managen von Ressourcen erforderlich sind.
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Erfahren Sie, wie Sie Cloud-Berechtigungen vorbereiten"] .
+
+
+
+[[step-2-enable-google-cloud-apis-google-cloud-only]]
+[[restricted-mode-google-cloud-apis]]
+== Schritt 2: Google Cloud APIs aktivieren (nur Google Cloud)
+
+Wenn der Console Agent in Google Cloud installiert wird, müssen vor der Installation die erforderlichen APIs in Ihrem Projekt aktiviert sein. Diese APIs werden für bestimmte Cloud Volumes ONTAP Funktionen benötigt.
+
+.Schritte
+. https://cloud.google.com/apis/docs/getting-started#enabling_apis["Aktivierung der APIs in Ihrem Google Cloud-Projekt"^]
++
+** Cloud Build API (erforderlich für Cloud Volumes ONTAP-Bereitstellungen im privaten Modus mit Infrastructure Manager)
+** Cloud Deployment Manager V2 API
+** Cloud Infrastructure Manager API
+** Cloud Logging API
+** Cloud Resource Manager-API
+** Compute Engine-API
+** API für Identitäts- und Zugriffsverwaltung (IAM)
+** Cloud Key Management Service (KMS) API (nur erforderlich, wenn Sie NetApp Backup and Recovery mit kundenseitig verwalteten Verschlüsselungsschlüsseln (CMEK) verwenden möchten)
+** Cloud Quotas API (erforderlich für Cloud Volumes ONTAP Deployments mit Infrastructure Manager)
+
+
+
+
+
+
+[[step-3-prepare-network-access]]
+== Schritt 3: Netzwerkzugriff vorbereiten
+
+Für den Cloud-Anbieter, bei dem Sie den Console Agent installieren, müssen die erforderlichen ausgehenden Endpunkte zugelassen sein.
+
+
+
+[[cloud-provider-endpoints]]
+=== Endpunkte von Cloud-Anbietern
+
+
+
+==== AWS Umgebungen
+
+Diese AWS-Service-Endpunkte müssen AWS-Ressourcen, einschließlich FSx for ONTAP, managen können.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+AWS-Dienste (amazonaws.com):
+
+* CloudFormation
+* Elastische Compute Cloud (EC2)
+* Identitäts- und Zugriffsverwaltung (IAM)
+* Schlüsselverwaltungsdienst (KMS)
+* Sicherheitstokendienst (STS)
+* Einfacher Speicherdienst (S3)
+
+ a| 
+Zur Verwaltung von AWS-Ressourcen.  Der Endpunkt hängt von Ihrer AWS-Region ab. https://docs.aws.amazon.com/general/latest/gr/rande.html["Weitere Einzelheiten finden Sie in der AWS-Dokumentation."^]
+
+
+
+ a| 
+Amazon FSx for NetApp ONTAP:
+
+* api.workloads.netapp.com
+
+ a| 
+Die webbasierte Konsole kontaktiert diesen Endpunkt, um mit den Workload Factory APIs zu interagieren und FSx for ONTAP-basierte Workloads zu verwalten und zu betreiben.
+
+|===
+
+
+==== Azure Umgebungen
+
+Für Ihre Azure-Region müssen die entsprechenden Endpunkte zulässig sein: public, Government oder China.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+* \https://management.azure.com
+* \https://login.microsoftonline.com
+* \https://blob.core.windows.net
+* \https://core.windows.net
+
+ a| 
+Zum Verwalten von Ressourcen in öffentlichen Azure-Regionen.
+
+
+
+ a| 
+* \https://management.usgovcloudapi.net
+* \https://login.microsoftonline.us
+* \https://*.blob.core.usgovcloudapi.net
+* \https://core.usgovcloudapi.net
+
+ a| 
+Zum Verwalten von Ressourcen in Azure Government-Regionen.
+
+
+
+ a| 
+* \https://management.chinacloudapi.cn
+* \https://login.chinacloudapi.cn
+* \https://blob.core.chinacloudapi.cn
+* \https://core.chinacloudapi.cn
+
+ a| 
+Zum Verwalten von Ressourcen in Azure China-Regionen.
+
+|===
+
+
+==== Google Cloud Umgebungen
+
+Diese Google Cloud API-Endpunkte benötigen die Berechtigung, Ressourcen in Ihrem Projekt zu managen.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+* \https://www.googleapis.com/compute/v1/
+* \https://compute.googleapis.com/compute/v1
+* \https://cloudresourcemanager.googleapis.com/v1/projects
+* \https://www.googleapis.com/compute/beta
+* \https://storage.googleapis.com/storage/v1
+* \https://www.googleapis.com/storage/v1
+* \https://iam.googleapis.com/v1
+* \https://cloudkms.googleapis.com/v1
+* \https://config.googleapis.com/v1/projects
+
+ a| 
+Zum Verwalten von Ressourcen in Google Cloud.
+
+|===
+
+
+[[netapp-console-endpoints]]
+=== NetApp Console Endpunkte
+
+Es ist erforderlich, die gemeinsamen Endpunkte für NetApp Support, Console Funktionen sowie das Deployment und die Upgrades des Console Agent zuzulassen.
+
+[cols="2a,1a"]
+|===
+| Endpunkte | Zweck 
+
+
+ a| 
+* \https://mysupport.netapp.com
+
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden.
+
+
+
+ a| 
+* \https://signin.b2c.netapp.com
+
+ a| 
+So aktualisieren Sie die Anmeldeinformationen der NetApp Support Site (NSS) oder fügen der NetApp Console neue NSS-Anmeldeinformationen hinzu.
+
+
+
+ a| 
+* \https://support.netapp.com
+
+ a| 
+Um Lizenzinformationen zu erhalten und AutoSupport-Nachrichten an NetApp Support zu senden sowie Software-Updates für Cloud Volumes ONTAP zu erhalten.
+
+
+
+ a| 
+* \https://api.bluexp.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+* \https://console.netapp.com
+* \https://components.console.bluexp.netapp.com
+* \https://cdn.auth0.com
+
+ a| 
+Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen.
+
+
+
+ a| 
+Für Nicht-Government-Regionen gelten die folgenden Endpunkte:
+
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
+
+
+Für Regierungsregionen gilt stattdessen der folgende Endpunkt:
+
+* \https://occmclientinfragov.azurecr.us
+
+ a| 
+Zum Abrufen von Images für Console Agent Deployment und Upgrades.
+
+|===
+Informationen zum Browserzugriff und zu weiteren Netzwerkanforderungen sind unter link:task-prepare-restricted-mode.html#step-5-prepare-network-access["Netzwerkzugriff für den eingeschränkten Modus vorbereiten"] beschrieben.
+
+
+
+[[step-4-install-podman-or-docker-engine]]
+[[podman-configuration]]
+== Schritt 4: Installieren Sie Podman oder Docker Engine
+
+Abhängig von Ihrem Betriebssystem ist vor der Installation des Agenten entweder Podman oder Docker Engine erforderlich.
+
+* Podman wird für Red Hat Enterprise Linux 8 und 9 benötigt.
++
+<<podman-versions,Sehen Sie sich die unterstützten Podman-Versionen an>> .
+
+* Für Ubuntu ist Docker Engine erforderlich.
++
+<<podman-versions,Anzeigen der unterstützten Docker Engine-Versionen>> .
+
+
+
+.Schritte
+[role="tabbed-block"]
+====
+.Podman
+--
+Befolgen Sie diese Schritte, um Podman zu installieren und zu konfigurieren:
+
+* Aktivieren und starten Sie den Dienst podman.socket
+* Installieren Sie Python3
+* Installieren Sie das podman-compose-Paket (variiert je nach Red Hat-Version)
+* Fügen Sie podman-compose zur Umgebungsvariablen PATH hinzu
+* Wenn Sie Red Hat Enterprise Linux verwenden, überprüfen Sie, ob Ihre Podman-Version Netavark Aardvark DNS anstelle von CNI verwendet
+
+
+
+NOTE: Passen Sie den Aardvark-DNS-Port (Standard: 53) nach der Installation des Agenten an, um DNS-Portkonflikte zu vermeiden.  Befolgen Sie die Anweisungen zum Konfigurieren des Ports.
+
+.Schritte
+. Entfernen Sie das Podman-Docker-Paket, falls es auf dem Host installiert ist.
++
+[source, cli]
+----
+dnf remove podman-docker
+rm /var/run/docker.sock
+----
+. Installieren Sie Podman.
++
+Sie können Podman aus den offiziellen Red Hat Enterprise Linux-Repositories beziehen.
+
++
+.. Für Red Hat Enterprise Linux 9,6:
++
+[source, cli]
+----
+sudo dnf install podman-5:<version>
+----
++
+Dabei ist <Version> die unterstützte Version von Podman, die Sie installieren. <<podman-versions,Sehen Sie sich die unterstützten Podman-Versionen an>> .
+
+.. Für Red Hat Enterprise Linux 9.1 bis 9.4:
++
+[source, cli]
+----
+sudo dnf install podman-4:<version>
+----
++
+Dabei ist <Version> die unterstützte Version von Podman, die Sie installieren. <<podman-versions,Sehen Sie sich die unterstützten Podman-Versionen an>> .
+
+.. Für Red Hat Enterprise Linux 8:
++
+[source, cli]
+----
+sudo dnf install podman-4:<version>
+----
++
+Dabei ist <Version> die unterstützte Version von Podman, die Sie installieren. <<podman-versions,Sehen Sie sich die unterstützten Podman-Versionen an>> .
+
+
+
+. Aktivieren und starten Sie den Dienst podman.socket.
++
+[source, cli]
+----
+sudo systemctl enable --now podman.socket
+----
+. Installieren Sie python3.
++
+[source, cli]
+----
+sudo dnf install python3
+----
+. Installieren Sie das EPEL-Repository-Paket, falls es auf Ihrem System noch nicht verfügbar ist.
++
+Dieser Schritt ist erforderlich, da podman-compose im Repository „Extra Packages for Enterprise Linux“ (EPEL) verfügbar ist.
+
+. Bei Verwendung von Red Hat Enterprise 9:
++
+.. Installieren Sie das EPEL-Repository-Paket.
+
+
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+----
++
+.. Installieren Sie das Podman-Compose-Paket 1.5.0.
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.5.0
+----
+
+
+. Bei Verwendung von Red Hat Enterprise Linux 8:
++
+.. Installieren Sie das EPEL-Repository-Paket.
++
+[source, cli]
+----
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+----
+.. Installieren Sie das Podman-Compose-Paket 1.0.6.
++
+[source, cli]
+----
+sudo dnf install podman-compose-1.0.6
+----
++
+
+NOTE: Verwenden des `dnf install` Der Befehl erfüllt die Anforderung zum Hinzufügen von „podman-compose“ zur Umgebungsvariablen PATH.  Der Installationsbefehl fügt podman-compose zu /usr/bin hinzu, das bereits im `secure_path` Option auf dem Host.
+
+.. Wenn Sie Red Hat Enterprise Linux 8 verwenden, überprüfen Sie, ob Ihre Podman-Version NetAvark mit Aardvark DNS anstelle von CNI verwendet.
++
+... Überprüfen Sie, ob Ihr Netzwerk-Backend auf CNI eingestellt ist, indem Sie den folgenden Befehl ausführen:
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+... Wenn das Netzwerk-Backend auf `CNI` , müssen Sie es ändern in `netavark` .
+... Installieren `netavark` Und `aardvark-dns` mit dem folgenden Befehl:
++
+[source, cli]
+----
+dnf install aardvark-dns netavark
+----
+... Öffnen Sie die `/etc/containers/containers.conf` Datei und ändern Sie die Option network_backend, um „netavark“ anstelle von „cni“ zu verwenden.
++
+Wenn `/etc/containers/containers.conf` nicht vorhanden ist, nehmen Sie die Konfigurationsänderungen vor, um `/usr/share/containers/containers.conf` .
+
+... Starten Sie Podman neu.
++
+[source, cli]
+----
+systemctl restart podman
+----
+... Bestätigen Sie mit dem folgenden Befehl, dass networkBackend jetzt in „netavark“ geändert wurde:
++
+[source, cli]
+----
+podman info | grep networkBackend
+----
+
+
+
+
+. Wenn dieser Agent mit einem Cloud Volumes ONTAP System verknüpft wird, kann eine Erhöhung der dem Agenten zugeordneten Thread-Anzahl die Leistung verbessern. link:https://kb.netapp.com/Cloud/ncds/nds/cvods/cvods_kbs/CVO_going_to_failed_state_frequently_in_NetApp_Console["Informationen zur Erhöhung des Thread-Limits des Agentencontainers"^].
+
+
+--
+.Docker-Engine
+--
+Befolgen Sie die Dokumentation von Docker, um Docker Engine zu installieren.
+
+.Schritte
+. https://docs.docker.com/engine/install/["Installationsanweisungen von Docker anzeigen"^]
++
+Befolgen Sie die Schritte, um eine unterstützte Docker Engine-Version zu installieren. Installieren Sie nicht die neueste Version, da diese von der Konsole nicht unterstützt wird.
+
+. Stellen Sie sicher, dass Docker aktiviert und ausgeführt wird.
++
+[source, cli]
+----
+sudo systemctl enable docker && sudo systemctl start docker
+----
+
+
+--
+====
+
+
+[[step-5-manually-install-the-netapp-console-restricted-mode-in-your-cloud-environment-must-use-for-google-cloud]]
+== Schritt 5: Manuelle Installation des eingeschränkten Modus von NetApp Console in Ihrer Cloud-Umgebung (für Google Cloud erforderlich)
+
+Sie können den Console-Agenten manuell auf Ihrem eigenen Linux-Host installieren, der in AWS, Azure oder Google Cloud ausgeführt wird.
+
+.Bevor Sie beginnen
+Folgendes sollten Sie haben:
+
+* Root-Berechtigungen zum Installieren des Konsolenagenten.
+* Details zu einem Proxyserver, falls für den Internetzugriff vom Konsolenagenten ein Proxy erforderlich ist.
++
+Sie haben die Möglichkeit, nach der Installation einen Proxyserver zu konfigurieren. Dazu muss jedoch der Console-Agent neu gestartet werden.
+
+* Ein von einer Zertifizierungsstelle signiertes Zertifikat, wenn der Proxyserver HTTPS verwendet oder wenn es sich bei dem Proxy um einen abfangenden Proxy handelt.
+
+
+
+NOTE: Sie können bei der manuellen Installation des Konsolenagenten kein Zertifikat für einen transparenten Proxyserver festlegen. Wenn Sie ein Zertifikat für einen transparenten Proxyserver festlegen müssen, müssen Sie nach der Installation die Wartungskonsole verwenden. Erfahren Sie mehr über die link:reference-agent-maint-console-proxy.html["Agenten-Wartungskonsole"]Die
+
+* Sie müssen die Konfigurationsprüfung deaktivieren, die während der Installation die ausgehende Konnektivität überprüft.  Die manuelle Installation schlägt fehl, wenn diese Prüfung nicht deaktiviert ist.link:task-troubleshoot-agent.html["Erfahren Sie, wie Sie Konfigurationsprüfungen für manuelle Installationen deaktivieren."]
+
+
+.Informationen zu diesem Vorgang
+Nach der Installation aktualisiert sich der Konsolenagent automatisch, wenn eine neue Version verfügbar ist.
+
+.Schritte
+. Wenn die Systemvariablen _http_proxy_ oder _https_proxy_ auf dem Host festgelegt sind, entfernen Sie sie:
++
+[source, cli]
+----
+unset http_proxy
+unset https_proxy
+----
++
+Wenn Sie diese Systemvariablen nicht entfernen, schlägt die Installation fehl.
+
+. Laden Sie die Console-Agent-Software herunter und kopieren Sie sie anschließend auf den Linux-Host.  Sie können es entweder von der NetApp Console oder von der NetApp -Support-Website herunterladen.
++
+** NetApp Console: Gehen Sie zu *Agents > Verwaltung > Agent bereitstellen > Lokal > Manuelle Installation*.
++
+Wählen Sie das Herunterladen der Agenteninstallationsdateien oder eine URL zu den Dateien.
+
+** https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^] (Erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben).
++
+
+NOTE: Laden Sie den "online"-Agenten-Installer herunter, der für die Verwendung in Ihrem Netzwerk oder in der Cloud vorgesehen ist. Ein separater "offline"-Installer ist für den Console-Agenten verfügbar, aber er wird nur bei Bereitstellungen im privaten Modus unterstützt.
+
+** NetApp Support-Website (erforderlich, falls Sie noch keinen Zugriff auf die Konsole haben) https://mysupport.netapp.com/site/products/all/details/netapp-console/downloads-tab["NetApp Support Site"^].
+
+
+. Weisen Sie Berechtigungen zum Ausführen des Skripts zu.
++
+[source, cli]
+----
+chmod +x NetApp_Console_Agent_Cloud_<version>
+----
++
+Dabei ist <Version> die Version des Konsolenagenten, die Sie heruntergeladen haben.
+
+. Deaktivieren Sie bei der Installation in einer Government Cloud-Umgebung die Konfigurationsprüfungen.link:task-troubleshoot-agent.html#disable-config-check["Erfahren Sie, wie Sie Konfigurationsprüfungen für manuelle Installationen deaktivieren."]
+. Führen Sie das Installationsskript aus.
++
+[source, cli]
+----
+./NetApp_Console_Agent_Cloud_<version> --proxy <HTTP or HTTPS proxy server> --cacert <path and file name of a CA-signed certificate>
+----
++
+Sie müssen Proxy-Informationen hinzufügen, falls Ihr Netzwerk einen Proxy für den Internetzugang benötigt. Sie können während der Installation einen expliziten Proxy hinzufügen. Die `--proxy` und `--cacert` Parameter sind optional und Sie werden nicht dazu aufgefordert, sie hinzuzufügen. Wenn Sie einen expliziten Proxyserver haben, müssen Sie die Parameter wie gezeigt eingeben.
+
++
+
+NOTE: Wenn Sie einen transparenten Proxy konfigurieren möchten, können Sie dies nach der Installation tun link:reference-agent-maint-console-proxy.html["Erfahren Sie mehr über die Agentenwartungskonsole."].
+
++
+Hier ist ein Beispiel für die Konfiguration eines expliziten Proxyservers mit einem CA-signierten Zertifikat:
+
++
+[source, cli]
+----
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+./NetApp_Console_Agent_Cloud_v4.0.0 --proxy https://user:password@10.0.0.30:8080/ --cacert /tmp/cacert/certificate.cer
+----
++
+`--proxy`Konfiguriert den Konsolenagenten zur Verwendung eines HTTP- oder HTTPS-Proxyserver mithilfe eines der folgenden Formate:
+
++
+** \http://Adresse:Port
+** \http://Benutzername:Passwort@Adresse:Port
+** \http://Domänenname%92Benutzername:Passwort@Adresse:Port
+** \https://Adresse:Port
+** \https://Benutzername:Passwort@Adresse:Port
+** \https://Domänenname%92Benutzername:Passwort@Adresse:Port
++
+Beachten Sie Folgendes:
+
++
+*** Der Benutzer kann ein lokaler Benutzer oder ein Domänenbenutzer sein.
+*** Für einen Domänenbenutzer müssen Sie den ASCII-Code für ein \ verwenden, wie oben gezeigt.
+*** Der Console-Agent unterstützt keine Benutzernamen oder Passwörter, die das @-Zeichen enthalten.
+*** Wenn das Kennwort eines der folgenden Sonderzeichen enthält, müssen Sie dieses Sonderzeichen durch Voranstellen eines Backslashs maskieren: & oder !
++
+Beispiel:
+
++
+\http://bxpproxyuser:netapp1\!@Adresse:3128
+
+
+
+
+
+. Wenn Sie Podman verwendet haben, müssen Sie den Aardvark-DNS-Port anpassen.
++
+.. Stellen Sie eine SSH-Verbindung zur virtuellen Maschine des Konsolenagenten her.
+.. Öffnen Sie die Datei podman_/usr/share/containers/containers.conf_ und ändern Sie den gewählten Port für den Aardvark-DNS-Dienst.  Ändern Sie ihn beispielsweise in 54.
++
+[source, cli]
+----
+vi /usr/share/containers/containers.conf
+----
++
+Beispiel:
+
++
+[source, text]
+----
+# Port to use for dns forwarding daemon with netavark in rootful bridge
+# mode and dns enabled.
+# Using an alternate port might be useful if other DNS services should
+# run on the machine.
+#
+dns_bind_port = 54
+----
+.. Starten Sie die virtuelle Maschine des Konsolenagenten neu.
+
+
+
+
+.Ergebnis
+Der Konsolenagent ist jetzt installiert.  Am Ende der Installation wird der Konsolenagentdienst (occm) zweimal neu gestartet, wenn Sie einen Proxyserver angegeben haben.
+
+.Wie geht es weiter?
+Richten Sie die NetApp Console ein.
+
+
+
+[[step-6-set-up-netapp-console]]
+== Schritt 6: Einrichten der NetApp Console
+
+Wenn Sie zum ersten Mal auf die Konsole zugreifen, werden Sie aufgefordert, eine Organisation für den Konsolenagenten auszuwählen und den eingeschränkten Modus zu aktivieren.
+
+.Bevor Sie beginnen
+Die Person, die den Konsolenagenten einrichtet, muss sich mit einem Login bei der Konsole anmelden, der noch nicht zu einer Konsolenorganisation gehört.
+
+Falls Ihr Login mit einer anderen Organisation verknüpft ist, müssen Sie sich mit einem neuen Login registrieren.  Andernfalls wird Ihnen die Option zum Aktivieren des eingeschränkten Modus auf dem Einstellungsbildschirm nicht angezeigt.
+
+.Schritte
+. Öffnen Sie einen Webbrowser auf einem Host, der über eine Verbindung zur Konsolen-Agenteninstanz verfügt, und geben Sie die folgende URL des von Ihnen installierten Konsolen-Agenten ein.
+. Registrieren Sie sich oder melden Sie sich bei der NetApp Console an.
+. Nachdem Sie sich angemeldet haben, richten Sie die Konsole ein:
++
+.. Geben Sie einen Namen für den Konsolenagenten ein.
+.. Geben Sie einen Namen für eine neue Konsolenorganisation ein.
+.. Wählen Sie *Arbeiten Sie in einer sicheren Umgebung?*
+.. Wählen Sie *Eingeschränkten Modus für dieses Konto aktivieren*.
++
+Beachten Sie, dass Sie diese Einstellung nach der Kontoerstellung nicht mehr ändern können.  Sie können den eingeschränkten Modus später weder aktivieren noch deaktivieren.
+
++
+Wenn Sie den Konsolenagenten in einer Regierungsregion bereitgestellt haben, ist das Kontrollkästchen bereits aktiviert und kann nicht geändert werden.  Dies liegt daran, dass der eingeschränkte Modus der einzige Modus ist, der in Regierungsregionen unterstützt wird.
+
+.. Wählen Sie *Los geht's*.
+
+
+
+
+.Ergebnis
+Der Konsolenagent ist jetzt installiert und mit Ihrer Konsolenorganisation eingerichtet.  Alle Benutzer müssen über die IP-Adresse der Konsolen-Agentinstanz auf die Konsole zugreifen.
+
+.Wie geht es weiter?
+Geben Sie der Konsole die Berechtigungen, die Sie zuvor eingerichtet haben.
+
+
+
+[[step-7-provide-permissions-to-the-console-agent]]
+== Schritt 7: Berechtigungen für den Console Agenten erteilen
+
+Wenn Sie den Console Agent manuell installiert haben, müssen Sie die zuvor eingerichteten Berechtigungen zuweisen.
+
+link:task-prepare-restricted-mode.html#step-6-prepare-cloud-permissions["Erfahren Sie, wie Sie Cloud-Berechtigungen vorbereiten"] .
+
+[role="tabbed-block"]
+====
+.AWS IAM-Rolle
+--
+Fügen Sie die zuvor erstellte IAM-Rolle der EC2-Instance hinzu, auf der Sie den Konsolenagenten installiert haben.
+
+Diese Schritte gelten nur, wenn Sie den Konsolenagenten manuell in AWS installiert haben.  Für AWS Marketplace-Bereitstellungen haben Sie die Konsolen-Agent-Instanz bereits mit einer IAM-Rolle verknüpft, die die erforderlichen Berechtigungen enthält.
+
+.Schritte
+. Gehen Sie zur Amazon EC2-Konsole.
+. Wählen Sie *Instanzen* aus.
+. Wählen Sie die Konsolen-Agentinstanz aus.
+. Wählen Sie *Aktionen > Sicherheit > IAM-Rolle ändern*.
+. Wählen Sie die IAM-Rolle und dann *IAM-Rolle aktualisieren* aus.
+
+
+--
+.AWS-Zugriffsschlüssel
+--
+Stellen Sie der NetApp Console den AWS-Zugriffsschlüssel für einen IAM-Benutzer bereit, der über die erforderlichen Berechtigungen verfügt.
+
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen der Organisation* aus.
+. Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
++
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Amazon Web Services > Agent*.
+.. *Anmeldeinformationen definieren*: Geben Sie einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel ein.
+.. *Marketplace-Abonnement*: Verknüpfen Sie ein Marketplace-Abonnement mit diesen Anmeldeinformationen, indem Sie sich jetzt anmelden oder ein vorhandenes Abonnement auswählen.
+.. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
+
+
+
+
+--
+.Azure-Rolle
+--
+Gehen Sie zum Azure-Portal und weisen Sie der virtuellen Maschine des Konsolen-Agents für ein oder mehrere Abonnements die benutzerdefinierte Azure-Rolle zu.
+
+.Schritte
+. Öffnen Sie im Azure-Portal den Dienst *Abonnements* und wählen Sie Ihr Abonnement aus.
++
+Es ist wichtig, die Rolle vom Dienst *Abonnements* zuzuweisen, da dies den Umfang der Rollenzuweisung auf Abonnementebene angibt.  Der _Bereich_ definiert die Menge der Ressourcen, auf die der Zugriff angewendet wird.  Wenn Sie einen Bereich auf einer anderen Ebene angeben (z. B. auf der Ebene der virtuellen Maschine), wird Ihre Fähigkeit, Aktionen innerhalb der NetApp Console auszuführen, beeinträchtigt.
+
++
+https://learn.microsoft.com/en-us/azure/role-based-access-control/scope-overview["Microsoft Azure-Dokumentation: Umfang von Azure RBAC verstehen"^]
+
+. Wählen Sie *Zugriffskontrolle (IAM)* > *Hinzufügen* > *Rollenzuweisung hinzufügen*.
+. Wählen Sie auf der Registerkarte *Rolle* die Rolle *Konsolenbediener* aus und klicken Sie auf *Weiter*.
++
+
+NOTE: „Konsolenoperator“ ist der in der Richtlinie angegebene Standardname.  Wenn Sie einen anderen Namen für die Rolle gewählt haben, wählen Sie stattdessen diesen Namen aus.
+
+. Führen Sie auf der Registerkarte *Mitglieder* die folgenden Schritte aus:
++
+.. Weisen Sie einer *verwalteten Identität* Zugriff zu.
+.. Wählen Sie *Mitglieder auswählen*, wählen Sie das Abonnement aus, in dem die virtuelle Maschine des Konsolen-Agents erstellt wurde, wählen Sie unter *Verwaltete Identität* *Virtuelle Maschine* und wählen Sie dann die virtuelle Maschine des Konsolen-Agents aus.
+.. Wählen Sie *Auswählen*.
+.. Wählen Sie *Weiter*.
+.. Wählen Sie *Überprüfen + zuweisen*.
+.. Wenn Sie Ressourcen in zusätzlichen Azure-Abonnements verwalten möchten, wechseln Sie zu diesem Abonnement und wiederholen Sie diese Schritte.
+
+
+
+
+--
+.Azure-Dienstprinzipal
+--
+Geben Sie der NetApp Console die Anmeldeinformationen für den Azure-Dienstprinzipal an, den Sie zuvor eingerichtet haben.
+
+.Schritte
+. Wählen Sie *Administration > Anmeldeinformationen*.
+. Wählen Sie *Anmeldeinformationen hinzufügen* und folgen Sie den Schritten des Assistenten.
++
+.. *Speicherort der Anmeldeinformationen*: Wählen Sie *Microsoft Azure > Agent*.
+.. *Anmeldeinformationen definieren*: Geben Sie Informationen zum Microsoft Entra-Dienstprinzipal ein, der die erforderlichen Berechtigungen erteilt:
++
+*** Anwendungs-ID (Client-ID)
+*** Verzeichnis-ID (Mandant)
+*** Client-Geheimnis
+
+
+.. *Marketplace-Abonnement*: Verknüpfen Sie ein Marketplace-Abonnement mit diesen Anmeldeinformationen, indem Sie sich jetzt anmelden oder ein vorhandenes Abonnement auswählen.
+.. *Überprüfen*: Bestätigen Sie die Angaben zu den neuen Anmeldeinformationen und wählen Sie *Hinzufügen*.
+
+
+
+
+.Ergebnis
+Die NetApp Console verfügt nun über die erforderlichen Berechtigungen, um in Ihrem Namen Aktionen in Azure durchzuführen.
+
+--
+.Google Cloud-Dienstkonto
+--
+Verknüpfen Sie das Dienstkonto mit der Konsolen-Agent-VM.
+
+.Schritte
+. Gehen Sie zum Google Cloud-Portal und weisen Sie das Dienstkonto der VM-Instanz des Console-Agenten zu.
++
+https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances#changeserviceaccountandscopes["Google Cloud-Dokumentation: Ändern des Dienstkontos und der Zugriffsbereiche für eine Instanz"^]
+
+. Wenn Sie Ressourcen in anderen Projekten verwalten möchten, gewähren Sie Zugriff, indem Sie das Dienstkonto mit der Rolle „Konsolenagent“ zu diesem Projekt hinzufügen.  Sie müssen diesen Schritt für jedes Projekt wiederholen.
+
+
+--
+====

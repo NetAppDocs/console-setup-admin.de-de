@@ -28,10 +28,20 @@ Plattformrollen gewähren Administratorberechtigungen für die NetApp Console , 
 | Plattformrolle | API-Name* *Der API-Name ist die Rollenkennung, die in APIs verwendet wird. Kopieren Sie den Wert exakt wie angegeben (einschließlich Groß- und Kleinschreibung sowie Unterstrichen). | Modusverfügbarkeit | Aufgaben 
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["Organisationsadministrator"] | ORGANIZATION_ADMIN | Standard, Eingeschränkt, Privat | Diese Rolle ermöglicht einem Benutzer uneingeschränkten Zugriff auf alle Projekte und Ordner innerhalb einer Organisation, Mitglieder zu beliebigen Projekten oder Ordnern hinzuzufügen sowie alle Aufgaben auszuführen und alle Datendienste zu nutzen, denen keine explizite Rolle zugeordnet ist. Benutzer mit dieser Rolle verwalten Ihre Organisation, indem sie Ordner und Projekte erstellen, Rollen zuweisen, Benutzer hinzufügen und Systeme verwalten, sofern sie über die entsprechenden Anmeldeinformationen verfügen. Dies ist die einzige Zugriffsrolle, die Konsolenagenten erstellen kann. 
+| link:reference-iam-platform-roles.html#organization-admin-roles["Organisationsadministrator"] | ORGANIZATION_ADMIN | Standard, Eingeschränkt, Privat  a| 
+Diese Rolle ermöglicht einem Benutzer uneingeschränkten Zugriff auf alle Projekte und Ordner innerhalb einer Organisation, Mitglieder zu beliebigen Projekten oder Ordnern hinzuzufügen sowie alle Aufgaben auszuführen und alle Datendienste zu nutzen, denen keine explizite Rolle zugeordnet ist.
+
+Benutzer mit dieser Rolle verwalten Ihre Organisation, indem sie Ordner und Projekte erstellen, Rollen zuweisen, Benutzer hinzufügen und Systeme verwalten, sofern sie über die entsprechenden Anmeldeinformationen verfügen.
+
+Dies ist die einzige Zugriffsrolle, die Konsolenagenten erstellen kann.
 
 
-| link:reference-iam-platform-roles.html#organization-admin-roles["Ordner- oder Projektadministrator"] | ORDNER_ ODER PROJEKTADMIN | Standard, Eingeschränkt, Privat | Ermöglicht einem Benutzer uneingeschränkten Zugriff auf zugewiesene Projekte und Ordner. Kann Mitglieder zu Ordnern oder Projekten hinzufügen, die sie verwalten, sowie beliebige Aufgaben ausführen und beliebige Datendienste oder Anwendungen auf Ressourcen innerhalb des ihnen zugewiesenen Ordners oder Projekts verwenden. Ordner- oder Projektadministratoren können keine Konsolenagenten erstellen. 
+
+| link:reference-iam-platform-roles.html#organization-admin-roles["Ordner- oder Projektadministrator"] | ORDNER_ ODER PROJEKTADMIN | Standard, Eingeschränkt, Privat  a| 
+Gewährt einem Benutzer uneingeschränkten Zugriff auf zugewiesene Projekte und Ordner. Kann Mitglieder zu Ordnern oder Projekten hinzufügen, die er managt, sowie beliebige Aufgaben ausführen und beliebige Datendienste oder Applikationen auf Ressourcen innerhalb des ihm zugewiesenen Ordners oder Projekts nutzen.
+
+Ordner- oder Projektadministratoren können keine Konsolenagenten erstellen.
+
 
 
 | link:reference-iam-platform-roles.html#federation-roles["Föderationsadministrator"] | FEDERATION_ADMIN | Standard, Eingeschränkt | Ermöglicht einem Benutzer das Erstellen und Verwalten von Föderationen mit der Konsole, wodurch Single Sign-On (SSO) ermöglicht wird. 

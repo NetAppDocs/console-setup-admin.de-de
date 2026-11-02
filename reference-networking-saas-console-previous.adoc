@@ -82,11 +82,19 @@ Für den täglichen Betrieb.
 * \https://cloudmanagerinfraprod.azurecr.io
 
  a| 
+Für Regionen außerhalb des Regierungsbereichs im Standardmodus und im eingeschränkten Modus gelten die folgenden Endpunkte:
+
 * \https://bluexpinfraprod.eastus2.data.azurecr.io
 * \https://bluexpinfraprod.azurecr.io
-* https://occmclientinfragov.azurecr.us.io (falls in einer eingeschränkten Modusumgebung)
 
-| Um Bilder für Upgrades des Konsolenagenten zu erhalten. 
+
+Für Regierungsregionen im eingeschränkten Modus ist stattdessen der folgende Endpunkt zu verwenden:
+
+* \https://occmclientinfragov.azurecr.us
+
+ a| 
+Zum Abrufen von Images für Console Agent Deployment und Upgrades.
+
 |===
 .Schritte
 . Stellen Sie sicher, dass Ihr Agent die Version 4.0.0 oder höher hat.link:task-troubleshoot-agent.html#view-the-console-agent-version["Agentenversion anzeigen."]
@@ -119,28 +127,38 @@ Diese Endpunkte werden für Konsolenagenten 3.9.55 und darunter verwendet.
 
 
  a| 
-\https://support.netapp.com \https://mysupport.netapp.com
+* \https://support.netapp.com
+* \https://mysupport.netapp.com
+
  a| 
 Um Lizenzinformationen zu erhalten und AutoSupport -Nachrichten an den NetApp Support zu senden.
 
 
 
  a| 
-\https://\*.api.bluexp.netapp.com \https://api.bluexp.netapp.com \https://*.cloudmanager.cloud.netapp.com \https://cloudmanager.cloud.netapp.com \https://netapp-cloud-account.auth0.com \https://netapp-cloud-account.us.auth0.com
+* \https://*.api.bluexp.netapp.com
+* \https://api.bluexp.netapp.com
+* \https://*.cloudmanager.cloud.netapp.com
+* \https://cloudmanager.cloud.netapp.com
+* \https://netapp-cloud-account.auth0.com
+* \https://netapp-cloud-account.us.auth0.com
+
 | Um Funktionen und Dienste innerhalb der NetApp Console bereitzustellen. 
 
 
  a| 
 Wählen Sie zwischen zwei Endpunktsätzen:
 
-* Option 1 (empfohlen)
-+
-\https://bluexpinfraprod.eastus2.data.azurecr.io \https://bluexpinfraprod.azurecr.io
+Option 1 (empfohlen)
 
-* Option 2
-+
-\https://*.blob.core.windows.net \https://cloudmanagerinfraprod.azurecr.io
+* \https://bluexpinfraprod.eastus2.data.azurecr.io
+* \https://bluexpinfraprod.azurecr.io
 
+
+Option 2
+
+* \https://*.blob.core.windows.net
+* \https://cloudmanagerinfraprod.azurecr.io
 
  a| 
 Um Bilder für Upgrades des Konsolenagenten zu erhalten.
