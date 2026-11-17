@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-maintain-agents.html 
-keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
-summary: Informationen zur Wartung von NetApp Console Agent-VMs, einschließlich OS-Sicherheitsupdates für manuell installierte Agents, empfohlener CPU- und RAM-Dimensionierung, Benachrichtigungen zum Systemstatus von Ressourcen sowie Verfahren zum Starten und Stoppen von VMs. 
+keywords: agent operating system, agent maintenance, vm maintenance, os updates, operating system updates, os patching, security updates, ova, marketplace, stop agent, restart agent, notifications, agent health, agent disk space, agent cpu usage, agent ram usage, agent vm, connector, connector health 
+summary: Dieser Abschnitt beschreibt die Wartung von NetApp Console Agent-VMs, einschließlich Betriebssystemaktualisierungen, empfohlener CPU- und RAM-Dimensionierung, Benachrichtigungen zum Systemstatus von Ressourcen sowie Verfahren zum Starten und Stoppen von VMs. 
 ---
 = Wartung von NetApp Console Agent-VMs
 :hardbreaks:
@@ -14,23 +14,23 @@ summary: Informationen zur Wartung von NetApp Console Agent-VMs, einschließlich
 
 
 [role="lead"]
-Die Wartung von NetApp Console Agent-VMs umfasst die Anwendung von OS-Sicherheitsupdates auf manuell installierte Agenten, die Reaktion auf CPU-, RAM- und Festplattenspeicherwarnungen sowie die Größenanpassung oder das Stoppen und Starten von VMs bei Bedarf.
-
-Bei der manuellen Installation eines Console-Agenten liegt die Wartung des Betriebssystems auf dem Agentenhost in Ihrer (des Kunden) Verantwortung. Beispielsweise sollten Sie (der Kunde) Sicherheitsupdates für das Betriebssystem auf dem Agentenhost anwenden, indem Sie die Standardverfahren Ihres Unternehmens für die Betriebssystemverteilung befolgen.
-
-Wenn eine Agent-VM unterdimensioniert ist oder Performance-Probleme auftreten, sind geeignete Maßnahmen zur Erweiterung der VM-Ressourcen erforderlich.
-
-
-NOTE: Wenn der Agent in vCenter installiert wurde, erfolgt die Größenänderung der VM-Instanz mit dem Console maintenance tool. link:task-agent-vm-config.html["Informationen zur Wartung einer Agenten-VM in vCenter"^].
+Damit der Agent jederzeit betriebsbereit bleibt, sollten Ihre Console Agent VMs mit aktuellen Patches versehen, korrekt dimensioniert und in gutem Zustand sein.
 
 
 
-[[apply-operating-system-updates-to-the-manually-installed-agent-hosts]]
-== Anwenden von Betriebssystemaktualisierungen auf die manuell installierten Agent-Hosts
+[[apply-operating-system-updates-to-agent-hosts]]
+== Anwenden von Betriebssystemaktualisierungen auf Agent-Hosts
 
-Wenden Sie Betriebssystem-Sicherheitspatches an, ohne die Agent-Hostdienste zu stoppen.
+Um die Sicherheit des Hosts zu gewährleisten, sollten Sie auf Ihrem Agent-Host Sicherheitsupdates für das Betriebssystem und die zugehörigen Pakete anwenden.
 
-Um die Kompatibilität mit unterstützten Konfigurationen zu gewährleisten, sollten Sie verhindern, dass Docker oder Podman während routinemäßiger Betriebssystem-Patches aktualisiert werden. Dies können Sie tun, indem Sie Docker oder Podman entweder vorübergehend während Updates ausschließen oder den Paketmanager dauerhaft so konfigurieren, dass Docker- oder Podman-Updates übersprungen werden.
+Dies liegt in Ihrer Verantwortung als Kunde. Die Console Agent Software kann sich selbst aktualisieren, jedoch nicht das Betriebssystem oder zugehörige Pakete.
+
+
+NOTE: Wenn Sie den Console Agenten in vCenter mithilfe einer OVA eingesetzt haben, ist das Betriebssystem Teil des Agenten-Images. link:task-upgrade-agent.html#upgrade-a-vcenter-deployed-console-agent-using-an-iso["Aktualisierung des Agenten mithilfe einer ISO-Datei"^] zum Aktualisieren des Betriebssystems.
+
+Für die Verteilung Ihres Betriebssystems sollten die Standardverfahren Ihres Unternehmens verwendet werden. Beim Einspielen von OS-Sicherheitspatches müssen die Agent-Host Services nicht angehalten werden.
+
+Bei Agenten, die nicht über eine OVA eingesetzt wurden, muss verhindert werden, dass Docker oder Podman im Rahmen routinemäßiger Betriebssystem-Patches aktualisiert werden, um die Kompatibilität mit unterstützten Konfigurationen zu gewährleisten. Dies kann entweder durch den vorübergehenden Ausschluss von Docker oder Podman bei Updates oder durch die dauerhafte Konfiguration des Paketmanagers zum Überspringen von Docker- oder Podman-Updates erfolgen.
 
 Im Folgenden finden Sie Beispiele, wie Sie Docker- oder Podman-Updates für verschiedene Linux-Distributionen ausschließen können. Konsultieren Sie die Dokumentation Ihrer Linux-Distribution für die aktuellsten Anweisungen zum Ausschließen von Paketen von Updates.
 
@@ -49,17 +49,17 @@ sudo apt upgrade
 ----
 
 
-[[resizing-the-vm-or-instance-type]]
-== Ändern der Größe der VM oder des Instanztyps
+[[resize-the-vm-or-instance-type]]
+== Größe der VM oder des Instanztyps ändern
 
-Wenn Sie einen Konsolenagenten aus der Konsole erstellen, stellt dieser eine VM-Instanz mit einer Standardkonfiguration bei Ihrem Cloud-Anbieter bereit.  Wechseln Sie nach dem Erstellen des Agenten nicht zu einer kleineren VM-Instanz mit weniger CPU oder RAM.
+Für eine unterdimensionierte Agenten-VM sollten CPU oder RAM erhöht werden, damit der Agent weiterhin gut funktioniert.
 
-Wenn Sie Benachrichtigungen erhalten, dass Ihre Agenten-VM unterdimensioniert ist, kann ein Upgrade auf eine größere VM-Instanz mit mehr CPU oder RAM in Betracht gezogen werden, um eine optimale Performance sicherzustellen.
+Wenn Sie einen Console Agent über die Console erstellen, setzt die Console bei Ihrem Cloud-Anbieter eine VM-Instanz mit einer Standardkonfiguration ein. link:reference-agent-default-config.html["Weitere Informationen zu den Standardeinstellungen des Agenten"]. Nach der Erstellung des Agenten sollten Sie nicht zu einer kleineren VM-Instanz mit weniger CPU oder RAM wechseln.
+
+Wenn Sie Benachrichtigungen erhalten, dass Ihre Agent-VM unterdimensioniert ist, sollten Sie ein Upgrade auf eine größere VM-Instanz mit mehr CPU oder RAM in Betracht ziehen.
 
 
-NOTE: Wenn Sie den Agenten in VCenter installiert haben, können Sie die Größe der VM-Instanz mit dem Console maintenance tool ändern. link:task-agent-vm-config.html["Informationen zum Ändern der Größe der Agent VM in VCenter"^].
-
-link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Agenten"] .
+NOTE: Wenn der Agent in vCenter installiert wurde, erfolgt die Größenänderung der VM-Instanz mit dem Console maintenance tool. link:task-agent-vm-config.html["Informationen zum Ändern der Größe der Agenten-VM in vCenter"^].
 
 Falls eine Erhöhung der CPU oder des Arbeitsspeichers Ihrer Agenten-VM erforderlich ist, können die Anweisungen Ihres Cloud-Anbieters oder Ihrer lokalen Virtualisierungsplattform zur Größenänderung der VM-Instanz verwendet werden. NetApp empfiehlt eine Verdopplung der aktuellen CPU- und Arbeitsspeicherzuweisung, um eine optimale Performance sicherzustellen. Die folgende Tabelle zeigt empfohlene Größenstufen, wobei jede Stufe die CPU und den Arbeitsspeicher der vorherigen Stufe verdoppelt.
 
@@ -82,6 +82,8 @@ Falls eine Erhöhung der CPU oder des Arbeitsspeichers Ihrer Agenten-VM erforder
 [[monitor-disk-space]]
 == Überwachen des Agenten
 
+Sie bleiben über Probleme mit Festplattenspeicher, RAM und CPU auf Ihrer Agent-VM informiert, damit Sie diese beheben können.
+
 Die Konsole benachrichtigt Sie, wenn die Agent-VM fehlerhaft ist, beispielsweise bei Problemen mit Speicherplatz, RAM und CPU.  Überwachen Sie diese Benachrichtigungen im Benachrichtigungscenter in der Konsole oder konfigurieren Sie E-Mail-Benachrichtigungen.  Gelegentliche Erhöhungen des Speicherplatzes, des Arbeitsspeichers oder der CPU-Auslastung sind normal. Wenn dies jedoch häufig vorkommt, sollten Sie Maßnahmen zur Behebung des Problems ergreifen.
 
 Beispielsweise benachrichtigt Sie die Konsole, wenn eine Agentenressource (CPU, RAM oder Festplattenspeicher) 30 Minuten lang hintereinander 90 % ihrer Gesamtkapazität überschreitet.  Wenn die Ressourcennutzung anschließend unter diesen Schwellenwert fällt, wird die Benachrichtigung im Benachrichtigungscenter als behoben (grün) angezeigt.
@@ -102,12 +104,12 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operation
  a| 
 Die CPU-Auslastung ist zu hoch
  a| 
-Erhöhen Sie die CPU-Größe der Agent-VM bei Ihrem Cloud-Anbieter oder vor Ort, je nachdem, wo Sie sie installiert haben.  Alternativ können Sie zusätzliche Agenten erstellen und die Arbeitslast auf mehrere Agenten verteilen.  Die RAM-Auslastung kann je nach Umgebung, ONTAP Workloads, Anzahl der Cloud Volumes ONTAP Systeme und den von Ihnen verwendeten Datendiensten variieren.
+Je nach Installationsort lässt sich die CPU-Größe der Agenten-VM bei Ihrem Cloud-Anbieter oder lokal erhöhen. Alternativ lassen sich zusätzliche Agenten erstellen und die Arbeitslast auf mehrere Agenten verteilen.
 
 * link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["Informationen zum Erhöhen der Größe der Agent-VM in AWS"^].
 * link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["Informationen zum Erhöhen der Größe der Agenten-VM in Azure"^].
 * link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["Informationen zum Erhöhen der Größe einer Agent-VM in Google Cloud"^].
-* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["Informationen zum Erhöhen der Größe eines lokalen Agenten, der in VCenter ausgeführt wird"].
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["Informationen zum Erhöhen der Größe eines lokalen Agenten, der in vCenter ausgeführt wird"].
 
 
 
@@ -120,14 +122,16 @@ Erhöhen Sie den RAM der Agent-VM bei Ihrem Cloud-Anbieter oder vor Ort, je nach
 * link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/change-instance-type-of-ebs-backed-instance.html["Informationen zum Erhöhen der Größe der Agent-VM in AWS"^].
 * link:https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/resize-vm?tabs=portal["Informationen zum Erhöhen der Größe der Agenten-VM in Azure"^].
 * link:https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance["Informationen zum Erhöhen der Größe einer Agent-VM in Google Cloud"^].
-* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["Informationen zum Erhöhen der Größe eines lokalen Agenten, der in VCenter ausgeführt wird"].
+* link:task-agent-vm-config.html#increase-the-cpu-or-ram-of-the-vm-instance["Informationen zum Erhöhen der Größe eines lokalen Agenten, der in vCenter ausgeführt wird"].
 
 
 |===
 
 
-[[stopping-and-starting-the-agent-vm]]
-== Stoppen und Starten der Agent-VM
+[[stop-and-start-the-agent-vm]]
+== Stoppen und Starten der Agent VM
+
+Beim Stoppen und Starten der Agent VM sollten die Ausfallzeiten gering bleiben, da Verwaltungs- und Datenservices davon abhängen, dass der Agent betriebsbereit bleibt.
 
 Stoppen und starten Sie die Agent-VM bei Bedarf über die Konsole Ihres Cloud-Anbieters oder über standardmäßige Verfahren vor Ort.
 
@@ -138,6 +142,8 @@ link:concept-agents.html#agents-must-be-operational-at-all-times["Beachten Sie, 
 [[connect-to-the-linux-vm]]
 [[connect-linux-host]]
 == Herstellen einer Verbindung mit der Linux-VM
+
+Der Status des Console Agent auf seiner Linux-VM lässt sich überprüfen, um zu bestätigen, dass er ausgeführt wird.
 
 Wenn Sie eine Verbindung mit der Linux-VM herstellen müssen, auf der der Agent ausgeführt wird, verwenden Sie die Konnektivitätsoptionen Ihres Cloud-Anbieters.
 

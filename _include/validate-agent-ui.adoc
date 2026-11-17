@@ -1,17 +1,27 @@
-= 
+= Fehlerbehebung bei einem fehlgeschlagenen Console Agent Deployment
 :allow-uri-read: 
 
 
-Wenn Sie das Kontrollkästchen *Agentenkonfiguration validieren* auf der Seite *Überprüfen* aktiviert haben, überprüft die Konsole die Konfiguration des Konsolenagenten nach seiner Erstellung.  Wenn die Bereitstellung des Agenten durch die Konsole fehlschlägt, wird ein herunterladbarer Bericht bereitgestellt, der Sie bei der Fehlerbehebung unterstützt.
 
 
-NOTE: Wenn die Konsole den Agenten erfolgreich bereitstellt, wird kein Bericht generiert und ein Bestätigungsdialogfeld angezeigt, das die erfolgreiche Bereitstellung bestätigt.
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== Fehlerbehebung bei einem fehlgeschlagenen Console Agent Deployment
+
+Der Deployment-Bericht zeigt, wodurch das Deployment des Console Agent blockiert wurde; anschließend lässt es sich erneut versuchen.
+
+Die Console erstellt nur dann einen Bericht, wenn das Kästchen *Validate agent configuration* ausgewählt war. Wenn das Deployment erfolgreich ist, wird kein Bericht erstellt.
 
 .Schritte
-. Wählen Sie im Dialogfeld *Agent-Bereitstellung fehlgeschlagen* die Option *Bericht herunterladen* aus, um eine PDF-Datei mit dem Validierungsbericht herunterzuladen.
-. Alternativ können Sie *Neu beginnen* auswählen, um zum Assistenten *Agent bereitstellen* zurückzukehren und es erneut zu versuchen.
+. Im Dialogfeld *Agent deployment failed* ist *Download report* auszuwählen.
 +
-Sie müssen den gesamten Vorgang erneut starten, wenn Sie versuchen möchten, den Agenten erneut bereitzustellen.
+Die Console lädt eine PDF-Datei herunter, die den Validierungsbericht enthält.
 
-. Zugriff auf den Bericht und die Protokolle vom Konsolen-Agent-Host
+. Eine Prüfung des Berichts sowie die Behebung der darin aufgeführten Probleme sind erforderlich.
+. Im Dialogfeld ist *Von vorne beginnen* auszuwählen; anschließend ist das Deployment erneut abzuschließen.
++
+Sie müssen den gesamten Vorgang von vorn beginnen, um es erneut zu versuchen.
 
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]

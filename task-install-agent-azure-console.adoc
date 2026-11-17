@@ -535,7 +535,28 @@ Die Konsole bereitet den Agenten in etwa 10 Minuten vor. Bleiben Sie auf der Sei
 .Ergebnis
 Nachdem der Vorgang abgeschlossen ist, steht der Konsolenagent für die Verwendung über die Konsole zur Verfügung.
 
-
-NOTE: Wenn die Bereitstellung fehlschlägt, können Sie einen Bericht und Protokolle von der Konsole herunterladen, die Ihnen bei der Behebung der Probleme helfen.link:task-troubleshoot-agent.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]
-
 Wenn Sie Azure Blob Storage im selben Azure-Konto haben, in dem Sie den Konsolen-Agent erstellt haben, wird Azure Blob Storage automatisch auf der Seite *Systeme* angezeigt. https://docs.netapp.com/us-en/bluexp-blob-storage/index.html["Erfahren Sie, wie Sie Azure Blob Storage über die NetApp Console verwalten"^]
+
+
+
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== Fehlerbehebung bei einem fehlgeschlagenen Console Agent Deployment
+
+Der Deployment-Bericht zeigt, wodurch das Deployment des Console Agent blockiert wurde; anschließend lässt es sich erneut versuchen.
+
+Die Console erstellt nur dann einen Bericht, wenn das Kästchen *Validate agent configuration* ausgewählt war. Wenn das Deployment erfolgreich ist, wird kein Bericht erstellt.
+
+.Schritte
+. Im Dialogfeld *Agent deployment failed* ist *Download report* auszuwählen.
++
+Die Console lädt eine PDF-Datei herunter, die den Validierungsbericht enthält.
+
+. Eine Prüfung des Berichts sowie die Behebung der darin aufgeführten Probleme sind erforderlich.
+. Im Dialogfeld ist *Von vorne beginnen* auszuwählen; anschließend ist das Deployment erneut abzuschließen.
++
+Sie müssen den gesamten Vorgang von vorn beginnen, um es erneut zu versuchen.
+
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]

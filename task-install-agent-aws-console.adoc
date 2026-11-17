@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: task-install-agent-aws-console.html 
-keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console 
-summary: Sie können einen Console-Agenten in AWS direkt über die NetApp Console bereitstellen. Vor der Bereitstellung eines Console-Agenten in AWS über die Console müssen Sie Ihr Netzwerk einrichten und die AWS-Berechtigungen vorbereiten. 
+keywords: deploy agent, aws agent deployment, aws agent, deploy agent in aws, bluexp, create agent, NetApp Console, Create role for me, CloudFormation Quick Create, IAM role, IAM policy, Assume role, AWS keys, deployment role, external ID 
+summary: Ein Console Agent in AWS kann über die NetApp Console mit „Create role for me“, „Assume role“ oder AWS keys eingesetzt werden. Netzwerk und Berechtigungen müssen zunächst eingerichtet werden. 
 ---
 = Einen Console-Agenten in AWS über die NetApp Console bereitstellen
 :hardbreaks:
@@ -14,22 +14,22 @@ summary: Sie können einen Console-Agenten in AWS direkt über die NetApp Consol
 
 
 [role="lead"]
-Sie können einen Console-Agenten in AWS direkt über die NetApp Console bereitstellen. Vor der Bereitstellung eines Console-Agenten in AWS über die Console müssen Sie Ihr Netzwerk einrichten und die AWS-Berechtigungen vorbereiten.
+Ein Console Agent in AWS kann eingesetzt werden, ohne die NetApp Console zu verlassen, sodass Sie mit dem Managen Ihrer AWS-Ressourcen und Datenservices beginnen können.
 
-Durch die Bereitstellung eines Agenten in AWS wird eine EC2-Instanz gestartet, auf der Linux und die Console-Agent-Software in einer VPC Ihrer Wahl ausgeführt werden.
+Das Einsetzen eines Console agent in AWS startet eine EC2-Instanz in einer VPC Ihrer Wahl, auf der Linux und die Software des Console agent ausgeführt werden.
 
 .Bevor Sie beginnen
 * link:concept-agent-install-options.html#agent-console-deploy["Erfahren Sie, wann Sie über die Konsole bereitstellen sollten."].
-* Sie sollten überprüfenlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
+* Rezensionlink:reference-limitations.html["Einschränkungen des Konsolenagenten"] .
 
 
 
 
-[[step-1-set-up-networking-for-deploying-a-console-agent-in-aws]]
+[[step-1-set-up-networking-to-deploy-a-console-agent-in-aws]]
 [[networking-aws-agent]]
-== Schritt 1: Einrichten des Netzwerks für die Bereitstellung eines Konsolenagenten in AWS
+== Schritt 1: Netzwerk einrichten, um einen Console Agent in AWS einzusetzen
 
-Stellen Sie sicher, dass der Netzwerkspeicherort, an dem Sie den Konsolenagenten installieren möchten, die folgenden Anforderungen unterstützt.  Diese Anforderungen ermöglichen es dem Konsolenagenten, Ressourcen und Prozesse in Ihrer Hybrid Cloud zu verwalten.
+Voraussetzung ist, dass der Netzwerkstandort, an dem der Console agent eingesetzt werden soll, die folgenden Anforderungen erfüllt. Diese Anforderungen ermöglichen es dem Console agent, Ressourcen und Prozesse in Ihrer Hybrid Cloud zu managen.
 
 VPC und Subnetz:: Wenn Sie den Konsolenagenten erstellen, müssen Sie die VPC und das Subnetz angeben, in dem er sich befinden soll.
 
@@ -166,17 +166,95 @@ Sie müssen diese Netzwerkanforderung implementieren, nachdem Sie den Konsolenag
 
 
 
-[[step-2-set-up-aws-permissions-for-the-console-agent]]
+[[step-2-set-up-aws-permissions-to-deploy-the-console-agent]]
 [[aws-permissions-agent]]
-== Schritt 2: AWS-Berechtigungen für den Konsolenagenten einrichten
+== Schritt 2: AWS-Berechtigungen zum Einsetzen des Console Agenten einrichten
 
-Die Konsole muss sich bei AWS authentifizieren, bevor sie den Konsolenagenten in Ihrem VPC bereitstellen kann. Sie können eine dieser Authentifizierungsmethoden auswählen:
+Die Console benötigt nur die AWS-Berechtigungen, die zum Einsetzen des Console agent in Ihrer VPC erforderlich sind, basierend auf dem von Ihnen gewählten Authentifizierungsverfahren.
 
-* Lassen Sie die Konsole eine IAM-Rolle übernehmen, die über die erforderlichen Berechtigungen verfügt
-* Geben Sie einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel für einen IAM-Benutzer an, der über die erforderlichen Berechtigungen verfügt.
+Sie wählen eines dieser Authentifizierungsverfahren aus und richten nur das ein, was es erfordert:
+
+[cols="1a,2a,2a"]
+|===
+| Verfahren | Was es tut | Was Sie eingerichtet haben 
 
 
-Bei beiden Optionen besteht der erste Schritt darin, eine IAM-Richtlinie zu erstellen. Diese Richtlinie enthält nur die Berechtigungen, die zum Starten des Konsolenagenten in AWS von der Konsole aus erforderlich sind.
+ a| 
+*Rolle für mich erstellen*
+ a| 
+Die Console öffnet AWS CloudFormation Quick Create, wodurch die Deployment-Rolle erstellt wird, die die Console übernimmt.
+ a| 
+Berechtigungen für die AWS-Identität, die den Stack übermittelt.
+
+
+
+ a| 
+*Rolle übernehmen*
+ a| 
+Die Console nimmt in Ihrem Konto eine vorhandene IAM-Rolle an.
+ a| 
+Eine Richtlinie und eine IAM-Rolle.
+
+
+
+ a| 
+*AWS-Schlüssel*
+ a| 
+Die Console verwendet einen AWS-Zugriffsschlüssel und einen geheimen Schlüssel.
+ a| 
+Eine Richtlinie und ein IAM-Benutzer.
+
+|===
+Mit *Create role for me* und *Assume role* übernimmt die Console eine IAM-Rolle, die als *Deployment-Rolle* bezeichnet wird, um den Console Agent einzusetzen. Nach dem Deployment verwendet der Console Agent eine separate IAM-Rolle, die seiner EC2-Instanz zugeordnet ist und als *Agentenrolle* bezeichnet wird. Standardmäßig erstellt die Console die Agentenrolle für Sie. link:#aws-agent-role["So verwenden Sie Ihre eigene Agentenrolle"].
+
+
+
+[[set-up-permissions-for-create-role-for-me-cloudformation-quick-create]]
+[[aws-permissions-quick-create]]
+=== Berechtigungen für „Create role for me“ einrichten (CloudFormation Quick Create)
+
+Eine AWS-Identität, mit der der CloudFormation Stack und die Deployment-Rolle erstellt werden können, ist erforderlich, damit der Stack ohne Berechtigungsfehler abgeschlossen wird.
+
+Die Identität, die den CloudFormation Quick Create-Stack übermittelt, benötigt Administratorberechtigungen oder die folgenden Mindestberechtigungen. Diese Berechtigungen ermöglichen es CloudFormation, die Deployment-Rolle zu erstellen. Dabei handelt es sich nicht um die Berechtigungen der Agentenrolle.
+
+[source, json]
+----
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CloudFormationStack",
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:GetTemplateSummary",
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:GetRolePolicy",
+        "iam:PassRole",
+        "lambda:CreateFunction",
+        "lambda:DeleteFunction",
+        "lambda:GetFunction",
+        "lambda:InvokeFunction"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+----
+
+
+[[set-up-permissions-for-assume-role-or-aws-keys]]
+[[aws-permissions-assume-role-keys]]
+=== Berechtigungen für Assume role oder AWS keys einrichten
+
+Wenn *Assume role* oder *AWS keys* gewählt wird, ist eine Richtlinie zu erstellen, die nur die zum Einsetzen des Console Agent erforderlichen Berechtigungen enthält, und diese ist der Rolle oder dem Benutzer zuzuordnen, die bzw. den die Console verwendet.
 
 Bei Bedarf können Sie die IAM-Richtlinie einschränken, indem Sie die IAM `Condition` Element. https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html["AWS-Dokumentation: Bedingungselement"^]
 
@@ -186,7 +264,7 @@ Bei Bedarf können Sie die IAM-Richtlinie einschränken, indem Sie die IAM `Cond
 . Wählen Sie *JSON*.
 . Kopieren Sie die folgende Richtlinie und fügen Sie sie ein:
 +
-Diese Richtlinie enthält nur die Berechtigungen, die zum Starten des Konsolenagenten in AWS von der Konsole aus erforderlich sind.  Wenn die Konsole den Konsolenagenten erstellt, wendet sie einen neuen Satz von Berechtigungen auf den Konsolenagenten an, der es dem Konsolenagenten ermöglicht, AWS-Ressourcen zu verwalten. link:reference-permissions-aws.html["Anzeigen der für den Konsolenagenten selbst erforderlichen Berechtigungen"].
+Diese Richtlinie enthält nur die Berechtigungen, die zum Starten des Console agent in AWS über die Console erforderlich sind link:reference-permissions-aws.html["Die Berechtigungen der Agentenrolle anzeigen"].
 
 +
 [source, json]
@@ -269,7 +347,7 @@ Diese Richtlinie enthält nur die Berechtigungen, die zum Starten des Konsolenag
 . Wählen Sie *Richtlinie erstellen*.
 . Hängen Sie die Richtlinie entweder an eine IAM-Rolle an, die die Konsole übernehmen kann, oder an einen IAM-Benutzer, damit Sie der Konsole Zugriffsschlüssel bereitstellen können:
 +
-** (Option 1) Richten Sie eine IAM-Rolle ein, die die Konsole übernehmen kann:
+** *Rolle übernehmen*: Dabei ist eine IAM-Rolle einzurichten, die die Console übernehmen kann:
 +
 ... Gehen Sie zur AWS IAM-Konsole im Zielkonto.
 ... Wählen Sie unter „Zugriffsverwaltung“ *Rollen > Rolle erstellen* und befolgen Sie die Schritte zum Erstellen der Rolle.
@@ -279,7 +357,7 @@ Diese Richtlinie enthält nur die Berechtigungen, die zum Starten des Konsolenag
 ... Nachdem Sie die Rolle erstellt haben, kopieren Sie die Rollen-ARN, damit Sie sie beim Erstellen des Konsolen-Agenten in die Konsole einfügen können.
 
 
-** (Option 2) Richten Sie Berechtigungen für einen IAM-Benutzer ein, damit Sie der Konsole Zugriffsschlüssel bereitstellen können:
+** *AWS-Schlüssel*: Zum Bereitstellen von Zugriffsschlüsseln für die Console sind Berechtigungen für einen IAM-Benutzer erforderlich:
 +
 ... Wählen Sie in der AWS IAM-Konsole *Benutzer* und dann den Benutzernamen aus.
 ... Wählen Sie *Berechtigungen hinzufügen > Vorhandene Richtlinien direkt anhängen*.
@@ -293,56 +371,98 @@ Diese Richtlinie enthält nur die Berechtigungen, die zum Starten des Konsolenag
 
 
 .Ergebnis
-Sie sollten jetzt über eine IAM-Rolle mit den erforderlichen Berechtigungen oder einen IAM-Benutzer mit den erforderlichen Berechtigungen verfügen.  Wenn Sie den Konsolenagenten aus der Konsole erstellen, können Sie Informationen zur Rolle oder zu Zugriffsschlüsseln angeben.
+Sie verfügen nun über eine Deployment-Rolle oder einen IAM-Benutzer mit den erforderlichen Berechtigungen. Wenn Sie den Console Agent einsetzen, geben Sie die Rollen-ARN oder die Zugriffsschlüssel an.
 
 
 
-[[step-3-create-the-console-agent]]
-== Schritt 3: Erstellen des Konsolenagenten
+[[step-3-set-up-your-own-iam-role-for-the-console-agent-optional]]
+[[aws-agent-role]]
+== Schritt 3: Einrichten Ihrer eigenen IAM-Rolle für den Console Agenten (optional)
 
-Erstellen Sie den Konsolenagenten direkt über die webbasierte Konsole.
+Wenn Sie anstelle der Rolle, die die Console standardmäßig erstellt, eine eigene Agentenrolle auswählen möchten, ist eine eigene Agentenrolle zu erstellen. Die Rolle ist vor dem Einsatz des Console Agent zu erstellen.
+
+.Schritte
+. Melden Sie sich bei der AWS-Konsole an und navigieren Sie zum IAM-Dienst.
+. Erstellen Sie eine Richtlinie:
++
+.. Wählen Sie *Richtlinien > Richtlinie erstellen*.
+.. Wählen Sie *JSON* und kopieren und fügen Sie den Inhalt deslink:reference-permissions-aws.html["IAM-Richtlinie für den Konsolenagenten"] .
+.. Führen Sie die restlichen Schritte aus, um die Richtlinie zu erstellen.
++
+Für Standardregionen sind die Berechtigungen auf zwei Richtlinien verteilt.  Aufgrund einer maximalen Zeichengrößenbeschränkung für verwaltete Richtlinien in AWS sind zwei Richtlinien erforderlich. link:reference-permissions-aws.html["Weitere Informationen zu IAM-Richtlinien für den Konsolenagenten"] .
+
+
+
+. Erstellen Sie eine IAM-Rolle:
++
+.. Wählen Sie *Rollen > Rolle erstellen*.
+.. Wählen Sie *AWS-Dienst > EC2*.
+.. Fügen Sie Berechtigungen hinzu, indem Sie die gerade erstellte Richtlinie anhängen.
+.. Führen Sie die restlichen Schritte aus, um die Rolle zu erstellen.
+
+
+
+
+.Ergebnis
+Sie verfügen nun über eine Agentenrolle, die Sie unter *Agent deployment details* auswählen können, wenn Sie den Console Agent einsetzen.
+
+
+
+[[step-4-deploy-the-console-agent]]
+== Schritt 4: den Console Agent einsetzen
+
+Ihre Details zu Authentifizierung, Deployment, Netzwerk und Sicherheitsgruppe sind erforderlich, damit die Console den Console agent in Ihrer VPC startet.
 
 .Informationen zu diesem Vorgang
 * Durch Erstellen des Konsolenagenten aus der Konsole wird eine EC2-Instanz in AWS mithilfe einer Standardkonfiguration bereitgestellt.  Wechseln Sie nach dem Erstellen des Konsolenagenten nicht zu einer kleineren EC2-Instance mit weniger CPUs oder weniger RAM. link:reference-agent-default-config.html["Erfahren Sie mehr über die Standardkonfiguration für den Konsolenagenten"] .
-* Wenn die Konsole den Konsolenagenten erstellt, erstellt sie eine IAM-Rolle und ein Profil für den Agenten. Diese Rolle umfasst Berechtigungen, die es dem Konsolenagenten ermöglichen, AWS-Ressourcen zu verwalten. Stellen Sie sicher, dass die Rolle aktualisiert wird, wenn in zukünftigen Versionen neue Berechtigungen hinzugefügt werden. link:reference-permissions-aws.html["Erfahren Sie mehr über die IAM-Richtlinie für den Konsolenagenten"].
+* Standardmäßig erstellt die Console die Agentenrolle und ihr Profil. Wenn Sie eine eigene Agentenrolle bereitstellen, ist eine Aktualisierung erforderlich, sobald in zukünftigen Releases neue Berechtigungen hinzukommen. link:reference-permissions-aws.html["Erfahren Sie mehr über die IAM-Richtlinie für den Konsolenagenten"].
 
 
 .Bevor Sie beginnen
 Folgendes sollten Sie haben:
 
-* Eine AWS-Authentifizierungsmethode: entweder eine IAM-Rolle oder Zugriffsschlüssel für einen IAM-Benutzer mit den erforderlichen Berechtigungen.
+* Ein Authentifizierungsverfahren für AWS: *Rolle für mich erstellen*, *Rolle übernehmen* oder *AWS-Schlüssel*.
 * Eine VPC und ein Subnetz, das die Netzwerkanforderungen erfüllt.
 * Ein Schlüsselpaar für die EC2-Instanz.
 * Details zu einem Proxyserver, falls für den Internetzugriff vom Konsolenagenten ein Proxy erforderlich ist.
-* Aufstellenlink:#networking-aws-agent["Netzwerkanforderungen"] .
-* Aufstellenlink:#aws-permissions-agent["AWS-Berechtigungen"] .
+* Abgeschlossen link:#networking-aws-agent["Schritt 1"].
+* Abgeschlossen link:#aws-permissions-agent["Schritt 2"].
 
 
 .Schritte
 . Wählen Sie *Administration > Agenten*.
 . Wählen Sie auf der Seite *Übersicht* die Option *Agent bereitstellen > AWS*.
-. Befolgen Sie die Schritte im Assistenten, um den Konsolenagenten zu erstellen:
-. Auf der Seite *Einführung* sehen Sie die Übersicht über den Prozess.
-. Geben Sie auf der Seite *AWS-Anmeldeinformationen* Ihre AWS-Region an und wählen Sie dann ein Authentifizierungsverfahren. Dies kann entweder eine IAM-Rolle sein, die die Console annehmen kann, oder ein AWS-Zugriffsschlüssel und ein geheimer Schlüssel.
+. Im Abschnitt *AWS-Anmeldeinformationen für die Agentenbereitstellung* können Sie eines der folgenden Authentifizierungsverfahren auswählen:
 +
+** *Rolle für mich erstellen*:
++
+... Auswahl Ihrer AWS-Region und Eingabe Ihrer AWS-Konto-ID. Optional ist die Eingabe einer externen ID.
+... Die Option *Open CloudFormation Quick Create* auswählen.
+... In AWS die Bedingungen bestätigen und *Create stack* auswählen.
+... Sobald AWS die Rolle erstellt hat, können Sie zur Console zurückkehren und die Rolle bestätigen.
 
-TIP: Wenn Sie „Rolle übernehmen“ wählen, können Sie den ersten Satz Anmeldeinformationen über den Bereitstellungsassistenten des Konsolenagenten erstellen.  Alle zusätzlichen Anmeldeinformationen müssen auf der Seite „Anmeldeinformationen“ erstellt werden.  Sie stehen dann im Assistenten in einer Dropdown-Liste zur Verfügung. link:task-adding-aws-accounts.html["Erfahren Sie, wie Sie zusätzliche Anmeldeinformationen hinzufügen"] .
 
-. Geben Sie auf der Seite *Details* Details zum Konsolenagenten an.
+** *Rolle übernehmen*: Der ARN der IAM-Rolle ist einzugeben, und *Anmeldeinformationen validieren* ist auszuwählen.
+** *AWS-Schlüssel*: Der Zugriffsschlüssel und der geheime Schlüssel werden eingegeben, anschließend wird *Anmeldeinformationen validieren* ausgewählt.
+
+
+. Im Abschnitt *Agent deployment details* werden Details zum Console Agent angegeben.
 +
 ** Geben Sie einen Namen ein.
 ** Fügen Sie benutzerdefinierte Tags (Metadaten) hinzu.
-** Wählen Sie, ob die Konsole eine neue Rolle mit den erforderlichen Berechtigungen erstellen soll oder ob Sie eine vorhandene Rolle auswählen möchten, die Sie mitlink:reference-permissions-aws.html["die erforderlichen Berechtigungen"] .
+** Sie können festlegen, ob die Console die Agentenrolle erstellen soll oder ob eine Agentenrolle ausgewählt werden soll, die Sie link:#aws-agent-role["selbst einrichten"].
 ** Wählen Sie, ob Sie die EBS-Festplatten des Konsolen-Agenten verschlüsseln möchten.  Sie haben die Möglichkeit, den Standardverschlüsselungsschlüssel oder einen benutzerdefinierten Schlüssel zu verwenden.
 
 
-. Auf der Seite *Netzwerk* können Sie eine VPC, ein Subnetz und ein Schlüsselpaar für den Agenten angeben, auswählen, ob eine öffentliche IP-Adresse aktiviert werden soll, und optional eine Proxy-Konfiguration festlegen.
+. Im Abschnitt *Netzwerkkonfiguration* können Sie eine VPC, ein Subnetz und ein Schlüsselpaar für den Console agent angeben, festlegen, ob eine öffentliche IP-Adresse aktiviert werden soll, und optional eine Proxy-Konfiguration angeben.
 +
 Stellen Sie sicher, dass Sie über das richtige Schlüsselpaar für den Zugriff auf die virtuelle Maschine des Konsolenagenten verfügen.  Ohne Schlüsselpaar ist ein Zugriff nicht möglich.
 
-. Wählen Sie auf der Seite *Sicherheitsgruppe* aus, ob Sie eine neue Sicherheitsgruppe erstellen oder eine vorhandene Sicherheitsgruppe auswählen möchten, die die erforderlichen eingehenden und ausgehenden Regeln zulässt.
+. Im Abschnitt *Security group* können Sie wählen, ob Sie eine neue Sicherheitsgruppe erstellen oder eine vorhandene Sicherheitsgruppe auswählen möchten, die die erforderlichen Regeln für eingehenden und ausgehenden Datenverkehr zulässt.
 +
 link:reference-ports-aws.html["Sicherheitsgruppenregeln für AWS anzeigen"] .
+
+
 
 . Überprüfen Sie Ihre Auswahl, um zu verifizieren, dass Ihre Einrichtung korrekt ist.
 +
@@ -359,14 +479,35 @@ link:reference-ports-aws.html["Sicherheitsgruppenregeln für AWS anzeigen"] .
 ====
 . Wählen Sie *Hinzufügen*.
 +
-Die Konsole stellt den Agenten in etwa 10 Minuten bereit. Bleiben Sie auf der Seite, bis der Vorgang abgeschlossen ist.
+Die Console setzt den Console agent in etwa 10 Minuten ein. Sie sollten auf der Seite bleiben, bis der Vorgang abgeschlossen ist.
 
 
 
 .Ergebnis
 Nachdem der Vorgang abgeschlossen ist, steht der Konsolenagent für die Verwendung über die Konsole zur Verfügung.
 
-
-NOTE: Wenn die Bereitstellung fehlschlägt, können Sie einen Bericht und Protokolle von der Konsole herunterladen, die Ihnen bei der Behebung der Probleme helfen.link:task-troubleshoot-agent.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]
-
 Wenn Sie Amazon S3-Buckets im selben AWS-Konto haben, in dem Sie den Konsolenagenten erstellt haben, wird auf der Seite *Systeme* automatisch eine Amazon S3-Arbeitsumgebung angezeigt. https://docs.netapp.com/us-en/storage-management-s3-storage/index.html["Erfahren Sie, wie Sie S3-Buckets über die NetApp Console verwalten"^]
+
+
+
+[[troubleshoot-a-failed-console-agent-deployment]]
+[[troubleshoot-agent-deployment]]
+== Fehlerbehebung bei einem fehlgeschlagenen Console Agent Deployment
+
+Der Deployment-Bericht zeigt, wodurch das Deployment des Console Agent blockiert wurde; anschließend lässt es sich erneut versuchen.
+
+Die Console erstellt nur dann einen Bericht, wenn das Kästchen *Validate agent configuration* ausgewählt war. Wenn das Deployment erfolgreich ist, wird kein Bericht erstellt.
+
+.Schritte
+. Im Dialogfeld *Agent deployment failed* ist *Download report* auszuwählen.
++
+Die Console lädt eine PDF-Datei herunter, die den Validierungsbericht enthält.
+
+. Eine Prüfung des Berichts sowie die Behebung der darin aufgeführten Probleme sind erforderlich.
+. Im Dialogfeld ist *Von vorne beginnen* auszuwählen; anschließend ist das Deployment erneut abzuschließen.
++
+Sie müssen den gesamten Vorgang von vorn beginnen, um es erneut zu versuchen.
+
+
+
+link:task-troubleshoot-agent.html#troubleshoot-installation["Erfahren Sie, wie Sie Installationsprobleme beheben."]

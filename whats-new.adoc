@@ -18,6 +18,30 @@ Informieren Sie sich über die Neuerungen bei den Verwaltungsfunktionen der NetA
 
 
 
+[[09-november-2026]]
+== 09. November 2026
+
+
+
+[[console-agent-4-13-0]]
+=== Console Agent 4.13.0
+
+Die Version 4.13.0 unterstützt sowohl den Standardmodus als auch den eingeschränkten Modus.
+
+Diese Version des Console-Agenten enthält Sicherheitsverbesserungen und Fehlerbehebungen sowie die folgende neue Funktion.
+
+.Beim Einsatz eines Console Agenten wird die AWS Deployment Rolle automatisch erstellt.
+Sie müssen die IAM-Rolle für den Einsatz eines Console Agenten in AWS nicht mehr erstellen, bevor Sie beginnen. Die NetApp Console kann die Rolle für Sie erstellen. link:https://docs.netapp.com/us-en/console-setup-admin/task-install-agent-aws-console.html["So setzen Sie einen Console Agenten in AWS über die Console ein"^]
+
+
+
+[[netapp-console-administration]]
+=== NetApp Console
+
+Diese Version enthält Sicherheitsverbesserungen und Fehlerbehebungen.
+
+
+
 [[15-october-2026]]
 == 15. Oktober 2026
 

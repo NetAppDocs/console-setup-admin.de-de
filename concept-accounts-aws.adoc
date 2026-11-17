@@ -21,7 +21,7 @@ Sie verwalten AWS-Zugangsdaten und Marketplace-Abonnements direkt über die NetA
 [[initial-aws-credentials]]
 == Anfängliche AWS-Anmeldeinformationen
 
-Wenn Sie einen Console-Agenten über die Console bereitstellen, müssen Sie den ARN einer IAM-Rolle oder die Zugriffsschlüssel eines IAM-Benutzers angeben. Das Authentifizierungsverfahren muss über Berechtigungen verfügen, um den Console-Agenten in AWS bereitzustellen. Die erforderlichen Berechtigungen sind in der link:task-install-agent-aws-console.html#aws-permissions-agent["Agentenbereitstellungsrichtlinie für AWS"] aufgeführt.
+Wenn Sie einen Console Agenten aus der Console einsetzen, kann die Console entweder eine IAM-Rolle für Sie erstellen, oder Sie geben den ARN einer IAM-Rolle oder Zugriffsschlüssel für einen IAM-Benutzer an. Das Authentifizierungsverfahren muss über Berechtigungen zum Einsetzen des Console Agenten in AWS verfügen. Die erforderlichen Berechtigungen sind im link:task-install-agent-aws-console.html#aws-permissions-agent["Berechtigungen für das Agent Deployment für AWS"] aufgeführt.
 
 Wenn die NetApp Console den Console Agent in AWS startet, erstellt sie eine IAM-Rolle und ein Profil für den Agenten. Außerdem wird eine Richtlinie angehängt, die dem Console Agent Berechtigungen zur Verwaltung von Ressourcen und Prozessen innerhalb dieses AWS-Kontos erteilt. link:reference-permissions-aws.html["Überprüfen Sie, wie der Agent die Berechtigungen nutzt"].
 
