@@ -74,9 +74,9 @@ Bevor Sie beginnen, erstellen Sie einen Snapshot der VM, falls Sie einen Rollbac
 . Drücken Sie  `1`, um das Menü *System Configuration* zu öffnen.
 . Drücken Sie die Eingabetaste  `3`, um *Upgrade* auszuwählen, und folgen Sie den Anweisungen auf dem Bildschirm.
 +
-Das Upgrade installiert das aktualisierte Betriebssystem, die Docker-Laufzeitumgebung und die Konsolenagentendienste an Ort und Stelle. Wenn der Kernel aktualisiert wird, startet die VM automatisch neu.
+Das Upgrade installiert das aktualisierte Betriebssystem, die Docker-Laufzeitumgebung und die Console agent Services. Beim Upgrade auf Console agent 4.13.0 ist sicherzustellen, dass die VM nach Abschluss des Upgrades neu gestartet wird. Die VM kann automatisch neu starten. Der Console agent ist bis zum Abschluss des Neustarts nicht verfügbar. Bei anderen Versionen startet die VM automatisch neu, wenn der Kernel aktualisiert wird.
 
-. Nach Abschluss des Upgrades überprüfen Sie, ob der Console Agent ordnungsgemäß ausgeführt wird:
+. Nach Abschluss des Upgrades und eines etwaigen Neustarts sollte geprüft werden, ob der Console Agent ordnungsgemäß ausgeführt wird:
 +
 .. Im vSphere-Client bestätigen Sie, dass die VM eingeschaltet ist und die Webkonsole zugänglich ist.
 .. Gehen Sie in der NetApp Console zu *Administration > Support > Agents* und überprüfen Sie, ob die Agentenversion der neuen Version entspricht.

@@ -57,10 +57,13 @@ Diese Rollenzuweisungen sind zu verwenden, wenn ein Benutzer Console-Ressourcen 
 | Umfang | Plattformrolle | Cloud Volumes ONTAP Rolle | Empfehlung 
 
 
-| Organisation | Organisationsadministrator | Cloud Volumes ONTAP Operator | Wenn ein Benutzer Konsolenressourcen (einschließlich der Einstellungen des Konsolenagenten) und Cloud Volumes ONTAP Systeme verwalten muss 
+| Organisation | Organisationsadministrator | Cloud Volumes ONTAP Administrator | Wenn ein Benutzer Konsolenressourcen (einschließlich der Einstellungen des Konsolenagenten) und Cloud Volumes ONTAP Systeme verwalten muss 
 
 
 | Ordner oder Projekt | Ordner- oder Projektadministrator | Cloud Volumes ONTAP Administrator | Wenn ein Benutzer Konsolenressourcen in einem bestimmten Ordner oder Projekt und Cloud Volumes ONTAP Systeme verwalten muss 
+
+
+| Ordner oder Projekt | Ordner- oder Projektadministrator | Mitwirkender für Cloud Volumes ONTAP | Wenn ein Benutzer Konsolenressourcen in einem bestimmten Ordner oder Projekt und Cloud Volumes ONTAP Systeme verwalten muss 
 
 
 | Ordner oder Projekt | Ordner- oder Projektadministrator | Cloud Volumes ONTAP Operator | Wenn ein Benutzer Konsolenressourcen in einem bestimmten Ordner oder Projekt und Cloud Volumes ONTAP Systeme verwalten muss 
