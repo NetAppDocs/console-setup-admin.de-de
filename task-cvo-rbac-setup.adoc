@@ -90,7 +90,7 @@ Nach dem Upgrade eines Console-Agenten auf Version 4.9.0 oder höher weist die C
 
 .Schritte
 . Die Organisation, der Ordner oder das Projekt identifizieren, das jedes Cloud Volumes ONTAP System enthält.
-. Die jedem Benutzer zugewiesene Cloud Volumes ONTAP Rolle sollte überprüft werden, um sicherzustellen, dass sie auf der Organisationsebene, Ordnerebene oder Projektebene, die das System enthält, zugewiesen ist. link:reference-iam-cvo-roles.html#seeding-mappings-for-existing-users["Informationen zu den Cloud Volumes ONTAP Rollen, die nach dem Upgrade automatisch zugewiesen werden"].
+. Die jedem Benutzer zugewiesene Cloud Volumes ONTAP Rolle sollte überprüft werden, um sicherzustellen, dass sie auf der Organisationsebene, Ordnerebene oder Projektebene, die das System enthält, zugewiesen ist. link:reference-iam-cvo-roles.html["Informationen zu den Cloud Volumes ONTAP Rollen, die nach dem Upgrade automatisch zugewiesen werden"].
 . Die Cloud Volumes ONTAP Rolle wird zugewiesen oder geändert, wenn die vordefinierte Rolle nicht den Verantwortlichkeiten des Benutzers entspricht. Der Seeding-Prozess weist die Cloud Volumes ONTAP Admin- oder Viewer-Rolle basierend auf der bestehenden Plattformrolle des Benutzers zu. Wenn ein Benutzer Berechtigungen auf Operator-Ebene benötigt, wird die Cloud Volumes ONTAP Operator-Rolle nach dem Seeding explizit zugewiesen.
 . Es kann bis zu einer Stunde dauern, bis neue oder aktualisierte Rollenzuweisungen wirksam werden. Cloud Volumes ONTAP aktualisiert die Rollenzuweisungen stündlich.
 . Der Benutzer greift auf das Cloud Volumes ONTAP System zu und bestätigt, dass die verfügbaren Operationen der zugewiesenen Rolle entsprechen.
